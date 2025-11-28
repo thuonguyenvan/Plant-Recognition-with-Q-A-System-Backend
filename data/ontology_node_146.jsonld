@@ -1,0 +1,329 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu tương dại",
+      "ten_khac": "Bình đậu, đậu chiều bọ hung.",
+      "ten_khoa_hoc": "Cajanus scarabaeoides (L.) Thouars",
+      "ma_taxon": "139452",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo hoặc bò dài, sống nhiều năm, có lông như nhung màu vàng.",
+      "lá": "Lá mọc so le, ba lá chét hình bầu dục, dài 2 – 3,5 cm, rộng 1 – 1,5 cm gốc tròn hơi thuôn, đầu tù hoặc hơi nhọn, hai mặt có lông tuyến; cuống lá dài 2 – 4 cm; lá kèm nhỏ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm, 1 – 3 hoa màu vàng, đài hình chuông, có 4 răng nhỏ; tràng có cánh cờ xoắn ngược có tai nhọn, cánh thìa tròn; bầu có nhiều lông tơ dài.",
+      "quả": "Quả đậu, thuôn, dài 2 cm, rộng 0,5 cm, hơi thắt lại giữa các hạt, phủ lông lởm chởm, có tuyến; hạt 5 – 6, màu đen hay vàng sẫm.",
+      "mùa hoa": "tháng 9 – 10",
+      "mùa quả": "tháng 11 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong các tài liệu về thực vật học gần đây (Nguyễn Đăng Khôi, 2003 – Fabaceae, trong Danh lục các loài thực vật Việt Nam, T.2; L.JG, Van de Maesen and Jadikin Somaatmadja, 1992- PROSEA (1) – Pulses) không thấy đề cập chi Atylosia riêng rẽ, do chúng đã được nhập vào chi Cajanus DC. Chi này ở Việt Nam có 5 loài, trong đó có cây đậu tương dại (Cajanus sacrabacoides (L.) Thouars = syn. Stylosa scarabacoides (L.)  Trên thế giới, đậu tương dại phân bố khá rộng vùng nhiệt đới châu Á, châu Phi và cả châu Đại Dương.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng (Hoà An)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn (Hữu Lũng)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh (Bãi cháy. Uông Bí)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Nội (Ba Vì, Thủ Pháp. Bất Bạt)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình (Cao Phong)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Nam (Kiện Khê, Võ Xá)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình (Chợ Ghềnh, Đồng Giao)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên – Huế (Nam Đông)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kom Tum (Đắc Tô)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắc Lắc (Nam Đà)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng (Đà Lạt)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Khánh Hoà (Cầu Đá)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Thuận (Cà Ná)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai (Định Quán)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tây Ninh (Bà Đen)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kiên Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bạc Liêu"
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Đậu tương lại là loại dây leo sống 1 – 2 năm, ưa sáng và có thể hơi chịu hạn. Cây thường leo lên những cây bụi nhỏ, cỏ ở ven rừng thí sinh, bờ nương rẫy hay trong các trảng cây bụi tái sinh sau nương rẫy. Chúng có thể sống được trên nhiều loại đất khác nhau, có pH từ trung tính đến hơi chua. Cây ra hoa, quả nhiều hàng năm; tái sinh tốt từ hạt hoặc từ phần thân cảnh còn lại sau khi bị cắt. Với đặc điểm sinh trưởng nhanh, nếu không có cây giá thể, đậu tương lại có thể mọc thành đám, có tác dụng che phủ và cải tạo đất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa protein (22%), chất béo (1,7%), chất khoáng (3,6%), carbohydrat (57,2%), calci (9,14%), phospho (0,26%), caroten, vitamin A, vitamin B1, Các acid amin chủ yếu là tyrosin, cystein, arginin và lysin.  Ngoài ra hạt còn chứa isoflavon và 2 globulin là cajanin (58%) và concajanin (8%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây đậu tương có vị ngọt, cay và nhạt, tính bình có công năng trừ sốt, làm liền sẹo, lợi tiểu, cầm máu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây đậu tương dại được dùng chữa cảm cúm, sốt nóng, đột quỵ, phù nề, đau ngang thắt lưng. Liều dùng mỗi ngày 10-15g sắc nước uống.  Lá đậu tương dùng để làm sạch dạ dày, chữa rối loạn tiêu hóa, ỉa chảy, lợi tiểu. Dùng lá phơi khô mỗi lần 1 nắm (khoảng 30-40g), sao vàng sắc uống ngày 1 thang.  Đậu tương dại tươi toàn cây, rể kẻ tươi, mỗi vị 15g, thêm gừng tươi 3g, sắc tộc uống, ngày 1 thang.  Dùng ngoài lấy lá tươi giã nát, đắp vết thương.  Bài thuốc có đậu tương  Chữa cảm lạnh và cúm: Đậu tương dại toàn thân, rễ ké đầu ngựa tươi, đạm trúc diệp, cỏ mần trầu, mỗi vị 15g, sắc nước uống, ngày 1 thang. Chữa nóng sốt, đột quỵ: Đậu tương dại toàn thân, đạm trúc diệp, cỏ mần trầu, mỗi vị 15g, sắc nước uống, ngày 1 thang. Chữa đau ngang thắt lưng: Đậu tương dại, lấu bò (Psychotria serpens L.), mỗi vị 30g. Sắc với nước, để nguội, thêm rượu uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

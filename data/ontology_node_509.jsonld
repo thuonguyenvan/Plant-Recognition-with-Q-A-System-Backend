@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trai sông",
+      "ten_khac": "Trai nước ngọt, trai sông",
+      "ten_khoa_hoc": "Sinanodonta jourdyi Morlet",
+      "ma_taxon": "1442097",
+      "ho": "Trai cánh (Unionidae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Động vật thân mềm hai mảnh vỏ, dài 10 – 20 cm, rộng 8 – 16 cm. Vỏ có dạng đĩa hình trứng dẹt, cạnh trước tròn, mép mỏng, cạnh sau bằng, mép tầy hơi gồ lên ở một phía. Mặt bụng phồng ở khoảng giữa, có những đường gân cong mờ. Mặt ngoài vỏ bóng, màu vàng nâu đến nàu đen. Bên trong là lớp thịt nhầy, màu trắng.  Các loài trai vỏ dày (Cristaria herculea Middendorff), trai điệp (Sinohyriopsis cumingii Lea) cũng được sử dụng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trai sông có nhiều ở các nước châu Á, sống khắp nơi trong ao, hồ, sông, suối ở vùng đồng bằng, trung du và miền núi. Thức ăn của trai sông gồm các loại tảo, động vật đơn bào. Trai sông đẻ trứng, trứng mở thành ấu trùng và qua nhiều lần biến đổi trở thành trai trưởng thành sống độc lập. Người ta bắt trai sông lấy thịt làm thực phẩm và dùng vỏ trai làm nguyên tiêu sản xuất đồ mỹ nghệ. Do thời tiết thuận lợi, nên việc nuôi trai rất phát triển ở các tỉnh phía nam từ Phú Yên đến Minh Hải, cả ở các đảo Phú Quốc, Côn Đảo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Trai sông có tên thuốc là bạng gồm thịt trai và vỏ trai."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thịt trai sông chứa 4,6% protid, 1,1% lipid, 16,4 mgʻ% Ca, 102 mg% P, 70 – 100 mg% Zn, 11,1 mg% Fe, 0,02 mg% vitamin B,, 0,18 mgʻ%b vitamin B, 1,2 mg% vitamin PP, 9 mg% vitamin C (Viện Dinh dưỡng).  Vỏ trai sông chứa Ca dưới dạng carbonat và chất chitin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thịt trai sông có vị ngọt, mặn, tính hàn, có tác đụng lợi thấp, thanh nhiệt, tiêu khát, hạ huyết áp. Vỏ trai sông có vị mặn, tính hàn, có tác dụng giảm đau, chống viêm, tiêu tích, minh mục, hóa đờm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân ở các địa phương thường dùng trai sông (cả trai vỏ dày) dưới dạng thức ăn – vị thuốc phổ biến để chữa bệnh.  Chữa mồ hôi trộm ở trẻ: Họ bắt trai về, rửa, cho vào nồi nước, đun sôi cho trai há miệng. Để nguội, gỡ thịt trai, lấy 50 g thái nhỏ, trôn với một nắm lá dâu non đã rửa sạch, thái nhỏ. Nấu cho nhừ thịt trai, thêm muối cho đủ đậm. Cho trẻ ăn làm 2 lần trong ngày để chữa mồ hôi trộm, trẻ hay khóc về đêm. Dùng 3 – 5 ngày.  Chữa huyết áp, đau đầu, thủy thũng: Thịt trai (30 – 50 g) nấu với râu ngô (20 g loại non càng tốt) cho thật nhừ. Vớt râu ngô ra, thêm hành (10 g), gừng (3 g) và bột gia vị ăn trong ngày.  Để chữa viêm gan, vàng da: Có thể lấy thịt trai (30 – 50 g), nhân trần (30g) thái nhỏ, sắc với 400 ml nước còn 100 ml, uống làm 2 lần trong ngày.  Chữa sưng vú: Vỏ trai sông nung thành vôi, tán nhỏ, lấy 6g trộn đều với gai bồ kết rang vàng, tán nhỏ (40 g). Mỗi ngày uống một thìa cà phê bột với ít rượu.  Chữa cao huyết áp, phòng ngừa tai biến mạch máu não, nhức đầu, chóng mát, suy gan.  Theo tài liệu nước ngoài, ở Trung Quốc, người ta cũng dùng thịt trai sông như những thức ăn – vị thuốc. Thịt trai (50 g) ninh nhừ với thịt lợn nạc (20 g) ăn vào bữa cơm chữa bệnh đái nhiều về đêm, xào chín với dầu lạc, thêm ít rượu, gừng, muối, ăn trong ngày. chữa kinh nguyệt quá nhiều, nấu nhừ thành cháo với thịt hầu (50 g) và gạo tẻ (100 g), ăn ngày hai lần.  Các nhà khoa học ở Đại học quốc gia Singapore đã nghiên cứu thành công phương pháp vá vết thương ở người bằng hỗn hợp chất chitin lấy từ vỏ ốc, trai, hến, cua kết hợp với môt số chất từ loại nấm. Loại thuốc mới này có tác dung ngăn cản sư đóng cục của máu và hàn được cả những vết gẫy của xương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

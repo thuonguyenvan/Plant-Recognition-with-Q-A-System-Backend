@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mật mông hoa",
+      "ten_khac": "Mật mông hoa",
+      "ten_khoa_hoc": "Buddleja officinalis Maxim.",
+      "ma_taxon": "1045236",
+      "ho": "Buddlejaceae",
+      "Mô tả": {
+        "lá": "Lá mọc đối, hình mũi mác – thuôn, dài 6 – 10cm, rộng 2 – 4cm, gốc và đầu thuôn hẹp, mép nguyên hoặc hơi có răng, mặt trên nhẵn màu lục sẫm, mặt dưới có lông màu trắng nhạt; cuống lá ngắn.",
+        "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành xim phân nhánh có cuống phủ nhiều lông, đài khoảng 15cm; hoa rất nhiều, màu ngà vàng, mọc sít nhau; đài có 4 răng dính lại thành hình chuông; tràng 4 cánh, phần dưới hợp thành ống hơi cong, mặt ngoài có ít lông; nhị 4 dính ở 1/3 phía trên ống tràng; bầu có lông.",
+        "quả": "Quả nang hẹp, thuôn dài.",
+        "cây": "Cây nhỏ.",
+        "thân": "Thân, cành non có lông đơn màu nâu đỏ hoặc trắng nhạt và lông tuyến.",
+        "mùa hoa": "tháng 9-11."
+      },
+      "Phân bố": {
+        "phân_bố": "Buddleja L. có 3 loài ở Việt Nam (Nguyễn Tiến Bản, 1997). Mật mông hoa là loài tương đối quen thuộc bởi sự phân bố phổ biến của nó ở các tỉnh miền núi phía bắc như Cao Bằng, Lạng Sơn, Thái Nguyên, Vĩnh Phúc (Tam Đảo), Yên Bái, Tuyên Quang và nhiều tỉnh khác. Cây cũng có ở Trung Quốc và Lào…  Mật mông hoa thuộc loại cây mọc nhanh, ưa sáng và thường mọc ở nơi đất còn tương đối màu mỡ, rừng thứ sinh , ven rừng ẩm, nhất là trên đất sau nương rẫy cùng với những cây bụi tiên phong khác. Cây ra hoa quả nhiều hàng năm. Hoa có tuyến mật, khi nở có nhiều ong, bướm đến hút mật, nên dễ dàng được thụ phấn. Tái sinh tự nhiên chủ yếu từ hạt, cây 2-3 năm có thể có hoa. Cành và lá thường được khai thác làm phân xanh.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Vĩnh Phúc"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Yên Bái"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Tuyên Quang"
+              }
+            }
+          ]
+        }
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Cụm hoa đã phơi hoặc sấy khô, thu hái khi còn là nụ, loại bỏ tạp chất, rồi phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Hoa mật mông hoa chứa:  – Triterpen : olean – 13 (18) – en – 3 – on; ô – amyrin, euph – 8 , 24 – dien – 3 – yl acetat (butyrospermyl acetat, ; a – spinasterol; glatitol; acid vanilic (Wang Bin và cs 1996; CA. 127, 188231 u).  – Flavonoid: acacetin; apigenin; luteolin; neobudoíìcid; linarin (acaciin), luteolin – 7 – 0 – rutinosid; luteolin – 7 – 0 – glucosid và cosmosiin (Li Jiaoshe và cs, 1996; CA. 127, 202902 X)  Nụ hoa chứa:  – Phenylpropanoid glycosid: verbascosid; cistanosid; ß – hydroxyacteosid; poliumosid; echinacosid; martynosid.  – Flavonoid glycosid: linarin; apigenin – 7 – rutinosid.  (Zhang Huyi và cs, 1996; CA. 126,314813e)"
+      },
+      "Tính vị": {
+        "Có vị": "Mật mông hoa có vị ngọt nhạt, tính bình mát, vào kinh can, có tác dụng nhuận gan, sáng mắt."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dùng trong nhãn khoa, mật mông hoa chữa các trường hợp thong manh, mắt sưng đỏ chảy nước mắt, có nhiều tia máu đỏ, có màng mộng. Ngày dùng 3 – 6g dạng thuốc sắc hay ngâm rượu. Dùng ngoài, lá cây giã đắp chữa sưng lở. Theo tài liệu nước ngoài, mật mông hoa phối hợp với bông mã đề sắc uống chữa sưng tấy. Rễ mật mông hoa đôi khi cũng được dùng để chữa bệnh vàng da.",
+		"chữa": "Chữa đau mắt sưng đỏ chảy nước mắt: – Mật mông hoa 9g; cúc hoa, kinh giới, long đởm, phòng phong, bạch chỉ, mỗi vị 4g; cam thảo 2g. Sắc uống, ngày một thang.- Mật mông hoa, cúc hoa, hạt mào gà, mỗi vị 12g; hoàng đằng 8g. Sắc uống.- Mật mông hoa, hạt muồng, hạt mã đề, cỏ dùi trống, mỗi vị 20g. Sắc với nước, rồi mài thạch quyết minh vào mà uống. Chữa bệnh dịch đau mắt đỏ do thời khí ôn nhiệt, mất ngứa, nhức đầu hoặc có sốt: Mật mông hoa, bạc hà, kinh giới, hạt muồng (quyết minh tử) sao, huyền sâm, dành dành, vỏ núc nắc, ngưu tất, mạch môn, mỗi vị 12g. Sắc uống."
+      },
+      "Thông tin khác": {},
+      "Cách dùng": {},
+      "luu_y": {},
+	  "url": "https://tracuuduoclieu.vn/mat-mong-hoa.html"
+    }
+  ]
+}

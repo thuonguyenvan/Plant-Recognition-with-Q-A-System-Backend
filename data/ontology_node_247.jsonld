@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Actiso",
+      "ten_khac": "Actiso, Atiso",
+      "ten_khoa_hoc": "Cynara scolymus L.",
+      "ma_taxon": "861815",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo lớn, sống hai năm hoặc lâu năm, cao 1-1,2m, có thể lên đến 2m.",
+      "thân": "Thân ngắn, thẳng và cứng có khía dọc, phủ lông trắng như bông.",
+      "lá": "Lá to, dài, mọc so le, phiến lá xẻ thùy sâu và có răng không đều, mặt trên màu xanh lục, mặt dưới có lông trắng, cuống lá to và ngắn.",
+      "hoa": "Cụm hoa hình đầu ở ngọn các nhánh của thân màu đỏ hoặc tím lơ nhạt; lá bắc ngoài của cụm hoa rộng, dày và nhọn, đế cụm hoa nạc, phủ đầy lông tơ, mang toàn hoa hình ống.",
+      "quả": "Quả nhẵn bóng, màu nâu sẫm, có mào lông trắng.",
+      "mùa hoa": "Tháng 12-2.",
+      "mùa quả": "Tháng 12-2."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cụm hoa thu hái chưa nở làm rau ăn. Lá actiso thu hái năm thứ nhất thời kỳ sinh trưởng (lúc cây sắp ra hoa và đã lấy cụm hoa). Thân, rễ cũng dùng để làm thuốc."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong atiso chứa chất đắng Cynarin (acid 1 – 4 Dicafein Quinic). Còn có Inulin, Tanin, các muối kim loại K (tỉ lệ rất cao), Ca, Mg, Natri.",
+      "gồm chất": "Lá atiso Acid hữu cơ bao gồm:  Acid Phenol: Cynarin (acid 1 – 4 Dicafeyl Quinic) và các sản phẩm của sự thủy phân (Acid Cafeic, acid Clorogenic, acid Neoclorogenic), Acid Alcol, Acid Succinic.",
+      "Các hợp chất": "Hợp chất Flavonoid (dẫn chất của Luteolin), bao gồm: Cynarozid (Luteolin – 7 – D Glucpyranozid), Scolymozid (Luteolin – 7 – Rutinozid – 3’ – Glucozid)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cụm hoa được dùng trong chế độ ăn kiêng của bệnh nhân đái tháo đường vì nó chỉ chứa lượng nhỏ tinh bột. Lá actiso có vị đắng, có tác dụng lợi tiểu và được dùng trong điều trị bệnh phù và thấp khớp.",
+      "làm thuốc": "Ngoài việc dùng đế hoa và lá bắc để ăn, actiso còn được dùng làm thuốc thông tiểu tiện,thông mật, chữa các bệnh gan thận, xương khớp.Ngoài việc dùng đế hoa và lá bắc để ăn, actisô dùng làm thuốc thông tiểu tiện, thông mật, các bệnh yếu gan, thận, viêm thận cấp tính và kinh niên, sưng khớp xương.",
+      "sắc uống": "Lá tươi và khô dùng dưới hình thức thuốc sắc 5-10% hoặc cao lỏng 2-10g trong một ngày. Có khi chế thành cao mềm hay khô để chế thuốc viên, thuốc tiêm dưới da hay mạch máu. Có khi được chế thành dạng cao lỏng đặc biệt dùng dưới hình thức giọt. Ngày uống 1-3 lần mỗi lần 10-40 giọt.",
+      "được_dùng": "Tại miền Nam ở các chợ người ta còn bán cả thân và rễ actiso thái mỏng phơi khô với công dụng như lá. Cây actiso còn non có thể dùng luộc chín, hay nấu canh ăn, những bộ phận thường được dùng làm rau như cụm hoa. Người ta mang về chẻ nhỏ dọc thành 6-8 miếng đem hầm với xương, thịt để ăn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "GIẢI ĐỘC GAN TUỆ LINH PLUS  Thành phần:  Cao khô cà gai leo: 500mg Cao khô mật nhân: 150mg Cao khô kế sữa: 100mg Cao khô actiso: 50mg Cao khô khúng khéng: 50mg",
+      "có tác dụng": "Hỗ trợ giải độc gan, hỗ trợ tăng cường chức năng gan trong viêm gan virus, xơ gan, người uống nhiều rượu bia, thuốc có hại cho gan. Hỗ trợ giảm triệu chứng: men gan cao, vàng da, mệt mỏi, chán ăn, mẩn ngứa do chức năng gan kém.",
+      "chữa": "Giải độc gan Tuệ Linh plus – Sản phẩm chuyên biệt cho người viêm gan virus, xơ gan, người uống nhiều bia rượu"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây được di thực vào trồng ở nước ta, nhiều nhất ở Đà Lạt, Sapa, Tam Đảo. Có thể trồng được ở đồng bằng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

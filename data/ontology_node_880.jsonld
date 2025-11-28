@@ -1,0 +1,276 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nho",
+      "ten_khac": "Nho, Bồ đào, Ít (Tày)",
+      "ten_khoa_hoc": "Vitis vinifera L.",
+      "ma_taxon": "79519",
+      "ho": "Vitaceae (Nho)",
+      "Mô tả": {
+        "lá": "Dây leo bằng cành có tua cuốn.",
+        "hoa": "Vỏ lúc đầu màu lục, rồi màu tro khi hoá bầu bong ra thành dải mỏng.",
+        "quả": "Lá mọc so le thành hai dãy có hai lá kèm sớm rụng; phiến lá chia 5-7 thuỳ, khía răng không đều ở mép; cuống lá dài.",
+        "cây": "Tua cuốn đối diện với lá, rẽ đôi một hai lần, ở chỗ rẽ có một lá giảm.",
+        "mặt": "Hoa mọc thành chùm xim hai ngả; hoa đầu, tập tính khác gốc, màu xanh xanh.",
+        "đầu": "Quả mọng hình trứng lúc tươi, vàng vàng đỏ hay đen, chứa 4 hạt hình quả lê, có vỏ rắn như xương."
+      },
+      "Phân bố": {
+        "phân_bố": "Cây nhập nội, được trồng chủ yếu làm cảnh, làm giàn lấy bóng mát.",
+        "ở_vùng": [
+          {
+            "@type": "schema:Place",
+            "tên": "các tỉnh Nam Trung Bộ"
+          },
+          {
+            "@type": "schema:Place",
+            "tên": "Đông Nam Bộ"
+          }
+        ],
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Phú Yên"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Khánh Hoà"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Thuận"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bình Thuận"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lâm Đồng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "thành phố Hồ Chí Minh"
+              }
+            }
+          ]
+        },
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "Pháp"
+              }
+            },
+            {
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "Hoa Kỳ"
+              }
+            },
+            {
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "Úc"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Trồng bằng hom, lấy ở cành già một năm tuổi, làm đất sâu, bón phân đủ và giữ đất ẩm. Cắt tỉa cành và chăm bón để nuôi quả."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây- Herba Vitidis Viniferae, thường có tên là Bồ đào."
+      },
+      "Thành phần": {
+        "thành phần": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nho khô được dùng ở Trung Quốc trị: Thận hư đau lưng, choáng đầu, viêm dạ dày mạn tính, hư nhiệt phiền khát, thai động không yên.",
+        "được_dùng": "Nho tươi trị: Đái buốt, đái dắt, đái ra máu.",
+        "làm thuốc": "Dịch quả tươi chát, được dùng ở Ấn Độ trị bệnh đau cổ họng.",
+        "có tác dụng": "Ở châu Âu, người ta dùng chữa bệnh đau tim thận, chứng béo phì và táo bón.",
+        "chữa": "Rễ nho trị: Viêm khớp đau nhức xương, đau nhức gân cốt khớp xương."
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa đau lưng, mỏi gối, thũng đầy, nôn oẹ, buồn nôn hay thai động trồi lên: Dùng lá, dây, rễ Nho 20-40g, sắc uống.",
+        "làm thuốc": "Chữa động thai hay nôn nghén: Quả Nho 40g ăn hay sắc uống.",
+        "chữa": "Đái buốt, đái dắt, đái ra máu: Nho tươi, ngó sen, Sinh địa hoàng lượng vừa đủ, mật ong 150g. Trước hết lấy 3 vị thuốc giã nát từng thứ, vắt lấy nước lấy đủ 1000ml, pha mật ong vào trộn đều, sắc nhừ, mỗi ngày dùng 3 lần, mỗi lần 100ml, trước bữa ăn nửa giờ, chiêu thuốc với nước ấm."
+      },
+      "luu_y": {
+        "luu_y": "Ở nước ta cũng có trồng một loài khác là Vitis labrusca L., với lá có 3 thuỳ, có lông trắng ở mặt dưới, có quả tròn tròn, màu lục hay vàng vàng, có hạt hay không. Cũng có công dụng như Nho."
+      }
+    }
+  ]
+}

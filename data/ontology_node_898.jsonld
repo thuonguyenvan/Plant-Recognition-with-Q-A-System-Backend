@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Me",
+      "ten_khac": "Me",
+      "ten_khoa_hoc": "Tamarindus indica L.",
+      "ma_taxon": "62844",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to cao 15 đến 30m, tán cây rất rộng, rất nhiều lá.",
+      "lá": "Lá kép lông chim chẵn, dài 8 đến l0 cm, gồm 10 đến 20 đôi lá chét thuôn tù ở đầu, dài 20 mm, rộng 2 mm.",
+      "hoa": "Hoa trắng nhạt có những vệt đỏ hay trắng, mọc thành chùm đơn ở kẽ lá hay thành chùy tận cùng.",
+      "quả": "Quả dài mọc thõng xuống, hơi dẹt thòng, dài 7-12cm, rộng 25mm, dày 10 mm.\nQuả chứa 3 đến 5 hạt dẹt,nhấn, màu nâu đỏ, bóng.",
+      "mùa quả": "Mùa quả tháng 10-11.",
+      "vỏ": "Vỏ quả ngoài mỏng, cứng, giòn, màu hung đỏ, vỏ quả giữa có xơ, mẫm vị chua, sau khi đã loại hết xơ thì phần vỏ quả giữa có màu nâu nhạt hay vàng nhạt."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong quả có chứa, chủ yếu hơn 10% axit hữu cơ (9,40% axit xitric, 1,55% axit\ntactric, 0,45% axit malic), kali bitactrat 3,25%, đường 12,50%, gồm 4,70%, pectin\n6,25%. Ngoài ra còn 34,35% xơ, nước 27,55%.",
+      "Trong hạt": "Trong hạt có glucozan, xylan, proteit, chất béo, sáp, muối vô cơ."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cơm quả me chế như sau: Nghiền nát quả lọc bỏ xơ, lấy 50g cơm đã lọc bỏ xơ, 50g nước và 125g đường. Đun sôi cạn còn 200g. Có thể đem sấy khô cơm để dành. Dùng cơm này pha nước uống khi sốt, bệnh về gan, tiêu hóa. Mỗi ngày dùng 20 đến 120g cơm, pha vào nước thêm đường vào cho đủ ngọt mà uống. Trẻ con 3 tuổi dùng 5g, 5 tuổi dùng 5-10g, 12 tuổi dùng 10 đến 30g.",
+      "gỗ cây me": "Gỗ cây me cũng được dùng dưới dạng thuốc sắc để nhuận tràng, thông tiểu, nhẹ, vỏ cây dùng chữa ỉa chảy, viêm lợi răng.",
+      "lá": "Lá nấu nước tắm ghẻ."
+    },
+    {
+      "@type": "Cách dùng",
+      "Quả me": "Quả me giã nát, lọc bỏ xơ và hạt, đổ xi rô đặc vào đun sôi. Mỗi ngày dùng 10 đến\n30g cơm này cho vào nước uống giải khát, nhuận tràng.",
+      "lá me": "Lá me: Nấu nước tắm, phòng chữa mẩn ngứa, rôm sảy, sắc đặc bôi ghẻ."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

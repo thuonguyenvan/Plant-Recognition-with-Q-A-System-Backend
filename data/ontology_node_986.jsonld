@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lúa",
+      "ten_khac": "Lúa tẻ, Ngạnh mễ, Khẩu chăm (Tày), Ba té (Bana), Còi (Kho)",
+      "ten_khoa_hoc": "Oryza sativa L.",
+      "ma_taxon": "61381",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cỏ mọc hằng năm, cao 0,7-1,5m.",
+      "lá": "Lá có phiến dài, bìa ráp, bẹ cao, trắng, lưỡi bẹ có lông.",
+      "hoa": "Chuỳ bao gồm nhiều bông, mang các bông nhỏ màu vàng vàng. Mày hoa có lông gai, 1 hoa, 6 nhị.",
+      "quả": "Quả thóc dính chặt với mày hoa (trấu), ta quen gọi là hạt lúa."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của vùng Á châu nhiệt đới, được trồng làm lương thực ở khắp nơi. Có hai thứ là Lúa tẻ – var.utilissima A. Camus và Lúa nếp – var. glutinosa Tanaka. Thu hái các bộ phận của cây quanh năm."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt thóc, rễ lúa – Semen et Radix Oryzae; đạo nha – Fructus Oryzae Germunatus."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Người ta cũng đã biết trong lúa có các thành phần sau: Vitamin A, B, D và E, mỡ 20%, hydratcarbon, protein, adenin, cholin, acid arachidic, lignoxeric, palmitic, aloic, phytosterin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Gạo là thành phần quan trọng bữa ăn của nhân dân ta, bồi bổ cho cơ thể và đem lại cân bằng cho cơ thể. Hạt thóc đã ngâm cho nẩy mầm rồi phơi khô gọi là cốc nha, đạo nha dùng thay cho mạch nha, giúp sự tiêu hoá và là thức ăn có tinh bột có tác dụng rất tốt cho những người ăn uống kém tiêu, không muốn ăn, còn chữa các bệnh phù do thiếu vitamin. Gạo lâu năm dùng trị đau bụng và trị lỵ. Gạo nếp dùng trị các chứng đau bụng, nôn mửa và tiểu tiện ra chất nhờn (dưỡng trấp). Ở Philippin, cám được dùng để chế thuốc phòng và chữa bệnh thiếu các loại vitamin B. Dầu cám dùng trộn với rau để ăn. Rễ và thân của Lúa là thuốc lợi tiểu. Quả thóc chưa bóc vỏ dùng làm thuốc đắp cho dịu.",
+      "chữa": "Giải phiền nhiệt trong trường hợp sốt cao, ra nhiều mồ hôi, háo khát: Dùng Gạo tẻ một nắm, lá Tre hay Cỏ lá tre một nắm cùng sắc uống. Có thể thêm bột thạch cao 10-12g cùng uống.",
+      "làm thuốc": "Nôn mửa hay ỉa chảy háo khát, rối loạn tiêu hoá: Dùng Gạo tẻ sao sắc uống thay nước và thay ăn.",
+      "sắc uống": "Chữa nôn ói không dứt: Dùng Gạo nếp 20g, sao vàng, Gừng củ 3 lát, sắc uống (Nam dược thần hiệu)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

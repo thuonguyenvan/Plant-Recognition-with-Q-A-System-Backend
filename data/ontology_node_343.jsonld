@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thùn mũn",
+      "ten_khac": [
+        "Cây chua meo (tên ở Lạng Giang, Bắc Giang)",
+        "Cây phi tử",
+        "Cây chua ngút-vốn vén, tấm cùi (Thổ)",
+        "Xốm mun (Thái)"
+      ],
+      "ten_khoa_hoc": "Embelia laeta (L.) Mez",
+      "ma_taxon": "519626",
+      "ho": "Đơn nem (Myrsinaceae)",
+      "Mô tả": {
+        "cây": "Cây mọc hoang ở các đồi thành từng bụi cao chừng 1-2m.",
+        "thân": "Thân cứng, màu tía tím thỉnh thoảng có cành đỏ tươi hơn, trông như hơi mốc. Có vạch dọc rất rõ, bì khổng nhỏ như hạt kê.",
+        "lá": "Cành lá mọc so le, hình lưỡi mác, mặt dưới nhạt hơn, dài 4,5-5cm, rộng 1,5-2cm. Phiến ở phía cuống hẹp nhọn. Cuống ngắn 5-6mm.",
+        "hoa": "Hoa màu vàng lục nhạt, mọc dày đặc ở cành, đài hình tam tam giác nhọn, thuôn tù, nhị bầu nhỏ, hình nón.",
+        "quả": "Qủa hình cầu, có núm nhọn, khi chín màu đỏ, đường kính khoảng 6mm, chứa một hạt. Vị lúc đầu ngọt, sau chua và hơi tê tê.",
+        "mùa hoa": "Cây thường ra hoa vào khoảng tháng 2 – 4",
+        "mùa quả": "sau đó kết quả vào tháng 5 – 7."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Qủa chính phơi hay sấy khô của cây Thùn mũn. Khi dùng xát sạch vỏ, lấy hạt, phơi khô và tán nhỏ."
+      },
+      "Thành phần": {
+        "thành phần": "Trong quả có tanin, tinh dầu và axit embelic (còn gọi là embelin hay embelon-dihydroxy 2-5-lauryl 3-benzo quinon 1-4) một chất có cấu tạo quinonic.",
+        "Các hợp chất": "Embelic là bột kết tinh hình lá nhỏ, màu vàng kim nhũ ống ánh, không mùi vị, không tan trong nước, tan trong cồn, ether, coloroform, benzen, tan trong dung dịch hydroxyd natri loãng (cho màu đỏ nhạt) và đa số các dung môi hữu cơ.",
+        "có hoạt chất": "Hoạt chất được dùng dưới dạng embelat amoni."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân dùng hạt trị giun đũa, giun kim và sán sơ mít.",
+        "được_dùng": "Tối hôm trước nhịn, sáng sớm hôm sau uống 5g bột trộn với mật hoặc đường. Trẻ con uống 2-2,5g",
+        "làm thuốc": "Ở Bắc Ninh có nơi uống tới 3 thìa súp hạt."
+      },
+      "Cách dùng": {
+        "được_dùng": "Dùng để trị giun sán: Qủa thùn mũn chín phơi khô, tán bột, trộn với mật ong, dùng để uống vào sáng sớm lúc đói.",
+        "làm thuốc": "Liều lượng mỗi ngày 5g.",
+        "có tác dụng": "Nguồn: Cây thuốc và động vật làm thuốc Việt Nam"
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

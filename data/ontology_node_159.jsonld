@@ -1,0 +1,207 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bầu giác tía",
+            "ten_khac": "Bầu giác tía, Xương sơn, Giàng sơn, Hạc tất, Mặt trắng",
+            "ten_khoa_hoc": "Chassalia curviflora Wall. ex Roxb.",
+            "ma_taxon": "361659",
+            "ho": "Rubiaceae (Cà phê)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây nhỏ, cao 1 – 4 m.",
+            "thân": "Thân nhẵn, cành non màu nâu đen, sau xám nhạt.",
+            "lá": "Lá mọc đối, hình mác thuôn, dài 8 – 25 cm, rộng 2.5 – 7 cm, gốc tròn, đầu nhọn hoặc tù, mặt trên màu xám nâu, mặt dưới rất nhạt; cuống lá dài 1 – 6cm; kèm lá nhỏ.",
+            "hoa": "Cụm hoa mọc ở đầu cành thành xim, dài 2 – 10 cm; hoa nhiều, màu trắng, hồng hoặc tím, bọng vàng; ống tràng hơi cong.",
+            "quả": "Quả nạc, hình cầu, có đài tồn tại, màu đen.",
+            "mùa hoa": "tháng 4 -7",
+            "mùa quả": "tháng 8 – 10."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chasallia comm là một chi nhỏ . Ở Việt Nam, chỉ có 2 loài, trong đó có loài bầu giác tía thường gặp ở các tỉnh miền núi phía nam, gồm Kon Tum, Đắc Lắc, Lâm Đồng và đảo Phú Quốc tỉnh Kiên Giang (Võ Văn Chi 1997). Cây cũng phân bố rải rác ở một số nước nhiệt đới khác, như Ấn Độ, Malaysia, Campuchia, Lào và Nam Trung quốc.",
+            "thường_mọc": "Bầu giác tía là loại cây bụi ưa sáng và có thể chịu bóng tốt, thường thấy ở bờ khe suối dưới tán rừng hoặc ven rừng ẩm.",
+            "Đặc điểm sinh trưởng": "Cây được trồng làm hàng rào, làm cảnh, thích nghi tốt với điều kiện được chiếu sáng trực tiếp, ra hoa nhiều. Bầu giác tía được nhân giống tự nhiên chủ yếu từ hạt. Cây trồng bị cắt tỉa nhiều vẫn có khả năng tái sinh. Trồng được bằng hạt hay phần gốc (còn rễ), sau khi đã cắt bỏ bớt phần thân và cành."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Toàn cây."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": null
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Theo y học cổ truyền, bầu giác tía có tác dụng thanh nhiệt, giải độc, tiêu viêm, chỉ thống, khử phong."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Nhân dân ở một số tỉnh miền Trung thường dùng là bầu giác tía chế thuốc uống chữa sốt rét với liều 10 – 20g, rễ chữa hắc lào, ho, đau đầu. Rễ bầu giác tía rửa sạch, thái nhỏ nấu với nước, cô đặc còn được dùng rửa vết thương, mụn nhọt, chống nhiễm khuẩn. Lá tươi giã nát, hơ nóng, đắp chữa sưng đầu gối. Ở Malaysia, rễ bầu giác tía cũng chữa sốt rét, nước sắc của rễ chữa ho. Rễ và lá bầu giác tía đắp ngoài, chữa đau đầu, vết thương, mụn loét."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

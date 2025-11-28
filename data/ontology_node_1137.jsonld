@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Huyền sâm",
+      "ten_khac": "Huyền sâm, Hắc sâm, Nguyên sâm",
+      "ten_khoa_hoc": "Scrophularia ningpoensis Hemsl.",
+      "ma_taxon": "425843",
+      "ho": "Scrophulariaceae (Hoa mõm chó)",
+      "Mô tả": {
+        "cây": "Cây bắc huyền sâm là một loại cỏ cao 1,5m đến 2m.",
+        "thân": "Thân vuông, màu xanh có rãnh dọc, 4 góc hơi phồng lồi ra.",
+        "lá": "Lá hình trứng, đầu nhọn, mọc đối chữ thập, cuống ngắn, phiến lá dài 3- 8cm, rộng 1,8- 6cm, mép có răng cưa nhỏ và đều. Lá phía dưới to hơn, cuống dài hơn (2-3cm), lá phía trên nhỏ hơn, cuống ngắn (chừng 5mm).",
+        "hoa": "Hoa mọc thành chùm với cuống ngắn trông như bông ở đầu ngọn hoặc đầu cành. Hoa hình ống hơi phình ở giữa, thắt ở phía trên, dài 18mm, rộng 3-4mm, trên mép có 5 cánh 1 cánh cao hơn, nhị 4. Hoa màu trắng vàng nhạt.",
+        "cây": "Cây huyền sâm Scrophularia ningpoensis khác cây bắc huyền sâm ở hoa mọc thành tán, màu tím."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Thành phần hóa học chính là các chất iridoid glycosid.",
+        "gồm chất": "Hai chất chính được biết là harpagid và harpagosid."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Huyền sâm được dùng làm thuốc mạnh tim, giảm sốt, chống viêm trong các bệnh viêm cổ họng, viêm amiđan, lở loét trong miệng.",
+        "được_dùng": "Liều dùng 10-12g dưới dạng thuốc sắc.",
+        "có tác dụng": "Theo tài liệu cổ, huyền sâm có tác dụng tư âm, giáng hoả, trừ phiền, chỉ khát, giải độc, lợi yết hầu, nhuận táo, hoạt trường. Dùng chữa các bệnh nhiệt, phiền khát, điên cuồng, yếu hầu sưng đau, ung thũng, tràng nhạc, táo bón. Người tỳ hư tiết tả không dùng được.",
+        "chữa": "Chữa viêm cổ họng, viêm amiđan (đơn của Diệp Quyết Tuyền). Huyên sâm l0g, cam thảo 3g, cát cánh 5g, mạch môn đông 8g, thăng ma 3g, nước 600ml. Sắc còn 200ml chia làm nhiều lần uống trong ngày hoặc làm thuốc súc miệng."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mới di thực vào nước ta. Nay phát triển ở nhiều nơi. Trước kia nhập của Trung Quốc.",
+        "làm thuốc": "Trồng bằng hạt vào mùa xuân, mỗi hecta cần chừng 1,5kg hạt giống.",
+        "phơi khô": "Thu hoạch rễ vào tháng 10-11. Mỗi hecta cho chừng 5 tấn rễ tươi. Đào lấy rễ, rửa sạch, cắt bỏ rễ con, cắt đầu chồi thừa 3 mm, tách riêng từng rễ, phân loại to nhỏ. Phơi hoặc sấy ở 50oC đến 60oC đến gần khô. Đem ủ 5 ngày đến 10 ngày đến khi trong ruột có màu đen hoặc nâu đen, rồi tiếp tục phơi đến khô. Cách ủ: Dược liệu sau khi phơi gần khô đem tãi ra trong nong nia thành một lớp dày chừng 15 cm, để chỗ mát, hàng ngày đảo vài lần, có thể đậy lên trên bằng một lớp rơm mỏng hay bằng một cái nong hoặc nia khác. Trong khi ủ phải đảo luôn, không để dày quá, không đậy kín quá dễ bị hấp hơi, thối hỏng. Khi dùng rửa sạch, ủ mềm, thái lát phơi khô."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

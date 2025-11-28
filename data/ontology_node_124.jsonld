@@ -1,0 +1,253 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa giẻ Nam Bộ",
+      "ten_khac": "Kê trảo quả, hoa giẻ lông đen",
+      "ten_khoa_hoc": "Desmos cochinchinensis Lour.",
+      "ma_taxon": "430935",
+      "ho": "Na (Annonaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ leo, dài 6 – 7m.",
+      "thân": "Cành lúc đầu phủ lông trắng hoặc màu gỉ sắt áp sát, sau nhẵn, màu đen và điểm những chấm nhỏ.",
+      "lá": "Lá mọc so le, hình trái xoan – mũi mác, dài 8 – 10 cm, rộng 3 – 5 cm, gốc tròn, đầu thuôn nhọn, mặt trên nhẵn bóng (trừ gân chính), mặt dưới phủ dày lông vàng (nhất là trên các gân); cuống lá ngắn, có lông tơ.",
+      "hoa": "Hoa thơm, màu vàng, mọc riêng lẻ, gần đối diện với lá, cuống dài 2,5 – 4 cm có lông; lá bắc nhỏ hình dài; đài có 3 răng hình mác nhọn, mặt ngoài có lông, tràng 6 cánh, dài gấp 6 – 7 lần lá đài, hình thoi hơi dày và có lông ở cả hai mặt, cánh trong hẹp bằng nửa cánh ngoài, gốc hình móng nhị nhiều, gốc hẹp, trung đới rộng và dày, hình bán cầu; lá noãn 25 – 30, có lông.",
+      "quả": "Lá noãn chín có màu vàng sau chuyến đỏ cam, có hình chuỗi hạt, hạt hình trứng cách nhau bởi những ngấn dài.",
+      "mùa hoa": "tháng 2 – 5",
+      "mùa quả": "tháng 7 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Desmos Lour., trên thế giới chỉ có khoảng 10 loài, phân bố chủ yếu ở vùng nhiệt đới Nam Á và Đông Nam Á, ở Việt Nam có 5 loài. Hoa giẻ Nam Bộ hiện mới ghi nhận về phân bố khu vực miền Trung và Tây Nguyên, bao gồm các tỉnh: Nghệ An (bờ sông Ca, Bù Khang); Quảng Bình (Hương Hóa, Quảng Trạch, Đồng Hới: Đồng Sơn), Quảng Trị (Mai Lãnh, Làng Tràm); Thừa Thiên – Huế (thành phố Huế, Phú Lộc, Thủy Dương, Nam Đông); Kon Tum (Đắk Glei: Đắk Long, Kon Plông: Mang Cành); Gia Lai (Kon Hà Nùng). Cây còn phân bố ở Lào và Campuchia (Nguyễn Tiến Bân, 2000).",
+      "thường_mọc": "Hoa giẻ Nam Bộ là loại cây ưa sáng, hơi chịu bóng và cũng có khả năng chịu được hạn. Cây thường mọc cùng với các cây bụi khác ở đồi, ven rừng thứ sinh, bờ nương rẫy và trong các lùm bụi ven đường đi và quanh làng bản.",
+      "Đặc điểm sinh trưởng": "Cây thường xanh và ra hoa quả hàng năm. Tái sinh tự nhiên chủ yếu từ hạt. Ngoài ra, cây cũng có khả năng tái sinh cây chồi từ phần còn lại khi bị chặt phát.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Bình"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Trị"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thừa Thiên – Huế"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Gia Lai"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa lawinal, isolawinal.",
+      "gồm chất": "Vỏ thân chứa aprophin alcaloid, 15 hydroxy – 3, 13 – kowalodien 15, 16 olid phenyltetra – hydrofurano – 2 – piron có tác dụng độc tế bào và acid polialthic [Phạm Hoàng Hộ, 2006, Cây có vị thuốc ở Việt Nam, tr. 41]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và lá cây hoa giẻ Nam Bộ vị cay, tính hơi ấm, có công năng khu phong, tiêu trệ làm mạnh tỷ (giúp tiêu hóa), lợi thấp giám thống. Tài liệu Trung Quốc [TDTH, 1996, 11:2255] ghi: rễ hoa giả Nam Bộ vị cay, tính bình, có công năng khu phong thấp, chi tế (làm mất tế bì), giảm thống, dùng trị phong thấp sinh viêm khớp xương, tràng vị hàn thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ và lá cây hoa giẻ Nam Bộ được dùng chữa đầy bụng khó tiêu, phong tê thấp, đau nhức xương, đòn ngã tổn thương, thủy thũng. Còn được dùng cho phụ nữ sau khi đẻ bị đau bụng, chảy máu không cầm và để tăng tiết sữa.",
+      "được_dùng": "Quả của cây hoa giẻ Nam Bộ có thể dùng ăn được. Ngày dùng 20 – 40g lá khô sắc uống.",
+      "chữa": "Phong thấp, đau nhức xương thường dùng rễ, ngày 20 – 40g sắc nước uống.",
+      "làm thuốc": "Ở Trung Quốc, lá hoa giả Nam Bộ được dùng chữa ăn uống không tiêu, bụng đầy trướng; viêm thận, phù thũng; viêm phế quản. Ngày dùng 20 – 40g lá khô sắc uống. Rễ hoa giả Nam Bộ được dùng trị phong thấp, đau gân cốt, ngày 20 – 40g sắc uống hoặc ngâm rượu uống. Ở Malaysia, rễ cây hoa giẻ Nam Bộ được sắc uống để chữa sốt, mụn nhọt, lở loét. Hoa hãm uống có tác dụng an thần gây ngủ.",
+      "có tác dụng": "Bài thuốc có hoa giẻ Nam Bộ Chữa phong tê thấp, đau nhức xương khớp: Rễ cây hoa giẻ Nam Bộ, rễ rung rúc, rễ gắm, vỏ cây chân chim (Schefflera octophylla Harms) mỗi vị 80g, rễ bưởi bụng, rễ bươm bướm (Mussaenda pubescens Ait.f), rễ tầm xuân, rễ cỏ xước, rễ ô dược (Lindera myrrha Merr), tầm gửi dâu, toàn cây bấn trắng (hoặc mò mẫm sôi), toàn cây vậy đỏ (hoặc bọ mẩy đỏ) mỗi vị 40g; cỏ roi ngựa, rễ chỉ thiên mỗi vị 24g, ngâm với 3 lít rượu, sau 15 ngày có thể uống, mỗi ngày một chén con (3ml) (Theo Hải thượng lãn ông). Chữa ngộ độc do nấm: Rễ cây hoa giẻ nam bộ, cành và lá kim ngân, mỗi vị 30g, sắc lấy nước uống (Nam dược thần hiệu)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

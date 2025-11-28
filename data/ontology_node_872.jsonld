@@ -1,0 +1,280 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mè tré",
+      "ten_khac": "Mè tré",
+      "ten_khoa_hoc": "Alpinia globosa (Lour.) Horan.",
+      "ma_taxon": "1157337",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, xếp thành hai dãy đều, hình trái xoan hoặc hình mác, dài 40 – 60cm, rộng 10 – 12cm, gốc và đầu thuôn, mép hơi có răng và lông mi, hai mặt nhẵn; bẹ lá nhẵn có khía, lưỡi bẹ có lông; cuống lá dài 8cm.",
+      "hoa": "Cụm hoa mọc ở ngọn dày đặc thành hình tháp kéo dài, bao bọc bởi nhiều lá bắc dài, lá bắc con rất nhỏ, thường tiêu giảm thành vảy, hoặc không có; mỗi nhánh của cụm hoa mang 4-8 hoa màu trắng có vằn tía; đài hình trụ có 3 răng tròn ngắn; tràng có ống, cánh hoa thuôn lõm, cánh môi hình bầu dục, nhị có chỉ dài, nhị lép hình dùi, bầu hình cầu.",
+      "quả": "Quả mọng, hình cầu, chứa 5 – 7 hạt màu xám.",
+      "cây": "Cây thảo, cao 1 – 1,2m.",
+      "mùa hoa": "tháng 4-8",
+      "mùa quả": "tháng 4-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Alpinia Roxb. có tổng số khoảng 250 loài phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á; một số loài có ở đảo Solomon, Fiji, Samoa và Australia. Trong đó, riêng ở vùng Đông – Nam Á có tới gần 10 loài được dùng làm thuốc (Halijah Ibrahim, 2001). Ở Việt Nam, chi này có 25 loài, trong đó nhiều loài được dùng làm thuốc giống như ở các nước trong khu vực và Trung Quốc. Cây mè tré chỉ thấy phân bố ở một số tỉnh Nam Trung Quốc và Bắc Việt Nam như Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên, Tuyên Quang, Yên Bái, Lào Cai, Lai Châu, Sơn La, Hòa Bình… Mè tré là cây ưa ẩm, có thể hơi chịu bóng, thường mọc ở ven rừng, đặc biệt là dọc theo hành lang ven suối; ở độ cao từ 300 đến 800m hoặc hơn. Cây mọc thành từng khóm lớn có hoa quả nhiều hàng năm, nhưng thường chỉ thấy trên các nhánh đã trưởng thành được khoảng một năm. Quả khi chín dễ rụng, đôi khi cũng là thức ăn của các loài bò sát hay động vật gặm nhấm. Nguồn mè tré ở Việt Nam tương đối phong phú. Tuy nhiên, lượng khai thác hàng năm mới chỉ được sử dụng ở các địa phương. Cây trồng được bằng hạt hay bằng các nhánh con.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây Mè tré có acid chlorogenic và hợp chất Flavonoit. Lá có K nitrat. Quả và thân rễ có tinh dầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mè tré có vị cay, tính ấm, vào các kinh tâm, tỳ, thận, có tác dụng ôn bổ tỳ thận."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mè tré (quả khô bỏ vỏ) được dùng làm thuốc như ích trí nhân của Trung Quốc (Alpinia oxypiriylla), để chữa khó tiêu, tiêu chảy, di tinh, đái nhiều về đêm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa thận hư, di tinh, ban đêm đái nhiều: Mè tré, hoài sơn, ô dược, lượng bằng nhau. Tán bột, mỗi lần uống 12g, ngày 2-3 lần, dưới dạng bột hoặc viên.",
+      "chữa": "Chữa đau bụng, tiêu chảy: Mè tré 12g; thanh mộc hương, tiểu hồi hương, trần bì, can khương, ô mai, mỗi vị 6g. sắc uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

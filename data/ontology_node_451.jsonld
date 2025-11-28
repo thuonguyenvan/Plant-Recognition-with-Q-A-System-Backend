@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cà phấn tàu",
+      "ten_khac": "Thóc lép nhiều quả.",
+      "ten_khoa_hoc": "Desmodium polycarpum DC.",
+      "ma_taxon": null,
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ dạng bụi, cao 0,5 – 1m. Thân hình trụ, ít phân cảnh, lúc đầu có lông trắng sát, sau nhẵn.",
+      "lá": "Lá mọc so le, cuống có lông trắng, 3 lá chét hình thuôn hoặc trái xoan ngược, dài 2,5 – 5 cm, rộng 1 – 2,5 cm, gốc tròn, đầu lõm có mũi lồi, lá chét tận cùng to hơn, mặt trên nhãn, mặt dưới có lông màu tro, gân chính chạy dọc theo mép lá, gân phụ thành mạng lưới rõ, cuống chung dài 2 – 2,5 cm, có lông trăng nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn hoặc đầu cảnh thành chùm bông, dải 4 – 6 cm, có lông mềm màu trắng bạc: lá bắc hình trái xoan nhọn, có khía; hoa nhiều màu hồng hoặc tím; đài có 4 răng nhẵn, cánh cờ hình trứng rộng, dài 4 mm, các cánh bên 2 mm, nhị 1 bó, bao phấn màu nâu, bẫu nhẵn.",
+      "quả": "Quả đậu mọc đứng, rất sít nhau, chia 5 – 6 đốt, có lông rất nhỏ.",
+      "mùa hoa": "tháng 6 – 9.",
+      "mùa quả": "tháng 6 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Desmodium Dev. Có gần 30 loài ở Việt Nam, gồm hầu hết là cây thân thảo hoặc cây bụi.  Theo Nguyễn Đăng Khôi, 2003, cà phấn tàu mới thu được mẫu vật ở Đồng Đăng (Lạng Sơn). Cây phân bố chủ yếu ở các nước Trung Quốc (bao gồm cả Đài Loan), Mianma, Nepal và Ấn Độ với độ cao phân bố tới 2.200m.",
+      "thường_mọc": "Cà phấn tàu là loại cây thảo sống nhiều năm, ra ẩm và ưa sáng, thường mọc lẫn với các loài cây bụi nhỏ hay cỏ dại khác ở chân núi đá vôi hay trên nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cà phấn tàu có vị đắng ngọt, tính mát, có tác dụng thanh nhiệt, giải độc, tiêu viêm, giảm thấp, lợi tiểu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cà phấn tàu được dùng chữa một số bệnh viêm như viêm họng, viêm tuyến mang tai, viêm não B truyền nhiễm. Nhân dân Quảng Ninh dùng cây chữa sưng vú, chóng mặt.",
+      "được_dùng": "Ở Ấn Độ, cà phấn tàu được dùng chữa ngất, co giật, và ho Ở Indonesia toàn thân cây bỏ rễ chữa ho và làm thuốc bổ, rễ và lá để chữa đòn ngã tổn thương.",
+      "sắc uống": "Liều dùng: 15 – 30g toàn cây bỏ rễ, dùng tươi có thể đến 60g, sắc uống.",
+      "giã nát": "Dùng ngoài, lấy lá tươi, giã nát, đắp vào chỗ đau, đòn ngã tổn thương, mụn nhọt, rắn cắn.",
+      "chữa": "Thuốc lợi tiểu:  Cà phấn tàu chặt nhỏ phơi khô 30 – 60g, mã đề 30g. Sắc uống ngày một thang.  Chữa rắn độc cắn:  Sau khi xử lý ban đầu, rửa bằng nước vôi loãng rồi dùng bài thuốc sau: cà phấn tàu, lưỡi rắn trắng (Hedyotis diffusa Willd.), mỗi vị 15g, cây lông nhím, quả ngô thù mỗi vị 2g. Sắc lấy nước, thêm rượu uống [Phạm Thiệp, Cây thuốc, bài thuốc và biệt dược, NXB Y học, 2000)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

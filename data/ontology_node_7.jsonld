@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cau",
+      "ten_khac": "Cau, Binh lang, Tân lang, Mạy làng (Tày), Pơ lạng (Kho)",
+      "ten_khoa_hoc": "Areca catechu L.",
+      "ma_taxon": "83108",
+      "ho": "Arecaceae (Cau)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cau là một cây có thân mọc thẳng đứng cao chừng 15-20m, đường kính 10-15cm.",
+      "thân": "Toàn thân không có lá mà có nhiều vết lá cũ mọc, chỉ ở ngọn có một chùm lá to rộng xẻ lông chim.",
+      "lá": "Lá có bẹ to.",
+      "hoa": "Mo ở bông mo sớm rụng. Trong cụm hoa hoa đực ở trên, hoa cái ở dưới. Hoa đực nhỏ màu trắng, 6 nhị. Hoa cái to, bao hoa không phân hóa. Noãn sào thượng 3 ô.",
+      "quả": "Quả hạch hình trứng to bằng quả trứng gà. Quả bì có sợi, hạt có nội nhũ xếp cuốn. Hạt hơi hình nón cụt, đầu tròn giữa đáy hơi lõm, màu nâu nhạt, vị chát."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cau được trồng ở khắp nơi trong nước ta để lấy quả trầu và xuất cảng.Trồng bằng quả thường sau 5-6 năm mới thu hoạch  Người ta phân biệt cau rừng (sơn binh lang) và cau nhà (gia binh lang). Cau rừng hạt nhỏ, nhọn và chắc hơn. Loại sơn binh lang có nhiều ở Nghệ Tĩnh và Thanh hóa  Trước đây (vào năm 1930) diện tích trồng cau ước lượng chừng 2500 hecta ở miền Mắc việt nam chủ yếu là Hải hưng sau đến Kiến an, Quảng Ninh và cuối cùng đến Nam Hà, Thái Bình. Tại miền Trung, diện tích trồng trước đây ước chừng 1.400 hecta. Tại miền Nam Việt nam, nhân dân cũng trồng nhiều ở Mỹ Tho, Bến Tre, Rạch Giá, Cần Thơ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa 10-15% dầu béo, trong dầu có các glycerid của acid lauric 50%, acid myristic 21%, acid oleic 29%, protid 5-10%, glucid 50-60%, tanin, các alcaloid. Tỷ lệ tanin trong hạt non chừng 70% nhưng khi chín chỉ còn 15 -20% Hoạt chất chính là 4 alcaloid: arecolin, arecaidin C7H11NO2, guvaxin C6H9NO2 và guvacolin C7H11NO2, Arecolin (hay CH, arecaidin) C8H13NO2 chiếm chừng 0,1-5%"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt cau thường được dùng làm thuốc chữa giun sán cho súc vật như chó với liều 4g. Nếu dùng arecolin bromhydrat người ta dùng liều 0,5-1mg Dùng chữa sán cho người: phối hợp với hạt bí ngô (xem vị hạt bí ngô) Làm thuốc giúp sự tiêu hóa, chữa viêm ruột, lỵ. Dùng hạt cau khô, mỗi ngày 0,5- 4g. Chữa trẻ con chốc đầu: Mài hạt cau thành bột phơi khô hòa với dầu mà bôi. Cần theo dõi vì có độc  Nhân dân còn dùng hạt cau phối hợp với thường sơn, thảo quả chữa sốt rét trong đơn thuốc: Thường sơn triệt ngược.  Chú thích  Người ta còn dùng vỏ quả cau làm thuốc lợi tiểu với tên đại phúc bì (xem vị này ở mọc các cây thuốc thông tiểu tiện). Cây cau rừng (sơn bình lang) có tên khoa học Areca laoensis L cùng họ, với cùng một công dụng. Một cây cau rừng khác có tên khoa học Pinanga baviensis O. Becc cùng họ, ít dùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

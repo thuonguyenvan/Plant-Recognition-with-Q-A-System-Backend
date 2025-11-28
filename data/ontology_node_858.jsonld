@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nụ áo tím",
+      "ten_khac": "Cúc bạc đầu , Nụ áo tím",
+      "ten_khoa_hoc": "Vernonia patula (Ait.) Merr.",
+      "ma_taxon": "426351",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hàng năm, cao khoảng 60 cm, có khi đến 1 m.",
+      "thân": "Thân cứng, hình trụ, hơi có lông, thường phân cành ở khoảng giữa Cành mảnh, có khía mờ.",
+      "lá": "Lá mọc so le, hình thoi, dài 2,5 – 5 cm, rộng 1 – 1,5 cm, gốc thuôn, đầu hơi nhọn, mép khía răng cưa, mặt dưới phủ tông trắng, cuống lá dài 1,5 cm, lá ở ngọn gần như không cuống.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành ngù có lá, cuống dài 4 – 6 cm, mang nhiều đầu hình cầu, hoa màu tím, tổng bao có lá bắc ở dưới ngắn dạng gai, lá bắc trên hình bầu dục, có lông ở mặt ngoài, tràng hình trụ, có 5 thuỳ có tuyến, nhị có bao phấn  xe ở gốc và nhọn ở đầu, mào lông dài rụng sớm",
+      "quả": "Quả bế có 4 – 5 cạnh , nhẵn .",
+      "mùa hoa": "tháng 6",
+      "mùa quả": "tháng 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Vernonia Schreb là một chi lớn gốm các loài phân bổ rộng  rãi từ vùng ôn đới đến nhiệt đới. Ở Việt Nam, chi này có 25 loài, trong đó nụ áo tím được coi là loài cỏ dại, phân bố rải rác khắp nơi, từ độ cao khoảng 1000 m trở xuống Vùng phân bố của nụ áo tím trên thế giới bao gồm Ấn Độ, Trung Quốc, Lào và các nước khác ở vùng Đông – Nam Á",
+      "thường_mọc": "Nụ áo tím thường mọc lẫn với các loại cỏ thấp trên đất ẩm ở vườn, bãi hoang quanh làng bản, ven đường đi và nương rẫy. Ra hoa quả nhiều vào cuối mùa hè đến đầu mùa thu. Hạt nhỏ dễ phát tán, cây con mọc từ hạt rải rác từ cuối mùa xuân đến đầu mùa hè. Ở Ấn Độ và đảo Ja Va, ngọn non được dùng làm rau xanh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, tốt nhất vào mùa hè, rửa sạch dùng tươi hay phơi khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nụ áo tím  có vị đắng, ngọt, tính mát, có tác dụng bổ , hạ  số, làm ra mối hôi, tán hàn, làm se, giảm tiêu chảy."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây nụ áo tím được dùng để chữa viêm ruột – dạ dày cấp tính, tiêu chảy, cảm mạo phong nhiệt, nhức đầu, sốt, cảm lạnh , sốt xuất huyết. Dùng cho phụ nữ chữa rong huyết hoặc sau khi sinh đẻ uống để trừ hậu sản . Dùng ngoài , giã đắp trị mụn nhọt. Ngày 15-30g sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa sốt xuất huyết : Nụ áo tím 15 g, vỏ núc nác hoặc lá khế 10g, nụ hòe 5g. Các vị  sao vàng sắc chia 2 lần uống trong ngày. Dùng liều 3 – 5 ngày (kinh nghiệm của Thái Bình) Chữa  rong kinh: (Cả cây  nụ  áo tím 20 g toàn  cây bạc  thau hoa đầu ( argyreia capitafa Choisy) 10 g, lá ngải cứu 5 g sắc uống trong ngày, dùng 3 – 5 ngày. Có thể giã nát… ép lấy nước uống Bài thuốc cai đẻ : Toàn cây nụ áo tím, lá chàm mèo… là ké hoa đào, và dây tơ hồng vàng (Sưu tân ở miền núi phía bắc, cần nghiên cứu xác minh)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

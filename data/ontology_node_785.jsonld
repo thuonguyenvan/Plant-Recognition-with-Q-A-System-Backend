@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau cần ta",
+      "ten_khac": "Rau cần nước, Rau cần cơm, Rau cần ống",
+      "ten_khoa_hoc": "Oenanthe stolonifera (Roxb.) Wall.",
+      "ma_taxon": "359175",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhẵn, sống dai.",
+      "thân": "Thân mọc bò dài ngập trong bùn, bén rễ ở những mấu, sau đứng thẳng, rỗng, có nhiều đốt và khía đọc.",
+      "lá": "Lá mọc so le, chia thùy hình lông chim, 1-2 lần, thuỳ hình trái xoan, hình thoi hoặc hình mác, gốc tròn, đầu nhọn, mép khía răng không đều; bẹ lá to, rộng, ôm sát vào thân; cuống lá dài 3 – 8cm; những lá gần ngọn không cuống.",
+      "hoa": "Cụm hoa mọc đối điện với lá thành tán kép, có 5 – 15 tán đơn, mỗi tán đơn mang 10 — 20 hoa màu trắng; tổng bao có vài lá bắc hình dải hoặc không có; tiểu bao có lá bắc hình sợi; dài có răng khá dài; tràng có cánh gập xuống.",
+      "quả": "Quả hình trụ – thuôn, có 4 cạnh lồi.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Oenanthe L. là một chi nhỏ ở Việt Nam chỉ có 3 loài, trong đó có rau cần ta là cây trồng.  Rau cần ta có nguồn gốc ở vùng nhiệt đới châu Á, đã được trồng từ lâu ở các nước Pakistan. Nhật Bản, Đài Loan, Trung Quốc, Việt Nam, Lào, Thái Lan, Malaysia Philippin, Papua New Guinea, Indonesia (Java Sumatra), Australia. Ở Việt Nam, rau cần ta cũng là loại rau quen thuộc, được trồng từ lâu đời ở các tỉnh phía bác, từ Nghệ An trở ra; đặc biệt là các tỉnh đồng bằng và trung du Bắc Bộ, như Hà Nam, Nam Định, Thái Bình, Hải Dương, Hưng Yên, Bắc Ninh, Bắc Giang, Hà Tây, Vĩnh Phúc, Phú Thọ… và gần đây rau cần cũng mới được đem vào trồng ở miền Nam.",
+      "thường_mọc": "Rau cần ta ưa nước, ưa sáng hoặc có thể hơi chịu bóng, thường được trồng ở ruộng ngập nước có nhiều bùn hoặc ở ao sau khi đã tát cạn nước bắt cá. Lớp bùn càng sâu, càng màu mỡ, cây càng sinh trưởng mạnh. Rau cần ta ưa khí hậu ẩm mát, do đó thường được trồng vào đầu mùa đông, để cây sinh trưởng mạnh trong mùa đông – xuân. Đến đầu mùa hè, cây sinh trưởng chậm lại, thậm chí có hiện tượng bán tàn lụi, nhưng toàn bộ phần gốc và các nhánh con vẫn tổn tại. Đó là nguồn cây giống ban đầu cho vụ trồng trọt tiếp theo. Những đám rau cần ta trồng ở ruộng, nếu không được thu hoạch (thường để làm giống) có thể ra hoa vào cuối mùa hè hoặc đầu mùa thu. Hiện chưa quan sát được quả và hạt. Rau cần ta có khả năng đẻ nhánh khoẻ từ chồi gốc."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Rau cần ta ưa nhiệt độ thấp, thời vụ trồng thường vào cuối tháng 10 hoặc đầu tháng 11.  Người ta nhân giống rau cần ta bằng phương pháp vô tính. Đầu tháng 2 hàng năm, cần trồng lại một khoảnh, chăm sóc cho cây lên tốt, đến đầu tháng 10 nhổ cả thân rễ đem giâm để nhân giống. Đất giâm cần chọn bùn nhuyễn, bón lót phân mục, trải đều thân cây cần già lên mặt bùn, ấn gốc cho ngập và xoan nhẹ để thân cây vừa lún vào bùn. Từ các mắt của thân sẽ mọc lên các nhánh mới. Dùng nước giải pha loãng tưới thúc, khi nhánh cao 8 – 10cm thì nhổ đem trồng.  Trồng vào ao bùn, chỉ cần sục bùn, gạt phẳng, không cần bón phân. Nếu trồng trên ruộng nên bón lót 3-4 tấn phân chuồng mục cho một sào Bắc Bộ. Cây con cấy với khoảng cách 5 x 5cm hoặc 7 x 7cm thành luống rộng 1,2 – 1,4m.  Khi cây hồi xanh, dùng nước phân hoặc nước giải pha loãng tưới thúc cho rau. Có thể thúc 2-3 lần, mỗi lần cách nhau 10 ngày. Không dùng đạm vô cơ để tránh làm rau bị lướt. Ruộng rau cần ta cần giữ thường xuyên đủ nước (ngập thân cây)."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, dùng tươi hoặc phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau cần ta chứa tinh dầu 0,066%, trong đó có a – pinen, p – pinen, myrcen, terpinolen (Trung dược đại từ điển I, 1975); nhiều glucosid: oenthosid A (= 2,3 – methylendioxy – 5 alylphenyl – p – D – glucopyranosid), eugenyl – p – D — glucopyranosid, pinoresinol – p – D — glucopyranosid, p – sitosteryl glucosid, stigmasteryl glucosid, diethylphtalat.  Ngoài ra, còn có isorhamnetin sulfat (persicarin), quercitrin, acid o — coumaric, hyperin. Rễ và thân có falcarinol (= n – heptadeca – 1,9 – dien – 4, 6 – diyn – 3 – ol).  Quả chứa 1,5% tinh dầu, trong đó có phenlandren và myristicin.  (The wealth of India VII, 1966; CA 123: 29.609z; CA 123: 193690 q; CA 121: 271619 y; CA 120: 116542 d; CA 114: 53.933 v).  Rễ còn có glucose, các aciđ béo (acid stearic, acid behenic, acid cerotic, acid lignoceric) và umbeliferon (CA 99: 155.252 b).  Rau cần ta chiết bằng ether cho các chất isorhamnetin, camphen, p – pinen, carvacrol và eugenol (CA 87: 114.553 j)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau cần ta vị ngọt, hơi cay, tính mát, có tác dụng thanh nhiệt, lương huyết, lợi đại tiểu tràng, lợi tiểu, tiêu thũng, giảm đau, cầm máu. Quả có tác dụng chống đầy hơi và chống nôn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rau cần ta chủ yếu được dùng làm rau, xào hoặc nấu canh ăn, cũng có thể dùng ăn sống.  Rau cần ta 40g, thái nhỏ, sắc nước uống, chữa đầy bụng, nôn mửa ở trẻ em.  Để chữa đái ra máu, đái buốt, rau cần ta cả rễ để tươi 100 – 200g rửa sạch, giã nát, vắt lấy nước, uống. Rau cần ta còn được dùng chữa sốt, cảm lạnh cao huyết áp, viêm nhiễm đường tiết niệu, đái khó, rong kinh, bạch đới.  Dùng ngoài, rau cần ta để tươi, giã nát, đắp chữa đòn ngã tổn thương, áp xe, rắn cắn, bò cạp đốt. Quả được dùng trị ho, tiểu tiện khó, đầy bụng, nôn mửa.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "..."
+    }
+  ]
+}

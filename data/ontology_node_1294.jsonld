@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gừa",
+      "ten_khac": "Gừa, Si quả nhỏ",
+      "ten_khoa_hoc": "Ficus microcarpa L.f.",
+      "ma_taxon": null,
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ to, cao 15 – 20 m, có rễ khí sinh mọc từ cành.",
+      "thân": "Cành non có cạnh, sau hình trụ, màu xám tro.",
+      "lá": "Lá mọc so le, dày và dai, dài 6 – 18 cm, rộng 3 – 8 cm, gốc tròn hoặc thuôn, đầu nhọn, mép nguyên, mặt trên sẫm bóng, mặt dưới nhạt, hai mặt nhẵn; lá non có lông trắng mềm; lá kèm nhỏ.",
+      "hoa": "Cụm hoa có dạng quả sung, mọc ở kẽ lá, gần như không cuống, chứa hoa đực và hoa cái.",
+      "quả": "Quả màu vàng, có vân đỏ.",
+      "mùa hoa": "tháng 5 – 7.",
+      "mùa quả": "tháng 5 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ficus L. là một chi lớn, gồm rất nhiều loài. Hiện nay, ước tính trên thế giới có khoảng 1000 loài, phân bố rộng rãi ở tất cả các vùng nhiệt đới và cận nhiệt đới của hai bán cầu. Tuy nhiên, Malaysia được coi là trung tâm phân bố lớn nhất, bởi sự có mặt của 50% tổng số loài (PROSEA, Medicinal & Poisonous Plants, 12 (1): 277). Ở Việt Nam, chi Ficus L. được ước tính có tới 120 loài (Nguyễn Tiến Bân, 1997), đa dạng về dạng sống cũng như sự phân bố rộng rãi. Trong đó, gừa thuộc nhóm cây gỗ lớn, phân bố rải rác ở khắp các tỉnh miền núi, trung du, đồng bằng và cả các đảo. Trên thế giới, loài cây này cũng gặp ở nhiều nơi, từ Ấn Độ, Sri Lanka, Nam Trung Quốc đến Đông Dương, các nước Đông Nam Á, đảo Solomon, Caroline, Tân Caledonia và Australia…  Ở Việt Nam, gừa thường thấy trong các quần hệ rừng núi đá, rừng thứ sinh, nhất là ở vùng ven biển và đảo. Cây cũng được trồng xung quanh làng bản, nơi cộng cộng để lấy bóng mát. Khi còn nhỏ, cây có thể ở dạng sống phụ sinh (trên đá hay cây gỗ khác). Sau lớn dần, bám bóp nghiệt cây giá thể trở thành cây gỗ lớn với nhiều rễ khí sinh buông xuống từ cành. Gừa ra hoa quả nhiều hàng năm. Quả chín là thức ăn ưa thích của nhiều loài chim rừng. Do đó, hạt được phát tán dễ dàng đi khắp nơi. Hạt rơi vào các kẽ đá, hốc cây dễ có khả năng nảy mầm. Gừa là cây có thể sống hàng trăm năm. Gỗ nhẹ và mềm nên ít được sử dụng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và lá, thu hái quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ cây gừa chứa 14 chất triterpenoid, một alcol béo, 8 chất steroid, 1 chất coumarin, 1 chất flavan, 2 chất 4-hydroxybenzoat và 1 chất tương tự carotenoid (Kuo Yueh – Hsiung và cs, 1997; CA. 127, 231875w).  Theo Li Yen Cheng và cs, 1997, vỏ chứa ficusoflavon và isolupinisoflavon E. (CA. 126, 142027a).  Quả chứa β-amyrin acetat, β-amyrin, acid maslinic, acid 2α-hydroxyursolic, acid oleanolic, β-sitosterol và acid protocatechuic (Higa Matsutake và cs, 1996; CA. 126, 318827p)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ gừa có vị đắng, chát, tính bình, mát, có tác dụng khu phong, thanh nhiệt, hoạt huyết giải độc.  Lá gừa có vị đắng, chát, tính mát, có tác dụng hoạt huyết, tán ứ, giải nhiệt, lý thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm nhân dân, một số người bốc thuốc chữa bệnh ở tỉnh Minh Hải đã dùng rễ gừa phối hợp với nhiều vị thuốc khác để chữa bệnh sỏi thận. Cách bào chế như sau: Rễ gừa 30g, rễ nhàu 20g, thân cây muồng trâu 20g, cây thài lài trắng 10g, vỏ thân cây chanh chim 10g, lõi cỏ bắc 4g. Tất cả thái nhỏ, phơi khô, sắc với 400ml nước, còn 100ml. Uống làm 2 lần trong ngày. Mỗi đợt điều trị kéo dài 5 – 7 ngày.  Có người dùng chữa bệnh liệt nửa người (bán thân bất toại) với bài thuốc có rễ gừa sau đây: Rễ gừa 30g, rễ nhàu non hoặc vỏ thân cây nhàu già 20g, cây trinh nữ 20g, cành lá cây lức 20g, cành lá tầm gửi 20g, gỗ thân cây cù đến 20g, gỗ thân cây chòi mòi 20g, rễ có xước 10g, rễ cây rui già 10g, củ gấu 10g, cành và lá dành dành 10g. Các dược liệu trên đem thái nhỏ, sắc uống trong ngày. Dùng 10 ngày liền (kinh nghiệm của ông Hai Dương, huyện Thái Bình, tỉnh Minh Hải).  Ở Trung Quốc, rễ gừa được dùng chữa cảm cúm, ho gà, sỏi moc không đều, viêm kết mạc, đau mắt hột, đau phong thấp, chảy máu cam, đái ra máu (huyết lâm). Liều dùng 9 – 15g/ngày, sắc nước hoặc ngâm rượu uống. Dùng ngoài, rễ gừa giã nát sao với rượu đắp, hoặc dùng nấu nước rửa. Rễ gừa 60g, sắc với nước và rượu uống chữa bệnh khớp do phong thấp. Rễ gừa tươi (30g – 45g) đường kính (ương vùi trấu), sắc nước uống chữa đái ra máu. Mỗi ngày uống 1 lần, dùng liên tục 4 – 5 ngày. Để chữa đau răng, lấy tua rễ gừa, bỏ kẹt (lượng bằng nhau), sắc với nước, ngậm không được nuốt.  Lá gừa chữa vết thương do đâm chém, cảm cúm, viêm amidan, viêm phế quản mạn tính, kiết lỵ, viêm ruột. Liều dùng mỗi ngày 10 – 15g. Lá gừa tươi 30 – 45g, trần bì 6g, sắc với nước 2 lần rồi cô đặc còn 50 – 100ml, cho thêm ít đường, chia làm 2 – 3 lần uống trong ngày chữa viêm phế quản mạn tính. Một đợt điều trị 10 ngày.  Nhựa mủ từ cây gừa pha với giấm bôi ngoài chữa hắc lào, tràng nhạc.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

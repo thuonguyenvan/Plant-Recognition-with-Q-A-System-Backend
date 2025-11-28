@@ -1,0 +1,250 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Âm địa quyết",
+      "ten_khac": "Cỏ âm địa",
+      "ten_khoa_hoc": "Botrychium ternatum (Thunb.) Sw.",
+      "ma_taxon": "701166",
+      "ho": "Ophioglossaceae -  Lưỡi rắn"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, thuộc loại dương xỉ, có thân rễ ngắn.",
+      "thân": "Thân nhẵn, mọc đứng, cao 30 – 40 cm.",
+      "lá": "Lá có phần không sinh sản, dạng tam giác dài 5 – 17 cm, rộng 8 – 15 cm, xẻ lông chim 3 – 4 lần; lá chét mọc đối dài 4 – 6 cm, rộng 2 – 3 cm, gốc tròn, đầu nhọn, chia thành nhiều thùy nhỏ, cách nhau.",
+      "hoa": "Túi bào tử xếp thành bông, các bông lại tụ họp thành chùy có cuống dài khoảng 10 cm, đính vào giữa phần không sinh sản của cuống lá.",
+      "quả": "Bào tử hình tròn, hơi có cạnh, không màu.",
+      "mùa hoa": "tháng 5 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Botrychium ở Việt Nam hiện chưa được nghiên cứu nhiều về thực vật học. Tuy nhiên, theo Phạm Hoàng Hộ (2000) đã ghi nhận được 3 loài, cây mọc ở vùng cao của nước ta như ở Sapa tỉnh Lào Cai và Đà Lạt tỉnh Lâm Đồng.  Âm địa quyết là loại dương xỉ nhỏ, sống nhiều năm, phân bố chủ yếu ở các tỉnh miền núi. Hiện đã biết chắc chắn có ở vùng núi Hoàng Liên Sơn thuộc huyện Sa Pa (Lào Cai), Phong Thổ và Than Uyên (Lai Châu); vùng núi Lang Biang thuộc huyện Lạc Dương (Lâm Đồng). Ngoài ra, cũng có thể tìm thấy ở một số vùng núi khác tại tỉnh Hà Giang hoặc Yên Bái. Trên thế giới, âm địa quyết cũng phân bố tại phía nam Trung Quốc, Ấn Độ và cũng có thể có ở vùng bắc Lào.",
+      "thường_mọc": "Cây ưa ẩm, hơi chịu bóng, thường mọc bám vào đá hay trên đất thành khóm hay đám nhỏ ở vùng rừng kín thường xanh, độ cao từ 1.300m trở lên. Cây sinh sản bằng bào tử và bằng cách để nhánh từ thân rễ, song hiện tại chưa nắm được quá trình nảy mầm của bào tử. Cây thường mọc ở tràng cỏ và trảng cây bụi thưa thứ sinh hay ven đường mây mù, độ cao 1500-2300m.",
+      "Đặc điểm sinh trưởng": "Âm địa quyết được tìm thấy ở một phần lớn của Trung Quốc, trải dài từ khí hậu ôn đới tới đông bắc đến cận nhiệt đới ở phía nam.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân, rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa luteolin, ternatin [Trung dược từ hải I, 1994; Compendium of Indian Medicinal Plants, vol.5, 1998]",
+      "tinh dầu chứa": "Tinh dầu được chiết xuất từ Âm địa quyết bằng cách chưng cất hơi nước và chạy sắc ký khí- phối phổ để phân tích thành phần hóa học. 47 hợp chất đã được xác định với hàm lượng tương đối lên đến 86,62%. Các thành phần chính của tinh dầu là Furfural(2,08%), Benzaldehyde, 2-hydroxy (15,74%), 2–Hydroxy-3-methybenzaldehyde(1,65%),-Eudesmol(2,41%), Bisabolol(2,70%),Ethanone,1-[ 6-hydroxy-2-(1-metylenthenyl)-7-benzofuranyl]-(6,40%), axit n- Hexadecanoic (13,96%), 9,12-axit Octadecadienoic (Z,Z) (11,85%), 17-Octadecen-14-yn-1-ol(9,16%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân rễ cây âm địa quyết vị ngọt, đắng, tính lạnh, không có độc, có công năng thanh nhiệt, giải độc, bình can tán kết. Theo sách Trung Dược Chí, thì âm địa quyết vị ngọt, hơi đắng, tính mát; có công năng chữa đầu thống (nhức đầu), khải huyết (ho ra máu), hoa mắt, đinh nhọt thũng độc [TDTH. 1993. 1 – 2331]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ cây âm địa quyết được dùng trị sang độc, sưng nóng do phong nhiệt. Liều dùng 12-15g, sắc nước uống, ngày một thang.",
+      "chữa": "Ở Ấn Độ, người ta dùng cây để chữa thương tích và dùng thân rễ để chữa lỵ [Chopra, 2001: 40]. Thân rễ còn được dùng để bổ dạ dày, chữa hen, viêm phế quản, hoa để chữa sốt [Kirtikar, 1998: 2753].",
+      "được_dùng": "Ở Trung Quốc, thân rễ được dùng chữa nhức đầu, ho ra máu, ỉa ra máu, hoa mắt, thùng độc [TDTH. 1993 – 2331]",
+      "làm thuốc": "Nam nữ sau khi nôn mua ra máu, người có hư nhiệt: Dùng âm địa quyết, tử hà sa, quán chúng, cam thảo, mỗi vị đều 12g, sắc nước uống, ngày một thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

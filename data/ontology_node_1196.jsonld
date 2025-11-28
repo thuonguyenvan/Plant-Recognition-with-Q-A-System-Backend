@@ -1,0 +1,302 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng tinh hoa trắng",
+      "ten_khac": "Hoàng tinh nhiều hoa, Hoàng tinh hoa trắng",
+      "ten_khoa_hoc": "Disporopsis longifolia Craib",
+      "ma_taxon": "854509",
+      "ho": "Asparagaceae ( Măng tây)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 0,6 – 1 m.",
+      "thân": "Thân rễ mập, mọc thành chuỗi gồm những dóng tròn, trên có sẹo to, lõm nom như cái chén và nhiều ngấn ngang. Thân đứng, nhẵn, không phân nhánh, gốc có những đốm tía.",
+      "lá": "Lá mọc so le, không cuống, hình bầu dục hoặc hình trứng, dài 10 – 16 cm, rộng 5 – 8 cm, gốc tròn, đầu nhọn, hai mặt nhẵn, mép lượn sóng, gân lá hình cung, nổi rõ ở mặt dưới.",
+      "hoa": "Hoa mọc tập trung ở kẽ lá, 5 – 10 cái, rủ xuống; bao hoa dài 8 – 10 mm gồm 6 thùy màu trắng dính vào nhau thành hình chén hoặc hình chuông, thùy của bao hoa có phần phụ nạc; nhị 6, chỉ nhị rất ngắn, đính vào chỗ lõm ở đầu phần phụ, bao phấn hình sợi; bầu hình tròn.",
+      "quả": "Quả mọng, hình cầu hơi có 3 cạnh, màu tím đen khi chín.",
+      "mùa hoa": "tháng 3 – 5",
+      "mùa quả": "tháng 6 – 8.",
+      "mọc": "Cây dễ nhầm lẫn: Trúc điệp sâm (Disporum calcaratum D.Don var. rubriflorum Gagnep.) cùng họ. Cây có thân rễ mảnh, thân phân nhánh; các thùy của bao hoa rời nhau; quả màu lục khi chín."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trên thế giới, hoàng tinh hoa trắng phân bố chủ yếu ở các tỉnh Nam Trung Quốc, Bắc Việt Nam, Lào và Thái Lan. Ở Việt Nam, theo kết quả điều tra của Viện Dược liệu (1961 – 2000), hoàng tinh hoa trắng chỉ phát hiện thấy ở các tỉnh vùng núi phía bắc, từ Nghệ An trở ra, bao gồm Hà Giang, Lai Châu, Lào Cai, Yên Bái, Sơn La, Hoà Bình, Tuyên Quang, Thái Nguyên, Bắc Cạn, Cao Bằng, Lạng Sơn, Phú Thọ (Thanh Sơn), Vĩnh Phúc (Tam Đảo), Thanh Hóa, Nghệ An. Độ cao phân bố so với hoàng tinh hoa đỏ rộng hơn, từ 500 m đến 1700 m. Hoàng tinh hoa trắng là cây đặc biệt ưa ẩm và ưa sáng, thường mọc rải rác dưới tán rừng núi đá vôi ẩm. Phần trên mặt đất lụi hàng năm vào mùa đông, mọc lại vào đầu mùa xuân. Có lá non rồi ra hoa quả ngay. Cây con mọc từ hạt được thấy vào tháng 3 – 5. Phần thân rễ của cây phân nhánh nhiều và thường tạo nên những khóm lớn. Cũng như loại hoa đỏ, hoàng tinh hoa trắng cũng bị khai thác nhiều. Nạn phá rừng làm nương rẫy càng làm cho vùng phân bố tự nhiên của cây bị thu hẹp. Nhiều vùng rừng ở huyện Quản Bạ – Hà Giang (1969); Đà Bắc – Hoà Bình (1973);… trước kia có nhiều hoàng tinh hoa trắng, nay không còn nữa. Do đó, từ năm 1966, cây cũng được đưa vào Sách Đỏ Việt Nam để bảo vệ. Cây có thể trồng được bằng hạt hoặc bằng đầu mầm thân rễ, dưới tán rừng ẩm. Tuy nhiên, cây trồng phải sau 4 – 5 năm mới có thể cho thu hoạch (Nguyễn Tập, 1996).",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Vĩnh Phúc"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thanh Hóa"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghệ An"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Hoàng tinh hoa trắng là cây đặc biệt ưa ẩm và ưa sáng, thường mọc rải rác dưới tán rừng núi đá vôi ẩm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ đã được loại bỏ gốc thân và rễ con, rửa sạch, phơi hoặc sấy ở nhiệt độ thấp. Dược liệu dài 5 – 10 cm, mang nhiều đốt, hình chùy hoặc con quay, dính liền với nhau thành một khối. Mặt ngoài màu vàng nâu đến nâu đen, có nhiều vết nhăn nheo. Trên mỗi đốt có một vòng màu nâu, mép có vết tích của thân khí sinh. Ngoài ra, còn có những vết tích rễ con, vết vảy của lá đã rụng. Chế biến: Đun dược liệu với nước để loại chất ngứa, rồi chế như hoàng tinh hoa đỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoàng tinh hoa trắng có tác dụng bổ trung, ích khí, nhuận phế, có cùng công dụng như hoàng tinh hoa đỏ"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

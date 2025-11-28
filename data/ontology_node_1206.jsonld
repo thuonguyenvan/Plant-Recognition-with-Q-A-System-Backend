@@ -1,0 +1,190 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Thổ cao ly sâm",
+            "ten_khac": "Thổ cao ly sâm, Thổ nhân sâm, Đông dương sâm, Cứa ly sinh (Thái), Mằm sâm đăm (Tày)",
+            "ten_khoa_hoc": "Talinum fruticosum (L.) Juss.",
+            "ma_taxon": "361866",
+            "ho": "Portulacaceae (Rau sam)",
+            "Mô tả": {
+                "lá": "Lá mọc so le, hình trứng ngược, hoặc hình thìa, phiến lá dày, hơi mẫm, hai mặt đều bóng, đầu lá nhọn hoặc tù, phía cuống hẹp lại, cuống rất ngắn, lá dài 5-7cm, rộng 2,5- 3,5cm.",
+                "hoa": "Vào mùa hạ ở đầu cành xuất hiện cụm hoa hình chùm nhiều hoa nhỏ, đường kính ước 6mm, 5 cánh hoa màu tím đỏ nhạt, hơn 10 nhị dài ước 2mm. Bầu hoa hình cầu.",
+                "quả": "Quả nhỏ, khi chín có màu xám tro, đường kính ước 3mm. Hạt rất nhỏ, màu đen nhánh hơi dẹt, trên mặt hơi có vân nổi.",
+                "cây": "Cây loại cỏ mọc hằng năm hoặc sống dai, thân mọc thẳng, có thể cao tới 0,6m, thân màu xanh, phía dưới chia cành.",
+                "mùa hoa": "tháng 6-7-8",
+                "mùa quả": "tháng 9-10."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Chưa có tài liệu nghiên cứu."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Dùng trong phạm vi kinh nghiệm trong nhân dân. Tại Việt Nam và Trung Quốc nhiều nơi dùng rễ làm thuốc bổ, thuốc chữa ho dưới dạng thuốc sắc. Có khi người ta dùng rễ cạo sạch vỏ, hoặc dùng lá nấu với thịt để ăn như nấu canh rau. Ngày dùng 20-30g."
+            },
+            "Cách dùng": {
+                "được_dùng": "Bài 1 – Chữa tiểu tiện nhiều, hỗ trợ đái tháo đường: Thổ nhân sâm 60g, kim anh tử 60g, các vị trên cho vào ấm đổ 550ml nước, sắc nhỏ lửa còn 250ml nước chia 2 lần uống trong ngày. 5 ngày một liệu trình.",
+                "làm thuốc": "Bài 2 – Bổ khí huyết – chữa khí huyết suy yếu, người xanh gầy, thở yếu, hồi hộp, ít ngủ, kém ăn, mệt mỏi: Thổ nhân sâm 40, sắc nước uống trong ngày, cho vào ấm đổ 400ml nước, sắc nhỏ lửa còn 150ml nước chia 2 lần uống trong ngày. 10 ngày một liệu trình.",
+                "có tác dụng": "Bài 3 – Chữa đại tiện lỏng do tỳ hư: Thổ nhân sâm 30g, đại táo 15g, cho vào ấm đổ 550ml nước, sắc uống thay trà trong ngày.",
+                "sắc uống": "Bài 4 – Hỗ trợ điều trị ho lâu ngày: Thổ nhân sâm, hà thủ ô trắng, thông thảo, mỗi vị 20g, gà một con nhỏ tương đương với 400g. Cách chế biến: Cho các nguyên liệu trên rửa sạch cho vào nồi hầm gà thêm khoảng 80 phút đến khi nước canh có màu trắng sữa. Khi gà chín nhừ, hớt bỏ bớt mỡ, múc gà ra một bát to, đổ hết nước hầm lên, ăn kèm với muối và hạt tiêu.",
+                "giã nát": "Bài 5 – Chữa mồ hôi trộm: Thổ nhân sâm 60g, dạ dày lợn nửa cái. Cách chế biến: Dạ dày làm sạch để ráo, cho vào nồi hầm thổ nhân sâm. Khi dạ dày chín nhừ, ăn kèm với muối và hạt tiêu.",
+                "sắc nước uống": "Bài 6 – Người mới ốm dậy, sau phẫu thuật: Sườn lợn 300g, hoàng kỳ 200g, thổ nhân sâm 200g. Xương sườn lợn luộc qua rồi vớt bỏ bọt, hoàng kỳ sắc kỹ lấy nước. Cho hoàng kỳ và sườn lợn vào nồi, chế thêm nước, đun nhỏ lửa và om kỹ, khi đạt độ nhừ cho thổ nhân sâm vào đun tiếp 5 – 10 phút, nêm gia vị vừa đủ ăn với cơm. Mỗi tuần có thể ăn 2 – 3 bữa."
+            },
+            "luu_y": {}
+        }
+    ]
+}

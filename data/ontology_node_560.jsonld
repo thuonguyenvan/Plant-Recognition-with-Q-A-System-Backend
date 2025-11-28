@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vù hương",
+      "ten_khac": "Vù hương, Xá xị, Gù hương, Re dầu, Re hương",
+      "ten_khoa_hoc": "Cinnamomum parthenoxylon (Jack) Meisn.",
+      "ma_taxon": "190594",
+      "ho": ""
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 – 25m. Thân hình trụ, thẳng, gốc phình to.",
+      "thân": "Vỏ màu xám nâu, nứt và bong ra từng mảng nhỏ. Cành non thô, có cạnh, màu lục xám.",
+      "lá": "Lá mọc so le, hình trứng, bầu dục hoặc trái xoan, dài 6 – 15cm, rộng 3 – 8cm, gốc hình nêm, đầu có mũi nhọn ngắn, hai mặt nhẵn; cuống lá mảnh, dài 1,5 – 3cm.",
+      "hoa": "Cụm hoa mọc ở đầu cành hoặc kẽ lá thành chùy hay tán, ngắn hơn lá; hoa màu trắng vàng; bao hoa và nhị lép có lông thưa ở gốc.",
+      "quả": "Quả mọng, hình cầu, đường kính 6 – 8mm, bao bọc trong đế hình cốc, mép khía răng, khi chín màu xám vàng hoặc tím đen, mùi thơm.",
+      "mùa hoa": "tháng 3-6",
+      "mùa quả": "tháng 7-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Vù hương phân bố ở một số vùng rừng nhiệt đới hoặc cận nhiệt đới ở Ấn Độ, Trung Quốc và Indonesia. Ở Việt Nam, vù hương phân bố rải rác ở một số tỉnh miền núi như Cao Bằng (Trùng Khánh); Quảng Ninh (Quảng Hà, Hà Cối); Thái Nguyên, Nghệ An, Quảng Bình, Quảng Trị (Đồng Chè), Thừa Thiên Huế và Quảng Nam (Nguyễn Thị Đào, 1996). Cây thường mọc trong kiểu rừng rậm nhiệt đới thường xanh mưa mùa ẩm, độ cao từ 300 đến 900m; trên nhiều loại đất có tầng đất thịt dày và tương đối màu mỡ.  Vù hương là loại cây gỗ lớn, trong quần xã rừng nhiệt đới, thường tham gia vào tầng lập tán (20 – 25m); khi còn nhỏ ưa ẩm và chịu bóng. Cây chỉ có thể ra hoa quả nhiều khi vươn tới tầng lập tán; gieo giống tự nhiên chủ yếu từ hạt, tuy nhiên lượng cây con được thấy dưới tán rừng không nhiều. Vù hương là loại gỗ tốt, ít thấm nước và không bị mối mọt; thường được dùng để đóng bàn, ghế, giường tủ… Lõi gỗ vù hương đặc biệt ở phần gốc chứa nhiều tinh dầu. Vù hương thường bị khai thác nhiều nên hiện nay những cây lớn đã trở nên hiếm dần. Cần chú ý bảo vệ và nghiên cứu nhân trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, thân, lá và quả."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá, gỗ, thân, rễ vù hương chứa 2 – 4% tinh dầu với thành phần chủ yếu là salíol (75%), p – pinen phelandren, eugenol và aldehyd cinamic. Hạt có nhiều dầu béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vù hương có vị cay, hơi đắng, tính ôn. Rễ và thân có tác dụng ôn trung, tán hàn, tiêu thực, hóa trễ. Lá có tác dụng chỉ huyết, khư phong trừ thấp, chỉ thống. Quả có tác dụng giải biểu, thoái nhiệt, thấu chẩn, chỉ khái."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tinh dầu vù hương dược dùng chữa đau do tê thấp. Nước pha rễ vù hương dùng thay xá xị. Hiện nay, một số tỉnh miền Bắc Việt Nam như Thái Nguyên, Phú Thọ đang khai thác cây vù hương để chiết tinh dầu dùng xuất khẩu. Ở Trung Quốc, rễ và thân vù hương chữa dạ dày lạnh, bụng đau (vị hàn phúc thống) viêm dạ dày, ruột, tiêu hóa kém, ho gà, kiết lỵ. Ở Celebes, vỏ thân là thuốc giảm đau, chữa gan sưng to. Liều dùng 9 – 15g, sắc nước uống. Lá vù hương được dùng làm thuốc cầm máu, giảm đau chữa phong thấp, đau dạ dày, mẩn ngứa ngoài da.  Liều dùng 9 – 15g ngày, sắc nước uống. Dùng ngoài, lấy nước sắc lá để rửa hoặc giã nát lá đắp tại chỗ chữa mẩn ngứa. Quả vù hương chữa cảm, sốt cao, lỵ, ho gà. Ngày dùng 6 – 9g, nghiền thành bột uống nhiều lần trong ngày. Ở Sumatra (Indonesia) dầu chiết từ hạt vù hương chữa thấp khớp.  Bài thuốc có vù hương  Chữa ho gà, kiết lỵ: Quả vù hương 6g, lá khuynh diệp 6g. Sắc nước uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

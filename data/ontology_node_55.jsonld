@@ -1,0 +1,256 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây quýt gai",
+      "ten_khac": "Cây cựa gà, Gai tầm xoọng, Độc lực, Quít gai, Quít rừng, Kim quýt, Gai xanh, Bạch lực, Cam trời, Tầm soọng",
+      "ten_khoa_hoc": "Atalantia buxifolia (Poir.) Oliv.",
+      "ma_taxon": "867549",
+      "ho": "Rutaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Cây quýt gai cao chừng 1m, thân có nhiều nhánh, phần cành ở dưới thường rũ xuống. Các nhánh non màu xanh lục, trong khi nhánh già có màu nâu xám. Các đốt cành hơi dẹt, có nhiều gai sắc, dài khoảng 2 – 4 cm, đầu gai màu nâu đỏ.",
+      "lá": "Lá quýt gai cứng và dày, có mùi thơm giống lá cam quýt. Mặt trên lá màu xanh đậm, mặt dưới xanh nhạt. Hình dạng lá đa dạng: hình trứng, hình bầu dục ngược, hình elip, hoặc gần tròn, dài 2-6 cm (đôi khi dài đến 10 cm), rộng 1-5 cm. Đầu lá tròn hoặc hơi lõm, gân chính nổi nhẹ trên mặt lá, gân bên song song, mép lá có gân vòng cung. Lá có nhiều chấm nhỏ chứa tinh dầu. Cuống lá ngắn, chỉ dài 1-7 mm, khá chắc.",
+      "hoa": "Hoa thường mọc thành cụm, hiếm khi mọc đơn lẻ ở nách lá. Hoa quýt gai không có cuống hoặc cuống rất ngắn. Hoa có 5 cánh màu trắng, dài 3-4 mm, với các chấm nhỏ chứa tinh dầu. Có 10 nhị hoa, cánh hoa màu trắng và rời rạc, đôi khi một số nhị ở gốc dính lại. Nhụy hoa dài bằng bầu nhụy và có màu xanh lục.",
+      "quả": "Quả có dạng hình cầu, đường kính 8-12 mm. Vỏ quả quýt gai nhẵn và có các chấm dầu hơi nổi. Khi chín, quả có màu đen. Cuống quả vẫn giữ lại phần đài hoa. Bên trong quả chứa các tế bào nhỏ mọng nước, dẹt, nhiều góc cạnh, hơi trong suốt, chứa chất nhầy dính. Quả có 1-2 hạt, vỏ hạt mỏng như màng, lá mầm dày và có màu xanh lục, với nhiều chấm dầu.",
+      "mùa hoa": "tháng 5 đến tháng 12",
+      "mùa quả": "tháng 9 đến tháng 12",
+      "cây": "Trên cùng một cây có thể thấy cả hoa lẫn quả cùng lúc."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây quýt gai có chứa tinh dầu, quả còn xanh chứa chất nhầy.",
+      "các hoạt chất": "Rễ cây chứa các hoạt chất có lợi cho sức khỏe như: 5-hydroxy-N-methyl-severifolin, severifolin, atalaphylin, N-methylseverifolin, N-methylatalaphylin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chỉ mới thấy dùng trong phạm vi nhân dân. Cành lá hái tươi sao vàng sắc đặc uống chữa những bệnh về đường hô hấp: Ho, hen, cảm, sốt, thấp khớp, rắn cắn.",
+      "chữa": "Một số bài thuốc chữa bệnh từ quýt gai:",
+      "được_dùng": "Lá quýt gai và các loại lá thơm như sả, cúc tần, đại bi, hương nhu, lá bưởi, lá chanh.",
+      "làm thuốc": "Đun nước uống và xông cho ra mồ hôi.",
+      "chữa": "ho, nhức đầu cảm cúm:",
+      "được_dùng": "Lá hoặc rễ quýt gai 9-15g.",
+      "sắc uống": "Rửa sạch, cho 500ml nước sắc còn 200ml, chia 2 lần uống trong ngày. Dùng liền trong 5 ngày. Ngoài ra, cần ăn nhiều rau quả, trái cây và nghỉ ngơi.",
+      "chữa": "ho do phong nhiệt:",
+      "được_dùng": "Vỏ rễ quýt gai 20g, vỏ rễ dâu 10g, rễ hoặc lá cam thảo nam 10g (hoặc cam thảo bắc 5g).",
+      "sắc uống": "Thái mỏng, phơi khô, sắc với 400ml nước còn 100ml, thêm đường, chia thành 2-3 phần uống trong ngày.",
+      "chữa": "ho do phế nhiệt:",
+      "được_dùng": "Tầm xoọng 16g, Rau má 24g, Tang diệp 20g, Xa tiền thảo 20g, Lá xương xông 20g, Lá đinh lăng 20g, Mơ muối 12g, Thiên môn 12g, Bạch linh 10g.",
+      "sắc uống": "Đem 1 thang thuốc sắc ngày 3 lần để uống.",
+      "chữa": "Trẻ em ho gà:",
+      "được_dùng": "Lá quýt gai 6g, Hoa đu đủ đực 6g, Lá tía tô 6g, Cát cánh 6g, Trần bì 6g, Tang bạch bì 6g.",
+      "sắc uống": "Cho dược liệu vào ấm đun, thêm 300ml nước. Đun đến khi nước cạn còn ⅓. Lấy nước thuốc chia 3 – 4 lần cho trẻ uống trong ngày.",
+      "chữa": "Ho hen, đau họng có đờm, khó thở:",
+      "được_dùng": "Quýt gai (sao vàng hạ thổ) 16g, Tang bạch bì 16g, Cát cánh 12g, Mạch môn 12g, Trần bì 12g, Hoàng kỳ 12g, Mơ muối 12g, Cam thảo 12g, Đại táo 6g.",
+      "sắc uống": "Mỗi ngày sắc 1 thang thuốc, chia làm 3 lần uống trong ngày.",
+      "chữa": "ho nhiều đờm do lạnh:",
+      "được_dùng": "Quýt gai còn xanh 8-16 quả, mật ong 1 thìa cà phê, ít muối ăn.",
+      "sắc uống": "Rửa sạch quýt gai, bổ làm 4, bỏ hạt, cho vào bát nhỏ trộn với mật ong và muối, hấp cơm trong 15-20 phút, nghiền nát, trộn đều, chia thành 2-3 phần uống trong ngày.",
+      "chữa": "kiết lỵ:",
+      "được_dùng": "Vỏ thân quýt gai 20g, vỏ quả lựu 20g, vỏ quả chuối hột 20g, rễ tầm xuân 20g, búp ổi 10g.",
+      "sắc uống": "Thái nhỏ, phơi khô, sắc uống.",
+      "chữa": "đau bụng, lưng, gối đau nhức:",
+      "được_dùng": "Rễ quýt gai 15-30g.",
+      "sắc uống": "Sắc nước uống.",
+      "chữa": "Người đau nhức khớp gối, có tình trạng xơ cứng, khó vận động",
+      "được_dùng": "Quýt gai (sao vàng hạ thổ) 20g, Cát căn 16g, Huyết đằng 12g, Tục đoạn 12g, Đương quy 12g, Phòng phong 12g, Đơn hoa 12g, Chích thảo 12g, Tế tân 10g, Quế 10g.",
+      "sắc uống": "Mỗi ngày sắc 1 thang thuốc, sắc 3 lần/ngày.",
+      "chữa": "Hỗ trợ điều trị phong thấp:",
+      "được_dùng": "Rễ quýt gai 10-15g.",
+      "sắc uống": "Đổ 350ml nước sắc còn 200ml, chia 2 lần uống trong ngày, dùng lúc còn nóng. Có thể phối hợp với thổ phục linh, ngưu tất, thiên niên kiện (mỗi thứ 50g), ngâm với 1 lít rượu, sau một tuần có thể uống 3-4 lần/ngày, mỗi lần 1 chén con.",
+      "chữa": "rắn cắn:",
+      "được_dùng": "Lá quýt gai một nắm, ít muối, một bát nước đun sôi để nguội.",
+      "giã nát": "Giã nhỏ lá quýt gai, thêm muối và nước, chắt lấy nước uống và dùng bã đắp vào vết thương.",
+      "chữa": "đau do sâu răng:",
+      "được_dùng": "Đào rễ quýt gai, thêm chút muối.",
+      "giã nát": "Rửa sạch rễ quýt gai, nhai và ngậm.",
+      "chữa": "mụn rò có mủ lâu ngày:",
+      "được_dùng": "Lá quýt gai 20g, lá chanh 20g, tinh tre 10g.",
+      "phơi khô": "Phơi khô, tán bột, rây mịn, rắc lên vết thương.",
+      "chữa": "đinh râu:",
+      "được_dùng": "Rễ quýt gai và bã rượu, mỗi thứ bằng nhau.",
+      "giã nát": "Giã nhỏ, hơ nóng, đắp lên chỗ đinh râu.",
+      "chữa": "suy thận, trị bệnh thận hư:",
+      "được_dùng": "Gai tầm xoọng 20g, cây mực 20g, cây nổ 20g, cây muối 20g.",
+      "sắc uống": "Rửa sạch dược liệu, cho vào nồi đất, sắc với 1,5 lít nước uống trong ngày. Sử dụng khoảng 1 tháng sẽ thấy hiệu quả rõ rệt.",
+      "chữa": "va đập bầm tím sưng đau:",
+      "được_dùng": "Lá quýt gai 20g.",
+      "sắc uống": "Rửa sạch, phơi khô, sao vàng, đổ 400ml nước, sắc còn 100ml chia 2 lần uống trong ngày. Dùng 3-5 ngày. Ngoài ra, rửa sạch lá quýt gai, giã nát đắp lên chỗ bị thương, sau 3 giờ thay băng và đắp liên tục trong 3-5 ngày.",
+      "chữa": "Đau dạ dày:",
+      "được_dùng": "Rễ quýt gai 30g, Quýt 6g, Củ ấu 10g, Màng tang 10g.",
+      "sắc uống": "Đem dược liệu sắc lấy nước uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Để đạt được hiệu quả tốt nhất và đảm bảo an toàn, khi sử dụng cây quýt gai, bạn cần lưu ý một số điều sau:",
+      "làm thuốc": "Trẻ em, phụ nữ mang thai và đang cho con bú nên tham khảo ý kiến bác sĩ trước khi sử dụng để đảm bảo an toàn cho sức khỏe. Cần sử dụng cây quýt gai đúng liều lượng theo chỉ dẫn, tránh lạm dụng để tránh các tác dụng phụ không mong muốn. Khi sử dụng cây quýt gai, nên hạn chế hoặc tránh ăn các thực phẩm như: cua đồng, cá mè, quả sung, thịt chó, rượu bia và ăn ít muối."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

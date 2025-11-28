@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây nóng",
+      "ten_khac": "Cây nóng , Mác miều (Tày), Sổ dã, Pạc phàn mộc, Mạ pin đắng (Dao)",
+      "ten_khoa_hoc": "Saurauia tristyla DC.",
+      "ma_taxon": "527541",
+      "ho": "Saurauiaceae (Nóng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 3 – 5 m. Cành hình tròn, có khía, rãnh không đều, lông nháp màu đỏ và những sẹo rõ do lá rụng để lại.",
+      "lá": "Lá mọc so le, thường tụ họp ở đầu cành, hình bầu dục, dài 15-25 cm, rộng 5-10 cm, gốc thuôn, đầu nhọn sắc, nhẵn, mép lượn sóng, có răng rất nhỏ, hai mặt có lông nháp, nhiều hơn ở mặt trên.",
+      "hoa": "Cụm hoa mọc ở kẽ những lá đã rụng thành xim hai ngả; hoa nhỏ màu hồng nhạt; đài 5 răng nhẵn; tràng 5 cánh, hơi dính ở gốc; nhị đính vào gốc cánh hoa; bầu hình trứng, nhẵn, có 3 cạnh.",
+      "quả": "Quả mọng, hình cầu, có cơm nhầy, khi chín màu trắng nhạt.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Saurauia Willd. gồm một số loài phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam có 7 loài, trong đó có cây nóng. Cây nóng phân bố ở Ấn Độ, Malaysia, Thái Lan, Campuchia, Lào, Nam Trung Quốc và Việt Nam. Ở Việt Nam, cây nóng phân bố khá phổ biến ở các tỉnh miền núi phía bắc, như Cao Bằng, Lạng Sơn, Quảng Ninh, Bắc Cạn, Thái Nguyên, Bắc Giang, Tuyên Quang, Yên Bái, Lào Cai, Hà Giang, Hòa Bình, Sơn La,… Nghệ An, Hà Tĩnh. Ở một số vùng núi cao trên 1000 m ở Tây Nguyên cũng gặp loài này.",
+      "thường_mọc": "Cây nóng ưa ẩm, ưa sáng hoặc có thể chịu bóng, thường mọc ở ven rừng ẩm, dọc theo hành lang ven suối dưới tán rừng với độ tàn che thấp do nhiều cây gỗ đã bị khai thác hoặc thuộc dạng rừng thứ sinh. Cây còn có thể mọc sát mép nước ở bờ suối, về mùa mưa lũ có thể bị ngập úng tạm thời. Cây ra hoa quả nhiều hàng năm; hạt phát tán theo dòng nước và được nhân giống tự nhiên."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, vỏ cây, lá và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cây nóng có vị hơi đắng, tính mát, có tác dụng thanh nhiệt, giải độc, chỉ khái, chỉ thống. Quả có tác dụng khai vị, làm ăn ngon. Vỏ có tính giải độc, làm tiêu sưng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đồng bào Dao ở Nghĩa Lộ (Yên Bái) có tập quán ăn vài quả nóng trước bữa cơm để khai vị, kích thích ăn ngon, vỏ cây nóng được dùng làm thuốc chữa rắn cắn. Cách làm cụ thể như sau: Cạo bỏ lóp bần bên ngoài, rửa sạch, giã nhỏ, đắp xung quanh vết cắn sau khi đã rửa sạch bằng nước sắc lá trầu không và uống nước ép lá dong xanh. Ngày làm một lần. Ở Trung Quốc, rễ cây nóng được dùng chữa ho do phong nhiệt, đau răng, phong thấp, với liều 10 – 15g, sắc nước uống. Lá phơi khô nghiền thành bột mịn trộn với dầu thực vật, hoặc chế thành cao bôi ngoài chữa bỏng.  Quả dùng ăn sống. Dân gian thường dùng vỏ giữa của thân thái mỏng, giã ra lấy nước uống, bã đắp chữa rắn cắn, cũng dùng đắp các vết sưng tấy, sai khớp.  Ở Vân Nam (Trung Quốc), vỏ và hạt được dùng trị viêm gan mạn tính, đau răng do phong hoả, ho do phong nhiệt, bỏng lửa.  Ghi chú: Loài Saurauia napaulensis DC. (cây nóng Nepan), quả có vị ngọt ăn được, đồng bào Mèo ở một số vùng cao thường dùng dịch quả làm giả mật ong đem bán. vỏ cây được dùng làm thuốc đắp để rút gai, dằm, mảnh vụn găm vào thịt.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam, 3033 cây thuốc đông y Tuệ tĩnh"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

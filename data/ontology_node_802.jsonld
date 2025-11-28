@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quất",
+      "ten_khac": "Quất, Kim quất, Tắc",
+      "ten_khoa_hoc": "Fortunella japonica (Thunb.) Swingle",
+      "ma_taxon": "343817",
+      "ho": "Rutaceae (Cam)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ 1-5m, có gai.",
+      "lá": "Cành lá sum suê; lá đơn mọc so le, màu lục sẫm bóng; hình trái xoan hay tròn dài, cuống có cánh rất nhỏ, dày và cứng.",
+      "hoa": "Chùm hoa ngắn ở nách lá hay ở ngọn; hoa trắng, cánh hoa dài 7-9mm; nhị 15-20.",
+      "quả": "Quả nhỏ hình cầu, rộng 1,5-3,5cm, màu vàng da cam bóng, có 5-6 múi, nạc chua; hạt có màu xanh.",
+      "mùa quả": "Có quả từ tháng 12 đến tháng 3 năm sau"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Trung Quốc và Nhật Bản, được thường trồng làm cảnh ở khắp cả nước ta, nhất là vào dịp Tết Nguyên đán vì dáng cây đẹp, tán lá sẫm màu, quả nhiều màu vàng da cam đẹp."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả – Fructus Fortunellae Japonicae. Lá và vỏ cũng được dùng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài việc dùng quả để ăn uống và làm mứt, làm nước quả nấu đông, xirô, người ta còn dùng quả làm thuốc. Mứt Kim quất chữa các chứng ách nghịch, giúp sức tiêu hoá cho dạ dày, công hiệu hơn Sa nhân. Rượu Kim quất dùng để chữa: gan uất kết, tỳ vị yếu hèn, lại trừ được đờm tích và chữa ẩu thổ. Nay ta dùng quả làm thuốc ngậm chữa ho, viêm họng (thường chưng với đường phèn hoặc Mật ong), và cũng dùng lá và vỏ có tác dụng như Quýt. Mứt Quất hoặc Quất ngâm đường dùng rất tốt vừa bổ dưỡng vừa trị ho."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

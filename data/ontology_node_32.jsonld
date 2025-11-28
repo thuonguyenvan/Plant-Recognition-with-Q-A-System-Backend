@@ -1,0 +1,239 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/diep-ca.html",
+            "ten": "Diếp cá",
+            "ten_khac": [
+                "Diếp cá",
+                "Lá giấp",
+                "Co vầy mèo (Thái)",
+                "Ngư tinh thảo",
+                "Tập thái",
+                "Rau vẹn",
+                "Phiăc hoảy (Tày)",
+                "Cù mua mín (Dao)"
+            ],
+            "ten_khoa_hoc": "Houttuynia cordata Thunb.",
+            "ma_taxon": "157642",
+            "ho": "Saururaceae (Giấp cá)",
+            "Mô tả": {
+                "cây": "Cây thảo, sống lâu năm,cao 20-40 cm.",
+                "thân": "Thân ngầm mọc bò ngang trong đất, màu trắng hơi có lông, bén rễ ở các mấu. Thân đứng nhẵn, màu lục hoặc tím đỏ.",
+                "lá": "Lá mọc so le hình tim hoặc đầu nhọn, mặt trên màu lục sẫm, mặt dưới màu tím , hơi có lông dọc theo gân lá của cả hai mặt, gân chính 7, cuống lá dài, có bẹ, lá kèm có lông ở mép.",
+                "hoa": "Cụm hoa mọc ở ngọn thân thành bông dài 2-2,5cm, mang nhiều hoa nhỏ màu vàng nhạt, tổng bao gồm 4 lá bắc màu trắng nom như một chiếc hoa riêng lẻ, hoa không có bao hoa nhị  3",
+                "quả": "Quả nang mở ở đỉnh, hạt hình trái xoan nhẵn.",
+                "mọc": "Toàn thân vỏ rau có mùi tanh như mùi cá.",
+                "mùa hoa": "tháng 5-7",
+                "mùa quả": "tháng 5-7"
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Houttuynia Thunb., chỉ có một loài diếp cá, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á, từ Nhật Bản, Trung Quốc đến Việt Nam, Lào, Ấn Độ và các nước Đông Nam Á khác. Ở Việt Nam, cây mọc hoang dại ở các tỉnh miền núi, trung du và đồng bằng. Độ cao đến 1500m (Sa Pa). Cây còn được trồng ở nhiều nơi để làm rau và làm thuốc.  Diếp cá thuộc loại cây ưa ẩm và hơi chịu bóng, thường mọc ở đất ẩm, nhiều mùn dọc theo các bờ khe suối, mương nước trong thung lũng và ở vùng đồng bằng, Cây sinh trưởng gần như quanh năm, mạnh nhất trong mùa xuân hè, có hoa quả hàng năm trên những cây không bị ngắt ngọn và hái lá thường xuyên, có khả năng tái sinh chồi mạnh từ thân rễ. Ở vùng thị trấn Tam Đảo và núi Ngọc Linh, diếp cá mọc nhiều đến mức ảnh hưởng tới cây trồng.",
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Việt Nam"
+                            }
+                        }
+                    ]
+                },
+                "được_trồng": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "@type": "schema:Place",
+                            "nơi": {
+                                "tên": "nhiều nơi",
+                                "ghi_chú": "để làm rau và làm thuốc"
+                            }
+                        }
+                    ]
+                },
+                "Đặc điểm sinh trưởng": "Cây sinh trưởng gần như quanh năm, mạnh nhất trong mùa xuân hè, có hoa quả hàng năm trên những cây không bị ngắt ngọn và hái lá thường xuyên, có khả năng tái sinh chồi mạnh từ thân rễ."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": "Diếp cá được trồng phổ biến để làm rau ăn và làm thuốc. Cây được nhân giống bằng tách năm. Vào mùa xuân, từ tháng 2 đến tháng 4 những mầm khỏe ở phần sát gốc, không để đứt hết rễ.  Đất trồng tốt nhất là bờ ao hoặc nơi đủ ẩm, không quá nắng. Đất cần làm nhỏ, lên luống cao 10-15cm, rộng       60-70cm. Có thể bón lót một ít phân chuồng hoặc mục rồi trồng với khoảng cách 10 x 10 hoặc 15 x 15 cm. Sau khi trồng, cần đảm bảo độ ẩm cao và sạch cỏ. Cây có thể phát triển thành bãi. mùa cho nhiều  lá từ tháng 4 đến tháng 9. Sau mỗi lần thu hái cần bón thúc bằng phân chuồng hoai mục hoặc phân vi sinh. Rắc đều phân lên mặt luống và tưới nước. Cây tiếp tục sinh trưởng và cho thu hái trong nhiều năm."
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Toàn cây, trừ rễ, hái về dùng tươi hoặc phơi sấy khô."
+            },
+            "Thành phần": {
+                "thành phần": "Toàn thân cây diếp cá chứa tinh dầu.",
+                "gồm chất": "Nhóm aldehyd và các dẫn xuất ceton như methyl-n-nonyl ceton. 1-decanal, 1-dodecanal là những chất không có tác dụng kháng khuẩn, chất có tác dụng kháng khuẩn là 3-oxododecanal. Nhóm terpen bao gồm các chất : pinen, camphen, myrcen limonen, linalol, bornyl acetat, geraniol và caryophylen. Ngoài ra, tinh dầu còn chứa acid caprinic,coleic, acid stearic, aldehyd capric, acid clorogenic, lipid và vitamin K…  Từ lá diếp cá người ta đã phân lập được 3 – sitosterol, một alcaloid goi là cordalin và các flavonoid như afzelin,  hyperin, rutin, isoquercitrin và quercitrin."
+            },
+            "Tính vị": {
+                "Có vị": "Diếp cá có vị chua cay, mùi tanh của cá, tính mát hơi có độc, có tác dụng thanh nhiệt, giải độc, lợi tiểu, tiêu thũng, sát trùng."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Diếp cá được dùng trị táo bón, Trĩ, mụn nhọt, lở ngứa, trẻ con lên sởi, viêm phổi hoặc phổi có mủ, đau mắt đỏ hoặc đau mắt do nhiễm trực khuẩn mủ xanh, viêm ruột, kiết lỵ, bí tiểu tiện, kinh nguyệt không đều. Còn dùng chữa sốt rét, sài giật trẻ em, đau răng, trâu bò bị rắn cắn. Ngày dùng 6-12g toàn cây khô (trừ rễ) hoặc 20-40g cây tươi, dạng thuốc sắc, thuốc bột, viên, hoặc giã nát lọc lấy nước uống. Dùng ngoài, lá diếp cá tươi rửa sạch giã nhỏ đắp trực tiếp đối với trường hợp trị chỗ sưng đau, lở ngứa, hoặc ép thuốc giữa hai miếng giấy lọc sạch, đắp lên mắt. Trong bệnh trĩ, đồng thời với cách dùng uống và đắp, còn sắc nước lấy hơi xông, rồi rửa.  Ở Trung Quốc, một hợp chất có hoạt tính kháng khuẩn đã được phân lập từ cây diếp cá và bào chế thành thuốc viên và thuốc tiêm để trị bệnh nhiễm khuẩn.  Ở Ấn Độ, Trung Quốc, thân rễ diếp cá được ăn như rau, dùng sống hoặc nấu chín. Ở Nhật Bản, thân rễ diếp cá có trong thành phần của một số chế phẩm thuốc dùng chữa một số bệnh của phụ nữ. Ở Trung Quốc, diếp cá còn được dùng chữa khó tiêu và làm thuốc bó những chỗ bị tổn thương để kích thích sự phát triển của xương. Cao của rễ diếp cá có hoạt tính lợi tiểu do tác dụng của quercitrin và các muối vô cơ (kali clorid, kali sulfat). Ở Nêpan, thân rễ cây diếp cá được dùng trong một số chế phẩm chữa bệnh cho phụ nữ. Cả cây được coi như thuốc làm mát, tiêu độc, chữa khó tiêu và điều kinh.  Lá được dùng trị lỵ, bệnh lậu, bệnh về mắt, bệnh về da, trĩ. Cao chiết từ rễ có tác dụng lợi tiểu.  Bài thuốc có diếp cá:  Chữa đơn sưng của người lớn và trẻ em (Nam dược thần hiệu): Diếp cá, nhọ nồi, cải rừng, xương sông, dưa chuột, khế, đơn đỏ, huyết dụ, nhài, mía dò, các vị dùng lá với liều lượng bằng nhau (mỗi vị 15g), thêm xích hoa xà 3 lá, bí đao 3 miếng, củ nâu 3 miếng. Giã nát, chế nước vào, vắt lấy nước cốt uống, bã dùng xoa đắp chỗ sưng. Có thể chỉ dùng mấy vị đầu cũng được. Chữa trĩ đau nhức: Lá diếp cá nấu nước xông  ngâm rửa (lúc còn nóng), bã dùng đắp vào chỗ đau. Chữa trĩ, lòi dom: Lấy phác tiêu (muối natri hay muối ăn) hoà tan với nước, rửa chỗ trĩ, rồi lấy lá diếp cá giã nát và đặt lên lá chuốt, ngồi để đít lên hoặc đắp vào chỗ trĩ và băng lại. Dom sẽ tự thụt vào. Chữa trĩ ra máu: Cây diếp cá 2kg, bạch cập 1 kg sấy khô tán bột. ngày uống 6-12g chia 2-3 lần. Chữa viêm tai giữa: Cây diếp cá khô 20g, táo đỏ 10 quả, nước 600ml, sắc còn 200ml, chia 3 lần uống trong ngày. Chữa viêm tắc tia sữa: Lá diếp cá, lá cải trời, dùng tươi, mỗi vị một nắm (30g) giã nát, chế nước sôi vắt lấy nước cốt uống, bã chưng nóng với giấm, đắp. Chữa sài giật trẻ em: Lá diếp cá 6-12g, củ sả 6g, quả xuyên tiêu 2g. Giã nát, thêm nước gạn uống, bã đắp hai bên thái dương. Chữa trẻ lên sởi: Rau diếp cá sao qua, sắc cho uống thì khỏi hẳn không tát phát. Chữa viêm ruột, kiết lỵ: Rau diếp cá 20g, xuyên tâm liên 16 g, hoàng bá 8g. Sắc và uống làm 2 lần trong ngày. Chữa kiết lị: Diếp cá 50g (tán mịn), hồi đầu thảo 150g (tán mịn), vỏ quả dừa (đốt tồn tính tán mịn). Các vị trên đều đóng gói 25g/gói. Mỗi ngày người lớn uống 1 gói, chia 2-3 lần, trẻ em uống nửa gói. Chữa viêm phổi (Ma hạnh thạch cam thang gia vị): Diếp cá 20g, thạch cao 40g, kim ngân 20g, lô can 20g, liên kiểu 16g, hạnh nhân 12g, hoàng liên 12g, hoàng cầm 12g, ma hoàng 8g, cam thảo 6g. Sắc uống, ngày một thang. Nếu khó thở, đờm nhiều, thêm đình lịch tử 12g, tang bạch bì 12g. Nếu ho ra máu, thêm bạch mao căn 12g. Chữa áp xe phổi (Thiên kim vĩ hành thang): Diếp cá 40g, bồ công anh 40g, kim ngân 20g, ý dĩ 16g, đông qua nhân 16g… liên kiều 16g, vĩ hành (bông lau) 12g, đào nhân 12g, cát cánh 6g. Sắc uống, ngày một thang. Nếu đờm nhiều… thêm tang bạch bì 12g, đình lịch tử 12g. Ho ra máu nhiều thêm chí tử sao 12g đan bì 12 g. Chữa trĩ ngoại bội nhiễm hay thể thấp nhiệt: Diếp cả 16 g, kìm ngân 16 g, hoàng đẳng 12g, hoa hoè 12g, chi tử sao đen 12g, kinh giới 12g, chỉ xác 8g. Sắc uống, ngày một thang. Chữa sởi thời kỳ phá sốt (sởi chưa mọc): Lá diếp cá 16g, rau dệu 16p, cam thảo đất 12g. Sắc ngày uống 3 lần. Chữa viêm xoang nhiễm khuẩn:  a. Diếp cá 16g, kim ngân hoa 16 g, ké đầu ngựa 16g, hy thiên 16g, mạch môn 12g, chi tử 8g. Sắc uống ngày một thang.  b. Tân di thanh phế âm gia giảm:  Diếp cá 20g, thạch cao 40g, kim ngân hoa 16g, tân di 12g, hoàng cầm 12g, sơn chỉ 12g, tri mẫu 12g, mạch môn 12g. Sắc uống ngày một thang. Nếu bênh nhân sợ lạnh, sốt, nhức đầu bỏ hoàng cầm, mạch môn, thêm ngưu hoàng tử 12g, bạc hà 12g.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+            },
+             "Cách dùng": {
+                "được_dùng": null,
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "phơi khô": null,
+                "xấy khô": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

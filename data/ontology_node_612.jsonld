@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phượng vĩ",
+      "ten_khac": "Xoan tây, phương tây, phượng đỏ, điệp tây, điệp bông đỏ",
+      "ten_khoa_hoc": "Delonix regia (Bojer ex Hook.) Raf.",
+      "ma_taxon": "62839",
+      "ho": "Vang (Caesalpiniaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10 – 12m.",
+      "thân": "Cành mọc toả ngang.",
+      "lá": "Lá kép hai lần lông chim, có cuống chung dài 50 – 60cm, mang 10 – 18 đội cuống cấp hai, mỗi cuống này có 20 đôi lá chét nhỏ mọc đối, gốc và đầu tròn, hai mặt nhẵn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành ngủ thưa, hoa nhiều màu đỏ; đài hình van có 5 răng, màu lục, mép viền vàng; tràng 5 cánh có móng hẹp, đầu loe rộng gần tròn; nhị 10; bầu có cuống.",
+      "quả": "Quả dài, hơi cong, có hai mảnh vỏ cứng màu nâu; hạt dài và hẹp; có vấn nâu.",
+      "mùa hoa": "tháng 5 – 6",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Phượng vĩ có nguồn gốc ở Madagascar, sau được đem trồng khắp vùng nhiệt đới châu Á và châu Phi. Ở Việt Nam, không rõ cây được nhập nội từ bao giờ, chỉ biết rằng đây là loại cây trồng quen thuộc, đã có từ lâu. Phượng vĩ được trồng thậm chí còn trở nên hoang dại hoá ở khắp tất cả các tỉnh trong đất liền cũng như ngoài hải đảo, ngoại trừ vùng núi cao lạnh trên 1.000m.",
+      "Đặc điểm sinh trưởng": "Phượng vĩ là loại cây mọc nhanh, gỗ mềm. Cây đặc biệt ưa sáng, khi còn nhỏ ưa ẩm, sau lớn có thể chịu hạn tốt và cũng có thể sống được trên nhiều loại đất khác nhau. Phượng vĩ có hiện tượng rụng lá mùa đông, khi mọc lá non đồng thời cũng ra hoa. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên và trồng trọt dễ dàng từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần gỗ chứa 21,17% lignin, 1,97% protein, hạt tươi chứa 60,31% protein, 9,68% chất béo và 16,22% carbohydrat [The wealth of India, 1952 vol.III, p.29].",
+      "gồm chất": "Hạt khô chứa gồm thường sử dụng trong công nghiệp dệt và thực phẩm, galactomanan và trang – 2 – hydroxy – L – prolin [Phạm Hoàng Hộ, 2006, Cây có vị thuốc ở Việt Nam, tr. 200]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ cây được dùng sắc nước trị sốt rét từng cơn, tê thấp, đầy bụng.",
+      "làm thuốc": "Ở Vân Nam (Trung Quốc), vỏ thân được dùng làm thuốc gây hạ huyết áp.",
+      "có tác dụng": "Ở Ấn Độ, dùng lá trị thấp khớp và đầy hơi [Võ Văn Chi, 1997: 902 – 903]. Ở Ấn Độ, hoa phượng vĩ được dùng trị đau kinh (Vidyasagar G.M. et al., 2007), vỏ thân được dùng trị nhện cắn (Gautam R, et al., 2007)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

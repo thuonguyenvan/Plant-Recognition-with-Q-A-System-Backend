@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau răm",
+      "ten_khac": "Rau răm, Lảo liêu, Thủy liễu, Phiắc phèo (Tày), Lạ liu (Dao)",
+      "ten_khoa_hoc": "Polygonum odoratum Lour.",
+      "ma_taxon": "361865",
+      "ho": "Polygonaceae (Rau răm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống hàng năm, toàn thân rễ và lá vỏ đều có mùi thơm đặc biệt dễ chịu.",
+      "thân": "Thân mọc bò, từ mỗi đốt mọc ra rất nhiều rễ, có từng phần thân mọc thẳng đứng lên cao chừng 35-40cm.",
+      "lá": "Lá đơn mọc so le, hình mác hay hình trứng mác, cuống ngắn.",
+      "bẹ": "Bẹ chìa ngắn, chỉ đạt 1/4 hay 1/5 chiều dài mỗi đốt, trên mặt có những gân chạy song song, dài khỏi bẹ chìa thành những lóng dài.",
+      "hoa": "Hoa mọc thành bông hẹp, gầy, đơn độc hoặc xếp đôi hay thành chùm có ít nhánh.",
+      "quả": "Quả nhỏ, ba cạnh, hai đầu nhọn, bóng nhẵn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây chứa một tinh dầu màu vàng rơm nhạt, mùi thơm mát dễ chịu.",
+      "Các hợp chất": "Hoạt chất khác chưa rõ.",
+      "đã nghiên cứu": "Năm 1985, Roger Moser đã nghiên cứu tinh dầu rau răm lấy giống ở Việt Nam đem về trồng ở Thụy Sĩ thấy trên sắc ký khí khối phổ có tới 38 pic trong đó chủ yếu (85%) là các aldehyd aliphatic và alcool."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường trồng làm gia vị. Có người cho rằng rau răm có tác dụng dịu tình dục cho nên các người đi tu thường dùng để giảm những cơn bốc dục. Ngoài ra còn có tác dụng kích thích sự tiêu hoá, kém ăn, chữa rắn cắn.",
+      "được_dùng": "Mỗi ngày dùng 15-20g thân và lá tươi.",
+      "chữa": "Để chữa rắn cắn, người ta hái lấy khoảng 20 ngọn rau răm giã nát vắt lấy nước uống. Bã đắp lên nơi rắn cắn. Thường trong vòng 15 phút sau đỡ đau và sau 3 giờ hết sưng tấy. Chữa hắc lào, sâu quảng: Cả cây giã.nát, thêm rượu vào, bôi lên nơi hắc lào, chốc lở đã rửa sạch."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Rau răm được trồng ở khắp nơi nước ta chủ yếu để làm gia vị.. Thường dùng tươi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

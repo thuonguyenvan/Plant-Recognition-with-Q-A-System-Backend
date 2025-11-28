@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đằng hoàng",
+      "ten_khac": "Đằng hoàng, Vàng nghệ, vàng nhựa, trần huỳnh.",
+      "ten_khoa_hoc": "Garcinia hanburyi Hook. f",
+      "ma_taxon": "569100",
+      "ho": "Clusiaceae (Bứa)",
+      "Mô tả": {
+        "lá": "Lá mọc đối, hình bầu dục hay hình mác, gốc tròn, đầu tù hơi nhọn, dài 10 – 20 cm, rộng 3 – 10 cm, mép nguyên, hai mặt nhẫn.",
+        "hoa": "Cụm hoa khác gốc gồm hoa đực và hoa cái, đều mọc ở kẽ lá, lá kèm nhỏ; hoa đực đơn độc hoặc tụ họp 3 – 6 cái, hoa cái to hơn hoa đực.",
+        "quả": "Quả mọng, gần hình cầu, đường kính 2 – 5 cm, có đài tồn tại, gồm 4 ngăn, mỗi ngăn chứa một hạt.",
+        "cây": "Cây to, cao 10 – 20 m. Thân mọc thẳng, nhẵn, phân nhiều cành loà xoà.",
+        "mùa hoa": "tháng 11 – 12",
+        "mùa quả": "tháng 4-5."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Nhựa đằng hoàng chứa nhiều hợp chất xanthon đa số các chất này có tác dụng sinh học quan trọng."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Đằng hoàng vị chua chát, có độc tính cao, tác dụng tẩy xổ mạnh. Nếu dùng hơi quá liều thì gây viêm ruột, chảy máu ruột nôn mửa đau bụng, hôn mê mà chết nên đẳng hoàng được dùng chủ yếu để chữa bệnh ngoài da, sát trùng, dùng bôi mụn nhọt, vết thương.  Trong y học dân gian Thái Lan, nhựa vỏ cây đằng hoàng được dùng ngoài trị vết thương nhiễm khuẩn và dùng trong trị phù. Nó được dùng trong thú y làm thuốc tẩy mạnh. Liều cao có thể gây buồn nôn, nôn và đau bụng quặn. Nó thường được phối hợp với các thuốc tây khác như lô hội hoặc caloel để làm tăng tác dụng (Panthong A, et al., 2007)."
+      },
+      "Cách dùng": {
+        "được_dùng": "Chi Garcinia L. là chi có nhiều loài nhất trong họ Clusiaceae ở Việt Nam, với tổng số 29 loài. Loài đằng hoàng trên mới chỉ thấy phân bố ở các tỉnh phía Nam như: Gia Lai (Măng Yang, Đắk Đo Kon Hà Nùng); Đắk Nông (Đắk Mil, Nam ĐH Đức Minh); Đồng Nai (Trảng Bom) và Kiến Giang (đảo Phú Quốc). Trên thế giới, cây phân bố ở Ấn Độ, Campuchia, Thái Lan và Malaysia (Danh lục các loài thực vật ở Việt Nam, 2003).  Đằng hoàng là loại cây gỗ nhỡ ưa sáng và hơi chịu bóng khi còn nhỏ. Cây mọc rải rác ở rừng kín thường xanh, nhất là ở cửa rừng và dọc theo các bờ khe suối. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt, nhưng do cải mọc gần bờ suối hay cửa rừng nên khi quả và rụng xuống thường bị nước cuốn trôi. Gỗ đằng hoàng mềm nên không được chủ nhiều trong khai thác."
+      },
+      "Lưu ý": {}
+    }
+  ]
+}

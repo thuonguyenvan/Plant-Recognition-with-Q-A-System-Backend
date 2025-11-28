@@ -1,0 +1,206 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Đỏm lông",
+            "ten_khac": "",
+            "ten_khoa_hoc": "Bridelia monoica (Lour.) Merr.",
+            "ma_taxon": "908757",
+            "ho": "Thầu dầu (Euphorbiaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây nhỡ hoặc cây to, có thể cao đến 20m.",
+            "thân": "Cành mềm có lông màu hung.",
+            "lá": "Lá mọc so le, hình clip hoặc bầu dục, dài 4 – 12 cm, rộng 2 – 4,5 cm, gốc tròn, đầu tù, mặt trên nhẵn hoặc có ít lông ở gần, mặt dưới lông màu nhạt, mép nguyên; cuống lá mảnh, dài 3 – 6 mm, có lông tơ, lá kèm sớm rụng.",
+            "hoa": "Cụm hoa mọc ở kẽ lá thành đầu tròn nhiều hoa lưỡng tính, lá bắc rất nhỏ, gần như nhẵn, hoa đực có 5 lá đài, hình bầu dục – tam giác, dài khoảng 2 mm, nhẵn, 5 cánh hoa hình mắt chim, có răng tròn; nhị 5, chỉ nhị ngắn, nhụy lép hình trứng ngược hoặc gần hình cầu có 5 cạnh; hoa cái có 5 lá đài, hình tam giác nhọn, dài 1,2 – 1,5 mm, 5 cánh hoa hình thoi, bầu có 5 noãn đảo.",
+            "quả": "Quả gần hình cầu, đường kính 4 – 6 mm, hạt 2, mặt trong có rãnh.",
+            "mùa hoa": "tháng 4 – 7.",
+            "mùa quả": "tháng 4 – 7."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Bridelia Willd. có 11 loài ở Việt Nam, trong đó có 4 loài được dùng làm thuốc (Nguyễn Nghĩa Thìn, 2003 và Võ Văn Chi, 1997).  Đỏm lông có nguồn gốc ở vùng nhiệt đới Ấn Độ hoặc ở Mianma, hiện nay cây phân bố rộng rãi ở hầu hết các nước Đông Nam Á, Nam Á và Nam Trung Quốc. Ở Việt Nam, đỏm lông phân bố rải rác khắp các tỉnh thuộc vùng núi thấp, đến trung du và đối khi còn gặp ở vùng đồng bằng ven biển (các tỉnh miền Trung).  Đởm lông là loại cây bụi ưa sáng, có khả năng chịu hạn tốt do có bộ rễ cọc cắm sâu dưới đất. Cây ra hoa quả nhiều hằng năm. Quả chín là thức ăn của chim và động vật gặm nhấm. Đỏm lông tái sinh tự nhiên tốt từ hạt và ở các cây còn nhỏ có khả năng tái sinh cây chồi, từ phần gốc còn lại sau khi chặt.",
+            "Bộ phận dùng": "Vỏ rễ và lá."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": ""
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Vỏ cây chứa từ 16 – 40% tanin, cho nên ở Ấn Độ được sử dụng làm nguyên liệu để sản xuất tanin (The Wealth of raw material in India, 1952). Theo các tác giả Trung Quốc (Trung Dược đại từ điển, 1975), đỏm lông chứa flavonoid, 3β – ol, fridelin, β – sitosterol và stigmasterol."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Đỏm lông có vị nhạt, hơi đắng chát, tính bình, có tác dụng an thần, điều kinh, thanh nhiệt, giải độc."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Vỏ rễ đỏm lông và lá được dùng chữa thần kinh suy nhược, kinh nguyệt không đều, đau dạ dày, đau bụng.  Rễ còn dùng chữa thấp khớp, đau nhức xương, dùng cho phụ nữ sau khi đẻ được 3 ngày để phòng bệnh hậu sản.  Lá còn dùng chữa sốt, mụn nhọt, lở ngứa.  Ở Campuchia, quả chín dùng ăn và trị tưa lưỡi, sởi. Ở Malaysia, vỏ cây dùng để thuộc da, nước sắc lá chữa sốt cao, đau dạ dày, đau bụng, nước sắc lá cũng dùng cho phụ nữ sau khi sinh. Ở Đài Loan cho rằng toàn cây có độc (Perry và Metzger, 1980. Med.plants of East and Southeast Asia). Ở Vân Nam (Trung Quốc) rễ và lá đỏm lông được dùng trị suy nhược thần kinh, kinh nguyệt không đều, mụn nhọt, lở loét. Liều dùng rễ 15 – 30g, thân lá 30 – 60g sắc uống. Dùng ngoài, lấy lá tươi hoặc vỏ thân rửa sạch, giã nát, đắp lên chỗ mụn nhọt, lở ngứa.  Bài thuốc có đỏm lông  Chữa đau dạ dày: Lá đỏm lông, lá ổi, rễ cây sim rừng (Rhodamnia dumetorum (Poir.) Merr. et Perry), các vị bằng nhau 30g, sắc đặc, uống."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": ""
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

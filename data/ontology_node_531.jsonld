@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "A lệ chi",
+      "ten_khac": "Ích Trí (Thần Nông Bản Thảo), Long Mục (Ngô Phổ Bản Thảo), Á Lệ Chi (Khai Bảo Bản Thảo), Qủy Nhãn, Viên Nhãn (Tục Danh), Lệ Nô",
+      "ten_khoa_hoc": "Euphoria longana Lamk.",
+      "ma_taxon": "191503",
+      "ho": "Bồ Hòn (Sapindaceae)",
+      "Mô tả": {
+        "cây": "Cây thân gỗ, cao 5-7m.",
+        "lá": "Lá mọc so le, kép, hình lông chim, gồm 5-9 lá chét, nguyên, hẹp, dày, cứng, dài 7-20cm, rộng 2,5-5cm.",
+        "hoa": "Hoa màu vàng nhạt, mọc từng chùm ở đầu cành hoặc kẽ lá, gồm 5 lá đài, 5 cánh rời nhau, 6-10 nhụy, bầu 2-3 ô.",
+        "quả": "Quả hình tròn, vỏ ngoài ráp, màu vàng nâu, bên trong có cùi mọng nước ngọt (áo hạt), giữa có hạt đen bóng",
+        "mùa hoa": "tháng 2-3."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong Long nhãn có: Sacaroza, Glucoza, Protein, Acid Tatric, Chất béo, Sinh tố A,B. Các men Amylaza, Peroxitdaza.",
+        "gồm chất": "Cùi nhãn tươi có: Nước 77,15%, Tro 0,01%, Chất béo 0,13%, Protid 1,47%, hợp chất có Nitrogen tan trong nước 20,55%, Saccacrose 12,25%, Vitamin A, B.",
+        "Các hợp chất": "Cùi nhãn khô có nước 0,85%, Chất tan trong nước79,77%, Chất không tan trong nước 19,39%, Tro 3,36%. Trong phần tan trong nước có Glucose 26,91%, Sacarose 0,22%, Acid tartric1,26%, Chất có Nitrogen 6,309%.",
+        "chứa": "Hạt nhãn chứa tinh bột, Saponin, Chất béo và Tanin.",
+        "triết xuất": "Lá chứa Quercetrin, Quercetin, Tanin (Tự Điển Cây Thuốc Việt Nam)."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "có tác dụng": "Tác dụng chống nấm: nước ngâm Long nhãn, trong ống nghiệm có tác dụng ức chế đối với nha bào của nấm (Trung Dược Học).",
+        "cong_dung_y_hoc": "Tác dụng kháng phóng xạ: Long nhãn nhục hợp với Cáp giới (Mỗi 1ml thuốc có Long nhãn nhục 1g, Cáp giới 0,5g), cho chuột uống theo liều 20ml/kg, liên tục 10 ngày, thấy có tác dụng tăng sức đề kháng; Uống liều 15ml/kg liên tục 14 ngày huyết áp trở lại trạng thái bình thường; Uống 15ml/kg liên tục 10 ngày, thấy chuột tươi tỉnh, khỏe mạnh; Uống 20ml/kg liên tục 7 ngày thấy trọng lượng chuột tăng (Trung Quốc Trung Dược Tạp Chí 1989, 14 (6): 365)."
+      },
+      "Cách dùng": {
+        "được_dùng": "12-20g/ ngày.",
+        "làm thuốc": "Bài thuốc có vị long nhãn nhục  Trị mất ngủ, hồi hộp, hay quên: Hoàng kỳ 12g, Bạch truật 12g, Đảng Sâm 12g, Đương qui 8g, Phục thần 12g, Long nhãn nhục 12g, Toan táo nhân 12g, Mộc hương 4g (cho sau), Viễn chí 6g, Chích thảo 4g, sắc nước uống (có thể cho thêm Gừng tươi và Đại táo) (Quy Tỳ Thang – Tế Sinh Phương).  Ôn bổ Tỳ Vị, trợ tinh thần: Long nhãn nhục, nhiều ít tùy dùng, ngâm rượu 100 ngày, mỗi ngày uống (Long Nhãn Tửu – Vạn Thị Gia Sao).  Trị Tỳ hư, tiêu chảy: Long nhãn khô 14 trái, Sinh khương 3 lát, sắc uống(Tuyền Châu Bản Thảo).  Tham khảo:  “Ngoài việc dùng trong các phương thang ra, phép ăn Long nhãn thì phải giữ cho khí hòa, Tâm tĩnh, đồng thời phải thấm nước bọt nuốt dần vào cổ họng, là phương pháp đem Khảm Thủy điền thay Ly Hỏa. Người có chứng lao thì khuyên họ ăn thường xuyên 1 tháng sẽ khỏi bệnh, đây là phép bí truyền của kẻ tu hành.  Cách ăn Long nhãn như sau:  Canh năm, không dùng nước, ăn 1 quả Long nhãn, dùng lưỡi đưa lên răng mà lấy cùi, bỏ hột, tức là phép ‘Thiệt  lãm hoa trì’, rồi sẽ nhằn cho cùi thành cao, hòa với nướcbọt nuốt ực xuống mạnh như nuốt vật cứng, xong rồi lại làm như thế mà ăn quả thứ 2. Ăn tất cả 9 quả, chừng 1 giờ thì xong. Đến giờ Thìn, giờ Tỵ lại ăn 9 quả; khi đi ngủ lại ăn 9 quả. Trong 1 ngàyăn tất cả 4 lần” (Dược Phẩm Vậng Yếu).  “Long nhãn dùng trong bài Quy Tỳ Thang, cùng với Liên nhục, Khiếm thực để bổ Tỳ âm, làm cho Tỳ vượng, thống huyết, quy kinh. Nếu thần chí mệt mỏi, Tâm kinh huyết thiếu, dùng làm thuốc trợ lực cho Sinh địa, Mạch môn để bổ dưỡng Tâm huyết. Trường hợp gân cốt mệt mỏi, dùng làm thuốc trợ lực cho Thục địa, Đương quy để tư âm, bổ Can huyết” (Trung Dược Học).  “Long nhãn vị ngọt, thể nhuận, màu đỏ tía, chẳng những bổ khí của Tỳ Vị mà còn tư âm huyết bất túc, không có dính nhờn của Thục địa, ủng tắc khí của Đại táo, là vị thuốc rất tốt về ích khí, bổ huyết. Cho nên trong bài Quy Tỳ Thang, dùng Long nhãn để chữa Tâm Tỳ bị tổn thương. Người già yếu sau khi ốm, Tỳ khí hư nhược, chỉ dùng 1 vị này đun lên lấy nước uống thay trà rất hay. Nếu dùng để ăn thì lấy quả Vải làm quý, nếu dùng để tu bổ thì lấy quả Nhãn là tốt” (Đông Dược Học Thiết Yếu)."
+      },
+      "luu_y": {}
+    }
+  ]
+}

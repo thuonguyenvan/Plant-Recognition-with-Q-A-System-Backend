@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bầu",
+      "ten_khac": "Bầu, Bầu rượu, Hồ lô",
+      "ten_khoa_hoc": "Lagenaria siceraria (Molina) Standl.",
+      "ma_taxon": "164415",
+      "ho": "Cucurbitaceae (Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá hình tim rộng, không xẻ thuỳ hoặc xẻ thuỳ rộng, có lông mịn như nhung màu trắng; cuống có 2 tuyến ở đỉnh.",
+      "hoa": "Hoa đơn tính cùng gốc, to, màu trắng, có cuống hoa dài tới 20cm.",
+      "quả": "Quả mọng màu xanh dợt hay đậm, có hình dạng khác nhau hoặc tròn, dài thẳng hoặc thắt eo, vỏ già cứng hoá gỗ, thịt trắng. Hạt trắng, dài 1,5cm.",
+      "cây": "Dây leo thân thảo có tua cuốn phân nhánh, phủ nhiều lông mềm màu trắng.",
+      "thân": "Dây leo thân thảo có tua cuốn phân nhánh, phủ nhiều lông mềm màu trắng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Nam Mỹ, ngày nay đã trở thành liên nhiệt đới, được trồng phổ biến ở các vùng nóng trên thế giới.",
+      "thường_mọc": "Quả thường được dùng làm rau ăn luộc hoặc nấu canh; lá cũng dùng làm rau ăn chống đói. Người ta thường thả giàn; bầu mọc rất khoẻ, sinh nhiều rễ phụ ở các đốt thân. Bầu ưa đất cao ráo. Nếu trồng đúng thời vụ (tháng 10) và chăm sóc tốt, bầu cho nhiều quả, ít ruột, năng suất cao. Nếu ăn quả lúc còn non, hạt nhỏ, vỏ mềm; nếu để già thì nạc có vị chua và có xơ. Người ta cắt bầu thành khoanh, gọt bỏ vỏ cứng, loại bỏ hạt già, rồi thái miếng nhỏ dựng tươi, có khi đem phơi khô để cất dành. Hạt thu hái ở quả già, phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả và hạt – Fructus et Semen Lagenariae. Quả thường có tên gọi là Hồ lô. Rễ, lá, tua cuốn, hoa cũng được sử dụng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả tươi chứa 95% nước, 0,5% protid, 2,9% glucid, 1% cellulos, 21mg% calcium, 25% phosphor, 0,2mg% sắt và các vitamin: caroten 0,02mg%, vitamin B1: 0,02mg%, vitamin B2 0,03mg%, vitamin PP 0,40mg% và vitamin C 12mg%. Trong quả còn có saponin. Quả bầu là nguồn tốt về vitamin B và vitamin C. Nhân hạt già chứa tới 45% dầu béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bầu là món ăn phổ biến của nhân dân ta. Ta thường dùng thịt quả ăn luộc, nấu canh hoặc xào. Bầu luộc ăn mát lại trị được bón kết. Nước luộc bầu để uống mát và thông đường tiểu tiện. Nhiều bộ phận của cây bầu được sử dụng làm thuốc. Thịt quả bầu dùng chữa đái dắt, chứng phù nề (nhưng trong chứng sưng ống chân và chứng đầy hơi, nếu ăn thì lâu khỏi). Còn dùng chữa bệnh tiêu khát (đái đường), đái tháo và máu nóng sinh mụn lở. Ở Ấn Độ, người ta dùng đắp vào bàn chân đang sưng tấy. Rễ được dùng ở Ấn Độ làm thuốc trị phù. Nước sắc có thêm đường dùng uống chữa chứng vàng da. Tua cuốn và hoa cây bầu dùng nấu nước tắm cho trẻ em để phòng ngừa đậu, sởi, lở ngứa. Hạt bầu dùng chữa lợi răng sưng đau, tụt lợi, chân răng lộ ra, dùng với Ngưu tất, mỗi vị 20g, nấu lấy nước ngậm và súc miệng, ngày 3-4 lần. Ở Ấn Độ, người ta dùng hạt bầu trong bệnh phù và dùng làm thuốc trị giun, dầu hạt dùng trị đau đầu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Bầu luộc chấm muối vừng, một món ăn giản dị, ngon miệng mà có tác dụng nhuận tràng, chống táo bón.  Người bị đái tháo đường, đái dắt ăn canh bầu hàng ngày cho hiệu quả tốt rất. Sưng mộng răng hay bị tụt lợi có thể chữa bằng cách lấy hạt bầu đun lấy nước ngậm và súc miệng từ 3-4 lần/ngày. Lấy hoa và tua cuốn của bầu nấu nước cho trẻ tắm, có tác dụng phòng ngừa thủy đậu, sởi, lở ngứa vào ngày hè nóng nực. Trị bệnh vàng da: lấy rễ bầu sắc nước uống (có thể cho thêm chút đường).  Viêm gan, sỏi đường niệu, huyết áp cao: quả bầu tươi 500g, rửa sạch vắt lấy nước cốt và trộn đều với 250ml mật ong rồi uống ngày 2 lần, mỗi lần 30 – 50ml. Người bị bí tiểu lấy nửa quả bầu và 5 củ hành sắc lấy nước uống 2-3 lần/ngày."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Bầu tính lạnh, ăn nhiều thì sinh nôn tháo. Người hư hàn, lạnh dạ nên kiêng."
+    }
+  ]
+}

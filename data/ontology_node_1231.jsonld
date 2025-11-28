@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tai chua",
+      "ten_khac": "Tai chua",
+      "ten_khoa_hoc": "Garcinia cowa Roxb.",
+      "ma_taxon": "427706",
+      "ho": "Clusiaceae (Bứa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ mọc thẳng, thân thường có nhiều u lồi.",
+      "cành": "Cành nhiều và mảnh, thường nằm ngang, đầu hơi rủ xuống.",
+      "lá": "Lá hình trứng ngược, đầu lá tù, đuôi lá hình nêm, dài 7- 17cm, rộng 2,5-6cm, gân lá rõ ở cả hai mặt, đường gân phụ nối liền với nhau ở mép. Cuống lá mảnh, dài gần 2cm.",
+      "hoa": "Cụm hoa đực có 3-8 hoa xếp hình tán, hoa có cuống dài 1cm, đài 4, tràng 4 cánh dày, nhị xếp thành mộc khối, chỉ nhị ngắn. Hoa lưỡng tính đơn lẻ. hay tụ thành 2-3 hoa mọc ở nách lá, gần không cuống, nhị họp thành 4 bó, mồi bó 1-8, bao phấn 4 ống. Bầu thượng 6-9 ống, đầu nhị xẻ 4-8 thùy hình nêm.",
+      "quả": "Quả mập hình cầu dẹt, trên có những múi nổi rõ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần chủ yếu trong tai chua là axit xitric, ngoài ra còn có một số\u00a0axit tactric và axit malic. Hàm lượng axit tính theo axit xitric lên tới 32% trong quả khô. M. Haim de Balzac, A. Parveaud và J. Rollang (1928, Bull Agence Géti Coìonies, số 231) đã nghiên cứu kỹ và kết luận tai chua là một nguồn axit xitric quan trọng. Trong tai chua có một chất gây nôn mửa. Một số nơi dùng hạt tai chua nướng ăn thơm ngon, nhưng hay gây nôn mửa."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nhân dân tai chua chủ yếu được dùng nấu canh cho có vị chua. Một số nơi, người dân sắc uống chữa sốt, khát nước. Ngày uống 6- 10g. Trước đây chưa có axit xitric tổng hợp người ta xem tai chua là một nguồn axit xitric thiên nhiên đáng quý. Theo lời phát biểu của một giám đốc nhà máy nhuộm Zurich (Đức) thì cao quả tai chua dùng trong in vải vừa giữ cho màu bền, vừa không hại vải cho nên dù là cùng một giá với axit xitric hay với giá cao hơn một chút thì việc sử dụng tai chua trong nhuộm in trên vải vẫn tốt hơn. Điều đó giải thích kinh nghiệm trong nhân dân Việt Nam ta đã dùng tai chua làm chất cấn mầu trong nhuộm vải, lụa và do tính chất axit nhẹ trong việc làm bóng các đồ vàng bạc người ta còn dùng tai chua để làm chất cắn màu trong nhuộm cói đan chiếu."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Mọc hoang tại nhiều khu rừng miền Bắc nước ta, nhiều nhất ở Phú Thọ, Yên Bái, Lào Cai, Hòa Bình, Tuyên Quang, Hà Giang, Bắc Cạn, Thái Nguyên, Cao Bằng, Lạng Sơn. Một số vùng người ta trồng ở ven đường làng để lấy quả ăn và dùng trong công nghệ.",
+      "mùa hoa": "Mùa hoa vào các tháng 3-4, mùa quả vào tháng 7-8.",
+      "phơi khô": "Thường hái về bỏ hạt, thái thành từng miếng mỏng phơi hay sấy khô, có màu đen nâu nhạt, hơi mềm."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

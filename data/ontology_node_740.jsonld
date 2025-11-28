@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây tai chuột",
+      "ten_khac": "Tai chuột, Hạt bí, Qua tử kim, Mộc tiền, Muối qua (Tày), Co muối tẩu (Thái), Nhẩm nghin mía (Dao)",
+      "ten_khoa_hoc": "Dischidia acuminata Cost",
+      "ma_taxon": "357976",
+      "ho": "Asclepiadaceae (Thiên lý)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Điều kiện ánh sáng, nhiệt độ và độ ẩm cần thiết cho cây rất đa dạng tùy vào từng loài, thể hiện qua phạm vi phân bố rộng và sự khác biệt về độ cao sinh trưởng, có thể phát triển ở độ cao lên đến 2000m so với mực nước biển.. Nhiều loài Tai chuột có mối quan hệ cộng sinh với kiến. Chúng phát triển những chiếc lá dạng túi hoặc lá hình khiên, tạo nơi trú ẩn cho kiến. Đổi lại, kiến mang đất và chất dinh dưỡng vào trong những cấu trúc này, giúp cây hấp thụ dinh dưỡng thông qua các rễ phụ mọc vào bên trong.  Một số loài chỉ hình thành lá túi hoặc lá khiên khi gặp điều kiện dinh dưỡng thiếu hụt, còn khi đủ dinh dưỡng, cây có thể phát triển lá bình thường. Những chiếc lá hình khiên còn có tác dụng giữ ẩm, giúp cây chống chịu trong điều kiện khô hạn kéo dài.  Về sinh sản, nhiều loài Tai chuột có hoa đóng ngay cả khi đến mùa nở, chỉ một số ít mở hoàn toàn. Cách thụ phấn của chúng vẫn chưa được hiểu rõ, nhưng hoa có cấu trúc đặc biệt giúp cố định phấn hoa trong các bao phấn chặt chẽ, chỉ có thể truyền phấn khi côn trùng vô tình kéo rời cả bao phấn ra khỏi nhị hoa. Hoa của cây hoạt động như một cái bẫy: chân côn trùng có thể bị mắc kẹt, và khi chúng cố gắng thoát ra, bao phấn sẽ dính vào chân và được mang sang hoa khác để thụ phấn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong Đông y, cỏ Tai chuột được biết đến với tính mát, vị hơi chua và thường được sử dụng để hỗ trợ điều trị nhiều loại bệnh. Dược liệu này có tác dụng giúp phụ nữ giảm khí hư, lợi tiểu, hỗ trợ điều trị nước tiểu vàng, tiêu viêm, phù thũng và bệnh lậu. Ngoài ra, cỏ Tai chuột còn được dùng để chữa các vấn đề ngoài da như phỏng, chín mé, thối tai. Đặc biệt, đối với phụ nữ đang cho con bú, dược liệu này còn có tác dụng lợi sữa. Tuy nhiên, do Y học hiện đại chưa có nhiều nghiên cứu sâu về loại cây này, nên cần thận trọng và hạn chế sử dụng.  Liều dùng hằng ngày 20-30g dưới dạng thuốc sắc."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Viêm đường tiết niệu: tai chuột 30g, lá bạc thau 30g, râu ngô 30g. Nấu sắc uống.",
+      "làm thuốc": "Phù thũng: tai chuột 30g, bông mã đề 40g, lá xa kê 40g. Nấu sắc uống.",
+      "có tác dụng": "Giảm ho, long đờm: tai chuột 30g, lá táo chua 40g. Nấu uống.",
+      "giã nát": "Viêm tấy, áp xe, chín mé: dùng tai chuột giã đắp nơi đau.",
+      "sắc nước uống": "Chữa hôi tai: Lấy một lượng vừa đủ lá Hà thủ ô trắng và lá Tai chuột. Rửa sạch, giã nát hai loại lá rồi vắt lấy nước cốt. Dùng nước này nhỏ trực tiếp vào tai."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

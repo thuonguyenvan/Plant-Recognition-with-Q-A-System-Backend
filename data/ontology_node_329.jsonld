@@ -1,0 +1,204 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Đậu cọc rào",
+            "ten_khac": "ba đậu mè, ba đậu nam, dầu mè, cốc dầu, vong dầu ngô, đồng thụ lohong, kuang, vao (Cămpuchia), nhao (Viên tian), grand pignon d’Inde, fève d’efer.",
+            "ten_khoa_hoc": "Cajanus cajan (L.) Millsp.",
+            "ma_taxon": "139444",
+            "ho": "Fabaceae (Đậu)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Đậu cọc rào là một cây nhỏ cao 1-5m, cành to mẫm, nhẵn, trên có những vầu nổi lên do sẹo của lá, khi bị khóa sẽ chảy ra một thứ nhựa mủ trắng.",
+            "lá": "Lá đơn, xẻ chân vịt, chia làm 3-5 thuỳ nông, dài 10-13cm, rộng 8-11cm.",
+            "hoa": "Hoa màu vàng, nhỏ, cùng gốc, mọc thành chuỳ tận cùng hay ở nách lá, hoa đục mọc ở đầu các nhánh với cuống ngắn có khuỷu, hoa cái mọc ở giữa những nhánh, với những cuống không có khuỷu.",
+            "quả": "Quả nang hình trứng, đen nhạt hay đỏ nhạt, lúc đầu mẫm sau thành khô, dai nhẵn, mờ theo ba mép. Hạt 3, có áo hạt, hình trứng dài 2cm, rộng 1cm, nhẵn, màu\u00a0đen nhạt."
+        },
+        {
+            "@type": "Phân bố"
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": "Còn gọi là ba đậu mè, ba đậu nam, dầu mè, cốc dầu, vong dầu ngô, đồng thụ lohong, kuang, vao (Cămpuchia), nhao (Viên tian), grand pignon d’Inde, fève d’efer. Tên khoa học: Cajanus cajan (L.) Millsp. – Cytisus cajan L. Họ thực vật: Fabaceae"
+        },
+        {
+            "@type": "Bộ phận dùng"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Trong hạt đậu cọc rào có 20-25% dầu béo, protein và chất nhựa.",
+            "gồm chất": "Theo Falck thì trong hạt đậu cọc rào còn chứa một phytotoxin gọi là curxin tuy không gây hiện tượng vón hồng cầu nhưng làm tổn thương các mạch máu và có thể gây nguy hiểm đến tính mạng.",
+            "dấu hiệu đặc trưng": "Dầu đậu cọc rào không màu hay hơi vàng, không mùi, trong ở nhiệt độ thường. Lạnh ở 9°C sẽ để lắng đông stearin và đông đặc hoàn toàn ở nhiệt độ OoC. Tỷ trọng 0,915 ở 15oC. Dầu thắp rất tốt vì không có khói, rất thích hợp với việc chế xà phòng chống kích ứng đối với da."
+        },
+        {
+            "@type": "Tính vị"
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Dầu đậu cọc rào với liều thấp tác dụng tẩy mạnh: 6 đến 7g có tác dụng tẩy mạnh bằng 45g dầu thầu dầu.",
+            "có tác dụng": "Nhân đậu cọc rào cũng có tác dụng tẩy mạnh: Trộn ba nhân với sữa cho uống gây tẩy rất mạnh. Người ta còn đem rang hạt, tán thành bột ngâm trong rượu cho uống để tẩy.",
+            "chữa": "Nhựa mủ: Được bôi lên vết thương hay vết loét, khi khô sẽ thành một màng che như kiểu màng collodion. Có khi người ta dùng để đánh lưỡi những người ốm: Chấm nhựa mủ vào miếng gạc, rồi dùng gạc này để đánh lưỡi. Lá đậu cọc rào: Giã nát đắp lên bụng để gây tẩy cho trẻ em, có khi còn được dùng chữa thấp khớp, đôi nơi dùng nấu nước tắm ghẻ. Rễ dùng chữa lê liệt, bại liệt."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Cây nguồn gốc châu Mỹ, sau được di thực đi khắp những vùng nhiệt đới. Rất phổ biến ở Việt Nam, Lào và Campuchia, thường trồng làm hàng rào do rất dễ trồng: Chỉ cần giâm cành hay bằng hạt. Mọc rất nhanh, nhưng vì năng suất hạt thấp cho nên muốn thu hoạch nhiều hạt phải trồng nhiều cây. Có những nước người ta dùng cây này để trồng trên đồi trọc, vừa nhanh có cây vừa thu hoạch được nhiều hạt để lấy dầu.",
+            "làm thuốc": "Người ta dùng nhựa mủ, hạt, lá, cành và rễ làm thuốc.",
+            "phơi khô": "Hạt còn dùng ép dầu."
+        },
+        {
+            "@type": "luu_y"
+        }
+    ]
+}

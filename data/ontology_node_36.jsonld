@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cà trái vàng",
+      "ten_khac": "Cà tàu, cà trái vàng",
+      "ten_khoa_hoc": "Solanum virginianum L.",
+      "ma_taxon": "339965",
+      "ho": "Cà (Solanaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cà trái vàng là loài cây thân thảo, sống hàng năm hoặc nhiều năm, cao khoảng 0,7 – 1 mét. Thân cây phân nhánh từ gốc, có nhiều cành xòe ra, thường cong và có gai nhỏ. Cành non phủ lông dày.",
+      "lá": "Lá mọc so le, hình trái xoan rộng, dài từ 5–10 cm, chia thùy nông. Mặt lá trên có gai mềm và lông mịn, mặt dưới nhiều lông trắng hơn. Gân lá nổi rõ, cuống lá dài khoảng 1–2 cm, có gai và lông.",
+      "hoa": "Cụm hoa mọc thành chùm ở kẽ lá, thường có từ 3–5 hoa màu lam tím, đôi khi mọc đơn lẻ. Hoa có 5 cánh hình tam giác, hợp thành hình chuông. Nhị màu vàng.",
+      "quả": "Mọng, hình cầu hoặc hình trứng, khi non màu xanh lục, khi chín chuyển sang vàng tươi, đường kính khoảng 1,5–2,5 cm. Quả chứa nhiều hạt nhỏ, dẹt, có cánh.",
+      "mùa hoa": "tháng 2-4",
+      "mùa quả": "tháng 5-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cà trái vàng có nguồn gốc từ vùng núi cao của Nepal. Loài này được du nhập và trồng thử nghiệm tại Việt Nam từ năm 1978 tại Trại nghiên cứu dược liệu Tam Đảo (Vĩnh Phúc) và Trại thuốc Vân Điển (Hà Nội). Cây được trồng và phát triển tại nhiều vùng nhiệt đới và cận nhiệt đới như Ấn Độ, Nepal, Sri Lanka, Malaysia, Trung Quốc, Australia và Việt Nam. Tại Việt Nam, cây phát triển tốt ở những vùng khí hậu mát mẻ, ẩm ướt như cao nguyên Lâm Viên (Lâm Đồng), các huyện miền núi của Gia Lai, Kon Tum, Lạng Sơn, Hòa Bình, và một số vùng núi cao phía Bắc. Loài cây này thường mọc ở rìa rừng, ven đường, đất hoang hoặc vùng bị tác động nhẹ. Cà trái vàng là cây ưa sáng, thích hợp với khí hậu ẩm và đất tơi xốp. Cây mọc khỏe, sinh trưởng nhanh, thường mọc hoang hoặc được trồng xen trong rẫy hoặc nương."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Viện Dược liệu đã nghiên cứu và trồng thử nghiệm hai giống cà trái vàng tại Hà Nội, Sa Pa và Tam Đảo. Một giống có nguồn gốc từ Nepal và một giống khác được lấy từ Ấn Độ. Cả hai giống đều thích nghi tốt với điều kiện khí hậu vùng núi, đất xám hoặc đất hoang dại, cho năng suất cao. Giống cây này dễ trồng và chăm sóc, phù hợp với điều kiện canh tác của vùng cao hoặc đất vườn. Có thể gieo hạt hoặc trồng cây con quanh gốc cây mẹ. Khoảng cách trồng nên là 30×30 cm. Cây nhỏ, dễ làm cỏ, chăm bón và thu hoạch. Cà trái vàng thường được thu hái khi quả chín vàng và được phơi khô để sử dụng."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây: bao gồm thân, rễ, lá, quả. Quả: được thu hái khi chín vàng và phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "Các hợp chất": "Các hợp chất chính được tìm thấy trong cây cà trái vàng bao gồm: Alkaloid glycoalkaloid: solasonin, solamargin, solasurin, solasodine. Sterol và dẫn chất: β-sitosterol, methyl caffeate. Khác: chất béo, acid caffeic.",
+      "đã nghiên cứu": "Theo Trần Hữu Thọ (1985), qua phân tích quả cà trái vàng có thể tách được hai hoạt chất chính là solamargin và solasonin, trong đó chứa khoảng 0,6% hỗn hợp các glycoalkaloid. Ngoài ra, còn có một tỷ lệ nhỏ dioscin, một hoạt chất có hoạt tính sinh học mạnh.",
+      "chứa": "Theo Nguyễn Khắc Quỳnh (1991), quả chứa khoảng 1,84% solasodine (chất có hoạt tính dược lý mạnh)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cà trái vàng là một trong những cây thuốc quý được sử dụng rộng rãi tại Nepal và các nước Nam Á trong y học dân gian: Dùng ngoài: Lá giã nát đắp trị đau lưng, côn trùng cắn, giảm sưng đau. Nước sắc từ quả hoặc lá trị ho, cảm, sốt, đau bụng, hen, thấp khớp. Nước ép quả dùng chữa viêm đường hô hấp và tiêu hóa. Dùng uống trong: Nước sắc quả giúp tiêu đờm, lợi tiểu, trị sỏi thận, nước tiểu đục, hỗ trợ chữa sỏi bàng quang, viêm bàng quang, phù thũng. Nước ép lá: có thể dùng chữa tiêu chảy, đau bụng, giảm đau bụng kinh. Tổng kết Cà trái vàng là cây dược liệu quý, có giá trị y học và sinh thái cao. Nhiều nghiên cứu hiện đại đã chứng minh các hợp chất hoạt tính sinh học của cây, đặc biệt là glycoalkaloid (solasonin, solamargin) có tiềm năng ứng dụng trong dược phẩm. Đồng thời, cây còn có thể tận dụng làm nguyên liệu trong công nghiệp bảo vệ thực vật và chăm sóc sức khỏe cộng đồng. (Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam)"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

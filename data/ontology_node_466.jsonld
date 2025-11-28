@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch đầu ông",
+      "ten_khac": "Nụ áo tím, bạc đầu nấu, dạ khiến ngưu.",
+      "ten_khoa_hoc": "Vernonia cinerea (L.) Less.",
+      "ma_taxon": "130374",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, hình mác hoặc hình quả trám, gốc thuôn, đầu nhọn, mép nguyên hoặc có răng cưa nhỏ.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành ngù gồm nhiều đầu (khoảng 15 – 20 cái); lá bắc có lông, đầu có mũi nhọn mảnh, xếp thành 3 hàng; hoa màu hồng hay đỏ, thùy thuôn hình chỉ, bao phấn có tai rất ngắn, mào lông màu trắng hay vàng nhạt, dài ngắn không đều.",
+      "quả": "Quả bế, có lông dày.",
+      "cây": "Cây thảo, rất đa dạng, cao 0,2 – 0,8m, sống lâu năm.",
+      "thân": "Thân hình trụ, mọc thẳng, có khía dọc và lông mềm áp sát.",
+      "mùa hoa": "tháng 4 – 5",
+      "mùa quả": "tháng 4 – 5"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Vernonia Chreb, ở Việt Nam hiện đã biết có 23 loài (Nguyễn Tiến Bân và cs., 2005), trong đó có loài bạch đầu ông kể trên.  Ở Việt Nam, cây phân bố rải rác gần như khắp các địa phương, ngoại trừ vùng núi cao khoảng 1.500m trở lên. Loài này cũng phân bố rộng rãi ở nhiều quốc gia thuộc vùng Đông Á, Đông Nam Á, Nam Á cho đến tận vùng Đông Phi và Australia.  Bạch đầu ông là loại cây thảo thường sống 1 năm. Cây mọc rải rác hay thành đám nhỏ trên đất ẩm ở vườn, các bãi đất hoang quanh làng, vên đường đi và trên nương rẫy. Hàng năm, cây con mọc từ hạt quan sát được từ tháng 3 – 6; sau 3-4 tháng sinh trưởng phát triển sẽ ra hoa quả và tàn lụi vào mùa thu hoặc đầu mùa đông."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ bạch đầu ông người ta đã chiết xuất và xác định cấu trúc các hợp chất terpenoid như 3β acetoxy urs. 19 en, lupeol acetat [Planta medica 1993, 59, 458]; các hợp chất khác như β anyrin acetat, β anyrin benzoat, lupeol và muối acetat, β sitosterol, stigmasterol và α spinasterol [J. indian chem. soc – 1962, 39, 749]; các sesquiterpen lacton [Aun cheA, southeara HOUT christophe LONG… chem. pharm bull 54(10), 2006, 1437 – 1439)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bạch đầu ông vị đắng, ngọt, tính mát, có công năng khu phong, thoái nhiệt, lương huyết, thanh can, giải độc, an thần."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá và ngọn non bạch đầu ông còn được dùng làm rau ăn.  Lá được dùng để chữa cảm sốt, sốt rét; rễ cây được dùng chữa lỵ, ỉa chảy, đau dạ dày; toàn cây chữa viêm gan, vàng da, suy nhược thần kinh. Ngày dùng 15 – 30g sắc nước uống. Dùng ngoài, lấy lá rửa sạch, giã nát, đắp để chữa mụn nhọt, đầu đinh, hắc lào, chàm, rắn cắn và các bệnh gây lở loét ngoài da khác. Có thể dùng cành và lá, chặt nhỏ, nấu nước, rửa.  Ở Indonesia, rễ bạch đầu ông được dùng chữa ho, thấp khớp, co thắt dạ dày, đau bụng giải độc nọc rắn: toàn cây chữa chóng mặt. Ở Thái Lan, lá được dùng để chữa hen và viêm phế quản Ở Trung Quốc, bạch đầu ông được dùng chữa cảm sốt, ho, suy nhược thần kinh, mất ngủ, trẻ con đái dầm, ngoài ra, khi bị viêm tuyến vú, lơ nhọt, chấn thương do đòn ngã. Lấy cây tươi, rửa sạch, giã nát đắp lên [Lê Quý Ngưu, 1995: 95).  Bài thuốc có bạch đầu ông  1. Chữa số mũi, ho, sốt  Lá bạch đầu ông, lá ngũ trảo (Vitex Pegundo L.), rễ bồ hòn, lá gừa (Ficus microcarpa L.f.), mỗi vị 15g khô, sắc nước uống.  2. Chữa suy nhược thần kinh  Bạch đầu ông toàn cây, hy thiêm (toàn cây bỏ rễ) mỗi vị 15g; chua me đất, rau bợ nước toàn cây mỗi vị 12g; ích chí nhân 6g; mỗi ngày một thang.  3. Tăng huyết áp  Bạch đầu ông, chua me đất, hy thiêm, mỗi vị 15g sắc uống ngày một thang.  4. Chữa các bệnh ngoài da (mụn nhọt, lở ngứa, vẩy nến)  Lá cât tươi rửa sạch, giã nát, trộn với nước vôi rồi đắp lên chỗ bị bệnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

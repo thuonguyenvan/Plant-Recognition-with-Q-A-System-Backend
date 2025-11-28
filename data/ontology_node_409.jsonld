@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chôm chôm",
+      "ten_khac": "Vải thiều gai, vải guốc, trường chua.",
+      "ten_khoa_hoc": "Nephelium lappaceum L.",
+      "ma_taxon": "278605",
+      "ho": "Bồ hòn (Sapindaceae)",
+      "Mô tả": {
+        "cây": "Cây to, cao 15m, có thể đến 20m hay hơn (ở trạng thái tự nhiên) hoặc 5 – 8m (ở cây trồng). Cành có lông khi non, sau nhẵn.",
+        "lá": "Lá kép lông chim chẵn, mọc so le, 1 – 4 đôi lá chét, thường là 2 – 3; lá chét mọc so le hoặc gần đối, có cuống ngắn, phiến cứng và dai, hình trứng ngược hoặc bầu dục – thuôn, dài 5 – 28 cm, rộng 2 – 10 cm, gốc tròn, đầu nhọn tù, mặt trên nhẵn hoặc có lông trên gân chính, mặt dưới có lông rải rác, gân nổi rõ.",
+        "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn thành chùm có cuống dài, đôi khi dài hơn lá; đài hình đấu, 4 – 6 răng hơi nhọn; tràng 0; nhị 5 – 8, chỉ nhị có lông, đĩa dẹt phân thùy; bầu 2 ô có lông.",
+        "quả": "Quả hình bầu dục, dài 5 -7 cm, rộng 4 – 5 cm, có gai mềm, dài và cong, thường kèm theo phân quả lép, khi chín màu đỏ hay vàng cam; hạt có độ hạt dính và vỏ cứng,",
+        "mùa hoa": "tháng 3 – 4",
+        "mùa quả": "tháng 5 -7."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Nephelium L. trên thế giới có 22 loài, trung tâm phân bố của chúng ở bán đảo Malaysia, với 13 loài (trong đó có 3 loài là đặc hữu): đảo Borneo có 16 loài (8 loài đặc hữu), Mianma 5 loài, bán đảo Đông Dương (bao gồm cả Thái Lan) có 5 loài, trong đó ở Việt Nam có 4 loài.  Cây ưa khí hậu nhiệt đới điển hình, nhiệt độ trung bình năm 23 – 25°C. Loại cây trồng không chịu được mùa đông lạnh kéo dài, vì thế cây chi trồng được ở các tỉnh phía Nam. Nhìn rộng ra cả vùng Đông Nam Á, chôm chôm trồng cũng chỉ phát triển trong giới hạn 17° vĩ tuyến Bắc và Nam (trên và dưới đường xích đạo).",
+        "Đặc điểm sinh trưởng": "Cây ưa khí hậu nhiệt đới điển hình, nhiệt độ trung bình năm 23 – 25°C. Loại cây trồng không chịu được mùa đông lạnh kéo dài, vì thế cây chi trồng được ở các tỉnh phía Nam. Nhìn rộng ra cả vùng Đông Nam Á, chôm chôm trồng cũng chỉ phát triển trong giới hạn 17° vĩ tuyến Bắc và Nam (trên và dưới đường xích đạo)."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Áo hạt chứa protein 0,46, đường khử 2 9, sucrose 5,8, chất xơ 0,24, chất vô cơ, Ca 10,6, P 12 9, và vitamin C 30mg/100g. Vỏ quả chứa tanin và saponin độc. Nhân chứa acid béo gồm acid palmitic 2,0, stearic 13,8, arachidic 34,7, oleic 45,3, cicosensic 4,2% [Sastri et al. The wealth of India, VII, 1966,13] Hạt chứa 35 – 40% chất dầu độc gồm arachidin, olein, stearin."
+      },
+      "Tính vị": {
+        "Có vị": "Áo hạt quả chín của cây chôm chôm vị ngọt, chua dễ chịu, tính ấm, có công năng giải nhiệt, bổ dưỡng.  Quả xanh làm se, thanh nhiệt, vỏ cây, vỏ quả làm se, hạt đắng gây say không ăn được. Sách “Lục xuyên bản thảo” ghi: vỏ quả có công năng tiêu viêm, sát trùng, trị viêm xoang miệng, bệnh lỵ, nước sắc rửa trị mụn nhọt, lở loét ngoài da."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Áo hạt chôm chôm ăn được nhưng kém áo hạt quả vải do dính vào hạt, vị chua ngọt, thơm dễ chịu để giải nhiệt, bổ dưỡng.  Hạt đắng và gây say, chứa 35 – 48% chất béo đặc gần như bơ ca cao, gồm chủ yếu là arachidin và olein, có thể dùng để chế xà phòng hay nến thắp sáng.  Quả xanh và vỏ quả được dùng chữa là chảy, kiết lỵ, sốt. Cũng được dùng trị sốt rét, tẩy giun. Liều dùng 20 – 40g sắc uống trong ngày. Trong vỏ quả có tanin và một saponin độc.  Ở Malaysia, vỏ cây được dùng chữa bệnh về lưỡi, rễ, vỏ cây, vỏ quả, lá sắc uống để chữa sốt rét [Perry et al., 1980: 374). Ở Ấn Độ, ảo quả chôm chôm chín được dùng để giải nhiệt và chữa sốt [Nadkarni, 1999: 846]. Ở Trung Quốc, còn dùng quà xanh sắc uống để bổ vị và trừ giun [Chopra et al., 2001: 175]. Dùng ngoài, lấy vỏ quả, vỏ thân, quả xanh hoặc rễ sắc lấy nước đặc rửa lên các chỗ lở loét, mụn nhọt ngoài da."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

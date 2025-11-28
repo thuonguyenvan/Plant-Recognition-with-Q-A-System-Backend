@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bèo Nhật Bản",
+      "ten_khac": "Bèo nhật bản, Lục bình, Bèo tây, Bèo bầu (Tày)",
+      "ten_khoa_hoc": "Eichhornia crassipes (Mart.) Solms.",
+      "ma_taxon": "962637",
+      "ho": "Pontederiaceae (Bèo tây)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống ở nước.",
+      "rễ": "Rễ hình chùm.",
+      "lá": "Lá mọc thẳng từ rễ thành hoa thị, hình tròn hoàn toàn nhẵn, đầu hơi nhọn, mép uốn lượn, gân hình cung rất sít nhau, mặt trên xanh sẫm bóng, mặt dưới nhạt, cuống dài gấp hai ba lần phiến lá, phồng lên thành phao xốp nổi, màu xanh lục rất nhạt hoặc trắng.",
+      "hoa": "Cụm hoa mọc ở giữa túm lá trên một cán dài thành bông; hoa không đều màu tím hoặc trắng nhạt; bao hoa gồm đài và tràng cùng màu, hàn liền ở gốc, cánh hoa trên to hơn có một đốm vàng; nhị 6, 3 dài, 3 ngắn; bầu thượng 3 ô chứa nhiều noãn.",
+      "quả": "Quả nang.",
+      "mùa hoa": "tháng 10-11",
+      "mùa quả": "tháng 10-11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Eichhornia Kunth có một đại diện là loài bèo Nhật Bản. Cây có nguồn gốc từ Nam Mỹ, sau lan ra khắp các vùng nhiệt đới khác. Ở Việt Nam có tài liệu cho biết, bèo Nhật Bản mới chỉ được nhập nội vào khoảng năm 1905. Sự du nhập này có lẽ là do người phương tây nên nó còn có tên gọi là “bèo tây”. Hiện thấy cây phân bố nhiều ở hầu hết các nước vùng Nam Á và Đông Nam Á. Ở Bengal (Ấn Độ) người ta ước tính diện tích mặt nước có bèo Nhật Bản chiếm giữ tới 30.000 hecta. Bèo Nhật Bản là cây sống nổi trên mặt nước. Do khả năng đẻ nhánh khoẻ từ các chồi gốc, bèo nhanh chóng phát triển thành những đám hay bè mảng lớn. Ở những nơi nước động bèo thường xuyên bị trôi dạt, nên chiều cao của cây thường thấp (dưới 50 cm). Trong khi đó, những cây sống ở nước lặng (ao, hồ), ít bị tác động lại mọc chen lấn nhau, nên cây thường cao gần 1m. Bèo Nhật Bản ra hoa nhiều và gần như quanh năm. Chưa thấy cây con mọc từ hạt, nhưng những cây bèo nhỏ có thể tồn tại một thời gian khá lâu, trên nền bùn ướt khi ao hồ bị cạn nước. Bèo Nhật Bản là một trong những cây thủy sinh quan trọng trong hệ sinh thái ao hồ, góp phần trong chu trình làm sạch nước. Cây còn được nuôi trồng hạn chế trên các ao hổ thả cá, làm thức ăn cho lợn, trâu bò và nguồn phân xanh tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây dùng tươi, nhưng thường chỉ dùng lá. chủ yếu là phần phình của cuống lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây bèo Nhật Bản chứa nước 92,6%, protid 2,9%, gluxid 0,9%, xơ 22%, tro 1,4 mg%, calci 40,8mg%, phosphor 0,8mg %, caroten 0,86 mg%, vitamin C 20 mg%.Thành phần vô cơ trong cây là SiO2, Ca, Mg, K, Na,Cl,Cu, Mn, Fe. Trong lá có Ca, Fe, p, Mg, Zn, Cu, Na, K, s. Ngoài ra còn có caroten, các vitamin B2, B1, E, B6) B12, A, caroten và protein, acid béo tự do, đường acid amin. Trong hoa có delphinidin diglucosid"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bèo Nhật Bản có vị nhạt, tính mát, có tác dụng thanh nhiệt, chống nóng, lợi niệu, giải độc tiêu sưng, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bèo Nhật Bản chữa cảm nắng, nóng quá phát rôm sảy, tiểu tiện bất lợi và các dạng sưng tấy. Ngày 15 – 30g, sắc uống, dùng ngoài không kể liều lượng. Ngoài ra, đọt non và cuống lá bèo Nhật Bản rửa sạch, luộc hoặc nấu canh cho chín tái, ăn mát và không ngứa. Hoa cũng đựơc ăn sống hoặc nấu canh như đọt non với tác dụng tương tự.",
+      "chữa": "sưng bắp chuối, sưng bẹn, sưng nách, viêm hạch bạch huyết, mụn nhọt sưng đỏ chưa vỡ, tiêm bị áp xe, chín mé, viêm khớp ngón tay, viêm tinh hoàn, vết thương trên cơ thể bị nhiễm chất độc hóa học"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

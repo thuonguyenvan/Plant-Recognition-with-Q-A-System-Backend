@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dung lá táo",
+      "ten_khac": "Dung tàu, dung hoa chùy, dung chùm.",
+      "ten_khoa_hoc": "Symplocos paniculata Wall. ex D. Don",
+      "ma_taxon": "169497",
+      "ho": "Dung (Symplocaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chuỳ dài 8 – 10 cm, nhẵn hoặc có lông thưa, hoa nhiều màu trắng thơm",
+      "lá": "lá bắc 1 cái ở gốc cuống hoa và 2 cái đối nhau ở ngọn, sớm rụng, đài nhẵn hoặc có lông mặt ngoài, ống dài 1 – 1,5 mm, 5 răng hình ellip, mép có lông mi, tràng dài 4 mm, nhẵn, 5 cánh hình trứng rộng, rời nhau",
+      "thân": "nhị khoảng 45 rời nhau, chỉ nhị hình chỉ, màu trắng, bao phấn màu vàng",
+      "quả": "Quả hình cầu, dài 5 mm, khi chín màu lam, khi khô chuyển màu đen, nhẵn hoặc có lông; hạt 1 – 2.",
+      "mùa hoa": "tháng 4 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Họ Symphocaceae ở Việt Nam chỉ có một chi Symphocos Jacq. với tổng số 38 loài. Loài dung lá táo mới chỉ ghi nhận được về phân bố ở Lào Cai, Sơn La, Lạng Sơn, Ninh Bình và ở tỉnh Thừa Thiên – Huế. Trên thế giới, loài này có ở Trung Quốc (bao gồm cả Đài Loan), Mianma và Nhật Bản.",
+      "thường_mọc": "Dung lá táo là cây ưa sáng, có thể hơi chịu hạn; thường mọc ở đồi cây bụi, ven rừng và rừng thử sinh, đôi khi thấy còn sót lại ở bờ nương rẫy. Độ cao phân bố có thể đến 1300m. Cây ra hoa quả nhiều hàng năm. Tái sinh tự nhiên chủ yếu từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá và cành."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ dung lá táo vị hơi đắng, ngọt nhạt, tính mát có công năng thanh nhiệt, giải cảm sốt, long đờm, khỏi phiền khát.  Sách “Quảng Tây Trung thảo dược” và sách “Nam Ninh Thị dược vật chí” đều ghi: Vị đắng tính hàn, có tiểu độc. Sách “Toàn quốc Trung thảo dược hội biên” ghi: Vị ngọt, hơi đắng, tính mát, có công năng thanh nhiệt, lợi thấp, hoá đàm, trị sốt rét [TDTH, 1993, I: 2161]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ dung lá táo được dùng chữa cảm sốt, sốt rét, người nóng như lửa, miệng khát, người bứt rứt, đau lưng, mỏi gối, bỏng, lở loét.  Liều dùng 6 – 9g rễ khô, nếu rễ tươi 15 – 20g sắc lấy nước uống. Dùng ngoài, lấy rễ khô hoặc tươi, sắc lấy nước, rửa lên chỗ bị bỏng, đụng dập, lở loét.  Ở Trung Quốc, còn dùng lá hoặc quả tươi, giã nát đắp lên chỗ lở loét, chấn thương, đụng dập [TDTH, 1993, I: 2160 – 1]. Vỏ rễ, vỏ thân hoặc lá tươi, giã nát, bôi vào các chỗ viêm loét ở miệng, mũi, lợi chân răng [Perry et al., 1980:401]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc bạch nhật",
+      "ten_khac": "Cúc bạch nhật, Thiên kim hồng, Bách nhật hồng, Bách nhật bạch, Thiên nhật hồng",
+      "ten_khoa_hoc": "Gomphrena globosa L.",
+      "ma_taxon": "128268",
+      "ho": "Amaranthaceae (Rau dền)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây thân thảo, mọc hăng năm, thân mọc thẳng đứng, cao chừng 50cm, thân và lá đều có lông mềm, nhỏ.",
+        "thân": "Thân\u00a0 to, hình trụ, trên có phân nhánh, cành hơi hình vuông. Chỗ đốt hơi phình to, mặt hơi có màu tím hồng.",
+        "lá": "Lá đơn, mọc đối, có cuống ngắn, phiến lá hình trứng ngược, dài 5 đến 10cm, rộng 2-5cm đầu lá nhọn hay hơi tù, phía cuống thon lại thành cuống.",
+        "hoa": "Cụm hoa hình đầu, màu tím nhạt hay hồng sẫm hoặc trắng, đường kính của cụm hoa chừng 1,5- 2cm.",
+        "mùa hoa": "tháng 7-12"
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Cụm hoa, cành và lá"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Trong cụm hoa cúc bạch nhật người ta chiết được các loại betaxyamin trong đó có gomphrenin I, gomphrenin II, gomphrenin III, gomphrenin V và gomphrenin VI. Ngoài ra còn có một ít amaranthin và izoamaranthin (Phytochemistry, 1966, 5, 1037 và 1967, 6, 703)"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Mới được dùng trong phạm vi nhân dân làm thuốc chữa hen suyễn đối với người lớn, trẻ con bụng đầy, tiểu tiện khó khăn, trẻ con sốt quá hóa mê sảng. Liều dùng hàng ngày: 6-12g, dưới dạng thuốc sắc, khi uống có thêm ít rượu trắng cho chóng dẫn. Cần chú ý nghiên cứu."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Cây này thường được trồng làm cảnh ở các công viên. Mọc và được trồng ở Việt Nam và Trung Quốc. Tại các nước nhiệt đới khác đều có mọc. Người ta hái hoa, phơi hoặc sấy khô."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

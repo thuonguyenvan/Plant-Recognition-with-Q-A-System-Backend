@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây thông",
+      "ten_khac": "Tùng, Thông nhựa, Thông hai lá.",
+      "ten_khoa_hoc": "Pinus merkusii Jungh. et de Vriese",
+      "ma_taxon": "135788",
+      "ho": "Pinaceae (Thông)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 25-30cm, tán lá sum suê.",
+      "thân": "Thân thẳng, vỏ dày màu nâu đỏ nhạt, nứt nẻ thành từng rãnh sâu.",
+      "lá": "Lá mọc rất sít nhau, xếp từng đôi một ở đầu cành, hình kim, dài 15-25cm, đầu nhọn, chỉ có một gân.",
+      "hoa": "Nón đơn tính cùng gốc, nón đực thường ở đầu cành mang nhị có hai bao phấn; nón cái cấu tạo bởi những vảy úp vào nhau, mỗi vẩy 2 noàn; vảy dày ở phía trên có gờ ở mép; hạt hình trái xoan, hơi hẹt, có cánh mỏng.",
+      "mùa hoa": "Tháng 3-5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pinus L. gồm hơn 100 loài là những đại diện có mặt từ Trias, Juras và tồn tại cho đến ngày nay. Nơi phát sinh nguyên thủy của chi từ vùng Viễn Đông Nga (Siberi). Các vùng như Đông Á, Đông Hoa Kỳ và Mehicô được coi là những trung tâm đa dạng nhất về các loài thông trên thế giới. Ở Việt Nam, chi này có 6 loài, cũng là nơi có số loài phong phú nhất so với các nước trong khu vực Đông Nam Á. Thông có vùng phân bố từ Nam Trung Quốc và Đông Mianma đến Việt Nam, Bắc Thái Lan, Philipin và Indonesia. Ở Việt Nam, thông phân bố tự nhiên và được trồng nhiều ở Quảng Ninh, Lạng Sơn, Bắc Cạn, Thái Nguyên, Bắc Giang, Lai Châu, Sơn La, Thanh Hóa, Nghệ An, Hà Tĩnh, Quảng Bình, Thừa Thiên – Huế và Tây Nguyên. Cây mọc tập trung với diện tích lớn nhất ở 2 tỉnh Kon Tum và Lâm Đồng. Ở đây, có những rừng thông rông hàng ngàn hecta, nhiều cây to hàng trăm tuổi. Thông là loại cây ưa sáng, lúc còn nhỏ hơi chịu bóng, thường mọc thuần loại hoặc có thể xen với một số loài cây lá rộng khác, ở độ cao từ 800 đến 2000m. Cây có khả năng chịu hạn cao, mọc tự nhiên chủ yếu trên loại đất đỏ vàng hoặc đỏ bazan. Tuy nhiên, thông có thể sống được trên nhiều loại đất, kể cả đất cát ven biển cũng như đất đã bị rửa trôi nhiều, trơ sỏi đá. Do đó, thông được sử dụng như là loại cây phủ xanh đòi trọc, chắn gió và cát, chống xói mòn. Thông còn là loài có biên độ sinh thái rộng. Cây có thể sinh trưởng tốt ở vùng khí hậu nhiệt đới điển hình, nhiệt độ trung bình 21-28 độ C, lượng mưa hàng năm khoảng 3000mm, đồng thời cũng sống khỏe ở những vùng cận đới, nhiệt độ trung bình hàng năm xấp xỉ 20 độ C. Khi còn nhỏ (5 năm đầu mọc từ hạt) cây sinh trưởng rất chậm, sau đó mọc nhanh hơn. Cây trồng được 13-15 năm bắt đầu sinh sản, những năm sau càng trở nên thuần thục hơn. Thông tái sinh tự nhiên từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Nhựa, tinh dầu và tùng hương. Còn dùng lá, quả, đốt mắt ở cành, vỏ cây và phấn hoa thông."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhựa gồm tinh dầu (khoảng 20%), tùng hương (khoảng 70%), các chất còn lại (vô cơ, acid hữu cơ) dễ tan trong nước. Tinh dầu thông chứa phần lớn là hydrocarbon terpen, ngoài ra còn có các sesquiterpen và các hợp chất có oxy. Tùng hương gồm các acid nhựa (thành phần chủ yếu) và các chất trung tính (resen). Các acid nhựa gồm acid dextropimaric, acid levopimaric."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tinh dầu thông được dùng để chưa bệnh ghẻ lở, và nhiều bệnh ngoài da khác (nhưng chỉ bôi một lớp thật mỏng để tránh bị phồng da), và phối hợp với cồn long não làm thuốc xoa bóp trị đau nhức. Tùng hương được dùng chữa mụn nhọt, ghẻ lỏe, mủ rò và đắp vết thường chóng lành; nấu cao dán chữa nhọt lâu ngày không khỏi phối hợp với hoàng liên, hoàng cầm, khổ sâm, xà sàng tử, đại hoàng, khô phân và còn có thể dùng thay nhũ hương làm thuốc giảm đau trong các phương thuốc tán. Tùng tiết chữa tê thấp, nhức mỏi, khớp sưng đau, phối hợp với các vị thuốc khác với liều hàng ngày 12-20g, sắc uống, hoặc ngâm rượu uống. Lá thông (tùng mao) phối hợp với lá long não, lá khế, lá thanh hao nấu nước tắm chữa lở loét. Lá thông tươi băm nhỏ, ngâm với rượu, dùng xoa bóp chữa đau cơ, nhức mỏi gân xương, ứ huyết, bầm tím. Vỏ cây thông phối hợp với cây vương tùng, cành tía tô, xác ve sầu, nấu nước tắm chữa phù toàn thân. Tùng hoàng chữa đau đầu, choáng váng, chóng mặt. Ngày 4-8g, sắc uống. Dùng ngoài, tùng hoàng rắc vào vết thương chữa mụn nhọt, lở loét, chảy nước vàng. Bột khói tùng hương (thu được do đốt can còn lại sau khi lấy tùng hương), được dùng với liêu 10g, hòa với 20g cao da trâu đun loãng để chữa thổ huyết, bang huyết. Trong y học cổ truyền Ấn Độ, dầu thông được dùng làm thuốc long đờm, điều trị viêm phế quản mãn tính và đặc biệt đối với hoại thư phổi, thuốc thông trung tiên chữa đau bụng do đầy hơi, thuốc cầm máu trong trường hợp chảy máu nhẹ ở chân răng và mũi. Dưới dạng thuốc thụt, dầu thông trị táo bón dai dẳng, chướng bụng và giun kim. Dùng ngoài, dầu thông là thuốc gây sung huyết da điều trị các bệnh thấp như đau lưng, viêm khớp và đau dây thần kinh. Dưới dạng thuốc đắp nóng, dầu thông là thuốc phản kích ứng điều trị những trường hợp viêm ở chỗ sâu trong bụng. Trong y học cổ truyền Nhật Bản, cao quả thông được dùng điều trị các u ở dạ dày và bệnh bạch hầu."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

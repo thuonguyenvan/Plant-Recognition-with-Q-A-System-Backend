@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau trai đắng",
+      "ten_khac": "Áp chích thảo, trúc diệp thái, thài lài trắng, cỏ lài trắng, rau trại ăn, trai thường",
+      "ten_khoa_hoc": "Commelina communis L.",
+      "ma_taxon": "52927",
+      "ho": "Thài lài (Commelinaceae)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, hình mác thuôn, dài 2 – 10 cm, rộng 1 – 2 cm, gốc tròn có bẹ hình ống hẹp, đầu nhọn, gân song song, hai mặt nhẵn, mặt trên sẫm bóng, mặt dưới nhạt.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành chùm không cuống hoặc cuống rất ngắn, mang 2 – 4 hoa màu xanh lơ đựng trong một cái mo; đài 3 răng rời nhau; tràng 3 cánh; nhị 3 – 4, có nhị kép; bầu 3 ô.",
+        "quả": "Quả nang, 3 mảnh vỏ, bao bọc bởi bao hoa, dài 5 – 6 mm, rộng 4 – 6 mm; hạt hình khối nhiều mặt.",
+        "cây": "Cây thảo, cao 25 – 50 cm.",
+        "thân": "Thân phân nhánh nhiều, có lông, bén rễ ở những đốt sát mặt đất thành chùm.",
+        "mùa hoa": "tháng 6 – 8",
+        "mùa quả": "tháng 6 – 8"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Commelina L. ở Việt Nam có 8 loài, trong đó hiện đã biết tới 6 loài có tên gọi chung là “thài hài” hay “rau trai” và đều được dùng làm thuốc. Tuy nhiên, loài thài lài trên đây khác với 2 loài thài lài trắng (C.diffusa Burm. f.) và thài lài tía (C.zebrina Hort. ex Loudon) ở chỗ có kích thước nhỏ hơn, cây thường mọc bò nơi đất ẩm hoặc ngập nước tạm thời và chỉ có phần ngọn vươn thăng lên. Rau trai đắng có vùng phân bố rộng rãi ở hầu hết các nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam, cây cũng có mặt tại các tỉnh từ vùng núi thấp xuống đến trung du và cả ở đồng bằng.  Cây đặc biệt ưa ẩm và ưa sáng, sinh trưởng phát triển mạnh trong mùa mưa ẩm, đến mùa đông lạnh (ở các tỉnh phía Bắc) có hiện tượng bán tàn lụi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Toàn cây chứa delphin, commelinin, flavocommelin, owobanin (Võ Văn Chi, 1997). Hoa chứa sắc tố delphinidin diglucosid (thành phần chính), acid p. coumaric và awabanol (Sastri et al., The wealth of India II, 1950). Hạt chứa dầu béo (Võ Văn Chi, 1997)."
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây rau trai đắng vị ngọt, nhạt, hơi đang tinh hàn, có công năng thanh nhiệt, giải độc, lợi thuỷ, tiêu thũng."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Rau trai đắng được dùng chữa cảm cúm, sốt, viêm nhiễm đường hô hấp trên, sưng amidan, viêm họng, nhiễm khuẩn đường tiết niệu sinh dục, kiết lỵ, ỉa chảy. Còn dùng để giải khát, chữa đái tháo đường, lợi tiểu, phù thũng. Liều dùng 20 – 30g rau trai đắng khô hoặc 40 – 50g tươi, sắc lấy nước uống. Có thể dùng 90 – 120g tươi, rửa sạch, giã nát, chắt lấy nước uống, ngày 2 lần.  Dùng ngoài trị viêm da, da có mủ, ngứa, mụn nhọt, đầu gối khớp xương sưng đau. Lấy cây tươi, giã nát, đắp khi bị rắn rết cắn, bọ cạp đốt, lấy cả cây (bỏ rễ) tươi 15 – 20g rửa sạch, nhai, nuốt nước, bã đắp lên vết cắn, ngày 2 lần.  Ở Trung Quốc, nhân dân dùng rau trai đắng (tên Trung Quốc của vị thuốc là áp chích thảo) để chữa cảm cúm, cảm lạnh, giải độc, chữa nhiễm khuẩn tiết niệu, lỵ, viêm ruột cấp. Còn được dùng để lợi tiểu, chữa báng, phù. Liều dùng hàng ngày 10 – 15g, có thể dùng đến 60g, sắc nước uống, dùng luôn 3 – 5 ngày. Để chữa viêm amidan, viêm họng, dùng rau trai đắng sắc lấy nước, xúc miệng và nuốt dần dần [Kee, 1999: 393], [Foster et al.,200):190].  Bài thuốc có rau trai đắng  1. Chữa viêm cầu thận cấp, phù thũng, đái ít  Rau trai đắng, cỏ xước, mã đề, mỗi vị 30g. Sắc nước uống, ngày một thang.  2. Chữa phù do suy tim, phong thấp, viêm khớp (bài thuốc của Diệp Quyết Tuyền)  Rau trai đắng 15g (dùng tươi 30g tốt hơn), xích tiểu đậu (đậu đỏ Phaseolus kangularis) 50g hạt khô. Nấu kỹ lên rồi ăn, uống cả nước, ngày một lần, dùng luôn nhiều ngày.  3. Chữa viêm đường hô hấp trên  Rau trai đắng, bồ công anh, dâu tằm, mỗi vị 30g, sắc nước uống."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

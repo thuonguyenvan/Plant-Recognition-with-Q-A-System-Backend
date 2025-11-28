@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sữa lá to",
+      "ten_khac": "Mè cua lá to, mớp lá to, sữa lá hẹp",
+      "ten_khoa_hoc": "Alstonia macrophylla Wall. ex G. Don",
+      "ma_taxon": "158221",
+      "ho": "Trúc đào (Apocynaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10m.",
+      "thân": "Thân thẳng có vỏ nhẵn, màu xám.",
+      "cành": "Cành non màu lục xám, có rãnh sâu, sau chuyển màu xám sẫm, có nhiều sẹo.",
+      "lá": "Lá mọc vòng 4, hình mác thuôn, dài 12 – 30 cm, rộng 4 – 8 cm, gốc thuôn, đầu nhọn, mép hơi gập cong xuống dưới, gân nổi rõ ở mặt dưới; cuống lá dài 10 – 18 cm, có rãnh ở mặt trên.",
+      "hoa": "Cụm hoa mọc ở gần đầu cành thành xim tán, không cuống, chia 6 – 10 nhánh dài 2,5 – 6 cm; lá bắc nhỏ; hoa màu lục vàng nhạt; đài hình chuông, có ống ngắn, 5 răng hình bầu dục, mép có lông dạng mi; tràng 5 cánh thuôn tù, có lông ở phần dưới mặt trong, ống hình trụ hơi loe ở đầu; nhị 5, thụt, chỉ nhị ngắn, bao phấn thuôn; bầu 2 ô.",
+      "quả": "Quả khô gồm 2 đại, hình dải, dài 25 – 30 cm, rộng 2,5 – 4 mm; hạt nhiều, tròn ở một đầu, đầu kia nhọn, có lông nhung."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Alstonia R. Br. trên thế giới đã biết 63 loài, phân bố ở vùng nhiệt đới châu Á, châu Phi và châu Mỹ. Ở Việt Nam, chi này có 4 loài, trong đó có cây sữa lá to và có lẽ đây là loài được biết đến ít nhất so với các loài khác cùng chi, bởi vì mới chỉ ghi nhận được ở tỉnh Kiên Giang (Hà Tiên và Phú Quốc). Trên thế giới, sữa lá to phân bố ở nam Trung Quốc, Thái Lan, Malaysia, Indonesia, Philippin và Niu Ghinê.",
+      "Đặc điểm sinh trưởng": "Sữa lá to là loại cây gỗ trung sinh, khi còn nhỏ ưa ẩm, chịu bóng, khi cây đã lớn trở nên ưa sáng và có khả năng chịu hạn tốt. Cây thường mọc ở ven rừng hay rừng thứ sinh, trên đất có nhiều cát thô, chua và nghèo chất mùn. Sữa lá to ra hoa quả nhiều hàng năm; hạt có túm lông, phát tán xa nhờ gió; tái sinh tự nhiên bởi hạt.",
+      "Bộ phận dùng": "Vỏ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ chứa indolalcaloid có tác dụng độc tế bào, chống ung thư vú, ung thư ruột già (Phạm Hoàng Hộ, 2006, cây có vị thuốc ở Việt Nam, tr.414)",
+      "Các hợp chất": "talearpin, pleicocarpamin alstonamin, vilalstonin, macralstonin (chống sốt rét) afinisin (giảm hoạt động thần kinh TW) và kitabalin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ thân cây sữa lá to vị đắng, tính hàn, có ít độc, có công năng thanh nhiệt giải nhiệt, kiện vị."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân cây sữa lá to được dùng làm thuốc bổ ngày dùng 1 – 3g, sắc lấy nước chia làm 2 – 3 lần đắng, kích thích tiêu hoá, hạ sốt và điều kinh. Có thể tán thành bột, rồi chiều với nước uống.",
+      "được_dùng": "Để kích thích tiêu hoá, có thể ngâm rượu đơn độc (riêng vị) hoặc phối hợp các vị thuốc khác.",
+      "làm thuốc": "Ở Philippin, vỏ thân cây sữa lá to được nghiền thành bột, sắc hoặc hãm với nước, ngâm rượu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

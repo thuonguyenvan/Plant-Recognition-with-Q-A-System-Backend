@@ -1,0 +1,222 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cam thìa",
+      "ten_khac": "Cam hoẵng, Mật đất, Cam thìa, Mao liên thái",
+      "ten_khoa_hoc": "Picris hieracioides L.",
+      "ma_taxon": "166867",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Cây thảo, sống hai năm, cao 0,3 – 1,2m, có lông dày. Lá mọc so le, hình mác, có lông thô, gốc thuôn, đầu nhọn, mép có răng cưa.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành tán hay ngù, cuống mang lá bắc ở gần ngọn, gồm những đầu có lông dày; lá bắc trong và ngoài nhỏ; hoa toàn hình lưỡi màu vàng, mào lông màu trắng bẩn, có sợi ngắn; đài có 5 răng; nhị 5; bầu nhẵn.",
+      "quả": "Quả bế, hình thoi, thuôn ở đầu, dài 2,5mm, có 5 sống dọc.",
+      "cây": "Cây thảo, sống hai năm, cao 0,3 – 1,2m, có lông dày.",
+      "thân": "Cây thảo, sống hai năm, cao 0,3 – 1,2m, có lông dày.",
+      "cao": "0,3 – 1,2m"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Picris D. Don gồm một số cây thân cỏ, phân bố ở vùng ôn đới ấm và á nhiệt đới núi cao. Ở Việt Nam, hiện nay mới phát hiện được một loài là cây cam thìa.  Loài này có nhiều ở Trung Quốc, một số nước ở vùng Đông Bắc Á và Ấn Độ.  Ở Việt Nam, cây phân bố rải rác ở một số vùng núi cao trên 1500m, như Sa Pa (Lào Cai); Đồng Văn, Mèo Vạc và Quản Bạ (Hà Giang). Cây ưa khí hậu ẩm mát, nhiệt độ trung bình dưới 20°c, thường mọc thành đám hay rải rác, xen lẫn trong các trảng cỏ, có cây bụi thấp ở ven đôi, ven dường đi và nương rẫy mới bỏ hoang. Cây thường sống tới năm thứ hai mới có hoa quả, sau đó tự tàn lụi. Hạt có túm lông, phát tán nhờ gió đi khắp nơi.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Cây ưa khí hậu ẩm mát, nhiệt độ trung bình dưới 20°c, thường mọc thành đám hay rải rác, xen lẫn trong các trảng cỏ, có cây bụi thấp ở ven đôi, ven dường đi và nương rẫy mới bỏ hoang."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá hoặc cả cây, thu hái khi cây chưa có hoa, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Picris hieracioides subsp. hieracioides chứa loliolid. (CA, 121, 297126k). Picris hieracioides subsp.japónica. Toàn cây chứa 4 terpen glucosid là picrosid A, picrosid B, picrionosid A, picrionosid B. Ngoài ra, còn có icarisid Bj, roseosid và sonchuionosid (Uchiyama Taketo (CA 114, 78618z). Rễ tươi chứa nhiều chất triterpen : gamacer – 16 – en – 3β – yl acetat, gamacer – 16 – en – 3β – ol, gamacer -16 – en – 3α – ol, gamacer – 16 – en – 3 – on, pichierenyl acetat, pichierenon, isopichierenyl acetat, isopichierenol (CA 124, 25027b), olean – 12 – en – 2β, 3β, 22α – triol, urs – 12 – en – 2β, 3β, 22α – triol,urs – 12 – en – 2β, 3β, 28 – triol, ofean – 12 – en – 2β – 3β – 28 – triol (CA 124, 25628c)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cam thìa có vị đắng, mặn. tính hơi ôn, có tác dụng hóa đàm, chỉ khái, lý khí, bình suyễn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cam thìa chữa ho nhiều đờm, hen suyễn, tức ngực, trướng bụng. Dân tộc Mường, Cao Lan dùng lá hoặc cả cây cam thìa thu hái khi cây chưa có hoa để chữa sốt, sốt rét, kiết lỵ kinh niên. Mỗi ngày dùng 20 – 30g sắc với 400ml nước còn 100ml uống làm 2 lần trong ngày. Viện Y học cổ truyền đã dùng bài thuốc chữa sốt rét gồm nhiều vị, trong đó có cây cam thìa đạt kết quả tốt như sau:\u00a0Cả cây cam thìa gồm rễ, cành và lá (100g), cắt nhỏ, phơi khô rồi tẩm rượu, sao vàng; rễ hà thủ ô trắng đã chế (50g); lá thường sơn (50g) tước bỏ cuống và sống lá, ngâm nước vo gạo 2 ngày, 2 đêm, mỗi ngày thay nước gạo một lần, thái nhỏ tẩm rượu, sao vàng; thảo quả sao cháy vỏ ngoài lấy hạt (30g); vỏ chanh khô (30g); hạt cau nhà hoặc hạt cau rừng càng tốt (30g); miết giáp (30g) tẩm giấm, nướng vàng làm 3 lần; hậu phác (20g); cam thảo (20g) sao qua. Tất cả tán nhỏ, rây bột mịn. Người lớn uống mỗi ngày 2 lần vào trước 2 bữa ăn một giờ; mỗi lần 4g với nước đun sôi để nguội. Uống trước cơn sốt một giờ nếu có sốt rét. Trẻ em tùy tuổi dùng liều cho thích hợp. Uống liên tục trong khoảng một tháng."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

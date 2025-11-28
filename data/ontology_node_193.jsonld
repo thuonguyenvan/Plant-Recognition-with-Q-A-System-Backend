@@ -1,0 +1,187 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Dưa chuột",
+            "ten_khac": "Dưa chuột, Hồ qua, Dưa leo, Qua nu (Tày)",
+            "ten_khoa_hoc": "Cucumis sativus L.",
+            "ma_taxon": "54919",
+            "ho": "Cucurbitaceae (Bầu bí)",
+            "Mô tả": {
+                "lá": "Cây mọc bò, toàn thân có lông. Thân có nhiều cành, có góc. Lá mang cuống, phiến có từ 3-5 thuỳ hình hơi ba cạnh, mép có lông đứng.",
+                "hoa": "hoa đơn thính, màu vàng, mọc 2-3 ở nách lá.",
+                "quả": "Quả hình thuôn dài, hìh trụ hai hơi ba cạnh, nhẵn hoặc hơi có bướu nhỏ, có thể dài 10-36cm, màu lục hay lục vàng nhạt, vàng hay vàng nâu.",
+                "hạt": "Hạt nhiều, hình trứng, trắng, dai, bóng."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Dưa chột chứa tới 95-97% nước, 0,8% protit, 3% gluxit, 0,7% xenluloz, 0,5% tro, trong đó 23mg% canxi, 27mg%P, 1mg% Fe. Dưa chuột còn chứa vitamin A (caroten) với tỷ lệ 0,04mg%, vitamin B1 0,03mg%, vitamin B2 0,04mg%, vitamin PP 0,1mg%, vitamin C 5mg% ( bảng thành phần hoá học thức ăn Việt nam-NXB y học 1972)",
+                "gồm chất": "Sách “bí mật và đức tính củ cây thuốc” (Secrets et vertus des plantes medicinalesSelection du Readerl’s Digest, 1977) còn ghi thêm “ngoài vitamin A và C, trong dưa chuột còn chứa một lượng quan trọng sắt, mangan, iot và thiamin”.",
+                "dấu hiệu đặc trưng": "Vỏ dưa chuột có vị đắng do chứa coloccynthine. Hạt dưa chuột chứa một ancaloit gọi là hypoxanthine có tác dụng trừ giun."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Theo tài liệu cổ (Bản thảo cương mục – Nam dược thần hiệu) Dưa chuột có tên hồ qua hay hoàng qua với những tính chất sau: Quả chưa chuột có vị ngọt, tính hàn (lạnh) hơi có độc không nên dùng nhi u có tác dụng thanh nhiệt, lợi thủy đạo (tiêu nước) Lá dưa chuột vị đắng, tính bình, hơi có độc, giã nát lấy nước uống vào nôn ra",
+                "được_dùng": "Dưa chuột chủ yếu được trồng để làm thức ăn, làm thuốc ở Ấn Độ và Ai Cập ít nhất từ trên 4.000 năm. Việc sử dụng này được lan truyền từ những nước ấy đến các dân tộc Thổ Nhĩ Kỳ và Latinh. Đặc biệt người ta dùng dưa chuột trong mỹ phẩm và chữa bệnh ngoài da từ rất lâu đời: cắt dưa chuột thành từng lát mỏng đắp lên da mặt chữa những vết nhăn, xù xì, những vết tàn nhang, một số vùng ở nước ta nhân dân dùng những quả dưa chuột non có thêm đường chữa lỵ, nhiệt và ỉa chảy (kinh nghiệm này có ghi trong bản thảo cương mục từ thế kỷ 16).",
+                "chữa": "Một số đơn thuốc có dưa chuột dùng trong nhân dân  Cổ họng sưng đau: chọn mộ quả dưa chuột già, bỏ hết hạt, thêm mang tiêu (một loại muối dùng nhiều trong đông y) vào cho đầy ruột quả, trộn đều phơi trong mát cho khô. Ngậm từng ít một (theo Y lâm tập yếu) Bụng chướng, chân tay phù nề: lấy một quả dưa chụôt già chín, loại bỏ hạt, thêm một ít dấm chua, nấu chín nhừ. Cho ăn lúc bụng đói. Bệnh nhân sẽ đái nhiều và hết phù nề (Thiên kim phương-BTCM) Chữa nẻ môi: Dùng miếng dưa chuột tươi sát lên môi nứt nẻ (Secrests et vertus des plantes medicinales, 1977-SEVPM) Da bị mẩn đỏ: dùng nước ép dưa chuột bôi lên nhi u lần trong ngày (SEVPM-1977) Chữa phỏng lửa chưa phồng da: 3 quả dưa chuột hái vào ngày 5/5 âm lịch (mùa hè) bỏ vào bình chat kín. Để ngoài hiên. Khi bị bỏng, lấy nước trong bình dưa chuột mà bôi lên (Nam dược thần hiệu)"
+            },
+            "Cách dùng": {
+                "được_dùng": "Trồng ở khắp các tỉnh ở nước ta. Còn thấy trồng ở nhiều nước nhiệt đới cũng như ôn đới. lấy quả dùng làm rau ăn hay chế mỹ phẩm. có thể hái quả nga từ lúc quả còn xanh (cornichon) dùng ngâm dấm hay đợi thật lớn và chín vàng."
+            },
+            "luu_y": {}
+        }
+    ]
+}

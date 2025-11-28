@@ -1,0 +1,205 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Thanh thất",
+            "ten_khac": "Cây cun, cây xuân, cây bút, bông xuất, càng hom",
+            "ten_khoa_hoc": "Ailanthus triphysa (Dennst.) Alston",
+            "ma_taxon": "346375",
+            "ho": "Thanh thất (Simaroubaceae)",
+            "Mô tả": {
+                "@type": "Mô tả",
+                "cây": "Cây to, cao 15 – 20m, phân nhánh nhiều.",
+                "lá": "Lá kép mọc so le, dài đến 1m, thường tập trung ở đầu cành, lá chét mọc đối hình trái xoan, nhẵn, gốc lệch, đầu nhọn, mép nguyên, dày và thường lượn sóng.",
+                "hoa": "Cụm hoa mọc ở kẽ lá thành sim dài đến 25 cm; đài có răng nhọn họp thành hình đấu, có lông ở mặt ngoài; tràng 5 cánh hình thoi nhọn; nhị 10, nhẵn.",
+                "quả": "Quả (dực quả) hình trái xoan, có cánh bao quanh; hạt tròn, dẹt.",
+                "mùa hoa": "tháng 5 – 7",
+                "mùa quả": "tháng 8 – 10."
+            },
+            "Phân bố": {
+                "@type": "Phân bố",
+                "phân_bố": "Trong số 3 loài thuộc chi Atlanthus Desf. Đã biết ở Việt Nam thì loài thanh thất (A.triphysa) có diện phân bố rộng rãi nhất, bao gồm các tỉnh: Lạng Sơn (Hữu Lũng); Sơn La (Mộc Châu, Thuận Châu, Sông Mã); Tuyên Quang (Chiêm Hoá); Phú Thọ (Đoan Hùng); Vĩnh Phúc (Tam Đảo); Thanh Hoá (Cẩm Thuỷ); Nghệ An (Tân Kỳ, Cô Ba); Đà Nẵng (Bà Nà); Quảng Nam (Có Lao Chàm); Gia Lai Kon Hà Nùng), Khánh Hoà (Hoà Cát); Đồng Nai (Trảng Bom)… Trên thế giới, loài cây này có ở Ấn Độ, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin và Australia.",
+                "Đặc điểm sinh trưởng": "Thanh thất là loài cây gỗ trung bình, cũng có thể cao tới 20m. Cây ưa sáng, thích nghi cao với vùng có khí hậu nhiệt đới gió mùa nóng và ẩm. Cây mọc ở các tỉnh phía Nam, có khả năng chịu hạn tốt và có thể sống cả nơi đất đai ít màu mỡ. Chúng thường mọc lẫn với các loài cây gỗ và cây bụi khác ở rừng thứ sinh, đôi khi thấy cây nhỏ ở đồi cây bụi. Ra hoa quả hàng năm, tái sinh tốt."
+            },
+            "Bộ phận dùng": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Vỏ thân, nhựa tiết ra từ thân."
+            },
+            "Thành phần": {
+                "@type": "Thành phần",
+                "thành phần": "Vỏ thân và rễ chứa 5 alcaloid là 1 – acetyl – β – carbolin, 1 – acetyl-4-methoxy – β-carbolin, 4, 8- dimethoxy – 1 – vinyl-β-carbolin, dehydrocrenatin và 1-carbamoyl-β-carbolin và một số chất khác."
+            },
+            "Tính vị": {
+                "@type": "Tính vị",
+                "Có vị": "Vỏ cây thanh thất có vị đắng, mùi thơm, tính ấm không độc; có công năng lợi thấp, thu liễm, chỉ lỵ, sát trùng. Lá cây có độc."
+            },
+            "Công dụng": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Vỏ thân và rễ cây thanh thất là thuốc bổ đắng, có tác dụng kích thích tiêu hóa, được dùng trong những trường hợp kém ăn, phụ nữ sau khi đẻ để thanh lọc máu và tiêu cơm. Ngày dùng 20 – 30g sắc lấy nước uống hoặc ngâm rượu uống.  Vỏ thân, vỏ rễ cũng dùng để chữa kiết lỵ, ỉa ra máu, đau bụng ỉa chảy, bạch đới: mỗi lần dùng 6 – 12g dược liệu khô, tán bột uống, ngày 2 – 3 lần.  Để chữa sốt, dùng vỏ hoặc là thanh thất với liều 6 – 12g sắc uống. Ở Gia Lai, Kon Tum, đồng bào ta dùng quả sắc uống để chữa ho và điều kinh."
+            },
+             "Thông tin khác": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": null
+            },
+            "Cách dùng": {
+                "@type": "Cách dùng",
+                "được_dùng": null
+            },
+           "luu_y": {
+                "@type": "luu_y",
+                "luu_y": null
+            }
+        }
+    ]
+}

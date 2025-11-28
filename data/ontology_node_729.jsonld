@@ -1,0 +1,242 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Táo ta",
+      "ten_khac": "Táo, Táo ta, Táo Chua",
+      "ten_khoa_hoc": "Ziziphus mauritiana Lam.",
+      "ma_taxon": "123697",
+      "ho": "Rhamnaceae (Táo)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá hình bầu dục ngắn hoặc hơi thon dài",
+      "hoa": "Hoa trắng, mọc thành xim ở kẽ lá, trục chính dài 3,7mm",
+      "quả": "Quả hạch có vỏ quả ngoài nhẵn, màu vàng xanh, vỏ quả giữa dày, vị ngọt, hạch cứng xù xì. Đập hạch ra sẽ được nhân hạt táo, phơi khô gọi là táo nhân.",
+      "cây": "Cây táo là một cây nhỏ, có gai, cành thõng xuống.",
+      "mặt": "mặt trên xanh lục và nhẵn, mặt dưới có lông",
+      "mép": "mép có răng cưa.",
+      "thân": "...",
+      "cuống": "...",
+      "gốc": "...",
+      "cao": "...",
+      "rễ": "...",
+      "củ": "...",
+      "mọc": "...",
+      "mùa hoa": "...",
+      "mùa quả": "...",
+      "đầu": "...",
+      "thân": "..."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "...",
+      "Đặc điểm sinh trưởng": "..."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "..."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "..."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhiều tài liệu nghiên cứu về toan táo nhân, nhưng chưa thống nhất.",
+      "gồm chất": "Có tài liệu (Trung Quốc hoá học tạp chí,1936) nói trong táo nhân có 2 loại phytosterol, một chất có độ chảy 288-290ºC, công thức là C26H42O2, tan trong ête, một chất có độ chảy 259-260ºC, tan trong clorofoc. Ngoài ra còn chứa dầu. Không có ancaloit.",
+      "Các hợp chất": "Theo một tài liệu khác (Nhật dược chí, 1940) thành phần chủ yếu là axit betulinic tinh thể hình phiến, tan trong rượu, độ chảy 316-320ºC và betulin C30H28O3. Ngoài ra còn có nhiều vitamin C.",
+      "chứa": "Theo sự nghiên cứu của hệ Dược viện y học Bắc Kinh gần đây, trong nhân hạt táo có 2,52% saponin và có phản ứng ancaloit.",
+      "triết xuất": "Theo s. Shibata và cộng sự (Phvtochem. 1970,677 và 1974 13, 2829) trong nhân táo – Zizyphus jujuba Mill. var. spinosus Hu hoặc Ziziphus spinosus Hu có 0,1% saponin bao gồm jujubozit A và B với genin là jujubogenin với độ chảy 25-27ºC, αD25 = -36″ (trong cồn êtylic).",
+      "thủy phân": "Khi thuỷ phân jujubozit bằng axit sẽ được jujubogenin. và tiến lên một bước thành chất ebelin lacton có độ chảy 182-185ºC, (α)D = – 140 (trong clorofoc).",
+      "Các hợp chất": "Trong lá táo có rutin và quexetin.",
+      "đã nghiên cứu": "...",
+      "tìm thấy": "...",
+      "các hoạt chất": "...",
+      "tinh dầu chứa": "...",
+      "có hoạt chất": "...",
+      "dấu hiệu đặc trưng": "..."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "..."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo quan sát trên lâm sàng vị thuốc có tác dụng trấn tĩnh và gây ngủ rõ rệt (Dược học thông báo, 1953).",
+      "được_dùng": "Người lớn uống 15-20 hạt (tương đương với 0,8g-1,8g) thì có công hiệu. Dùng quá liều có thể bị trúng độc và mất tri giác, hôn mê.",
+      "làm thuốc": "Nếu dùng liều cao (6-15g) như các sách cổ, cần sao đen đi vì sao đen có lẽ là một hình thức để giảm chất độc đi.",
+      "có tác dụng": "Theo tài liệu cổ. toan táo nhân có vị ngọt, tính bình, vào 4 kinh tâm, can, đởm và tỳ. Có tác dụng bổ can, đởm, định tâm, an thần.",
+      "chữa": "Dùng chữa hư phiền không ngủ được, hồi hộp hay quên, tân dịch ít, miệng khô, người yếu ra nhiều mồ hôi. Những người có thực tà, uất hoả không dùng được.",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "..."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Được trồng khắp nơi ở nước ta để lấy quả ăn.",
+      "làm thuốc": "Vào tháng 2-3 hái quả về, bỏ thịt lấy hạch xay ra được nhân, phơi hay sấy khô.",
+      "có tác dụng": "Khi dùng để sống hay sao đen. Nếu dùng sống phải dùng liều thấp.",
+      "phơi khô": "...",
+      "xấy khô": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "..."
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sa mộc",
+      "ten_khac": "Sa mộc, Sà mu, Sa núc, Thông tàu, Thông mụ, Co may (Dao), Long len, Xa mu",
+      "ten_khoa_hoc": "Cunninghamia lanceolata (Lam.) Hook.",
+      "ma_taxon": "127861",
+      "ho": "Cupressaceae (Hoàng đàn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 25-30m.",
+      "thân": "Thân mọc thẳng, có vỏ màu nâu, nứt dọc.",
+      "lá": "Lá mọc so le, rất sít nhau thành túm dày, phiến cứng, dai, hình ngọn giáo hẹp, dài 3-7 cm, rộng 3-5 mm, gốc tròn, đầu rất nhọn, mép khía răng, mặt dưới có hai dãy lỗ khí màu trắng đục, song song với gân giữa.",
+      "hoa": "Cụm hoa là những nón đơn tính; nón đực mọc ở đầu cành, hình trụ thành đuôi sóc; nón cái hình trứng, mọc đơn độc hoặc tụ họp.",
+      "quả": "Nón quả hình trứng, dài 3 – 4 cm, bao học bởi những vảy nhọn đầu; hạt hình trái xoan, có cánh hẹp.",
+      "mùa hoa": "tháng 9-10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi\u00a0Cunninghamia\u00a0R. Br. có 2 loài ở châu Á. ở Việt Nam cũng có 2 loài này, trong đó, loài sa mộc có vùng phân bố phổ biến hơn, gồm các huyện Đồng Văn, Mèo Vạc, Quản Bạ (Hà Giang); Sa Pa, Bát Xát (Lào Cai). Loài sa mộc này còn được trồng ở nhiều địa phương khác như: Tam Đảo (Vĩnh Phúc), Đà Lạt (Lâm Đồng), Cát Bà (Hải Phòng) và một số nơi khác thuộc tỉnh Cao Bằng, Lạng Sơn, Quảng Ninh… Trên thế giới, sa mộc mọc tự nhiên nhiều ở Trung Quốc, đảo Đài Loan và vùng núi cao Bắc Lào.",
+      "thường_mọc": "Sa mộc là loại cây gỗ lớn, mọc thẳng, ít phân cành hoặc phân những cành nhỏ. Cây thường mọc rải rác hoặc tương đối tập trung từ lưng chừng núi trở xuống, ở độ cao 1400 – 2000 m hoặc hơn. Cây ưa khí hậu ẩm mát quanh năm ở vùng cận nhiệt đới và nhiệt đới núi cao, về mùa đông nhiệt độ có thể xuống dưới 0°C trong nhiều ngày.",
+      "Đặc điểm sinh trưởng": "Sa mộc mọc lá non đồng loạt vào mùa xuân, ngay sau đó xuất hiện nón đực và nón cái; thụ phấn chủ yếu nhờ gió. Nón cái già vào mùa đông, khó rụng, nhưng được tách ra cho hạt rơi vãi xuống đất. Cây con mọc từ hạt trong tự nhiên không nhiều. Khi gieo trồng, người ta thường xử lý hạt để nâng cao tỷ lệ nảy mầm. Sa mộc trồng từ cây con, sau 5-6 năm đã có thể có nón sinh sản. Một số cây ở Sa Pa và Phó Bảng (Hà Giang) đã gần 100 năm tuổi vẫn sinh trưởng phát triển tốt. Gỗ sa mộc là loại tốt, không bị mối mọt, được dùng làm nhà cửa hay đồ đạc."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ, thân, lá và rễ (Cortex, Radix et Folium Cunninghamiae)."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sa mộc có vị cay, tmh hơn ôn, vào các kinh tỳ và phế, có tác dụng tịch uế (tẩy bẩn) chỉ thống, tán thấp độc, hạ nghịch khí."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây sa mộc thường được trồng để phục hồi rừng đã bị tàn phá. Về mặt thuốc, nhiều bộ phận của sa mộc được dùng trong những trường hợp sau:  Vỏ rễ tươi (lượng vừa đủ) thêm ít rượu trắng giã nát, đắp chữa viêm khớp, vết thương. Lá sa mộc tươi (160 g), nước (500 ml), sắc còn 150 ml, thêm đường, ngày uống 3 lần, mỗi lần 10 ml. Dùng 10 ngày. Chữa viêm phế quản ở người già. Hạt sa mộc (30g), giã nát, sắc hoặc làm bột uống. Chữa thoát vị bẹn, di tinh. Dầu sa mộc bôi ngoài chữa bệnh nấm da.  Tinh dầu sa mộc có mùi thơm được dùng chữa vết thương do dụng giập, xây xát, thâm tím, thấp khớp và bệnh ngoài da.  Ở Trung Quốc, sa mộc còn được dùng chữa lở sơn do dị ứng, mụn nhọt, ghẻ lở, hắc lào, độc sang, cước khí, di tinh, thoát vị bẹn, đau răng, đau vú, viêm phế quản.  Bài thuốc có sa mộc:  Chữa đau răng:\u00a0Lá sa mộc 90 g; xuyên khung, tế tân, mỗi vị 60 g. Các vị trên thái nhỏ ngâm với 800 ml rượu, lọc bỏ bã, dùng làm thuốc ngậm, không\u00a0được nuốt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài lịệu nước ngoài, tinh dầu chiết từ gỗ, rễ, vỏ bào và mùn cưa của sa mộc, bôi trực tiếp lên mụn nhọt có tác dụng diệt khuẩn, mà không gây đau và rát."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

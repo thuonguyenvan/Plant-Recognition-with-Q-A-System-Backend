@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kiến cò",
+      "ten_khac": "Bạch hạc, Kiến cò, Chóm phòn (Tày), Uy linh tiên, Cây lác, Cỏ linh chi",
+      "ten_khoa_hoc": "Rhinacanthus nasutus (L.) Kurz",
+      "ma_taxon": "345582",
+      "ho": "Acanthaceae (Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây Kiến cò hay còn được gọi là cây Bạch hạc Cây nhỡ cao 1,5m, thân mọc thẳng đứng, có nhiều cành.",
+      "lá": "Lá mọc đối có cuống, phiến là hình trứng thuôn dài, phía cuống tù, đầu nhọn, dài 2-9cm, rộng 1-3cm, mặt trên nhẵn, mặt dưới hơi có lông mịn.",
+      "hoa": "Hoa nhỏ, màu trắng hơi điểm hồng mọc thành xim nhiều hoa có cuống, ở đầu cành hay đầu thân.",
+      "quả": "Quả nang, phía dưới dẹt không chứa hạt, phía trên chứa 4 hạt, có khi chỉ có 2 hạt, hạt hình trứng hai mặt lồi."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bạch hạc chứa flavonoid, hợp chất phenol, acid amin, acid hữu cơ, tannin",
+      "đã nghiên cứu": "Từ năm 1881, Liborrius đã nghiên cứu thấy trong rễ cây này có 1,87% chất gần giống axit cryzophanic và axit frangulic.",
+      "các hoạt chất": "Tác giả cho đó là hoạt chất của cây và gọi là rinacantin đây là một chất màu đỏ anh đào, không mùi, không vị, tan trong cồn và dung dịch kiềm, khi đun sôi với axit clohydric không choglucoza"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vị ngọt dịu, mùi hắc nhẹ, tình bình, có tác dụng chống ho, sát trùng, chống ngứa, trừ phong thấp",
+      "được_dùng": "Nhiều nơi trong nhân dân ta dùng cây bạch hạ chữa bệnh hắc lào và một số bệnh ngoài da như bệnh chốc lở (impetigo), bệnh mụn rộp loang vòng (herpes circine), eczema mãn tính.",
+      "chữa": "Bài thuốc có bạch hạc  Chữa phong tê thấp, nhức gân xương, viêm khớp: Rễ bạch hạc, thiên niên kiện, thổ phục linh, tỳ giải, cỏ xước, cẩu tích, cốt toái bổ mỗi vị 10-15g, sắc uống.  Eczema, hắc lào, chốc lở, ngứa:  Lá và cành non tươi giã nát, them cồn 70o ngâm lấy nước bôi Rễ tươi hoặc khô, giã nát, ngâm rượu hoặc dấm 7-10 ngày lấy nước bôi  Chữa lao phổi sơ nhiễm, viêm phế quản, ho: Thân và lá 20g, sắc thêm đường uống"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây bạch hạc mọc hoang ở nhiều tỉnh miền Bắc nước ta, còn thấy mọc ở Ấn Độ, Malaixia, Đông châu phi. Có khi được trồng làm cảnh.",
+      "làm thuốc": "Người ta thường dùng rễ cây, dùng tươi hay khô làm thuốc. Rễ tươi mới đào bẻ đôi để một lúc lâu sẽ có màu đỏ. Lớp vỏ ngoài dễ bong tróc ra. Mùi hắc nhẹ, vị ngọt tựa mùi sắn rừng. Mùa hái quanh năm, nhưng tốt nhất vào mùa đông. Đôi khi người ta chỉ dùng vỏ rễ, có khi dùng cả lá."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

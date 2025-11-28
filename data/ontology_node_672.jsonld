@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "So đũa",
+      "ten_khac": "So đũa, Phiắc đốc khè (Thái)",
+      "ten_khoa_hoc": "Sesbania grandiﬂora (L.) Pers.",
+      "ma_taxon": "168863",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ cao từ 8-10m, mọc rất nhanh.",
+      "lá": "Lá kép lông chim chẵn, dài 15-30cm, lá chét rất nhiều, tới 30 đôi, hình bầu dục, thuôn dài 25mm, rộng 8-10mm thường các lá ở giữa dày hơn các lá chét ở ngọn.",
+      "hoa": "Hoa to trắng hay hồng, xếp thành chùm ở nách, thõng.",
+      "quả": "Quả dài 30-35cm thẳng, thót lại ở gốc và ở đỉnh, thu hẹp và dẹt ở khoảng cách giữa các hạt, nhưng không chia thành đốt.",
+      "hạt": "Hạt rất nhiều, hình bầu dục, dẹt, màu nâu."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong vỏ cây so đũa có chất gôm nhựa. Khi còn tươi gôm nhựa có màu hồng đỏ, nhưng để một thời gian thì xám lại. Gôm nhựa này một phần tan trong nước, một phần tan trong cồn.",
+      "gồm chất": "Hai chất màu là agathin, màu đỏ, và xanthoagathin màu vàng, ngoài ra còn basorin, một chất nhựa, tanin.",
+      "chứa": "Lá, hoa vả quá non chứa nhiều chất đường, đặc biệt hoa so đũa chứa hàm lượng vitamin C cao (0,1%), vitamin B, muối canxi và sắt, các axit amin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ so đũa được dùng làm một thuốc bổ đắng giúp ăn ngon cơm, dễ tiêu hóa. Còn được dùng chữa lỵ, ỉa chảy và viêm ruột. Dùng dưới dạng thuốc sắc hay ngâm rựơu. Mỗi ngày uống từ 5- 10g vỏ.",
+      "giã nát": "Hoa và lá non giã nát, vắt lấy nước nhỏ mũi chữa cảm cúm.",
+      "làm thuốc": "Hiện nay nhân dân một số vùng ở miền Nam mới dùng hoa so đũa nấu canh tôm, nhưng tại nhiều nước ngoài người ta còn dùng lá non ăn như rau dưới dạng trộn dấm, xào nấu.",
+      "chữa": "Đơn thuốc có vị so đũa  Rượu hổ đắng khai vị. Vỏ cây so đũa 100g, 1 lít rượu 40°. Ngâm vỏ so đũa thái mỏng với rượu từ 15 ngày đến 1 tháng. Ngày uống từ 15 đến 30ml rượu này làm thuốc bổ đắng, khai vị (kinh nghiệm nhân dân)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "So đũa được trồng nhiều ở miền Nam nước ta chủ yếu để làm cảnh vì có hoa đẹp, đôi khi được trồng làm cây chủ cho cây hồ tiêu leo. Còn thấy trồng ở Lào, Campuchia, và nhiều nước nhiệt đới Châu Á khác. Người ta dùng vỏ, cây, lá và hoa làm thuốc. Có thể dùng tươi hay khô, thường dùng tươi. Không có chế biến gì đặc biệt."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

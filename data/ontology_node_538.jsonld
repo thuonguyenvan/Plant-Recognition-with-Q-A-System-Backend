@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba gạc lá vòng",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Rauvolfia verticillata (Lour.) Baill.",
+      "ma_taxon": "852681",
+      "ho": ""
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 1 – 1.5 m.",
+      "thân": "Thân nhẵn có những nốt sần nhỏ, màu lục sau xám.",
+      "cành": "Cành non dẹt, có khía dọc sau tròn, màu xám.",
+      "lá": "Lá mọc vòng 3, đôi khi 4 -5, khi non có khi mọc đối , phiến lá hình mác, gốc thuôn, đầu nhọn, cuống ngắn, dài 6 – 11 cm, rộng 1.5 – 3 cm.",
+      "hoa": "Hoa nhỏ, màu trắng, mọc ở gần thân thành xim dạng tán kép, dài 4 – 7 cm; dài hình chuông, tràng hình ống thường hơi cong; nhị 5 đính ở họng tràng; bầu có 2 ô.",
+      "quả": "Quả hạch đôi, hình trứng, khi chín màu đỏ tươi.",
+      "mọc": "Toàn cây có nhựa mủ.",
+      "mùa hoa": "tháng 4 – 6",
+      "mùa quả": "tháng 7 – 10",
+      "mặt": "Ở đồng bằng có khi nở hoa quanh năm. Tránh nhầm với cây ba chạc (Euodia lepta (Spreng.) Merr. – Rutaceae) nhiều nơi gọi là ba chạc tám ghẻ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ba gạc lá vòng là một trong những loài ba gạc mọc tự nhiên được nhắc đến nhiều ở Việt Nam. Tuy nhiên, kết quả điều tra của viện dược liệu từ 1961 đến nay có thể khẳng định đây là một cây thuốc tương đối hiếm ở nước ta. Các điểm phân bố đã được xác định lại thuộc các tỉnh Lạng Sơn (huyện Văn Quan), Nghệ An (Kỳ Sơn), Cao Bằng, Phú Thọ. Trước đây cây được trồng làm mẫu ở  vườn thuốc Trạm nghiên cứu dược liệu Nam Hà. Hiện nay còn trồng lưu giữ tại trạm nghiên cứu cây thuốc Tam Đảo và Sa Pa (Viện dược liệu)",
+      "Đặc điểm sinh trưởng": "Ba gạc lá vòng là cây ưa ẩm, ưa sáng và có thể hơi chịu bóng khi còn nhỏ. Trong tự nhiên, cây thường mọc lẫn với một vài loại cây bụi khác: ở bờ nương, rẫy, ven đường đi. Rụng lá mùa đông, cây trồng từ hạt sau hai năm cao khoảng 0.8 m và bắt đầu có hoa lứa đầu tiên. Càng về sau, hoa quả càng nhiều. Đặc biệt quả chín của năm trước có thể tồn tại đến đầu mùa hoa quả năm sau. Tỉ lệ nẩy mầm cao nhất của hạt khoảng 75 %. Vì trữ lượng ít, ba gạc lá vòng đã được vào “Sách đỏ Việt Nam” để bảo vệ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ sấy khô hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ rễ ba gạc lá vòng chứa trung bình 0.90 – 2.29 % alkaloid toàn phần, trong đó có reserpine, ajmalicin, serpentin. Lá chứa 0.72 – 1.69 % alcaloid toàn phần Ba gạc lá vòng còn chứa spegatrin, verticilatin.  Reserpin, một alcaloid chủ chốt của cây Ba Gạc, được xem là đại diện tiêu biểu cho các dược tính của loài cây này. Hai tác dụng nổi bật nhất của Reserpin là hạ huyết áp và an thần, với cơ chế và ứng dụng được nghiên cứu rộng rãi:  Tác dụng hạ huyết áp  Cơ chế hoạt động: Reserpin làm cạn kiệt dần Noradrenalin trong dây thần kinh giao cảm, tương tự như “ngắt kết nối” giao cảm bằng hóa chất, giúp giảm huyết áp từ từ nhưng duy trì lâu dài.  Tác động trên cơ thể:  Làm chậm nhịp tim. Giãn mạch máu ở da. Không gây liệt hạch.  Tác dụng an thần  Reserpin ức chế thần kinh trung ương, tạo cảm giác trấn tĩnh mạnh tương tự các hợp chất Phenothiazin, thường được sử dụng trong các trường hợp cần an thần.  Các tác dụng khác  Đối với mắt: Làm co đồng tử rõ rệt, một triệu chứng xuất hiện sớm sau khi dùng thuốc.  Đối với mí mắt: Gây sụp mí và thư giãn màng mí thứ ba ở mèo và chó.  Đối với hệ tiêu hóa: Tăng cường nhu động ruột và bài tiết phân.  Đối với thân nhiệt: Gây rối loạn trong việc điều hòa nhiệt độ cơ thể.  Đối với hệ nội tiết:  Kích thích vỏ thượng thận sản sinh Corticoid. Có hiệu ứng kháng lợi niệu nhẹ. Ức chế chu kỳ động dục và rụng trứng ở chuột cái, đồng thời làm giảm tiết Androgen ở chuột đực.  Độc tính của Reserpin  Liều dung nạp được: Qua đường uống dao động từ 10-2000 mg/kg ở động vật. LD50 (liều gây chết 50%): 28 ± 1,6 mg/kg qua đường tiêm tĩnh mạch trên chuột cống trắng, và 500 mg/kg qua đường uống trên chuột nhắt."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam ba gạc lá vòng được dùng điều trị tăng huyết áp dưới dạng viên, cao lỏng. Cao lỏng của rễ lá ba gạc lá vòng chứa 1.5% alkaloid toàn phần, liều trung bình mỗi ngày 30-60 giọt. Ở Trung Quốc , ba gạc lá vòng cũng được điều trị tăng huyết áp có hiệu quả. Lá tươi giã nát đắp tại chỗ vết thương rắn cắn. Ở Đài Loan, nước sắc rễ  ba gạc lá vòng được dùng làm thuốc diệt côn trùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

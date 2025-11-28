@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Long nha thảo",
+      "ten_khac": "Long nha thảo, Tiên hạc thảo",
+      "ten_khoa_hoc": "Agrimonia pilosa Ledel.",
+      "ma_taxon": "55894",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân cỏ cao 0,5-1,5m, toàn thân có vạch dọc và mang lông trắng, nhiều cành.",
+      "rễ": "Thân rễ mọc ngang, đường kính có thể đạt tới 1cm.",
+      "lá": "Lá mọc so le, kép dìa lẻ, lá chét hình trứng dài, mép có răng cưa to. Cạnh những lá chét to có nhiều lá chét nhỏ. Lá chét to dài chừng 6cm, rộng chừng 2,5cm, lá chét nhỏ có khi chỉ dài 5mm. Cả hai mặt lá đều mang nhiều lông.",
+      "hoa": "Hoa nhỏ mọc thành chùm mọc ở đầu cành hay kẽ lá. Cánh hoa màu vàng.",
+      "quả": "Quả gồm 2-3 quả bế bọc xung quanh bởi đế hoa có đài ở mép trên. Toàn bộ có nhiều gai."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhiều người nghiên cứu nhưng báo cáo chưa thống nhất Có tài liệu cũ nói trong long nha thảo có tannin, có phản ứng phloroglucotanoit, rất ít tính dầu, không có ancaloit, không có glucozit, không có chất béo, có sterol và một đường Năm 1939-1940 và 1950 Ngô Vân Thuỳ và Cừu Tác Lâm đã nghiên cứu lấy ở long nha thảo một chất màu đỏ nâu gọi là agrimonim (có C, H, N, O) và nhiều axit Năm 1958, theo báo cáo Hoá học thế giới (1-7-1958), các tác giả Hứa Thực Phương và Lưu Tin Giai đã chết từ long nha thảo được các chất sau: Chất agrimonin A có tinh thể màu trắng, độ chảy 288-290oC, công thức thô tạm định là C29H49O5 có tính chất một sterol. Chất agrimonin B tinh thể màu trắng, độ chảy 235oC, công thức thô tạm định là C14H19O10 có tính chất một axit nhân vòng Chất agrimonin C đun tới 340oC thì bị phân giải, có tính chất phenol. Một chất axit là một chất bột, vô định hình, màu nâu hoà tan trong dung dịch kiềm rồi khô tức là chất lưu hành trên thị trường với tên long nha thảo tố. cả 4 chất trên thử dược lý đều không thấy tác dụng cầm máu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng long nha thảo làm thuốc cầm máu chữa bệnh đi ỉa ra máu, thổ huyết, ho ra máu, đổ máu cam tử cung xuất huyết. Ngày uống 6-15g dưới dạng thuốc sắc, chia nhiều lần uống trong ngày. Còn dùng làm thuốc bổ tim, chữa mụn nhọt, chữa lỵ. Các đơn thuốc có long nha thảo Long nha thảo tố: Thuốc tiêm chế bằng thuốc sắc long nha thảo đã loại tannin, asponin, đường, protit. Sau đó dùng dung môi tinh chế nhiều lần được chất vô định hình thì chế thành thuốc tiêm, mỗi ống 5ml có 0,01g long nha thảo tố. Có khi chế thành thuốc nước hoặc viên, dùng trong các trường hợp bị thương băng huyết tử cung, xuất huyết, thay ecgotin. Ái mẫu ninh: Long nha thảo tố và cao lỏng đương quy chế thành thuốc viên, ngày dùng 3 lần, mỗi lần 2-4 viên. Dung dịch ái mẫu ninh: Ngày uống 3 lần, mỗi lần 1 thìa con."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang ở miền Bắc Việt Nam, chưa được khai thác ở nước ta. Tại các nước khác cũng có: Châu Âu, Trung Quốc, Nhật Bản, Triều Tiên. Thu hái: thường nở hoa vào mùa hạ, cây hái vào mùa thu. Phơi khô trong mát;"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

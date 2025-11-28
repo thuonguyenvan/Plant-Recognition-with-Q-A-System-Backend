@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây toàn",
+      "ten_khac": "Dây toàn",
+      "ten_khoa_hoc": "Solanum lyratum Thunb.",
+      "ma_taxon": "367802",
+      "ho": "Solanaceae (Cà)",
+      "Mô tả": {
+        "lá": "Lá mọc so le có lông, lá ở gốc thì đơn nguyên, lá ở ngọn thì có 3 thùy không đều, dài 4-8cm, rộng 2-5cm, cuống dài 2-4cm.",
+        "hoa": "Cụm hoa xim ở ngọn, màu tím, hoặc trắng hay hơi tím. Bao phấn mở bằng lỗ ở đỉnh.",
+        "quả": "Quả mọng, hình cầu hay hình trứng đường kính 6-8mm, khi chín có màu đỏ, trong chứa nhiều hạt nhẵn, đường kính 1-1,5mm .",
+        "cây": "Cây nhỡ, mọc leo, thân nhẵn hay hơi có lông, thân cứng, nhưng cành mềm.",
+        "thân": "thân nhẵn hay hơi có lông, thân cứng, nhưng cành mềm."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trước đây người ta đã chiết từ dây toàn những saponozit với những tên duncamarin (dulacamarin) picrogluxin v.v… như hiện nay người ta đã thấy đó là những chất không ổn định. Năm 1956, Schreiber đã chiết được những chất sau đây: Các glucoancaloit thuộc nhóm những spirosolanola chất quan trọng nhất gặp trong lá là một tetrozit của soladunxidin, (soladulcidin) thủy phân sẽ cho 1 phân tử xyloza, 1 phân tử galactoza, 2 phân tử glucoza và soladunxidin. Kèm theo có các soladunxin α, β và γ (genin là soladunxidin), các α, β và γ solamarin (genin là tomatiedenol), solasonin và solamacgin (solamargin) (genin là solasodin). Hàm lượng solasodin tăng với sự kết quả, rồi giảm dần trong quá trình quả chín, trong quả chín chỉ chứa rất ít glucoancaloit. Các saponozit steroit mà genin là tigogenin, diosgenin và yamogenin, hàm lượng cao nhất trong hoa tự (theo Sander 1963 lên tới 0,7%). Năm 1963, Sander còn phát hiện trong loài dây toàn Sotanum duicamara còn có những nòi hoá học chứa những glucoancaloit khác nhau."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dây toàn được dùng làm thuốc lọc máu trong những bệnh ngoài da, bệnh thấp khớp. Ngày dùng 2 đến 4g chia làm nhiều lần uống dưới dạng thuốc sắc, thuốc ngâm rượu. Một số người uống vào nôn mửa hay đi ngoài. Cho nên dùng phải thận trọng."
+      },
+      "Cách dùng": {
+        "được_dùng": "Mọc hoang dại ở nhiều vùng ởnưởc ta. Ở Sa Pa trong rừng ẩm lạnh còn có thứ Solanum dulcamara var. sinensis Dunn. Người ta dùng cành và lá thu hái vào mùa thu đông và xuân. Hái về cắt thành từng đoạn ngắn, phơi hay sấy khô."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

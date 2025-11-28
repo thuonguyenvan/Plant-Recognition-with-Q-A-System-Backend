@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trâu cổ",
+      "ten_khac": "Trâu cổ, Bị lệ, Vảy ốc, Cây xộp, Cơm lênh, Mộc liên, Sung thằn lằn, Múc púp (Tày)",
+      "ten_khoa_hoc": "Ficus pumila L.",
+      "ma_taxon": "162972",
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Dây leo nhỏ, mọc bám nhờ rễ phụ.",
+      "thân": "Cành ngắn và mềm, màu nâu, lúc non có lông sau nhẵn.",
+      "lá": "Lá mọc so le, lá ở cành sinh sản (cành này thường lên cao mới phân cấp) hình bầu dục hoặc hình trứng, dài 5-7 cm, rộng 2,5 – 4,5 cm, gốc tròn hoặc hơi hình tim, đầu tù hoặc hơi nhọn, hai mặt nhẵn, mép nguyên, gân gốc 3 – 5, nổi rõ ở mặt dưới, gân phụ tạo thành mạng thưa; cuống lá dài 1,8 – 1,5 cm, có lông hung; lá kèm có lông; lá ở cành không sinh sản hình vảy ốc, gốc lệch mọc áp sát vào thân cây chủ, dài khoảng 2 – 2,5 cm, cuống ngắn 2-3 mm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá; hoa đực rất nhiều, mọc tụ tập ở gần đỉnh, đài 2-3 răng, nhị 2, bao phấn hẹp; hoa cái có 4 lá đài không bằng nhau; bầu thuôn dài, cong.",
+      "quả": "Quả phức to, hình chóp ngược, đầu bằng, dài 3,5 cm, dày 3 cm, nhẵn, màu tứn nâu khi chín, cùi nạc và mềm xốp.",
+      "mùa hoa": "tháng 5-10.",
+      "mùa quả": "tháng 5-10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trâu cổ có nguồn gốc lừ Nhật Bản và Trung Quốc, phân bố tự nhiên từ Trung Quốc đến Việt Nam, Lào; cây còn được trồng rộng rãi khắp vùng nhiệt đới và cận nhiệt đới châu Á, để làm cảnh và làm thuốc, ở Việt Nam, cây phân bố gần như khắp nơi, trừ vùng núi cao trên 1500 m.",
+      "thường_mọc": "Trâu cổ thường phụ sinh trên thân những cây gỗ ở vùng rừng thứ sinh, dọc theo các bờ sông suối, hay trên những cây cổ thụ ở vùng đồng bằng, trung du cũng như cây trồng lấy bóng mát ở các thành phố. Cây còn mọc bám trên các tảng đá hay tường gạch xây lâu ngày. Lợi dụng khả năng này, người ta trồng trâu cổ cho leo lên các trụ cổng, tường rào và mặt ngoài tường các dinh thự cho thêm phần cổ kính.",
+      "Đặc điểm sinh trưởng": "Trâu cổ là cây ưa sáng, sinh trưởng mạnh trong mùa mưa ẩm. Về mùa đông, cây gần như ngừng sinh trưởng nhưng lá vẫn xanh. Cây ra hoa quả nhiều vào mùa hè – thu. Khi quả chín rụng xuống đất, phần thịt thối rữa, hạt phát tán ra xung quanh. Tuy nhiên, tất cả những cây trâu cổ phụ sinh trên thân cây gỗ là do chim ăn quả chín, hạt theo phân chim dính vào vỏ cây giá thể. Trâu cổ có khả năng tái sinh dinh dưỡng khỏe."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Trâu cổ thường được trồng cho leo lên các cây to, bờ tường, bờ rào; cây leo đến đâu, các đốt thân sẽ ra rễ đến đó và bám vào giá thể. Cành lá của trâu cổ không đều nhau, có cành lá nhỏ như vảy ốc bám sát vào tường, có cành lá to và thường sẽ cho quả.  Cây được nhân giống bằng các đoạn thân có rễ ở đốt. Chỉ cần cắt một đoạn rồi giâm xuống đất và bảo đảm đủ ẩm sẽ mọc thành cây. Chú ý trồng cạnh bờ tường, cây to để cây có chỗ leo. Trâu cổ sống khỏe, sinh trưởng, phát triển nhanh, ít sâu bệnh, không cần chăm sóc."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, thân mang lá, lá và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ quả trầu cổ chứa chất gôm 13%. Khi thuỷ phân, chất này cho glucose, fructose và arabinose.",
+      "gồm chất": "Thân và lá chứa rutin, mesoinositol, β – sitosterol, taraxeryl acetat, β amyrin – acetat (Trung thảo dược học II, 1976).",
+      "chứa": "Nhựa mủ chứa 2 chất keo tinh có điểm chảy theo thứ tự 184 – 85° và 68 – 69°. 1 chất màu vàng có khả năng thấm ướt được, một enzym có hoạt tính thuỷ phân protid là ficin (chất này độc với người và một chất trong suốt (The Wealth of India IV, 1956).",
+      "đã nghiên cứu": "Theo Kawabe Seichiruo và cs, 1989, hạt của F. pumila L. var. aukeo tsang chứa polysaccharid với trọng lượng phân tử ~ 283.000 (CA 114: 4982 s)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả trâu cổ có vị ngọt, chát, tính bình, có tác dụng bổ thận, tráng dương, cố tinh, hoạt huyết, hạ nhũ.  Thân, cành, lá có vị chua, đắng, tính bình, có tác dụng khư phong, lợi thấp, tiêu thũng, tán kết.  Rễ có vị đắng, chát, tính bình, có tác dụng khư phong, trừ thấp, thư kinh, thông lạc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả trâu cổ là một vị thuốc bổ được nhân dân dùng từ lâu đời để chữa dương ủy di tinh, liệt dương, đau lưng, lỵ lâu ngày thoát giang, tắc tia sữa.",
+      "được_dùng": "Thân, cành, lá chữa phong thấp, đau nhức chân tay, mình mẩy với liều 9 – 15g mỗi ngày, dưới dạng nước sắc hoặc ngâm rượu uống.",
+      "chữa": "Rễ chữa đau đầu, chóng mặt, đau khớp, đau dây thần kinh toạ. Nhựa mủ bôi ngoài chữa mụn nhọt, đầu đinh, ghẻ lở, dị ứng sơn.",
+      "làm thuốc": "Liều dùng hàng ngày : 5 – 15g, có thể đến 20 – 30g dưới dạng thuốc sắc hoặc chế thành cao."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Chữa đau xương, đau mình:  Quả trâu cổ thái nhỏ nấu với nước, lọc bỏ bã, cô đặc thành cao. Ngày uống 5 – 10g (Đỗ Tất Lợi). Có thể dùng dây và lá phơi khô.",
+      "làm thuốc": "2. Chữa dương ủy, di tinh:  Quả trâu cổ 12g, dây sàn xạt 12g. sắc nước uống (Trung thảo dược học Trung Quốc).",
+      "sắc nước uống": "3. Chữa thấp khớp mạn tính:  Cành trâu cổ, rễ cỏ xước,thổ phục linh, rễ tầm xuân, mỗi thứ 20g; dây rung rúc 12g; thiên niên kiện, rễ gấc, lá lốt, dây đau xương, cành dâu mỗi thứ 10g. Tất cả thái nhỏ, phơi khô sắc với 400 ml nước còn 100 ml, cô tiếp cho thật đặc, khi dùng hòa thêm rượu chia 3 lần uống trong ngày. (Bệnh viện Vân Đình, huyện ứng Hoà, Hà Tây).",
+      "sắc nước uống": "4. Chữa tắc tia sữa, sưng vú:  Quả trâu cổ 40g; bồ công anh, lá mua mỗi thứ 15g. Sắc nước uống. Kết hợp dùng ngoài, lấy lá bồ công anh giã nhỏ chế với giấm, chưng nóng rồi chườm đắp.",
+      "làm thuốc": "5. Thuốc giải khát, thanh nhiệt:  Quả trâu cổ chín, rửa sạch, giã nát hãy xay nghiền bằng máy, cho vào túi vải ép lấy nước cốt. Để yên nước này sẽ đông thành thạch màu trắng. Thái khối thạch thành sợi, cho vào cốc nước đường có thêm ít hương liệu uống.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

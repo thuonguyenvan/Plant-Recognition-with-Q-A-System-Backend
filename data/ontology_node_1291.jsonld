@@ -1,0 +1,241 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hạt gấc",
+      "ten_khac": "Hạt gấc, Mộc miết tử",
+      "ten_khoa_hoc": "Momordica cochinchinensis (Lour.) Spreng.",
+      "ma_taxon": "431329",
+      "ho": "Cucurbitaceae (Bầu bí)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, chia thùy khía sâu tới 1/3 hay 1/2 phiến. Đường kính phiến lá 12-20cm, phía đáy lá hình tim, mặt trên lá màu xanh lục xám, sờ ram ráp.",
+        "hoa": "Hoa nở vào các tháng 4,5, đực cái riêng biệt. Cánh hoa màu vàng nhạt.",
+        "quả": "Tháng 6 có quả non, hình bầu dục dài khoảng 15cm, đít nhọn, ngoài có nhiều gai mềm đỏ đẹp. Trong quả có nhiều hạt xếp thành hàng dọc, quanh hạt có màng màu đỏ máu; khi bóc màng đỏ thấy có một lớp vỏ cứng đen, quanh mép có răng cưa tù và rộng hạt dài chừng 25-35 mm, rộng 19-31mm, dày 5- 10mm, trông gần giống con ba ba nhỏ bằng gỗ, đo đó có tên mộc miết tử (mộc là gỗ, miết là con ba ba). Trong hạt có nhân, chứa nhiều dầu.",
+        "cây": "Gấc là một loại dây leo, mỗi năm khô héo một lần nhưng năm sau vào mùa xuân, từ gốc lại mọc ra nhiều thân mới. Mỗi gốc có nhiều dây, mỗi dây có nhiều đốt, mỗi đốt có lá.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": null,
+        "ở_vùng": [],
+        "các_tỉnh": {
+          "mục": [],
+          "tỉnh": []
+        },
+        "được_trồng": {
+          "mục": [],
+          "nơi": []
+        },
+        "chủ_yếu": null,
+        "thường_mọc": null,
+        "Đặc điểm sinh trưởng": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong nhân hạt gấc (mộc miết tử) có 6% nước, 2,9% chất vô cơ, 55,3% chất béo, 16,6% chất protit, 2,9% đường toàn bộ, 1,8% tanin, 2,8% xenlulose và 11,7% chất không xác định được. Ngoài ra còn có các men photphatase. invectase và peroxydase, một chất không tan trong ête dầu hỏa, trong ete etylic, tan trong cồn methylic và có những tính chất và cho các phản ứng của môt saponịn với chỉ số bọt 5.600, chỉ số chết cá 16.600, chỉ số phá huyết 62.500 (F. Guichard và Đào Sĩ Chu, Hà Nội, 1941).",
+        "gồm chất": null,
+        "Các hợp chất": null,
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": "Ngoài ra còn có một số chất vi lượng cần thiết cho cơ thể như đồng, sắt, coban và đặc biệt kẽm, (rất cần thiết cho những người bệnh mãn tính về gan) và selenium, một chất mới được biết rất cần thiết để phòng chống ung thư.",
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thí nghiệm trên lâm sàng đã chứng mình dầu gấc có tác dụng như những thuốc có vitamin A, đặc biệt khi bôi trên các vết thương, vết loét, dầu gấc làm vết thương chóng lành và chóng lên da. Uống dầu gấc, bệnh nhân chóng lên cân (Huard, Rivoalen, Grenierboley và Riou, Hà Nội,1-942). Một số người yếu gan ăn nhiều dầu gấc da sẽ có màu vàng. Nghỉ ăn một thời gian sẽ hết. Năm 1990, Hà Văn Mạo, Đinh Ngọc Lâm và cộng sự đã báo cáo: Trên súc vật thí nghiệm và trên người bệnh, từ năm 1986 đến nay chế phẩm dầu gấc CAGAVIT có khả năng sửa chữa các hư hỏng của nhiễm sắc thể, các khuyết tật về phôi thai do dioxin gây trên động vật, khả năng phòng ung thư cho người bị bệnh xơ gan, khả năng hạ thấp hàm lượng AFP ở nhiều người bị bệnh gan mãn tính và không có tác dụng phụ. Như vậy chúng ta có cơ sở để tin rằng chế phẩm dầu gấc có ích cho những người đã tiếp xúc nhiều với các tia xạ độc hại, với các hóa chất và những người đã bị viêm gan virut B, có nguy cơ bị bệnh ung thư gan.",
+        "được_dùng": "Dầu gấc được sử dụng từ năm 1942. Dùng trong những trường hợp cần đến vitamin A hay caroten: Bệnh chậm lớn của trẻ em, biến chứng về mắt (khô mắt, quáng gà), chữa các vết loét, triệu chứng của sức kém chống đỡ bệnh tật của cơ thể, làm cho mau lên da non, trong những vết bỏng, vết thương.",
+        "làm thuốc": "Nhân hạt gấc: Hạt gấc chỉ mới thấy dùng trong nhân dân chưa có cơ sở nghiên cứu khoa học. Theo các sách có tác dụng chữa mụn nhọt, tiêu thũng, dùng trong những trường hợp ngã, bị thương, sang độc, phụ nữ sưng vú, hậu môn sung thũng. Uống trong và dùng ngoài. Chủ yếu dùng bôi ngoài. Uống trong ngày 1 nhân nướng chín. Dùng ngoài không kể liểu lượng.",
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Gấc mọc hoang và được trồng khắp nơi ở Việt Nam, nhiều nhất ở miền Bắc. Còn thấy mọc ở Philipin, miền nam Trung Quốc, Lào, Campuchia. Trồng bằng hạt hay dâm cành vào các tháng 2-3, trồng một năm thu hoạch nhiều năm, mùa thu hoạch quả từ các tháng 8-9 đến hết tháng 1-2 năm sau. Sau đó cây lụi đi, sang xuân lại nẩy chồi, mọc cây mới. Quả hái về, mổ lấy hạt với cả màng màu đỏ, nếu đổ nấu xôi thì dùng tươi sát với gạo. Nếu để chế thuốc thì cần phải sấy hay phơi khô cả hạt và màng cho đến khi cầm hạt không thấy dính tay nữa thì dùng dao nhọn bóc lấy màng đỏ, phơi hay sấy khô ở nhiệt độ thấp (60-70°). Với màng này người ta dùng chế dầu gấc. Còn lại hạt với lớp vỏ đen cứng đem phơi khô để dành dùng làm thuốc hay ép dầu.",
+        "làm thuốc": "Muốn chế dầu gấc, trước hết cần sấy khô màng hạt gấc, sau đó tán nhỏ rồi áp dụng một trong mấy phương pháp sau đây:  Chiết bằng dung môi (dùng ête dầu hỏa):  Lấy kiệt bằng ête dầu hỏa. Sau đó thu hồi ête bằng cách đun cách thủy trong không khí trơ (khí cacbonic hay nitơ). Cặn còn lại là dầu gấc. Để lâu dầu gấc này sẽ để lắng một lớp tinh thể caroten. Tỷ lệ dầu trong màng đỏ là 8%, l00kg quả gấc cho chừng 1,9 lít dầu gấc.",
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

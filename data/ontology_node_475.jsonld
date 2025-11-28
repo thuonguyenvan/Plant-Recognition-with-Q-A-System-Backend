@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạc thau hoa đầu",
+      "ten_khac": "Thảo bạc đầu, thau bảng (Tày).",
+      "ten_khoa_hoc": "Argyreia capitiformis (Poir.) Ooststr.",
+      "ma_taxon": "837481",
+      "ho": "Bìm bìm (Convolvulaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Dây leo bằng thân quấn. Thân và cành hình trụ, cứng, có lông dài màu vàng. Lá mọc so le, hình trái xoan hoặc bầu dục, dài 8 – 12 cm, rộng 6 – 8 cm, gốc hình tim, đầu thuôn nhọn, hai mặt có lông dài xù xì, gân lá 10 đôi, màu vàng xỉn mép nguyên; cuống dài 3 – 5 cm, có lông. Cụm hoa mọc ở kẽ lá thành đầu, có cuống dài, phủ nhiều lông; tổng bao gồm nhiều lá bắc có lông rậm; hoa 2 – 3 cái, màu hồng; đài có lông xù xì, những phiến ở vòng ngoài dài hơn; tràng hình phễu, ống hẹp, cũng có lông; nhị đính ở gốc tràng, bao phấn thuộn; bầu nhẵn, hình trứng, 2 ô. Quả hình nón, nhẵn, có 4 hạt.",
+      "mùa hoa": "tháng 11 – 1.",
+      "mùa quả": "tháng 11 – 1."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Argyreia Lour. ở Việt Nam hiện đã biết có 18 loài (Nguyễn Tiến Bân, và cs., 2005). Loài bạc thau hoa đầu kể trên phân bố chủ yếu ở các tỉnh thuộc vùng núi thấp, trung du hoặc cả ở đồng bằng, nhất là ở vùng ven biển từ Thanh Hoá và Nghệ An trở vào. Trên thế giới, loài này cũng phân bố ở Campuchia, Thái Lan và Malaysia,…  Cây ưa sáng và có thể mọc được trên nhiều loại đất khác nhau, thường leo và mọc trùm lên những cây bụi hoặc gỗ nhỏ ở ven rừng và đồi. Do có khả năng sinh trưởng phát triển nhanh, loài cây này có thể lấn át và làm chết cây giá thể.  Bạc thau hoa đầu ra hoa quả nhiều hàng năm. Cây mọc ở các tỉnh phía bắc (Thanh Hoá, Nghệ An, Hà Tĩnh,…) có hiện tượng rụng lá và bán tàn lụi vào mùa đông. Tái sinh tự nhiên chủ yếu từ hạt và mọc chồi sau khi bị chặt, cắt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Bạc thau hoa đầu mới chỉ thấy trồng để làm mẫu ở một số vườn thuốc, bằng cách đào cây con mọc tự nhiên về trồng.  Cây giống: có thể gieo ươm từ hạt hoặc dâm cành (lấy từ cành bánh tẻ). Thời vụ trồng: mùa xuân. Khi trồng nên bón lót bằng phân chuồng mục. Bạc thau hoa đầu là loại dây leo nên khi trồng chú ý có giá thể leo, hoặc trồng gần bờ rào, để cây leo lên các loại cây bụi hoặc cây gỗ khác."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "..."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "..."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "..."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá bạc thau hoa đầu dùng chữa rong kinh, thường phối hợp với ngải cứu và nụ áo hoa tím, và còn dùng chữa gãy xương, bong gân [Võ Văn Chi, 1997: 51 – 52].  Ở Trung Quốc, lá bạc thau hoa đầu dùng ngoài trị chấn thương [Lemmens R.HTM. et al., 2003: 83 – 84]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "..."
+    }
+  ]
+}

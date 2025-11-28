@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch phụ tử",
+      "ten_khac": "Bạch phụ tử, San hô xanh, Đỗ trọng nam",
+      "ten_khoa_hoc": "Jatropha multifida L.",
+      "ma_taxon": "164242",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, xẻ thùy sâu hình chân vịt, các thùy có răng hẹp nhọn, dài 12-15 cm, rộng 1,2 – 2,5 cm, gốc gần tròn, mặt sau màu xám nhạt; cuống đài bằng lá; lá kèm hình chỉ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn, gồm hoa đực và hoa cái riêng biệt, cuống cụm hoa và hoa màu đỏ nhìn như một nhánh san hô đỏ (do đó, có tên là cây san hô); hoa đực có 5 lá đài đính ở gốc, nhẵn, tràng có 5 cánh nhẵn, nhị 8 đính ở gốc, bao phấn dài; hoa cái có đài và tràng giống hoa đực, bầu nhẵn.",
+      "quả": "Quả nang, hình trứng nhẵn, màu vàng; hạt to bằng hạt thầu dầu.",
+      "cây": "Cây nhỡ, có khi cao đến 4m. Thân cành nhẵn.",
+      "thân": "Thân cành nhẵn.",
+      "mùa hoa": "tháng 5 – 6",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Jatropha L. có khoảng 175 loài, phân bố chủ yếu ở vùng nhiệt đới châu Mỹ, châu Á và châu Phi. Ở Việt Nam, chi này có 5 loài. Loài bạch phụ tử có nguồn gốc ở vùng nhiệt đới châu Mỹ (từ Mexico đến Paraguay), được du nhập từ lâu vào Ấn Độ, Malaysia và một số nước nhiệt đới khác ở châu Á (trong đó có Việt Nam). Cây được trồng chủ yếu để làm cảnh và làm thuốc.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "Ở Việt Nam bạch phụ tử được trồng rải rác tại nhiều địa phương, để làm cảnh."
+      },
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": "Một số vườn thuốc của các trạm y tế xã hay chùa (nơi có các sư thầy chữa bệnh bằng thuốc nam) cũng trồng nhiều cây này để sử dụng làm thuốc."
+      },
+      "Đặc điểm sinh trưởng": "Bạch phụ tử là cây ưa sáng với toàn cây như mọng nước, lá xẻ thùy nhỏ, làm hạn chế sự thoát hơi nước, nên cây có khả năng chịu được khí hậu khô nóng và thiếu nước. Cây ra hoa quả đều hàng năm; tái sinh tự nhiên chủ yếu từ hạt, song cũng có khả năng tái sinh dinh dưỡng bằng cách giâm cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, hạt, lá, nhựa mủ. Rễ thu hoạch vào tháng 3, phơi khô hoặc lùi nướng để dùng.  Quả thu vào mùa thu, lá và nhựa mủ thu hái quanh năm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt bạch phụ tử chứa một chất đắng (1%) và dầu béo (30%).  Lá chứa saponin, nhựa và tanin.  Nhựa mủ từ cành chứa dầu bay hơi với hàm lượng 0,3%, tỷ trọng ở 20° 0,8885, thành phần chính là sesquiterpen và một acid tự do là acid angelic. (The Wealth of India vol V. 1959, p. 296). Nhựa mủ còn chứa một cyanoglucosid là 1 – cyano – 3 – β – D – glucopyranosyloxy (Z) – 1 – methyl – 1 – propen với tên gọi là multifidin (Vanđer berg; Albert jj.CA. 123, 1995, 251346 V) .  Labadies, Rudia Paul; Van Dijick, Hans đã tách và phân lặp từ bạch phụ tử các cyclicpeptid như labaditin, biobolein, các chất này được dùng trong ngành dược như thuốc chống viêm. (CA. 116, 1992, 126827 g). Các chất diterpenoid có vòng lớn (macrocyclic diterpenoid) Jatrophone, Jatropholon A và B đã được Peletsch, Marcia, Charlwood Barry phát hiện trong dịch chiết và trong tế bào nuôi cấy (callus) của một số loài Jatropha (CA. 127, 1997, 80195 w)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở một số nước Đông Nam Á, nhựa mủ bạch phụ tử được nhân dân dùng ngoài da vết thương nhiễm khuẩn, loét và nhiều bệnh ngoài da khác. Rễ khô dưới dạng thuốc sắc chữa khó tiêu, đau bụng, viêm tinh hoàn và phù. Lá được dùng làm thuốc tẩy, trị lỵ và ghẻ. Bạch phụ tử còn được dùng làm thuốc độc cho cá.  Ở Trung Quốc, nhân dân dùng rễ cây bạch phụ tử phối hợp với các dược liệu khác trị nhức nửa đầu và xuất huyết não, với liều hàng ngày 5 – 10g dạng thuốc sắc.Dùng ngoài trị bệnh bạch biến và bệnh da.  Ở Tây Phi, bạch phụ tử được đùng làm thuốc nhuận tràng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

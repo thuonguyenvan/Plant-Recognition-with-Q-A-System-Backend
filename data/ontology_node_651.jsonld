@@ -1,0 +1,206 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Tỏi đỏ",
+            "ten_khac": "Sâm đại hành , Tỏi lào, Tỏi đỏ, Hành đỏ, Phong nhan, Hom búa lượt (Thái)",
+            "ten_khoa_hoc": "Eleutherine bulbosa (Mill.) Urb.",
+            "ma_taxon": "283511",
+            "ho": "Iridaceae (Diễn vi)"
+        },
+        {
+            "@type": "Mô tả",
+            "lá": "hình mác, gân lá song song, chạy dọc, trông giống như lá cau non, củ lại có tác dụng bổ cho nên có tên sâm cau (lá như lá cau, bổ như sâm); lá có thể dài 40-50cm, rộng 3-5cm.",
+            "hoa": "mọc thành chum 3 lá dài, 3 cánh màu trắng hay vàng nhạt, 3 nhị màu vàng.",
+            "quả": "Bầu hình trứng, 3 cạnh 3 ngăn dài 1mm, vòi dài 2,5mm, trên xẻ thành 3 trông như 3 mũi dùi.",
+            "cây": "Tỏi đỏ là một loại cỏ sống lâu năm, cao từ 30-60cm",
+            "củ": "hình trứng dài 4-5cm, đường kính 2-3cm giống như củ hành nhưng dài hơn, ngoài phủ vảy màu đỏ nâu, phía trong màu nâu hồng đến đỏ nâu."
+        },
+        {
+            "@type": "Phân bố"
+        },
+        {
+            "@type": "Thông tin khác"
+        },
+        {
+            "@type": "Bộ phận dùng"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Dựa theo thành phần hoá học đã được nghiên cứu của cây Eleutherine bulbosa Mill. Lê Văn Hồng và Nguyễn Văn Đàn (1973. Thông báo dược liệu 18) đã tiến hành nghiên cứu củ tỏi đỏ đã chiết và xác định được 4 chất là eleutherin C16H16O4 độ chảy 1750, izoeleutherin C16H16O4 độ chảy 1770, eleutherola C14H12O4 độ chảy 2020-2030 và một chất chưa xác định được đặt tên là Ex.",
+            "Các hợp chất": "Sắc ký lớp mỏng của dịch chiết còn cho biết có 16 vết trong đó 9 vết màu vàng đậm nhạt khác nhau, 6 vết phát quang lơ và một vết màu hồng nhạt.",
+            "các hoạt chất": "Cả 3 hoạt chất đều có tác dụng kháng sinh đối với chủng Staphyllococ-cus aureus."
+        },
+        {
+            "@type": "Tính vị"
+        },
+        {
+            "@type": "Công dụng",
+            "có tác dụng": "Tác dụng kháng sinh: Dịch chiết tỏi đỏ tẩm giấy có đường kính 10mm đặt trên thạch có cấy vi trùng có tác dụng hạn chế sinh sản của vi trùng Diplococcus pneumonia, Streptococcus hemolyticus Staphylococcus aureus. Tác dụng yếu hơn đối với Shigella flexneri, Shiga, Bacillus mycoides, B. anthracis. Không có tác dụng đối với Escherichia coli, Bacillus pyocyaneus, B.diphteriae.",
+            "chống viêm": "Tác dụng chống viêm: Làm giảm phản ứng phù thực nghiệm trên chân chuột (thí nghiệm so sánh với hydrococtison thấy gần tương tự).",
+            "Độc tính": "Độc tính: Chuột nhắt uống với liều 169g/kg (1 lần), thỏ uống 26g/kg/ngày (uống liền 3 ngày) không biểu hiện nhiễm độc, súc vật sống bình thường. Cho thỏ uống với liều 10g/kg/ngày, liền trong 30 ngày. Con vật khoẻ mạnh bình thường, giải phẫu không thấy tổn thương gan hay thận. Trên lâm sang, thấy có tác dụng tốt đối với chốc đầu trẻ em, nhọt đầu đinh, viêm da mủ, viêm họng cấp và mãn tính, chàm nhiễm trùng, tổ đỉa, vẩy nến… (Khoa da liễu bệnh viện Bạch Mai và Quân y viện 108)."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Tỏi đỏ được dùng làm thuốc bổ máu, chữa mệt mỏi, tiêu độc dùng dưới dạng rượu, nước sắc hay chế thành viên.",
+            "làm thuốc": "Ngày uống 4 đến 12g tỏi lào khô hay 12-30g tỏi lào tươi.",
+            "Rượu": "Rượu tỏi đỏ: Tỏi đỏ khô thái mỏng 100g, rượu uống vừa đủ một lít. Ngâm trong 10-15 ngày. Ngày uống 20-30ml (một cốc con) chia 2 lần uống vào trước hai bữa cơm chính, uống lien tục trong 15-20 ngày.",
+            "Nước sắc": "Nước sắc tỏi đỏ: Tỏi đỏ tươi 12-30g, nước 400ml, sắc còn 150ml, chia làm 2 lần trước 2 bữa ăn chính.",
+            "Viên": "Viên tỏi đỏ: Dịch chiết tỏi đỏ bằng rượu 40o cô đến khô, chế thành viên, mỗi viên 0,25g. Người lớn uống 9-12 viên chia làm 3 lần uống trong ngày. Trẻ con từ 1-5 tuổi: Ngày uống 2 đến 6 viên; trẻ em 6-13 tuổi: Ngày uống 6-8 viên."
+        },
+        {
+            "@type": "luu_y"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thông thiên",
+      "ten_khac": "Thông thiên",
+      "ten_khoa_hoc": "Thevetia peruviana (Pers.) K. Schum",
+      "ma_taxon": "277115",
+      "ho": "Apocynaceae (Trúc đào)",
+      "Mô tả": {
+        "cây": "Cây nhỡ cao chừng 4~5m, thân nhẵn, trên cành mang nhiều sẹo của lá đã rụng.",
+        "lá": "Lá hình mác, hẹp, dài 8-15cm, rộng 4-7mm, đơn, nguyên, nhẵn, đầu nhọn, mặt trên bóng mặt dưới mờ: Gân giữa nổi rõ, gân phụ không rõ.",
+        "hoa": "Hoa màu vàng tươi rất đẹp và thơm to, mọc thành xim ở gần ngọn.",
+        "quả": "Quả rất đặc biệt, hạch hình 3 cạnh dài 3 đến 5cm, dầy chừng 2-2,5cm, hơi chia thành 4 múi, lúc chưa chín có màu xanh bóng, khi chín có màu đen bóng, nhưng dăn lại và rất mềm. Hạch hình ba cạnh rất cứng rắn, màu vàng nhạt bẩn, có khi hơi nâu hay đen nhạt, lắc sẽ thấy tiếng hạt lúc lắc, trong chứa 1 hay 2 hạt, hạt dài khoảng 12mm, rộng 12mm, dày 5mm, màu trắng vàng nhạt, vị rất đắng, hơi có cảm giác tê.",
+        "thân": "Toàn cây có nhựa mủ trắng. Khi bẻ cành hay châm vào quả, ta thấy nhựa mủ khi mới chảy ra có màu trắng sau chuyển màu đen. Vì vậy khi cắt các bộ phận của cây, ta thấy vết cắt chóng chuyển màu đen"
+      },
+      "Phân bố": {
+        "phân_bố": "Cây này vốn nguồn gốc ở vùng nhiệt đới châu Mỹ, sau đó di thực vào châu Á, châu Phi. Được trồng làm cảnh tại nhiều tỉnh\u00a0ở\u00a0Việt Nam: Trồng bằng hạt (mọc rất dễ dàng). Tại gốc cây lớn, người ta dùng thường thấy nhiều cây con, có thể đánh đi trồng nơi khác, nên trồng tập trung từng cụm từ 5 đến 10 cây một chỗ để khi thu hoạch hạt được dể dàng và đỡ tốn kém. Nên trồng tại các công viên, vừa làm cảnh đẹp, vừa có nguyên liệu để chế thuốc. Ta có thể dùng hạt, vỏ hay lá, nhưng chủ yếu là hạt. Mùa quả từ tháng 10 đến tháng 3."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong hạt thông thiên có những chất sau đây:  1. Chất dầu 35-41% (phương pháp ép) hoặc 57% (phương pháp dùng dung môi). Dầu có mùi thơm, gần như mùi hạnh nhân. Tỷ trọng 0,914 ở 25°c. ở nhiệt độ này dầu rất trong nhưng ở nhiệt độ 15°C dầu trở nên sền sệt và ở nhiệt độ 13°c dầu đặc lại. Theo Oudemans, dầu gồm 63% triolein, 37% tripanmatin và tristearin.  Ngoài ra còn một ít axit lineolic và axit myr- istic, rất ít axit arachidic.  Có tác giả cho rằng dầu hạt thông thiên có độc, gây nôn và đi ỉa lỏng (Short in Dymock, Pharmacographia indica), nhưng một số tác giả khác (De Vrij, Boulay ) lại cho rằng dầu này không có độc nếu chế tinh khiết, sở dĩ có hiện tượng ngộ độc là do các chất độc lẫn vào khi ép hay chiết xuất.  2. Một số chất heterozit, trong đó được biết rõ nhất là các chất tevetin và neriifolin.  a/ Tevetin C42H66O18.3H2O- trọng lượng phân tử 912,9 là một chất có tinh thể, không màu, không mùi, vị rất đắng. Tan trong 12 phần nước ở nhiệt độ 15°C, không tan trong axeton, clorofoc và ête. Độ chảy 192-193°C. Năng suất quay cực ở 20° là -62°5 (trong rượu metylic).  Thủy phân tevetin sẽ cho một phân tử tevetoza, 2 phân tử glucoza và một phần không đường (genin hay aglycon). Phần không đường của tevetin rất giống phần không đường của digita-lin, nhưng trong khi ta thủy phân digitalin bằng tác nhân lý hoá nhẹ, digitalin dễ dàng giải phóng 3 chất đường digitoxoza và digitoxigenin không tan, trái lại trong trường hợp đó đường tevetoza là một đường đặc hiệu của tevetin dính chặt với phần không đường làm cho tevetin có độ tan nhiều hơn, do đó tác dụng nhanh hơn, ít tích luỹ hơn và cũng ít độc hơn digitalin. Tỷ lệ tevetin chiết suất được từ 3-5%.  Tevetin cho phản ứng Legal dương tính mà không cho phản ứng Keller-Kilíani.  b/ Neriifolin và dẫn xuất monoaxetyl của neriifolin.  Freres Jacques có lấy được từ thông thiên một glucozit mới với tỷ lệ 3% có tác dụng giống như digitalin. Người ta đã xác định đây chỉ là hỗn hợp bằng nhau của 2 chất neriifolin và dẫn xuất monoaxetyl của neriifolin.  Neriifolin-C30H45O8-có độ chảy 208oC, năng suất quay cực ở nhiệt độ 20oC là -4905  (trong rượu metylic). Kết tinh trong etyl axetat thành hình giác trụ, vị đắng. Khi ta axetyl hoá trong môi trường pyridin sẽ được diaxetyl neriifolin có độ chảy 134°C, năng suất quay cực ở 20°C là -800 (trong rượu metylic).  Trong rượu kali hydroxyt N/10, chất neriifolin đồng phân hoá và cho isoneriifolin có độ chảy 251°, năng suất quay cực ở 20oC là -720 (trong rượu metylic).  Thủy phân, neriifolin cho một genin vô định hình và một đường là tevetoza (một chất metyl metoxypentoza).  Chất tevetin có trong hạt và vỏ cây. Trong lá và vỏ quả không có. Ngoài tevetin và lá và vỏ quả không có. Ngoài tevetin và neriiolin ra, Warden (1881) còn lấy ra từ hạt và vỏ một chất cho màu xanh khi thêm axit, đặc biệt axit clohydric. Khi ta giã vỏ hay hạt rồi nhỏ axit clohydric vào ta sẽ thấy màu xanh. Phản ứng này có thể dùng để phát hiện ngộ độc do thông thiên: Chiết xuất các chất trong dạ dày bằng rượu, rồi bằng cồn amylic, cồn để loại dung môi, rồi thêm axil clohydric, sẽ thấy hiện màu xanh, nếu có hạt thông thiên.  Năm 1958, chúng tôi chiết được từ hạt thông thiên mọc ở Việt Nam chất tevetin với hiệu suất 5-2,5% và chất dầu với hiệu suất 40-50% (Đỗ Tất Lợi, Hoàng Xuân Vinh- kỷ yếu công trình đại học y dược Hà Nội, 1958: 121-123)."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Chất tevetin đã được một hãng sản xuất của Pháp chế thành biệt dược làm thuốc chữa tim dưới dạng dung dịch 1%, 1ml tương ứng với 30 giọt và 1mg tevetin. Ngày uống từ 1 đến 2mg (30 đến 60 giọt một ngày) chia làm 2 hay 3 lấn uống. Có thể dùng lâu vì thuốc không tích luỹ. Đóng thành từng chai 20ml. Có loại chế thành thuốc tiêm, một hộp 6 ống, mỗi ống 2ml tương ứng với 1mg tevetin. Ngày tiêm 1-2 ống (tiêm mạch máu). Dùng trong những trường hợp kém tim, tim đập loạn nhịp, viêm tâm cân, tim suy nhược sau khi mổ hay sau khi mắc bệnh nhiểm trùng, đau van tim, nhất là trường hợp bị tổn thương tăng. Trong trường hợp này, tevetin tỏ ra hơn hẳn digitalin. Có thể dùng cho những trường hợp không chịu thuốc digitalin và uabain hoặc luân phiên với digi-talin và uabain. Ngoài việc dùng chất tevetin chiết từ hạt, có nơi còn dùng hạt giã nát để làm thuốc trừ sâu (hạt giã nát, ngâm với nước, thêm vào một lượng xà phòng bằng trọng luợng hạt). Phun lên sâu bọ. Số lượng tuỳ theo sâu cánh cứng hay cánh mềm. Cây và thuốc chế từ thông thiên có chất rất độc; cần chú ý tránh gây ngộ độc.  Theo: “Những cây thuốc và vị thuốc Việt Nam” – Gs. Ts. Đỗ Tất Lợi"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "Lưu ý": {
+        "luu_y": null
+      }
+    }
+  ]
+}

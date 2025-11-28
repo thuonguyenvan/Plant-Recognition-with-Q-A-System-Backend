@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây thổ mộc hương",
+      "ten_khac": "Thổ mộc hương hoa chùm, Tạng mộc hương",
+      "ten_khoa_hoc": "Inula racemosa Hook.",
+      "ma_taxon": "506898",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống lưu niên, cao tới 2m có thân rễ to, dạng hành. Thân to khoẻ, có lông mềm và phân nhánh chỉ ở phần trên mà thôi.",
+      "lá": "Các lá gốc dài tới hơn 50cm, hình bầu dục và tận cùng thành mũi nhọn, hơi ít lông ở mặt trên, có lông màu phớt và xám ở mặt dưới; mép lá chỉ hơi có răng. Các lá của thân có cùng hình dạng nhưng nhỏ hơn.",
+      "hoa": "Cụm hoa hình đầu lớn 5-6 (-7)cm, có một vòng các hoa hình lưỡi vàng rất hẹp và rất nhiều hoa hình ống.",
+      "quả": "Quả bế, hình trụ có 4 góc; màu nâu nâu, phía trên có một mào lông đơn, màu hung hung.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 7-9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở ý và vùng Ban Căng, được thuần hoá và mọc hoang dại ở khắp châu Âu, sang vùng Trung Ðông. Hymalaya đến Bắc Mỹ. Ta có nhập trồng vào khoảng những năm 1960. Cây cần đất tốt và dễ trồng, hoặc bằng hạt, hoặc bằng những đoạn thân ngầm. Trồng theo khoảng cách 40 x 80cm. Thu hoạch rễ vào mùa thu từ cuối thứ hai đầu năm thứ ba, rửa sạch, thái miếng cỡ 2cm, phơi khô ngoài ánh nắng mặt trời hoặc sấy ở nhiệt độ 30o – 45o."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ củ – Radix Inulae Helenii, thường gọi là Thổ mộc hương."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường dùng làm thuốc giúp sự tiêu hoá, ăn ngon cơm, thông tiểu, chữa ho, ho cơn, viêm khí quản, bạch đới, bệnh xanh lướt, thiếu máu; còn dùng chữa ngực bụng quặn đau, ngực sườn bầm tím, đau hai bên sườn, ỉa chảy, kiết lỵ, thai động không yên. Ở Âu Châu, người ta dùng chủ yếu là cồn thuốc (20-30 giọt, 3-4 lần trong ngày với một ít nước). Có khi dạng thuốc nước (đun sôi 1-2 thìa cà phê rễ cắt mịn với 1/2 lít nước và để cho ngấm) hoặc dạng bột (dùng bằng mũi dao) chống sự lười ăn và đau dạ dày, cả trong bệnh viêm phế quản."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

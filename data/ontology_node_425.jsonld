@@ -1,0 +1,207 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Dạ hợp",
+            "ten_khac": "Hoa trứng gà.",
+            "ten_khoa_hoc": "Magnolia coco (Lour.) DC.",
+            "ma_taxon": "348712",
+            "ho": "Mộc lan (Magnoliaceae)",
+            "description": {
+                "@type": "Mô tả",
+                "cây": "Cây bụi hoặc gỗ nhỏ, cao 2 – 4m.",
+                "thân": "Cành nhẵn bóng, hơi có cạnh, có sẹo lá rải rác.",
+                "lá": "Lá mọc so le, hình bầu dục, dài 15 – 17 cm, rộng 5 – 6 cm, gốc thuôn, đầu nhọn, mặt trên nhẵn bóng, gân lá nổi rõ ở cả hai mặt; cuống lá dày, dài 8 – 10 mm.",
+                "hoa": "Hoa to, mọc đơn độc ở đầu cành, màu trắng, rất thơm, có cuống ngắn và nhẵn; đài 6 răng hình mác thuôn, màu lục nhạt sau màu trắng, cánh hoa 6, xếp thành hai vòng; nhị nhiều, thụt, màu trắng, trung đới dày nạc, nhọn đầu; bầu nhắn, nhiều noãn.",
+                "quả": "Quả hình trứng, nhẵn, hơi dẹt.",
+                "mùa hoa": "tháng 5 – 6.",
+                "mùa quả": "tháng 5 – 6."
+            },
+            "distribution": {
+                "@type": "Phân bố",
+                "phân_bố": "Chi Magnolia L. có 12 loài ở Việt Nam, trong đó có một loài lai.  Theo nguyễn Tiến Bân (2003), cây dạ hợp mọc tự nhiên trong rừng thí sinh ở tỉnh Cao Bằng (Quảng Hoà); Vĩnh Phúc (Tam Đảo); Quảng Ninh (Hà Cối, Chúc Phai); Ninh Bình (Cúc Phương, Phúc Nhạc). Song trong quá trình điều tra dược liệu ở Việt Nam, chúng tôi chưa có dịp thu thập được mẫu cây từ hoang dại, mà chủ yếu thấy trồng làm cảnh ở đình, chùa hay rải rác ở các nhà dân (miền Bắc). Về vấn đề này, Võ Văn Chi (1997) cho rằng dạ hợp là cây nhập trồng từ Trung Quốc.  Dạ hợp là loại cây bụi nhỏ hoặc bụi lớn, phân cành nhiều. Cây ưa ẩm và ưa sáng, song cũng có thể hơi chụi bóng, khi được trồng ở vườn nhà. Dạ hợp ra hoa quả nhiều hằng năm, hoa nở vào sau nửa đêm, có mùi thơm và tự thụ phấn. Hiện tại chưa quan sát được cây con mọc từ hạt. Trong nhân dân, người ta thường trồng dạ hợp bằng cách chiết cành."
+            },
+            "additionalInformation": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": ""
+            },
+            "usedParts": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Hoa và thân cây"
+            },
+            "compositionList": {
+                "@type": "Thành phần",
+                "thành phần": "Chủ yếu là nhóm chất lignan và neolignan."
+            },
+            "tasteProperty": {
+                "@type": "Tính vị",
+                "Có vị": "Nụ hoa dạ hợp có vị cay, tính ấm, có tác dụng lý khí, khai khiếu, giải biểu, chỉ thống."
+            },
+            "medicalUseList": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Nụ hoa dạ hợp hãm uống để giải cảm, thông mũi với liều 4-9g một ngày.",
+                "được_dùng": "Hoa thơm để ướp trà và trang trí.  Các bộ phận khác của cây dùng để chữa sốt, thấp khớp mạn tính, đòn ngã tổn thương, khí hư bạch đới, thấp khớp mạn tính, đòn ngã tổn thương, với 15-20g sắc uống.  Hoa thơm để ướp trà và trang trí."
+            },
+            "preparation": {
+                "@type": "Cách dùng",
+                "được_dùng": ""
+            },
+            "caution": {
+                "@type": "Lưu ý",
+                "luu_y": ""
+            },
+            "url": "https://tracuuduoclieu.vn/da-hop.html"
+        }
+    ]
+}

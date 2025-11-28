@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/cang-mai.html",
+      "ten": "Cang mai",
+      "ten_khac": "Xuân tiết, tô đa",
+      "ten_khoa_hoc": "Justicia adhatoda L.",
+      "ma_taxon": "431176",
+      "ho": "Ô rô (Acanthaceae)",
+      "Mô tả": {
+        "cây": "Cây bụi nhỏ hay cây nhỡ, cao 2-7 m.",
+        "thân": "Cành hình trụ nhẵn.",
+        "lá": "Lá mọc đối, hình mác, dài 7 – 25 cm, rộng 2,5 – 7 cm, gốc thuôn, đầu nhọn, mép. nguyên, mặt trên nhẫn, mặt dưới có lông, nhỏ.",
+        "hoa": "Cụm hoa mọc ở đầu ngọn thành bông dày, cuống dài 3 – 7 cm, lá bắc xếp thành 4 hàng, hình trái xoan nhọn đầu, có lông, lá bắc con hình mác, đài có 5 răng không đều, hình mác hẹp, nhọn, có lông nhỏ, tràng dài 2,2 – 2,5 cm, mặt ngoài có lông, ống tràng có một vòng lông ở mặt trong, môi trên khuyết lõm, môi dưới chia 3 thùy, nhị 2 đính ở tràng, bầu có lông.",
+        "quả": "Quả nang, có lông, dài 1,6cm."
+      },
+      "Phân bố": {
+        "phân_bố": "Trong tổng số 33 loài thuộc chi Justica L. đã biết ở Việt Nam, hầu hết các loại đều có dạng sống là cây bụi, bụi nhỏ và đạn cỏ, chỉ có duy nhất loài cang mai trên là cây bụi lớn.  Cang mai là cây ưa sáng và ưa ẩm, song cây cũng có thể hơi chịu bóng. Cây sống được trên nhiều loại đất, ra hoa quả hằng năm."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Lá, vỏ thân, rễ và hạt."
+      },
+      "Thành phần": {
+        "thành phần": "Trong cang mai có chứa tinh dầu, chất béo, resin, alcaloid, acid hữu cơ, đường, chất gôm, chất màu và muối. Lá có chứa alcaloid, vasicolin, adhatodin và betain.  Rễ cang mai chứa peganin (vasicinol) vasicol và một glycosid có tác dụng làm chậm nhịp tim, chống ho, kháng siêu vi khuẩn.  Hoa chứa dihydrochalcon (Phạm Hoàng Hộ, 2006),  Ngoài ra còn chứa các hợp chất khác như vasakin anisotin, justicin, justicidin, neojusticin. và vitamin C [Trung được đại tử điển, 1993]."
+      },
+      "Tính vị": {
+        "Có vị": "Cang mai có vị cay, đắng, tính ấm, có công năng khư phong, hoạt huyết, tán ứ, giảm đau.  Lá và rễ có tính kháng khuẩn đường hô hấp và long đờm. Hoa có tính kháng khuẩn Dầu từ lá, hoa và rễ có tác dụng trên bệnh lao."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá và rễ cang mai sắc uống chữa sốt, sốt rét, ho, viêm phế quản mạn tính, hen suyễn, lao phổi.  Lá còn dùng chữa thấp khớp và làm thuốc sát trùng. Liều dùng 15 – 30g sắc uống để chữa suy g khớp, còn dùng lá giã nát; hơ nóng đắp lên chỗ sưng đau.  Để chữa hen, dùng lá phối hợp với hoa 10 – 15g sắc uống.  Ở Thái Lan là cang mai được dùng trị ho, long đờm do tác dụng giãn phế quản và phân giải chất nhầy; dùng ngoài để cầm máu vết thương. Rễ được dùng trị lao và làm thuốc bổ phổi.  Ở Srilanca, toàn cây được dùng chữa ho, nhiều đờm, còn chữa thống kinh. Lá để sát trùng và diệt ký sinh trùng, côn trùng. Nước sắc của cây chữa lao. Cây cang mai còn được dùng chữa rắn cắn. Rễ, vỏ cây, lá tươi giã nát đắp lên vết rắn cắn. Kết hợp lấy dịch ép hoặc cao nước uống trong [Kirtikar et al., 1998, vol. 3: 1899).  Ở Mianma, toàn cây cang mai sắc uống chữa sốt, nhức đầu, ho, lao, đau bụng, kiết lỵ và kinh nguyệt không đều. Lá giã nát có tính sát trùng, đắp ngoài để chữa vết thương, ghẻ, bệnh ngoài da. Lá tươi giã nát làm thành bánh đắp lên chỗ sưng đau, thấp khớp hoặc đau dây thần kinh. Có thể dùng lá sắc uống. Lá khô chế thành điệu hút như hút thuốc lá để chữa hen. Hoa tươi giã nát, đắp chữa viêm mắt, bệnh về mắt [Perry et al., 1980: 1], [Nadkarni, 1999: 40]. Ở Trung Quốc, người ta đang tràn cây lau thuốc lọ, trú đờm, trị chứng kinh nguyệt quá nhiều của phụ nữ. Cũng chữa phong thấp, đau nhức xương, đau thắt lưng. Lá được dùng chữa thấp khớp, hen, và cháy, lý, nhức đầu, Hoa để chữa đau rát. Toàn cây chữa ho long đờm."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

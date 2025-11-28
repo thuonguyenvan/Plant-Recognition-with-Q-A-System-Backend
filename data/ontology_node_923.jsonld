@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sư nhĩ",
+      "ten_khac": "Ích mẫu nam",
+      "ten_khoa_hoc": "Leonotis nepetifolia (L.) R.Br.",
+      "ma_taxon": "141634",
+      "ho": "Bạc hà (Lamiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao 1 – 1,5 m.",
+      "thân": "Thân mọc đứng, có 4 cạnh tù và mặt rãnh, nhẵn hoặc có ít lông nhất là ở phần non.",
+      "lá": "Lá mọc đối, hình trứng hay mũi mác rộng, dài 5 – 15 cm, rộng 4 – 10 cm gốc cụt hay hình nêm, đầu nhọn, mép khía răng to và sâu, hai mặt có lông tơ ngắn, mặt dưới có gân nổi rõ, cuống dài 3 – 5 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn thành xim co, đường kính 5 – 6 cm; lá bắc hình dải dạng gai cứng và nhọn, dài 1 cm có lông; hoa nhiều, không cuống màu đỏ da cam; đài hoa dài 2 cm, rộng 0,4 cm, hình chuông có ống cong, có lông ở mặt ngoài phần dưới và lông mịn ở phần bên, mặt trong nhẵn, 8 răng dạng gai, những cái ở trên rộng hơn, những cái khác hình tam giác; tràng có ống dài 1 – 1,5 cm, nhẵn ở bên dưới và có lông mịn ở trên, cánh môi 2, mỗi bên dài 8 – 10 mm, khum, có lông rất mịn, môi dưới ngắn, xẻ 3 thuỳ, thuỷ giữa rộng hơn; nhị 4, chỉ nhị nhẵn, đính ở giữa ống tràng; bầu nhẫn có vòi nhụy ngắn.",
+      "quả": "Quả thuôn, dài 3 – 3,5 mm, rộng 1,5 mm, bằng ở đầu, có 3 cạnh.",
+      "mùa hoa": "tháng 7-11",
+      "mùa quả": "tháng 7-11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Leonotis (Pers) R. Br. trên thế giới có khoảng 30 loài phân bố ở nhiệt đới châu Á, châu Phi, ở Việt Nam chi này chỉ có 1 loài với tên gọi là sư nhĩ hay ích mẫu nam kể trên. Cây chỉ thấy phân bố ở các tỉnh phía Nam, bao gồm Bình Định (Phú Mỹ), Phú Yên (Sơn Hoà); Đắk Lắk (ngoại ô TP. Ban Mê Thuột); Gia Lai (Kon Ch’Ro, Mang Yang); Ninh Thuận (Ninh Hải), Đồng Nai (Biên Hoà, Tân Phú); Khánh Hoà (Nha Trang); Bà Rịa – Vũng Tàu (Long Đất), Đồng Tháp (Hồng Ngự); Kiên Giang (Hà Tiên), còn có ở Ấn Độ, Campuchia, Indonesia.",
+      "thường_mọc": "Sư nhĩ là cây ưa ẩm, ưa sáng, thường mọc nơi đất thấp thành từng đám ở ven đường đi, nương rẫy, ven rừng cao su (Ban Mê Thuột) và trên những bãi hoang quanh buôn làng."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, hoa, hạt, rễ phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa chất đắng, dầu béo 1%, một chất nhựa, acid resinic. Hạt chứa glucose, fructose, tinh dầu 2% và một nhóm chất hoá học trong đó có inositol, phosphor, calci. Theo tài liệu khác, ích mẫu nam chứa nepotaefolin (labdan diterpen), methoxy nepataefolin, nepataefolinol và leonotinin, 88, 17, 9, 13 – diepoxylabdan – 16, 15:19, 6β – dilacton, 4, 6, 7 – trimethoxy – 5 – methyl chromen – 2 – on."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá có vị đắng và được coi là loại thuốc bổ đắng, có tác dụng hạ nhiệt, giảm sốt, chống nôn, chống co thắt và trừ giun. Hạt có hoạt tính kháng ký sinh trùng sốt rét (Võ Văn Chi, 1997)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm của một số lương y ở các tỉnh phía Nam, cành lá cây sự nhĩ được dùng thay thế cây ích mẫu.",
+      "làm thuốc": "Lá phơi khô sắc hoặc hãm (như hãm chè) uống có tác dụng chữa ho gà, hen, chữa đau đầu và hạ sốt. Lá sư nhĩ 10 – 20g sắc uống làm thuốc bổ đắng, để chữa sốt, sốt rét. Còn dùng trị hen, ho gà và nhức đầu. Rễ rửa sạch, giã nát đắp ngoài để trị sưng vú.",
+      "chữa": "Ở Ấn Độ, hoa đầu được đốt lấy tro để chữa bỏng nước hoặc bỏng lửa. Tro được trộn với váng sữa bôi lên da chỗ bị viêm, ngứa hoặc chốc đầu trẻ con (Chopra et al., 2001). Nước sắc lá rất đắng để làm thuốc bổ đắng, để phục hồi sức khỏe sau khi khỏi bệnh; phối hợp nước sắc lá với rượu rum và nước vôi trong để chữa sốt, nhức đầu, sốt rét [Nadkarni Ak, 1999: 735]. Lá tươi rửa sạch, giã nát, đắp để trị vết thương do có tính sát trùng. Hạt cũng có tác dụng chữa sốt rét. Rễ tươi rửa sạch, giã nát đắp lên vú khi vú bị sưng, bị tắc tia sữa [Kirtikar et al., 1998, III: 2023).",
+      "ghi_chu": "Ở Việt Nam, cây sự nhĩ nhiều nơi dùng thay cho cây ích mẫu và gọi là ích mẫu nam. không bị ảnh hưởng khi có thêm propranolol"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

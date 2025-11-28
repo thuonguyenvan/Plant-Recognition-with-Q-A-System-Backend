@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đuôi chuột",
+      "ten_khac": "Cỏ đuôi lươn, Bôn bôn, Đũa bếp, Điềm thông",
+      "ten_khoa_hoc": "Stachytarpheta jamaicensis (L.) Vahl",
+      "ma_taxon": "169322",
+      "ho": "Philydraceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống nhiều năm, cao đến 2m.",
+      "thân": "Thân màu lục tím, có 4 cạnh.",
+      "lá": "Lá mọc đối, hình bầu dục, mép có răng, dài 3-8cm, rộng 2-4cm, cuống lá 2-5cm.",
+      "hoa": "Cụm hoa bông mọc đứng ở ngọn cây dài 20-40 cm, nom như cái đuôi chuột. Hoa gắn trong trục lõm; lá bắc của hoa cao 5-10mm, mép có răng; đài hoa có 5 răng; tràng hoa màu lơ (có khi trắng) chia 2 môi, dài 8-10mm; nhị thụt; bầu 2 ô.",
+      "quả": "Quả nang cao 4-5mm, mang đài tồn tại chứa 2 hạt.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của Mỹ châu nhiệt đới, được phát tán vào nước ta, thường gặp mọc ở các bãi hoang, dọc đường đi và quanh làng xóm. Đuôi chuột là cây ưa sáng và ưa ẩm, thường mọc từ hạt vào cuối mùa xuân trên đất ẩm. Cây sinh trưởng nhanh, ra hoa quả nhiều, hạt có sức nảy mầm khỏe. Ở nhiều nơi, đuôi chuột mọc tập trung gần như thuần loại, lấn át các loại cây thảo khác. Đuôi chuột được coi là loài cỏ dại, ảnh hưởng trực tiếp tới cây trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây thu hái toàn cây quanh năm. Rửa sạch, cắt khúc rồi phơi khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong cây có một chất glucosidic.",
+      "gồm chất": "Thân và lá có tarphetamin, lá còn có dopamin là chất có tác dụng chữa cao huyết áp. Rễ có acid chlorogenic và tanin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Đuôi chuột có vị đắng, tính lạnh; có tác dụng thanh nhiệt giải độc, tiêu viêm, lợi tiểu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường dùng chữa:  Nhiễm trùng đường tiết niệu; Đau gân cốt do thấp khớp; Viêm kết mạc cấp; viêm hầu; Lỵ ỉa chảy; Cảm lạnh, ho. Dùng 15-30g, dạng thuốc sắc. Dùng ngoài trị mụn nhọt và viêm mủ da, chấn thương bầm giập. Cây được dùng ở Brazin, dùng ngoài trị loét có mủ, dùng trong trị sốt và viêm thấp khớp, ở Guyana dùng trị lỵ.  Đơn thuốc:  Viêm hầu họng: Đuôi chuột tươi, giã nát, thêm đường, dùng ngậm nuốt nước. Mụn nhọt, viêm mủ da: Đuôi chuột 90g, Ngưu tất 60g. Bọ mắm 60g, giã chung và đắp ngoài. Chấn thương bầm giập: Đuôi chuột, Cỏ cứt lợn, mỗi thứ một ít, giã chung rồi đắp. Tẩy giun cho trẻ em, dùng nước sắc rễ Đuôi chuột, thêm nước ép lá (dịch lá) cho uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

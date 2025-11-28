@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tam thất nam",
+      "ten_khac": "Tam thất gừng, Khương tam thất",
+      "ten_khoa_hoc": "Stahlianthus thorelii Gagnep.",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo không có thân, có thân rễ dày bao bởi những vết của lá đã rụng thường phân nhánh mang nhiều củ nhỏ bằng quả trứng chim xếp thành chuỗi, có rễ con dạng sợi.",
+      "lá": "Lá mọc rời, 3-5 cái, có cuống dài, xuất hiện sau khi cây ra hoa. Phiến lá thuôn dài, chóp nhọn, màu lục, lục pha nâu hay nâu tím, mép nguyên, lượn sóng.",
+      "hoa": "Cụm hoa ở gốc, nằm ở bên lá; cuống hoa dài 6-8cm, ở phía cuối có một lá bắc hình ống, bao lấy hoa. Hoa 4-5 cái, có lá bắc và lá bắc con dạng màng. Tràng hoa màu trắng, họng vàng.",
+      "quả": "Bầu nhẵn, chia 3 ô."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Nam Trung Quốc, Việt Nam, Lào. Ở nước ta, cây mọc hoang ở chỗ ẩm mát, ven bờ suối, hốc khe. Thường được trồng lấy củ làm thuốc. Mặt ngoài của củ có vằn ngang màu đen, trong có chất bột trắng ngà như màu của củ Tam thất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường được dùng chữa: Ðòn ngã sưng đau, phong thấp đau nhức xương; Thổ huyết, chảy máu cam, kinh nguyệt quá nhiều; Trùng độc cắn và rắn cắn. Cũng dùng chữa hành kinh chậm kỳ, máu xấu lởn vởn không tươi, ăn kém tiêu, nôn đầy.",
+      "làm thuốc": "Liều dùng:  4-8g, sắc nước hoặc ngâm rượu uống. Dùng ngoài lấy củ tán bột rắc, đắp.  Đơn thuốc  Chữa kinh nguyệt không đều, loạn kỳ, vòng kinh dài ngắn không chừng, người gầy da xanh sạm, hoặc sau khi sinh rong huyết kéo dài, kém ăn, chóng mặt, đau đầu mỏi mệt. Tam thất gừng, Hồi đầu, hai vị bằng nhau, tán nhỏ, dùng mỗi lần 2-3g, ngày uống 2-3 lần, với nước chín, vào khoảng giữa buổi, và trước khi đi ngủ. Uống 5-7 ngày liền (Lê Trần Ðức).  Ghi chú  Ở Trung Quốc, người ta sử dụng một loài khác gọi là Tam thất khương – Stahlianthus involucratus (King ex Baker) Craib, mà rễ có vị cay, tính hàn; có tác dụng hoạt huyết tán ứ, tiêu sưng giảm đau, dùng trị thổ huyết, ói ra máu, kinh nguyệt quá nhiều và đòn ngã tổn thương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

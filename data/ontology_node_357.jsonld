@@ -1,0 +1,254 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Giảo cổ lam",
+      "ten_khac": "Giảo cổ lam, Cổ yếm, Giảo cổ lam, Dền toòng",
+      "ten_khoa_hoc": "Gynostemma pentaphyllum (Thunb.) Makino",
+      "ma_taxon": "550198",
+      "ho": "Cucurbitaceae (Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá kép mọc so le, gồm 3-7 lá chét hình bầu dục-thuôn hoặc mũi mác, dài 3-9cm, rộng 1,5-3cm, gốc thuôn hẹp, đầu nhọn, mép khía răng, hai mặt có lông, ít khi nhẵn, mặt trên sẫm bóng, mặt dưới rất nhạt, có cuống dài 3-7cm.",
+      "hoa": "Hoa đơn tính khác gốc, mọc ở kẽ lá và đầu ngọn thành chùy buông chõng có thể dài đến 30cm (ở cụm hoa cái ngắn hơn); hoa nhỏ, hình sao, bao hoa rất ngắn, to hơn hoa cái; lá đài hình tam giác nhọn; cánh hoa hình mác rời nhau; nhị 5,bao phấn dính nhau; bầu có 3 vòi nhụy.",
+      "quả": "Quả mọng, nạc, hình cầu, đường kính 5-9mm, nhẵn, khi chín màu đen, hạt 2-3, gần hình ba cạnh, hơi dẹt, đường kính 4mm.",
+      "cây": "Giảo cổ lam là cây thảo mọc leo, sống hằng năm.",
+      "thân": "Thân mảnh, hơi có rãnh, nhẵn.",
+      "cuống": "...",
+      "gốc": "...",
+      "cao": "...",
+      "rễ": "...",
+      "củ": "...",
+      "mọc": "...",
+      "mùa hoa": "tháng 7-8",
+      "mùa quả": "tháng 9-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây này mọc nhiều ở độ cao trên dưới 2000m so với mặt nước biển, trong các khu rừng thưa, ẩm thấp, khí hậu lạnh quanh năm bao gồm: Nhật Bản, Bắc Triều Tiên, Nam Trung Quốc, các tỉnh vùng núi phía Bắc của Việt Nam.  Riêng tại Việt Nam, khi tiến hành cuộc khảo sát dược liệu tại Fansipan, các nhà khoa học Việt Nam đã phát hiện một quần thể rộng lớn cây Giảo cổ lam mọc hoang ở độ cao 1500m thuộc dãy Hoàng Liên Sơn.  Theo thông tin thu thập được, người dân nơi đây đã dùng cây này từ nhiều đời nay nhằm tăng lực, chống mệt mỏi khi đi rừng, tăng cường sức khỏe. Mẫu cây này sau đó được gửi đến Viện Dược liệu Trung ương và đến các phòng nghiên cứu thực vật lớn trên thế giới và xác định đúng là cây Gynostemma pentaphyllum. Qua nghiên cứu cho thấy, giảo cổ lam Việt Nam có chất lượng tương đương với giảo cổ lam của Nhật Bản và Trung Quốc.  Đặc biệt, tại Việt Nam có công ty TNHH Tuệ Linh đã phát triển thành công 1 vùng trồng Giảo cổ lam 5 lá quý hiếm (Ngũ diệp sâm) rộng 5 ha đạt chuẩn thực hành tốt trồng trọt và thu hái của Tổ chức Y tế thế giới (GACP – WHO) tại Mộc Châu. Được biết, đây chính là giảo cổ lam mà các quốc gia như Nhật Bản, Trung Quốc đặc biệt ưa chuộng. Kể từ khi phát hiện ra Giảo cổ lam vào năm 1997, GS.TS Phạm Thanh Kỳ (Thầy thuốc nhân dân, nguyên hiệu trưởng ĐH Dược Hà Nội) đã đăng ký đề tài nghiên cứu khoa học cấp Nhà nước.  Cho đến nay, GS.TS Phạm Thanh Kỳ cùng với các nhà khoa học Viện dược liệu, Bộ môn Dược lý Trường đại học Y Hà Nội và công ty TNHH Tuệ Linh đã phối hợp nghiên cứu làm rõ tác dụng hạ đường huyết, mỡ máu và huyết áp của cây thuốc quý này. Để mua đúng loại giảo cổ lam 5 lá này, các bạn có thể liên hệ với công ty TNHH theo số hotline của công ty là 18001190.  Hình 2: Vùng trồng Giảo cổ lam 5 lá (Ngũ diệp sâm) lớn nhất Việt Nam đạt chuẩn GACP-WHO tại Mộc Châu.",
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Nhật Bản"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Bắc Triều Tiên"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Nam Trung Quốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "các tỉnh vùng núi phía Bắc của Việt Nam"
+        }
+      ]
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần hoạt chất chính của Giảo cổ lam: Saponin, flavonoid, polysaccharid.",
+      "gồm chất": "...",
+      "Các hợp chất": "...",
+      "chứa": "...",
+      "triết xuất": "...",
+      "đã nghiên cứu": "...",
+      "tìm thấy": "...",
+      "thủy phân": "...",
+      "các hoạt chất": "...",
+      "tinh dầu chứa": "...",
+      "có hoạt chất": "...",
+      "dấu hiệu đặc trưng": "..."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Giảo cổ lam vị rất giống nhân sâm, trước đắng sau ngọt (tiền khổ hậu cam cam)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Giảo cổ lam là một trong những cây dược liệu cổ quý hiếm được biết đến với rất nhiều tác dụng trong y học. Dược liệu này đã được sử dụng từ rất lâu đời ở các nước như Nhật Bản, Ấn Độ, Indonesia, Triều Tiên, đặc biệt là Trung Quốc.  Ở Trung Quốc, Giảo cổ lam đã được các vua chúa Trung Quốc sử dụng từ xa xưa để tăng cường sức khỏe, kéo dài tuổi thọ và làm đẹp. Cây này được hoàng đế Tần Thủy Hoàng ưa dùng với mong muốn trường sinh bất lão, do vậy giảo cổ lam còn được gọi là cỏ trường thọ.  Ở Nhật Bản, năm 1976, các nhà khoa học tình cờ phát hiện ra Giảo cổ lam khi nghiên cứu một bộ lạc sống trên vùng núi cao có tuổi thọ bình quân xấp xỉ 100 tuổi. Nguyên nhân là do người dân nơi đây đã dùng giảo cổ lam, chế biến thành trà uống hàng ngày, để tăng cường sức khỏe. Người dân Nhật Bản gọi giảo cổ lam với cái tên Phúc Âm Thảo.  Giảo cổ lam đã được ghi trong sách cổ “Nông chính toàn thư hạch chú”, quyển Hạ năm 1694 và trong cuốn “Từ điển cây thuốc Việt Nam” với những công dụng sau:  Ba chống: Chống u, chống lão hóa, chống mệt mỏi Ba giảm: Giảm béo, giảm căng thẳng, giảm nám sạm da Năm tốt: Ăn ngủ tốt, tiêu hóa tốt, da dẻ tốt, sức khỏe tốt và giúp tỉnh táo.  Ngày nay, trải qua nhiều năm nghiên cứu, các nhà khoa học đã chứng minh được công dụng của giảo cổ lam với sức khỏe con người.",
+      "được_dùng": "...",
+      "làm thuốc": "...",
+      "có tác dụng": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "chữa": "..."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "...",
+      "làm thuốc": "...",
+      "có tác dụng": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "phơi khô": "...",
+      "xấy khô": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

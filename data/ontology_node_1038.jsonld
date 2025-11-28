@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lá dong",
+      "ten_khac": "Dong, Cây lùn, Toong chinh, Lá dong",
+      "ten_khoa_hoc": "Phrynium parviflorum Roxb.",
+      "ma_taxon": null,
+      "ho": "Marantaceae (Dong)",
+      "Mô tả": {
+        "cây": "Cây thảo, mọc đứng, sống nhiều năm, cao 50 – 70 cm, có khi hơn.",
+        "thân": "Thân rễ mập dài, hình trụ, màu trắng đục phủ bởi hai hàng vảy mỏng, hình tam giác nhọn.",
+        "lá": "Lá mọc ốp vào nhau ở phía gốc, các lá ở phía trên có cuống dài, hình trái xoan – mũi mác, gốc tròn không cân, đầu nhọn; bẹ lá hẹp dài, mặt trên nhẵn bóng, mặt dưới có ít lông.",
+        "hoa": "Cụm hoa mọc thành chùm chuỳ ở ngọn thân; lá bắc hình dải nhọn; hoa màu trắng, đài hình trái xoan – mũi mác; tràng hình ống, phình lên ở gốc, chia ba thuỳ đều nhau, các nhị ở phía ngoài biển thành môi, các nhị lép ở trong ngắn hơn, bầu là do tiêu giảm.",
+        "quả": "Qủa nang, hình trứng thuôn, chỉ có một hạt, màu đỏ nhạt.",
+        "mùa hoa": "tháng 4 – 6",
+        "mùa quả": "tháng 4 – 6"
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Thân rễ chứa 10% tinh bột, 0,45% protid, 0,1% lipid. Theo tài liệu khác thân rễ chứa 85,95% carbohydrate (Võ Văn Chi, 1997)."
+      },
+      "Tính vị": {
+        "Có vị": "Củ dong có vị ngọt nhạt, tính mát có tác dụng thanh nhiệt, giải độc, lợi tiêu hoá."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá dong được dùng chủ yếu để gói bánh chưng, bánh chưng gói lá dong sau khi luộc lên có một mùi thơm đặc biệt và dễ chịu. Lá dong non được dùng chế dấm: Lá dong non nhúng vào rượu, hoặc lá dong ngâm trong nước đường (một phần đường, ba phần nước).  Lá dong được nhân dân dùng làm thuốc giã rượu chữa say rượu, còn dùng làm thuốc giải độc: Ngày uống 100-200g giã nát, vắt lấy nước cho uống. Chữa rắn cắn: Lá dong nhai nát nuốt nước lấy bã đắp lên nơi rắn cắn.  Bột củ dong rất mịn, dễ tiêu hoá nên được dùng làm thức ăn cho trẻ em và người yểu mệt. Khi có bệnh đường tiết niệu (như đái dắt, khó đái, nước đái đỏ hoặc bất thường), lấy 7 – 10g bột củ dong, đun sôi với nửa lít nước hoặc sữa đến chín bột, rồi uống. Khi bị kiết lỵ, lấy 15g bột củ dong hoà với 250ml nước ngọt mà uống.  Nhân dân thường luộc củ dong để ăn, hoặc chiếc thành bột để làm thực phẩm hoặc tá dược.  Ở Đồng A và Đông Nam Á, bột củ dong còn được dùng chữa bệnh đường tiết niệu hoặc rối loạn tiêu hoá [Perry Lu và Metzger J., 1980, Med. Plants of East and Southeast Asia. MIT Press, Cambridge – Massachusetts – London. p.257] Ở Ấn Độ, người ta dùng củ dong chống sung huyết, đòn ngã tổn thương, làm dịu [Kirtikar et al., 1998, Ind. Med. Plants, Dehra Dun – India], cũng dùng làm chất dinh dưỡng, dễ tiêu hoá cho trẻ em, người tàn tật, người dưỡng bệnh trong thời gian lại sức. Thường chế thành các thực phẩm chế biến sẵn như bánh bích quy, bánh ngọt, bánh pút đinh để tráng miệng hoặc làm mứt [Chopra et al. 1998, Supplement to Glossary of ind. Med. Plants, NISC New Delhi, p.65]."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang ở khắp núi rừng những nơi ẩm ướt. Còn thấy mọc ở Ấn Độ, Inđonesia, nam Trung Quốc. Được trồng để lấy lá gói bánh. Lá còn dùng làm thuốc, có thể thu hái quanh năm. Dùng tươi."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

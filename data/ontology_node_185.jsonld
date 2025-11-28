@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dương địa hoàng",
+      "ten_khac": "Dương địa hoàng",
+      "ten_khoa_hoc": "Digitalis purpurea L.",
+      "ma_taxon": "53983",
+      "ho": "Scrophulariaceae (Hoa mõm chó)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "phiến lá dài 10-30cm, hình bầu dục và có lông mềm",
+        "hoa": "Hoa có màu tía đẹp, hình chuông, dạng như ngón của găng tay; phần dưới và trong của hoa hơi sáng hơn với các chấm màu sẫm.",
+        "quả": "Quả nang, hình trứng, màu nâu, đầu có mũi nhọn, khi chín mở ra thành 2 mảnh; hạt nhỏ rất nhiều, màu nâu sáng, hơi sần sùi.",
+        "cây": "Cây thảo lớn, sống 2 năm, cao 0,5-1,5m tạo thành trong năm đầu một vòng lá hoa thị ở gốc",
+        "thân": "năm thứ hai, cây mới tạo một cán hoa và lá, cao tới 1-2m. ít khi phân nhánh.",
+        "mùa hoa": "tháng 5-9."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Cây của châu Âu, ta nhập trồng ở Hà Nội (Văn Điển), Vĩnh Phú (Tam Đảo) và Lào Cai (Sapa). Gieo trồng bằng hạt. Khi cây mọc, bứng cây ra cấy ở ruộng với khoảng cách 10x 25cm. Thu hái lá năm đầu vào mùa thu, phơi khô. Cây ưa khí hậu ẩm, mát với điều kiện phát triển thích hợp từ 15-20 độ C. Về mùa đông cây có hiện tượng tàn lụi, sinh trưởng mạnh nhất vào tháng 3-6. Cây trồng ở Sapa ra hoa quả nhiều. Hạt giống gieo trồng được.",
+        "Đặc điểm sinh trưởng": "Cây ưa khí hậu ẩm, mát với điều kiện phát triển thích hợp từ 15-20 độ C. Về mùa đông cây có hiện tượng tàn lụi, sinh trưởng mạnh nhất vào tháng 3-6."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lá của năm thứ nhất và năm thứ hai. Lá dương địa hoàng được dùng làm nguyên liệu glycosid chữa tim"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Tất cả các bộ phận cây đều chứa glucoside, trong đó có digitoxin (0,15-0,79g/kg lá khô), gitoxin (0,1-0,7g/kg lá khô) và gitalin, girorin, girotin… Còn có tanin, inositol, luteolin và nhiều acid và chất béo."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Với liều dược dụng, nó làm cho tim hoạt động, làm cho hưng phấn, cường tim, tăng thêm sức co bóp của tim và làm cho tim đập dịu; còn có tác dụng lợi tiểu. Với liều cao, nó gây độc mạnh."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Làm thuốc điều hoà hoạt động của tim và làm thuốc trị phù thũng toàn thân. Dùng ngoài làm cho vết thương chóng lành."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

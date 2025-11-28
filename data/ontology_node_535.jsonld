@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/muong-nuoc.html",
+      "ten": "Muồng nước",
+      "ten_khac": "Chi chi, muồng ràng ràng, lõi tiên.",
+      "ten_khoa_hoc": "Adenanthera microsperma Teijsm. et Binn.",
+      "ma_taxon": "487648",
+      "ho": "Trinh nữ (Mimosaceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây to, cao 10 – 18m.",
+        "thân": "Cành hình trụ, vặn vẹo, nhẵn.",
+        "lá": "Lá kép hai lần lông chim, mọc gần nhau, có cuống chung mập, dài khoảng 40 cm, lá chét không đều (lá chét nhỏ hơn lá chét của cây trạch quạch), 6 đôi có lá tận cùng, mọc so le, hình trái xoan – thuôn, dài 1,5 – 3,5 cm, rộng 10 – 20 mm, mặt trên nhẫn, mặt dưới rất nhạt, hơi có lông áp sát.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành bông, dài 15 cm, có lông nhỏ hoặc nhẵn; lá bắc sớm rụng; hoa nhỏ, nhiều, màu vàng mọc thành vòng dày đặc, đài dạng đấu có răng tù và nhiều lông, cánh hoa học ngang, thắt lại ở hai đầu; nhị 10, chỉ nhị ngắn; bầu có ít lông, chứa nhiều noãn.",
+        "quả": "Quả dài 15 – 20 cm, rộng 1,5 cm, hình lưỡi liềm, xoắn vặn, hạt hình thận, khi chín màu đỏ bóng, có rốn đen.",
+        "mùa hoa": "tháng 5",
+        "mùa quả": "tháng 10."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Adenanthera L., có 3 loài ở Việt Nam, trong đó, 2 loài có công dụng làm thuốc là Adenanthera payonina L. và cây muống nước nêu trên. Muồng nước phân bố rộng rãi ở các tỉnh thuộc vùng núi thấp, từ Yên Bái, Lạng Sơn… vào đến tận Đồng Nai, Bà Rịa – Vũng Tàu. Ở châu Á, loài này cũng thấy ở Nam Trung Quốc, Lào, Campuchia, Thái Lan, Mianma, Malaysia và Indonesia.",
+        "thường_mọc": "Muồng nước là loại cây gỗ nhỏ, ưa sáng, thường mọc rải rác trong các quần thể như ven rừng kín thường xanh, rừng hỗn giao với tre nứa hoặc với một số loài cây rụng lá vào mùa khô (miền Nam).",
+        "Đặc điểm sinh trưởng": "Là loại cây mọc nhanh, muồng nước còn xuất hiện sớm trên những chỗ đất trống ở trong rừng rừng thứ sinh do khai thác chọn (cây gỗ) hoặc ven các bờ sông suối ở cửa rừng. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Vỏ thân và hạt."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Theo Trung được từ hải II”, 1996, muồng nước chứa stigmasterol glucosid, α – spinasterol glucosid, β- sitosterol glucosid, dulcitol polysaccharid, acid palunitic, acid stearic, acid arachidic, acid eicosenoic."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Vỏ và rễ muồng nước có vị chát, nhạt, tính hơi hàn, ít độc, có tác dụng làm nôn, ta hạ, thu liễm, cầm máu."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Hạt muồng nước nghiền nát, đắp ngoài làm nhọt chóng mưng và vỡ mủ.",
+        "chữa": "Vỏ thân trị kiết lỵ, ngày 4 – 6g sắc uống, hoặc tán bột rồi hãm uống.",
+        "được_dùng": "Ở Trung Quốc, nhân dân dùng hạt, rễ, lá muồng nước trị ngoại thương xuất huyết, nhức nửa đầu. Ở Campuchia, người ta dùng vỏ tươi hoặc khô, hãm uống trị kiết lỵ, tác dụng có thể hơn cả chiêu liêu."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": null
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

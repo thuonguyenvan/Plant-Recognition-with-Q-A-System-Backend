@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây chè",
+      "ten_khac": "Rau ráu, Dạ khiên ngưu, Dây chè, Đỏ ngọn",
+      "ten_khoa_hoc": "Vernonia andersoni C. B Clarke",
+      "ma_taxon": "954524",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "hình bầu dục hoặc hình trứng, cuống ngắn, dài 5-9cm, rộng 3-6cm, gốc tròn, đầu nhọn, mặt trên nhẵn, mặt dưới có lông",
+      "cây": "Dây leo, dài 8-10m.",
+      "thân": "Thân cành mảnh, phủ lông mịn màu hung.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành chuỳ dài gồm nhiều đầu; lá bắc xếp thành nhiều dãy; tràng hình ống phình ở họng, bao phấn có tai ngắn, mào lông bằng nhau, màu hung đỏ.",
+      "quả": "Quả bế, có lông, 10 khía dọc."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Vernonia Schreb. là một chi lớn gồm các loài phân bố rải rác khắp các vùng ôn đới ấm, cận nhiệt đới và nhiệt đới. Ở Việt Nam, có 25 loài, hầu hết là các dạng dây leo, thân cỏ và duy nhất chi có một loài là cây gỗ.  Dây chè phân bố rải rác khắp các tỉnh miền núi phía Bắc và Tây Nguyên. Cây thường mọc lẫn với các loại cây bụi hay cây gỗ nhỏ khác ở ven rừng ẩm, bờ nương rẫy hay rừng non tái sinh trên đất sau nương rẫy.  Cây ưa sáng và chịu được bóng, nhất là ở thời kỳ cây còn nhỏ. Những cành được chiếu sáng đầy đủ sẽ ra hoa quả nhiều; quả bế có túm lông, phát tán nhờ gió. Dây chè có khả năng tái sinh chồi khoẻ sau khi bị chặt. Cây trồng được bằng hạt.",
+      "thường_mọc": "Cây thường mọc lẫn với các loại cây bụi hay cây gỗ nhỏ khác ở ven rừng ẩm, bờ nương rẫy hay rừng non tái sinh trên đất sau nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và thân dây thu hái quanh năm, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ và cành dây chè chứa alcaloid độc là vernonin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây chè có vị đắng, cay, tính mát, hơi độc, có tác dụng khử phong thanh nhiệt, hoạt huyết, thông mạch, thư cân, triệt ngược."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dây chè được dùng chữa cảm sốt, phong thấp. Liều dùng 20-40g sắc nước uống.  Dùng chữa sốt rét cơn, lấy 160g sắc nước, chia uống nhiều lần.  Dây chè cũng được nhân dân nấu uống như chè cây, và đặc biệt dùng cho phụ nữ sau khi đẻ, uống cho thông huyết và thông sữa; sắc mỗi ngày 20-30g; nếu ít sữa thì có thể dùng liều lượng gấp đôi mà không hạn chế.  Ở Hải Nam – Trung Quốc, thân và rễ dây chè phơi khô sắc uống chữa phong thấp, đau nhức, đau họng, đau bụng khi hành kinh và vết thương do đâm chém. Liều dùng mỗi ngày: 10-20g sắc nước uống.  Dùng ngoài, lấy nước sắc rửa vết thương hoặc ngâm lát cắt vào nước muối rồi ngậm chữa đau răng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Rễ và thân dây chè có độc, khi sử dụng phải cẩn thận. Dùng quá liều có thể bị ngộ độc với các triệu chứng đau bụng đi ngoài, đau đầu, hoa mắt, nói lảm nhảm. Cấp cứu ngộ độc bằng gây nôn, rửa dạ dày, uống lòng trắng trứng gà, chè đặc, tiêm glucose, điều trị triệu chứng dùng thuốc an thần.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam, 3033 cây thuốc Đông y Tuệ tĩnh"
+    }
+  ]
+}

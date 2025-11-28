@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Thiên Ma",
+      "ten_khac": "Minh thiên ma, Xích tiễn, Định phong thảo",
+      "ten_khoa_hoc": "Gastrodia elata Blume",
+      "ma_taxon": "429605",
+      "ho": "Lan (Orchidaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân rễ hình bầu dục hoặc dạng thanh mỏng, quăn lại và hơi cong queo, dài 3 – 15cm, rộng 1,5 – 6cm, dày 0,5 – 2cm.",
+      "mặt": "Mặt ngoài màu trắng đến hơi vàng, hoặc nâu hơi vàng, có vân nhăn dọc và nhiều vân vòng tròn ngang của những chồi búp tiềm tàng, đôi khi là những cuống noãn màu nâu hiện ra rõ rệt.",
+      "đầu": "Đỉnh dược liệu có những chồi hình mỏ vẹt, màu nâu đỏ đến nâu sẫm hoặc có những vết của thân; Phía dưới có một vết sẹo tròn.",
+      "cây": "Chất cứng rắn như sừng, khó bẻ gãy, mặt bẻ tương đối phẳng, màu trắng hơi vàng đến màu nâu. Mùi nhẹ, vị hơi ngọt."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Thiên ma có tác dụng an thần chống co giật. Thuốc có tác dụng làm giảm đau, tác dụng giảm đau của loại mọc hoang mạnh hơn loại trồng. Thuốc chích Thiên ma và loại do nhân tạo cũng có tác dụng giảm đau. Thuốc còn có tác dụng kháng viêm. Thiên ma làm tăng cường lưu lượng máu ở tim và não, làm giảm lực cản của mạch máu, làm giãn mạch ngoại vi, có tác dụng hạ áp, làm chậm nhịp tim, nâng cao sức chịu đựng thiếu oxy của động vật thí nghiệm. Polysaccharide của Thiên ma có hoạt tính miễn dịch."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

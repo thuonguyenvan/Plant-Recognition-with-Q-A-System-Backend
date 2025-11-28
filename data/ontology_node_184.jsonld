@@ -1,0 +1,198 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bách hợp",
+            "ten_khac": "Bách hợp, Tỏi trời, Tỏi rừng, Sluốn phạ, Khẻo ma (Tày), Kíp pá (Thái), Cà ngái dòi (Dao)",
+            "ten_khoa_hoc": "Lilium brownii F. E. Brown ex Mill. var. viridulum Baker",
+            "ma_taxon": "556187",
+            "ho": "Liliaceae ( Loa kèn)",
+            "Mô tả": {
+                "cây": "Cây thảo sống lâu năm, cao 60 – 100 cm.",
+                "thân": "Thân thẳng đứng, hình trụ, trên thân có thể có đốm màu tím nâu.",
+                "rễ": "Rễ phát triển từ phần dưới của thân hành.",
+                "củ": "Thân hành (củ) hình cầu, màu trắng, mọng nước, đường kính 3 – 4 cm, dài 3.5 – 5 cm, phần trên xòe ra như hoa sen.",
+                "lá": "Lá mọc so le thành 4 – 5 hàng dọc theo thân. Không có cuống lá, phiến lá hình mũi mác hẹp hoặc thuôn dài, dài 4.5 – 10 cm, rộng 8 – 20 mm. Đầu lá nhọn, gốc lá thuôn dần, mép lá nguyên hoặc hơi gợn sóng. Có 5 gân lá chạy song song.",
+                "hoa": "Hoa to, mọc đơn độc trên đỉnh thân, đôi khi có hơn một hoa. Cuống hoa dài 3 – 10 cm. Cánh hoa có 6 cánh, màu trắng sữa hoặc hơi nâu nhạt, hình trứng ngược. Nhị hoa: 6 nhị, bao phấn hình sợi dài, gắn vào chỉ nhị theo kiểu đính chữ T. Nhụy hoa: 1 nhụy, bầu nhụy hình trụ, chia 3 ngăn, mỗi ngăn chứa nhiều noãn. Đầu nhụy hình khiên, hơi phình to.",
+                "quả": "Quả nang hình trứng dài, có màu xanh lục, khi chín nứt theo vách ngăn. Bên trong chứa nhiều hạt.",
+                "mùa hoa": "tháng 6 – 8",
+                "mùa quả": "tháng 9."
+            },
+            "Phân bố": {
+                "phân_bố": null
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": "Theo các tài liệu y học cổ Trung Quốc, dược liệu Bách hợp có các quan điểm khác nhau về đường kinh quy nạp:  Theo Lôi Công Bào Chế Dược Tính Giải: Quy vào tâm (tim), phế (phổi), đại trường, tiểu trường. Theo Bản Thảo Hội Ngôn: Quy vào tỳ (tay và chân thái âm), can (tay và chân quyết âm), vị (tay và chân dương minh). Theo Dược Phẩm Hóa Nghĩa: Quy vào phế (phổi), tâm (tim), đởm (mật).  Nhìn chung, Bách hợp chủ yếu quy vào kinh tâm và phế, nhưng tùy theo từng quan điểm mà có thể mở rộng thêm các kinh khác như đại trường, tiểu trường, tỳ, can, vị, đởm."
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": null
+            },
+            "Thành phần": {
+                "thành phần": "Cây Bách hợp có thành phần hóa học phong phú, đặc biệt là trong phần thân hành (củ) và bao phấn (nhị hoa):  Thân hành (củ) chứa alkaloid như colchicine cùng với tinh bột, protein, chất béo.  Bao phấn của giống Bách hợp thơm chứa nhiều carotenoid, trong đó chủ yếu là zeaxanthin ester, chiếm 91,7 – 94%. Bao phấn của giống Bách hợp cuộn (Lilium lancifolium, hay còn gọi là “quyển đan”) chứa:2,68% nước, 4,17% tro, 21,29% protein, 12,43% chất béo, 3,61% tinh bột, 11,47% đường khử.  Các vitamin quan trọng:  Vitamin B1: 443 µg/100g Vitamin B2: 1829 µg/100g Axit pantothenic (Vitamin B5): 306 µg/100g Vitamin C: 21,2 mg/100g Các sắc tố tự nhiên như β-carotene.  Nhờ vào thành phần này, Bách hợp không chỉ là một dược liệu quý mà còn có giá trị dinh dưỡng cao."
+            },
+            "Tính vị": {
+                "Có vị": "Theo các tài liệu y học cổ Trung Quốc, tính vị của dược liệu Bách hợp được mô tả như sau:  Theo Thần Nông Bản Thảo Kinh (本经): Vị ngọt, tính bình. Theo Bị Lục (别录): Không độc. Theo Cứu Hoang Bản Thảo (救荒本草): Vị ngọt, cay, tính bình. Theo Trường Sa Dược Giải (长沙药解): Vị ngọt hơi đắng, tính hơi hàn.  Nhìn chung, Bách hợp có vị ngọt là chủ đạo, tính bình hoặc hơi hàn, có quan điểm bổ sung thêm vị cay hoặc hơi đắng."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Bách hợp chủ yếu được dùng trong điều trị ho khan, ho nhiệt, bệnh phế táo, mất ngủ, tâm thần bất an, phù thũng và một số bệnh do nhiệt độc hoặc rối loạn khí huyết. Cụ thể:  Công dụng chính:  Nhuận phế, chỉ khái: Điều trị ho khan do phế táo (khô phổi) hoặc âm hư, có thể kèm theo ho ra máu. Thường được kết hợp với Xuyên bối mẫu.  Thanh tâm, an thần: Giúp giảm bồn chồn, mất ngủ, thần trí hoảng hốt sau bệnh nhiệt. Thường kết hợp với Địa hoàng.  Lợi tiểu, giảm phù: Giúp tiêu phù nề, đặc biệt trong chứng phù thũng do khí huyết không lưu thông tốt.  Theo các tài liệu cổ:  Thần Nông Bản Thảo Kinh: Chữa tà khí, đầy trướng bụng, đau tim, lợi tiểu, bổ trung ích khí. Bị Lục: Trị phù thũng, đầy trướng, bế tắc khí huyết, đau nhức toàn thân, khó khăn khi cho con bú, đau họng, chảy nước mắt mũi. Dược Tính Luận: Chữa đau tức dưới tim, bệnh phù chân, ho nóng nghịch khí. Thực Liệu Bản Thảo: Chữa tình trạng tim đập nhanh, vàng da. Nhật Hoa Tử Bản Thảo: An tâm, định thần, bổ ngũ tạng, chữa tâm thần bất ổn, điên loạn, sợ hãi, sát trùng, tiêu viêm mủ (đinh nhọt, ung nhọt, sản hậu huyết cuồng). Bản Thảo Diễn Nghĩa: Điều trị chứng “bách hợp bệnh” (các chứng rối loạn sau sốt kéo dài). Bản Thảo Mông Toàn: Trị dịch bệnh gây ho nghịch khí. Y Học Nhập Môn: Chữa phế suy, phế ung (ho ra mủ, lao phổi). Cương Mục Thập Di: Thanh trừ đàm hỏa, bổ hư tổn. Thảo Dược Thường Dùng tại Thượng Hải: Chữa ho do phế nhiệt, ho khan lâu ngày, sốt sau bệnh gây bồn chồn mất ngủ."
+            },
+            "Cách dùng": {
+                "được_dùng": "Chữa các triệu trứng đau ngực, thổ huyết: Bách hợp giã tươi lấy nước uống. Chữa viêm phế quản, các chứng ho: Bách hợp 30g, mạch môn đông 10g, bách bộ 8g, thiên môn đông 10g tang bạch bì 12g, ý dĩ nhân 15g, nước 1000ml. sắc còn 400ml. Chia 3 lần uống trong ngày.  Chữa ho lâu ngày không dứt, hoặc ho ra máu (Bách Hoa Cao – Tế Sinh Phương)  Nguyên liệu: Khoản đông hoa, Bách hợp (sao hoặc hấp) lượng bằng nhau. Cách dùng: Tán thành bột mịn, luyện với mật thành viên to bằng mắt rồng. Mỗi lần dùng 1 viên, sau bữa ăn hoặc trước khi ngủ, nhai kỹ và nuốt với nước gừng, để ngậm tan từ từ càng tốt.  Chữa giãn phế quản, ho ra máu (Tân Cương Trung Thảo Dược Thủ Sách)  Nguyên liệu: Bách hợp 80g, Bạch cập 160g, Bột sò điệp 80g, Bách bộ 40g. Cách dùng: Tán thành bột mịn, luyện mật thành viên 8g. Mỗi lần dùng 1 viên, ngày 3 lần.  Chữa ho ra máu do bệnh phổi (Vệ Sinh Dịch Giản Phương)  Nguyên liệu: Bách hợp tươi giã lấy nước cốt. Cách dùng: Uống cùng nước hoặc nấu chín ăn.  Chữa nóng ran ở vùng phổi, ho, đau họng, ho ra máu, cảm giác lạnh, đau lan từ ngón tay cái lên vai và ngực như bị đốt cháy (Bách Hợp Cố Kim Thang – Thận Trai Di Thư)  Nguyên liệu: Thục địa, Sinh địa, Đương quy thân mỗi vị 12g, Bạch thược, Cam thảo mỗi vị 4g, Cát cánh, Huyền sâm mỗi vị 3g, Bối mẫu, Mạch môn, Bách hợp mỗi vị 6g. Cách dùng: Nếu ho nhiều, khi mới uống 1-2 thang thì thêm 20 hạt Ngũ vị tử.  Chữa nóng phổi gây phiền táo, khó chịu (Thánh Huệ Phương)  Nguyên liệu: Bách hợp tươi 160g, mật ong 20g. Cách dùng: Trộn đều, hấp mềm, mỗi lần ngậm một lát nhỏ, nuốt nước bọt từ từ.  Chữa “bách hợp bệnh” sau khi ra mồ hôi (Bách Hợp Tri Mẫu Thang)  Nguyên liệu: Bách hợp 7 miếng (bóc vỏ), Tri mẫu 120g (thái lát). Cách dùng: Rửa sạch Bách hợp, ngâm nước qua đêm cho ra bọt trắng, thay nước mới 400ml, sắc lấy 200ml nước thuốc. Riêng Tri mẫu sắc với 400ml nước lấy 200ml. Hợp hai nước sắc, tiếp tục sắc còn 300ml, chia làm 2 lần uống trong ngày.  Chữa phế nhiệt, phiền táo, ho khan  Nguyên liệu: Bách hợp tươi 160g, mật ong vừa đủ. Cách dùng: Hấp mềm, mỗi lần ngậm một lát, nuốt nước bọt từ từ.  Chữa ho ra máu do bệnh phổi  Nguyên liệu: Bách hợp tươi giã lấy nước cốt. Cách dùng: Uống với nước hoặc nấu chín rồi ăn cũng có tác dụng.  Chữa phong chẩn di chuyển (mụn nước do dị ứng)  Nguyên liệu: Muối bùn 80g, Bách hợp 20g, Hoàng đơn 8g, giấm 4g, nước bọt 16g. Cách dùng: Giã nhuyễn, trộn đều, đắp lên vùng da bị tổn thương.  Chữa mụn nhọt không mưng mủ  Nguyên liệu: Bách hợp hoang và muối. Cách dùng: Giã nát, đắp lên vùng da bị tổn thương.  Chữa bệnh mụn nước  Nguyên liệu: Bách hợp tươi. Cách dùng: Giã nát, đắp lên vết thương. Hoặc dùng hoa Bách hợp phơi khô, tán bột, trộn với dầu thực vật bôi ngoài da.  Chữa đi ngoài ra máu (trĩ xuất huyết)  Nguyên liệu: Hạt Bách hợp sao vàng. Cách dùng: Tán thành bột, pha nước ấm uống.  Chữa suy nhược thần kinh, mất ngủ, bồn chồn (Tân Cương Trung Thảo Dược Thủ Sách)  Nguyên liệu: Bách hợp 20g, Toan táo nhân 20g, Viễn chí 12g. Cách dùng: Sắc với 600ml nước, còn 300ml, chia 2 lần uống trong ngày.  Chữa áp xe phổi (Kinh Nghiệm Quảng Tập – Bách Hợp Tiên)  Nguyên liệu: Bách hợp trắng, có thể luộc hoặc hấp. Nếu trộn mật ong rồi hấp càng tốt. Cách dùng: Ăn thường xuyên.  Chữa chàm thể tạng (eczema) (Tân Lâm Tập Giản Phương)  Nguyên liệu: Bách hợp tươi giã nhuyễn. Cách dùng: Đắp lên vùng da tổn thương, thay mỗi ngày.  Chữa điếc tai, đau tai (Thiên Kim Phương)  Nguyên liệu: Bách hợp khô tán bột. Cách dùng: Mỗi lần uống 8g với nước ấm, ngày 2 lần.  Tránh nhầm cây bách hợp với cây tỏi voi hay Loa kèn đỏ (Amaryllis belladona Sw), họ Thuỷ tiên (Amaryilidaceae) (1) có tép to, mỏng uống vào dễ bị nôn."
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

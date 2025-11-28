@@ -1,0 +1,235 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bồ công anh thấp",
+      "ten_khac": "Bồ công anh thấp, Hùng hoa địa đinh, Bồ công anh trung quốc, Sư nha",
+      "ten_khoa_hoc": "Taraxacum officinale (L.) Weber ex Wigg",
+      "ma_taxon": "47602",
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": "Cụm hoa là từng đầu riêng biệt màu vàng trên một cuống dài 10 – 20 cm, rỗng, xuất phát từ kẽ lá, tỗng bao lá bắc hình chuông gồm nhiều dãy, những lá phía ngoài xoè ra và gập xuống, các lá phía trong mọc thẳng đứng, hoa toàn hình lưỡi nhỏ có màu nâu. Ở mặt lưng, đầu nhụy chẻ đôi.",
+        "quả": "Quả bế có 10 nếp nhăn, tận cùng bằng chòm lông trắng trên một cuống dài mảnh.",
+        "cây": "Cây thảo nhỏ, sống một năm hay nhiều năm, cao 20 – 40cm, không có thân.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": "Rễ đơn, hình trụ, dài, mập, mặt ngoài màu nâu, mặt trong màu trắng.",
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Taraxacum Wigg có khoảng 40 loài trên thế giới, gồm những cây thảo sống một năm hay nhiều năm. Chúng phân bố chủ yếu ở vùng ôn đới ấm hoặc vùng á nhiệt đới, thuộc châu Âu, Châu Mỹ và châu Á. Ở Việt Nam, có tài liệu cho rằng nó được nhập vào Việt Nam từ lâu, nay trở nên hoang dại ở một số vùng núi cao từ 900m trở lên, như Tam Đảo (Vĩnh Phúc), Sa Pa, Bắc Hà (Lào Cai); Sìn Hồ (Lai Châu); Đồng Văn, Quản Bạ, Yên Minh (Hà Giang) và Đà Lạt (Lâm Đồng).  Bồ công anh thấp là cây ưa sáng, ưa vùng có khí hậu ẩm mát. Cây mọc từ hạt xuất hiện rải rác từ cuối mùa Xuân đến cuối mùa hè. Mùa hoa quả cũng rải rác trong suốt mùa hè và mùa thu.Sau khi ra hoa quả, cây tàn lụi. Hạt có túm lông nhờ gió phát tán đi khắp nơi. Vòng đời của cây thường kéo dài 3 – 5 tháng.",
+        "ở_vùng": [],
+        "các_tỉnh": [],
+        "được_trồng": [],
+        "chủ_yếu": null,
+        "thường_mọc": null,
+        "Đặc điểm sinh trưởng": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Bồ công anh thấp được nhân giống từ hạt, bằng cách gieo thẳng vào tháng 2 – 3. Đất trồng phải cao ráo, màu mỡ, tiện tưới tiêu. Sau khi làm đất, lên thành luống cao 15 – 20cm, rộng 1 – 1,2m, rạch ngang hay dọc luống để gieo hạt. Khoảng cách cây phù hợp là 20 x 20cm.  Có thể bón lót bằng phân chuồng, bón thúc bằng nước phân chuồng, nước giải hay đạm pha loãng. Lượng phân bón tùy theo khả năng nhưng không cần nhiều, chỉ cần cây luôn giữ được màu xanh vừa phải là được. Cần giữ cho cây luôn sạch cỏ."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây gồm rễ, thân, lá. Lá thu hái trước khi cây có hoa. Rễ thu vào tháng 6 – 7."
+      },
+      "Thành phần": {
+        "thành phần": "Toàn cây bồ công anh thấp chứa 0,98% flavonoid toàn phần: lactopicrin, taraxacin, taraxacerin, taraxasterol, cosmossin, homotaraxasterol, luteollin – 7 – glucosid, stigmasterol. Ngoài ra, còn có nhựa, tinh dầu, pectose, các acid béo (acid melissic, hydroxyphenacetic), sáp (Ceryl palmitat, cerylstearat).  Lá và hoa có: 88,8% nước, 0,6% protein, 0,44%, sợi, 1,6% phần chiết bằng ether, 2,3% tro, 3,7% cacbonhydrat, 59,1mg/100g photpho, 73 mg/100g Vitamin C. Rễ chứa taraxol, taraxerol, taraxasterol amyrin, stigmasterol. Ngoài ra, còn chứa nhựa, cao su, glucosid, các đường (glucose, fructose, cymarose), asid acetic, vitamin B.",
+        "gồm chất": null,
+        "Các hợp chất": null,
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": "Bồ công anh thấp có vị ngọt, hơi đắng, tính bình, hơi hàn, vào kinh tỳ và vị, có tác dụng thanh nhiệt, giải độc, lương huyết, tiêu ung, thông sữa, lợi tiểu. Còn giúp ăn ngon, lợi mật, nhuận gan."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Toàn cây bồ công anh thấp chữa sưng vú, viêm tuyến vú, ít sữa, tiểu tiện khó, nhiễm khuẩn tiết niệu, mụn nhọt, sưng tấy, lở ngứa ngoài da.  Bồ công anh thấp được dùng dưới dạng thuốc hãm, thuốc sắc với liều 15 – 30g, toàn cây. Dùng tươi có thể đến 50g. Còn dùng dạng cồn thuốc hoặc cao mềm. Dùng ngoài, không kể liều lượng.  Ở Trung Quốc, còn dùng chữa đau mắt, tiêu hóa kém, rắn cắn.  Ở Pháp, bồ công anh thấp chữa rất nhiều loại bệnh khác nhau như các bệnh gan mật (viêm ống mật mạn tính, viêm gan, sưng huyết gan, suy gan, vàng da, sỏi mật); các bệnh đường tiêu hóa (rối loạn tiêu hoá, kém ăn, viêm ruột kết, táo bón, trĩ), sỏi thận, tiểu tiện khó, suy thận, tăng cholesterol – huyết, vữa xơ động mạch, béo phì, các bệnh ngoài da (mụn, nhọt, chảy mủ, mụn cóc, eczema, trứng cá, nấm), thấp khớp, thống phong, thiếu máu, suy nhược.  Ở Bungari, một tài liệu ghi tới 21 bài thuốc dân gian có bồ công anh thấp phối hợp với các vị thuốc khác để chữa hầu hết các chứng bệnh như ở Pháp. Ngoài ra còn chữa hen phế quản, thống kinh, mất kinh, xơ gan, loét dạ dày, phù, đái tháo đường, viêm bàng quang bể thận.  Bài thuốc có bồ công anh thấp  Chữa rắn cắn, ong châm, bò cạp đốt: Bồ công anh tươi, giã nát, đắp vào vết thương. Chữa sưng vú, viêm vú cấp tính: Bồ công anh tươi 60g nấu nước uống, ngày 2 lần. Đồng thời dùng cây tươi, giã nát, đắp vào chỗ sưng. Chữa viên kết mạc cấp tính, mắt đỏ sưng đau: Bồ công anh tươi 30g, chi tử 7 quả, sắc uống.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

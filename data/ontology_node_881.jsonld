@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Móng lưng rồng",
+      "ten_khac": [
+        "Quyển bá bạc",
+        "Tràng chim",
+        "Nhả mung nưa (Thái)",
+        "Móng lưng rồng",
+        "Co chám nhái (Thái)"
+      ],
+      "ten_khoa_hoc": "Selaginella involvens (Sw.) Spring",
+      "ma_taxon": "137037",
+      "ho": "Selaginellaceae",
+      "description": {
+        "@type": "Mô tả",
+        "thân": "Móng lưng rồng. Thân mọc thành búi, có khi kết bện với các giá rễ thành một gốc cao đến 10cm, nom như thân kép.",
+        "cành": "Cành bên của thân cũng mọc thành búi dài 5-12cm, phân nhánh rẽ đôi mở ra trên đất.",
+        "lá": "Lá nhỏ hình giáo hay ba cạnh, thuôn xếp lợp lên nhau, ôm lấy cành có dạng như cây liễu bách (từ đó có tên loài là tamariscina có nghĩa là dạng liễu bách Tamarix).",
+        "cây": "Cây chịu được khô hạn, khi khô ráo cành lá xếp lại cuộn tròn vào trong trông như chân vịt đo đó có tên là cây chân vịt. Khi gặp ẩm ướt, cành lại mọc vươn ra ngoài từ đó có tên hồi sinh thảo (cỏ sống trở lại) từ đó gọi chệch ra là trường sinh thảo (cỏ sống lâu), cải tử hoàn hồn thảo. Và từ đó mọi người gán cho cây nhiều tác dụng bản thân nó không có."
+      },
+      "phan_bo": {
+        "@type": "Phân bố"
+      },
+      "thong_tin_khac": {
+        "@type": "Thông tin khác"
+      },
+      "bo_phan_dung": {
+        "@type": "Bộ phận dùng"
+      },
+      "thanh_phan": {
+        "@type": "Thành phần",
+        "thành phần": "Trong lá móng lưng rồng có những hợp chất flavon như apigenin C15H10O5, sosetsuflavon C31H20O11, amentoflavon C30H18O10 (Arthur H.R-Symposium on Phytochemistry, 1964, 236).",
+        "tác dụng": "Dung dịch móng lưng rồng 100% có tác dụng ức chế đối với vi trùng Staphylococcus aureus (Y viện 175: Tân y dược khoa. Giang tây dược khoa học hiệu, 1970 (3) 35)."
+      },
+      "tinh_vi": {
+        "@type": "Tính vị"
+      },
+      "cong_dung": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo tài liệu cổ móng lưng rồng có vị hơi đắng, tính lạnh và sáp, dùng tươi có tác dụng phá huyết, sao đen có tác dụng cầm máu, phụ nữ có thai không dùng được.",
+        "chữa": "Thường dùng chữa ho, nôn ra máu, đại tiểu tiện ra máu, kinh nguyệt quá nhiều và các chứng chảy máu khác. Còn dùng chữa vàng da, vàng mắt, viêm gan, bổ máu, chữa bỏng.",
+        "liều dùng": "Ngày dùng 20-30g dưới dạng thuốc sắc hoặc đốt thành than tán bột rắc lên vết thương hay để uống.",
+        "đơn thuốc chữa bỏng lửa": "Cây móng lưng rồng tán bột, trộn với long trắng trứng gà, đắp lên nơi bỏng. cứ 2-3 giờ thay thuốc 1 lần",
+        "đơn thuốc chữa váng đầu, hoa mắt, vàng da": "Toàn cây 30g sắc với 400ml nước, chia hai lần uống trong ngày."
+      },
+      "cach_dung": {
+        "@type": "Cách dùng",
+        "mọc": "Mọc hoang dại và được khai thác nhiều ở ven biển Nha Trang, Phan Rang, Đà Nẵng, Kontum.",
+        "thu hái": "Thu hái toàn cây, cắt bỏ rễ con, dùng tươi hay phơi hoặc sấy khô, có khi sao toàn tính (thành than nhưng không thành tro) mà dùng."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      },
+      "url": "https://tracuuduoclieu.vn/mong-lung-rong.html"
+    }
+  ]
+}

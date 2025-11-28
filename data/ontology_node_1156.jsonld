@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thanh thất núi cao",
+      "ten_khac": "Xú xuân, càng hom cao",
+      "ten_khoa_hoc": "Ailanthus altissima (Mill.) Swingle",
+      "ma_taxon": "57278",
+      "ho": "Thanh thất (Simaroubaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao khoảng 20m.",
+      "thân": "Thân cành nhẵn, toả rộng.",
+      "lá": "Lá kép lông chim lẻ, mọc so le, dài đến 50 cm gồm 11 – 25 lá chét hình trái xoan hoặc gần tam giác, dài 7 – 12 cm, rộng 2 – 4 cm, có lông mịn, gốc lệch, có tuyến màu lục, đầu thuôn nhọn, mép khía răng; cuống lá nhẵn.",
+      "hoa": "Cụm hoa có cuống mập mọc ở kẽ lá thành chùy phân nhánh dạng tháp dài và rộng, ngắn hơn lá; hoa rất nhiều, màu trắng lục, đơn tính; hoa đực có đài 5 răng hình chuông, tràng 5 cánh thuôn, có lông ở mép, nhị 10, chỉ nhị có ít lông, nhụy lép: hoa cái có đài và tràng giống hoa đực, bầu hình cầu có 5 cạnh, 1 – 5 lá noãn.",
+      "quả": "Quả có cánh, dài 4 – 6 cm, phần sinh sản ở giữa có vân mạng.",
+      "mùa hoa": "tháng 6 – 7",
+      "mùa quả": "tháng 8 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ailanthus Desf có 3 loài ở Việt Nam, tất cả đều là cây gỗ và chỉ khác nhau ở vùng phân bố. Loài thanh thất núi cao cũng mới chỉ thấy ở vùng núi cao sườn Đông – Bắc dãy Hoàng Liên Sơn, thuộc huyện Sa Pa, Bát Xát tỉnh Lào Cai và huyện Sìn Hồ, tỉnh Lai Châu. Độ cao phân bổ tử 1.500 đến 1.800m. Trên thế giới, loài này có ở Triều Tiên, Nhật Bản và Trung Quốc.",
+      "thường_mọc": "Thạch thất núi cao thuộc loại cây ưa sáng, ưa khí hậu mát lạnh quanh năm của vùng nhiệt đới núi cao hay ôn đới ẩm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ rễ, vỏ thân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thanh thất núi cao chứa nhiều hợp chất thuộc nhiều nhóm hoá học, đa phần thuộc nhóm quassinoid.",
+      "gồm chất": "Theo Võ Văn Chi 1997, gỗ chứa nhựa dầu, tanin, hydrocarbon, saponin, quassin, quercetin và vanilin (0,1 – 0,15%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ cây thanh thất núi cao có vị đắng chát, mùi hội, có tính hàn, có tác dụng thanh nhiệt, trừ thấp, làm săn, sát trùng, cầm máu và trừ giun. Lá có độc, động vật ăn vào có thể bị chết, người tiếp xúc cũng cây dị ứng, viêm tấy, phồng da."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá dùng nấu nước tắm rửa để chữa chốc đầu, ghẻ lở.",
+      "được_dùng": "Vỏ cây thanh thất núi cao được dùng chữa đại tiện ra máu mạn tính. Lấy 12g phần trắng vỏ cây sắc uống, hoặc sắc rồi pha thêm ít rượu vào uống.",
+      "chữa": "Để chữa kiết lỵ, tiêu chảy, dùng 12 – 20g vỏ khô sắc uống. Để trị sán, dùng vỏ khô tán bột, uống mỗi ngày 1g, uống liền trong 7 ngày và cuối cùng uống một liều thuốc tẩy thì tẩy được sán ra. Vỏ quả thanh thất núi cao cũng được dùng sắc uống chữa đại tiện ra máu, hoặc hóc xương cá với liều 12g. Tuệ Tĩnh đã dùng vỏ cây thanh thất núi cao trong bài thuốc bổ âm, chữa dị mộng tinh và đái đục. Ở Trung Quốc, thanh thất núi cao được dùng điều trị tiêu chảy, lỵ, loét tá tràng, làm thuốc cầm máu và cũng được dùng trị bệnh lậu, khí hư, xuất huyết tử cung. Ở một số nước, thanh thất núi cao được dùng trị bệnh amip, tiêu chảy, lỵ, táo bón, hen, bệnh tim, co cứng cơ, đau kinh, động kinh, sốt, sốt rét, bệnh lậu, khí hư, ung thư, trị sán dây, trị giun.",
+      "làm thuốc": "Liều dùng: 6 – 9g vỏ khô. Thận trọng khi dùng cho người âm hư, khí táo."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

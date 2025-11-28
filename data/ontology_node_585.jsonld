@@ -1,0 +1,221 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xương rồng ông",
+      "ten_khac": "Xương rồng ông, Xương rồng ba cạnh",
+      "ten_khoa_hoc": "Euphorbia antiquorum L.",
+      "ma_taxon": "427631",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, mọng nước, có thể cao đến 5m, phân cành nhiều.",
+      "thân": "Cành dày có 3 cạnh lồi và dẹt, màu lục sẫm, mép có u nhọn không đều.",
+      "lá": "Lá nhỏ, dày (rất hiếm gặp) mọc trên cạnh lồi của cành, hình bầu dục, dài 2 – 5 cm, rộng 1-2 cm, gốc thuôn, đầu tròn, hai mặt nhẵn, gần như cùng màu, rụng rất sớm; cuống lá rất ngắn; lá kèm chẻ đôi, biến đổi thành gai.",
+      "hoa": "Cụm hoa mọc ở chỗ lõm của mép cành, hình chén, màu vàng; lá bắc hình vảy, nhị nhiều, mỗi nhị là một hoa đực tiêu giảm, chỉ nhị hình thoi, bao phấn hình cầu; nhụy nổi lên ở giữa chính là hoa cái; bầu hình cầu nhẵn, có cuống dài.",
+      "quả": "Quả nhỏ, màu lục, có 3 mảnh. Toàn cây có nhựa mủ trắng.",
+      "mùa hoa": "tháng 1-3",
+      "mùa quả": "tháng 1-3."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Xương rồng ông là loài thực vật cổ nhiệt đới. Cây mọc tự nhiên và được trồng khắp các nước thuộc vùng nhiệt đới châu Á như Ấn Độ, Xrilanca, Mianma, Lào, Việt Nam, Thái Lan, Malaysia, Philippin và Nam Trung Quốc, kể cả đảo Hải Nam. Xương rồng ông có nguồn gốc từ vùng hoang mạc, về sau do tác động của con người hoặc động vật, cây đã phát triển đi khắp nơi. Ở Việt Nam, xương rồng ông có nhiều trong quần thể trồng. Cây được trồng làm hàng rào ở nương rẫy, vườn, làm cảnh ở nghĩa địa… Từ đó, cây trở nên hoang dại hóa ở các vùng đồi hay nương rẫy đã bỏ hoang.",
+      "Đặc điểm sinh trưởng": "Xương rồng ông là cây ưa sáng, chịu được khí hậu khô nóng. Cây mọc trên các vùng cát hoặc trên đất đồi khô cằn, vẫn sinh trưởng phát triển bình thường. Thân và cành mọng nước, lá tiêu giảm rất nhỏ, giúp cây tích trữ được nhiều nước, hạn chế sự thoát hơi nước trong môi trường khô hạn. Xương rồng ông ra hoa quả hàng năm. Cây có khả năng tái sinh dinh dưỡng rất khỏe. Từ đoạn thân hoặc cành được tiếp xúc với đất, sẽ mọc thành cây mới."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân, lá, nhựa, và nhị hoa. Thân cành thu hái quanh năm, bóc vỏ và bỏ gai, nướng hoặc rang với gạo cho đến khi có màu nâu. Nhựa trích từ cây tươi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Xương rồng ông chứa nhựa mủ, nhựa này có 4,0 – 6,4% cao su (The Wealth of India vol III, 1952, 224).",
+      "gồm chất": "Nhựa xương rồng còn chứa các diterpenoid loại ingol. Gewali Mohan B; Hattori Masao đã phân lập và xác dịnh các chất thuộc loại này là 3,12 – di – o – acetyl – 8 – o – benzoyl lingol; 3,12 – di – o – acetvl – 8 – o – tigloylingol; 8 – o – tigloylingol. 3,12 – di – o – acetvl – 8 – o – tiglovlingol (CA. 112, 1990, 52164g)",
+      "Các hợp chất": "Trong nhựa còn có p amvrin, euphadienol và euphorbol (Cuư. sci. 1967, 36, 204)",
+      "chứa": "Zhida Min; Mizuno, Mizuo đã tách và xác định 1 diterpen tên là antiquorin cùng với 2 triterpen là friedelan 3ị3 ol và p taraxerol (CA. 110, 1989, 228607d).",
+      "triết xuất": "Gewali Mohan B, Itattori Massao còn tách từ nhựa các triterpenoiđ mới là euphol – 3 – o – cinnamat; antiquol A và antiquol B cùng với các triterpen khác như euphol, 24 – methylenecyclo artanol; cyclo eucalenol.",
+      "tìm thấy": "Ngoài ra còn (Z) 9 – nonacosen: sitosterol và p. acetoxyphenol (CA. 113, 129334 t, 1990) .",
+      "đã nghiên cứu": "Anjaneyulu V, Ravi K đã tách và xác định các triterpen là íriedelane – 3p – 30 diol diacetat; 30 acetoxv íríedelan 3p ol, và 3p. acetoxy íriedelan 30 – ol từ cành xương rồng (CA. 111, 1989, 130755 w)",
+      "thủy phân": "Theo Trung dược từ hải (tập I, trang 1290, 1291) ngoài một số chất kể trên, xương rồng còn có taraxeryl acetat; íriedelan 3p yl acetat; taraxenon, lupenon, p amyrin, lupeol, 4 taraxastan 3p 20 ol, 7 hydroxv ingol 3, 3 – o – angdolylingenol…",
+      "các hoạt chất": "Rễ xương rồng cũng chứa tarakerol. Xương rồng còn chứa các acid hữu cơ như citrìc, tartric và ĩumaric."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Xương rồng ông vị đắng, tính hàn, có độc. Thân cây có tác dụng tiêu thũng, thông tiện, sát trùng, lá có tác dụng thanh nhiệt, hóa trệ, giải độc, hành ứ; nhựa cây có tác dụng tả hạ, trục thủy, chống ngứa; nhị hoa có tác dụng thanh nhiệt, tiêu thũng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân và cành cây xương rồng ông chữa đòn ngã, sưng đau, mụn nhọt, viêm mủ da, herpes, đau răng, sâu răng, đau lưng, thống phong.",
+      "được_dùng": "Nhựa cây được dùng để tẩy, chữa xơ gan, cổ trướng, ngứa, nấm ngoài da, mụn cóc trên da, báng, thấp khớp, đau răng.",
+      "làm thuốc": "Lá chữa bí đại và tiểu tiện do ứ tích gây ra, đinh sang, nhọt độc. Nói chung, xương rồng ông thường chỉ được dùng ngoài.",
+      "chữa": "Chú ý: Nhựa xương rồng ông có độc, tuyệt đối không được để bắn vào mắt. Không có kinh nghiệm không dùng thuốc có xương rồng ông."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa đau răng, sâu răng: Cành xương rồng 50g, cạo bỏ gai, nướng chín vàng hoặc vùi tro nóng trong 1-2 giờ, giã nát với ít muối, ép lấy nước, ngậm. Nếu nước dãi chảy ra thì nhổ đi, không được nuốt. Ngậm 10 phút, rồi nhổ đi, sau đó xúc miệng sạch, tránh nuốt nước dễ bị tiêu chảy. Ngày ngậm 3-4 lần.",
+      "làm thuốc": "Chữa mụn nhọt, viêm da mủ: Thân xương rồng ông, cạo bỏ gai, nướng trên lửa cho chín vàng, đập dập rồi đắp lên chỗ sưng đau. Có thể dùng cành, bổ dọc làm đôi, hơ nóng, đắp.",
+      "có tác dụng": "Chữa đau lưng, cứng xương sống: Cành non xương rồng ông, cạo bỏ gai, giã nát, chưng nóng, chườm và đắp vào chỗ đau. Thường đắp thuốc vào chỗ lưng đau rồi nằm ngửa để thuốc ngấm.",
+      "sắc uống": "Thuốc tẩy: Tẩm 0,5 ml mủ xương rồng ông vào thịt cá trê, nướng lên ăn. Thuốc tẩy rất mạnh, không dùng cho người có thai, người già hoặc người yếu (Lê Trần Đức).",
+      "chữa": "Chữa báng: Bồ hóng bếp 3 phần, bánh men rượu 1 phần (nửa bánh), nhựa xương rồng, vừa đủ. Bồ hóng rây mịn, giã nhỏ với men rượu. Nhỏ nhựa xương rồng ông vào cho vừa đủ làm thành bột nhão, làm thành viên bằng hạt ngô. Ngày uống 3 viên, cho vào chuối rồi nuốt. Uống 3 ngày, hễ thấy đi ngoài trắng như nước gạo là khỏi. Sau đó, uống tiếp thêm 2-3 ngày nữa, mỗi ngày 2 viên. Kiêng thịt mỡ, hành sống. Thuốc có độc, phải hết sức thận trọng (Đỗ Tất Lợi)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

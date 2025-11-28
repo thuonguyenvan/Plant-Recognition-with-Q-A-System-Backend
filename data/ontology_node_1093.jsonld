@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây khổ sâm cho rễ",
+      "ten_khac": "Khổ sâm, Khổ sâm Trung Quốc",
+      "ten_khoa_hoc": "Sophora flavescens Ait.",
+      "ma_taxon": "138582",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 0,5-1,2m.",
+      "rễ": "Rễ hình trụ, vỏ ngoài màu vàng",
+      "lá": "lá kép lông chim lẻ, mọc so le, gồm 5-10 đôi lá chét. Lá chét hình mác dài 2-4,5cm, rộng 7-16mm.",
+      "hoa": "Hoa mọc thành chùm dài 10- 20cm. Hoa màu vàng trắng.",
+      "quả": "Quả giáp dài 5-12cm, đường kính 5-8mm, đầu có mỏ dài chứa 3-7 hạt, gần hình cầu, màu đen."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ khổ sâm, người ta đã nghiên cứu thấy các chất như: 2,5% chất ancaloid có tên matrin C15H24N2O, sophocacpin C15H24ON2.H2O, oxymatrin C15H24ON2.H2O . Ngoài ra trong rễ còn có chất xytisin C11H14ON2- Trong lá khổ sâm có chứa 47mg% vitamin C. Trong hoa có 0,12% tinh dầu. Chất matrin được nhà bác học Nhật Bản Nagai chiết xuất từ năm 1899",
+      "gồm chất": "Matrin có nhiều dạng tinh thể và nhiều độ chảy khác nhau 76-870 và 840. Hơi tan trong ête, cồn, clorofooc, benzen, nước lạnh, ít tan trong ête dầu hoả, ít tan trong nước nóng hơn trong nước lạnh."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Khổ sâm là một vị thuốc bổ đắng, thuốc lợi tiểu tiện. Ngoài ra còn công dụng chữa lỵ, sốt quá hoá điên cuồng, còn dùng chữa giun và ký sinh của súc vật, sắc nước rửa mụn nhọt, lở loét.",
+      "được_dùng": "Ngày dùng 12g dưới dạng thuốc sắc, chia làm 2-3 lần uống trong ngày.",
+      "chữa": "Chữa sốt quá hoá điên cuồng: Khổ sâm tán bột, thêm mật vào viên thành viên bằng hạt ngô. Ngày uống 10 viên. Dùng nước sắc bạc hà làm thang chiêu thuốc. Thuốc chữa lỵ: Khổ sâm sao vàng tán nhỏ. Ngày uống 3 lần, chữa lỵ ra máu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc ở một số tỉnh phía Bắc Việt Nam. Hiện vị thuốc vẫn nhập của Trung Quốc. Tại Trung Quốc cây mọc ở khắp các tỉnh Vân Nam, Phúc Kiến, Quảng Đông, Hà Bắc.",
+      "phơi khô": "Thu hái củ, rửa sạch, thái lát, phơi khô; hoặc đem củ tươi ngâm nước vo gạo nếp một đêm, rửa sạch, để trong 3 giờ, rồi mới thái lát, phơi khô.",
+      "luu_y": "Bảo quản nơi khô ráo."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

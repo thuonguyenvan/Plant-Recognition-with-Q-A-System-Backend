@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sóng rắn",
+      "ten_khac": "Sóng rận, Sóng rắn nhiều lá",
+      "ten_khoa_hoc": "Albizia myriophylla Benth.",
+      "ma_taxon": "1395079",
+      "ho": "Trinh nữ (Mimosaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi mọc cao 2-4m, tựa hay leo, thân có vỏ màu nâu, cành non có lông màu hung.",
+      "lá": "Lá kép có cuống chung dài 9cm, với 9-16 cặp lá chét, mỗi lá chét lại có từ 20-40 cặp lá chét thứ cấp, dài 5-8mm, rộng 1mm, có lông ở dưới và ở dìa.",
+      "hoa": "Cụm hoa hình tán, mang hoa hình bán cầu, dài 1mm, vành 4mm, có lông vàng, 15 tiểu nhụy,",
+      "quả": "quả giáp dài 12cm, rộng 2cm chứa 4-9 hạt dài 6mm, màu nâu."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ sóng rắn có 0,035% ancaloid, màu trắng ngà, vị rất đắng, 6% saponin thô màu vàng nâu nhạt, vị rất cay, hút ẩm ở ngoài không khí. Ngoài ra còn có cho phản ứng flavonoid và steroid.",
+      "dấu hiệu đặc trưng": "Cho chuột nhắt (trọng lượng 20g) uống dung dịch nước với liều 18g/kg thể trọng đến 20g/kg chuột chết sau 2 đến 3 ngày. Tỷ lệ tử vong 10% (với liều 18g/kg) đến 25% (với liều 20g/kg)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chỉ mới thấy dùng với mục đích thay cam thảo do sự nhầm lẫn cố ý. Cần có sự nghiên cứu sâu hơn để cho phép dùng hoặc cấm hẳn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc hoang dại ở các tỉnh phía nam, trước đây không thấy khai thác, chỉ những năm gần đây dựa vào vị ngọt của vỏ thân và vỏ rễ người ta khai thác với mục đích dùng thay cam thảo. Thực tế đây là một sự nhầm lẫn giả mạo. Có thể phát hiện sự giả mạo này bằng cách soi bột và vi phẫu, hình dạng, mùi vị: Rễ cam thảo có đường kính đều 5-20mm, màu đỏ nâu, nơi vỏ nứt lộ ruột màu vàng, còn sóng rắn có đường kính to nhỏ không đều, vỏ rễ vàng xám nhạt, vỏ rễ có lốm đốm trắng.  Rễ cam thảo có vị ngọt thấm lâu và dịu, còn vỏ sóng rắn có vị gắt làm hắt hơi, ngọt ít hơn nhưng sau đó làm tê lưỡi và mất vị giác. Vi phẫu sóng rắn có vòng cương mô liên tục ở miền vỏ rễ, tia tủy nhỏ nên các chùy libe không rõ, còn cam thảo không có vòng cương mô liên tục, tia tủy lớn nên các chùy libe phân cách rõ ràng (Hồ Đắc Ân, Lưu Trọng Hồ và Đỗ Thị Bảo Hạnh-Dược học-6. 1978, 6-9)."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

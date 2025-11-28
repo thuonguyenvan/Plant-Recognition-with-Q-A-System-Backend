@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cam",
+      "ten_khac": "Cam, Cam chua, Toan đăng",
+      "ten_khoa_hoc": "Citrus sinensis (L.) Osbeck",
+      "ma_taxon": "331122",
+      "ho": "Rutaceae (Cam)",
+      "Mô tả": {
+        "cây": "Cây nhỡ, cao vài mét. Thân nhẵn không gai hoặc có ít gai. Cành non hơi có cạnh.",
+        "lá": "Lá mọc so le, phiến dài, hình trái xoan, dài 5-10 cm, rộng 2,5 – 5 cm, gốc thuôn, đầu nhọn, mép nguyên, hơi khía tai bèo ở phần đầu lá, gân lá nổi rõ ở mặt dưới; cuống lá hơi có cánh.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chùm nhỏ gồm 6-8 hoa màu trắng; lá bắc hình mũi mác; đài hình dấu, 5 răng tròn dính nhau ở nửa phần dưới; tràng gồm 5 cánh thuôn rời nhau; nhị nhiều, ngắn hơn cánh hoa, dính nhau không đều; bầu hình cầu.",
+        "quả": "Quả hình cầu, khi chín màu vàng da cam, vỏ khó bóc, có nhiều múi chứa tép vị chua, ngọt; hạt hình quả lê.",
+        "mùa hoa": "tháng 1-2",
+        "mùa quả": "tháng 10 – 12.",
+        "mọc": "Có nhiều giống cam quý ở Việt Nam:  Cam Xã Đoài, thơm, ngon, ngọt. Cam đường, vỏ mỏng, màu vàng đỏ hay đỏ sẫm, dễ bóc gồm cam giấy, cam bù và cam voi (dạng lai giữa cam bù và bưởi). Cam sành, vỏ dày, sần sùi, dễ bóc, ruột đỏ, vị ngọt hơi chua, giống phổ biến là cam Bố Hạ. Cam ở miền Nam, khi chín vỏ quả vẫn xanh.Vỏ của những giống này cũng được dùng như cam chanh với công dụng tương tự."
+      },
+      "Phân bố": {
+        "phân_bố": "Trong số các loài cây trồng thuộc chi Citrus L, có lẽ cam là cây trồng lâu đời và có phạm vi rộng rãi nhất trên thế giới.  Cam được trồng phổ biến ở vùng nhiệt đới và á nhiệt đới như châu Á, châu Mỹ, châu Phi và cả châu Âu. Là một loại cây ăn quả quan trọng, qua quá trình trồng trọt, người ta đã lai tạo ra nhiều giống cam có chất lượng cao và thích nghi với nhiều vùng trồng khác nhau.  Việt Nam có thể được coi là một trong những trung tâm đa dạng cao với nhiều giống cam bản địa quý như cam Bố Hạ – cam sành ở Bắc Giang, cam bù ở Hà Tĩnh, cam Vinh ở Nghệ An, cam xã Đoài ở Nghi Diên, Nghệ An, cam Bắc Quang ở Hà Giang…",
+        "ở_vùng": []
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Quả, gồm dịch quả và vỏ quả. Hoa và lá."
+      },
+      "Thành phần": {
+        "thành phần": "Dịch quả cam chứa đường, acid, tinh dầu.",
+        "tinh dầu chứa": "Tinh dầu gồm alcol ethylic, alcol isoamylic, alcol phenylethylic, aceton, acetaldehyđ, acid formic và ester của các acid formic, acid acetic và acid caprylic, geraniol, terpineol.",
+        "gồm chất": "Vỏ quả có pectin, flavonoid, tinh dầu, với thành phần là d – limonen (có thể tới 90%), citral, methyl ester của acid antranilic.",
+        "chứa": "Theo Lee Yuung Chang (CA. 111, 201452h), quả có umbeliferon, naringin, hesperidin, neohesperidin.",
+        "tìm thấy": "Tài liệu khác cho biết quả có poncirin, naringin, citrifoliosid, citrifoliol – 1 – isosakuranetin, neohesperidin, poncimarin, isoponcimarin.",
+        "Các hợp chất": "Hạt có dầu béo, coumarin, limonin.",
+        "dấu hiệu đặc trưng": "Dầu béo chứa acid palmitic, acid stearic, acid oleic, β – sitosterol. Các coumarin bao gồm imperatorin, bergapten, aurapten, 7 – geranyl oxycoumarin, 6 – methoxyaurapten, deacetylnomilin, xanthotoxol, aloimperatorin, isopimpinelin, prangenin, prangeniil hydrat.",
+        "các hoạt chất": "Hoa cam chứa tinh dầu trong đó có nhiều thành phần tan trong nước, acid phenylacetic và methyl antranilat."
+      },
+      "Tính vị": {
+        "Có vị": "Quả cam vị ngọt, chua, tính mát, có tác dụng giải khát, sinh tân dịch, mát phổi, thanh nhiệt, tiêu đờm và lợi tiểu. Vỏ cây cam có vị ngọt, hơi the, tính mát, có tác dụng hạ khí đầy, điều hòa tỳ vị."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá cam: nước hãm để bổ dạ dầy (kiện vị), chữa sốt, khó tiêu, nôn. Dịch lá non chữa tai chẩy nước vàng, hoặc chảy ra máu, mủ. Hoa: nước hãm uống để dịu thần kinh, nước cất từ hoa bão hòa tinh dầu gọi là nước cất hoa cam dùng để pha chế thuốc theo đơn. Vỏ quả cam: nước hãm kích thích ăn ngon miệng, và tiêu hóa tốt làm dịu đau dạ dày, đầy bụng, ợ chua. Vỏ quả tươi sát vào da mặt để chữa mụn trứng cá. Nước sắc uống để kích thích tiết mật, tăng nhu động ruột, chống táo bón, lợi trung tiện. Dịch quả: giải nhiệt, trị sốt, cảm cúm, ho.  Ở Ấn Độ, dịch quả được dùng cho người bị đau mật, tiêu chảy ra mật và để khử độc. Chỉ ăn toàn cam trong 3 ngày có tác dụng như uống một liều thuốc tẩy độc cơ thể.  Bài thuốc có cam: Chữa phù sau khi đẻ:\u00a0 Vỏ thân cây cam dùng riêng, hoặc phối hợp với vỏ thân cây bưởi và vỏ thân cây chân chim, mỗi vị 12g sắc uống trong ngày.  Một số sản phẩm có chứa thành phần vitamin và khoáng chất  Sản phẩm Vitamin Gold giúp bổ sung vitamin và khoáng chất cho cơ thể, hỗ trợ tăng cường sức khỏe, nâng cao sức đề kháng, giảm mệt mỏi, hồi phục thể lực.  Đối tượng sử dụng:  Người có nhu cầu bổ sung vitamin và khoáng chất như: người già, người mới ốm dậy, người làm việc căng thẳng. Người suy nhược cơ thể, gầy yếu, mệt mỏi do thiếu hụt vitamin và khoáng chất.  Sản phẩm Vitamin Gold – Hỗ trợ tăng cường sức khỏe, nâng cao sức đề kháng  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Cam. Nếu cần tư vấn và tìm hiểu thêm về cây Cam và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn)\u00a0hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

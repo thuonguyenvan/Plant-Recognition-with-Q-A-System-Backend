@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thuốc giấu",
+      "ten_khac": "Thuốc dấu, Dương san hô",
+      "ten_khoa_hoc": "Euphorbia tithymaloides L.",
+      "ma_taxon": "273713",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây rất phổ biến ở Việt nam, được rất nhiều người dùng chữa những vết đứt tay chân, vết thương.",
+        "cao": "Cây nhỏ, cao chừng 1-2m.",
+        "thân": "Thân mẫm, màu xanh.",
+        "lá": "Lá mọc so le, hình trứng, đầu lá nhọn, phía cuống tròn, gần như không cuống hay có cuống rất ngắn, dài 7-10cm, rộng 4-6cm.",
+        "gân lá": "Gân lá không rõ, vì lá trông mẫm.",
+        "hoa": "Hoa màu đỏ tươi, rất ít khi thấy ra hoa",
+        "mủ": "Toàn cây và lá, bấm chỗ nào cũng có nhựa mủ trắng"
+      },
+      "distribution": {
+        "@type": "Phân bố"
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác"
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Chưa thấy tài liệu nghiên cứu"
+      },
+      "tasteProperty": {
+        "@type": "Tính vị"
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Một vị thuốc phổ biến trong nhân dân. Mỗi khi bị thương hay đứt tay, chân, thường ta hái cây này giã nhỏ đắp lên vết thương.",
+        "được_dùng": "Dùng cây tươi",
+        "luu_y": "Cần chú ý nghiên cứu."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "Được trồng ở khắp nơi trong nước ta để dùng làm thuốc và làm cảnh"
+      },
+      "caution": {
+        "@type": "luu_y"
+      },
+      "url": "https://tracuuduoclieu.vn/thuoc-giau.html"
+    }
+  ]
+}

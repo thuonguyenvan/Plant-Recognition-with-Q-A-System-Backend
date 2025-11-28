@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây men",
+      "ten_khac": "Cây lá men, Kinh giới núi, Cây men",
+      "ten_khoa_hoc": "Orthodon chinensis (Maxim.) Kudo, Mosla dianthera Maxim",
+      "ma_taxon": "165534",
+      "ho": "Bạc hà (Lamiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hàng năm, cao 20 – 30cm.",
+      "thân": "Thân vuông, mọc đứng, phân nhánh nhiều.",
+      "lá": "Lá mọc đối, hình thuôn, nhẵn, có 5 răng ở mỗi bên, dài 2cm, rộng 4 – 5mm, có đốm ở mặt dưới; cuống lá ngắn có lông.",
+      "hoa": "Cụm hoa tận cùng thành nhiều vòng cách nhau, ở đầu cành hoặc kẽ lá; lá bắc không cuống, dạng lá, hoa màu hồng; đài hình chuông có lông dài ở mặt ngoài và mặt trong, 5 răng gần bằng nhau, đồng trưởng; tràng rất ngắn, hình ống, chia hai môi, có 4 răng gần đều; nhị 4; đính ở giữa ống tràng, thụt; bầu nhẵn.",
+      "quả": "Quả bế tư, hình cầu, màu nâu nhạt, có mạng không rõ; hạt nhỏ màu đen.",
+      "mọc": "Toàn cây có lông tơ và mùi thơm đặc biệt.",
+      "mùa hoa": "tháng 12-2",
+      "mùa quả": "tháng 12-2"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Orthodon Benth. có khoảng vài chục loài thường là cây thảo; phân bố ở vùng ôn đới ấm, á nhiệt đới và có một số ít loài ở vùng nhiệt đới. Ở Việt Nam, chi này có 5 loài, trong đó 3 loài dược dùng làm thuốc. Chúng phân bố chủ yếu ở vùng núi phía bắc và ở một vài điểm trên vùng núi cao trên 1500m ở phía nam như Ngọc Linh, Lang Bian. Riêng đối với loài cây men mới chỉ thấy ở một số tỉnh giáp biên giới Trung Quốc, như Cao Bằng, Lạng Sơn, Lào Cai và Hà Giang. Cây men ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc thành đám trên đất ẩm, nhiều mùn ở các vùng nương rẫy, trong thung lũng hoặc nơi đất trống ven rừng. Độ cao phân bố từ 1000m đến 1500m. Hàng năm, cây con mọc từ hạt xuất hiện vào khoảng cuối mùa xuân. Cây sinh trưởng mạnh trong mùa hè. Đến giữa mùa thu (khoảng tháng 8), khi quả đã già, cây bắt đầu tàn lụi, vòng đời kéo dài khoảng 6 tháng hoặc 7 tháng đối với những cây mọc nơi đất ẩm và bị che bóng nhiều. Quả của cây men khi già tự mở để hạt thoát ra ngoài. Hạt giống tồn tại trên mặt đất suốt cả mùa đông và gần hết mùa xuân năm sau. Hiện nay chưa có công trình nào nghiên cứu được đầy đủ về khả năng tái sinh tự nhiên của cây men.",
+      "Đặc điểm sinh trưởng": "Cây men ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc thành đám trên đất ẩm, nhiều mùn ở các vùng nương rẫy, trong thung lũng hoặc nơi đất trống ven rừng. Độ cao phân bố từ 1000m đến 1500m. Hàng năm, cây con mọc từ hạt xuất hiện vào khoảng cuối mùa xuân. Cây sinh trưởng mạnh trong mùa hè. Đến giữa mùa thu (khoảng tháng 8), khi quả đã già, cây bắt đầu tàn lụi, vòng đời kéo dài khoảng 6 tháng hoặc 7 tháng đối với những cây mọc nơi đất ẩm và bị che bóng nhiều. Quả của cây men khi già tự mở để hạt thoát ra ngoài. Hạt giống tồn tại trên mặt đất suốt cả mùa đông và gần hết mùa xuân năm sau. Hiện nay chưa có công trình nào nghiên cứu được đầy đủ về khả năng tái sinh tự nhiên của cây men."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, thu hái vào mùa hạ, thu, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây men chứa 12 chất, trong đó có một chất alean mạch dài, phytosterol, 1 acid béo, acid ursolic, 1 phytosteryl glucosid, 7 – methyl baicalein (ncgletexin), apigenin, acid syringic, acid p.coumaric, luteolin, acid cafeic và quercitein (Lin Jer Iluei và cộng sự 1984) (CA 102: 75.709w).",
+      "tinh dầu chứa": "Tinh dầu cây men chứa thymol 44%, p.cymen 18,4%, carvacrol 11%, Y – terpincn 3,3%, myrcen 1,4%, terpinen – 4 – ol 1,1%, a – terpinen 1,0%,  – pinen 0,1%, paeonol 1,0% (Duan Sumin và cs, 1986).",
+      "chứa": "Vũ Ngọc Lộ và cs (1992) chứng minh phần trên mặt đất của cây men mọc tại Lục Ngạn (Bắc Giang) chứa 1% tinh dầu, trong đó có α – thuyen 0,3%, α – pinen 0,6%, camphen 0,4%, β – pinen vết, myrcen 3,0 %, α – terpinen 0,5 %, β.cymen 25,8%, 1,8 – cineol 0,9%, limonen vết, (E) – β – ocimen 02 % Y – terpinen 8,6 %, linalol vết, camphor vết, terpinen – 4 – ol 0,8 %, α – terpineol vết, thymol 52,1 % thymol acetate 3,3 %, β – caryo phyllen 0,3 %, cis – α – bergamoten 0,1 %, a – humulen 2,1 %, caryophylen oxyd 0,2 %."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cây men có vị cay, đắng, tính ôn, có tác dụng giải biểu, thanh thử, lý khí, hóa thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây men được dùng chữa cảm cúm, say nắng mùa hè, nôn mửa, đau bụng đi ngoài, vết thương đo đánh đập, mụn nhọt, eczema.",
+      "được_dùng": "Ngày 6 – 12g sắc nước uống hoặc tán thành bột uống. Dùng ngoài, rắc bột hoặc sắc nước rửa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa cảm sốt: Cây men, bạc hà, trần bì, mỗi thứ 6g, nhẫn đông đằng 12g, hành 3 củ. Sắc nước uống.",
+      "làm thuốc": "Đề phòng dịch cúm: Viên ngậm tinh dầu cây men: mỗi viên chứa 1,5mg tinh dầu, mỗi ngày ngậm 2 – 3 lần, mỗi lần 2-3 viên hoặc phun vào họng nhũ dịch tinh dầu 0,1 %, ngày 2 – 3 lần, dùng liên tục 2 – 3 ngày. Phun trên diện rộng có thể ngăn ngừa được dịch cúm."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

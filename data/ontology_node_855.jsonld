@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mơ lông",
+      "ten_khac": "Mơ lông, Dây thối địt, Dắm chó, Ngưu bì đống, Cẩu xú đằng, Khau tất ma (Tày), Co tốt ma (Thái)",
+      "ten_khoa_hoc": "Paederia foetida L.",
+      "ma_taxon": "126581",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, hình bầu dục hoặc hình trứng, dài 5 – 10cm, rộng 2 – 4cm, gốc tròn hoặc hơi hình tim, đầu nhọn, hai mặt lá đều màu lục, gân lá rõ ở mặt trên; cuống lá dài 1 – 3cm; lá kèm rộng, thường xẻ đôi.",
+      "hoa": "hoa màu trắng điểm tím nhạt, không cuống; đài hình chuông, 4-5 răng rất nhỏ, hình tam giác nhọn; tràng hình phễu, dài 1 – 1,2cm, 4-5 cánh loăn xoăn ở đầu; nhị 4-5; bầu 2 ô.",
+      "quả": "Quả gần hình trứng, dẹt, nhẵn, màu nâu bóng.",
+      "cây": "Dây leo bằng thân quấn, sống nhiều năm.",
+      "thân": "Thân non hơi dẹt, sau tròn, màu lục hoặc tím đỏ.",
+      "mọc": "Toàn cây có lông mềm, nhất là thân, cành và lá non. Lá vò nát, có mùi khó ngửi.",
+      "mùa hoa": "tháng 8-10",
+      "mùa quả": "tháng 8-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Paederia L. có 26 loài, đều là dây leo; phân bố chủ yếu ở vùng cận nhiệt đới, nhiệt đới châu Á và Nam Mỹ. Ở Việt Nam, có 5 loài, mơ lông là loài phổ biến nhất. Cây có nguồn gốc từ vùng Ấn Độ, Malaysia; hiện nay phân bố rộng rãi ở nhiều nước trong khu vực Đông Nam Á và Nam Trung Quốc.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "1",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "hầu hết các tỉnh (trừ vùng núi cao lạnh, trên 1600m)"
+        }
+      },
+      "thường_mọc": "đôi khi cũng gặp ở trạng thái hoang dại hoá, gần nơi có người ở hoặc bờ nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Mơ lông thường được trồng cạnh bờ rào, bờ ao có lùm bụi để có chỗ leo. Cây được nhân giống bằng đoạn thân. Chọn thân bánh tẻ, cắt thành đoạn dài 40 – 50 cm và trồng theo kiểu trồng khoai lang hoặc khoanh tròn rồi vùi sâu 3 – 5 cm. Trồng xong cần tưới ngay. Thời vụ trồng tốt nhất là tháng 2 – 3. Nếu trồng thành ruộng, cần chọn đất cao, thoát nước. Trồng theo hố, cách nhau 1,5 m, mỗi hố bón lót 5 – 7 kg phân chuồng. Khi cây mọc, cần làm giàn cho cây leo. Thỉnh thoảng làm cỏ, xới xáo, tủa bớt cành già, ngắt bỏ lá bị sâu cuốn. Sau mỗi lần thu hái, tưới thúc bằng nước phân, nước giải hoặc đạm pha loãng. Mơ lông không có sâu hại gì đáng kể, trừ sâu róm."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây thu hái vào mùa hè. Rễ vào mùa thu hay mùa đông. Lá thường dùng tươi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa protein 44,6% (tính theo trọng lượng khô) gồm các acid amin như argenin, histidine, lysin, tyrosin, tryptophan, phenylalnin, valin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mơ lông có vị hơi đắng, hơi mặn,mùi hôi, tính mát, có tác dụng thanh nhiệt, giải độc, làm săn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá mơ lông được dùng chữa lỵ trực khuẩn. Lấy lá mơ lông (30 -50 g) lau sạch, thái nhỏ trộn với trứng gà (1 quả). Có người chỉ dùng lòng đỏ trứng, nhưng kinh nghiệm dùng cả lòng trắng phổ biến hơn. Bọc thuốc vào lá chuối đem nướng hoặc đặt lên chảo mà rán (không có mỡ) cho thơm. Ngày ăn 2 – 3 lần, trong 5 – 8 ngày. Thời gian điều trị trung bình 7 ngày. Ngoài ra, lá mơ lông còn chữa chứng sôi bụng ăn không tiêu, viêm dạ dày, viêm ruột. Ngày dùng 20 – 40g dạng thuốc sắc. Để chữa giun kim và giun đũa, lấy lá mơ tam thể (30 – 50g), giã nhỏ, thêm ít muối, ăn sống hay vắt lấy nước uống. Dùng liền 3 buổi sáng vào lúc đói, giun sẽ ra. Chữa giun kim, còn có cách lấy lá mơ lông (30g), cho vào 50ml nước chín, giã vắt lấy nước cốt bơm thụt vào hậu môn, giữ lại khoảng 20 phút, vào 7-8 giờ tối trước khi đi ngủ, giun sẽ ra. Theo tài liệu nước ngoài, lá mơ lông có tác dụng bổ và làm săn. Nhân dân một số vùng ở Ấn Độ dùng lá tươi nấu canh và cho vào thức ăn khác cho người ốm và ở thời kỳ dưỡng bệnh, đặc biệt đối với người bị bệnh đường ruột. Toàn bộ cây được dùng để chữa thấp khớp. Dùng lá mơ lông đắp vào bụng để chữa chướng bụng đầy hơi, và chữa ecpét. Ở Philippin, lá mơ lông nấu lên và giã nát được đắp vào bụng để điều trị bí tiểu tiện. Nước sắc lá được coi là có tác dụng lợi tiểu và làm tan sỏi bàng quang. Rễ và vỏ cây để gây nôn và quả được các bộ tộc miền núi dùng để nhuộm răng đen phòng sâu răng. Dịch ép rễ điều trị trĩ, viêm lách, đau ngực và đau gan. Mơ lông có thể có tác dụng tăng thải trừ chất độc tích luỹ trong cơ thể khi dùng các chất có hại như rượu, thuốc lá, hoặc do rối loạn chuyển hoá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa lỵ lâu ngày (Hải Thượng Lãn Ông): Rễ mơ lông, cỏ seo gà, mã đề, sao qua sắc uống. Chữa hội chứng lỵ: Lá mơ lông tươi, cỏ nhọ nồi tươi, mỗi vị 100g, sắc đặc chia nhiều lần uống trong ngày. Chữa lỵ amip và lỵ trực khuẩn: Lá mơ lông hoặc mơ tam thể 80g, cỏ nhọ nồi tươi 150g, lá đại thanh 30g, hạt cau 16g, bách bộ 12g, vỏ đại 8g. Sắc đặc uống làm nhiều lần trong ngày. Chữa lỵ: a. Lá mơ lông , lá trâu cổ, mỗi vị 20g; lá lốt, nụ sim, mỗi vị 10g. sắc uống hoặc làm viên uống, ngày một thang. b. Mơ lông 30g; cỏ sữa 25g; rau sam 20g; hạt cau khô, vỏ măng cụt, mỗi vị 10g; thổ phục linh, bạch thược, mỗi vị 5g. sắc uống ngày một thang. Hoặc tán nhỏ, mỗi lần uống 8g, ngày 3 lần. Chữa tiêu chảy ra máu: Mơ tam thể 6g; đọt cà ăn quả 16g; rau sam, cây cứt lợn, mỗi vị 6g; xuyên tâm liên 4g. Sắc uống mỗi ngày một thang. Chữa ho gà: Lá mơ tam thể 150g; bách bộ, cỏ mần trầu, rễ chanh, cỏ nhọ nồi, rau má, mỗi vị 250g; cam thảo dây 150g; trần bì 100g; gừng 50g; đường kính 1500g. Cho vào 6 lít nước sắc còn một lít, cho đường kính vào trộn lẫn rồi đun sôi cho còn một lít. Liều dùng: mỗi ngày uống 2-3 lần. Trẻ 6 tháng – 1 năm tuổi, mỗi lần uống 2 thìa cà phê; trẻ 1 – 2 tuổi, 4 lần x 2 thìa cà phê; trẻ 3 – 4 tuổi: 6 lần x 2 thìa cà phê; trẻ 5 – 7 tuổi: 7 lần x 2 thìa cà phê. Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

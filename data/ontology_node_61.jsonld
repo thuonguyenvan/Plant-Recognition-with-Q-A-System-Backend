@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cà phê",
+      "ten_khac": "Cà phê chè, Cà phê Arabica",
+      "ten_khoa_hoc": "Coffea arabica L.",
+      "ma_taxon": "64342",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, mọc sum sê, luôn xanh, cao 6 – 10m.",
+      "thân": "Thân cành hình trụ hoặc hình vuông, phân nhánh nhiều.",
+      "lá": "Lá mọc đối, hình bầu dục hoặc hình trứng, dài 10 – 15 cm, rộng 5 – 6 cm, gốc tròn, đầu nhọn, mặt trên xanh sẫm bóng, mặt dưới rất nhạt, gân nổi rõ. mép uốn lượn, cuống lá dài 0,7 – 1 cm, lá kèm có gốc rộng, đầu nhọn.",
+      "hoa": "Hoa mọc tụ tập ở kẽ lá, màu trắng, rất thơm, dài, cụt, tràng hình ống ngắn. 5 cánh hoa đều, nhị 5 dính ở họng tràng, xen kẽ với cánh hoa, bầu 2 ô, mỗi ô chứa 1 noãn.",
+      "quả": "Quả hạch, hơi dẹt, lúc đầu màu lục, sau vàng với màu đỏ, chứa 2 hạt dẹt, hơi cong, màu xám.",
+      "mùa hoa": "Tháng 11 – 4",
+      "mùa quả": "Tháng 11 – 4"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Với đặc điểm hoa mọc tụ tập dạng xim co, chi Coffea L được xếp trong họ phụ lxoroideae (họ Rubiaceae) và tông Coffeae. Chi này có khoảng gần 100 loài và dưới loài, phân bố rải rác khắp vùng nhiệt đới, nhưng tập trung nhiều nhất ở vùng nhiệt đới của châu Phi  Hiện nay, có 3 loài và rất nhiều giống cà phê được trồng rộng rãi trên thế giới. Về nguồn gốc phát nguyên của chúng cụ thể như sau:  Cà phê chè có nguồn gốc từ vùng cao nguyên phía tây – nam Cà phê vối có nguồn gốc từ vùng xích đạo châu phi từ Guinea đến Uganda Cà phê mít có nguồn gốc ở vùng nhiệt đới Trung và Tây phi  Cà phê là cây ưa sáng hay có thể hơi chịu bóng. Ở các vùng phân bố nguyên thủy, cà phê thường mọc lẫn trong các kiểu rừng thưa. Ở ven rừng hay trên các khoảng trống trong rừng rậm mới được mở tán. Vì vậy, trong các đồn điền trồng cà phê người ta thường trồng xen một số cây họ đậu tán thưa như keo giậu, muống đen,..để tạo bóng.",
+      "Đặc điểm sinh trưởng": "Cà phê có thể sinh trưởng phát triển tốt trên nhiều loại đất, song tốt nhất vẫn là các loại đất đỏ nâu thuộc nhóm bazan và túp hoặc đất đã được phong hóa từ nham thạch núi lửa. Cà phê thuộc loại cây sinh trưởng nhanh cây trồng từ hạt sau 3 năm (1 năm ở vườn ươm) bắt đầu có hoa, càng về sau lượng hoa quả càng nhiều. Tùy loại cà phê mà thời gian thu hoạch kéo dài từ 20 đến 30 năm, Cà phê nở hoa rộ trong khoảng 15 – 20 ngày, hoa thụ phấn chủ yếu nhờ côn trùng, tỷ lệ tự thụ phấn chỉ chiếm khoảng 10%. Hạt cà phê có tỷ lệ nảy mầm cao (đến 95%); khả năng nảy mầm này sẽ giảm đảm sau 3 – 6 tháng. Tuy nhiên, nếu được bảo quản ở nhiệt độ 15°C, tỷ lệ nảy mầm cao có thể duy trì được trong thời gian 15 – 30 tháng sau."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt, còn dùng lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cà phê sống chứa: glucid, lipid, acid hữu cơ, acid phenol, acid clorogenic,…trong đó glucid có nhiều chiếm hơn một nửa so với dược liệu khô kiệt. Có 5-8% đường khử sacchaose, ít manitol, polysaccharid, galactomanan, xylan,….. không có tinh bột trong hạt già.",
+      "gồm chất": "Cà phê rang có nhiều thay đổi về hóa học: Nước giảm khoảng 5%, chất vô cơ không thay đổi, cafein có phần bị thăng hoa, glucid thay đổi nhiều (saccharose có phần chuyển hóa, nhiều chất hòa tan xuất hiện do các polysaccharid không hòa tan chuyển hóa.). Ngoài ra trong cà phê rang còn có các chất thơm."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cà phê được dùng làm đồ uống dưới dạng chiết hãm bằng nước sôi từ bột hạt cà phê rang, hoặc dưới dạng cà phê tan. Uống cà phê làm mất buồn ngủ, giúp tinh thần tỉnh táo, giảm cảm giác mệt mỏi. Còn dùng làm thuốc lợi tiểu, chữa phù thũng, giúp tiêu hóa. Uống quá nhiều đồ uống có cà phê gây rối loạn tiêu hóa được xem là do chất cafeotoxin, một thành phần độc bay hơi được hình thành trong quá trình rang cà phê và chỉ có một phần bay hơi. Alcaloid cafein và các dạng muối như cafen citrat và cafein natri benzoat được dùng trong trường hợp cấp cứu ngộ độc opioid và các thuốc gây ngủ khác. Trong nhân dân, hạt cà phê sống giã nát ngâm với rượu uống chữa tê thấp, sốt rét. Cà phê rang uống có tác dụng tiêu mỡ, tiêu độc rượu và thuốc phiện. Người khó ngủ không nên dùng cà phê. Lá cà phê sắc uống làm chóng tiêu thức ăn, tiêu nước chữa phù thũng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

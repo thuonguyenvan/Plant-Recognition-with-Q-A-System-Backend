@@ -1,0 +1,200 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Dền đuôi chồn",
+            "ten_khac": "Dền đuôi ngắn",
+            "ten_khoa_hoc": "Amaranthus caudatus L.",
+            "ma_taxon": "75392",
+            "ho": "Rau giền (Amaranthaceae)",
+            "Mô tả": {
+                "cây": "Cây thảo nhẵn, sống một năm, cao 0,6 – 1,5m.",
+                "thân": "Thân có khía rãnh.",
+                "lá": "Lá mọc so le, hình thoi hoặc mũi mác, mép nguyên, hai mặt nhẵn.",
+                "hoa": "Cụm hoa rất dày, gồm nhiều bông mọc sít nhau, dài giống như đuổi con chồn, lá bắc nhọn; lá đài 5 không giống nhau, 2 lá phía ngoài thuôn, kết thúc bằng một sợi mảnh, hai lá phía trong bầu dục, không có sợi ở đầu.",
+                "quả": "Quả nang, hình trứng nhọn; hạt màu đen hoặc trắng, có mép dày."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Amaranthus L. ở Việt Nam có 6 loài, loài dền đuôi chồn trên đây vốn có nguồn gốc từ vùng Đông – Nam Ấn Độ, sau được du nhập và phát tán ra nhiều quốc gia nhiệt đới khác. Ở Việt Nam, trong bộ “Danh lục các loài thực vật ở Việt Nam, 2003” chỉ ghi loài này phân bố ở Lào Cai (Sa Pa), Hà Giang (Quản Bạ: Tráng Kìm) và Nam Bộ (?).",
+                "thường_mọc": "Dền đuôi chồn là loại cây ưa ẩm và ưa sáng. Cây chủ yếu được trồng để làm cảnh tại vườn nhà. Bên cạnh quần thể trồng, cây còn mọc hoang dại trên  nương rẫy, hoặc xung quanh nơi ở, làng bản. Cây sống một năm, ra hoa quả nhiều, tái sinh tốt từ hạt và trồng được dễ dàng bằng hạt."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Toàn cây, có thể thu hái quanh năm."
+            },
+            "Thành phần": {
+                "thành phần": "Lá chứa acid oxalic, betain, amaranthin và lectin (CA, 1990) (Trung được đại từ điện, 1956).",
+                "chứa": "Ngoài ra còn chứa một lượng nhỏ lecitin (prosea 1).",
+                "đã nghiên cứu": "Conforti và cs. (2005) khi nghiên cứu tác dụng chống oxy hoá của dền đuôi chồn, đã xác định thành phần chủ yếu của tinh dầu là squalen và các hợp chất phenolic."
+            },
+            "Tính vị": {
+                "Có vị": "Dền đuôi chồn vị ngọt nhạt, tính bình, có công năng lọc máu, lợi tiểu."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Hạt dền đuôi chồn có lecithin nên có tác dụng bổ dưỡng.",
+                "được_dùng": "Toàn cây được dùng để lợi tiểu, chữa đái són đau. Liều dùng 15 – 30g sắc lấy nước uống.",
+                "làm thuốc": "Hạt được dùng làm lương thực, cũng dùng làm thức ăn cho gia súc, gia cầm.",
+                "chữa": "Ở Indonesia, toàn cây được dùng để trục giun [Medicinal herb index, 1995: 35]. Ở Ấn Độ, toàn cây được dùng làm thuốc lọc máu, chữa bệnh trĩ, để lợi niệu và chữa chứng đái són đau; cũng dùng để chữa bệnh tràng nhạc. Lá, rửa sạch, giã nát đắp lên các chỗ lở loét và bệnh ngoài da [Chopra et al., 2001:15]."
+            },
+            "Cách dùng": {
+                "được_dùng": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

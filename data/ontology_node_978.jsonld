@@ -1,0 +1,195 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Anh thảo",
+            "ten_khac": "Anh thảo",
+            "ten_khoa_hoc": "Oenothera biennis L.",
+            "ma_taxon": "62207",
+            "ho": "Onagraceae (Anh thảo)"
+        },
+        {
+            "@type": "Mô tả",
+            "thân": "Cây cỏ, sống 2 năm, chiều cao thân khảng 150 cm.",
+            "lá": "Lá hình mác, dài 5-20cm, rộng 1-2,5cm. Năm thứ nhất lá mọc thành cụm tròn hình hoa thị, năm thứ 2 mọc thành hình xoắn ốc quanh thân.",
+            "hoa": "Hoa lưỡng tính (có cả nhụy đực và nhụy cái), màu vàng, mọc ở ngọn. Đài 2, đầu xẻ 2 thùy có nhiều lông trắng nhỏ. Tràng 4, màu vàng, cánh tràng hình trái tim cỡ 2,5-5cm. Nhị 8, vàng mảnh; nhụy có núm tròn. Hoa chỉ nở buổi tối và lưu lại đến trưa hôm sau. Bên trong hoa có một cấu trúc đặc biệt là hướng dẫn mật hoa, không thể nhìn thấy bằng mắt thường nhưng hiện rõ dưới ánh sáng tia cực tím, giúp thu hút các loài thụ phấn như bướm đêm, bướm ngày và ong.",
+            "quả": "Quả của cây là dạng nang, dài 2–4 cm (khoảng 0,75–1,5 inch), rộng 4–6 mm, chứa rất nhiều hạt nhỏ (dài 1–2 mm). Khi chín, quả tách ra thành bốn phần để giải phóng hạt.",
+            "hạt": "Hạt là thức ăn quan trọng của chim, côn trùng.",
+            "mùa hoa": "Tháng 4-6."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Hoa anh thảo (Oenothera biennis) là một loài cây dễ mọc trong môi trường bị xáo trộn và được xem như một loại cỏ dại. Cây đã được du nhập và thích nghi trên tất cả các châu lục, ngoại trừ châu Nam Cực.",
+            "Nguồn thức ăn": "Hạt của hoa anh thảo là thức ăn quan trọng cho nhiều loài chim, như chim American goldfinch, Northern bobwhite, và mourning dove.",
+            "Môi trường sống": "Cây là vật chủ cho ấu trùng của loài bướm đêm primrose (Schinia florida) và sâu bướm trắng sọc (white-lined sphinx moth). Các loài ong vò vẽ và ong mật cũng thường ghé thăm hoa để lấy mật. Bướm đêm primrose: Loài này đẻ trứng trực tiếp trên hoa anh thảo. Khi trứng nở, ấu trùng sử dụng cây làm nguồn thức ăn chính.",
+            "Hạt của loài cây này": "Hạt của loài cây này có khả năng tồn tại lâu dài trong đất, lên đến hơn 70 năm, giúp chúng dễ dàng tái sinh và duy trì quần thể trong tự nhiên."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": "Dầu hoa anh thảo có thể tương tác với một số loại thuốc, làm giảm hiệu quả hoặc gây ra tác dụng phụ. Một số loại thuốc có thể tương tác với dầu hoa anh thảo bao gồm:  Thuốc chống đông máu (máu loãng) như Warfarin Thuốc chống viêm không steroid (NSAIDs) như diclofenac, ibuprofen và aspirin Thuốc chống loạn thần như chlorpromazine Thuốc điều trị HIV như lopinavir  Vì vậy, trước khi sử dụng dầu hoa anh thảo, bạn nên tham khảo ý kiến của bác sĩ, đặc biệt nếu bạn đang sử dụng bất kỳ loại thuốc nào. Bác sĩ sẽ giúp bạn đánh giá các rủi ro tiềm ẩn và đưa ra quyết định phù hợp."
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Lá, vỏ thân, hoa và quả non. Hạt được thu thập khi chín. Đào rễ cây lên vào năm thứ 2."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Chiết xuất thành phần trên mặt đất của anh thảo:  Chiết xuất methanol phần trên mặt đất của anh thảo chứa chủ yếu là các acid phenolic và các flavonoid.  Các acid phenolic có trong chiết xuất được phân tích bao gồm các hợp chất: acid gallic và các dẫn xuất ester của nó (methyl gallate, galloylglucose, digalloylglucose, và tris-galloylglucose), acid 3-p-feruloylquinic, acid 3-p-coumaroylquinic, acid 4-p-feruloylquinic, pentoside acid caffeic, acid ellagic và các dẫn xuất ester của nó (ví dụ, acid hexagic hexoside và acid ellagic pentoside) và acid valoneic dilactone.  Flavonoid có trong chiết xuất bao gồm những hợp chất: myricetin 3-O-glucuronide, quercetin 3-O-galactoside, quercetin 3-O-glucuronide, quercetin 3-O-glucoside, quercetin pentoside, quercetin dihexoside, quercetin glucuronylhexoside, quercetin 3-O- (2 Từ-galloyl) -glucuronide, kaempferol 3-O-rhamnoglucoside, kaempferol 3-O-glucoside, kaempferol 3-O-glucuronide, kaempferol 3-O- (2 ERIC-galloyl) -glucuronide và kaempferol pentoside.  Chiết xuất thành phần lá của anh thảo:  Chiết xuất lá anh thảo chứa các hợp chất phenolic (ellagitannin và acid caffeoyl tartaric) và flavonoid (quercetin glucuronide và kaempferol glucuronide). Các tannin có trong lá của anh thảo là oenothein A và oenothein B. Các carbohydrate có trong chiết xuất bao gồm arabinose, galactose, glucose, mannose, acid galacturonic và acid glucuronic.  Chiết xuất thành phần rễ anh thảo:  Rễ cây anh thảo có chứa các sterol sau: sitosterol, oenotheralanosterol A, và oenotheralanosterol B. Acid triterpenes maslinic và acid oleanolic cũng có mặt trong rễ, cùng với các carbohydrate sau: arabinose, galactose, glucose, mannose, galacturonic acid và acid glucuronic. Các tannin sau đây cũng được tìm thấy: acid gallic, tetramethylellagic acid, oenostacin và acid 2,7,8-trimethylellagic.  Các chiết xuất methanol của rễ anh thảocũng sở hữu một lượng đáng kể xanthone (9H-xanthen-9-one) và các dẫn xuất của nó, chẳng hạn như dihydroxyprenyl xanthone và cetoleilyl diglucoside, có đặc tính sinh học và dược lý đa dạng.  Chiết xuất thành phần của hạt anh thảo:  Hạt cây anh thảo chứa khoảng 20% ​​dầu. Lượng dầu phụ thuộc vào nhiều yếu tố khác nhau, chẳng hạn như tuổi của hạt giống, giống cây trồng và điều kiện sinh trưởng."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Dầu hoa anh thảo được coi là an toàn nếu sử dụng với liều lượng khuyến cáo. Tuy nhiên, cần lưu ý một số tác dụng phụ và rủi ro:  Nguy cơ chảy máu: Dầu có thể làm tăng nguy cơ chảy máu, đặc biệt với những người bị rối loạn đông máu hoặc đang dùng thuốc làm tăng nguy cơ này. Người mắc bệnh lý đặc biệt: Cần thận trọng khi sử dụng nếu bạn có rối loạn co giật, rối loạn tâm thần (hưng cảm) hoặc đang mang thai và cho con bú. Tác dụng phụ thông thường: Sử dụng dầu hoa anh thảo qua đường uống có thể gây đau đầu hoặc buồn nôn."
+        }
+    ]
+}

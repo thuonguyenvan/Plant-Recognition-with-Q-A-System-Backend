@@ -1,0 +1,288 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vắp",
+      "ten_khac": "Vấp, vếp",
+      "ten_khoa_hoc": "Mesua ferrea L.",
+      "ma_taxon": "354814",
+      "ho": "Măng cụt (Clusiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 – 30m.",
+      "thân": "Thân thắng có vỏ mỏng, cành hình 4 cạnh, màu nâu nhạt.",
+      "lá": "Lá mọc đối, dày và dai, hình thuôn – mũi mác, dài 9 – 13 cm, rộng 1,8 – 3,8 cm, gốc tròn hoặc thuôn, đầu nhọn, mặt trên bóng, mặt dưới màu xám nhạt; cuống lá dài 9 – 10 mm. Lá non có màu hồng đỏ.",
+      "hoa": "Hoa to, mọc đơn độc ở kẽ lá hoặc đầu ngọn, lông; đài có 4 răng hình mắt chim, hơi khum, có lông dạng mi; tràng 4 cánh, tròn ở đầu; nhị nhiều, chỉ nhị mảnh, dài, màu vàng, bao phấn thuôn có trung đới ở đầu; bầu nhẵn có rãnh, 2 ô, mỗi ô chứa 2 noãn.",
+      "quả": "Quả nang, bao bọc ở phần dưới bởi các lá đài và nửa dưới cánh hoa, hình trái xoan nhọn, khi chín nứt làm 2 – 4 mảnh; hạt 1 – 4.",
+      "mùa hoa": "tháng 3-4",
+      "mùa quả": "tháng 7-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Mesua L. ở Việt Nam chỉ có 1 loài gọi là cây vắp kể trên, phân bố rải rác ở các tỉnh Phú Thọ (Thanh Ba), Vĩnh Phúc (Lập Thạch), Bắc Ninh, Hoà Bình, Nghệ An, Hà Tĩnh, Quảng Nam, Kon Tum, Đồng Nai và Tây Ninh.  Vắp là loại cây gỗ lớn mọc ở rừng kín thường xanh trên núi đất, độ cao phân bố dưới 500m. Cây ra hoa quả hàng năm, đôi khi 2 năm. Tái sinh tự nhiên bằng hạt. Đây là loại cây gỗ lớn, gỗ cứng, ít bị mối mọt nên cũng bị khai thác lấy gỗ dùng trong xây dựng. Việc dùng vỏ, hoa, lá làm thuốc mới chỉ hạn chế theo kinh nghiệm trong nhân dân.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Vĩnh Phúc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tĩnh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tây Ninh"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Vắp là loại cây gỗ lớn mọc ở rừng kín thường xanh trên núi đất, độ cao phân bố dưới 500m."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ, hoa, lá, hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây vắp chứa ferrxanthon, 2 – methoxyxanthon, mesuarin [Trường đại học Dược Trung Quốc II, 1996, 2083]. Vỏ thân chứa acid betulinic, (-) – epicatechin, 1, 6-dihydroxyxanthon, pyranojaoareubin, (E) – 2-methyl – 21-12-(2,7,9 – trihydroxyxanthon- 8 – yl) ethyl. Vỏ thân còn có ferno A. Hạt chứa 53 – 73% nhân. Dầu béo có acid myristic, acid palmitic 13,58%, acid stearic 13,24%, acid oleic 59,09%, acid linoleic 13,88%. Các glycerid gồm các ester no ở 3 vị trí 6, 3, 9, palmitostearo – olein 6 – 12, dipalmito – olein 6,09, distearo – olein 6, 12, stearodiolein 12, 57, palmito – di – olein 12, 69, linoleo – diolein 28, 53 và triolein 21, 47 mol %. Nụ hoa chứa chất mầu 2 chất độc vị đắng và có tinh dầu. Nhị hoa chứa mesuaferon A được nhận dạng là 8, 8′ – binaringenin và messaferon B. Quả chứa chín có nhựa dầu. Vỏ quả ngoài chứa tanin với hàm lượng cao."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa cây vắp có vị chát đắng, mùi thơm tinh dầu; có công năng làm săn da, lợi tiêu hoá, lợi trung tiện, trừ nọc độc, trợ tim, bổ huyết. Quả chưa chín có mùi thơm, có công năng phát hãn (làm ra mồ hôi). Vỏ thân có mùi thơm, có công năng làm săn se, khư phong thấp. Lá làm săn se, lợi tiêu hoá, trừ nọc độc. Hạt vị đắng có công năng khư phong thấp, trừ bướu giáp, eczema."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân và rễ cây vắp làm ra mồ hôi, thuốc bổ đắng, đau dạ dày, ngày 4 – 6g sắc uống. Hoa được dùng trị ho, long đờm, lỵ, kiện vị, ngày 2 – 4g sắc uống hoặc tán bột uống với nước, để chữa trĩ, tán bột thêm dầu, bội.  Lá hoặc hoa chữa rắn cắn, bọ cạp đốt, lấy lá hoặc hoa tươi giã nát rồi đắp. Lá giã nát, đắp lên trán trị cảm lạnh.  Dầu ép từ hạt hoặc lấy hạt giã nát xoa ngoài trị bệnh ngoài da, ghẻ, eczema, vết thương, thấp khớp.  Ở Ấn Độ, hoa vắp được dùng trị ho, long đờm, đau họng, nấc, nôn, làm mạnh dạ dày, chữa hơi thở hổi. Hoa phơi khô, tán thành bột, thêm dầu, dùng bồi hoặc đắp ngoài để trị trĩ xuất huyết, bỏng, nụ hoa để chữa lỵ [Chopra et al., 2001: 166] [Kirtikar et al., 1998: 274 – 6]. Quả chưa chín làm thuốc xổ tẩy, ra mồ hôi. Vỏ thân phối hợp với gừng để làm ra mồ hôi. Vỏ thân vỏ rễ phơi khô, tán bột, sắc, hãm hoặc ngâm rượu uống làm thuốc bổ đắng, để điều trị viêm dạ dày, viêm phế quản. Lá và hoa chữa rắn cắn, bò cạp đốt. Lá giã nát đắp lên trán và thái dương chữa sốt và nhức đầu. Dầu ép từ hạt hoặc lấy hạt giã nát, bôi trị da nứt nẻ, ngứa, da lở loét, trĩ, đau khớp, vết thương [Nadkarrni, 1999: 792]. Ở Thái Lan, lá và hoa được dùng trị rắn cắn, bò cạp đất; lá để trị vết thương nhiễm trùng. Ở Mianma, hoa được dùng để săn se, lá để chữa răn cắn. Ở Malaysia, hoa khô sắc uống dùng cho người mẹ mới sinh giúp kích thích ăn ngon, chống bệnh tật. Ở Indonesia, hoa được dùng chữa ia chảy, long đờm, bệnh tâm thần, nụ hoa, hoa được dùng chế mỹ phẩm, thuốc mở, thuốc xoa; hạt chữa eczema, da nứt nẻ, thấp khớp, bướu cổ; nhị hoa chữa sốt. Trong dầu hạt có chất hơi độc với tim [Medicinal herbal index in Indonesia, 1995: 72] [Perry et al., 1980: 76]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chè xanh",
+      "ten_khac": "Chè, Mạy chà (Tày), Che (Kho), Co chà (Thái)",
+      "ten_khoa_hoc": "Camellia sinensis (L.) Kuntze",
+      "ma_taxon": "123005",
+      "ho": "Theaceae (Chè)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay cây to, có kích thước lớn, có thể cao 8-10m hoặc lớn hơn.",
+      "lá": "Lá mọc so le hình trái xoan, gốc tròn hoặc thuôn, đầu nhọn thành mũi, mép khía răng cưa, mặt trên nhẵn bóng.",
+      "hoa": "Hoa mọc đơn độc, hoặc 2-3 cái ở kẽ lá, màu trắng; lá bắc dễ rụng; đài 5 răng không đều, tràng 5 cánh; nhị nhiều xếp thành 4-5 dãy, dính vào gốc tràng; bầu 3 ô, có lông.",
+      "quả": "Quả nang tròn, có 3 cạnh; hạt gần tròn đôi khi hơi nhăn nheo.",
+      "mùa hoa": "tháng 11-3.",
+      "mùa quả": "tháng 11-3."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá chè dùng tươi hay phơi khô và được chế biến thành chè xanh và chè đen. Chè dùng làm thuốc hái vào mùa xuân: hái búp và lá non. Vò rồi sao cho khô giống như cách chế chè hương để pha nước uống của nhân dân. Cho nên ta có thể dùng chè (hương hay tàu chè) làm thuốc.  Không dùng chè đen hay chè mạn là những lọai chè đã cho lên men rồi mới phơi sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có chứa tới 20% tannin là một chất có tác dụng làm săn da, sát khuẩn mạnh. Ngoài ra còn cafein với tỷ lệ 1,5-5%, một số vitamin B1, B2,C",
+      "Các hợp chất": "Đặc biệt tannin trong chè có tác dụng như một vitamin P vì đây là hỗn hợp của các catechin và dẫn xuất của catechin có cấu trúc hóa học của vitamin P."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Chè có vị đắng, chát, hơi ngọt, tính mát, vào kinh can thận, có tác dụng thanh nhiệt, giải khát, tiêu cơm, lợi tiểu, làm cho đầu óc thư thái, da thịt mát mẻ, chống mỏi mắt, mụn nhọt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chè được dùng trong các trường hợp mệt mỏi, ngủ nhiều, đau đầu, mắt mờ, sốt, khát nước, tiểu tiện không thông, ngộ độc rượu.",
+      "được_dùng": "Đang dùng thông thường là lá chè tươi nấu nước uống hoặc dùng chè khô hãm nước sôi uống.",
+      "làm thuốc": "Dùng ngoài, nước chè rửa vết thương, vết bỏng, hoặc lở loét để làm se da và chóng lên da non.",
+      "có tác dụng": "Tuy nhiên, chè cũng có thể gây tác hại như sau:  Nếu sử dụng lâu dài với liều cao, chè có thể gây nhiễm độc mạn tính, biểu hiện là mất ngủ, gầy yếu, mất cảm giác ngon miệng, rối loạn thần kinh. Chè gây khó ngủ nếu uống vào buổi tối hoặc trc khi đi ngủ Chè gây kích thích thần kinh.",
+      "chữa": "Chữa tiêu chảy, kiết lỵ: Búp chè, búp ổi mỗi thứ một nắm, sao vàng, sắc uống Chữa phù thũng: Chè tươi 300g, nấu nước uống, mỗi ngày 2-3 lít. Dùng 3-4 ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chi Camellia L. có khảng 45 loài, thường là những cây bụi hay cây gỗ, phân bố vùng nhiệt đới và cận nhiệt đới.",
+      "làm thuốc": "Chè là một cây có nguồn gốc Trung quốc. Nhân dân Trung quốc đã biết dùng chè từ 2.500 năm trước công nguyên, sau tới Nhật bản và nhiều nước Châu á khác. Hiện nay cây chè được trồng ở nhiều nước. Liên xô cũ cũng rất phát triển việc trồng chè.",
+      "có tác dụng": "Ở nước ta chè được trồng nhiều nhất tại các tỉnh Phú Thọ, rồi tới Tuyên Quang, Hà giang, Thái Nguyên, các tỉnh miền Nam cũng trồng rất nhiều (Quảng Nam, Đà Nẵng, Đắk Lắk, Lâm Đồng)"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

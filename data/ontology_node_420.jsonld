@@ -1,0 +1,273 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc lục lăng",
+      "ten_khac": "Linh đan hôi, cúc hoa xoắn, cúc đời, la ghe cánh",
+      "ten_khoa_hoc": "Laggera alata (D.Don) Sch. Bip. ex Oliv.",
+      "ma_taxon": "634018",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 0,8 – 1m.",
+      "thân": "Thân mập, cứng, phân nhánh nhiều, có rãnh dọc và có cánh, cánh rộng 4 – 5 mm, không khía răng, màu lục sẫm.",
+      "lá": "Lá mọc so le, không cuống, hình mác, dài 2 – 8 cm, rộng 0,5 – 2 cm, gốc thuôn, đầu từ hoặc nhọn, mép khía răng, hai mặt có lông mịn áp sát và tuyến tiết.",
+      "hoa": "Cụm hoa mọc ở đầu ngọn và kẽ lá, lá bắc nhọn xếp thành nhiều hàng hoa màu trắng, cao 6 – 7 mm; hoa cái nhiều, hoa lưỡng tính 8 – 12; mào lông màu trắng, rụng sớm, tràng hoa cái có 4 răng nhọn, tràng hoa lưỡng tính có 5 thuỳ; nhị 5; bầu nhẵn.",
+      "quả": "Quả bế hình trụ, có lông, có 10 cạnh, dài 4-5 mm.",
+      "mùa hoa": "tháng 10 – 1",
+      "mùa quả": "tháng 10 – 1"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Laggera Sch. – Bip. phân bố chủ yếu ở vùng cận nhiệt đới, ôn đới ấm và một số loài có ở vùng nhiệt đới.  Ở Việt Nam, chi này có 4 loài, 2 loài làm thuốc trong đó có loài cúc lục lăng trên. Trên thế giới, cúc lục lăng phân bố khá rộng rãi từ phía đông Ấn Độ sang Mianma, Trung Quốc, xuống phần bắc Lào, Thái Lan và Malaysia.  Ở Việt Nam, loài này đã ghi nhận được hầu hết các tỉnh miền núi giáp biên giới phía Bắc, như Cao Bằng, Lạng Sơn, Quang Ninh, Lào Cai, Sơn La, Bắc Cạn, và ở phía nam bao gồm: Kon Tum (Kon Plông), Đắc Lắc (Đào Min cũ), Lâm Đồng (Lang Bian, Đức Trọng).",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quang Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắc Lắc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa 34 thành phần trong đó các thành phần chính là: thymoquinol dl – Me ether 11,17% và eudesmol 12,55%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây cúc lục lăng vị đắng và cay, tính hơi ấm, có mùi thơm; có công năng tiêu thũng, tán ứ, tiêu độc, giảm đau.  Sách “Bản thảo cầu nguyện” ghi: cúc lục lăng vị cay ngọt, tính bình, sách “Tân hoa bản thảo cương yếu” ghi: vị cay, đắng, tính hàn; sách “Phúc khiến dân gian thảo dược” ghi: vị đắng, hơi cay, tính ấm, sách “Nam Ninh thị dược vật chí” ghi: vị cay, đắng, tính hơi ẩm; sách “Mân Đông bản thảo ghi: cúc lục lăng vào ba kinh là phé, tỷ và bàng quang: có công năng thanh nhiệt giải độc, tiêu viêm, tiêu thũng, khư phong trục thấp, chỉ thông, thị thống kinh [TDTH, 1997, III: 5091]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây cúc lục lăng được dùng trị cảm cúm, ho kéo dài, đau khớp xương, đau lưng, viêm thận, phù thũng, vô kinh, đau bụng trước khi sinh. Liều dùng hàng ngày 15 – 30g (dùng tươi 30 – 60g), sắc chia 2 lần uống.  Dùng ngoài trị mụn nhọt, viêm mô tế bào, tràng nhạc, đau do đón ngã, bỏng, eczema, rắn cắn. Lấy một lượng vừa đủ cây tươi, giã đắp ngoài, hoặc đun lấy nước tắm rửa.  Ở Ấn Độ và Madagascar, cúc lục lăng được dùng làm thuốc khử khuẩn, tẩy uế; là để cầm máu khi bị các vết thương chém chặt [Chopra et al., 2001: 149; Srivastava, 1989:82)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

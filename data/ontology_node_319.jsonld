@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Sâm bố chính",
+      "ten_khac": "Sâm thổ hào, Sâm báo, Nhân sâm Phú Yên",
+      "ten_khoa_hoc": "Abelmoschus sagittifolius (Kurz) Merr.",
+      "ma_taxon": "1516708",
+      "ho": "Bông (Malvaceae)",
+      "Mô tả": {
+        "cây": "Sâm bố chính là một loại cây thuộc thảo sống dai, mọc\u00a0đứng một cách yếu ớt, có khi dựa vào các cây xung\u00a0quanh, cao chừng 1m hay hơn.",
+        "rễ": "Rễ mầm màu trắng nhạt hay vàng nhạt, có đường kính 1,5-2cm, nhiều rễ có hình người trông rất giống nhân sâm, có lẽ vì thế người xưa bắt đầu dùng nhầm rồi thấy tốt mà dùng mãi và lưu truyền về sau chăng?",
+        "lá": "Lá ở phía gốc cây hình trái xoan, phần cuối phiến lá hình tim hay hình mũi tên, đầu phiến lá không nhọn. Các lá ở phía ngọn càng lên trên càng hẹp, có khi phiến lá chia thuỳ với thuỳ giữa dài hơn, có khi phiến lá chia thuỳ trông như mũi tên. Lá dài 6-7cm, rộng 30mm. Mặt lá có lông đơn hay hình sao, lá kèn hình sợi chỉ dài 7mm có ít lông dài.",
+        "hoa": "Hoa màu hồng hay đỏ, phớt vàng, mọc đơn độc ở kẽ lá, đường kính tới 8cm.",
+        "cuống": "Cuống hoa dài 5-8cm, có lông cứng, hơi phồng đầu.",
+        "đài": "Tiểu đài cấu tạo bởi 7-10 bộ phận, dài 12-14mm, có lông tua tủa, đài hoa hình túi, ở ngọn có vài răng nhỏ, đài rách ra và rụng sớm, 5 cánh hoa dài 5-6cm, rộng 3-4cm ở ngọn.",
+        "nhị": "Nhiều nhị hàn liền với nhau thành một cột. Bao phấn phủ cột đỏ đến tận gốc.",
+        "quả": "Bầu có lông, 5 vòi, có tuyến. Quả hình trứng nhọn, dài gấp 3 lần tiểu đài, ngoài mặt có lông, khi chín, quả nứt thành 5 mảnh vỏ, mặt trong và mặt ngoài đều có lông.",
+        "hạt": "Hạt hình thận, màu nâu, ngoài mặt có những đường vân rất sít nhau thành những gợn hay ụ màu vàng ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Rễ sâm bố chính chứa chất nhày 35-40%, và tinh bột (Đỗ Tất Lợi, 1999).",
+        "gồm chất": "Theo Trần Công Luân và cs, 2001, rễ cây sâm bố chính trồng ở Bạc Liêu chứa phytosterol, coumarin, axit béo, acid hữu cơ, đường và hợp chất uronic.",
+        "lipid": "Hàm lượng lipid là 3,96% (myristic, acid palmitic, acid stearic, acid oleic, acid linoleic, acid linolenic).",
+        "protein": "Hàm lượng protein toàn phần là 0,23g.",
+        "acid amin": "Các acid amin gồm 11 chất trong đó có histidine, argusin, threonine, alanine, prolin, tyrosin, valin,…",
+        "tinh bột": "Hàm lượng tinh bột là 15,14% và chất nhày 18,92%.",
+        "nguyên tố": "Ngoài ra còn có các nguyên tố: Na, Ca, Mg, Al,…"
+      },
+      "Tính vị": {
+        "Có vị": "Rễ sâm bố chính có vị ngọt, hơi nhớt, tính bình, và 2 kinh có tác dụng bổ khí, ích huyết, chỉ khát; sao với gạo thì tính ấm, bổ tỳ vị, giúp tiêu hóa, thêm sức mạnh."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Sâm bố chính phối hợp với các vị thuốc khác để chữa các chứng ho, sốt nóng, trong người khô, táo, khát nước, gầy còm. Một số các ông lang cho rằng sâm bố chính là một vị thuốc bổ, thông tiểu tiện, điều kinh, chữa sốt, bệnh phổi và bạch đới.",
+        "liều dùng": "Liều lượng chưa xác định, thường dùng với liều 6-12g hay hơn.",
+        "kiêng kỵ": "Kiêng kỵ: thể trạng hư hàn phải tẩm nước gừng, sao kỹ",
+        "chú thích": "Tuy mang tên sâm vì vị thuốc có hình dạng giống người như nhân sâm, nhưng không nên nhầm với nhân sâm. Qua thành phần hoá học và công dụng sâm bố chính trong nhân dân, chúng tôi thấy có nhiều điểm giống vị thuốc Radix Athaeae-là rễ cây Aithaea officinilis L. thuộc cùng họ Bông Malvaceae."
+      },
+      "Cách dùng": {
+        "chữa sốt": "Chữa sốt nóng lâu, khát nước, ra mồ hôi:  Sâm bố chính 20g, thục địa 30g, nhục quế 3g. Sắc uống ngày 1 thang",
+        "chữa gầy yếu": "Chữa gày yếu hay béo bệu, kém ăn, mỏi mệt, đầy bụng đi lỏng:  Sâm bố chính 40g, bạch truật 20g (sao mát), hoàng kỳ 8g (sao mật), liên nhục 6g, mạch môn 4g, ngũ vị 4g (sao mật), chích thảo 4g, phụ tử chế 1-2g, táo ta vài quả, gừng nướng vài lát. Sắc uống trong ngày.",
+        "chữa tiêu hóa": "Chữa tiêu hóa, bài tiết bị ngưng trệ:  Sâm bố chính 20g, bạch truật 40g (tẩm sữa sao), trầm hương 4g. Sắc riêng sâm bố chính và bạch truật rồi mài trầm hương vào, uống trong ngày.",
+        "chữa trẻ em": "Chữa trẻ em gầy còm xanh xao, hay đi lỏng, lỵ kéo dài:  Sâm bố chính sao chín 25%, hoài sơn sao chín 30%, ý dĩ sao chín 20%, hạt sen sao chín 15%, bạch chỉ sao chín 10%. Các vị tán nhỏ rây bột mịn, cho uống với nước đường hoặc trộn với đường đun chảy. Trả em trên 10 tuổi, ngày 4-10g",
+        "chữa rối loạn": "Chữa rối loạn kinh nguyệt:  Sâm bố chính 16g, cỏ nhọ nồi sao vàng, thục địa,mỗi vị 20g, ngải cứu sao, ích mẫu, mỗi vị 16g, củ gai (cây gai làm bánh) 12g, củ gấu (tứ chế) 10g. Sắc uống trong ngày",
+        "chữa thiếu máu": "Chữa thiếu máu:  Sâm bố chính, hà thủ ô, hạt sen, mỗi vị 100g; cam thảo 40g, thảo quả 12g, đại hồi 8g. Tán nhỏ làm viên ngày uống 20g, chia 2 lần",
+        "chữa đái": "Chữa đái ra dưỡng chấp:  Sâm bố chính, ý dĩ, tỳ giải, huyền sâm, trúc diệp, liên nhục, củ mài, rễ cỏ tranh, cam thảo nam, mã đề mỗi vị 12g, hoạt thạch 6g. Sắc uống ngày 1 thang",
+        "chữa suy nhược": "Chữa suy nhược thần kinh:  Sâm bố chính 20g, hoàng kỳ 12g, đương quy, bạch truật, táo nhân, long não, mộc hương, bạch thược, cúc hoa, mỗi vị 8g, bạch linh, viễn chí mỗi vị 6g. Sắc uống ngày 1 thang",
+        "bổ khí": "Bổ khí huyết:  Sâm bố chính 30g, hoài sơn, đương quy, ý dĩ sao, mỗi vị 15g, hồi đầu 12g. Làm viên với mật ong hoặc keo mạch nha,mỗi ngày 15-20g."
+      },
+      "luu_y": {}
+    }
+  ]
+}

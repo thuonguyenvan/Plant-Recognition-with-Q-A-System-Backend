@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa hồng trắng",
+      "ten_khac": "Hoa hồng trắng, hồng bạch",
+      "ten_khoa_hoc": "Rosa odorata (Andr.) Sweet",
+      "ma_taxon": "171084",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao 1 – 2 m.",
+      "thân": "Cành non nhẵn, màu lục nhạt, có gai mập, cong",
+      "lá": "lá mọc so le, kép lông chim, có 3 – 5 lá chét, hình bầu dục hoặc hình trứng, gốc tròn, đầu nhọn, mép có răng cưa đều, hai mặt nhẵn, mặt dưới có gai, lá kèm dính liền với cuống.",
+      "hoa": "Cụm hoa mọc thành ngù ở đầu cành, đôi khi đơn độc, hoa màu trắng, thơm, rất nhiều cánh do nhị biến đổi thành",
+      "quả": "Quả bế tụ họp trong đế hoa tạo thành một quả giả, hình cầu hoặc hình trứng.",
+      "mùa hoa": "Mùa hoa quả gần như quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hoa hồng trắng có giả thiết cho rằng xuất xứ từ Trung Quốc và vùng Đông Á. Hiện được trồng ở một số nơi tại Trung Quốc, Nhật Bản và Việt Nam. Ở Việt Nam hoa hồng trắng là cây trồng từ lâu đời, chủ yếu ở các tỉnh đồng bằng và trung du Bắc Bộ, trong phạm vi hẹp để làm cảnh và làm thuốc. Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường được trồng thành từng khóm hay luống nhỏ ở vườn gia đình hoặc đình chùa. Cây ra hoa quả hàng năm, nhưng chưa quan sát được cây con mọc từ hạt. Tuy nhiên, hoa hồng trắng lại có khả năng đẻ nhánh, tạo thành nhiều cây con từ chồi gốc. Hơn nữa những phần thân cành nằm sát mặt đất dễ dàng mọc rễ con, tạo điều kiện cho cây phát triển thành những khóm lớn."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa hống trắng có vị ngọt, tính bình, có tác dụng làm săn, nhuận tràng, giảm ho."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa hồng trắng chữa ho trẻ em rất công hiệu. Hoa dùng tươi hay phơi khô, 20 – 30g, hãm với 100 ml nước sôi trong 15 – 20 phút, thêm 1 – 2 thìa cà phê đường, uống 2 – 3 lần trong ngày, chữa tiêu hóa kém. Vài cánh hoa hồng trắng giã nhỏ trộn với mật ong bôi ngậm chữa miệng lưỡi lở loét. Để chữa mụn nhọt sưng tấy, giã hoa đắp sẽ tiêu. Ở Ấn Độ hoa hồng trắng là thuốc làm mát để trị sốt, đánh trống ngực và sinh tinh dịch. Cánh hoa cũng được dùng để nhuận tràng.",
+      "chữa": "Chữa ho trẻ em: Cánh hoa hồng trắng còn tươi 1 bông, quất chín 1 quả, đường kính hoặc mật ong nửa thìa cà phê. Tất cả cho vào một chén con sạch, hấp cơm , rồi nghiền nát , gạn lấy nước cho trẻ uống làm nhiều lần trong ngày.",
+      "chữa": "Chữa ho gà trẻ em:\u00a0Hoa hồng trắng 5 bông,nước lá hẹ giã vắt 5ml, nước chanh quả 1 ml, phèn phị 1g, mật ong hoặc nước đường 20 ml. Chưng cách thủy hoa hồng với ít nước rối nghiền nát gạn lấy nước, trộn lẫn các vị với nước hoa hồng, chưng cách thủy hoặc hấp cơm, cho uống làm nhiều lần trong ngày.",
+      "làm thuốc": "Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

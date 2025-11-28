@@ -1,0 +1,268 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trám trắng",
+      "ten_khac": "Trám trắng, Cà na, Ô lãm, Mác cợm, Mạy cưởm (Tày), Thanh quả",
+      "ten_khoa_hoc": "Canarium album (Lour.) Raeusch.",
+      "ma_taxon": "1530079",
+      "ho": "Burseraceae (Trám)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 m hoặc hơn.",
+      "thân": "Cành non màu nâu nhạt, có lông mềm.",
+      "lá": "Lá kép lông chim, mọc so le, dài 35-40 cm, gồm 7 – 11 lá chét, mặt trên màu xanh nhạt bóng, mặt dưới có lông ánh bạc; những lá gần gốc có đầu ngắn, những lá ờ giữa dài hơn, có đầu thuôn dài, lá tận cùng hình bầu dục, gân lá hơi rõ; lá kèm có lông mềm, màu nâu bạc.",
+      "hoa": "Cụm hoa mọc ở ngọn thành chùm kép, dài 8 – 10cm; lá bắc hình vảy; hoa mọc thưa, thường tụ họp 2 – 3 cái ở một mấu; đài có lông, 3 răng; tràng hình bầu dục, có 3 cánh hơi dài hơn lá đài, phủ lông ngắn ở\u00a0mặt ngoài; nhị 6, chỉ nhị ngắn; bầu hình trứng, có lông màu nâu.",
+      "quả": "Quả hạch, hình trứng, nhọn ở đầu, khi chín màu vàng nhạt; hạt cứng nhẵn có vỏ dày.",
+      "mùa hoa": "tháng 5-6.",
+      "mùa quả": "tháng 8 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Canarium L. là một chi lớn về số loài của chi có những ý kiến khác xa nhau : Theo E. C. Fernandez, 2000, có khoảng 80 loài (PROSEA, Nol8 – Plants producing exudates, p. 55 – 60); tài liệu khác ghi 150 loài (The wealth of India, Vol.II, 1950, 52 – 55). Ở Việt Nam có 8 loài, trong đó trám trắng có thể coi là loài đặc hữu khu vực; vì cây chỉ phân bố chủ yếu ở miền Bắc, từ Quảng Bình trở ra, một phần lãnh thổ phía nam Trung Quốc (Quảng Tây – Vân Nam) và Bắc Lào.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tây (Ba Vì)"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Vĩnh Phúc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Trám trắng thuộc loài cây gỗ to, thường mọc rải rác ở rừng kín thường xanh còn nguyên sinh hay thứ sinh, độ cao dưới 500m. Cây mọc tự nhiên từ hạt sau 8-10 năm bắt đầu có hoa quả; cây trồng có thể sớm hơn.",
+      "Đặc điểm sinh trưởng": "Trám có thể sống được trên nhiều loại đất, song tốt nhất là đất feralit đỏ vàng hay vàng đỏ có nhiều mùn. Những năm gần đây, người dân ở các tỉnh Hà Tây, Vĩnh Phúc, Phú Thọ, Yên Bái, Thái Nguyên, Tuyên Quang đã chủ động trồng thêm nhiều trám trắng trên diện tích vườn rừng hay rừng được giao khoán."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Trám trắng là cây đa dụng được trồng trên đất đồi gò, nương rẫy ở miền Bắc và miền Trung. Cây ưa sáng, nhiệt độ bình quân năm trên 22°c, thấp nhất trên 13°c, lượng mưa 1800 – 2000 mm, độ ẩm không khí trên 80%. Trên đất tốt, dày, đầy đủ ánh sáng, cây sinh trưởng mạnh, sai quả.\n\nTrám được nhân giống bằng hạt. Hạt trám không chịu được điều kiện bảo quản khô nhưng có thời gian ngủ nghỉ khá dài. Vì vậy, cần phải nhân giống như sau: vào tháng 8-9, hái những quả chín già, to đều, không bị sâu bệnh, ngâm vào nước nóng 70°C cho thịt quả mềm rồi tách lấy hạt, rửa sạch, hong khô, xếp trong cát ẩm; cứ một lớp hạt, một lớp cát. Khoảng 7 – 10 ngày, đảo hạt một lần cho thoáng khí, tưới thêm nước giữ ẩm, nếu cần có thể thay cát mới. Đến mùa xuân, khi hạt nứt nanh, đem gieo vào bầu. Ruột bầu gồm 90% đất, 10% phân chuồng hoai mục. Mỗi bầu gieo một hạt đã mọc mầm (cũng có thể gieo thẳng hạt sau khi tách khỏi quả, nhưng tốn nhiều công chăm sóc và tỷ lệ hỏng cao). Bầu xếp trong vườn ươm, chăm sóc sau một năm thì chuyển đi trồng. Nếu để lâu hơn, hàng năm cần đánh chuyển bầu để rễ\u00a0cái không ăn sâu, trồng dễ sống.\n\nĐất trồng trám cần dày, nhiều mùn, đầy đủ ánh sáng. Nếu để lấy quả, cần trồng thưa, 7 – 8 m một cây, còn lấy gỗ, có thể trồng dày hơn. Thời vụ trồng vào tháng 2-3 hoặc tháng 8 – 9. Trồng theo hố, với kích thước 50 x 50 x 50 cm, bón lót mỗi hố 10 -15 kg phân chuồng. Có thể trồng xen dứa, chè, đậu, lạc, khoai, sắn… để tận dụng đất đai, hạn chế cỏ dại, tăng thu nhập. Ngoài ra, chăm sóc cho cây trồng xen cũng giúp cho cây trám sinh trưởng, phát triển tốt hơn.\n\nSau khi trồng, thỉnh thoảng tưới và làm cỏ xung quanh gốc cho đến khi cây bén rễ. Khi cây đã lớn, không cần tưới và làm cỏ, nhưng mỗi năm bón thêm phân vào lúc cây chuẩn bị ra hoa và sau khi thu hoạch quả, mỗi lần bón 50 – 70 kg phân chuồng cho một cây."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ lá, thu hái quanh năm; quả hái khi chín, dùng tươi hay muối, rồi phơi, sấy khô. Ngoài ra, nhựa cây còn được khai thác để làm hương và cất tinh dầu hay chế colophan."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả trám có protein 12% lipid 1.09% hydrat carbon 12% Ca 0,024%, P 0,046%, F 0,004% và phosphor 0,06%\nDầu hạt chứa các acid hexanoic, caproic, octanic, decanoic, lauric, myristic, stearic, palmatic và linoleic"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả trám có vị chua, ngọt, bùi, béo, tính ấm, vào kinh phế, có tác dụng thanh nhiệt, tiêu khát, sinh tân, thanh giọng, giải độc rượu và cá độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trám trắng dược dùng chữa sưng hầu, sưng amidan, ho nhiều (viêm ruột, lỵ, tiêu chảy, khát nước) Quả tươi còn xanh để giải độc rượu, chữa ngộ độc do cá độc, con dải. Quả chín có tác dụng an thần, chữa động kinh. Ngàỵ 6 – 12g sắc uống. Nhân hạt trám tri giun và hóc xương, vỏ cây trị di ứng sơn, đau nhức răng. Nhựa trám trắng được cất lấy tinh dầu dùng trong kỹ nghệ nước hoa, colophan còn lại dùng trong kỹ nghệ xà phòng, vecni. Nhân dân còn dùng nhựa trám trộn với bột thân cây đậu tương làm hương thắp.\n\nVề mặt thực phẩm.\n\nQuả trám trắng chín còn tươi đổ nước sôi vào, ủ 10 – 15 phút rồi ăn, hoặc kho với thịt, cá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Chữa đau họng, sưng amiđan, ho, miệng khô, khát nước: Lấy 500g quả trám trắng tươi, rửa sạch, đập lấy cùi, bỏ hạt, nấu với nước 2-3 lần. Lọc rồi cô còn hơn 250ml. Thêm vào 125g đường kính hoặc phèn chua. Cô còn 250ml. Uống mỗi lần 2-5ml. Ngày 2-3 lần.\n\n2. Chữa lỵ: Quả trám tươi để cả hạt 90g, sắc với 200ml nước, còn 90ml, chia làm 3 lần uống trong ngày.\n\n3. Chữa viêm tắc mạch: Quả trám trắng 200g, luộc kỹ ăn và uống cả nước. Ăn liền 50 ngày (Lương y Lê Trần Đức).\n\n4. Chữa hóc xương cá:\nHạt quả trám trắng, đốt tồn tính, tán bột, phối hợp với bột rễ cây đậu ván trắng, uống dần mỗi lần 4 – 6g. Trám trắng 5 quả, sắc lấy nước đặc ngậm và nuốt dần, hoặc lấy thịt quả, giã giập, ép lấy nước uống. Có thể kết hợp lấy lá hẹ giã nát, trộn với lòng trắng trứng đắp ngoài da chỗ xương hóc.\n\n5. Chữa đau răng, sâu răng:\nQuả trám đốt thành than, tán bột mịn, trộn với ít xạ hương, rồi bôi và xỉa vào chỗ đau. Vỏ thân cây trám trắng, cạo bỏ lớp vỏ đen bên ngoài, thái mỏng, phơi khô, sắc lấy nước ngậm khoảng 10 phút rồi nhổ đi. Ngày làm nhiều lần. Có thể phối hợp với rễ cà dại, rễ chanh, lượng mỗi vị bằng nhau, sắc đặc, ngậm như trên.\n\n6. Chữa lở sơn: Vỏ cây, chặt nhỏ, nấu nước tắm.\n\n7. Chữa nứt nè kẽ chân, gót chân khi trời rét: Hạt trám trắng đốt thành than, tán nhỏ, rây, trộn với dầu thực vật, bôi hàng ngày.\n\n8. Chữa tràng nhạc: Hạt trám, hạt gấc và vỏ quả mướp đắng, đốt thành than, lượng bằng nhau, trộn đều, hòa với mỡ lợn, bôi."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thiến thảo",
+      "ten_khac": "Thiến thảo, Tây thảo, Mao sáng, Dù mi nhùa (Hmông), Hùng si sẻng (Tày)",
+      "ten_khoa_hoc": "Rubia cordifolia L.",
+      "ma_taxon": "500587",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây mọc leo, sống lâu năm, rễ sống dai, thân vuông, có gai rất nhỏ, mọc quặp xuống.",
+      "lá": "Lá mọc vòng 4 lá một (thực tế là lá mọc đối, với lá kém phát triển, trông như 4 lá mọc vòng). Phiến lá hình bầu dục đầu nhọn, dài 2-4cm, rộng 2,5-3cm, mép cũng có gai, gân lá hình cung.",
+      "hoa": "Hoa nhỏ màu vàng nhạt, mọc thành xim dài 3-20cm ở đầu cành hay kẽ lá.",
+      "quả": "Quả tròn, màu đen, khi chin trong chứa 1-2 hạt hình cầu, đường kính 4mm, hõm ở giữa, lưng phình lên.",
+      "mùa hoa": "tháng 9-11",
+      "mùa quả": "tháng 9-11"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ thiến thảo có chứa một chất glucozit, axit rutherythric, alizarin, một ít purpurin, rubiadin, glucoza",
+      "gồm chất": "Dưới tác dụng của men (erythrozin hay rubiaza) axit rutherythric sẽ tách ra thành glucoza và alizarin hay dioxyanthraquinon, purpurin là một trioxyanthraquinon, chất glucozit sinh ra purpurin chưa tách ra được, rubiadin là một metylpurpuroxanthin.",
+      "dấu hiệu đặc trưng": "Chất purpuroxanthin trong Rubia sikkimensis là một đồng phân màu vàng của alizarin và là một dioxyanthraquinon"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thiến thảo là một vị thuốc bổ, lợi tiểu, giúp ăn ngon cơm, điều kinh. Còn dùng chữa thổ huyết, tiểu tiện ra máu, chảy máu cam.",
+      "được_dùng": "Ngày dùng 2-5g dưới dạng thuốc bột, có thể chế thành cao nước mềm dùng với liều 0,3-1g / ngày. Uống thuốc này, xương những người uống cũng có màu đỏ.",
+      "chữa": "Tại những nước phương tây, người ta dùng rễ cây Rubia tinctorum L với cùng một công dụng. Trước đây việc trồng cây này rất phát triển để làm thuốc nhuộm, có năm sản xuất lên tới 6 vạn tấn rễ. Nhưng sau khi tổng hợp được alizarin việc trồng cây này kém phát triển và từ đó việc dùng cây này làm thuốc cũng ít dần."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Trị chảy máu cam do nhiệt: Thiến mai hoàn ( Phổ tế bản thị phương) gồm: Thiến thảo, Ngãi diệp, Ô mai lượng bằng nhau tán bột mịn luyện mật làm hoàn, uống mỗi lần 2 – 4g, ngày 2 – 3 lần.",
+      "sắc uống": "Trị viêm phế quản mạn tính: dùng Thiến thảo và vỏ cây cam chanh chế thành thuốc sắc."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

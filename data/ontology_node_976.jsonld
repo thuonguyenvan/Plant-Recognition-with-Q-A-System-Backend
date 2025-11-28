@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc tần",
+      "ten_khac": "Cúc tần, Từ bi, Cây lức, Phật phà, Vật và (Tày)",
+      "ten_khoa_hoc": "Pluchea indica (L.) Less.",
+      "ma_taxon": "167069",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá gần hình bầu dục, hơi nhọn đầu, gốc thuôn dài, có răng cưa ở mép, mặt dưới có lông mịn, phiến dài 4-5cm, rộng 1-2,5cm.",
+      "hoa": "Hoa hình đầu có cuống ngắn, màu tím nhạt, nhóm họp thành 2-3 cái. Lá bắc 4-5 dãy, hoa lưỡng tính nhiều. Mào lông màu trắng bẩn. Tràng hoa cái mảnh, 4 răng nhỏ. Tràng hoa lưỡng tính phình to ở đỉnh, có 5 thùy. Nhị 5, bao phấn có tai, hình dùi, bầu hơi có lông.",
+      "quả": "Quả bế hình trụ-thoi, 10 cạnh.",
+      "cây": "Cây nhỏ cao 2-3m, cành gầy, lúc đầu có phủ lông, sau nhẵn.",
+      "mùa hoa": "tháng 12",
+      "mùa quả": "tháng 12"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành, lá non và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong toàn cây chủ yếu có tinh dầu, mùi thơm.",
+      "gồm chất": "Lá chứa 2,9% protein.",
+      "Các hợp chất": "100g cúc tần tươi có 5,7g protit, 1g lipit, 5,1g xenluloza, 2,3g tro, 179mg Canxi, 2,3mg P, 0,5mg Fe, 4,6g caroten, 15mg vitamin C."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cúc tần có vị ngọt, hơi đắng, mùi thơm, tính mát"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng lá và cành non cây cúc tần dùng làm thuốc chữa cảm sốt, sốt, dưới dạng thuốc sắc hay thuốc xông. Có tác dụng giúp sự tiêu hóa, chữa lỵ.",
+      "giã nát": "Người ta còn giã nát lá và cành non, thêm ít rượu xào cho nóng đắp lên ở nơi đau ở hai bên thận chữa đau, mỏi lưng.",
+      "sắc uống": "Liều dùng: 8 – 16g dưới dạng thuốc sắc.",
+      "chữa": "Chữa cảm sốt: Cúc tần 20g, lá tre 20g, bạc hà 20g, kinh giới 20g, tía tô 20g, cát căn 20g, cúc hoa 5g, địa liền 5g. Dạng thuốc bột hoặc thuốc viên, mỗi ngày uống 2-3 lần, mỗi lần 4-6g. Chữa cảm sốt, nhức đầu, ho, không có mồ hôi: Cúc tần (2 nắm), lá sả (1 nắm), lá chanh (1 nắm). Nấu nước xông và uống nóng, đắp chăn cho ra mồ hôi. Chữa đau nhức gân xương, đau lưng: Rễ cúc tần 20g, rễ xấu hổ 20g, rễ bưởi bung 20g, rễ đinh lăng 10g, cam thảo dây 10g. Sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang dại và được trồng ở hầu hết các tỉnh nước ta, đồng bằng cũng như bờ biển. Thường trồng làm hàng rào cây xanh, vừa lấy lá làm thuốc.",
+      "phơi khô": "Thường thu hái lá non và lá bánh tẻ. Dùng tươi hay phơi hoặc sấy khô làm thuốc.",
+      "xấy khô": "Người ta đào cả rễ, rửa sạch, thái mỏng phơi hay sấy khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

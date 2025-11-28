@@ -1,0 +1,261 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thài lài tía",
+      "ten_khac": "Thài lài tía,  Rau trai tía, Co hồng trai, Chạ pi đeng, Biển súc, Phiéc đa đeng (Tày), Xa phón sí (Dao)",
+      "ten_khoa_hoc": "Tradescantia zebrina Hort. ex London",
+      "ma_taxon": "169883",
+      "ho": "Commelinaceae (Thài lài)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, mọc bò, cao 20 – 25 cm.",
+        "thân": "Thân mọc sát mặt đất, phân nhánh, bén rễ và phình ở các mắt, sau vươn thẳng, có lông trắng ở gần mắt.",
+        "lá": "Lá mọc so le, hình bầu dục, dài 2,5 – 5 cm, rộng 1,5 – 2,5 cm, gốc tròn, đầu thuôn nhọn, mép nguyên, hai mặt nhẵn, mặt trên màu xanh lục có vân dọc màu trắng, mặt dưới tía; cuống ngắn; bẹ lá dài 6 – 10 mm.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành chùm có lá nằm trong 2 lá bắc dạng lá hàn liền; hoa màu hồng, tụ họp 1 – 2 cái; đài 3 răng dài, màu trắng lục, hàn liền ở phía dưới thành ống; tràng 3 cánh dính liền thành ống màu trắng; nhị 6, gắn bằng nhau, chỉ nhị có lông dài; bầu 3 ô không đều, mỗi ô chứa 2 noãn.",
+        "quả": "Quả nang; hạt nhiều, có áo.",
+        "mùa hoa": "tháng 3 – 6."
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Zebrina Schnizl. gần đây được Brummitt (1992) đề nghị lấy lại tên cũ do Linné đã xác định từ năm 1753 là Tradescantia L., gồm một số loài phân bố rải rác khắp các vùng nhiệt đới. Hiện nay thài lài tía chưa rõ về nguồn gốc, có vùng phân bố tự nhiên từ phía nam Trung Quốc đến Lào, Việt Nam và một vài nước khác ở Đông – Nam Á.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Ninh"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thanh Hóa"
+              }
+            }
+          ]
+        },
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "Việt Nam",
+                "ghi_chú": "còn được trồng làm cảnh."
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Thài lài tía ưa ẩm ưa sáng, chịu được hạn, thường mọc ở nơi đất ẩm, xuất hiện quanh năm trong mùa ấm ẩm, nửa ẩn lộ về mùa đông; có hoa quả hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Trong đeàn thành cảnh khi bị cắt rã khô cạn, vẫn có khả năng tái sinh."
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Thài lài tía sống lâu năm, có hoa, lá đẹp, nên được trồng làm cảnh và làm thuốc. Khi trồng, chỉ cần lấy một đoạn thân có đốt dài 20 – 30 cm giâm vào bồn hay chậu. Có thể trồng quanh năm. Nếu đủ ẩm sẽ sinh trưởng tốt, ít phân vì sinh hoa đạm. Cây không hay bị sâu bệnh."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Toàn cây thu hái quanh năm, phơi hay sấy khô."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Theo Yang Chuan và cs, 1996, thài lài tía có β-ecdysone. Thí nghiệm trên sức vật, chất này có tác dụng loại trừ được loạn nhịp tim do aconitin gây ra (CA 126: 303675 k) Thài lài tía còn có cyanidin-3-[6-(2,5-dicaffeyl arabinofuranosyl) glucosid]-7,3′-bis(6-caffeoylglucosid) (The Handbook of natural flavonoids II, 1999)."
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Cả cây thài lài tía được dùng chữa kiết lỵ, đại tiện buốt, táo bón. Liều dùng: 30 – 40 g cây khô sắc uống. Dùng ngoài, cây giúp giã nát đắp chữa vết thương, tụ máu, sưng tấy, mụn nhọt, chó cắn.  Ở Vân Nam, Trung Quốc, thài lài tía chữa thủy thũng, sỏi niệu đạo, viêm họng, viêm ruột, tiêu chảy, ho, trĩ, huyết, phù do sung đau, bông hoa, hắc lào, mụn, sưng tấy, loét, lỵ, mụn nhọt, nhức đầu.",
+        "chữa": [
+          "đại tiện buốt",
+          "kiết lỵ",
+          "mụn nhọt",
+          "sưng tấy"
+        ],
+        "sắc uống": "Thài lài tía 30 g, nấu thông hay mễ di 20 g. Sắc uống ngày một thang.",
+        "giã nát": "Thài lài tía, cây nhọ nồi, hương nhu mỗi vị 30 g, đốt tồn tính, thêm nước gạo nếp, hơ đắp vào chỗ sưng."
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thông Đất",
+      "ten_khac": "Thông đất, Thạch tùng nghiêng",
+      "ten_khoa_hoc": "Lycopodiella cernua (L.) Pic.",
+      "ma_taxon": "82400",
+      "ho": "Lycopodiaceae (Thông đất)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, mọc ở đất, cao 30-50cm.",
+      "thân": "Thân hóa gỗ hình trụ, hơi có rãnh, lúc đầu mọc bò ngang, bén rễ ở những mấu, sau mọc đứng và phân cành.",
+      "lá": "Lá nhỏ, hình dải, hướng lên, xếp theo đường xoắn ốc, chỉ có 1 gân.",
+      "hoa": "Bông hình trụ, màu nâu nhạt, mọc thõng xuống ở đầu cành, mang nhiều lá bao tử hình tam giác, đầu nhọn; túi bào tử nằm ở kẽ lá bào tử, gần hình cầu, mở thành hai mảnh không bằng nhau; bào tử rất nhỏ.",
+      "mùa hoa": "tháng 3-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Lycopodium L. gồm các loài là thân thảo, phân bố rải rác từ vùng ôn đới ấm đến vùng cận nhiệt đới và nhiệt đới. Ở Việt Nam gầm 10 loài.  Trên thế giới, thông đất chỉ thấy ở 1 số nước châu Á như Trung Quốc, Mianma, Lào, Ấn Độ, Việt Nam,… Ở Việt Nam, thông đất phân bố ở các tỉnh miền núi và trung du, cây thường mọc lẫn với các loại cây bụi và cỏ thấp trong các quần hệ thực vật ở đồi, ven rừng, bờ nương rãy, ven đường đi.  Thông đất là cây chịu hạn tốt, có thể mọc được trên nhiều loại đất, kể cả đất chua, khô cằn sỏi đá. Với khả năng mọc chồi khỏe mạnh từ thân rễ, cây dễ dàng tạo thành đám lớn, có tác dụng chống xói mòn.  Thông đất sinh sản bằng bào tử, bào tử phát tán nhờ gió và nước.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "các tỉnh miền núi và trung du"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, dùng tươi hoặc dùng khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thông đất chứa 1 alcaloid (cernum) và 1 lượng nhỏ nicotin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong y học cổ truyền, thông đất được dùng chữa phong thấp, tê đau, viêm gan cấp tính, kiết lỵ, mắt đỏ, nôn ra máu, đại tiện ra máu, chảy máu mũi, vết bỏng",
+      "được_dùng": "Ngày 6-15g cây khô hoặc 30-60g cây tươi, sắc nước uống. Dùng ngoài, rửa vết thương bằng nước sắc hoặc dùng bột rắc.  Phụ nữ mang thai không được dùng.",
+      "chữa": "Chữa kiết lỵ: Thân và lá thông đất (tươi) 30-60g, đường đỏ 15g. Sắc nước, chia 2 lần uống trong ngày. Chữa hư lao, ho, nôn ra máu, tiểu tiện khó, di tinh: Thông đất 30g, dạ dày lợn khoảng 50g. Nước vừa đủ, ninh nhừ trong 2 giờ, mỗi ngày ăn 1 lần Chữa mụn nhọt: Thông đất sao khô, nghiền thành bột, thêm dầu vừng, băng phiến. Trộn đều bôi tại chỗ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bóng nước",
+      "ten_khac": null,
+      "ten_khoa_hoc": "Impatiens balsamina L.",
+      "ma_taxon": "133350",
+      "ho": "Bóng nước - Balsaminaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, có cuống, hình mác, đầu nhọn, mép có răng cưa rất rõ,dài 7-8cm, rộng 2-2.5cm.",
+      "hoa": "Hoa mọc ở nách lá lưỡng tính không đều, màu đỏ hay trắng, 5 lá dài cùng màu với tràng, không đều. Lá dài trước hình cựa, 5 cánh, 5 nhị, chỉ nhị ngắn, bao phấn dính sát nhau chung quanh nhuỵ, 5 lá noãn hợp thành bầu thượng 5 ô, mỗi ô đựng nhiều noãn.",
+      "quả": "Quả nang nứt thành 5 mảnh xoắn lại tung hạt đi xa.",
+      "cây": "Cây bóng nước không chỉ được trồng làm cảnh mà còn là một cây thuốc quý.",
+      "thân": "Cỏ mọc hàng năm,",
+      "cao": "có thể cao 40cm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây có thể dùng để chữa bệnh Còn dùng lá tươi làm thuốc.  Ngoài ra người ta còn dùng hạt bóng nước với tên cấp tính tử. Hái quả chín về phơi khô đập lấy hạt, phơi lại cho khô. Hạt bóng nước: Dược liệu có hình tròn dẹt, hình trứng hoặc hơi có cạnh, mặt ngoài màu nâu hoặc xám, có những nốt trắng nhỏ, nhân hạt màu xám nhạt chứa 17 – 18% dầu, không mùi, vị nhạt, hơi đắng, tính ấm, có tác dụng làm tan máu ứ, thông kinh, giải độc."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong toàn thân cây bóng nước có axit p-hydroxybenzoic có tính chất kháng sinh, axit gentisic C6H7O4′, axit ferulic C10H10O4′, axit p-cumaric C9H4O3′, axit sinapic C11H12O5′, axit cafeic C9H8O4′, ngoài ra còn scopoletin C10H8O4.",
+      "gồm chất": "Lá chứa axit xinnamic (nhục quế toan) kaempferol – 3 arabinozit và kaempferol (C.A., 1971, 1964, 230). Thân chứa kaempferol 3- glucozit, quexetin pelargonidin, cyanidin và delphindin (C.A., 1966, 75, 1964, 16275c).",
+      "chứa": "Hạt chứa 17,9% chất béo. Trong chất béo có thành phần chủ yếu là axit parinaric hay axit A9, 10, 13, 15, octadecatetraenoic C18H28O7 (khoảng 27% balsaminasterol C27H40O (Hegnauer R., 1964). Ngoài ra còn có sipinaterol C29H48O (khoảng 0,015%) (C.A., 1973, 79, 1744a và C.A., 1954, 48, 13835a), sapionin, các đa đường (khi thuỷ phân cho glucoza và fructoza) (C.A., 1971, 74, 72872m).",
+      "có hoạt chất": "Dịch ép của hoa bóng nước có tác dụng kháng sinh mạnh."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dịch chiết từ lá Bóng nước với thành phần hóa học chủ yếu là chất axit p-hydroxybenzoic đã được nghiên cứu dược lý thấy có tác dụng kháng khuẩn rất mạnh. Chất lawson và lawson methylether có trong hoa Bóng nước có tác dụng kháng nấm rất mạnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Dùng ngoài không kể liều lượng Dùng dưới dạng sắc từ 4-12g.",
+      "làm thuốc": "Bài thuốc có vị bóng nước  Chữa sưng tấy, mụn nhọt, chín mé, vết thương: Dùng bóng nước tươi, rửa sạch, giã nát với ít muối đắp lên vết thương  Chữa phong thấp: Dược liệu Bóng nước phơi khô 15g phối hợp với vỏ Ngũ gia bì 10g và rễ Uy linh tiên 10g, thái nhỏ, sắc với 400ml nước còn 100ml, uống làm 2 lần trong ngày chữa phong thấp.  Chữa đau lưng: Lấy cả cây Bóng nước 10g, nhân Hạt đào 15g, Nho chua 10 quả, thái nhỏ, phơi khô, sắc uống trong 7 ngày liền.  Chữa bế kinh: Hoa bóng nước phơi khô 3-6g sắc lấy nước uống  Chữa nghẹn ở người cao tuổi: Hạt bóng nước tẩm mật, phơi khô, tán nhỏ, rây bột mịn, trộn với hồ làm viên bằng hạt đỗ xanh, uống mỗi lần 8 viên với rượu có tác dụng chữa ăn hay bị nghẹn, nhất là ở người cao tuổi.  Chữa hóc xương: Lấy hạt hoặc rễ Bóng nước nhai nhỏ, ngậm trong miệng gần chỗ xương bị mắc, hoặc thổi bột hạt vào họng, không được nuốt.  Chữa tràng nhạc, phát bối: Dùng lá bóng nước tươi, giã đắp ngày thay thuốc 2-3 lần  Chữa nga trưởng phong: Dùng lá bóng nước tươi xát vào chỗ bị bệnh, ngày xát hai lần  Chữa đòn ngã tổn thương, sưng đau, vết thương lở loét: Dùng rễ bóng nước giã đắp",
+      "phơi khô": "Phụ nữ có thai không được dùng Hoa bóng nước."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

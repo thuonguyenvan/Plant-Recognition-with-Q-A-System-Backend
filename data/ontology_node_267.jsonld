@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dâu núi",
+      "ten_khac": "Dâu núi, Dâu đất, Xà mẫu, Dâu tây dại, Xà bào thảo",
+      "ten_khoa_hoc": "Duchesnea indica (Andr.) Focke",
+      "ma_taxon": "243824",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "thân": "Thân mảnh rất dài, có lông mềm, mọc bò lan trên mặt đất, bén rễ ở các mấu.",
+      "lá": "Lá kép lông chim, mọc so le, có cuống dài, phủ lông mịn, gồm 3 lá chét hình trứng, gốc hình nêm, đầu tròn, hơi nhọn, mặt trên nhẵn, mặt dưới có ít lông, mép có răng cưa nhọn không đều trừ phía gần gốc; lá kèm mỏng, hình mác hẹp.",
+      "hoa": "Hoa màu vàng, mọc riêng lẻ trên một cuống dài, đối diện với lá, dài 3-6cm, có lông mịn; lá đài nhiều, những lá phía trong nhỏ, đôi khi khía răng, những lá ở ngoài lớn hơn, có răng cưa; cánh hoa hơi tròn, khuyết ở đầu; nhị khoảng 20 cái, chỉ nhị nhăn, bao phấn tròn; đế hoa phình to, có lông tơ.",
+      "quả": "Quả bé, gần hình thận – bầu dục, khi chín màu đỏ, ăn được.",
+      "mùa hoa": "tháng 2-8.",
+      "mùa quả": "tháng 2-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Fragaria L. là một chi nhỏ, gồm số ít loài là cây thảo sống nhiều năm, mọc bò, phân bố chủ yếu ở vùng ôn đới ẩm và á nhiệt đới Bắc bán cầu. Ở Việt Nam có 3 loài, 2 loài là cây nhập trồng và 1 loài là cây hoang dại.",
+      "ở_vùng": {
+        "@type": "schema:Place",
+        "tên": "vùng núi phía Bắc"
+      },
+      "thường_mọc": "Dâu núi thường chỉ thấy ở vùng núi phía Bắc có độ cao phân bố từ 600 đến 1500m. Cây ưa ẩm, hơi chịu bóng, mọc ở đất ẩm ven rừng, gần nguồn nước. Dâu núi có khả năng phân nhánh nhiều, từ các đốt khi tiếp giáp với mặt đất đều ra rễ, vì thế cây thường tạo thành từng đám nhỏ, khó phân biệt giữa các cá thể. Cây ra hoa quả nhiều hằng năm, quả ăn được. Có thể trồng dâu núi bằng các đoạn thân.",
+      "Đặc điểm sinh trưởng": "Cây ưa ẩm, hơi chịu bóng, mọc ở đất ẩm ven rừng, gần nguồn nước."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Herba Duchesneae Indicae, thường gọi là Xà môi"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Dâu núi chứa nhiều chất thuộc các nhóm:  Triterpen: acid 3β-hydroxy urs-12-en-28-oic; acid 2α, 3β, 19α-trihydroxy urs-12-en-28-oic; 2α, 3α, 19α-trihydroxy urs-12-en-28-oic acid-28-O-β-D-glucopyranosid; 2α, 3α, 19α-trihydroxy urs-12-en-28-oic acid-28-O-β-D-glucopyranosid.  Tanin: duchesid A (3′-O-methyl-ellagic acid-4-O-β-xylopyranosid) và duchesid B (3′-O-methyl-ellagic acid-4-O-α-L-arabinofuranosid) (Ye Liang và cs, 1996; CA 127: 188228y).  Ngoài ra, dâu núi còn có acid fumaric, acid fumaricmonomethyl ester, daucosterol, brevifolin, kaempferitrin, acid pomolic, acid ursolic, acid euscaphic và β-sitosterol (CA 124: 140960s)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dâu núi có vị ngọt, chua, tính mát, hơi hàn, ít độc, có tác dụng thanh nhiệt, giải độc, thu liễm, cầm máu, hoạt huyết, tiêu ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dâu núi chữa lỵ, viêm ruột, cảm sốt, ho, sưng amidan, viêm họng, mụn nhọt, lở ngứa, tràng nhạc, ung thư vú, bọ ngựa, rắn độc cắn, côn trùng đốt, quai bị.",
+      "được_dùng": "Ngày 9–15g sắc uống hoặc toàn cây dược liệu tươi 30–60g ép lấy nước uống. Dùng ngoài, cả cây vò nát hoặc giã, đắp tại chỗ hoặc phơi khô, tán bột rắc chữa vết thương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhội",
+      "ten_khac": "Nhội tía, xích mộc, quả cơm nguội, bích hợp, trọng dương mộc.",
+      "ten_khoa_hoc": "Bischofia javanica Blume",
+      "ma_taxon": "156333",
+      "ho": "Thầu dầu (Euphorbiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 15 – 20m, xanh tốt quanh năm.",
+      "thân": "vỏ cây màu nâu đen, nhẵn.",
+      "lá": "Lá kép mọc so le, 3 lá chét hình bầu dục hoặc hình trứng, dài 8 – 13cm, rộng 4 – 8cm, gốc tròn, đầu nhọn, lá chét tận cùng hơi to hơn, mép khía răng, hai mặt nhẵn, mặt dưới rất nhạt; cuống lá kép dài 7 – 9 cm, phình ở gốc; lá kèm hình tam giác, nhọn, sớm rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài 6 – 13cm; hoa đơn tính khác gốc, nhỏ, màu lục nhạt; hoa đực tụ họp đôi một hoặc riêng lẻ, có 5 lá đài khum úp kín nhị, khi nở, xoè gập xuống, không có cánh hoa; nhị 5 đối diện với lá đài, bao phấn 2 ô, chỉ nhị ngắn, nhụy lép hình đĩa, hoa cái mọc riêng lẻ, cuống dài hơn ở hoa đực, 5 lá đài hẹp nhọn, không có cánh hoa, bầu hình trứng hơi nhọn, nhẵn, 3 ô, mỗi ô có 2 lá noãn.",
+      "quả": "Quả thịt, hình cầu, đường kính 6 – 7,5mm, màu nâu hoặc nâu đen khi chín, hạt 2 – 3, hình trứng, nhẵn, bóng.",
+      "mùa hoa": "tháng 2 – 5",
+      "mùa quả": "tháng 6-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bischofia Blume chỉ có một loài là cây nhội, phân bố rộng rãi ở các nước vùng nhiệt đới Nam Á và Đông Nam Á, bao gồm Ấn Độ, Malaysia, Thái Lan, Indonesia, Lào, Việt Nam, các tỉnh ở phía nam Trung Quốc. Ở Việt Nam, nhội phân bố rải rác khắp các vùng núi, trung du và đồng bằng. Cây thường mọc ở ven các rừng kín thường xanh, đặc biệt trong các quần hệ thứ sinh, sống được trên nhiều loại đất với độ cao phân bố đến 1000m. Ra hoa quả nhiều hàng năm, thụ phấn nhờ côn trùng hoặc gió, tái sinh tự nhiên bằng hạt, do chim hoặc động vật ăn quả chín đưa hạt đi khắp nơi. Phần gốc và rễ còn lại sau khi bị chặt có khả năng tái sinh cây chồi khoẻ.  Nhội là loại cây mọc nhanh trong 3 – 4 năm đầu, có thể hơi chịu bóng, sau nhanh chóng mọc vượt lên khỏi tán những cây khác. Với hệ thống rễ cọc khoẻ, cây chịu được giông bão. Nhội được trồng thành rừng để lấy gỗ ở Ấn Độ và lấy bóng mát ở đường phố, công viên hay đình chùa ở Việt Nam.",
+      "thường_mọc": "ở ven các rừng kín thường xanh, đặc biệt trong các quần hệ thứ sinh, sống được trên nhiều loại đất với độ cao phân bố đến 1000m."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ, thân, rễ, lá, thu hái quanh năm, dùng tươi hoặc phơi sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá nhội chứa 76,9% nước, 4,1% protid, 13% glucid, xơ 3,9%, tro 2,1%, caroten 2,6mg%, vitamin C 30mg%, các triterpenoid như friedelin friedelinol, epifriedelinol, acetat fridelinol, acid betulinic, acid ursolic, roxburgholon; các flavonoid luteolin – 7 – o – glucosid quercetin, quercitrin, fisetin.  Ngoài ra, còn chrysoerinol, P- sitosterol, triacontan (Trung dược từ hải II, 1606; CA. 109, 1988, 8978v). Các chất acid betulenic, acetat friedelinol (+) – roxburgolon ức chế mạnh sự phát triển của dòng tế bào ung thư leukemia P.388. Tanaka, Takashi, Nonaka Gen Ichiro đã xác định một chất ellagitanin dimeric là bishofanin (CA. 122, 1995, 209782p) Ohira, Tatsuro, Yatagai Mitsuyoshi đã tách từ dịch chiết methanol của gỗ cây nhội được 3 chất steroid là stigmasterol, P- sitosterol và P- sitostenon (CA. 117, 1992, 4241m). Chen Rentong, Chenchangfa đã tách từ cành nhội các chất friedelin, friedelinol, epifriedelinol và p (p- sitosteryl) D. glucosìd (CA. 107, 1987, 172507q).  Trong cây nhội mọc ở Việt Nam, Viện Dược liệu đã phân tích có tanin galic và vitamin C."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá nhội có vị chua, chát, tính mát, có tác dụng trừ thấp nhiệt, tiêu viêm, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá nhội được dùng để điều trị viêm âm đạo do roi trùng âm đạo gây nên, dưới các dạng nước sắc, bột cao và tinh thể chiết từ lá. Qua điều trị 147 trường hợp, thấy dạng cao có tác dụng tốt nhất so với các dạng khác cả về mặt giảm triệu chứng lâm sàng cũng như kết quả xét nghiệm. So sánh tác dụng của cao lá nhội với tác dụng của thuốc carbazol, thấy tỷ lệ chữa khỏi bệnh bằng cao lá nhội xấp xỉ. Ngoài những ưu điểm như diệt ký sinh trùng nhanh, không gây cương tụ, không làm rát âm đạo, tỷ lệ khỏi bệnh tương đối cao (72%), cao lá nhội còn trội hơn carbazol là sau khi điều trị khỏi bệnh viêm âm đạo do roi trùng, bệnh nhân không bị nhiễm nấm âm đạo (‘mycose vaginaie). Tuy nhiên, cao lá nhội cũng có nhược điểm là bệnh nhân phải đến cơ sở điều trị, không tự đặt thuốc để chữa ở nhà được.  Cách điều chế cao lá nhội như sau: lá nhội (1kg) ngắt bỏ cuống, rửa sạch để ráo nước, sắc với một lít nước trong 3 giờ. Lọc lấy nước, rồi cô nhỏ lửa để được khoảng 50ml cao.  Cách dùng: bệnh nhân bị viêm âm đạo khi xét nghiệm khí hư thấy có roi trùng sẽ được điều trị trong 10 ngày liên tiếp. Hàng ngày vào buổi sáng, bệnh nhân đến làm thuốc một lần; lấy khí hư xét nghiệm, sau đó thụt rửa âm đạo, lau sạch rồi bôi cao lá nhội vào cổ tử cung và thành âm đạo. Cũng có thể dùng 20 – 40g lá tươi sắc với nước uống.  Ngoài ra, lá nhội còn được dùng chữa lỵ, tiêu chảy với liều 40 – 60g dưới dạng nước sắc. Lá nhội phối hợp với lá dâu gia, lượng bằng nhau 50g, giã nhỏ trộn với ít giấm, bôi chữa dị ứng, mẩn ngứa, mụn nhọt.  Vỏ thân nhội phối hợp với lá đậu chiều chữa sâu quảng có tác dụng tốt. Cách làm như sau: vỏ nhội băm nhỏ, nấu với nước cho thật đặc để rửa vết thương. Lá đậu chiều phơi khô giòn, tán rồi rây bột mịn, rắc hàng ngày.  Theo tài liệu nước ngoài, lá nhội sắc hoặc nấu cao để chữa bỏng. Rễ có tác dụng lợi tiểu. Ở Trung Quốc lá nhội tươi 60g, hợp hoan bì 15g, tích tuyết thảo 30g, đường kính 15g, sắc nước uống chữa viêm gan siêu vi khuẩn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ỉa chảy: Dùng 20-40g lá khô hay 40-60g lá tươi sắc đặc uống. Khí hư, viêm âm đạo: Lá Nhội 50-80g, sắc đặc uống và nấu nước thêm tý phèn để ngâm rửa, có thể nấu cao để bôi. Dị ứng phát ngứa như ghẻ ruồi do tắm nước ao tù: Dùng lá Nhội hai phần, Nghể răm một phần, nấu nước tắm khi nước còn nóng và dùng bã xát.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

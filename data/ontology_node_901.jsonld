@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rung quả nhỏ",
+      "ten_khac": "Rung hoa nhỏ, rung rìa, hài nhi thảo, thứ vi hoàng",
+      "ten_khoa_hoc": "Rungia pectinata (L.) Nees",
+      "ma_taxon": "533142",
+      "ho": "Acanthaceae ( Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao đến 0,4m.",
+      "thân": "Cành mọc loà xoà.",
+      "lá": "Lá mọc đối, hình mác, gốc thuôn, đầu tù hơi nhọn, mép nguyên, hai mặt có lông ở gân.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu ngon thành bông ngắn; lá bắc mọc đối thành 4 hàng, trong đó có 2 hàng không mang hoa, lá bắc con hình dải hơi nhọn; hoa nhỏ màu tím, xanh hoặc trắng; đài 5 răng hình chỉ, có lông; tràng chia 2 môi, môi dưới 3 thuỳ, mỗi trên hơi hình tam giác; nhị 2, đính ở họng tràng, không có nhị lép, bao phấn 2 ô, ô dưới có cựa.",
+      "quả": "Quả nang dài; hạt hình thấu kính, ráp.",
+      "mùa hoa": "tháng 11 – 2.",
+      "mùa quả": "tháng 11 – 2."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Rungia Ness. Ở Việt Nam, đã biết 5 loài, loài rung quả nhỏ mới ghi nhận được ở Kon Tum (Sa Thày), Đắc Lắc (Krông Pắk) và Đắc Nông (Đăk Mil). Trên thế giới, loài này có ở Trung Quốc.",
+      "thường_mọc": "Rung quả nhỏ là cây ưa ẩm, ưa sáng, thường mọc rải rác hoặc thành đám nhỏ, lẫn với các loài cỏ thấp ở nơi đất thấp như bãi sông, ven đường đi, trên nương rẫy cũ hoặc các bãi hoang quanh buôn làng. Cây ra hoa quả hàng năm, khi quả già, hạt phát tán quanh gốc cây mẹ. Vì thế, trong tự nhiên thường gặp chúng mọc thành các đám nhỏ, gồm nhiều cá thể gần nhau."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, lá dùng tươi hay phơi, sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây rung quả nhỏ vị nhạt hơi đắng, tính mát; có công năng thanh nhiệt, lợi thấp, thanh can hỏa, tiêu tích."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây rung quả nhỏ được dùng chữa rối loạn tiêu hóa, đau bụng, viêm gan, viêm ruột, viêm kết mạc mắt, viêm tuyến hạch, lở ngứa. Thường dùng chữa bệnh cho trẻ em nên còn gọi là hầu nhi thảo (cây dùng được cho trẻ em) trị nóng sốt, thủy đậu, co giật, trẻ em cam tích.",
+      "được_dùng": "Liều dùng 10 – 20g sắc nước uống, ngày 1 tháng.",
+      "chữa": "Ở Trung Quốc, nhân dân uống nước sắc rung quả nhỏ giúp làm sạch hệ bài tiết, để chữa viêm gan, viêm ruột và bệnh trầm cảm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

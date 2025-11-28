@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xuyến chi",
+      "ten_khac": "cỏ mui, sải lông, sài lan, thu thảo, cúc mai, cúc xuyến chi.",
+      "ten_khoa_hoc": "Tridax procumbens L.",
+      "ma_taxon": "169944",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc bò, sống lâu năm, cao 0,3 – 1m.",
+      "thân": "Thân hình trụ, có nhiều lông.",
+      "lá": "Lá mọc đối, hình bầu dục, dài 3,5 – 5 cm, rộng 1,5 – 3 cm, gốc tròn, đầu nhọn, mép khía răng to nhọn, hai mặt có lông, mặt trên sẫm, mặt dưới nhạt; cuống lá dài khoảng 1 cm.",
+      "hoa": "Cụm hoa mọc riêng lẻ ở ngọn thân thành đầu, có cuống rất dài, có thể đến 20 cm; lá bắc xếp thành 3 hàng; hoa màu trắng, hoa cái xếp ở vòng ngoài, hình lưỡi nhỏ, hoa lưỡng tính nhiều ở giữa, hình ống. Mào lồng có 20 sợi, 10 dài, 10 ngắn. Tràng hoa cái có 2 thùy, tràng hoa lưỡng tính hình trụ, có 3 – 5 thuỳ, có lông nhỏ; nhị 5, bao phấn có tại ngắn; bầu thuôn có lông.",
+      "quả": "Quả bế có rất nhiều lông, các mào lông dài gấp 4 lần quả.",
+      "mùa hoa": "Tháng 3-11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Tridax L. ở Việt Nam mới chỉ biết 1 loài cỏ mui kể trên. Loài này vốn có nguồn gốc ở vùng nhiệt đới Nam Mỹ, sau lan ra khắp các vùng nhiệt đời khác thuộc châu Á và cả ở châu Phi.  Ở Việt Nam, cỏ mui phân bố rộng rãi khắp các tỉnh tử đồng bằng đến trung du và vùng núi thấp từ Bắc chí Nam; song vùng phân bố tập trung nhất là ở các tỉnh miền Trung, từ Thanh Hoá đến Khánh Hoà và Tây Nguyên.",
+      "thường_mọc": "Cây ưa sáng, có thể sống được trên nhiều loại đất, kể cả đất cát của vùng ven biển và có khả năng chịu hạn tốt. Cỏ mui thường mọc thành đám nơi đất trống ở ven đồi, ven đường đi, nương rẫy cũ, bãi hoang ven biển."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất cây cỏ mui chứa: protein carbohydrat, K2O, CaO, P2O5, MgO, acid fumaric tanin và β- sitosterol [The Wealths of raw material of India, 1976]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cỏ mui được dùng trong phạm vi dân gian làm thuốc sát trùng, chữa sưng tấy.  Ở Campuchia, cây này được dùng làm thuốc giải nhiệt, trị ho, đau thấp khớp. Ngày dùng 20 – 30g sắc nước uống [Võ Văn Chi, 1997: 344 345].  Ở Ấn Độ, lá cỏ mui được dùng làm rau ăn cho người và thức ăn cho gia súc. Lá được dùng trị viêm phế quản, lỵ, tiêu chảy và để làm mọc tóc. Dịch ép lá có tác dụng sát trùng, diệt côn trùng và ký sinh trùng. Cũng được dùng để cầm máu khi bị vết đứt và điều trị vết thâm tím.  Trong y học dân gian Nepal, cỏ mui được dùng trị sốt; mỗi lần uống khoảng 2 thìa cà phê dịch ép cây, ngày 2 lần. Cỏ mui còn được dùng để trị nhiễm khuẩn huyết chảy máu ở gia súc, cách dùng là trộn với thức ăn gia súc. Dịch ép cây được nhỏ mắt để trị bệnh đục thể thuỷ tinh (Manandhar N.P., 1989, 1990, 1993). Ở Nepal, cỏ mui cũng được dùng để trị vết đứt, vết thương (Vernani K. et al., 2002)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

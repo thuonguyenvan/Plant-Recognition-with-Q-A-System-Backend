@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dâu rượu",
+      "ten_khac": "Thanh mai, Dâu rượu, Mác thé (Tày)",
+      "ten_khoa_hoc": "Myrica rubra Sieb. et Zucc.",
+      "ma_taxon": "551083",
+      "ho": "Myricaceae (Dâu rượu)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỏ cao 0,4-0,5m nhung cũng có thể cao tới 10m. Thường xuyên tại những đồi núi chỉ thấy cao 40-50cm.",
+        "thân": "Cành nhỏ thường có phủ lông tơ.",
+        "lá": "Lá xanh tươi quanh năm, khi còn non hay ở những cành non thì có phiến lá to, hơi mềm, nhưng trên những cành già phiến lá nhỏ hơn và dai cứng. Phiến lá to dài 5-12cm, rộng 2-3cm, phiến lá nhỏ chỉ dài 2-3cm, rộng 8-10 cm. Mép phiến lá non có răng cưa rõ, phiến lá già răng cưa không rõ.",
+        "cuống": "Cuống không rõ hoặc rất ngắn, dài 2-10mm.",
+        "hoa": "Hoa khác gốc: Hoa đực gầy, thưa hoa, hoa cái mọc thành hình đuôi sóc dài 1- 5cm.",
+        "quả": "Quả đường kính 5mm đến 1cm khi xanh có màu xanh, khi chín màu đỏ tím, trên mặt rất nhiều gợn thoạt trông giống như quả kép của quả dâu tằm (có lẽ vì vậy mà nhân dân gọi là quả dâu). Hạch dày nước và cứng, mọng nước, màu tím đỏ rất đẹp.",
+        "mùa hoa": "tháng 10-11",
+        "mùa quả": "11-1"
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Chưa thấy tài liệu nghiên cứu. Sơ bộ nghiên cứu thấy trong quả xanh có axit hữu cơ, tanin, vitamin C, trong quả chín có đường, sắc tố anthoxyan.",
+        "gồm chất": "Vỏ cây chứa myrixetin C15H10O8, myrixitrin (Lưu Mê Đạt Phu và cộng sự-Hòa hán dược dụng thực vật 1959, 353) và 11% tanin (Trung dược chí 1961, 1295, 1055)",
+        "chứa": "Quả chứa 7-10% đường, 0,5-1% axit hữu cơ và rất ít myrixetin (Lưu Mễ Đạt Phu-như trên)",
+        "tinh dầu chứa": "Lá chứa 0,02-0,03% tinh dầu, 12,9% tenon và taraxerol"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Dâu rượu được thấy ghi dùng làm thuốc đầu tiên trong “Khai Tống bản thảo” sau đến “Bản thảo cương mục” với tên giang mai. Trong tài liệu cổ ghi giang mai có vị chua, ngọt, tính bình, có tác dụng lý khí, tán ứ, thanh thấp nhiệt.",
+        "được_dùng": "Toàn năm có thể thu lấy vỏ rễ hay vỏ thân, dùng tươi hay khô. Vào mùa hạ thu lấy quả phơi khô. Chữa đau bụng, lỵ. Ngày dùng 8-12g vỏ khô sắc với nước uống trong ngày. Còn dùng chữa lở ngứa: Dùng vỏ thân hay vỏ rễ sắc nước rửa nơi lở ngứa.",
+        "làm thuốc": "Trong nước ta cho đến nay thấy ít được dùng làm thuốc. Thường đến mùa quả chín, trẻ con hái ăn hoặc bán để chế rượu uống: Quả chín hái về rửa sạch, cho thêm ít đường, thêm ít men rượu vào để trong vài ngày men rượu chuyển đường trong quả và đường thêm vào thành rượu, rượu này hòa tan các chất trong quả trong đó có các sắc tố anthoxyan làm cho rượu có màu tím đỏ đẹp, vị hơi chua và ngọt trông như rượu vang. Có khi người ta mua quả về cho thêm rượu vào ngâm. Cũng có khi chế thành mứt. Trước cách mạng Tháng Tám, Quảng Bình khai thác quả chín phơi khô rồi xuất sang Trung Quốc hoặc đưa vào Sài Gòn-Chợ Lớn, tại đây người ta chế thành mứt hay thành rượu gọi là rượu Giang mai. Ngay tại Quảng Bình người ta chế thành rượu với tên rượu dâu dùng tại chỗ hay xuất khẩu.",
+        "chữa": "Tại Trung Quốc người ta dùng quả chữa ho, chữa đau dạ dày. Còn dùng chữa ỉa chảy, lỵ. Hạt được dùng chữa mồ hôi chân nhiều quá, vỏ thân và vỏ rễ dùng dưới dạng sắc để chữa vết loét ngoài da, hoặc ngộ dộc do thạch tín.",
+        "có tác dụng": "Tại Ấn Độ, Nhật Bản người ta dùng những cây to để làm nguyên liệu tanin, nhuộm màu vàng, duốc cá."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Cây mọc hoang ở nhiều tỉnh miền Bắc nước ta, nhiều nhất tại một số tỉnh miền Trung như Nghệ An, Hà Tĩnh, Quảng Bình, Quảng Trị, Thừa Thiên, Vĩnh Linh, vùng Langbiang. Nhưng thường chỉ thấy ở Quảng Bình nhân dân khai thác dùng trong nước và xuất khẩu. Còn thấy mọc ở Ấn Độ, Malaixia, miền nam Trung Quốc, Nhật Bản.",
+        "phơi khô": "Vào mùa quả chín (tháng 12-3) ở Quảng Bình nhân dân thu hái về (đặt nón vào phía dưới cây, tuốt quả cho rụng vào nón) phơi khô, sau đó đem đổ cho chín rồi phơi khô lại. Đồ như vậy để được lâu không bị mọt."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

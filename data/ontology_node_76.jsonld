@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đào Tiên",
+      "ten_khac": "Đào tiên",
+      "ten_khoa_hoc": "Crescentia cujete Lin.",
+      "ma_taxon": "161121",
+      "ho": "Bignoniaceae (Núc nác)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây đào tiên là một cây gỗ, mọc không cao lắm, chỉ 7-10m, lá mọc hình tán, xanh tươi hầu như quanh năm, hoa mọc đơn độc ngay trên thân và cành, mùi hơi khó chịu.",
+      "quả": "Quả hình cầu, đường kính 612cm, trông giống quả bưởi to vừa phải, nhưng vỏ xanh cứng, trong quả có thịt (còn gọi là cơm hay nạc) màu trắng, vị chua chua, có nhiều hạt dẹt nhỏ cũng màu trắng. Nhưng cơm quả này một khi nạo ra, để ngoài trời rất chóng chuyển sang màu đen. Và chính phần cơm này được nhân dân dùng chế thuốc dưới dạng rượu, viên hoặc xirô… Nếu khéo mổ quả đào tiên, thì lớp vỏ cứng, sau khi nạo hết phần cơm hay thịt trong ruột, thì phần vỏ có thể dùng làm nồi nấu nước, ấm pha chè uống hoặc làm đồ đựng."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong thịt quả đào tiên người ta phát hiện có một số axit hữu cơ như axit xitric, axit tactric, axit clorogenic, axit creosentìc… Chưa thấy tài liệu nghiên cứu khác, cũng như chưa thấy có tài liệu nào nghiên cứu về tác dụng kéo dài tuổi thọ."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nước ta cũng như ờ Lào, người ta truyền miệng nhau tác dụng kéo dài tuổi thọ của đào tiên. Nhưng chưa rõ việc sử dụng có phối hợp với những vị thuốc gì khác. Theo những tài liệu nước ngoài, thì nhân dân châu Phi, Nam Mỹ cũng có đào tiên chế thuốc chữa ho, nhuận tràng:",
+      "làm thuốc": "Bổ quả đào tiên, cạo lấy phần thịt trắng, thái nhỏ, cho vào chảo hay nồi đun nóng và đảo cho chín (lúc đầu màu trắng, nhanh chóng chuyển thành đen nhánh) rồi chế thành xirô gọi là siro de calebasse, dùng để chữa ho. Cũng theo tài liệu nước ngoài, cơm quả đào tiên chưa chín, được dùng làm thuốc tẩy và nhuận tràng. Cơm quả đào tiên ngâm rượu dùng với liều nhỏ (với liều 10 centigam) làm thuốc khai vị, với liều 60 centigam làm thuốc tẩy mạnh do tác dụng tăng cường co bóp ruột."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc hoang dại và được trồng ở các tỉnh phía Nam, Lào và Campucia. Còn thấy mọc ở Nam Mỹ, châu Phi. Theo A. Petelot thì cây này có nguồn gốc Braxin. Người châu Âu (Anh, Pháp) gọi cây này với những tên calebasse, calabasse, calebassier, calabash tree. Trước đây hầu như không thấy sử dụng. Vào năm 1987, một đoàn cán bộ dược của Việt Nam qua thăm một ngôi chùa ở thủ đô Viêng Chăn được sư cụ trụ trì ngồi chùa giới thiệu tác dụng kéo dài tuổi thọ của quả đào tiên hay quả trường sinh. Ở Viêng Chăng có 13 vị sư nhờ ăn quả đào tiên này mà họ thọ hơn 130 tuổi. Lúc phái đoàn đến thăm còn 7 cụ vẫn mạnh khỏe, hàng ngày vẫn tụng kinh, lễ phật. Cũng vào thời kỳ ấy, bệnh nhân đến Tuệ Tĩnh đường (Trạm y học dân tộc, đặt tại chùa Pháp Hoa ở Long Thành, Đồng Nai) đều thấy vị sư trụ trì ở đây thường xuyên có quả đào tiên. Hỏi thì được biết phải phối hợp với mấy vị thuốc khác mới chế thành thuốc được."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

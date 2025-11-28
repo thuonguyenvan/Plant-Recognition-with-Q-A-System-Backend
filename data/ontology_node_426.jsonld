@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chân danh tàu",
+      "ten_khac": "Chân danh hoa thưa, chân danh Trung Quốc, đỗ trọng nam, đỗ trọng tía",
+      "ten_khoa_hoc": "Euonymus chinensis Lindl.",
+      "ma_taxon": "707236",
+      "ho": "Dây gối (Celastraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ đến cây to, cao 8 – 10m.",
+      "thân": "Thân hình trụ, nhẵn, vỏ màu xám nâu, lúc non có cạnh.",
+      "lá": "Lá mọc đối, hình bầu dục, dài 6 – 9 cm, rộng 2-3 cm, gốc thuôn hoặc hơn tù, đầu có mũi nhọn dài, mép nguyên, gân mảnh, cuống ngắn 5-7 mm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành xim phân đôi, hoa màu trắng, cánh hoa 4, nhị 4.",
+      "quả": "Quả nang. Có 4 cạnh, đầu gần bằng.",
+      "mùa hoa": "Mùa hoa quả tháng 6 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Euonymus Tourn. Ex L. là một chi có số loài lớn nhất trong họ Celastraceae, ở Việt Nam hiện đã biết tới 17 loài và 1 thứ (var.), riêng về tên khoa học chính thức của loài chân danh tàu (E. chinensis Lindl.) theo Nguyễn Tiến Bân (2003) cần phải kiểm tra thêm.  Trên thế giới, loài này đã ghi nhận được ở Trung Quốc và Lào. Ở Việt Nam, cây phân bố rải rác ở một số tỉnh miền núi từ Quảng Bình trở vào Quảng Bình (Tuyên Hóa), Thừa Thiên Huế (Bạch Mã), Đà Nẵng (Bà Nà), Khanh Hoà (Ninh Hoà ), Ninh Thuận (Cà Ná), và Đk Lắk (Đắk Min). Có tài liệu ghi phân bố ở Ninh Bình, nhưng không nói cụ thể.",
+      "thường_mọc": "Chân danh thu là loại cây bụi hoặc gỗ nhỏ, trung sinh. Cây ưa sáng, nên thường thấy trong các kiểu rừng thứ sinh, đồi cây bụi hay ở ven rừng kim thường xanh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Loài chân danh tàu chưa được nghiên cứu về thành phần hoá học."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ rễ và thân cây chân danh tàu vị hơi cay, chát, tinh bình, có công năng thư cân loạt lạc, cường tráng gân cốt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân và vỏ rễ chân danh thu được dùng chữa phong thấp, đau nhức xương, đau vùng thắt lưng, mỏi gối, đòn ngã tổn thương, vết thương chém chặt. Còn được dùng chữa viêm thận, thận hư liệt dương, tê phù, cao huyết áp, trẻ em tê liệt. Ngày 4 – 12g sắc nước uống.",
+      "giã nát": "Để điều trị gãy xương kín, đòn ngã tổn thương, vết chém chặt lấy lá và vỏ tươi, giã nát, đắp hoặc bị chặt lại. Có thể dùng lá và vỏ khô, nghiền thành bột, chiêu với nước làm thành bánh rồi đắp bỏ lại.",
+      "chữa": "Ở Trung Quốc, sách “Quảng Tây dược dụng thực vật danh lục” ghi: vỏ thân hoặc rễ được dùng chữa đòn ngã tổn thương, phong thấp bị thống: còn sách “Toàn quốc trung thảo dược hội biên” ghi: vỏ thân, vỏ rễ được dùng chữa phong thấp, đau thắt lưng, đòn ngã tổn thương, cao huyết áp.Ngày 15 – 3 0g sắc ký uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

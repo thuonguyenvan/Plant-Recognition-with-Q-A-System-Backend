@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chó đẻ răng cưa (Diệp hạ châu đắng)",
+      "ten_khac": "Diệp hạ châu đắng, Chó đẻ thân xanh, Chó đẻ răng cưa",
+      "ten_khoa_hoc": "Phyllanthus niruri L.",
+      "ma_taxon": "166755",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống hàng năm hay sống dai, cao 20 – 30 cm, có thể đến 60 – 70 cm.",
+        "thân": "Thân nhẵn, thường có màu xanh.",
+        "lá": "Lá mọc so le, hình bầu dục, xếp xít nhau thành hai dãy như một lá kép hình lông chim, mặt trên xanh lục nhạt, mặt dưới màu xám nhạt, dài 1 – 1,5 cm, rộng 3 – 4 mm; cuống lá rất ngắn.",
+        "hoa": "Hoa mọc ở kẽ lá, có cuống ngắn, đơn tính cùng gốc; hoa đực ở đầu cành có 6 lá dài, 3 nhị, chỉ nhị ngắn; hoa cái ở cuối cành, 6 lá dài, bầu hình trứng.",
+        "quả": "Quả nang, hình cầu, hơi dẹt, mọc rủ xuống ở dưới lá, có khía mờ và có gai; hạt hình 3 cạnh.",
+        "mùa hoa": "tháng 4 – 6",
+        "mùa quả": "tháng 7 – 9"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Phyllanthus L. có nhiều loài, gồm những cây thảo đến các cây bụi hay gỗ nhỏ, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới.  Ở Việt Nam, chi này có khoảng 40 loài, trong đó đáng chú ý là 2 loài Phyllanthus urinaria L. và P. niruri L. có hình dáng gần giống nhau, mọc rải rác khắp nơi trừ vùng núi cao lạnh.  Trên thế giới, các loài này cũng có vùng phân bố rộng rãi ở một số nước nhiệt đới Châu Á khác như Ấn Độ, Malaysia, Thái Lan, Campuchia, Lào và ở cả Nam Trung Quốc.",
+        "Đặc điểm sinh trưởng": "Chó đẻ là cây ưa ẩm và ưa sáng hoặc có thể hơi chịu bóng, thường mọc lẫn trong các bãi cỏ, ở ruộng cao (đất trồng màu), nương rẫy, vườn nhà và đôi khi ở vùng đồi. Cây con mọc từ hạt vào cuối mùa xuân, sinh trưởng nhanh trong mùa hè và tàn lụi vào giữa mùa thu. Do khả năng ra hoa kết quả nhiều, hạt giống phát tán gần nên cây thường mọc thành đám dày đặc, đôi khi lấn át cả các loại cỏ dại và cây trồng khác."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Cây Diệp Hạ Châu đắng và Diệp Hạ Châu ngọt trong dân gian đều được gọi với cái tên Chó đẻ răng cưa. Tuy nhiên, nếu xét trên tác dụng về gan mật thì chỉ có Diệp hạ châu đắng hay Chó đẻ thân xanh là có tác dụng tốt, giải độc gan mạnh và được dùng làm thuốc. Vậy làm sao để phân biệt 2 loại cây này:  Cây chó đẻ thân xanh (diệp hạ châu đắng):  Phyllanthus niruri (tên đồng nghĩa Phyllanthus amarus): Toàn thân có màu xanh tươi, cành ngắn, rất ít phân nhánh, phiến lá có màu xanh nhạt, ngắn và mỏng hơn cây chó đẻ thân đỏ. Khi nhai có vị đắng nên trong đông y được gọi là cây diệp hạ châu đắng. Đây là loài có dược tính mạnh nhất, khi nói về cây chó đẻ hay diệp hạ châu thì mọi người hầu như ám chỉ đến loài này.  Cây chó đẻ thân đỏ (diệp hạ châu ngọt) Phyllanthus urinaria:  Thân có màu hanh đỏ và màu thường đậm nơi gốc cành, phân nhánh rất nhiều, phiến lá có màu xanh hơi đậm, dài và dày hơn cây chó đẻ thân xanh. Khi nhai có vị ngọt nên trong đông y được gọi là cây diệp hạ châu ngọt. Khác với điều một số người thường nghĩ, cây chó đẻ thân đỏ vẫn được khai thác trong tự nhiên để làm thuốc nhưng có lẽ dược tính không mạnh bằng cây chó đẻ thân xanh nên không được trồng đại trà.  * Một loài diệp hạ châu nữa Phyllanthus sp. có màu xanh đậm, lá rời rạc, phiến lá hẹp và chóp nhọn hơn so với hai loài trên. Loài này không được dùng làm thuốc.  Lưu ý:  Một số cá thể chó đẻ thân đỏ lại hầu như không có màu đỏ (mất đỏ). Những cây như thế này thường xuất hiện vào mùa mưa hay ở những vùng có nhiều nước, có lẽ cây lớn quá nhanh không tích đủ chất sắt hoặc vùng đất nghèo chất sắt. Trên internet có rất nhiều hình cây Phyllanthus urinaria “mất đỏ” được dùng minh họa cho cây chó đẻ thân xanh Phyllanthus niruri.  Đây là một lỗi khá phổ biến, bởi vậy chúng ta không nên hoàn toàn dựa vào màu để phân biệt các loài diệp hạ châu (mà phải dựa vào dạng lá).  Một lỗi nữa là sự nhầm lẫn giữa tên khoa học của hai loài này với nhau nhưng không gây ra tác hại gì. Khi khai thác cây dược liệu, chúng ta cần lưu tâm đến vấn đề này để chọn đúng loại cây chó đẻ có dược tính mạnh nhất, tức chó đẻ thân xanh."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây chó đẻ bỏ rễ, rửa sạch, dùng tươi hay sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": "Flavonoid: kaempferol, quercetin, rutin. Triterpen: stigmasterol, stigmasterol – 3 – 0 – b – glucosid, b – sitosterol, b – sitosterol glucosid, lup – 20 – en – 3b – ol. Tanin: acid elagic, acid 3, 3′, 4 – tri – 0 – methyl elagic, acid galic. Phenol: methylbrevifolin carboxylat. Acid hữu cơ: acid succinic, acid ferulic, acid dotriacontanoic. Các thành phần khác: n-octadecan, acid dehydrochebulic methyl ester, triacontanol, phylanthurinol acton. Lignan: phylanthin (Không nhầm Phylantin = methoxysecurinin là alcaloid có nhân quinolizidin với phylantin là lignan)."
+      },
+      "Tính vị": {
+        "Có vị": "Cây chó đẻ có vị hơi đắng, tính mát, có tác dụng tiêu độc, sát trùng, tiêu viêm, tán ứ, thông huyết mạch, lợi tiểu."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân rất hay dùng cây chó đẻ răng cưa làm thuốc, giã nát với muối chữa đinh râu, mụn nhọt. còn có tác dụng chữa bệnh gan, chữa sốt, đau mắt, rắn cắn. Ngày uống 20-40g cây tươi, sao khô sắc đặc mà uống.  Cây chó đẻ được dùng để chữa đau viêm họng, đinh râu, mụn nhọt, viêm da, lở ngứa, sản hậu ứ huyết đau bụng, trẻ em tưa lưỡi (giã cây tươi, lọc lấy nước cốt bôi), chàm má (giã nát đắp). Ngoài ra còn dùng chữa bệnh gan, sốt, rắn rết cắn, và dùng cây tươi giã đắp hoặc dịch ép cây tươi bôi ngoài, liều lượng không hạn chế.  Kiêng kị: Phụ nữ có thai không nên dùng.  Trong y học dân gian Ấn Độ, người ta dùng cây chó đẻ với tác dụng lợi tiểu rất tốt. Nước ép lá cho vào sữa dùng cho trẻ em làm ăn ngon miệng. Cây diệp hạ châu đắng được coi là thuốc làm săn, khai thông và sát trùng, và được dùng trị khó tiêu, lỵ, phù, bệnh đường niệu – sinh dục, bệnh lậu và đái tháo đường. Lá và quả diệp hạ châu đắng được giã và làm bột nhão với nước sữa, tỏi và hạt tiêu và dùng uống trị vàng da. Dưới dạng thuốc đắp bào chế với nước gạo, diệp hạ châu đắng dùng chữa sưng phù và loét. Dược liệu này còn được dùng trị giun trẻ em. Ở Đông Nam Á, cây chó đẻ có cùng công dụng như diệp hạ châu đắng, nhưng diệp hạ châu đắng thường được ưa dùng hơn. Từ Hải Nam đến Indonesia, diệp hạ châu đắng dưới dạng thuốc sắc hoặc chè được dùng uống để lợi tiểu để trị bệnh thận và gan, cơn đau bụng và bệnh hoa liễu, và làm thuốc long đờm trị ho, thuốc hạ sốt, điều kinh, và trị tiêu chảy. Nước sắc toàn cây dùng làm thuốc bổ dạ dày. Cây giã đắp ngoài trị đụng dập và bệnh da. Ở Papua Niu Ghinê, thuốc hãm để nguội của toàn cây được dùng để trị nhức đầu và chứng nhức nửa đầu (migraine). Ở Trung và Nam Mỹ, người ta dùng diệp hạ châu đắng để trị sốt rét, bệnh thận, sỏi thận, sỏi bàng quang, rối loạn tiết niệu, và gây sẩy thai. Trong y học dân gian Tanzania, cao nước phần trên mặt đất của diệp hạ châu đắng được dùng điều trị đái tháo đường không phụ thuộc insulin. Ở Nigeria, cao nước cây khô trị tiêu chảy. Lá nhai chữa ho dai dẳng và làm giảm đau dạ dày. Ở Bờ Biển Ngà, diệp hạ châu đắng làm đẻ dễ, chữa đau họng, đau gian sườn, đau mình mẩy, sốt và phù. Thường dùng lá dưới dạng thuốc sắc uống trong nhiều bệnh, đặc biệt trong một số bệnh da, vàng da, nôn, bệnh lậu và đánh trống ngực. Cây chó đẻ dưới dạng dịch ép được dùng trong y học dân gian Malaysia làm sạch lưỡi trẻ em và kích thích ăn ngon miệng. Ở Papua Niu Ghinê, nước sắc dùng hạ sốt. Ở Brunei, thuốc đắp từ lá cùng với sữa dùng trị bệnh đậu mùa. Ở Campuchia cây chó đẻ trị sốt rét. Ở Thái Bình Dương, cây được dùng điều kinh và gây sẩy thai. Ở Guam, nước sắc của cây này trị lỵ và ở quần đảo Solomon, lá chữa đau ngực."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

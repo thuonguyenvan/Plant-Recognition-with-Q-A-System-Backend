@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bời lời nhớt",
+      "ten_khac": "Bời lời nhớt, Bời lời dầu, Sơn kê tiên, Nhớt mèo, Mò nhớt, Sàn cảo thụ, Mạy khảo khinh (Tày), Co khảo kheo (Thái)",
+      "ten_khoa_hoc": "Litsea glutinosa (Lour.) C.B. Rob.",
+      "ma_taxon": "369548",
+      "ho": "Lauraceae (Long não)",
+      "Mô tả": {
+        "cây": "Cây cao có thể tới l0m. Nhiều dạng, vỏ thân nâu, không mùi, không vị, trong có chất nhớt, cành trưởng thành hình trụ, nhẵn cành non có cạnh, nhiều lông.",
+        "lá": "Lá mọc so le, thường mọc thành cụm ở đầu cành, hơi dai, màu xanh lục đậm, mặt trên bóng, mặt dưới có lông, kích thước rất thay đổi, dài 7-20cm, rộng 4-10cm, hình bầu dục hay thuôn dài, phía đáy lá tròn hoặc nhọn, đầu nhọn hay tù; cuống lá có lông, dài l,5-5cm.",
+        "hoa": "Hoa tụ từng 3-6 thành tán nhỏ trên 1 cuống chung dài 1-3cm có lông; cuống của mỗi hoa dài 2-3mm.",
+        "quả": "Quả hình cầu to bằng hạt đậu, màu đen, đính trên cuống phình ra.",
+        "mùa quả": "Mùa quả vào tháng 7-8."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Tất cả các bộ phận của cây, nhiều nhất ở vỏ thân có chứa một chất nhầy dính, thường dùng để dính bột giấy hay hương thắp.",
+        "chứa": "Hạt chứa 45% chất dầu béo đông đặc ở nhiệt độ thường, thành phần chủ yếu của dầu là laurin và olein.",
+        "tinh dầu chứa": "Gỗ non có chứa ít tinh dầu nhưng khi già tỷ lệ tinh dầu ít đi."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Bời lời có vị ngọt, đắng, se, tính mát; có tác dụng tiêu viêm, chống sưng, cầm máu, giảm đau.",
+        "giã nát": "Vỏ giã nát dùng đắp lên những nơi sưng, bỏng, vết thương, có nơi dùng cả lá giã nát đắp.",
+        "sắc uống": "Vỏ còn dùng sắc uống chữa đi ỉa, lỵ.",
+        "được_dùng": "Nước ngâm vỏ bời lời bào thành từng mảnh mỏng có thể dùng bôi đầu cho tóc bóng và im. Dầu bời lời dùng làm sáp, chế xà phòng.",
+        "làm thuốc": "Gỗ bời lời mịn, khá rắn, bảo quản tốt có thể dùng làm các đồ dùng trong nhà.",
+        "sắc nước uống": "Liều dùng: Ngày dùng 10 đến 20g vỏ dưới dạng thuốc sắc. Dùng ngoài không kể liều lượng.",
+        "chữa": "Chữa thiên đầu thống: lá hoặc vỏ cây bời lời 30g, bạch chỉ 10g, cam thảo 5g nấu sắc uống. Hay dùng lá khô 16g sắc uống trong ngày. Đầy hơi ợ chua, ợ hơi trướng bụng: Dùng lá bời lời tươi, đốt, tán thành bột uống, cách này theo kinh nghiệm dân gian rất hiệu nghiệm."
+      },
+      "Cách dùng": {
+        "được_dùng": "Hiện nay cây này chưa được trồng nhiều. Chủ yếu mọc hoang, nhiều nhất ở Thanh Hoá, Nghệ An, Hà Tĩnh, Quảng Bình, Quảng Trị, Thừa Thiên, một sô’ ít mọc ở Vĩnh Phúc, Phú Thọ, Hà Giang, Tuyên Quang, Quảng Ninh. Còn mọc ở miền nam Trung Quốc, Ấn Độ, Malaysia, Inđonesia, Campuchia.",
+        "làm thuốc": "Trồng bằng hạt hay dâm cành. Sau 5-6 năm bắt đầu có quả.",
+        "phơi khô": "Người ta dùng gỗ cây này để lấy chất nhầy dùng trong kỹ nghệ làm giấy, làm hương nén: quả được thu hái vào tháng 7-8 đổ ép dầu làm nến và nấu xà phòng."
+      },
+      "luu_y": {}
+    }
+  ]
+}

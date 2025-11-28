@@ -1,0 +1,214 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bạch điệp",
+            "ten_khac": "Bạch điệp, Bạch yến, Ngải tiên, Cỏ tai cọp, Sa nhơn, Bo bo",
+            "ten_khoa_hoc": "Hedychium coronarium Koenig",
+            "ma_taxon": "143955",
+            "ho": "Zingiberaceae (Gừng)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thảo, cao 1 – 2m.",
+            "thân": "Thân nhẵn, giống cây riềng, cây gừng.",
+            "rễ": "Thân rễ mập, ít phân nhánh, có nhiều ngấn ngang.",
+            "lá": "Lá mọc so le, không cuống, hình dải hẹp – mũi mác, dài 40 – 50 cm, rộng 5-10 cm, gốc thắt lại, đầu thuôn nhọn, mặt trên nhẵn màu lục sẫm bóng, mặt dưới nhạt có lông dễ\u00a0rụng; bẹ lá to, có khía màng; lưỡi bẹ 2 – 3 cm, nguyên.",
+            "hoa": "Cụm hoa hình trứng mọc ở ngọn thân, dài 5-7 cm gồm nhiều lá bắc lợp lên nhau; lá bắc và lá bắc con có màu lục ở đầu; hoa to, màu trắng rất thơm; đài dạng ống, răng không rõ; tràng có ống dài hơn đài, nhẵn, có 3 cánh, hai cánh bên hình mác, cánh giữa rộng, lõm ở đầu; nhị có chỉ nhị dài, bao phấn có các ô kéo dài thành cựa, trung đới dạng bản, có nhị lép dính nhau ở nửa dưới; bầu có lông.",
+            "quả": "Quả khi chín màu vàng; hạt màu dỏ.",
+            "mùa hoa": "tháng 7 -10",
+            "mùa quả": "tháng 7 -10"
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Hedychium Koening có gần 50 loài, phân bố chủ yếu ở vùng Himalaya và các vùng cận nhiệt đói khác ò châu Á. Một số loài còn được trổng làm cảnh, trong đó có cây bạch điệp. ở Việt Nam, chi này có khoảng 10 loài, phân bố chủ yếu ở các tỉnh vùng núi phía bắc. Bạch điệp có nguồn gốc ở vùng cận Himalaya và Nam Trung Quốc, kéo dài xuống Bắc Việt Nam.  Hiện cây được trồng ở nhiều nơi trên thế giới, bao gồm cả Nam Mỹ và Nam Phi với mục đích làm cảnh hoặc lấy tinh dầu thân rễ để làm nước hoa và làm thuốc. Ở Việt Nam, bạch điệp phân bố tự nhiên ỏ một số vùng núi cao thuộc các tỉnh Lào Cai (xung quanh vùng núi Hoàng Liên Sơn gồm huyện Sa Pa, Bát Xát, Than Uyên); Lai Châu (Phong Thổ, Sìn Hồ, Tủa Chùa); Hà Giang (Quản Ba, Đồng Văn)… Cây còn được trồng rải rác ở các tỉnh Sơn La, Lai Châu, Lào Cai, Tuyên Quang, Yên Bái, Phú Thọ, ngoại thành Hà Nội (Gia Lâm).  Theo Halijah, Ibrahim, 2001; Hedychium Koening, in J.L.C.H. van Valkenburg et al, PROSEA N° 12 (2) – Med & pois. Pl. 2: 290 – 295, loài bạch diệp được chia thành một vài dưới loài như H. coronarium J. Koening var. coronarium – hoa màu trắng; H. coronarium J. Koening var. flavescens – hoa màu vàng… Cả 2 đại diện này đều có mặt ở vùng núi Hoàng Liên Sơn (Lào Cai).  Chúng mọc tự nhiên xen lẫn một số cây gỗ nhỏ, cây bụi và cây thảo ở ven rừng kín thường xanh, ven đồi (gần các bờ khe suối), ở độ cao 1400 – 1800m.",
+            "thường_mọc": "Cây đặc biệt ưa ẩm, có thể hơi chụi bóng và ưa khí hậu mát của vùng nhiệt đới núi cao. Loài có hoa màu trắng thường được trồng làm cảnh, với biên độ sinh thái rộng, có thể sinh trưởng phát triển tốt cả ở vùng trung du và đồng bằng Bắc Bộ, với nền nhiệt độ cao hơn hẳn (23 – 24°C) so với vùng á nhiệt đới có cây mọc tự nhiên.",
+            "Đặc điểm sinh trưởng": "Bạch điệp ra hoa quả đều hàng năm, trồng được dễ dàng bằng các đoạn thân rễ hoặc nhánh con. Nhìn chung, nguồn bạch điệp ở miền Bắc Việt Nam tương đối phong phú. Tuy nhiên, cây thuốc này dường như còn nguyên trạng, ít được chú ý."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Thân rễ và quả."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Thân rễ bạch điệp chứa (E) – labda – 8 (17), 12 – dien – 15, 16 – dial, coronarin B, 7β hydroxycoronarin B, cononarin – D, coronarin – D ethyl ether, coronarin – D – methyl ether, labda – 8 (17), 11, 13 – trien – 15 (16) – olid, một ester của acid labda – 8 (17, 11, 13 – trien – 15 – al – 16 – oie, isocoronarin D, coronarin E, coronarin F, (+) – 14β – hydroxylabda – 8 (17), 12 – dieno – 16, 15 – lacton (isocoronarin – D), 14, 15, 16 – trinorlabda – 8 (17), 11 – (E) – dien – 13 – al (CA 117: 23.235 d; CA 121: 153.352h; CA 122: 156.276t; CA 109: 226.702m). Các chất coronarin A, coronaria B, coronarin C, coronarin D và (E) – labda – 8 (17), 12 – dien – 15, 16 – dial là các hoạt chất độc đối với tế bào (CA 110: 92.001s). Coronarin AHoa chiết xuất bằng dung môi cho 175 thành phần trong đó có linalol, Me benzoat, cis – jasmon, eugenol, (E) – isoeugenol, jasmin lacton, Me jasmonat, Me epi – jasmonat, indol, nhiều chất nitril và oxim. Dịch chiết absolu của hoa có 220 thành phần trong dó có các chất trans – ocimen, 2 – và 3 – methylbutanal oxim, 2 – exohyđroxy – 1,8 – cineol, Me epijasmonat, cis – jasmen lacton tạo ra mùi của hoa bạch diệp (CA 116: 91. 194 u; CA 119: 177.576 u). Toyoda Taksaki và cs, 1991, đã tạo ra hương liệu có mùi của hoa bạch điệp trong đó có isobutylaldehyd oxim, 2 – methylbutylaldehyd oxim và isovaleraldehyd (CA 118: 175.541 j).",
+            "tinh dầu chứa": "Lá chứa tinh dầu trong đó có eucalyptol (Trung dược từ hải I, 1993)."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Thân rễ và quả bạch điệp có vị cay, mùi thơm, tính ấm có tác dụng khu phong trừ thấp, ôn trung, tán hàn. Tinh dầu gây trung tiện."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Thân rễ và quả bạch điệp được dùng chữa đau bụng lạnh, bụng đầy trướng, tiêu hóa kém.",
+            "sắc nước uống": "Thân rễ sắc lấy nước súc chữa hôi miệng, uống để chữa cảm sốt, đau mình mẩy, phong thấp, nhức mỏi gân xương.",
+            "làm thuốc": "Hoặc thân rễ, thái mỏng, phơi khô, ngày 6 – 12 g, sắc hay tán bột uống.",
+            "giã nát": "Dùng ngoài, lấy thân rễ tươi giã nát, uống nước, bã đắp chữa rắn cắn, đòn ngã tổn thương.",
+            "chữa": "Thân cây thái nhỏ, sắc, ngậm chữa viêm lợi, viêm amidan.",
+            "được_dùng": "Hoa bạch điệp có thể dùng để ăn. Tinh dầu của hoa là một loại hương liệu cao cấp."
+        },
+        {
+            "@type": "Cách dùng",
+            "chữa": "Chữa sốt: Thân rễ bạch điệp, hành, thìa là (liều lượng bằng nhau) dùng tươi, giã nát, đắp."
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

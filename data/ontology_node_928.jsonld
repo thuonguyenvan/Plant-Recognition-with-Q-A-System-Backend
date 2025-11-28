@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây mào gà trắng",
+      "ten_khac": "Mào gà trắng, Mào gà dại, Mào gà đuôi lươn, Thanh tương tử, Thảo hao, Chày gunpẹ (Dao), Mảo cáy khao (Tày)",
+      "ten_khoa_hoc": "Celosia argentea L.",
+      "ma_taxon": "160259",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm cao 40-60cm.",
+      "thân": "Thân mọc thẳng, có vách dọc.",
+      "lá": "Lá mọc so le, có cuống ngắn, hình mũi mác, gốc thuôn dần, đầu nhọn, dài 8-10cm, rộng 2-4cm.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành bông mập, màu trắng ở phần dưới, hồng ở phần trên, gồm nhiều hoa không cuống; lá bắc khô xác, chẻ đôi ở đầu; lá đài 5, khô xác, nhọn đầu; nhị 5, dính nhau ở gốc thành một vòng bao quanh bầu hình trứng.",
+      "quả": "Quả nang, hình hộp, nứt ngang, chứa nhiều hạt nhỏ, hình thân dẹt, màu đen bóng hoặc nâu đỏ.",
+      "mùa hoa": "tháng 5-10",
+      "mùa quả": "tháng 5-10."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt chín (thanh nương tử) thu hái vào mùa thu phơi hoặc sấy khô, còn dùng lá và hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất của mào gà chứa 21,51% protein, nhiều K, isoflavon.",
+      "gồm chất": "Hạt chứa polysaccharid acid là celosian chất này có tác dụng bảo vệ gan."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa mào gà trắng có vị nhạt, tính mát, có tác dụng thanh nhiệt, mát huyết, cầm máu, tiêu viêm.  Hạt có vị đắng, hơi hàn, vào kinh can, có tác dụng thanh can hỏa, trừ phong nhiệt, chữa đau mắt. Những người đồng tử rộng không dùng được."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mào gà trắng là thuốc thu liễm, cầm máu, chữa xích bạch đới, chảy máu ruột, thổ huyết, chảy máu cam, chảy máu tử cung, rong kinh, lòi dom, bệnh về gan, mắt sưng đỏ, rắn cắn.",
+      "được_dùng": "Ngày dùng 6-12g, hoa hoặc hạt dưới dạng thuốc sắc hoặc thuốc viên.",
+      "làm thuốc": "Dùng ngoài, lá mào gà trắng tươi nấu nước rửa ngâm, hoặc giã nhỏ xoa bóp, chữa lở ngứa.",
+      "chữa": "Bài thuốc có mào gà trắng  Chữa trĩ ra máu: Hạt và hoa mào gà trắng 8-15g, sắc uống trong ngày, hoặc sấy khô, tán nhỏ, chế thành viên hoàn chia nhiều lần uống trong ngày. Chữa đau mắt sưng đỏ, sợ ánh sáng, chảy nước mắt và đau đầu: Hạt mào gà trắng, lá dâu, hoa cúc vàng, cỏ tháp bút, mỗi vị 12g, cỏ thanh ngâm 4g. Sắc uống và xông."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mào gà trắng có nguồn gốc ở vùng Đông Ấn Độ. Vùng phân bố tự nhiên của cây bao gồm toàn bộ các nước vùng Nam Á, Đông Nam Á, Nam Trung Quốc.",
+      "thường_mọc": "Ở Việt Nam, mào gà trắng phân bố rộng rãi ở khắp nơi. Cây thường mọc thành đám nhỏ ở bãi sông, đồng bằng và trung du. Ở các tỉnh Hà Giang, Sơn La, Tuyên Quang,… đôi khi mọc thành những quần thể lớn trên các nương mới bỏ hoang, hoặc dọc đường đi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

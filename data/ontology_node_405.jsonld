@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ trâu",
+      "ten_khac": "Dây liều, từ năm lá, sú vằn.",
+      "ten_khoa_hoc": "Dioscorea pentaphylla L.",
+      "ma_taxon": "161933",
+      "ho": "Củ nâu (Dioscoreaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Dây leo, có lông ngắn và gai nhỏ.",
+      "rễ": "Rễ củ đơn, rất đa dạng.",
+      "thân": "Thân hình trụ, màu đỏ nhạt hoặc màu trắng xỉn, có dái nhỏ.",
+      "lá": "Lá mọc so le, 3 – 5 lá chét xếp thành hình chân vịt, có cuống dài, lá chét giữa hình bầu dục, dài 15 cm, rộng 4 – 5 cm, lá chét bện chỉ dài bằng nửa hoặc ba phần tử của lá giữa, mặt trên nhẵn hoặc có ít lông, mặt dưới nhiều lông hơn, mép nguyên.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, đơn tính; cụm hoa đực to, không lá gồm những chùm dạng bông mang nhiều hoa; bao hoa gồm ba lá đài hình mác rộng, nhẵn hoặc có lông, 3 cánh hoa hơi rộng, nhăn, nhị 3, đính ở gốc lá đài, mọc so le với 3 nhị lép rất dài; cụm hoa cái thành bông buông thõng, dài bằng hoa đực.",
+      "quả": "Quả nang, mọc gập xuống, gốc hơi hình tim, có cánh dài 2 cm.",
+      "mùa hoa": "tháng 3 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Củ trâu là một trong số hơn 10 loài thuộc chi Dioscorea L. được sử dụng làm thuốc hiện có ở Việt Nam.  Củ trâu là loài nhiệt đới, phân bố chủ yếu ở vùng nhiệt đới Nam Á và Đông Nam Á. Ở Việt Nam, cây phân bố tập trung từ tỉnh Hà Tĩnh trở vào, thường mọc ở bên các bờ sông suối phía thượng nguồn, hoặc ở ven rừng ẩm hoặc đôi khi thấy ở bờ nương rẫy. Độ cao phân bố từ vài chục đến khoảng 1.000m.",
+      "thường_mọc": "Củ trâu là cây ưa sáng, leo lên các cây bụi và cây gỗ nhỏ bằng thân quấn; phần thân leo có thể lụi hàng năm vào mùa đông. Cây có hoa đơn tính khác gốc, thụ phấn nhờ gió và côn trùng. Tái sinh tự nhiên bằng hạt hoặc bằng các phần đầu mầm củ đem vùi xuống đất ẩm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Củ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Củ phơi khô bỏ vỏ chứa 0,19% các alcaloid độc. Ngoài ra, còn chứa các albuminoid, carbohydrat, P205 [The wealth of raw material in India, 1952).  Đã phân lập các saponin steroid như dioscorin, dioscorecin khi thuỷ phân cho diosgenin [CA, 1982, Prosea (2001)]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Củ trâu có vị gây buồn nôn, có tác dụng bổ cốt, tráng dương."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Sau khi được nấu kỹ với tro gỗ, củ trâu có thể ăn được. Nếu được chế biến kỹ và dùng dưới dạng ngâm trong rượu, củ trâu có tác dụng bổ máu, mạnh gân xương, chữa đau lưng.  Ở Ấn Độ, củ trâu được dùng làm thuốc tiêu sưng, chống viêm và làm dịu ho Ở Nepal, theo kinh nghiệm dân gian, củ trâu được dùng dưới dạng dịch ép bội đắp để trị mụn nhọt. Củ trâu luộc chín kỹ được ăn một cách đều đặn để trị khó tiêu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

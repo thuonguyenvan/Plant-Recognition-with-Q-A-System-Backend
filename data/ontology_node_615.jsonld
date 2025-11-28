@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trầm hương",
+      "ten_khac": "Trầm hương, Trầm gió, Kỳ nam, Quẻ (Tày)",
+      "ten_khoa_hoc": "Aquilaria crassna Pierre.",
+      "ma_taxon": "189367",
+      "ho": "Thymelaeaceae (Trầm)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, phiến mỏng, hình thuôn, dài 8-10cm, rộng 3,5-5,5cm, nhọn ở phía cuống, đầu lá cũng nhọn, mặt trên màu xanh bóng, mặt dưới màu xanh nhạt hơn, có lông.",
+      "hoa": "Cụm hoa hình tán hay chùm, mọc ở kẽ lá. Hoa màu trắng tro.",
+      "quả": "Quả khổ, nang, hình lê, có lồng, dài 4cm, rộng 3 cm, phía dưới có chu tính (perigone) đồng trưởng. Vỏ quả mở làm hai mảnh, xốp. Một hạt gồm một phần trên hình nón, phía dưới dài cùng một kích thước, vồ ngoài cứng, phía trong mềm.",
+      "cây": "Trầm hương là một loại cây to cao tới 30-40m, vỏ xám, xơ.",
+      "cuống": "Cuống dài 4- 5mm cũng có lông, mặt trên thành rãnh."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trầm hương mọc hoang ở những vùng núi Nghệ An, Hà Tĩnh, Quảng Bình, Quảng Trị, Thừa Thiên, Quảng Nam, Quảng Ngãi và Hội An, miền Nam Bộ Việt Nam. Có mọc nhiều ở Cămpuchia.  Việc tạo thành trầm hương chưa rõ: Có người nói trầm hương được tạo thành do một bệnh gây bởi sự biến chất của những cứt chim ở kẽ cành. Hiện nay người ta mới chỉ biết rằng cây càng già, 10 đến 20 năm. hoặc lâu hơn, gỗ cây biến thành một chất bóng như đá sỏi, có những vết nhăn, gồ ghề trông giống như cánh con chim ưng do đó có tên là gỗ chim ưng (bois d’aigle). Tuy nhiên, cũng có những mẫu gỗ không có các điểm trên, mà chỉ có một màu nâu đỏ đều. Có những miếng gỗ chỉ có những điểm màu lam nhạt.  Tại những vùng có cây trầm huơng có bệnh (tức là bắt đầu có những điểm nâu đỏ), thì người ta thường làm nhà ở gần để canh, vì loại trầm thu được như vậy giá rất đắt, có khi gấp 20-30 lần. Một cây gió bầu có trầm cho từ 2-30kg trầm hương.  Trầm hương có hình dáng, kích thước không nhất định: Có khi là miếng gỗ, có khi là những cục hình trụ, thường dài 10cm, rộng 2-4cm, hai đầu có vết như dao cắt, có khi lại như miếng gỗ mục, mặt ngoài màu vàng nâu, có khi có những vết dọc sẫm màu, chất cứng nặng, nơi cắt ngang có thể thấy những đám nhựa màu đen hay đen nàu. Mùi thơm đặc biệt, khi đốt lên mùi thơm lại càng rõ rệt.  Trung Quốc thường nhập trầm hương của ta hay Ấn Độ, nhưng tại một số tỉnh miền Nam như Quảng Đông, Hài Nam cũng có trầm hương, nhưng do cách lấy khác nhau, phẩm chấl có khấc, thường người ta quý loại trầm hương của Việt Nam hơn."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Loại trầm hương tốt có thành phần tan trong cồn len tới 40-50% sau khi xà phòng hoá bằng KOH rồi cất hơi nước sẽ được chừng 13% tinh dầu.",
+      "gồm chất": "Trong tinh dầu thành phần chủ yếu là benzylaxcton-C6H5CH2-COCH3 26%, metoxybenzylaxeton 53% và tecpen ancol 11%. Ngoài ra còn axit xinamic và các dẫn xuất của nó."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trầm hương là một vị thuốc hiếm và đắt trong đông y, người ta coi nó có vị cay, tính hơi ôn, vào 3 kinh tỳ, vị và thận, có tác dụng giáng khí nạp thận bình can tráng nguyên dương, chủ yếu chữa các bệnh đau ngực bụng, nôn mửa, bổ dạ dày, hen xuyễn, bí tiểu tiện. Còn có tác dụng giảm đau, trấn tĩnh. Ngày dùng 3-4g dưới dạng bột hay ngâm rượu, ít khi sắc, thường chỉ mài với nước mà uống.  Đứng về mật công dụng làm thuốc, chúng ta không thể giải thích lại sao giá trầm và kỳ nam trên thị trường lại đắt như vậy. Ngay từ thế kỷ 16, theo lời một du khách Bồ Đào Nha còn ghi lưu lại lại chợ Hội An, giá một gối bằng gỗ trầm nặng gần 500g lên tới gần 8kg vàng. Năm 1956 tại Nha Trang giá 1kg trầm hương cũng xấp xỉ 20 lạng vàng. Từ năm 1977 đến nay ớ các tỉnh phía nan nước ta cũng đang có phong trào tìm khai thác trầm hương xuất khẩu, dẫn tới sự khai thác bừa bãi. phá hoại một nguồn đặc sản có giá trị của nước ta. Chỉ có một số rất ít nước trên thế giới trong đó có nước ta, mới có trầm hương, do đó chúng ta cần có kế hoạch bảo vệ và phát triến cây trầm hương. Từ xưa tới nay trầm hương ngoài công dụng làm thuốc trước hết là một chất thơm và chất định hương cao cấp. Xưa kia người ta gối đầu trên gối gỗ trầm hương, người ta đốt trầm trong những ngày lễ tết lớn. Ngày nay người ta trích từ trần hương những tinh dầu để làm chất định hương và chất thơm cao cấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa nôn mửa, đau bụng, đau dạ dày: Trầm hương 10g, nhục quế 10g, bạch đậu khấu 8g, hoàng liên 8g, đinh hương 10g. Tất cả tán nhỏ. Ngày uống 3 hay 4 lần, mỗi lần 1g bột này. Dùng nước nóng chiêu thuốc."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lục lặc lá dài",
+      "ten_khac": "Điều diệp, thỉ đậu, lục lặc núi.",
+      "ten_khoa_hoc": "Crotalaria montana Heyne ex Roth.",
+      "ma_taxon": "191062",
+      "ho": "Đậu (Fabaceae)",
+      "Mô tả": {
+        "lá": "Lá có một lá chét, mọc so le, hình trái xoan ngược, gốc thuôn, đầu tù hơi nhọn, mặt trên có lông mịn, mặt dưới lông rất rậm; cuống rất ngắn.",
+        "hoa": "Cụm hoa mọc ở đầu ngọn thành chùm dài gồm nhiều hoa xếp sít nhau, màu vàng sau chuyển màu nâu; đài chia hai môi, có lông, tràng và nhị không đều; bầu nhẫn chứa 8 – 12 noãn.",
+        "quả": "Quả không cuống, nhẵn, màu đen; hạt 6 – 10, hình thận, nhẵn bóng, màu nâu nhạt.",
+        "cây": "Cây thảo hóa gỗ, sống hằng năm hay hai năm, cao đến 50 cm.",
+        "thân": "Thân cứng, hình trụ, có khi phân cành từ gốc, có lông áp sát màu vàng.",
+        "mùa hoa": "tháng 6 – 8.",
+        "mùa quả": "tháng 9 – 11."
+      },
+      "Phân bố": {
+        "phân_bố": "Loài lục lặc lá dài ở Việt Nam còn có thêm một thứ (C.montana Heyne ex Roth. var. angustifolia (Gapnep.) Niyomdham), cả hai cây này thường mọc lẫn với nhau. Chúng phân bố rải rác ở nhiều địa phương thuộc vùng núi và trung du, bao gồm: Cao Bằng, Lạng Sơn, Quảng Ninh, Bắc Giang, Hà Nam, Ninh Bình, Thanh Hoá, Nghệ An, Quảng Nam, Kon Tum, Gia Lai, Đắc Lắc, Lâm Đồng, Khánh Hoà, Ninh Thuận. Trên thế giới, lục lạc lá dài phân bố ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin và Niu Ghinê.",
+        "thường_mọc": "Cây ưa sáng, ưa ẩm và có thể hơi chịu hạn. Lục lặc lá dài thường mọc tương đối tập trung thành đám nhỏ hoặc rải rác trong các trảng cỏ có cây bụi thấp ở đồi, đất sau nương rẫy, ven rừng và có thể thấp ở rừng thông, rừng thưa nửa rụng lá hoặc rụng lá tại Tây Nguyên. Độ cao phân bố có thể tới 1.300 m (Mường Hoong – Đăk Glei, Kon Tum). Lục lặc lá dài ra hoa quả nhiều hàng năm. Khi quả già tự mở để hạt phát tán ra xung quanh. Hạt giống tồn tại trên mặt đất 4 – 5 tháng và sẽ nẩy mầm vào đầu mùa xuân năm sau (ở miền Bắc) và vào cuối mùa mưa hoặc cuối mùa khô (ở miền Nam)."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hạt và toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Chưa tìm thấy tài liệu công bố về thành phần hoá học của loài này.  Theo Võ Văn Chi (1996) (Từ điển cây thuốc Việt Nam) loài lục lặc mùi mac (C. anagyroides) mọc ở Lâm Đồng, hạt chứa L – methylen – pyrolizidin và semecionin. Lục lặc mụt (C. verrucosa) mọc nhiều nơi ở nước ta, hạt chứa alcaloid pyrolizidin gây ung thư là crotaverrin, o – acetylerotaverrin và crotalbumin, loài này chỉ sử dụng để chữa các chứng bệnh ngoài da. Loài lục lặc sợi (C. Juneea L.) thường mọc cạnh đường đi khắp nơi, hạt rang dùng thay cafe, chứa chất đắng corchorin. Còn loài lục lặc tù (C. retusa L.) hạt chứa alcaloid độc monocrotalin, vì vậy chỉ sử dụng cho bệnh ngoài da, lá chứa indican."
+      },
+      "Tính vị": {
+        "Có vị": "Hạt lục lặc lá dài vị ngọt, hơi đắng, tính bình, có công năng bổ trung ích khí. Toàn cây và rễ vị hơi đắng, tính bình, có công năng thanh nhiệt, giải độc, hành khí, tiêu tích."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hạt cây lục lặc lá dài được dùng trị thận hư, di tinh, ù tai, lưng gối yếu mỏi, phụ nữ hư lao, thiếu máu, người gầy khô. Dùng 20 – 30g hạt nấu chín lên rồi ăn, hoặc hạt sao vàng, sắc lấy nước uống.  Thân và rễ lục lặc lá dài được dùng chữa phong thấp, đau nhức, gân cốt yếu mỏi. Ngày dùng 20 – 40g sắc lấy nước uống hoặc ngâm rượu uống.  Cây lục lặc lông (do ngọn có đầy lông) còn gọi là lục lặc sét (Crotalaria ferruginea Graham. Ex Benth.) có hạt cũng được dùng như lục lặc lá dài. Nhưng uống nước sắc hạt còn làm cho sởi mọc nhanh và đều.  Ở Indonesia [Medicinal herb index, 1995: 345] và ở Philippin [Perry et al., 1980: 230], lá lục lặc lá dài sắc đặc rửa mắt khi bị đau mắt. Cũng có thể lấy lá, rửa sạch, giã nát, lấy nước rửa mắt, hoặc đắp lên mắt."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

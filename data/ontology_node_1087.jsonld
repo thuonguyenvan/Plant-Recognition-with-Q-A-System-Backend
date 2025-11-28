@@ -1,0 +1,226 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khúng khéng",
+      "ten_khac": "Khúng khéng , Chỉ cụ, Kê trảo, Vạn thọ",
+      "ten_khoa_hoc": "Hovenia dulcis Thunb.",
+      "ma_taxon": "163847",
+      "ho": "Rhamnaceae (Táo ta)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao khoảng 7-10 m.",
+      "thân": "Vỏ thân màu nâu xám. Cành non màu nâu hồng, có lông nhỏ và nốt sần.",
+      "lá": "Lá mọc so le, có cuống dài, gốc tròn, đầu có mũi nhọn, mép khía răng nhọn đều, 3 gân tỏa từ gốc lá, mặt trên màu lục sẫm, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành xim ngắn hơn lá; hoa màu lục nhạt, đài hình chén khía 5 răng nhỏ; tràng 5 cánh nhọn, nhị 5 xếp xen kẽ với cánh hoa; bầu có đầu nhụy chia ba.",
+      "quả": "Quả hình cầu, màu nâu xám, khi chín những nhánh con (cuống) mang quả phồng to lên, mọng nước, màu hồng, vị ngọt, ăn được, hạt tròn dẹt, màu nâu bóng.",
+      "mùa hoa": "tháng 6 – 8",
+      "mùa quả": "tháng 9 – 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Hovenia Thunb. chỉ có một loài là cây khúng khéng, phân bố ở vùng ôn đới ấm và cận nhiệt đới Đông – Bắc Á gồm Trung Quốc, Nhật Bản, Triều Tiên. Ngoài ra còn gặp ở Nga và vùng cận Himalaya của Ấn Độ.",
+      "thường_mọc": "Cây thường mọc trong các thung lũng, gần bờ suối trên các loại đất còn tương đối màu mỡ.",
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Lạng Sơn"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Cao Bằng"
+        }
+      ],
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, thường có ở vườn hoặc bờ nương rẫy, ra hoa quả nhiều. Xung quanh cây mẹ thường thấy cây non mọc từ hạt. Có thể trồng khúng khéng bằng hạt hoặc bằng cây mọc từ chồi rễ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả và nhánh con mang quả, thu hái khi quả chín, phơi khô. Tránh phơi nắng to và sấy ở nhiệt độ cao để bảo đảm màu sắc và phẩm chất dược liệu. Hạt thu hái ở quả già, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả khúng khéng chứa lipid  74%, protein 3,07%, acid toàn phần 358,8 mg/1000g, ascorbat 16,29 mg/ 100g, đường khử 13,96 %, acid amin 2,38 mg/ 100g; chất vô vơ gồm Fe 3.47 mg%, P 0.89 mg%, Ca 132.0 mg%, Cu 0.12mg%, Mn 0.19 mg%, Zn 0.4 mg%.  Hạt khúng khéng chứa alcaloid perlorin, perlolyrin, ß – carbolin.  Lá chứa các Saponin triterpenoid.  Ngoài ra, còn có jujubogenin; 20-O-α-L-rhamnopyranosyl jujubogenin, hodulcin, acid gymnemic và ziziphun, acid hovenic (Trung dược từ hải II, 1398, 1399, 1400)  Giá trị dinh dưỡng của khúng khéng thể hiện ở các chất đường, protein và các vitamin B1, B2, C, caroten, các muối khoáng K, Na, Ca, Mg và Fe (CA. 121, 1994, 254272n)  Gần đây, người ta phát hiện thêm nhiều hợp chất flavonoid từ khúng khéng như:  (2R, 3R) 5,7,4′,5′ tetrahydroxy 3′ methoxy dihydro flavonol (2R, 3S) 5,7,3′,4′,5′ pentahydroxyhydro flavanol (2R, 3S) 5,7,4′,5′ tetrahydroxy 3′ methoxy dihydro flavanol cùng các chất (+)-ampelopsin, lariceritrin, myricetin, (+)-gallo catechin.  Các chất trên cũng có tác dụng bảo vệ gan (CA. 126, 1997, 259098y)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Khúng khéng có vị ngọt, hơi chát, có tác dụng tiêu khát, nhuận tràng, lợi tiểu, giải độc.  Tìm hiểu thêm: Hành trình đi tìm Khúng Khéng – thần dược giải rượu của người dân xứ Lạng"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Khúng khéng là thuốc bổ dưỡng, trị tiêu hóa và đại tiểu tiện kém, nôn mửa, ngộ độc, miệng khô khát.",
+      "được_dùng": "Khi dùng lấy 100g dược liệu ngâm với một lít rượu 40o càng lâu càng tốt. Rượu có màu đỏ sẫm như rượu vang. Ngày uống 2 lần trước bữa ăn, mỗi lần 30ml.",
+      "làm thuốc": "Ở Trung Quốc, cuống quả khô và hạt được dùng trị say rượu, miệng khát, nôn mửa, đại tiểu tiện không lợi. Ngày dùng 6g, ngâm rượu uống.",
+      "có tác dụng": "Ở Ấn Độ, cao chiết từ quả khúng khéng chứa kali nitrat và kali malat là thuốc có tác dụng lợi tiểu mạnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Bài thuốc 1:  Dùng để chữa các bệnh như nôn mửa, giải độc tố trong cơ thể, đặc biệt là khi ngộ độc rượu. Ngoài ra, nó còn giúp thông tiểu, giảm khát và làm dịu cổ họng khi bị khô.",
+      "sắc uống": "Mỗi ngày, dùng từ 3 đến 5 gam quả khúng khéng, sắc lấy nước uống hoặc ngâm rượu.",
+      "làm thuốc": "Người ta còn dùng gỗ khúng khéng đẽo hình gối để dùng gối đầu hoặc đẽo thành từng mảnh vỏ bào, sắc nước uống cùng mục đích chống nôn, chống say rượu.",
+      "có tác dụng": "Bài thuốc 2: Dùng giải độc gan, bảo vệ gan",
+      "sắc nước uống": "Rửa sạch 10g cuống và quả khúng khéng khô, cho vào bình giữ nhiệt cùng 500ml nước. Sau khi ủ 30 phút như vậy, đợi nước chuyển màu là có thể sử dụng. Bên cạnh đó, người bệnh có thể sắc dược liệu khô với 1 lít nước, để nguội rồi uống để giải độc gan.",
+      "chữa": "Bài thuốc 3: Dùng cho người bệnh tiểu đường",
+      "giã nát": "Dùng 5 hạt khúng khéng khô hoặc đã tán bột sắc với nước khoảng 10 phút, để còn ấm rồi uống. Sử dụng liên tục 15 – 20 ngày."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

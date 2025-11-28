@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dâu tằm",
+      "ten_khac": "Dâu tằm, Tang, Dâu tàu, Mạy mọn, Mạy bơ (Tày), Co mọn (Thái), Nằn phong (Dao)",
+      "ten_khoa_hoc": "Morus alba L.",
+      "ma_taxon": "56090",
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ lớn cao tới 15m, màu nâu hay vàng vàng.",
+      "lá": "Lá mọc so le, phiến xoan dài 5-10 (20)cm rộng 4-8cm, gốc hình tim hay gần như cụt, chóp tù hay hơi nhọn, có thuỳ trên các nhánh tược còn non, có răng, với răng hình tam giác, tù, khía rộng; gân gốc 3, các gân bên đạt tới chiều dài của phiến.",
+      "hoa": "Hoa cùng gốc hay khác gốc, các hoa cái thành bông đuôi sóc hơi dài hơn rộng, nhưng không quá 2cm.",
+      "quả": "Quả trắng hay hồng, thuộc dạng quả phức gồm nhiều quả bế bao trong các lá đài đồng trưởng và trở thành mọng nước.",
+      "mùa hoa": "tháng 4-5",
+      "mùa quả": "tháng 6-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Nguyên sản của Trung Quốc, được trồng rộng rãi ở các nước châu Á. Đã được trồng ở nước ta từ lâu đời khi người ta biết nuôi tằm. Nhiều bộ phận của cây Dâu được thu hái làm thuốc. Có những bộ phận có thể thu hái quanh năm. Tầm gửi chỉ gặp ở những cây gỗ lớn. Dùng tổ bọ ngựa chưa nở, phải đồ chín rồi sấy khô."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá dâu – Folium Mori, thường gọi là Tang diệp. Vỏ dâu – Cortex Mori, thường gọi là Tang bạch bì. Cành dâu – Ramulus Mori, hay Tang chi. Quả Dâu – Fructus Mori, hay Tang thầm. Tổ bọ ngựa cây Dâu – Ootheca Mantidis, hay Tang phiêu tiêu. Tầm gửi cây Dâu – Ramulus Loran thi, hay Tang ký sinh."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá Dâu chứa inokosteron, ecdysteron, morocetin, umbelliferon, scopoletin, scopolin, a-, b- hexenal, trigonellin và nhiều acid amin. Còn có chất cao su, tanin, caroten, vitamin C, pentozan, đường.",
+      "gồm chất": "Vỏ rễ Dâu chứa các acid hữu cơ, tanin, pectin và những hợp chất flavonoid bao gồm morin, mulberrin, mulberronchromen, cyclomulberrin, cyclomulberrochromen.",
+      "chứa": "Quả Dâu chứa đường (glucose và fructose), acid malic và acid succinic, protein, tanin, vitamin C, caroten, sắc tố màu đỏ anthocyanidin.",
+      "Các hợp chất": "Tổ bọ ngựa trên cây Dâu chứa protid, chất béo, muối sắt, calcium."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá Dâu non có thể vò ra thái nhỏ nấu canh lẫn với các loại rau khác, có hương vị của rau Dền giúp ăn ngon, ngủ yên.",
+      "được_dùng": "Lá Dâu thường được dùng chữa sốt, cảm mạo do phong nhiệt, ho, viêm họng, đau răng, đau mắt đỏ, chảy nước mắt, đậu lào, phát ban, cao huyết áp, làm cho sáng mắt. Ngày dùng 6-18g, dạng thuốc sắc.",
+      "làm thuốc": "Vỏ rễ dùng trị phế nhiệt, hen suyễn, khái huyết, phù thũng, dị ứng do ăn uống, bụng trướng to, tiểu tiện không thông. Ngày dùng 6-12g, dạng thuốc sắc.",
+      "có tác dụng": "Cành Dâu dùng trị phong tê thấp, đau thắt lưng, đau nhức các đầu xương, cước khí, chân tay co quắp. Ngày dùng 6-12g hay hơn, dạng thuốc sắc.",
+      "chữa": "Quả dùng trị viêm gan mạn tính, thiếu máu, suy nhược thần kinh. Ngày dùng 10-15g.",
+      "sắc uống": "Tang ký sinh chữa đau lưng, đau mình, chân tay tê bại, động thai, sau khi đẻ ít sữa. Ngày dùng 12-20g, dạng thuốc sắc.",
+      "giã nát": "Tổ bọ ngựa dùng chữa đi đái nhiều lần, di tinh, liệt dương, bạch đới, trẻ em đái dầm. Ngày dùng 6-12g."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

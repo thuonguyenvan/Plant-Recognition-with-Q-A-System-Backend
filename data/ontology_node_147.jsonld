@@ -1,0 +1,194 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bảy lá một hoa",
+            "ten_khac": "Bảy lá một hoa, Độc cước liên, Tảo hưu, Cúa dô (Hmômg), Co tẩu phờm (Thái)",
+            "ten_khoa_hoc": "Paris vietnamensis (Takht.) H.Li",
+            "ma_taxon": "858798",
+            "ho": "Trilliaceae",
+            "Mô tả": {
+                "cây": "Cây thảo, sống lâu năm, cao 0,5-0,7cm.",
+                "rễ": "Thân rễ mập, chia nhiều đốt, có những ngấn ngang và sẹo to.",
+                "thân": "Thân thắng đứng, không phân nhánh, màu lục hoặc hơi tím, giữa thân có một tầng lá mọc vòng từ 6-8 cái, thường là 7, lá hình trứng-bầu dục hoặc mác thuôn, dài 15-20cm, rộng 8-10cm, gốc tròn hoặc hình tim, đầu nhọn, mép nguyên, mặt dưới màu lục nhạt hoặc hơi tím đỏ, có 3 gân, cuống lá dài.",
+                "hoa": "Hoa đơn, lá đài hình mũi mác màu lục như lá, có 4-7 (thường là 6) lá xếp thành vòng trên thân. Số lá đài, thường bằng (hoặc xấp xỉ) số lá và số cánh hoa. Số lá đài có thể thay đổi nhiều hay ít trong cùng 1 loài chứ không phải con số cố định. Cánh hoa dạng dải, xoắn ít tới nhiều, dài hơn lá đài 1,2 – 2 lần.",
+                "mặt": "Nhị 8-14, số lượng nhị thường gấp 2 lần số lượng lá, số lá đài và số cánh hoa; xếp 2 vòng. Bầu có cạnh bầu lõm sâu, 4-7 cạnh, số cạnh bầu thường bằng với số lá, số lá đài, số cánh hoa và số thùy của đầu nhụy. Phận gốc vòi nhụy – đỉnh bầu thường có màu sắc đa dạng từ màu tía, tím tới màu xanh lam. P.vietnamensis được phân biệt với các loài khác thuộc chi ở đặc điểm đặc trưng bao gồm: nhị có trung đới kéo dài hình trụ ngắn 1-1,5mm; cánh hoa dài hơn đài 1,5 – 2 lần; cạnh bầu lõm sâu, lát cắt ngang qua bầu hình sao, nhụy gần như xẻ từ gốc với phần hợp (vòi nhụy) rất ngắn, phần xẻ thành các thùy (đầu nhụy) dài; hạt có áo hạt màu đỏ.  Hình 2: Một số đặc điểm hình thái đặc trưng của loài P. vietnamensis"
+            },
+            "Phân bố": {
+                "phân_bố": "Ở Việt Nam, tất cả các loài thuộc chi Paris đều đang bị khai thác ráo riết để làm thuốc và bán qua biên giới khiến nguồn dược liệu này trong tự nhiên ngày càng cạn kiệt. Nguyen Quynh Nga et al. (2016) đã thống kê và ghi nhận 8 loài và 2 thứ thuộc chi Paris phân bố rải rác ở một số tỉnh miền núi phía Bắc cho tới vùng núi cao miền Trung và Tây Nguyên. Trong đó, P. vietnamensis H.Li là một trong những loài có phân bố rộng nhất.  Quan sát các quần thể của loài này trong tự nhiên cho thấy tỉ lệ đậu hạt và khối lượng thân rễ của các cá thể khá cao so với các loài khác trong chi. Để phát triển nguồn dược liệu, Bảy lá một hoa Việt Nam đang được các cơ sở nghiên cứu cùng công ty TNHH Tuệ Linh tích cực thu thập trong tự nhiên để nghiên cứu, bảo tồn và nhân trồng."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": "Bảy lá một hoa là cây thích nơi có khí hậu  ẩm mát, ít gió nhưng không chịu úng. Cây chưa được trồng trên quy mô lớn mà chỉ ở phạm vi các vườn cây thuốc ở một số địa phương.  Cây được nhân giống bằng hạt hoặc bằng thân rễ. Hằng năm, vào tháng 10-11, thu lấy quả chín đem gieo ngay trong vườn ươm hoặc phơi khô để đến mùa xuân năm sau mới gieo. Mỗi cây chỉ có một hoa, mỗi hoa chỉ có một ít hạt nên hệ số nhân giống bằng hạt không cao. Thân rễ bảy lá một hoa có nhiều đốt chứa mắt ngủ, có thể tách ra từng đoạn để trồng.  Thời vụ:  Thời vụ trồng chủ yếu là mùa xuân và mùa thu. Nếu thu hạt xong gieo ngay thì trồng vào cuối mùa xuân. Gieo hạt vào mùa xuân có thể trồng vào mua thu cùng năm hoặc mùa xuân năm sau.  Làm đất:  Đất trồng nên chọn đất nhiều màu, cày bừa kỹ, nhặt sạch cỏ dại lên thành luống để thoát nước khi cần. Bảy lá một hoa là loại cây đặc biệt ưa bóng, vì vậy phải trồng dưới tán cây khác hoặc ở vườn có mái che. Nơi trồng tốt nhất là ở vùng núi, có độ cao từ 800m trở lên.  Mật độ:  Mỗi cây chỉ có 1 thân nhỏ cao không quá 1m, vì vậy cần trồng dày, khoảng cách 30 x 30cm hoặc 30 x 35cm. Lưu ý: Cây Bảy lá một hoa rất dễ bị thối thân rễ, nếu không thoát nước tốt, nhất là khi mưa nắng thất thường.  Bón phân:  Sau khi làm đất, nên bón lót 10-15 tấn phân chuồng hoại mục cho 1ha. Trộn phân với đất rồi hót đất rãnh luống phủ lên trên. Hàng năm cần làm cỏ, xới xao, vun gốc và bón thêm các oại phân chuồng hoại mục, vi sinh, NPK hoặc tro bếp.  Thu hoạch:  Mùa thu hoạch thường vào tháng 6-7. Khi thu, đào thân rễ rửa sạch, để nguyên đem phơi hoặc thái mỏng rồi phơi khô đều được. Chưa có số liệu về năng suất."
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Thân rễ. Thu hái quanh năm, tốt nhất vào mùa thu đông. Dùng tươi hoặc phơi khô.  Hình 3: Thân rễ Bảy lá một hoa – Thất diệp nhất chi hoa Paris vietnamensis"
+            },
+            "Thành phần": {
+                "thành phần": "Từ cao phân đoạn etyl axetat phần thân rễ bảy lá một hoa (PPC) đã phân 6 hợp chất tinh khiết gồm: diosgenin, hỗn hợp hai chất stigmasterol-3-O-β-D-glucopyranosid và β-sitosterol-3-O-β-D-glucopyranosid, gracillin, paris saponin D, paris saponin H.  Từ cao phân đoạn etyl axetat và butanol phần trên mặt đất loài PPC phân lập được 15 hợp chất tinh khiết: trong đó có 1 hợp chất mới là 12-hydroxy-diosgenin-3-O-α-L-rhamnopyranosyl-(1→2)-[α-L-rhamnopyranosyl-(1→3)]-β-D-glucopyranosid, 5 hợp chất lần đầu tiên phân lập từ chi Paris gồm 1-O-α-linolenoyl-3-β-D-galactopyranosyl-glyxerol, stigmasterol, thymidin, resveratrol, ε-viniferin; 2 hợp chất lần đầu tiên phân lập từ PPC gồm quercetin, quercetrin; và 7 hợp chất khác là pennogenin, stigmasterol-3-O-D-glucosid, diosgenin-3-O-α-L-rhamnopyranosyl-(1→4)-β-D-glycopyranosid, diosgenin-3-O-α-Lrhamnopyranosyl-(1→2)-β-D-glycopyranosid, dioscin, paris saponin II, và paris saponin VII."
+            },
+            "Tính vị": {
+                "Có vị": "Thân rễ bảy lá một hoa còn gọi là tảo hưu, có vị đắng, hơi cay, tính hơi lạnh, hơi độc, vào kinh can, có tác dụng xổ hạ, lợi tiểu, tiêu đờm, thanh nhiệt, giải độc."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Thân rễ bảy lá một hoa chữa sốt, sốt rét cơn, kinh giản, giải độc, nhất là khi bị rắn độc cắn, chữa mụn nhọt, viêm tuyến vú, sốt rét, ho lao, ho lâu ngày, hen suyễn Dùng ngoài với tác dụng sát trùng, tiêu sung, giã thân rễ đắp lên những nơi sung đau, vết rắn cắn, tràng nhạc, mụn lở, nhọt.  Ở Trung Quốc, vị thuốc tảo hưu được chế biến từ thân rễ nhiều loại cây thuộc chi Paris mọc ở những tỉnh miền Tây Nam Trung Quốc đã được dùng chủ yếu làm thuốc chữa sốt, giải độc và chữa ho.  Ở Ấn Độ và Nê Pan, thân rễ bảy lá một hoa trị giun sán bằng cách uống bột thân rễ mỗi lần một thìa cà phê, ngày một lần, liền trong hai ngày. Để trị mụn nhọt và nhọt độc, hàng ngày bôi bột nhão chế từ thân rễ bảy lá một hoa một cách đều đặn.  Liều dùng:  Ngày uống 4 -12g thân rễ dưới dạng thuốc sắc Thuốc dùng ngoài không kể liều lượng.  Kiêng kỵ:  Người hư hàn cấm dùng"
+            },
+            "Cách dùng": {
+                "được_dùng": "Chữa trẻ em kinh sài, tay chân co giật:  Thân rễ bảy lá một hoa, sấy khô tán bột, uống mỗi lần 0.5 – 1g, ngày 4- 5 lần  Chữa trẻ em sốt cao co giật hoặc quai bị, lên sởi và các chứng sung viêm phát sốt:  Thân rễ bảy lá một hoa (4g), thiên hoa phân (8g), bạc hà (12g). Sắc uống.  Chữa rắn độc cắn, nhọt ở vú, viêm phổi:  Thân rễ bảy lá một hoa (4 – 20g). Sắc uống  Chữa hen suyễn, ung thư phổi:  Thân rễ bảy lá một hoa (4 – 20g) phối hợp với các vị thuốc khác  Chữa lòi dom:  Thân rễ bảy lá một hoa mài với giấm bôi rồi đẩy vào  Sản phẩm có thành phần Bảy lá một hoa trên thị trường hiện nay  Bệnh U xơ tuyến vú hay còn gọi là bướu sợi tuyến, là một dạng u lành tính phổ biến của tuyến vú. Bệnh u xơ vú không quá nguy hiểm, không có biến chứng và không chuyển biến thành ung thư vú. Các chuyên gia y tế hàng đầu về u vú cho biết, u xơ tuyến vú có thể chữa khỏi bằng cách phẫu thuật hoặc điều trị nội tiết. Đối với bệnh nhân có khối u nhỏ, u lành tính thường dùng thuốc điều chỉnh nội tiết để đưa tỉ lệ estradiol/progesteron về bình thường ở mức thích hợp, cân bằng nội tiết tố và điều hòa kinh nguyệt.  Sản phẩm Ích phụ Tuệ Linh với công thức đột phá kết hợp 5 dược liệu chống u và ung thư hàng đầu hiện nay. Đây cũng là sản phẩm đầu tiên và duy nhất sử dụng Xạ đen châu Âu trên thị trường hiện nay  Công dụng:  ✓ Phòng chống và ngăn chặn sự phát triển của u xơ tuyến vú  ✓ Giảm nguy cơ mắc và ngăn ngừa u xơ tử cung, u nang buồng trứng phát triển  ✓ Bổ huyết tăng cường sức khỏe, tăng hệ miễn dịch.  Hình ảnh sản phẩm Ích phụ Tuệ Linh  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Bảy lá một hoa. Nếu cần tư vấn và tìm hiểu thêm về cây Bảy lá một hoa và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+            },
+            "luu_y": {
+                "luu_y": ""
+            }
+        }
+    ]
+}

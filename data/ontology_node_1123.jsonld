@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tô hạp",
+      "ten_khac": "Tô hạp tàu, tầm thụ, an tiên",
+      "ten_khoa_hoc": "Altingia chinensis (Champ. ex Benth.) Oliv. ex Hance",
+      "ma_taxon": "923608",
+      "ho": "Tô hạp (Altingiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10 – 20m.",
+      "lá": "Lá mọc so le, hình bầu dục hoặc ngọn giáo, dài 5 – 12 cm, rộng 3 – 3,5 cm, gốc hình nêm, đầu ngắn nhọn gần tù, mép khía răng, hai mặt nhẵn màu nâu, gân mạng rất rõ ở mặt dưới; cuống lá dài 8 – 13 mm.",
+      "hoa": "Hoa đơn tính; hoa đực mọc thành bông hình trụ, dài khoảng 2,5 cm; hoa cái mọc thành đầu tròn trên một cán dài 5 – 6 cm.",
+      "quả": "Quả hình trái xoan, có vòi tồn tại, đường kính 1,7-2,5 cm.",
+      "mùa hoa": "tháng 1 – 5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Altingia Noronha ở Việt Nam đã biết có 7 loài, trong đó có loài tổ hợp (hay còn gọi là tổ hợp tàu). Cây phân bố ở một số tỉnh miền núi, như Lai Châu (Mường Tè), Lào Cai (Sa Pa), Quảng Ninh (Hoành Bồ); có tài liệu cho biết còn có ở Khánh Hoà (Nguyễn Tiến Bân, 2003, Vu Van Dung, et al., 2009). Trên thế giới, loài này chỉ thấy ở Trung Quốc (Quảng Đông, Quảng Tây, Vân Nam).",
+      "thường_mọc": "Tô hạp là loại cây gỗ lớn, có thể cao tới 35m. với đường kính thân tới 1m; thường mọc ở rừng kín thưởng xanh, lẫn với một số loài Dé, Sồi, Kháo, Dung… nhưng thường vượt lên khỏi tán."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Dầu nhựa và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dầu nhựa tổ hạp vị ngọt, tính hơi ấm, mùi thơm, vào hai kinh tâm và tỳ, có công năng ha đờm, chỉ khái, thông khiếu, sát trùng phòng trừ bệnh truyền nhiễm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dầu hoặc nhựa tổ hợp được dùng chữa bệnh đường hô hấp như ho, hen suyễn; các bệnh thần kinh như trúng phong, trung khí độc bị ngất, răng cắn chặt, kinh giật và phòng trừ các bệnh truyền nhiễm như cảm cúm, các bệnh nhiễm đường hô hấp, ỉa chảy, thổ tả, sốt rét. Liều dùng mỗi ngày 0,4 – 1,2g chia làm 2 – 3 lần.  Nếu là nhựa, mài với nước uống; nếu là dầu, hòa với nước hoặc rượu uống, có thể dùng riêng, nhưng thường phối hợp với các vị thuốc khác làm thành viên hoặc phiến, khi dùng mài với nước rồi uống.  Rễ tô hạp cũng có công dụng như trên, nhưng thường được dùng trị phong thấp, đòn ngã. Ngày dùng 2 – 5g, sắc uống, ngâm rượu hoặc tán bột uống.  Ở Việt Nam, có nhiều loại tô hạp vẫn dùng thay thế cho nhau được lấy từ các cây khác nhau như tô hạp bình khang (Altingia gracilipes Hemsl.), tô hạp cao (Altingia excelsa Noronha.) những loài cây này. Độ cao phân bố từ khoảng 750 – 1.700m. Cây có thể ra hoa quả hàng năm, vào tháng 1 – 3 có hoa và quả chín vào tháng 10 – 11, tái sinh tự nhiên bằng hạt và trong giai đoạn cây mạ cho đến 10 năm tuổi là cây ưa bóng và chịu bóng.  Bài thuốc có tô hạp  Chữa trúng phong, trung khi độc bị ngất, cơ kinh giàn, răng cắn chặt, cơn hen:  Lấy dầu tổ hạn trộn với bột an tức hương (nhựa của cây cảnh kiến trắng, còn gọi là cây bồ đề Styrax tonkinensis Pierre) lượng vừa đủ để làm thành viên bằng ngón tay. Khi dùng, mài với rượu hoặc nước nóng cho bệnh nhân uống mỗi lần 0,6 – 0,8g, ngày 4 – 5 lần. Kết hợp dùng ngoài, xoa vào mũi, ngực, rốn và lòng bàn chân [Lê Trần Đức, 1997: 296].  Cách lấy nhựa và dầu tổ hợp như sau:  Lấy nhựa: Chích nạo vỏ cây cho nhựa chảy ra và hứng lấy như hứng nhựa thông hoặc nhựa bồ đề. Cách này tốn công và nhựa thường có lẫn tạp chất. Lấy dầu: Vào mùa hè, dùng dao sắc thiên sâu từng khoanh vỏ. Đợi một vài tháng, nhựa se lại, vỏ hơi héo thì nay vỏ, bóc về, chẻ nhỏ, cho vào nồi, đổ vừa ngập nước, đun, dầu sẽ nổi lên trên mặt nước, gạn lấy dầu. Dầu này đặc sền sệt, màu nâu xám (Lê Trần Đức, 997: 296]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

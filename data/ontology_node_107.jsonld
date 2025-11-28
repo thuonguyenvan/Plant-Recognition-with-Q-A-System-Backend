@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Địa du",
+      "ten_khac": "Địa du",
+      "ten_khoa_hoc": "Sanguisorba officinalis L.",
+      "ma_taxon": "64549",
+      "ho": "Rosaceae (Hoa hồng)",
+      "Mô tả": {
+        "cây": "Loài cây sống dai.",
+        "cao": "0,3-1,5m, có khi đạt 2m.",
+        "thân": "rỗng, mọc thẳng đứng, nhẵn, mang ít lá.",
+        "lá": "dài 30-40cm, kép lông chim lẻ, 5-15 lá chét, hình trứng, mép răng cưa to, tù.",
+        "hoa": "màu đỏ sẫm, lưỡng tính, nhỏ, tụ thành cụm hình trứng, ra hoa suốt mua hè (từtháng 7-9),",
+        "quả": "nhẵn, màu nâu, hơi bốn cạnh, chứa một hạt.",
+        "rễ": "bò ngầm dưới đất, màu nâu"
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Thành phần chủ yếu trong địa du là tannin, saponosit, flavon. Người xưa dựa vào màu đỏ của hoa, liên hệ đến tác dụng cầm máu, chảy máu đường tiêu hoá, đường tiểu, thận, còn dùng trong ỉa chảy, khí hư. Có lẽ chất tannin là thành phần chủ yếu trong địa du"
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Địa du được dùng trong cả đông và tây y. Tây y dùng tính chất cầm máu, giúp sự tiêu hóa, rửa vết loét, khí hư. Y học cổ truyền đánh giá tính chất địa du vị đắng, tính hơi hàn (lạnh), không có độc. có tính chất mát huyết, cầm máu. Dùng trong những trường hợp phụ nữ tắc sữa, khí hư, thấy kinh đau bụng, còn dùng chữa nôn ra máu, cảy máu cam, đại tiện ra máu, ỉa chảy, kinh nguyệt ra nhiều, mọi chứng huyết của phụ nữ sau sinh. Ngày uống 5-10g dưới dạng thuốc sắc. dùng ngoài không kể liều lượng"
+      },
+      "Cách dùng": {
+        "được_dùng": "Dùng trong mọi trường hợp băng huyết, chảy máu cam, đi ngoài ra máu…Địa du 7g, a giao 3g, đại táo 50g, cam thảo 2g. Nước 600ml sắc còn 200ml. Chia 3 lần uống trong ngày (đơn của Diệp Quyết Tuyền). Trị lao phổi ho ra máu: Địa du sao 12g, Bạch mao căn 80g, Sanh cam thảo, Bách thảo sương đều 8g, cho nước sắc chia uống nhiều lần trong 1 ngày (Trung y tạp chí 1966, 4:31). Trị bỏng nước sôi: Dùng rễ Địa du rửa sạch phơi khô, sao thành than tồn tính tán bột mịn, trộn dầu mè thành cao mềm 50%, trực tiếp bôi vào vết bỏng, nhiều lần trong ngày."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

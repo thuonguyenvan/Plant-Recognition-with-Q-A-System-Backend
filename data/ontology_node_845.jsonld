@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sam biển",
+      "ten_khac": "Tam khôi, dàu dàu",
+      "ten_khoa_hoc": "Trianthema portulacastrum L.",
+      "ma_taxon": "79390",
+      "ho": "Aizoaceae",
+      "Mô tả": {
+        "lá": "Cây thảo, mọc bò, phân nhánh, bén rễ ở những mấu. Thân mập hơi khía rãnh, có lông dụng mi ở hai hàng đối diện. Lá mọc đối, từng cặp một to, một nhỏ, không đều, hình bầu dục, dài 1 – 3 cm, rộng 1 – 2 cm, gốc hơi hình tim, đầu tù; cuống ngắn ôm thân, có hai răng dạng lá kèm dính nhau, gân lá mờ. Hoa không cuống, mọc riêng lẻ ở bẹ của lá, lá bắc 2, hình mác nhọn, dễ lẫn với lá đài; đài gồm 5 răng hình bầu dục; tràng 0; nhị 10, xếp thành hai hàng, chỉ nhị dài, bao phấn hình elip, bầu 1 ô, hình trụ khía 5 thuỳ nhỏ ở đầu. Quả nang, hình trụ, dài 5 mm, dày 2,5 mm; hạt nhiều, hình thận."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Trianthema L. ở Việt Nam chỉ có 1 loài cây sam biển trên. Cây phân bố ở hầu hết các tỉnh dọc theo bờ biển từ Hải Phòng vào đến Kiên Giang và còn có ở 2 đảo lớn là Côn Đảo và Phú Quốc. Trên thế giới, đây cũng là loài cây liên nhiệt đới, nghĩa là phân bố rải rác khắp các vùng nhiệt đới ở cả hai bán cầu.",
+        "thường_mọc": "Sam biển là cây ưa ẩm, ưa sáng, thường mọc trên đất ẩm, đất trũng (ngập nước tạm thời) lẫn với các loài cỏ nhỏ ở ven đường đi, bờ ruộng, bãi hoang… Cây thường bò lan trên mặt đất, do ở các đốt của thân và cành đều có khả năng mọc rễ và chồi. Cây tái sinh tự nhiên chủ yếu bởi hạt."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Thành phần": {
+        "thành phần": "Lá chứa 2,0% protein, chất béo 0,4%, carbohydrat 3,2%, chất xơ thô 0,9%, vitamin C 70mg %, caroten 2,3mg %, nhiều P, Fe, ít Ca, Oxalat toàn phần 9,99%, Ca 0,73%, P 0,36%. Dịch chiết toàn cây chứa C – methylflavon. Hạt chứa 12,5% dầu béo. Sam biển còn chứa các alcaloid trianthemin, punaranavin và hợp chất steroid ecdysteron."
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây và rễ sam biển vị đắng (riêng rễ tươi thì ngọt), tính nóng: có công năng giải độc, lợi tiểu, nhuận tràng, làm sẩy thai (liều cao)."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Toàn cây sam biển được dùng để lợi tiểu, chữa phù và thũng (thường dùng lá). Còn chữa vàng da, bệnh gan, táo bón. Ngày dùng 15 – 30g (30 – 60g tươi) hãm hoặc sắc uống. Có thể dùng toàn cây, phơi sấy khô, tán bột rồi uống.  Cây tươi có thể dùng ăn uống hoặc nấu chín ăn để giải nhiệt nhất là vào mùa nóng.  Ở Ấn Độ, lá hoặc toàn cây lợi tiểu, dùng khi bị đái són, trị phù, thuỷ thũng, báng do suy gan, suy thận, vàng da. Nước sắc để tẩy giun, chữa thấp khớp, giải độc rượu. [Chopra et al., 2001: 246]. Rễ khô tán bột uống để tẩy sổ, chữa táo bón, gây sẩy thai (liều cao), chữa vô kinh. Còn chữa bệnh về mắt như loét giác mạc, nhìn mờ, quáng gà. Bột rễ khô thường phối hợp với gừng để tẩy xổ."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

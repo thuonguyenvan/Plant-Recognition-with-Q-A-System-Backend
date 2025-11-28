@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xạ đen Hòa Bình",
+      "ten_khac": "Xạ đen, Dót",
+      "ten_khoa_hoc": "Ehretia asperula Zoll.et Mort.",
+      "ma_taxon": "769719",
+      "ho": "Vòi voi (Borraginaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ leo.",
+      "thân": "Cành non tròn, nhẵn, màu xám nhạt sau xám nâu.",
+      "lá": "Lá mọc so le, hình thoi hoặc gần trái xoan, dài 6-11 cm, rộng 2-5 cm, gốc thuôn đầu nhọn, mép khía răng mảnh và nhọn, gân nổi rõ ở cả hai mặt lá; cuống ngắn.",
+      "hoa": "Cụm hoa mọc ở ngọn hoặc kẽ lá thành chum dài 5-10cm, đài 5 răng, gần tròn. Hoa tạp tính; hoa đực có 5 nhị, chỉ nhị hơi dẹt, đỉnh có đấy đĩa, bao phấn hình trái xoan, đĩa mật hình đấu; hoa cái có 5 nhị bé hơn, đĩa mật có 5 thùy, bầu hình trứng 3 ô, vòi nhụy dài bằng đầu, đầu nhụy chia 3 thùy.",
+      "quả": "Quả nang, hình trứng hoặc gần hình cầu, dài 5-9mm, rộng 4,5-6mm, mang đài tồn tại, nứt thành 3 khe dọc khi chín.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 8-12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ehretia P.Browne trên thế giới có khoảng vài chục loài, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam, chi này có 7 loài (Nguyến Tiến Bân, 1997); Phạm Hoàng Hộ, 2000). Loài xạ đen kể trên có ở phía Nam Trung Quốc và có thể cả Lào. Xạ đen ở nước ta phát hiện thấy ở Hòa Bình, Sơn la, Yên Bái, Thái Nguyên, Quảng Ninh, Huế.",
+      "thường_mọc": "Xạ đen thuộc loại cây bụi trườn, nếu mọc ở chỗ bị che bóng, cảnh vươn dài, mọc dựa. Cây ưa ẩm, hơi chịu bóng, thường mọc lẫn với các loại cây thảo, cây bụi khác ở ven rừng núi đá vôi, đôi khi cũng thấy ở vùng núi đá phiến. Độ cao phân bố có thể tới 600m. Cây ra hoa quả hằng năm. Tái sinh tự nhiên chủ yếu bằng hạt và có khả năng mọc chồi khỏe từ phần gốc, thân và cành sau khi bị chặt.",
+      "Đặc điểm sinh trưởng": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hiện chưa có thông tin về thành phần hóa học của loài xạ đen (E.asperula). Song từ loài E.aspera Willd, người ta đã phân lập được các chất như: Ehretinin, retrorsin, retnonecin, retronecanol, 7-methyl-1-pirolizidinol, hexahydro-7-methyl-1H-pyrolizin-1-ol,1 hydroxy-7-methylpyrolizidin (Phytochem.1980,19,1273).  Các Ehretiosid B, A1, A2, A3, được phân lập từ loài E. phylippinensis [Phytochem, 1974, 13, 2319; Phytochem. 1993, 32, 1461: Phytochem. 1994,36, 91, Fitoterapy, 1998, 79,439].  Các Ehletianol A, B, C, D thì phân lập từ E. Ovalifolia [Phytochem. 1989, 28, 3483 và Phytochem. 1995, 39, 659]  Từ loài E. microphylla, các tác giả đã phân lập được dimeric prenylbenzoquinon, dehydromicrophylon) hydroxymicrophylon và microphylon [Phytochem. 1995, 39, 105).  Hợp chất Ehretianon phân lập được từ E. buxifolia. Ngoài ra, người ta còn phát hiện trong chi Ehretia L. các hợp chất khác như: 1, 2, 4 benzenetriol, acid 2, 4 – dihydroxyphenylacetic, acid 4 – hydroxybenzeneacetic simmondsin. lanceolin A, B và các lophirosid A1, A2, B1, B2.  Các Ehletianol, Ehretiosid, lophirosid phân lập được đều là các chất vô định hình, còn các chất ehretrinin, retronecin và retrorsin là các pyrolizidin alcaloid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đã tra cứu trên 40 sách xuất bản ở trong và ngoài nước, chưa thấy có sách nào đề cập đến việc dùng xạ đen để làm thuốc.  Trong một điều tra các thầy lang và những người có sử dụng thuốc cho bản thân và gia đình dùng cây xạ đen ở một số vùng thuộc miền Bắc Việt Nam như Hà Nội (huyện Ba Vì), tỉnh Hoà Bình (huyện Kim Bôi), tỉnh Ninh Bình, Thanh Hoá (huyện Thạch Thành, tỉnh Nghệ An (huyện Quỳ Hợp và Con Cuông) cho thấy, về dụng chữa bệnh, xạ đen được dùng chữa u bướu (74% số người được phỏng vấn), chữa bệnh gan (22%) và chữa đau bụng sau khi sinh (26%)  Về bộ phận dùng, 43% dùng toàn bộ cây bỏ rễ, số còn lại dùng lá. Về cách dùng để chữa u bướu và chữa bệnh gan, đa số dùng cách sắc với các uống; một số (khoảng 30%) ngâm rượu uống. Để chữa phụ nữ đau bụng sau khi sinh, lá xạ đen được sắc lên lấy nước tắm. Một số người không đau bụng cũng vẫn lấy lá xạ đen sắc lấy nước ấm sau khi đẻ (Hoàng Quỳnh Hoa 2010).  Vào cuối những năm 90 của thế kỷ XX, ở Học viện Quân y (Hà Nội) có chế ra một dạng thuốc phối hợp của Phylamin và dịch chiết của cây xạ đen để hỗ trợ dự phòng và hỗ trợ điều trị ung thư (Lê Thế Trung et al., 1998).  Trong những năm gần đây, một bà mế ở tỉnh Hoà Bình đã tổ chức trồng cây xạ đen, thu hái là phơi khô, đóng gói trong túi nilông, mỗi gói 0,5kg để bán với công dụng hỗ trợ điều trị ung thư, chữa bệnh gan, vàng da, đau bụng, phụ nữ đau kinh. Ngày 10 – 15g sắc lấy nước uống.  Để chữa bệnh gan và hỗ trợ điều trị ung thư, cần dùng dài ngày, uống nước sắc xạ đen thay nước dùng hằng ngày. Còn dùng sắc lá xạ đen lấy nước rửa cho phụ nữ mới sinh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

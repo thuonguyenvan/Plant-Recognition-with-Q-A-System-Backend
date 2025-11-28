@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gòn",
+      "ten_khac": "Gòn, Bông gòn",
+      "ten_khoa_hoc": "Ceiba pentandra (L.) Gaertn.",
+      "ma_taxon": "62809",
+      "ho": "Bombacaceae ( Phân họ Gạo )"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây lớn có thân tròn thẳng, cao 20-30m.",
+      "thân": "Cành nằm ngang. Thân cây lúc còn non có gai hình nón. Các bộ phận non đều có màu xanh.",
+      "lá": "Lá kép chân vịt có 5-8 lá chét hình thuôn; gốc và chóp lá đều nhọn.",
+      "hoa": "Hoa họp thành bông dày ở ngọn cành, màu trắng bẩn. Đài hợp, có 5 thuỳ, mặt trong có lông nhung. Tràng 5, có lông nhung ở mặt ngoài. Nhị 5, chỉ nhị chẻ đôi.",
+      "quả": "Bầu hình nón, không lông, vòi nhuỵ nhẵn, đầu nhuỵ hình đĩa có 5 thuỳ hình răng. Quả khô, hình bắp thịt, mở thành 5 mảnh. Vỏ quả có nhiều lông trắng dài."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây của Mỹ châu nhiệt đới, được trồng nhiều ở miền Nam nước ta, ở Lào, Ấn Độ, Mianma, nam Trung Quốc, Campuchia, Malaixia, Inđônêxia."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây, gôm, chồi non, lá, rễ cây, dịch rễ, quả non, hạt chưa bóc vỏ – Cortex, Gummi, Gemnia, Folium, Radix, Fructus Semen Ceibae Pentandrae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thân cây chứa gôm.",
+      "gồm chất": "Hạt có thành phần giống hạt bông nhưng chỉ có ít hoặc không có gossypol. Trong hạt Gòn có 20-25% dầu, 22,5-31,6% protein, 15-26% các este.",
+      "Các hợp chất": "Trong dầu hạt có các acid oleic, palmitic, stearic, acid béo rắn, acid béo lỏng, phytosterin, pentosan. Dầu này có màu vàng sáng hay màu lục, không mùi, có vị giống dầu lạc, nửa đặc."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Java, người ta dùng các quả thật non để xào nấu làm rau ăn. Hạt làm giá; giá gòn dùng ăn sống hay xào ăn cũng ngon; lại có tính làm tăng sự tiết sữa. Nhiều bộ phận được sử dụng làm thuốc.",
+      "được_dùng": "Vỏ cây thường dùng sắc uống chữa bệnh về cơ quan tiết niệu, bệnh về thận, bệnh về phổi, đau ngực, ho, lỵ, ỉa chảy, nhất là ỉa chảy thành từng thỏi dài, từng đoạn trông như albumin. Vỏ cũng dùng chữa chứng bất lực và còn dùng để chữa các bệnh về khớp, sốt rét và làm thuốc giải độc rượu. Liều dùng 15-20g dạng thuốc sắc; nếu dùng quá liều có thể bị nôn. Gôm từ thân cây tiết ra dùng trị đau bụng, lỵ, rong huyết, đái tháo. Liều dùng 4-10g. Các chồi non và lá là thuốc gây nôn và giải độc rượu. Liều dùng 15-20g. Lá non làm thuốc lợi sữa; lá già dùng nấu nước gội đầu cho tóc mượt. Rễ Gòn dùng trị bò cạp đốt, cũng dùng sắc uống trị sốt rét, lỵ mạn tính, ỉa chảy, cổ trướng và phù toàn thân. Dịch rễ dùng trị đái đường. Dầu hạt Gòn được dùng thay thế dầu hạt Bông và có thể dùng chế xà phòng.",
+      "làm thuốc": "Nguồn: 3033 cây thuốc Đông y Tuệ tĩnh"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

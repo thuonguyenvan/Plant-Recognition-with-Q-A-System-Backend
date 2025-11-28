@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch cập",
+      "ten_khac": "Bạch cập, Liên cập thảo",
+      "ten_khoa_hoc": "Bletilla striata (Thunb.) Reichb.f.",
+      "ma_taxon": "131245",
+      "ho": "Orchidaceae (Lan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bạch cập là một loài thảo dược lâu năm, có hình dáng như sau:  Chiều cao: Từ 30 – 70 cm.",
+      "rễ": "Dạng khối củ dày, hình tam giác tròn, hơi dẹt, màu vàng trắng. Phần rễ nhỏ màu xám trắng, mảnh mai.",
+      "lá": "Có từ 3 – 5 lá, hình mũi mác dài hoặc rộng, dài 15 – 30 cm, rộng 2 – 6 cm. Đầu lá nhọn, phần gốc kéo dài thành bẹ ôm lấy thân.",
+      "hoa": "Mọc thành chùm ở đầu cành, mỗi chùm có 3 – 8 bông hoa. Cánh hoa màu tím nhạt hoặc vàng trắng, có hình bầu dục hẹp và đầu nhọn. Cánh hoa giữa có 3 rãnh, phần giữa hình chữ nhật. Nhị hoa và nhụy hoa dính lại thành một trụ, trên có 4 cặp phấn hoa hình dẹt, giống như sáp ong.",
+      "quả": "Dạng hình trụ dài, khoảng 3.5 cm, đường kính 1 cm, hai đầu hơi nhọn. Có 6 đường gân chạy dọc, đỉnh quả thường giữ lại dấu vết của hoa đã tàn.",
+      "mùa hoa": "Tháng 4 – 5.",
+      "mùa quả": "Tháng 7 – 9."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Chống chỉ định khi dùng bạch cập:  Không dùng cho người bị ho ra máu do ngoại cảm, hoặc người mắc bệnh lao phổi giai đoạn đầu (phế ung sơ khởi). Người bị thực nhiệt ở phổi và dạ dày cũng không nên sử dụng, vì bạch cập có tính sáp (se), có thể làm bệnh trầm trọng hơn. Không dùng chung với ô đầu (phản ô đầu) – một vị thuốc có độc tính mạnh. Kỵ lý thạch, hạnh nhân, nhân hạt mơ – những vị này có thể làm giảm tác dụng hoặc gây phản ứng không mong muốn. Không dùng khi mụn nhọt, áp xe đã vỡ mủ, đặc biệt tránh dùng chung với thuốc có tính hàn mạnh, vì có thể làm vết thương lâu lành.  Lưu ý: Nếu có bệnh lý nền hoặc đang dùng thuốc khác, nên tham khảo ý kiến thầy thuốc trước khi sử dụng bạch cập."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần hóa học của bạch cập gồm:\nNước: 14.6% Tinh bột: 30.48% Glucose (đường nho): 1.5% Tinh dầu bay hơi Chất nhầy Polysaccharide (đường đa phân tử): Chủ yếu là bạch cập mannan, gồm 4 phần mannose (đường mannose) và 1 phần glucose (đường glucose).\nCác nhóm tác giả nghiên cứu phân tích về thành phần hóa học của Bạch cập đã phân lập được 3 hợp chất rượu hexacosanoic 3- (4-hydroxy-3-methoxybenzol) -trans-acryliceylenate (1), Physcion (2) và cyclobalanol (3)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo y học cổ truyền, bạch cập quy kinh phế  Bạch cập có các vị và tính chất sau:  Vị: Đắng, ngọt, hơi cay Tính: Hơi lạnh, se (sáp), không độc  Một số tài liệu ghi nhận khác nhau về tính vị:  Thần Nông, Hoàng Đế: Vị cay Lý Thời Trân (Bản Thảo Cương Mục): Vị đắng, ngọt, hơi lạnh, có tính se Cổ tài liệu khác: Có ghi nhận vị rất lạnh hoặc hơi cay  Nhờ vị đắng, ngọt và tính hơi lạnh, bạch cập thường được dùng để cầm máu, làm lành vết thương, tiêu viêm, dưỡng phế và chữa ho có đờm."
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Bài thuốc trị chảy máu cam:  Bạch cập phơi khô, tán nhỏ, rây bột mịn. Uống 2 lần/ngày, mỗi lần 4 – 8g. Có thể lấy bông thấm thuốc nhét vào mũi để tăng hiệu quả.\nBài thuốc trị thổ huyết, chảy máu dạ dày:  100g bạch cập, 50g tam thất, tán bột. Ngày uống 6 – 12g, chia làm 2 – 3 lần uống trong ngày.\nBài thuốc chữa vết thương đang chảy máu:  Bạch cập 20g, thạch cao 20g. Hai vị tán nhỏ, trộn đều, rắc lên vết thương rất chóng hàn miệng. Ngày rắc 2 – 3 lần lên vết thương. Ngoài ra, có thể dùng 20g bạch cập, 30g lá bông ổi, 10g gừng khô tán bột mịn, rắc lên vết thương giúp cầm máu ngay lập tức.\nBài thuốc trị ho ra máu:  Bạch cập 63g, lá tỳ bà 12g, ngó sen 20g, a giao 12g. Tất cả tán bột làm hoàn. Mỗi lần 8g, ngày uống 2 lần, chiêu với nước đun sôi còn ấm.\nBài thuốc trị phế ung ho ra máu:  Bạch cập 12g, xuyên bối mẫu 6g, bách hợp 12g, ý dĩ 20g, phục linh 12g.\nBài thuốc trị bỏng lửa:  Bạch cập tán nhỏ, hoà với dầu vừng bôi lên.\nBài thuốc trị loét dạ dày, phân đen:  40g Bạch cập, 20g trầm hương và 20g Hoài Sơn (đã sao). Tất cả được tán thành bột mịn, mỗi lần uống 12-20g khi đói.\nBài thuốc trị bệnh phổi kết hạch, ho, khạc ra máu hay lao hang:  Bạch cập tán nhỏ, uống mỗi lần 12g, liều dùng không hạn chế.\nBài thuốc trị nứt nẻ chân tay, nhất là vào những khi thời tiết hanh khô:  30g Bạch cập, 50g đại hoàng, 3g băng phiến (bocneol)."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

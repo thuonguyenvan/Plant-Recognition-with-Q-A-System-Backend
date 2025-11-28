@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bồ hòn",
+      "ten_khac": "Bồ hòn, Vô hoạn thụ, Bòn hòn, Mộc hoạn tử, Mác hón (Tày), Co hón (Thái), Mầy quyến ngần (Dao)",
+      "ten_khoa_hoc": "Sapindus saponaria L.",
+      "ma_taxon": "952228",
+      "ho": "Sapindaceae (Bò hòn)",
+      "Mô tả": {
+        "cây": "Cây thân gỗ to, cao 5 – 10m hay hơn, rụng lá vào mùa khô.",
+        "lá": "Lá kép lông chim, mọc so le, có 4 – 6 đôi lá chét mọc gần đối, nhẵn, gốc lệch, đầu nhọn, mép nguyên, gân nổi rõ ở cả hai mặt,",
+        "hoa": "Cụm hoa mọc ở đầu cành thành chùm hoặc chùy gồm rất nhiều hoa nhỏ, màu lục nhạt; đài 5-răng có ít lông; tràng 5 cánh hình trứng có vảy ngắn ở gốc, có lông, không nở xoè, nhị 8, cong, dài hơn tràng, bầu hình trứng nhẵn, có 3 ô.",
+        "quả": "Quả hình cầu, có đường sống nổi rõ, vỏ ngoài (cùi) dày, khi chín nhăn nheo, màu vàng nâu, hạt tròn mầu đen.",
+        "mùa hoa": "tháng 7-9.",
+        "mùa quả": "tháng 10-12."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Sapindus L. gồm một số loài là cây gỗ hoặc cây bụi, phân bố rải rác ở vùng nhiệt đới và á nhiệt đới nhất là khu vực Nam Á: Ấn Độ, Srilanca và Malaysia. Ở Ấn Độ hiện có 3 loài, Sapindus mukorossi Gaertin, Sapindus trifoliatus L., và Sapindus laurifolius Valh, mà quả của chúng được sử dụng như Xà phòng, thậm chí còn được xuất khẩu sang một số nước lân cận như: Iran, Arap Saudi, Somali và Madagasca.  Ở Việt Nam có 4 loài, đều là cây gỗ. Trong đó, bồ hòn là cây khá quen thuộc, bởi quả được sử dụng như xà phòng từ xa xưa. Cây phân bố rải rác hầu hết các tỉnh thuộc vùng núi thấp (thường dưới 1000m) Và trung du bao gồm các tỉnh Bắc Giang, Thái Nguyên, Phú Thọ, Vĩnh Phúc, Tuyên Quang, Yên Bái, Thanh Hoá, Nghệ An, Hà Tĩnh. v.v.",
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "nơi": {
+                "tên": "ở một số nơi như ở đình chùa, quanh làng bản",
+                "ghi_chú": "để lấy qủa và bóng mát"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Bồ hòn là loại cây gỗ ưa sáng và mọc nhanh. Cây có thể phát triển trên nhiều loại đất khác nhau. Song tốt nhất là ở những nơi có tầng đất mặt dày, ẩm và còn tương đối màu mỡ. Chính. Vì thế cây thường mọc trong các kiểu rừng thứ sinh, rừng hành lang ven suối. Bồ hòn ra hoa quả nhiều hàng năm. Mùa quả chín trùng vào thời kỳ rụng lá vào khoảng tháng 10 – 11. Khả năng tái sinh cây con mọc từ hạt và cây chồi sau khi chặt rất tốt. Ngoài ra còn có thể nhân giống bồ hòn bằng cách giâm cành. Gỗ bồ hòn cứng được dùng để đóng đồ và trong xây dựng."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Bồ hòn không kén đất, chịu được hạn, không chịu được úng, thường được trồng ở ven đường, nơi công cộng, ít thấy trồng tập trung.  Cây được nhân giống bằng hạt. Gieo hạt ở Vườn ươm vào mùa Xuân, đến tháng 8 – 9 hoặc tháng 2 – 3 năm sau, đánh đi trồng. Khi trồng, người ta đào hố cách nhau 10 – 12m, kích thước hố tùy theo cây to nhỏ. Mỗi hố lót 10 – 15kg phân chuồng, phân rác. Trộn đều phân với đất rồi đặt cây, lèn gốc và tưới ẩm. Cần cắm cọc để giữ cho cây khỏi bị gió lay và rào xung quanh gốc để tránh trâu bò phá hoại. Sau 10 – 15 ngày, cây ra rễ mới. Không cần chăm sóc nhiều."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Quả và hạt. Quả hái vào mùa thu, để nguyên hoặc bỏ hạt phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Quả bồ hòn là nguồn nguyên liệu giàu saponin.",
+        "gồm chất": "Trong thịt quả có tới 18% Saponosid.",
+        "Các hợp chất": "Saponin mukorosin C52H84O11 2H2O (đc 155 – 156°) đã được chiết ra dưới dạng kết tinh. Khi thủy phân cho ta genin là hederagenin và đường là L- arabinose, DI – glucose, L – rhamnose, và D- Xylose. Các Sapindosid có trong bồ hòn như Sapindosid A. B, C, D, E, E1, X, Y, Y2… đều là những saponin triterpen. Ngoài ra còn có mukuroyiosid ia, Ib, II2, IIb; là những saponin có hoạt tính bề mặt mạnh.",
+        "chứa": "Hạt bồ hòn chứa 9 – 10% dầu béo."
+      },
+      "Tính vị": {
+        "Có vị": "Rễ bồ hòn có vị đắng, tính mát, hơi độc, vào các Kinh phế, tỳ, có tác dụng tiêu đờm hóa trệ. Quả bồ hòn có tác dụng Sát trùng."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân thường dùng quả bồ hòn giặt quần áo thay xà phòng, tốt nhất đối với trường hợp giặt đồ len, lụa không chịu được độ kiềm của xà phòng. Theo tài liệu cổ, bồ hòn có tác dụng chữa ho trừ đờm, nhân quả bồ hòn có tác dụng chữa hôi miệng, sâu răng. Ở một số vùng, nhân dân dùng vỏ cây bồ hòn giã nát ngâm nước tắm cho động vật bị bọ, rận, chấy.  Trong y học dân gian Ấn Độ, để điều trị viêm phổi người ta dùng bột vỏ quả bồ hòn trộn với mật ong, làm thành viên hoàn mỗi viên khoảng 2g. Mỗi lần uống một viên, trộn với sữa nóng, ngày 2 lần. Nhân dân một số vùng ở Nepal dùng vỏ quả bồ hòn tán nhỏ thành bột nhão đắp hàng ngày vào chỗ bị bệnh để trị những bệnh ngoài da như ghẻ và bệnh nấm da. Cũng dùng vỏ quả bồ hòn tán nhỏ, trộn với 2 lần lượng bột ngô và dùng gội đầu thường xuyên đế trị gầu và diệt chấy.  Bài thuốc có bồ hòn  Chữa hôi miệng, trừ sâu răng: Nhân quả bồ hòn (5 – 10g) tán bột, ngậm nhổ nước Diệt sâu, trừ giòi: Vỏ cây tươi bồ hòn giã nát, hòa với nước, đem phun. Chữa hắc lào: Vỏ quả bồ hòn (20g), củ riềng già (10g). Tán nhỏ, ngâm với 20ml cồn 90°, dùng bôi. Chữa ghẻ lở, hắc lào: Quả bồ hòn bỏ hạt nấu thành dầu, rồi tán hạt củ đậu với diêm sinh lượng bằng nhau, hòa lẫn vào để bôi sau khi đã xát rửa sạch nơi bị bệnh với nước nóng. Chữa họng tắc, không nuốt được: Vỏ qủa bồ hòn đồ, phơi, tán nhỏ, thổi vào họng. Phòng ngừa đĩa cắn: Dầu quả bồ hòn, bôi vào đùi và chân trước khi lội xuống ao, ruộng."
+      },
+       "Cách dùng": {},
+       "Lưu ý": {}
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+
+  {
+    "@context": {
+      "schema": "http://schema.org/",
+      "plant": "http://medicinal-plant.org/",
+      "Plant": {
+        "@id": "plant:Plant",
+        "@type": "schema:Thing",
+        "@context": {
+          "ten": "schema:name",
+          "ten_khac": "schema:alternateName",
+          "ten_khoa_hoc": "schema:scientificName",
+          "ma_taxon": "schema:identifier",
+          "ho": "schema:Text"
+        }
+      },
+      "Mô tả": {
+        "@id": "plant:Description",
+        "@type": "schema:Thing",
+        "@context": {
+          "lá": "schema:text",
+          "hoa": "schema:text",
+          "quả": "schema:text",
+          "cây": "schema:text",
+          "mặt": "schema:text",
+          "đầu": "schema:text",
+          "thân": "schema:text",
+          "cuống": "schema:text",
+          "gốc": "schema:text",
+          "cao": "schema:text",
+          "rễ": "schema:text",
+          "củ": "schema:text",
+          "mọc": "schema:text",
+          "mùa hoa": "schema:text",
+          "mùa quả": "schema:text"
+        }
+      },
+      "Phân bố": {
+        "@id": "plant:Distribution",
+        "@context": {
+          "phân_bố": "schema:description",
+          "ở_vùng": {
+            "@id": "schema:Place",
+            "@context": {
+              "tên": "schema:name"
+            },
+            "@container": "@set"
+          },
+          "các_tỉnh": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "tỉnh": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name"
+                }
+              }
+            }
+          },
+          "được_trồng": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "nơi": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name",
+                  "ghi_chú": "schema:description"
+                }
+              }
+            }
+          },
+          "chủ_yếu": "plant:PrimarilyNote",
+          "thường_mọc": "plant:HabitatNote",
+          "Đặc điểm sinh trưởng": "schema:text"
+        }
+      },
+      "Thông tin khác": {
+        "@id": "plant:AdditionalInformation",
+        "@type": "schema:Thing",
+        "@context": {
+          "thong_tin_khac": "schema:description"
+        }
+      },
+      "Bộ phận dùng": {
+        "@id": "plant:UsedParts",
+        "@type": "schema:Thing",
+        "@context": {
+          "bo_phan_dung": "schema:description"
+        }
+      },
+      "Thành phần": {
+        "@id": "plant:CompositionList",
+        "@type": "schema:Thing",
+        "@context": {
+          "thành phần": "schema:text",
+          "gồm chất": "schema:text",
+          "Các hợp chất": "schema:text",
+          "chứa": "schema:text",
+          "triết xuất": "schema:text",
+          "đã nghiên cứu": "schema:text",
+          "tìm thấy": "schema:text",
+          "thủy phân": "schema:text",
+          "các hoạt chất": "schema:text",
+          "tinh dầu chứa": "schema:text",
+          "có hoạt chất": "schema:text",
+          "dấu hiệu đặc trưng": "schema:text"
+        }
+      },
+      "Tính vị": {
+        "@id": "plant:TasteProperty",
+        "@type": "schema:Thing",
+        "@context": {
+          "Có vị": "schema:text"
+        }
+      },
+      "Công dụng": {
+        "@id": "plant:MedicalUseList",
+        "@type": "schema:Thing",
+        "@context": {
+          "cong_dung_y_hoc": "schema:text",
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "chữa": "schema:text"
+        }
+      },
+      "Cách dùng": {
+        "@id": "plant:Preparation",
+        "@type": "schema:Thing",
+        "@context": {
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "phơi khô": "schema:text",
+          "xấy khô": "schema:text"
+        }
+      },
+      "luu_y": {
+        "@id": "plant:Caution",
+        "@type": "schema:Thing",
+        "@context": {
+          "luu_y": "schema:description"
+        }
+      }
+    },
+    "@graph": [
+      {
+        "@type": "Plant",
+        "ten": "Lim",
+        "ten_khac": "Lim, Lim xanh",
+        "ten_khoa_hoc": "Erythrophleum fordii Oliv.",
+        "ma_taxon": "191941",
+        "ho": "Caesalpiniaceae (Vang)"
+      },
+      {
+        "@type": "Mô tả",
+        "cây": "Cây thân gỗ, có thể cao hơn 10m hoặc hơn nữa.",
+        "lá": "Lá hai lần kép lông chim với 3 đôi lá chét cấp hai, lá chét 9-15, mọc so le, nhọn nhẵn, bóng ở mặt trên, dài 5-7cm, rộng 25-30mm.",
+        "hoa": "Hoa màu trắng mọc thành chùy đơn độc hay tập trung ở nách lá.",
+        "quả": "Quả thuôn dài 20cm, rộng 35-40mm.",
+        "hạt": "Hạt màu nâu, hơi hình trứng, dẹt và hơi có rìa ở đỉnh, xung quanh có rãnh."
+      },
+      {
+        "@type": "Phân bố"
+      },
+      {
+        "@type": "Thông tin khác"
+      },
+      {
+        "@type": "Bộ phận dùng"
+      },
+      {
+        "@type": "Thành phần",
+        "thành phần": "Cây lim của ta chưa thấy có tài liệu nghiên cứu. Nhưng nhiều loài Erythrophloeum khác như E. guineense Don (mọc ở miền tây châu phi, E. couminga Baill (mọc ở Mangat) chứa trong vỏ nhữmg ancaliot rất độc: Erythophlein, casein, casaidin, counmingin là những este của metylaminoetanol CH2-NH-CH2-CH2OH và của dimetylaminoetanol (CH3)3-N-CH2-CH2OH. Mỗi một ancaloit có một axit riêng este hoá. Khi thủy phân axit, thì axit riêng này được giải phóng.",
+        "Các hợp chất": "Casain và casaidin là những ancaloit có tinh thể do Dalma chiết được từ năm 1935, là những dẫn xuất của dimetylaminoetanol. Các axit este hoá những ancaloit này là axit casaic và casaidic có cấu trúc ditecpen giống như những axit agatic và isoagatic thấy trong copal cùng thuộc họ đậu (copal là những cây cho nhựa thuộc các chi Trachylobium, Guibourtia và Hymenaea mọc ở vùng nhiệt đới châu Phi và châu Mỹ.",
+        "dấu hiệu đặc trưng": "Các axit casaidic có một chức axit và một nối kép. Axit casaidic còn có thêm hai chức ancola nhị, nhưng một chức chưa xác định được vị trí. Trong axit casaic thì một chức ancola nhị được thay đổi một chức xeton nhưng vị trí cũng chưa xác định được.",
+        "triết xuất": "Erythophlein là một ancaloit vô định hình, do Hardy và Gallois chiết được từ năm 1876, sau Merck cũng chiết được. Khi thủy phân sẽ cho metylaminoetanol và axit erythrophleic rất gần các axit nói trên. Nó có một nhóm metoxy và một chức rượu nhị.",
+        "thủy phân": "Chất coumingin được Dalma chiết từ cây couminga dưới dạng tinh thể, khi thuỷ phân cho dimetylaminoetanol và axit couminginic. Axit couminginic có cấu trúc một este. Khi thủy phân kiềm, nó cho axit casaic và axit hydroxy isovalerianic (CH3)2-C(OH)-CH2COOH."
+      },
+      {
+        "@type": "Tính vị"
+      },
+      {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Như trên đã nói vỏ lim hiện chưa được dùng làm thuốc, thường chỉ là nguyên nhân của một số trường hợp ngộ độc. Nhưng nấm linh chi được sử dụng chữa nhiều bệnh. Hiện nay một số nhà nghiên cứu đang nghiên cứu làm thuốc chữa bệnh tim.",
+        "chữa": "Chú thích: Loài Ganoderma lucidum được xác định là một loại thuốc đông y quý mang tên linh chi."
+      },
+      {
+        "@type": "Cách dùng",
+        "được_dùng": "Lim là một cây mọc phổ biến ở nước ta nhất là tại những khu rừng miền Bắc và miền Trung nước ta. Còn thấy ở Lào, miền nam Trung Quốc. Thường ngời ta chỉ khai thác gỗ làm nhà, làm đồ dùng. Không thấy dùng làm thuốc.",
+        "luu_y": "Chỉ thấy nói mạt cưa gỗ lim, nấm lim là có độc (xem thành phần hoá học)."
+      },
+      {
+        "@type": "luu_y"
+      }
+    ]
+  }

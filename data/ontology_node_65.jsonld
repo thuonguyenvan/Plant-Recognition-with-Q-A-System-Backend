@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/gai-dau.html",
+      "ten": "Gai dầu",
+      "ten_khac": "Gai mèo, Gai dầu, Đại ma, Kham sua (Tày), Co phai meo (Thái), Lanh mèo",
+      "ten_khoa_hoc": "Cannabis sativa L.",
+      "ma_taxon": "75997",
+      "ho": "Cannabaceae (Gai dầu)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, sống hằng năm, khác gốc, thân thẳng đứng cao 1-2m, phân ít hay nhiều cành. Toàn các bộ phận của cây đều phủ một lớp long mịn.",
+        "lá": "Lá thường mọc cách, có cuống, có lá kèm. Lá phía dưới chia thùy đến tận cuống, phiến thùy hình mác, nhọn, mép có răng cưa. Lá phía trên đơn hay chia 3 thuỳ.",
+        "hoa": "Cây đực thường gày mảnh hơn cây cái. Hoa đực mọc thành chùy với 5 cánh dài và 5 nhị. Hoa cái mọc thành xim xen lẫn với lá bắc hình lá, đài hoa cái hình mo, bọc lấy bầu hình cầu, 2 bầu nhụy đính đính ở gốc bầu, hình chỉ, dài hơn bầu nhiều, 1 noãn ngược.",
+        "quả": "Quả bế (gọi là chenevis) hình trứng dài 2,53,5mm, đường kính 2,5-3mm, nhẵn, xám nhạt. Hạt có dầu."
+      },
+      "distribution": {
+        "@type": "Phân bố"
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác"
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Quả (chenevis) chứa 30% chất dầu có giá trị trong công nghiệp sơn vì bản thân dầu dưới tác dụng của không khí tạo thành màng rắn chắc bảo vệ gỗ và kim loại. thành phần dầu chủ yếu gồm các glyxerit của những axit linoleic và linolenic. Trong khô dầu chứa 30% chất đạm, 10% chất béo dùng làm thức ăn gia súc. Trong chất đạm của khô dầu có chủ yếu chất globulin mang tên edestin.",
+        "gồm chất": "Ngọn mang hoa cái thường có 5-10% độ ẩm, 12-14% chất vô cơ (gồm chủ yếu là oxalate canxi trong cây), ít tinh dầu với thành phần gồm những cacbua tecpenic, và một chất sesquitecpen mang ten cannabin, ngoài ra còn thấy cholin, trigonellin.",
+        "Các hợp chất": "Hoạt chất của ngọn mang hoa cái là một chất nhựa (resin) với tỷ lệ thay đổi tùy theo cách chế biến thu hái và nguồn gốc địa lý. Theo Paris và du Merac 1947, Dehay 1961 và Herisset 1965 thì tỷ lệ nhựa trong những dược liệu của Ấn Độ là 10-20% (chất chara thô chứa tới 30%) trong khi đó những ngọn thu ở những cây ở châu Âu thường chỉ dưới 5%, có khi chỉ 1-2%.",
+        "triết xuất": "Nhựa này tan trong cồn cao độ, trong ête clorofoc và đặc biệt hãn hữu trong ête dầu hoả.",
+        "đã nghiên cứu": "Thành phần hoá học của nhựa được tiến hành nghiên cứu từ cuối thế kỷ 19 nhưng mới đạt những tiến bộ vào nắm940 nhờ những công trình nghiên cứu của cahn, Told và cộng sự ở Anh về gai dầu của Ấn Độ và những công trình của Adams và cộng sự ở Mỹ về chất marihuana. Người ta đã chiết được những hợp chất không chứa nitơ có tính chất phenol.",
+        "dấu hiệu đặc trưng": "Cấu trúc cũng đã được xác định. Đó là:  Cannabinol vào năm 1900 mới chiết được dưới dạng dầu, đến năm 1933 dưới dạng axetat kết tinh (Cahn, 1933). Bằng con đường tổng hợp người ta đã xác định được cấu trúc: với một nhân amyl-resorxinol và một nhân p-xymen. Một hợp chất diphenol, Cannabidiol được Adams tách dưới dạng dinitribenzoat tinh thể (1940). Chất này có nhiều hơn trong gai dầu Mỹ, ít hơn trong gai dầu Ấn Độ. Cả hai chất đều không có tác dụng gây tê mê của nhựa. Nhưng khi người ta tìm cách tổng hợp cannabinol thì người ta thu được chết tetrahydrocannabinol có những tác dụng đặc hiệu của haschich. Nhiều chất tương tự cũng đã được tổng hợp. Và có nhiều đồng phân của tetra-hy-dro-cannabinol khác nhau do năng suất quay cực và vị trí của nối kép trong nhân p-xymen. Người ta cho rằng trong nhựa thiên nhiên phải có một hỗn hợp đồng phân có tác dụng sinh lý. Năm 1958, các nhà nghiên cứu Đức và Séc còn chiết được từ nhựa gai dầu châu Âu một chất mới gọi là axit cannabidiolic trong điều kiện chiết ở nhiệt độ thấp và trong áp lực giảm, vì chất này rất dễ bị khử cacboxy để cho cannabidiol."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị"
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Cây gai dầu hiện nay chủ yếu được trồng ở một số vùng miền núi nước ta để lấy sợi. Một số ít nơi dùng quả và hạt để ép dầu, dùng chế sơn, khô dầu dùng làm thức ăn gia cúc. Toàn quả còn dùng nuôi chim.",
+        "được_dùng": "Về mục đích làm thuốc, nhựa gai dầu được dùng từ lâu đời làm thuốc bôi ngoài với tính chất sát trùng và giảm đau.",
+        "làm thuốc": "Trong y học hiên đại, nhựa gai dầu được dùng dưới dạng cồn cao và thuốc để uống trong làm thuốc giảm đau, dịu đau (nhất là trong trường hợp đau dạ dày, co giật trong uốn ván, hen suyễn, một số bệnh thần kinh), dùng ngoài để làm thuốc sát trùng, chữa bỏng. Tuy nhiên người ta thấy thuốc để lâu kém hiệu lực và tác dụng cũng không đồng nhất.",
+        "chữa": "Chú ý: Những thuốc chế từ nhựa gai dầu đều phải theo chế độ những thuốc độc gây nghiện."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "Nguồn gốc ở các nước miền trung châu Á, bắt đầu được trồng ở Ấn Độ và Trung Quốc để lấy sợi sau lan rộng đi nhiều nước vùng ôn đới các nước châu Á, châu Âu, (Liên Xô cũ, Ba Lan, Rumani, Hungari, Séc, Slovakia, Pháp, Bỉ…), châu Mỹ. Để lấy sợi người ta thu cây vào khi cây bắt đầu ra hoa. Ngâm cây vào nước trong vòng 10-20 ngày, phơi khô rồi tách sợi ra. Muốn thu quả (chenevis) chờ cho quả chin.",
+        "làm thuốc": "Gai cho nhựa thường trồng ở những vùng nóng và khô của Ấn Độ, Iran, Apganistan, Ai Cập, nam châu Phi, Mêhicô, ở đây người ta chỉ để những cây cái. Lấy ít hoa cây đực rũ mạnh trên những hoa cây cái để đảm bảo thụ phấn. Tại những nước này người ta thu những ngọn mang hoa và quả của cây cái. Tùy theo từng nước, người ta thu hái có hơi khác nhau và được những vị thuốc cũng mang tên khác nhau. Ví dụ tại Ấn Độ người ta chia thành:  Bhang gồm hỗn hợp những ngọn mang hoa đực và cái. Cứ dùng như vậy mà hút hay trộn với thuốc lá, thuốc phiện mà hút. Có khi được ngâm vào bơ và ăn dưới dạng nước canh, bánh ngọt cùng với một số vị thuốc khác. Ganjah gồm những ngọn mang hoa cái đã thụ phấn, dính đầy chất nhựa, cuộn thành cuộn hình thoi (round ganjah) hay khối dẹt (flat ganfah). Thường được nhân dân dùng hút trong những điếu đặc biệt. Chara gồm nhựa thu hoạch tại những khu vực trồng: Người thu hoạch mặc áo da đi qua những cây trồng cho nhựa dính vào, hoặc người ta ngả cây đem về cắt lấy ngọn có hoa và nhựa rồi vê bằng tay. Loại này rất mạnh.  Tại Ai Cập và các nước ả Rập người ta chế thành haschich gần giống chất ganjah, nhưng cuộn thành từng thỏi thường trộn thêm với mật ong, bơ, chất thơm khác và những lá cây họ Cà (Solanaceae).  Tại bắc châu Phi như ở Tuynidi người ta chế thành takrouri là ngọn cây cái mang hoa thái nhỏ, rây đều và gói thành gói và chất kif được dùng ở Angiêri.  Tại Thổ Nhĩ Kỳ người ta chế dạng cao nước cô đặc gọi là hafioum thường trộn với những cây có chất thơm hay có tác dụng cường dương.  Tại Mêhicô và các bang miền nam nước Mỹ người ta hút thứ thuốc mang tên marihuana gồm ngọn cây trộn với thuốc lá.  Tại những vùng khí hậu mát lạnh ở các tỉnh miền núi nước ta như Lào Cai, Yên Bái, Thanh Hoá, Nghệ An, Hà Tĩnh đồng bào dân tộc ít người thường trồng cây gai dầu chủ yếu để lấy sợi dệt loại vải dày và bền.  Một số nơi thu quả về ép dầu. Ở miền Nam (Đà Lạt) dùng với tên cần sa làm thuốc ma túy và nuôi lợn cho béo."
+      },
+      "caution": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

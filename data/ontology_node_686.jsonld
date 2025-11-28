@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thuỷ tiên",
+      "ten_khac": "Thuỷ tiên",
+      "ten_khoa_hoc": "Narcissus tazetta L.",
+      "ma_taxon": "56027",
+      "ho": "Amaryllidaceae (Loa kèn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, có thân rễ to, hình trứng tròn.",
+      "lá": "Lá dẹp, dài 30-45cm chóp không nhọn, hơi có phấn xanh.",
+      "hoa": "Hoa xếp 4-8 cái tán ở ngọn một cán hoa trần và bao bọc bởi một mo mỏng trước khi nở. Hoa thơm, đường kính đến 1cm, bao hoa màu trắng, có ống dài khoảng 2cm, mang các thùy hình trứng ngược cong ra bên ngoài. Tràng phụ màu vàng hình chuông.",
+      "mùa hoa": "Mùa hoa thường vào mùa rét, trong những ngày tết âm lịch ở miền Bắc nước ta."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ thủy tiên có chứa khoảng 0,06% narcissin được hai tác giả Nhật Bản Asahina và Sugii chứng minh là cùng một cấu trúc và tinh chất với lycorin (chiết được ở một loài lan thoát bào hay tỏi trời Lyeoris radiata Herb., Lycoris aurea Herb, và L. squamigera Maxim, tỏi trời hoa hồng, tỏi trời hoa vàng và tỏi trời hoa tím).",
+      "gồm chất": "Narcissin hay lycorin C16H17O4 là một ancaloit có tinh thể hình lăng trụ, chảy ở 275oC, αD260 =129° (cồn), tan trong nước, trong cồn, trong axit axêtic.",
+      "Các hợp chất": "Ngoài ra còn một ancaloit khác gọi là tezettin C18H21O5N cũng có tinh thể hình lăng trụ nhỏ, chay ở 210-2110C, (α) D26°= +150oC (Clorofoc)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ thủy tiên có tác dụng mạnh và độc. Khi dùng phải hết sức thận trọng có thầy thuốc chuyên môn theo dõi.",
+      "được_dùng": "Người ta dùng thân rễ thủy tiên để gây nôn và làm thuốc long đờm. Có khi thân rễ thủy tiên được dùng phối hợp với rễ cây cà độc dược để trị hen suyễn, ho gà.",
+      "làm thuốc": "Trong vị lượng đồng căn người ta dùng cồn ra hoa thuốc điều chế từ cây thủy tiên đang ra hoa để chữa ỉa chảy, nôn mửa, các bệnh tim và phế quản.",
+      "chữa": "Dùng ngoài để chữa ung thũng: Giã nát thân rễ đắp lên các nơi sưng đau.",
+      "sắc uống": "Liều dùng hằng ngày: Ngày uống 1-3g thân rễ khô dưới dạng thuốc sắc hay thuốc hãm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hoa thủy tiên vốn nguồn gốc nhập từ Nhật Bản và Trung Quốc, thường trồng vào dịp tết lạm cảnh vì hoa đẹp và thơm. Còn thấy mọc và trồng ở các nước ven Địa Trung Hải, mộc số nước châu Phi, châu Á khác.",
+      "làm thuốc": "Chủ yếu làm cảnh. Một số ít nơi dùng thân rễ làm thuốc nhưng vị thuốc có độc, dùng phải hết sức cẩn thận.",
+      "có tác dụng": "Ở nước ta, những năm gần đây ít người chơi thủy tiên và cũng ít dùng thân rễ và thân thủy tiên làm thuốc."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Long đởm thảo",
+      "ten_khac": "Long đởm thảo",
+      "ten_khoa_hoc": "Gentiana scabra Bunge",
+      "ma_taxon": "508514",
+      "ho": "Gentianaceae (Long đởm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây long đởm là một loại cỏ sống lâu năm, cao 35-60cm.",
+      "rễ": "Thân rễ ngắn, rễ nhiều, đường kính 2-3mm, vỏ ngoài màu vàng nhạt.",
+      "thân": "thân mọc đứng, đơn độc hay 2-3 cành, đốt thường ngắn hơn so với chiều dài của lá.",
+      "lá": "Lá mọc đối không cuống, lá phía dưới thân nhỏ, phía trên to rộng hơn, dài từ 3-8cm, rộng từ 0,4-3cm.",
+      "hoa": "Hoa hình cuống màu lam nhạt hay sẫm, mọc thành chùm không cuống ở đầu cành hoặc kẽ những lá phía trên.",
+      "mùa hoa": "Mùa ra hoa tháng 9-10.",
+      "mùa quả": "Mùa ra\u00a0 quả tháng 10."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong long đởm có một glucozit đắng chừng 2% gọi là gentiopicrin C16H20O9 và một chất đường gọi là gentianoza C18H32O16 chừng 4%.",
+      "thủy phân": "Thuỷ phân gentiopicrin ta sẽ được gentiogenin C10H10O4 và glucoza",
+      "gồm chất": "Gentianoza gồm hai phân tử glucoza và một phân tử fructoza"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ, long đởm vị đắng tính hàn, vào 3 kinh can, đởm và bàng quang. Có tác dụng tả can đảm thực hoả, thanh hạ tiêu thấp nhiệt, có tính chất thu sáp. Những người tì vị hư nhược, đi tả và không thấp nhiệt, không thực hoả thì không dùng được",
+      "làm thuốc": "Long đởm thảo được dùng làm thuốc giúp sự tiêu hoá, thuốc bổ đắng; làm cho đại tiện dễ dàng mà không gây ỉa lỏng.",
+      "chữa": "Ngoài công dụng giúp sự tiêu hoá, long đởm thảo còn tác dụng chữa sốt, đau mắt đỏ nhức, an thần kinh",
+      "được_dùng": "Long đởm thảo 2g, đại hoàng 1g, hoàng bá 1g, nước 200ml sắc còn 100ml. chia 3 lần uống trong ngày, 15 phút trước bữa ăn để làm thuốc giúp sự tiêu hoá ăn uống không tiêu",
+      "sắc uống": "Long đởm thảo 0,5g; hoàng bá 0,5g; sinh khương sấy khô 0,3g; quế chi 0,3g; hồi hương 0,3g; kê nội kim 0,6g; sơn tra sao cháy 1g. tất cả tán bột trộn đều. chia 3 lần uống trong ngày, chữa đau dạ dày, ăn uống không tiêu, đầy bụng (theo Hoà hán dược dụng nghiệm phương).",
+      "có tác dụng": "Ngoài vị long đởm kể trên, trong đông y còn dùng nhiều loại long đởm khác, những vị thuốc Gần giống và gồm những rễ nhỏ. Nhưng trong tây y lại dùng một loại khác (Gentiana lutea L), có hoa màu vàng, rễ to hơn, thái thành từng miếng mỏng, có người dịch nhầm là khổ sâm vì là vị thuốc bổ mà đắng. Tất cả những cây này đều chưa thấy ở nước ta."
+    },
+    {
+      "@type": "Cách dùng",
+      "phơi khô": "Hiện nay vẫn phải nhập của Trung Quốc. Tại Trung Quốc cây này mọc ở Hắc Long Giang, Phúc Kiến, Quảng Đông. Qua sự phân bố ở Trung Quốc ta có thể chú ý tìm ở Lạng Sơn, Cao Bằng, Quảng Ninh. Thu hái vào mùa thu hoặc xuân, mùa thu tốt nhất. hái về rửa sạch đất cát phơi khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

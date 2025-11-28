@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chỉ xác",
+      "ten_khac": "Chỉ xác, Chỉ thực, Xuyên chỉ xác",
+      "ten_khoa_hoc": "Citrus hystrix DC.",
+      "ma_taxon": "123741",
+      "ho": "Rutaceae (Cam)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ nhỏ, cao 2 – 10m.",
+      "thân": "Thân nhẵn. không gai. hoặc có gai ngắn, thẳng.",
+      "lá": "Lá mọc so le, hình trái xoan, phiến dai, gốc tròn, đầu tù có khi lõm, hơi có răng ở gần đầu lá, cuống lá có cánh rộng, có khi to bằng phiến lá, hai mặt nhẵn, mặt trên bóng.",
+      "hoa": "Cụm hoa là một chùm mọc ở kẽ lá, gồm 6 – 8 hoa nhỏ, màu trắng hoặc vàng nhạt, có 5 lá dài,5 cánh hoa, 20 nhị.",
+      "quả": "Quả hìոh cầu hoặc hìոh trứng, có núm, vỏ ngoài sần sùi, khi chín màu vàng nhạt, ruột màu vàng lục rất chua.",
+      "mùa hoa": "tháng 2 – 4",
+      "mùa quả": "tháng 5 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chỉ xác có nguồn gốc từ vùng nhiệt đới Ấn Độ – Malaysia, sau lan rộng ra nhiều nước Đông Nam Á khác, trong đó có Việt Nam và cả ở Nam Trung Quốc. Ở Việt Nam, cây được trồng và còn thấy mọc hoang dại (Võ Văn Chi, 1997). Cây trồng rải rác ở vùng đồng bằng và trung du các tỉnh Hà Nam, Ninh Bình, Thanh Hóa, Nghệ An, Hà Tĩnh và một số nơi khác. Chỉ xác thuộc loại cây gỗ nhỏ ưa ẩm và ưa sáng. Rụng lá mùa đông, ra lá non và hoa vào giữa mùa xuân. Một số đặc điểm sinh học khác của cây thường tương tự như các loài cây có múi khác cùng chi. Tuy nhiên mức độ đa dạng và vùng trồng của cây chỉ xác kém phong phú hơn các loại cam, chanh, quít, bưởi.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hà Nam"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thanh Hóa"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hà Tĩnh"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Chỉ xác là quả, chưa chín, có đường kính 3 – 4 cm, bổ đôi đã phơi hay sấy khô ở nhiệt độ thấp 40-50°C, Chỉ thực là quả non đã phơi hay sấy khô, thu hái từ những quả có đường kính trên 1 cm, quả nhỏ hơn để nguyên. Theo Dược điển Trung Quốc 1997 (bản in tiếng Anh), chỉ xác và chỉ thực đều lấy từ loài Citrus aurantium L."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chỉ thực có alcaloid, glycosid, saponin, chỉ xác có naringin methyl hesperidin. Cây chỉ xác mọc ở Philippin có vỏ quả chứa 4% tinh dầu trong đó thành phân chính là D – citral, lá chứa 0,08% tinh dầu. Với Cây mọc ở Ấn Độ, νỏ quả chứa 0,7% tinh dầu. Trong đó thành phần chính là D – citromelal. Sato Akiyoshi và CS, 1990 đã xác định (-) – Citromelal là thành phần chính của tinh dầu lá (81%) và cành (78,64%). Vỏ quả chứa tinh dầu với 57 thành phần, trong đó có 23,64% (-) – citronellall; 25,93% β – pimen, 20,36% Sabinen. Dịch chiết từ nước quả chứa 39,50% β – pinen và 17,55% terpinen – 4 — ol. Còn dịch chiết từ vỏ quả chứa 31,54% β – pinen; 15.57%. Sabinen; 16,80% citronelal (СА 113 210353v)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Chỉ xác có vị the, chua, đắng, mùi thơm, tính hơi hàn, vào kinh tỳ, vị, có tác dụng tiêu tích trệ, hạ khí. thông trường vị, trừ đờm, tiêu thực (sao giòn), cầm máu (sao tồn tính)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả: chữa thần kinh dễ bị kích thích, đánh trống ngực, nuối hơi, bệnh thần kinh gây mất ngủ, trần trọc ban đêm, động kinh, đau nửa đầu, ăn uống không tiêu. đầy hơi, tích trệ, ho đờm, tiểu tiện khó. Ngày 6 – 12g, có thể hơn, dưới dạng thuốc sắc bay ngâm rượu.",
+      "làm thuốc": "Hoa chữa bệnh co thắt và làm thuốc an thần gây ngủ nhẹ. Dùng khoảng 1 thìa súp hoa tươi, hãm nước sôi trong 10 pհút, rồi uống. Hoa tươi đem cất sẽ được  tinh dầu và nước cất hoa được dùng làm hương liệu và làm thơm thuốc.",
+      "được_dùng": "Lá thuốc dễ tiêu hóa, dùng 3 – 4 lá hãm với nước sôi trong 15 phút rồi uống. Dịch quả tươi; chữa bệnh chảy máu chân răng.",
+      "chữa": "Chú ý: Người có thai, gầy yếu quá, tỳ vị hư hàn mà kհôոց có thấp và tích trệ, không nên dùng chỉ xác."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa táo bón: Chỉ xác, bồ kết, lượng bằng nhau. Hai vị phơi khô, tán nhỏ làm thành viên bằng hạt ngô. Ngày uống 10 viên vào buổi tối trước khi đi ngủ.",
+      "sắc uống": "Chữa đại tiện không thông, nôn nghén: Chỉ xác, mộc thông, mỗi vị 8g sắc uống.",
+      "uống": "Chữa trẻ em can tích, hôi miệng, bụng to căng, thường hay đau bụng, phân thối khẳm: Chỉ thực 8g, nghệ đen 6g, quả giun 6g. Sắc uống, hoặc sao, tán bột, uống mỗi lần 5 – 6g với nước sắc hạt muồng sao.",
+      "sắc chia 3 lần uống mỗi ngày": "Chữa dạ dày, gan kém hoạt động, khó đi ngoài: Chỉ thực 20g, bạch truật 6g. Sắc chia 3 lần uống mỗi ngày: “Chỉ truật thang” (bài thuốc của Trương Trọng Cảnh)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

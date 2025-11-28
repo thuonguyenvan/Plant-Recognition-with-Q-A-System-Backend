@@ -1,0 +1,315 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bung lai",
+      "ten_khac": "Cây mé",
+      "ten_khoa_hoc": "Microcos paniculata L.",
+      "ma_taxon": "905376",
+      "ho": "Đay (Tiliaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hoặc cây nhỡ, cao 2 – 6m.",
+      "thân": "Thân hình trụ, phân cành nhiều, cành non có ít lông, màu lục nhạt, cành già nhẵn, màu nâu nhạt, có rãnh dọc.",
+      "lá": "Lá mọc so le, hình bầu dục – thuôn, dài 15 cm, rộng 5 – 7 cm, gốc tròn, đầu có mũi nhọn ngắn, mép có răng cưa rất nông, mặt trên có lông ở gần, mặt dưới có ít lông hình sao, gân gốc 5; lá kèm nguyên hoặc xẻ đôi, có lông.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chùy, dài 7- 10 cm, có lông mềm; lá bắc nhỏ 4 – 6; hoa nhiều có cuống ngắn hoặc gần như không cuống: đài 5 răng hẹp, có lông, tràng 5 cánh ngắn bằng nửa lá đài, có lông; nhị rất nhiều, chỉ nhị có lông phần dưới, bầu nhẵn, 3 ô.",
+      "quả": "Quả hơi nạc, hình cầu hoặc hình quả lê, dài 1 cm, khi chín màu đen, hạt 1 – 2.",
+      "mùa hoa": "tháng 4",
+      "mùa quả": "tháng 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Microcos L. có 2 loài ở Việt Nam, trong đó có loài bung lai thường gặp nhiều hơn. Bung lai phân bố rải rác khắp các tỉnh thuộc vùng núi và trung du gồm Lạng Sơn, Cao Bằng, Quảng Ninh, Yên Bái, Tuyên Quang, Vĩnh Phúc, Bắc Giang, Hoà Bình, Thanh Hoá, Nghệ An, Quảng Bình, Thừa Thiên Huế, Quảng Nam, Quảng Ngãi, Kon Tum,… Bung lai là cây ưa sáng, thường mọc trong các quần hệ thứ sinh, nhất là trên đất sau nương rẫy. Là loại cây gỗ nhỏ mọc nhanh, sau 2 năm tuổi cây đã bắt đầu có hoa quả nhiều, tái sinh tự nhiên tốt từ hạt và từ các phần thân, gốc còn lại sau khi chặt. Bung lại có thể tồn tại qua cháy rừng do cây có vỏ dày.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Vĩnh Phúc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên Huế"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ngãi"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây bung lai có 5 flavonoid được nhận dạng là isochamnetin, kaempferol, quercetin, nodifloretin – 1 – 0 – rhamnosyl glucosid và 5, 6, 8, 4′ – tetrahydroxy – flavon – 7-O- rhamnosid (CA 120: 253138r)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bung lai có vị hơi chua chát, tính mát, có tác dụng trừ thấp nhiệt, giải nắng nóng, tiêu tích trệ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá bung lại được dùng chữa cảm sốt, cảm nắng, viêm gan vàng da, ăn kém tiêu, trướng bụng, tiêu chảy. Ngày dùng 20 – 30g lá khô sắc uống. Nhân dân dùng lá nấu nước uống thay nước chè để giải khát và dùng quả ăn để tẩy giun. Ở Trung Quốc, lá bung lai được dùng trị chứng phù thũng vàng da, tiêu nhiệt độc, giải độc, rắn cắn, nấu nước uống trị tích thực. Ở Ấn Độ, bung lai trị tiêu hoá kém, sốt, lỵ, loét ở môi, eczema và ngứa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

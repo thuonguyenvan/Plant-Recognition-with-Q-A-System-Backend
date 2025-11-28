@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Trương quân (Trung quân)",
+      "ten_khac": "Trương quân hoa nhỏ, Trung quân lợp nhà",
+      "ten_khoa_hoc": "Ancistrocladus tectorius (Lour.) Merr.",
+      "ma_taxon": "427903",
+      "ho": "Ancistrocladaceae (Trung quân)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Trương Quân là một loại cây thân leo bụi, có thể dài từ 4 đến 10 mét. Khi còn non, cây thường có dạng bụi thẳng đứng. Các cành của cây có móc cong hình vòng, không có lông.",
+      "lá": "Lá cây thường mọc tập trung ở đầu cành, có dạng bầu dục thuôn dài, hình trứng ngược hoặc mũi mác ngược, dài khoảng 7-10 cm, rộng 3-7 cm. Đầu lá tròn hoặc hơi nhọn, gốc lá thuôn hẹp dần xuống dưới. Mép lá nguyên, hai mặt lá đều không có lông nhưng phủ một lớp vảy trắng nhỏ và các đốm nhỏ. Gân chính lõm xuống ở mặt trên và nổi rõ ở mặt dưới, trong khi gân phụ và gân lưới nhỏ, hơi nổi trên mặt dưới. Lá thường không có cuống, khi rụng để lại dấu vết hình yên ngựa trên cành. Lá kèm nhỏ và sớm rụng.",
+      "hoa": "Hoa mọc thành chùm hình nón ở đầu cành hoặc bên cành, phân nhánh đối xứng theo hình hai nhánh chẻ đôi. Mỗi chùm hoa có thể gồm vài bông hoặc rất nhiều hoa. Mỗi hoa có đường kính khoảng 7-8 mm, không có cuống.",
+      "quả": "Quả hạch có màu đỏ, hình nón ngược, đường kính 6-9 mm, dính liền với ống đài hoa. Các thùy đài hoa lớn lên thành cánh, có hình trứng ngược dạng thìa, không đều nhau. Cánh lớn nhất dài tới 4,5 cm, rộng 1,6 cm, đầu tròn, có vân nổi rõ. Cánh nhỏ nhất dài 1,5-2 cm, rộng 5-7 mm, cũng có vân. Hạt có dạng gần tròn.",
+      "lá": "Hình trứng, đầu nhọn, mép mỏng, có tua rua, mặt trong phần gốc dày lên có màu nâu.",
+      "đầu": "Gồm 5 thùy, phần gốc hợp lại tạo thành ống ngắn. Các thùy có dạng thuôn dài, hơi không đều, dài 4-5 mm, đầu tròn, mép có lông mịn. Mặt trong gần gốc có phủ vảy trắng tròn nhỏ, mặt ngoài có 1-3 tuyến nhỏ lõm xuống như chén.",
+      "cánh": "Dày, có hình bầu dục xiên, đầu nhọn và thường cuộn vào trong, phần gốc hợp lại.",
+      "nhị": "Có 10 nhị, chia thành 5 nhị dài và 5 nhị ngắn, chỉ nhị rộng ở phần gốc.",
+      "bầu": "Gần như bầu dưới, có 3 lá noãn hợp lại tạo thành 1 ngăn. Vòi nhụy ngắn, thẳng đứng, đầu nhụy chia thành 3 phần.",
+      "mùa hoa": "từ tháng 4 đến tháng 6",
+      "mùa quả": "từ tháng 6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây chỉ có ở các khu vực khác nhau của đảo Hải Nam, Trung Quốc. Ngoài ra, nó cũng phân bố ở khu vực Đông Nam Á (Trung Nam bán đảo) và kéo dài đến Ấn Độ.",
+      "thường_mọc": "Cây mọc trong rừng rậm trên sườn núi, thung lũng hoặc rừng vùng núi, ở độ cao khoảng 500-700 mét so với mực nước biển.",
+      "Đặc điểm sinh trưởng": "Cây của miền Ðông Dương, mọc hoang ở miền rừng núi khắp nước ta. Thu hái dây và rễ quanh năm, rửa sạch, thái nhỏ, phơi khô."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Caulis Ancistrocladi Tectorii."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây Trương quân có chứa các hợp chất kháng khuẩn, đặc biệt là đối với vi khuẩn tụ cầu vàng, một loại vi khuẩn có thể gây nhiễm trùng ở người. Điều này mở ra tiềm năng ứng dụng của cây trong y học, đặc biệt là trong việc phát triển thuốc kháng khuẩn tự nhiên.",
+      "triết xuất": "Một nghiên cứu tìm kiếm các hợp chất có khả năng kháng khuẩn từ cành của cây Trương quân. Sử dụng các kỹ thuật sắc ký như sắc ký cột silica gel, sắc ký cột Sephadex LH-20 và sắc ký lỏng hiệu năng cao (HPLC) để phân lập các hợp chất từ chiết xuất ethanol 95% của cành cây.",
+      "đã nghiên cứu": "Đã phân lập được 10 hợp chất và xác định chúng dựa trên đặc điểm vật lý và dữ liệu phổ.",
+      "Các hợp chất": "Episyringaresinol (1), syringaresinol (2), pinoresinol (3), zhebeiresinol (4), 4-hydroxy-3-methoxyphenethyl alcohol (5), ancistrocline (6), hamatine (7), ancistrocladine (8), ancistrotectorine (9), và β-daucosterol (10).",
+      "tìm thấy": "5 hợp chất (1-5) lần đầu tiên được phân lập từ chi Ancistrocladus.",
+      "có hoạt chất": "4 hợp chất (1, 3, 4, 6) có tác dụng ức chế vi khuẩn Staphylococcus aureus (tụ cầu vàng) theo phương pháp khuếch tán trên đĩa giấy."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo y học cổ truyền, trương quân có vị đắng, hơi chát, tính bình, không độc. Loại dược liệu này có tác dụng lưu thông khí huyết, giảm đau, trị phong thấp, làm mạnh gân xương, thanh nhiệt, tiêu đờm và giải độc.",
+      "có tác dụng": "Giảm đau nhức xương khớp, đau lưng, phong thấp",
+      "chữa": "Hỗ trợ điều trị tê bì chân tay, mỏi cơ, đặc biệt hữu ích cho phụ nữ sau sinh hoặc người suy nhược",
+      "làm thuốc": "Giúp cơ thể hồi phục khi bị mệt mỏi, đau nhức toàn thân",
+      "chữa": "Điều trị đau bụng do lỵ, hỗ trợ chữa sốt rét",
+      "được_dùng": "Dùng 8-16g/ngày, có thể sắc nước uống, pha hãm như trà hoặc ngâm rượu để dùng dần.",
+      "được_dùng": "Dùng riêng hoặc phối hợp với Ðỗ trọng, Sâm bố chính, rễ Nhàu với liều lượng bằng nhau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Trị đau lưng, đau xương khớp và tê mỏi thần kinh ngoại biên",
+      "thành phần": "Trương quân: 12-16g Cốt toái bổ: 12-16g Cẩu tích: 12-16g Kê huyết đằng: 12-16g Tang chi: 12-16g Tang ký sinh: 12-16g",
+      "sắc uống": "Sắc uống ngày 1 thang, uống liên tục trong 2-3 tuần",
+      "được_dùng": "Trị sốt rét",
+      "thành phần": "Trương quân (rễ, thân): 12g Rễ cây thường sơn (Radix Dichroae febrifugae): 12g Thảo quả: 4g",
+      "sắc uống": "Sắc uống hoặc làm thuốc hoàn, ngày 1 thang, uống liên tục 3-4 tuần đến khi hết triệu chứng.",
+      "được_dùng": "Trị lỵ",
+      "thành phần": "Trương quân (rễ, thân): 10-12g Cỏ sữa nhỏ lá hoặc lớn lá: 10-12g Nam mộc hương: 16g",
+      "sắc uống": "Sắc uống ngày 1 thang, dùng liên tục 2-3 tuần.",
+      "được_dùng": "Dùng cho phụ nữ sau sinh: Lấy rễ và thân trương quân, thái mỏng, sao vàng, sắc uống ngày 12-16g, dùng trong vài tuần.",
+      "được_dùng": "Trị đau xương cốt, đau mỏi cơ nhục và bồi bổ cơ thể",
+      "thành phần": "Rễ và dây trương quân: 200g Vỏ cây đỗ trọng nam: 200g Rễ nhàu: 200g Kê huyết đằng: 100g Huyết giác: 100g Sâm bố chính: 100g Quy bản: 100g Trần bì: 20g",
+      "cách dùng": "Ngâm với 3-4 lít rượu 30-45 độ trong 3-4 tuần. Uống ngày 2-3 lần, mỗi lần 30-40ml trước bữa ăn."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

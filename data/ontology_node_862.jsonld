@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mua đỏ",
+      "ten_khac": "Mua đỏ, Mua hoa đỏ",
+      "ten_khoa_hoc": "Oxyspora paniculata (D.Don) DC.",
+      "ma_taxon": "166005",
+      "ho": "Melastomaceae (Mua)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1 – 2m, có khi hơn.",
+      "thân": "Thân cành hình trụ có lông tơ rải rác, khi non màu hồng, sau màu đỏ.",
+      "lá": "Lá mọc đối, hình bầu dục hoặc mác thuôn, dài 8 – 17cm, rộng 1,5 – 5cm, gốc tròn, đầu thuôn nhọn, hai mặt có lông cứng, gân lá 5 hằn rõ ở mặt trên và nổi lên ở mặt dưới, có màu đỏ máu; cuống lá dài 1 – 2cm, có màu đỏ, lông mềm dày.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành xim phân đôi, rất ngắn; lá bắc to, có lông ngắn ở lưng và lông mi ở mép; hoa to 3 – 5, màu hồng hoặc tím; đài màu lục phủ lông ngắn, có 5 – 7 răng hình tam giác hoặc kinh mác hẹp; tràng 5-7 cánh hình thìa, nhẵn; nhị 10-14 có bao phấn màu đỏ ở những nhị to và màu hồng ở những nhị nhỏ, trung đới màu vàng cam, có 2 tai nhỏ ở gốc, chỉ nhị màu vàng; bầu hình cầu và hàn liền ở nửa dưới.",
+      "quả": "Quả mọng, dai, có lông dài.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 5-7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Mua đỏ phân bố ở vùng nhiệt đới châu Á, gồm Mianma, Thái Lan, Lào, Campuchia, Malaysia, Indonesia (Sumatra, Borneo), Nam Trung Quốc; đảo Moluccas, Lesser Sunda và Việt Nam. Ở Việt Nam, mua đỏ phân bố rộng rãi khắp các tỉnh miền núi, đôi khi thấy cả ở vùng đồi trung du. Cây ưa ẩm, ưa sáng. Khi còn nhỏ chịu bóng; thường mọc lẫn với một số cây bụi hay cây gỗ nhỏ ở ven rừng ẩm, rừng thứ sinh hoặc trong các trảng cây bụi ưa sáng trên đất nương rẫy đã bỏ hoang. Độ cao phân bố từ 200 đến 1500m.  Mua đỏ có thể sống được trên nhiều loại đất, tuy nhiên so với một vài loài mua khác như M. candidum D.Don; M. dodecandrum. Lour., đất có mua đỏ còn màu mỡ và ít chua hơn. Mua đỏ ra hoa quả gần như suốt mùa mưa ẩm. Hoa thường thụ phấn nhờ côn trùng, gió hoặc tự thụ phấn; quả chín rụng xuống đất hoặc chim ăn, tạo điều kiện cho hạt phát tán đi xa."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây mua đỏ có flavonoid, hợp chất phenol, acid amin, đường (Trung dược từ hải I, 1993)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ mua đỏ có vị đắng, có tác dụng kích thích, tăng trương lực. Lá và quả có tác dụng cầm máu, lợi liêu hóa và trừ lỵ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây mua đỏ được dùng trị tiêu chảy, lỵ và khí hư do tác dụng làm sàn. Dùng ngoài, lá tươi giã đắp chữa vết thương, sưng tấy. Ở Campuchia, rễ được dùng trị bệnh về gan, vàng da, nước hãm rễ dùng uống trị đau đầu, choáng váng. Ở Trung Quốc, người ta dùng toàn cây, nhất là rễ trị tiêu chảy, đại tiện ra phân đen, rong kinh, vết thương chảy máu. Với liều 30g rễ khô (90g rễ tươi) sắc uống. Giã lá khô thành bột dùng ngoài để cầm máu vết thương.  Trong dân gian lá mua đỏ chữa mụn nhọt, sâu quảng, sưng khớp, tê thấp và cam tẩu mã, rễ chữa sâu răng. Có thể sắc nước uống hoặc dùng lá giã đắp hay tán thành bột đắp.  Bài thuốc có mua đỏ:  Chữa tiêu chảy, lỵ cấp tính:\u00a0Mua đỏ (40g, cây tươi) hoặc (20g, cây khô); chỉ xác, mộc thông, hạt muồng (sao), ngưu tất, mỗi vị 12g. Sắc uống ngày một thang.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

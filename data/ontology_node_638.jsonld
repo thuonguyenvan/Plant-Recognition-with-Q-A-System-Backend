@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tía tô",
+      "ten_khac": "Tía tô, Tô ngạch",
+      "ten_khoa_hoc": "Perilla frutescens (L.) Britt",
+      "ma_taxon": "119136",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Tía tô là một loại cỏ mọc hằng năm, thân thẳng đứng có lông.",
+      "lá": "Lá mọc đối, hình trứng, đầu nhọn, mép có răng cưa to; phiến lá dài 4-12cm rộng 2,5-10cm, màu tím hoặc xanh tím, trên có lông màu tím. Ngưòi ta phân biệt thứ tía tô có lá màu tím hung là Perilla ocymoides var. purpurascens và thứ tía tô có lá màu lục, chỉ có gân màu hung (Perilla ocymoides var..bicolor).",
+      "cuống": "Cuống lá ngắn 2-3cm.",
+      "hoa": "Hoa nhỏ, màu trắng hoặc tím nhạt, mọc thành từng chùm ở kẽ lá hay đầu cành, chùm dài 6-20cm.",
+      "quả": "Quả là hạch nhỏ, hình cầu, đường kính 1mm, màu nâu nhạt, có mạng."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong toàn cây tía tô có chứa 0,50% tinh dầu, trong tinh dầu, thành phần chủ yếu là perilla- andehyt C10H14O (55%), limonen (20-30%), CL- pinen và dihydrocumin C10H14O.",
+      "gồm chất": "Chất perilla andehyt có mùi thơm đặc biệt của tía tô, chất perilla andehyt antioxim ngọt gấp 2.000 lần đường, khó tan trong nước, đun nóng sẽ phân giải, có độc, cho nên không dùng làm chất điều vị được, nhưng có người dùng làm ngọt thuốc lá.",
+      "chứa": "Chất màu trong lá tía tô là do este cùa chất xyanin clorit C27H31O16Cl. Ngoài các chất trên, trong tía tô còn chứa adenin C5H5N5 và acginin C6H14N4O2.",
+      "Các hợp chất": "Trong hạt tía tô có 45-50% chất dầu lỏng, màu vàng, mùi và vị của dầu lanh (huilede lin), thuộc loại dầu khô, có chỉ số iôt vào loại cao nhất (206), chỉ số xà phòng 189,6 tỷ trọng 0,930. Hằng năm Nhật Bản và Triều Tiên trước đây sản xuất tới 60.000 tấn dầu này để quét lên dù làm cho dù không thấm nước hoặc quét lên loại giấy không thấm nước."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ tía tô có vị cay, tính ôn, vào hai kinh -phế và tỳ. Có tác dụng phát tán phong hàn, lý khí khoan hung; giải uất, hoá đờm, an thai, giải độc của cua cá. Cành không có tác dụng phát biểu, chỉ có tác dụng lý khí. Dùng chữa ngoại cảm phong hàn, nôn mửa, động thai, ngộ độc cua cá.",
+      "được_dùng": "Thông thường lá tía tô (tố diệp) có tác dụng là cho ra mồ hôi, chữa ho, giúp sự tiêu hoá, giảm đau, giải độc, chữa cảm mạo, còn có tác dụng chữa bị ngộ độc nôn mửa, đau bụng do ăn cua cá.",
+      "làm thuốc": "Cành tía tô (tử tô tử) có tác dụng chữa ho trừ đờm, hen suyễn, tê thấp.",
+      "sắc uống": "Liều dùng hằng ngày: Lá và hạt ngày uống 10g, cành ngày uống 6-20g dưới dạng thuốc sắc.",
+      "có tác dụng": "Dầu hạt tía tô: Ở Ấn Độ, Trung Quốc và Nhật Bản dùng trong kỹ nghệ vẽ trên đồ sứ, thực phẩm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Sâm tô ẩm: Chữa bệnh cảm mạo, sốt, nhức đầu, đau các khớp xương: Lá tía tô, nhân sâm, trần bì, chỉ xác, cát cánh, cam thảo, mộc hương, bán hạ, can khương, tiền hổ mỗi vị 2g, nước 600ml. sắc còn 200ml, chia 3 lần uống trong ngày.",
+      "làm thuốc": "Tử tô giải độc thang: Chữa trúng độc đau bụng do ăn phải cua cá: Lá tía tô l0g, sinh khương 8g, sinh cam thảo 4g, nước 600ml. Sắc còn 200ml, chia 3 lần uống trong ngày, uống khi thuốc còn đang nóng.",
+      "sắc nước uống": "Chữa sưng vú: Tía tô 10g sắc lấy nước uống, bã đắp vào vú.",
+      "giã nát": "Ăn phải cua hay cá mà trúng độc: Giã lá tía tô tươi vắt lấy nước hoặc sắc lá khô (10g khô) uống nóng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

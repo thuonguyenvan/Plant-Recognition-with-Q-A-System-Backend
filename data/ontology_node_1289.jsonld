@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tục tùy tử",
+      "ten_khac": "Thiên kim tử",
+      "ten_khoa_hoc": "Euphorbia lathyris L.",
+      "ma_taxon": "77114",
+      "ho": "Thầu dầu (Euphorbiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống một năm hoặc hai năm, cao 1 – 1,2m.",
+      "rễ": "Rễ cắm sâu, hình trụ.",
+      "thân": "Thân rỗng, màu lục.",
+      "lá": "Lá mọc đối, không cuống, hình bầu dục hoặc mũi mác, gốc hình tim, đầu có mũi nhọn, hai mặt nhẵn, gân giữa khá rõ. Lá ở gần ngọn nhỏ và mọc sít hơn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu ngọn thành tán gồm nhiều nhánh lưỡng phân; hoa nhỏ hình chén; lá bắc 5 hàn liền ở gốc, giữa các lá bắc có tuyến; hoa đực nhiều, chỉ có 1 nhị; hoa cái độc nhất ở đầu một cuống dài, lúc đầu mọc thẳng sau uốn cong; bầu có 3 ô.",
+      "quả": "Quả nang, có 3 mảnh vỏ; hạt 3, hình cầu, màu nâu, nháp, có mồng.",
+      "mùa hoa": "tháng 6 – 7",
+      "mùa quả": "tháng 8 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Tục tuỳ tử có nguồn gốc ở vùng ôn đới ấm phía Bắc. Cây đã từng được nhập nội vào Việt Nam từ những năm 90 của thế kỷ trước. Hạt giống của Trung Quốc đem gieo trồng ở trại thuốc Sa Pa (Viện Dược liệu) đã nảy mầm và sinh trưởng, phát triển tương đối tốt. Hạt gieo đầu mùa xuân, sau 1 năm đã cao khoảng 40 – 45 cm. Cây trồng ở Sa Pa có hiện tượng bán tàn lụi vào mùa đông, nhưng chưa thấy hoa.  Tục tuỳ tử là loại cây tra ẩm, tra sáng và ưa vùng có khí hậu mát quanh năm. Cây có khả năng chịu được nhiệt độ thấp về mùa đông. Nguồn gen này hiện đã bị mất, cần có kế hoạch nhập lại giống để nghiên cứu thêm.",
+      "Bộ phận dùng": "Hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhựa mủ chứa 3, 4 – dihydrophenylatanin Hạt chứa B – sitosterol và 1 – hentriacontan. cuphorbetin, isoeuphorbetin cùng với dẫn chất tetramethyl ether. Dầu hạt chứa một diterpen 3 vòng là 6, 20 – epoxylathyrol dưới dạng phenyl acetat – diacetat. Dầu hạt và nhựa chứa lathyrol diacetat – benzoat và diacetat nicotinat và ingenol 2, 4, 6, 8, 10 – tetradecapentaenoat. Thân chứa hentriacontan, taraxeron, taraxerol và betulin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hạt tục tuỳ vị cay, tính ấm, hơi có độc; vào hai kinh can và thận; có công năng hành thuỷ, phá huyết, tán ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt cây tục tuỳ còn gọi là tục tuỳ tử hoặc thiên kim tử là loại thuốc công hạ mạnh, thường được dùng chữa thủy thũng, trướng mạn, huyết kết làm kinh bế tắc, nên được dùng để thông kinh, trị phụ nữ bế kinh, máu tích ứ. Dùng ngoài lấy bã hạt đắp lên chỗ mẩn ngứa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

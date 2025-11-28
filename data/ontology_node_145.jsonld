@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bình bát",
+      "ten_khac": "Bình bát, cây nê, đào tiên.",
+      "ten_khoa_hoc": "Annona reticulata L.",
+      "ma_taxon": "284506",
+      "ho": "Annonaceae (Na)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 5 – 7m. Cành non có lông, cành già nhẵn.",
+      "lá": "Lá mọc so le, hình mác thuôn, dài 12 – 15 cm, rộng 4 cm, gốc tròn, đầu nhọn, mặt trên nhẵn, bóng, mặt dưới có ít lông tơ, gân lá nổi rõ; cuống lá có lông.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, 2 – 4 hoa màu vàng; đài gồm 3 phiến hình tam giác, mặt ngoài có lông; tràng có 2 vòng, cánh hoa hẹp, 3 cánh ngoài to, dày, có lông tơ. 3 cánh trong nhỏ. nhắn; nhị nhiều, trung đới kéo dài; bầu gồm những lá noãn có lông.",
+      "quả": "Quả kép hình tim, có từng ô 5 góc mờ, khi chín màu vàng hoặc vàng pha đỏ, thịt qủa màu trắng hoặc ngã vàng, ăn được.",
+      "mùa hoa": "tháng 5 – 6",
+      "mùa quả": "tháng 7- 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bình bát có nguồn gốc từ vùng Tây Ấn Độ; được trồng rải rác khắp các nước vùng Nam Á và Đông Nam Á, bao gồm Ấn Độ, XriLanca, Thái Lan, Campuchia, Lào và Việt Nam. Ở Việt Nam, bình bát được trồng để lấy quả ở các tỉnh đồng bằng Nam Bộ và Nam Trung Bộ.  Bình bát là loại cây bụi hoặc gỗ nhỏ, ưa sáng và thích nghi cao với những vùng có khí hậu nhiệt đới điển hình. Cây sinh trưởng phát triển mạnh trong mùa mưa ẩm. Cây trồng từ hạt sau 3 – 4 năm bắt đầu có hoa quả. Cây không trồng được ở các tỉnh phía bắc do có mùa đông lạnh kéo dài."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt, lá và rễ"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt bình bát chứa nhiều acetogenin: reticulatain – 1, reticulatain – 2, reticulacin, uvariamicin III, diepoaeticanin – 1, dieporeticanin – 2, dieporeticenin, trieporeticanin, reticulatamol, squamocin, roliniastatin I và nhiều chất thuộc nhóm N – acyltryptamin béo.  Squamocin có độc tính với côn trùng trưởng thành Callosobruchus chinensis.  Lá có các acetogenin: annoreticuin – 9 – on, squamon, solamin, annomonicin, roliniastin – 2, anoreticuin, isoanoreticuin.  Vỏ thân chứa các acetogenin: reticulacinon, roliniastatin – 2, các diterpen: acid (-) – kaur -16 – en – 19 – oic, acid 16a – hydroxy – (-) – kauran 19 – oic.  Vỏ thân và vỏ rễ có các alcaloid: oxoushinsunin, anonain, michelalbin, reticulin, assimilobin, 3 – hydroxynomuciferin, anomontin, methoxyannomontin. Anomontin có độc tính đáng kể đối với tế bào.  Rễ có các alcaloid aequalin, assimilobin, liriodenin, norushinsunin. Trong quả xanh có chứa các sesquiterpenoid và acid kaur 16 – en -19 oic (CA 123: 107.755 k, CA 122: 101546 a, CA 122: 239.416 q, CA 120: 187.224 n; CA 113: 188.067 f, CA 120: 102.024 z, CA 120: 73.383 h, CA 117: 66.630 w, CA 112: 175.639 y, CA 109: 107.699 f, CA 117: 108.176 k)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây bình bát có vị chát, có độc đặc biệt là hạt và vỏ thân, có tác dụng sát trùng. Quả xanh có tác dụng làm se, trừ lỵ, trị giun."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả bình bát chín ăn được, nhưng không ngon như na hoặc mãng cầu xiêm, vì vị hơi chát, ít ngọt và không thơm. Quả xanh (8 – 12g) thái mỏng phơi khô, sắc uống chữa sốt, tiêu chảy, kiết lỵ, giun sán, nhiễm khuẩn hô hấp.  Hạt bình bát có thể chữa tiêu chảy, kiết lỵ, nhưng độc, nên thường chỉ dùng ngoài. Lấy hạt, giã nát, nấu nước đặc rồi gội đầu để trừ chấy, ngâm quần áo để trừ rận, hoặc để diệt trừ sâu bọ. Hạt đốt ra tro, trộn với dầu dừa, bôi chữa ghẻ. Vỏ thân cũng có tác dụng như hạt, nhưng kém hơn và ít độc hơn. Lá giã nát, ép lấy dịch cũng được dùng trừ chấy rận cho người và gia súc.  Ở Philippin, vỏ rễ và rễ con cây bình bát được dùng chữa sốt. đau bụng, viêm lợi, đau răng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Cây có độc, tránh để nước của các bộ phận của cây bắn vào mắt sẽ rất nguy hiểm. Nhựa cây bình bát có tính chất kích ứng ngoài da, có thể giải độc bằng dịch quả chanh.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    }
+  ]
+}

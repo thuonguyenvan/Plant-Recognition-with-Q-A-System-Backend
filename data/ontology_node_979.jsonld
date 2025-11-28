@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rì rì cát",
+      "ten_khac": "Rù rì cát",
+      "ten_khoa_hoc": "Rhabdia lycioides C.B.Clarke",
+      "ma_taxon": "771041",
+      "ho": "Vòi voi (Borraginaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi nhỏ, cao 1 – 1,5m, có khi đến 3m.",
+      "thân": "Cành mảnh, bén rễ từ gốc, có lông rải rác và áp sát.",
+      "lá": "Lá nhỏ, mọc so le hoặc tụ họp nhiều cái trên những cành già, hình dải thuôn, dài khoảng 1,5cm, rộng 6 – 7mm, có lông, gân phụ mờ; cuống lá dài 1mm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm rất ngắn, ít hoa, có lá ở gốc; hoa 2 – 3 cái không cuống, màu trắng hồng, đài hình chuông, ống ngắn có lông, răng hình dải – tam giác, phủ nhiều lông, tràng hình chuông hoặc hình phễu, có ống phình ở họng, 5 cánh thuôn hoặc hình mác tù, dài bằng ống tràng; nhị 5, chỉ nhị định ở gần gốc, nhẵn, bao phấn thụt, nứt bên; bầu nhẫn, 2 – 4 ô, noãn gần hình cầu.",
+      "quả": "Quả hạch màu vàng nhạt, to bằng hạt đậu, hạt 1 ở mỗi ngăn quả, có vỏ cứng.",
+      "mùa hoa": "tháng 12",
+      "mùa quả": "tháng 3"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Rì rì cát phân bố rải rác khắp các vùng nhiệt bao gồm mạn đông Brazin, tây Phi và từ Ấn Độ qua Mianma sang mạn nam Trung Quốc xuống Đông Dương và các quốc gia Đông Nam Á, cũng như một số quần đảo ở Thái Bình Dương. Ở Việt Nam, cây phân bố rộng rãi khắp các tỉnh thuộc vùng núi thấp và trung du, nhất là ở miền Trung.",
+      "thường_mọc": "Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc dọc theo các con sông suối từ trong đến cửa rừng và các vùng đồi thấp."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rì rì cát chứa bauerenol, α-amyrin và β-amyrin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân ta dùng toàn cây sắc nước uống để cho ra mồ hôi và để lợi tiểu. Liều 10 – 20g sắc lấy nước uống khi còn nóng, ngày 1 thang chia 2 lần.  Ở Campuchia, toàn cây rì rì cát sắc lấy nước uống để chữa sốt rét. Ở Ấn Độ, rễ sắc lấy nước uống để chữa trĩ, sỏi bàng quang và bệnh hoa liễu [Chopra et al., 2001:174] [Kirtikar et al., 1998, III: 1684]. Có tài liệu cho rằng để chữa trĩ, sỏi tiết niệu và bệnh hoa liễu nên dùng rễ [Srivastava 1989:122], còn để làm cho ra mồ hôi, lợi tiểu và nhuận tràng thì nên dùng thân rì rì cát [Perry et al., 1980: 62]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

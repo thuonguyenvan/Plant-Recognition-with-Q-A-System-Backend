@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sa nhân tím",
+      "ten_khac": "Sa nhân tím, Mé tré bà, co nẻnh (Thái), mác nẻng (Tày); sa ngần (Dao), pa đoóc (K'Dong), la vê (Ba Na).",
+      "ten_khoa_hoc": "Amomum longiligulare T.L. Wu",
+      "ma_taxon": "1190606",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 1,5 – 2,5m.",
+      "thân": "Thân rễ mọc bò lan trên mặt đất.",
+      "lá": "Lá mọc so le thành hai dãy, hình mác, dài 23 – 30cm, rộng 5-6cm, gốc hình nêm, đầu nhọn, mép nguyên, hai mặt nhẵn, mặt trên bóng; lưỡi bẹ mỏng, xẻ đôi; cuống lá dài 5-10mm.",
+      "hoa": "Cụm hoa mọc từ thân rễ thành bông, có 5 – 7 hoa màu trắng; lá bắc ngoài hình bầu đục, màu nâu, lá bắc trong dạng ống; đài dài 1,5cm, có 3 răng nhọn; tràng hình ống dài 1,3 – 1,5cm, chia 3 thùy, mặt ngoài có lông thưa, thùy giữa hình trứng ngược, hai thùy bên hẹp; cánh môi gần tròn, đưòng kính 2 – 2,6cm, lõm, mép màu vàng, giữa có sọc đỏ, đầu cánh môi xẻ hai thùy nhỏ gập ra phía sau, không có nhị lép, chỉ nhị dài hơn bao phấn; bầu hình trụ tròn, hơi phình ở giữa, có lông trắng.",
+      "quả": "Quả hình cầu, màu tím, đường kính 1,3-2cm, mặt ngoài có gai ngắn, chia 3 ô; hạt có áo, đa dạng, đường kính 3-4 mm.",
+      "mùa hoa": "gần như quanh năm.",
+      "mùa quả": "gần như quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Amomum Roxb. có khoảng 250 loài trên thế giới, phân bố chủ yếu ở vùng nhiệt đới, đặc biệt là khu vực nhiệt đới Đông Nam và Nam Á. Ở Việt Nam, có khoảng 30 loài; Borneo 30 loài, Java 13 loài; Malaysia 18 loài… Sa nhân tím có vùng phân bố từ đảo Hải Nam Trung Quốc, đến vùngTrung Lào và Việt Nam. Ở\u00a0Việt Nam, sa nhân tím phân bố tập trung nhất ở các tỉnh Tây Nguyên. Những điểm có nhiều sa nhân tím nhất là huyện M’Đrắc (Đắc Lắc); An Khẽ và K’Bang (Gia Lai); Vĩnh Thạnh (Bình Đình); Sông Hinh (Phú Yên); Ba Tơ (Quảng Ngãi)… Ở đây sa nhân tím mọc tuơng dối tập trung xen lẫn với loài sa nhân trắng, trên diện tích hàng ngàn hécta rừng. Trong khi đó, ở các tỉnh phía Bắc như Phú Thọ, Thái Bình, Hoà Bình, Hải Dương, sa nhân tím mọc vối trữ lượng ít ở trạng thái hoang dại hoặc trồng ở vườn. Sa nhân tím là cây ưa ẩm, chịu bóng (20 – 50%) và ưa sáng trong trường hợp mọc thành những quần thể lớn thuần loài trên đất sau nương rẫy.\nCây thường mọc thành đám ở ven rừng kín thường xanh, rừng thứ sinh đọc theo hành lang ven suối; sinh chổi gốc khỏe vào 2 vụ xuân – hè và hè – thu. Số nhánh con được sinh ra trong các thế hệ tăng theo cấp số nhân vói công bội là 1 – nghĩa là, số nhánh con sinh ra ở một thế hệ này luôn gấp đôi số nhánh đã có ở thế hệ trước cộng thêm 1 (dó là cây mẹ ban dầu). Do đó qua nghiên cứu trồng sa nhân tím ở Vĩnh Thạnh (Bình Định), Tân Lạc (Hoà Bình), Yên Lập (Phú Thọ)… (từ 1992 đến nay) thấy từ một nhánh con ban đầu, sau 16-20 tháng tuổi, đã tạo thành khóm sa nhân trung bình từ 5 – 9 cây. Ở những khóm cực đại có đến 15-17 cây. Sa nhân tím có hoa quả gần như quanh năm. Tuy nhiên, ở nhiều nơi cây có 2 vụ hoa quả trong năm. Ở vụ xuân – hè, hoa bắt đầu từ giữa tháng 3, quả già vào khoảng tháng 6-7, đây là vụ hoa quả chính. Vụ hoa quả phụ bắt đầu khoảng tháng 7, quả già vào tháng 11. Hoa quả chỉ sinh ra từ gốc những cây sau 1 năm tuổi. Cây trồng được 16 – 20 tháng tuổi, có 28,2 – 40% số nhánh có hoa quả. Trong quần thể sa nhân tun trồng lâu năm (3-5 năm) hay trong quần thể tự nhiên, tỷ lệ số nhánh có hoa quả có thể là 70%. So với một vài loài sa nhân đã được nghiên cứu ở Việt Nam (ví dụ loài A. villosum Lour.), loài sa nhân tím ra hoa quả tương đối đều hàng năm; tỷ lệ đậu quả trên các cụm hoa cũng cao hơn. Bởi lẽ, vụ hoa chính của sa nhân tím ra sớm hơn các loài sa nhân khác. Vào thời điểm đó, thời tiết ít mưa (ở miền Nam đang là mùa khô), nên sự thụ phấn của hoa có hiệu quả hơn.\nBên cạnh khả năng tái sinh vô tính khỏe, sa nhân tím còn tái sinh tự nhiên từ hạt. Qua nghiên cứu trồng thử sa nhân tím từ hạt ở Bình Định vào năm 1994 – 1995, bước đầu đã rút ra nhận xét : Hạt có tỷ lệ nẩy mầm cao, khi cây con được 3-4 tháng tuổi bắt đầu vào thòi kỳ sinh trưởng mạnh. Cây trồng từ hạt có tốc độ đẻ nhánh khỏe. Phương thức nhân giống này mở ra triển vọng có thể phát triển trồng sa nhân rộng rãi hơn và cũng mang lại hiộu quả cao. Việt Nam là nước có nguồn sa nhân mọc tự nhiên phong phú nhất trong khu vực. Theo những con số thống kê chưa đầy đủ, hàng năm, có thể khai thác từ vài trăm tấn đến 1000 tấn quả sa nhân khô và chủ yếu dành cho xuất khẩu. Tuy nhiên, với cách khai thác thiếu hưống dăn như hiện nay, phần lớn quả còn non chưa đủ tiêu chuẩn thương phẩm. Kết hợp vói chủ trương giao đất giao rừng cho nông dân, cần có kế hoạch phát triển trồng thêm sa nhân nhất là cây sa nhân tím. Lào, Thái Lan và Trung Quốc là những nước đang đi đầu trong việc trồng sa nhân bán tư nhiên. Riêng tỉnh Vân Nam (Trung Quốc), vài năm gần đây đã trồng được trên 13.000 hecta sa nhân trên đất rừng, góp phần phủ xanh và chống xói mòn có hiệu quả."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Sa nhân ưa đất tốt, ẩm, mát, không bị úng ngập có bóng cây. Cây được nhân giống bằng mầm rễ vào mùa xuân, là thòi vụ tốt nhất. Trồng xen trong vườn cây ăn quả hoặc dưới tán rừng ở các vùng trung du, đất không cần lên luống. Sau khi làm đất, chỉ cần bổ hốc sâu 5 – 7cm, với khoảng cách 40 x 50 hoặc 50 x 50 cm, bón lót mỗi hốc 0,5 kg phân chuồng hoai mục và 100 – 150g NPK (chủ yếu là N và K) rồi đặt mầm, dùng đất nhỏ phủ kín và tưới ẩm.\nCây không cần chăm bón nhiều, ít sâu bệnh. Sau khi cây mọc, thỉnh thoảng làm cỏ và đảm bảo đủ ẩm thường xuyên nhưng không để úng. Cây trổng đến năm thứ hai mối bắt đầu ra hoa. Vào tháng 2-4 hàng năm, bón thúc bằng nước phân chuồng, nước giải (hoặc phân đạm) và kali để giúp cây ra hoa, đậu quả.\nQuả thu tập trung vào tháng 8. cần thu hoạch đúng lúc, thu muộn hoặc thu sớm đều không tốt. Thời điểm thu tốt nhất là khi vỏ quả chuyển sang màu vàng nhưag còn rắn. Lúc này, hạt dẫ tách, màu vàng có chấm đen hoặc nâu, vị chua, cay nồng. Loại này được gọi là “sa nhân hạt cau”. Nếu thu muộn, hạt bị xốp, có vị ngọt, vị cay nồng đặc trưng sẽ biến mất. Loại này chứa ít tinh đầu, dễ bị mốc, mọt, khó bảo quản, có tên là “sa nhân đường”. Quả thu non có hạt màu trắng hay hơi vàng, ít cay, không chua, chất lượng kém."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, thu hái vào tháng 6-9, phoi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả sa nhân chứa tinh đầu với hàm lượng khoảng 0,65%.",
+      "gồm chất": "Thành phần tinh dầu gồm a pinen, camphor; p pinen, caren-3 và Iimonen-borneol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả sa nhân tím vị cay, tính ấm, mùi thơm, vào kinh tỳ, vị, thận, có tác dụng tán hàn, tán ihấp, hành khí, khai vị, tiêu thực, kích thích tiêu hóa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả sa nhân tím được dùng trị bụng trướng đau, đầy bụng, ãn không tiêu, tả, lỵ, nôn mửa.",
+      "được_dùng": "Trong thực phẩm, nhân dân thường dùng sa nhân tún làm gia vị và chế rượu mùi."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa có thai bị lạnh bụng, dầy hơi, tiểu tiện không thông: Sa nhân tím và hương phụ lượng bằng nhau, phơi khô, tán bột. Mỗi lần uống 3 – 4g, ngày 3 lần. Hoặc mỗi vị 8g sắc, chia làm nhiều lần uống trong ngày (Nam dược thần hiệu).",
+      "sắc uống": "Chữa tiêu chảy: Sa nhân tím, trần bì, vỏ cây vối, vỏ rụt, thanh bì, thần khúc, mạch nha, mỗi vị 2g. Tất cả tán thành bột mịn, có thể làm thành viên. Mỗi lần uống 4g với nước sắc tía tô. Ngày 2 lần (Hải Thượng Lãn Ông).",
+      "giã nát": "Chữa ăn không tiêu, nôn mửa, dau bụng, trẻ em cam tích: Sa nhân tím 4g, mộc hương 6g, chỉ thực 6g, bạch truật 4g, tán bột, rây mịn. Dùng nước sắc bạc hà nấu với gạo thành hồ rồi trộn với bột dược liệu làm viên 0,25g. Mỗi lần uống 2-3 viên, ngày 2-3 lần (Hương sa chỉ truật hoàn).",
+      "phơi khô": "Chữa đau nhức răng: Hạt sa nhân tím phơi khô, giã thành bột, chấm vào chỗ răng đau, hoặc ngâm rượu cho đặc rồi ngậm.",
+      "xấy khô": "Chữa tê thấp: Thân rễ sa nhãn tím 10g, chặt nhỏ, ngâm với 100ml rượu trong 15 ngày, xoa bóp hàng ngày. Hoặc phối hợp với lá hồng bì dại (dâm hôi), nấu kỹ với nước, ngâm chân lúc nước còn ấm."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

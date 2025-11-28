@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thông tre lá dài",
+      "ten_khac": "Bách niên tùng, thông tre",
+      "ten_khoa_hoc": "Podocarpus neriifolius D. Don",
+      "ma_taxon": "135672",
+      "ho": "Kim giao (Podocarpaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ hay cây to, cao 15 – 30m, phân cành sớm.",
+      "thân": "Thân có vỏ mỏng màu nâu.",
+      "lá": "Lá mọc so le, có cuống ngắn, thường tập trung ở đầu cành, hình dải hẹp, dài đến 10 cm, rộng 1 cm ở những cành già và ngắn hoặc dài 15 cm và rộng 5 cm ở nhánh non và dài, gốc thuôn, đầu nhọn, có gân giữa nổi rõ ở mặt trên và thường có màu nâu đỏ hay tia hồng.",
+      "hoa": "Hoa gồm nón đực và nón cái, nón đực mọc đơn độc hay tập trung 2 – 3 cái ở kẽ lá gần đầu cành nom như bông giả; nón cái mọc đơn độc trên một cuống dài 1 – 2 cm, đế nạc phình ra ở phía trên, khi già màu đỏ, noãn đơn độc,",
+      "quả": "hạt hình trứng, dài 1 – 1,5 cm, hơi thót lại ở đỉnh, vỏ dày và nạc, khi chín màu xanh cô ban.",
+      "mùa hoa": "tháng 5 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Theo quan điểm của nhiều nhà thực vật học Việt Nam, chi Podocarpus ở nước ta có 2 loài mọc tự nhiên là thông tre lá dài (Podocarpus neriifolius D. Don) và thông tre lá ngắn (P.pilgeri Foxw.) – (Nguyen Tien Hiep, Phan Ke loc, et al. 2005); Nguyen Duc To Luu, et al., (2004)…). Tuy nhiên, vào năm 1958 N.E.Gray có mô tả loài P. annamiensis N.E.Gray từ các mẫu thu được ở gần Đà Nẵng, với những đặc điểm biến đổi của mũi lá và số lượng nón đực (?). Quan điểm này cũng được các nhà thực vật học Trung Quốc tán đồng. Song, theo các nhà thực vật trong nước kể trên thì đều cho rằng đó là những biến đổi nhỏ về hình thái theo môi trường sống của loài thông tre lá dài (P. neriifolius D. Don).  Trên thế giới, thông tre lá dài phân bố ở nhiều quốc gia châu Á. Từ Ấn Độ qua Bangladesh, Myanma, nam Trung Quốc, Lào, Thái Lan, Campuchia, Việt Nam… xuống tận Indonesia và Papua Niu Ghinê. Ở Việt Nam, đây cũng là loài phân bố khá rộng rãi ở hầu hết các tỉnh miền núi, bao gồm: Điện Biên, Lai Châu, Lào Cai, Yên Bái, Hà Giang, Tuyên Quang, Cao Bằng, Bắc Kạn, Lạng Sơn, Quảng Ninh, Vĩnh Phúc, Hoà Bình, Ninh Bình, Thanh Hoá, Nghệ An, Hà Tĩnh, Thừa Thiên – Huế, Đà Nẵng, Kon Tum, Gia Lai, Đắk Lắk, Lâm Đồng, Khánh Hoà, Ninh Thuận, Đồng Nai… Mặc dù có phân bố ở nhiều điểm, nhưng kích thước quần thể tự nhiên là không lớn.",
+      "thường_mọc": "Thông tre lá dài là loại cây gỗ lớn, thường mọc rải rác ở rừng kín thường xanh còn nguyên sinh hay mới trở nên thứ sinh, trên núi đất và cả núi đá.",
+      "Đặc điểm sinh trưởng": "Thông tre lá dài cho gỗ tốt và còn là cây trồng làm cảnh có giá trị, bởi vậy chúng đã bị tìm kiếm khai thác, làm cho chúng bị hiếm dần. Thông tre lá dài được đưa vào Sách Đỏ Việt Nam (2007) và Danh lục Đỏ cây thuốc Việt Nam (2006) ở mức sắp bị nguy cấp (VU), cần được bảo vệ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, cành, rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa sciadopitysin, các podocarpus flavon A và B, robustaflavon và các 7’’ – methylether, 2’’ – O – rham- nosylscoparin, p – hydroxybenzaic, n – tetratriacontanol, sitosterol và các stearat của chúng."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cành lá thông tre lá dài vị cay chát, có công năng khư phong tiếp cốt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Kinh nghiệm nhân dân dùng cành lá chặt nhỏ, sắc lấy nước uống để điều trị thấp khớp, đau nhức xương, các khớp sưng đau, ngày 3 – 5g. Có thể chặt nhỏ, nghiền rồi ngâm rượu để xoa ngoài.  Rễ được dùng chữa thuỷ thũng. Để hạt khi chín có mùi thơm, ăn được.  Ở Indonesia, gỗ thông tre lá dài để chế tạo đồ đạc như bàn ghế, giường tủ; lá để chữa thấp khớp, viêm sưng khớp [Medicinal herb index, 1995: 4]. Ở Malaysia và Ấn Độ, lá được dùng chữa ho, ho ra máu, viêm phế quản. Cũng được dùng trong thấp khớp và viêm khớp [Chopra et al., 1998: 81], [Perry et al., 1980: 402]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

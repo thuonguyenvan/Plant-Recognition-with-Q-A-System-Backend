@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cam thảo",
+      "ten_khac": "Cam thảo",
+      "ten_khoa_hoc": "Glycyrrhiza uralensis Fisch. ex DC.",
+      "ma_taxon": "775858",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống lâu năm, cao 30-100cm.",
+      "rễ": "Rễ dài có màu vàng nhạt.",
+      "thân": "Thân có lông mềm, ngắn.",
+      "lá": "Lá mọc so le, kép lông chim lẻ, gồm 9-17 lá chét hình trứng có mép nguyên.",
+      "hoa": "Cụm hoa chùm ở nách lá; hoa tương đối nhỏ, màu tím nhạt.",
+      "quả": "Quả đậu cong hình lưỡi liềm, dài 3-4cm, rộng 6-8mm, màu nâu đen, có lông dày, chứa 2-8 hạt nhỏ dẹt, màu nâu bóng.",
+      "mọc": "Loài Cam thảo nhẵn – Glycyrrhiza glabra L. cũng thường được sử dụng. Cây cao 1-1,5m, cũng có rễ dài màu vàng nhạt. Lá kép lông chim lẻ có lá chét nguyên, hình trái xoan tù. Hoa nhỏ màu lơ tím sáng, hợp thành chùm dài mọc đứng. Quả đậu thuôn, dẹp, thẳng hoặc hơi cong, không lông, nhỏ hơn loài trên và chỉ chứa 2-4 hạt tròn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ của Cảm thảo – G. uralensis chứa glucid 4,7-10,97%, tinh bột 4,17-5,92%.",
+      "Các hợp chất": "Hoạt chất thuộc nhóm sapanosid là glycyrrhizin; thuộc nhóm flavonoid là liquiritin, liquiritigenin, isoliquiritin, isoliquiritigenin, neo-liquiritin, neoisoliquiritin, licurazid.",
+      "chứa": "Rễ Cam thảo nhẵn – G. glabra chứa 20-25% tinh bột, 3-10% glucose và saccharose, các cumarin, triterpen và các sterol.",
+      "các hoạt chất": "Dược liệu chứa các hoạt chất saponosid và flavonoid. Thuộc nhóm saponosid, có hoạt chất ngọt là glycyrrhizin, acid liquiritic..; thuộc nhóm các flavonoid có liquiritin, isoliquiritin, liquiritingenin, isoliquiritigenin, licurasid và các hợp chất oestrogen có nhân sterol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cam thảo có vị ngọt, tính bình. Sinh thảo có tác dụng giải độc, tả hoả; cam thảo tẩm mật sao vàng (chích thảo) tính ấm, có tác dụng bổ (ôn trung) nhuận phế, điều hoà các vị thuốc.",
+      "có tác dụng": "Người ta đã nghiên cứu thực nghiệm các tác dụng gây trấn tĩnh, ức chế thần kinh trung ương, giảm ho, tác dụng giải co thắt cơ trơn, gây tăng tiết dịch vị của histamin, tăng bài tiết mật, chống viêm và chống dị ứng, tác dụng oestrogen, tác dụng giải độc, lợi tiểu, nhuận tràng.",
+      "được_dùng": "Sinh thảo được dùng chữa cảm, ho, mất tiếng, viêm họng, mụn nhọt, đau dạ dày, ỉa chảy, ngộ độc. Chích thảo dùng chữa tỳ vị hư nhược, ỉa chảy, thân thể mệt mỏi, kém ăn, khát nước do vị hư, ho do phế hư. Ngày dùng 4-20g dạng thuốc bột, thuốc hãm, nước nấu và cao mềm.",
+      "làm thuốc": "Cam thảo còn được dùng trong Đông y chữa loét dạ dày, ruột, có tác dụng giảm loét, giảm co thắt cơ, giảm tiết acid chlorhydric, chữa bệnh Addison… Còn dùng làm tá dược thuốc viên, thuốc ho, thuốc giải độc. Cam thảo còn được sử dụng làm chất thơm trong các hỗn hợp thuốc xông, làm thuốc chống co thắt trong các nước uống nhuận tràng; còn dùng để chế nước chiết tinh hay khô, dùng trong mỹ phẩm, dùng chế nước uống giải khát, làm mứt kẹo, tẩm thuốc lá.",
+      "chữa": "Chữa ho lao, ho lâu ngày: Dùng Cam thảo nướng 120g tán bột, uống mỗi lần 4g, ngày uống 3-4 lần (Nam dược thần hiệu). Loét dạ dày: dùng cao Cam thảo 2 phần, nước uống 1 phần hoà tan. Ngày uống 3 lần, mỗi lần 1 thìa cà phê. Không uống liên tục quá 3 tuần lễ. Chữa tâm phế suy nhược, khó thở, mệt xỉu, mạch nhỏ yếu (huyết áp thấp hay hạ đường huyết): Dùng Cam thảo 12g, Đương quy 10g, Nhị sâm 8g, tán bột uống mỗi lần 4g, ngày uống 3-4 lần, hay sắc uống lúc nguy cấp. Chữa mụn nhọt, ngộ độc: Dùng cao mềm Cam thảo, ngày uống 1-2 thìa cà phê."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Cây của miền Âu á ôn đới, phân bố chủ yếu ở Nga, Trung Quốc, Mông Cổ, Apganistan, Iran… Ta nhập giống từ Trung Quốc và Nga, đem về trồng thử nghiệm ở Vĩnh Phú (Tam Đảo), Hà Nội, Hải Hưng nhưng chưa phát triển được rộng rãi. Ở nước ta, Cam thảo trồng được 3 năm thì ra hoa, nhưng tỷ lệ kết quả thấp. Đến 5 năm tuổi, cây ra hoa nhiều và kết quả cao hơn. Thường thì mùa hoa tháng 6-7, mùa quả tháng 8-9. Người ta thu hoạch Cam thảo vào khoảng năm thứ năm; thường thu vào mùa đông khi cây tàn lụi. Lúc này rễ chắc, nặng, nhiều bột, có chất lượng tốt.",
+      "phơi khô": "Chải sạch đất bằng bàn chải. Phân loại to, nhỏ và phơi khô. Khi khô được 50%, bó thành bó và sau đó chỉ phơi đầu cắt, không phơi cả rễ, để cho vỏ vẫn giữ được màu nâu đỏ đẹp.",
+      "được_dùng": "Thường dùng dưới dạng Sinh thảo, Chích thảo, bột Cam thảo:  – Sinh thảo: Rửa sạch nhanh, đồ mềm, thái thành phiến mỏng 2mm khi còn nóng; nếu không kịp thái thì nhúng ngay vào nước lã, ủ mềm để khi thái được dễ dàng. Sau đó sấy hoặc phơi khô.  – Chích thảo: Sau khi sấy khô, đem tẩm mật (cứ 1kg cam thảo phiến, dùng 200g mật, pha thêm 200ml nước đun sôi) tẩm rồi sao vàng thơm. Nếu dùng ít, có thể cắt khúc 5-10cm, cuộn vài lần giấy bản, nhúng qua nước cho đủ ướt, vùi vào tro nóng, khi thấy giấy khô hơi sém thì bỏ giấy, thái lát mỏng.  – Bột Cam thảo: Cạo sạch vỏ ngoài, thái miếng tròn, sấy khô, tán thành bột mịn vừa. Bảo quản trong thùng kín, để nơi khô ráo."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Người tỳ vị nhiệt, bụng đầy trướng, nôn mửa, người huyết áp thấp, người bệnh đái đường không nên dùng. Không dùng với Đại kích, Nguyên hoa, Cam toại, Hải tảo."
+    }
+  ]
+}

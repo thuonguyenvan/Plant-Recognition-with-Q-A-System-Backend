@@ -1,0 +1,281 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sổ",
+      "ten_khac": "Sổ bà, Thiếu biêu, Co má sản (Thái), Mạy túm (Tày).",
+      "ten_khoa_hoc": "Dillenia indica L.",
+      "ma_taxon": "327691",
+      "ho": "Sổ (Dilleniaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 15–20 m, tán lá tròn, vỏ thân xù xì, màu đỏ hồng, thường mọc từng mảng.",
+      "thân": "Cành hình trụ, có lông, có sẹo lá rải sát nhau.",
+      "lá": "Lá to, mọc so le, hình mác hoặc bầu dục – thuôn, dài 1,5–3 cm, rộng 6–10 cm, gốc tròn, đầu tù hơi nhọn, mép khía răng đều và sít nhau, mặt dưới có lông và gân phụ nổi rõ; cuống lá dài 3–5 cm, có rãnh và lông.",
+      "hoa": "Hoa to, đường kính khoảng 10 cm, mọc đơn độc ở kẽ lá, cuống mập có lông; đài có 5 bản dày và dày: trắng. 5 cánh lớn hơn đài, sớm rụng; nhị nhiều bằng nhau, bao phấn dài hơn chỉ nhị, núm ở đỉnh; bầu thuôn có khoảng 20 lá noãn.",
+      "quả": "Quả mang đài tồn tại, phát triển thành bản dày, mọng nước, đường kính 10 cm hay hơn, vị chua, ăn được.",
+      "mùa hoa": "tháng 3–5",
+      "mùa quả": "tháng 8–10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Dillenia L. gồm một số loài là cây gỗ, phân bố chủ yếu ở vùng nhiệt đới châu Á. Ở Việt Nam, hiện có 9 loài. Số hià là cây có kích thước lớn so với các loài cùng chi. Cây phân bố ở các tỉnh phía nam Trung Quốc, Ấn Độ, Việt Nam, Lào, Malaysia.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "một số tỉnh miền Trung"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Cây thường mọc ở bờ suối, dưới tán rừng kín thường xanh ẩm, độ cao đến 1000 m. Cây ưa sáng, có thể hơi chịu bóng, ra hoa quả nhiều, quả rụng xuống, phát tán theo dòng nước. Do có ít nơi có vùng thường xuyên sống thuộc vùng núi đá vôi nên chúng thấy cây rải rác. Số là tái sinh tự nhiên chủ yếu từ hạt, quanh gốc; cây mẹ thường gặp nhiều cây con vào mùa mưa ẩm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, thu hái quanh năm, dùng tươi hoặc phơi khô. Còn dùng quả, rễ và vỏ thân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ và lá sổ bà chứa tanin với hàm lượng: 10% ở vỏ và 9% ở lá. Lá đài cũng chứa tanin 0,37%, glucose 2,92% và acid malic 0,51% (The Wealth of India III, 1952).",
+      "gồm chất": "Theo cuốn Trung dược tú hải I, 1993, cây sổ bà chứa acid betulinic, betulinaldehyd, betulin, lupeol.",
+      "Các hợp chất": "Ngoài ra, còn có myricetin; (+)-dihydroisorhamnetin; 3′, 5-dihydroxy-4′, 3-dimethoxyflavon-8-β-D-glucopyranosid; 4, 5, 7, 3′, 4′-pentahydroxyflavon-3-O-β-D-glucopyranosid; 1,8-dihydroxy-2-methyl anthraquinon-3-O-β-D-glucopyranosid; 5, 7-dihydroxy-4′-methoxyflavon-3-O-β-D-glucopyranosid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sổ bà có vị chua, chát, tính bình, có tác dụng thu liễm, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả sổ bà thường được ăn sống hoặc ép lấy nước trộn với đường pha thêm nước đun sôi để nguội được một thứ nước giải khát rất tốt. Quả còn dùng làm xốt chua, mứt, thuốc ho.",
+      "được_dùng": "Lá sổ tươi (loại lá bánh tẻ) rửa sạch, giã nát thêm nước, gạn uống chữa đại tiện. Ngoài ra: Liều dùng: mỗi lần 30–40g, ngày 2 lần.",
+      "làm thuốc": "Lá sổ bà phơi khô (8–16g) sắc với 400 ml nước còn 100 ml, uống chữa ho, sốt, phù thũng, đầy bụng. Có thể nấu thành cao để dùng dần.",
+      "chữa": "Ở Trung Quốc, rễ và vỏ thân cây sổ bà được dùng chữa sốt rét.",
+      "có tác dụng": "Ở Ấn Độ, quả ép lấy nước trộn với đường nấu và cô đặc thành dạng viên để chế thuốc.",
+      "sắc uống": "Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

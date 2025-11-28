@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau ngổ",
+      "ten_khac": "Ngổ om, Mò om, Ngổ, Râu ngổ, Ma am (Cămpuchia), Phắp hom pôm (Lào).",
+      "ten_khoa_hoc": "Limnophila aromatica (Lamk.) Merr.",
+      "ma_taxon": "244828",
+      "ho": "Scrophulariaceae (Hoa mõm chó)",
+      "Mô tả": {
+        "cây": "Cây thân thảo, cao 20-30cm, có rễ chùm.",
+        "thân": "Thân ngầm, bén rễ ở những mấu; thân đứng hình trụ nhẵn, có khía dọc.",
+        "lá": "Lá mọc vòng 3-5 cái (thường là 3), đôi khi mọc đối (những lá gần ngọn), những lá ở dưới mọc dựng lên, có những lá mọc nằm ngang, phiến lá hình mác thuôn, dài 2-3cm, rộng 0,4-0,6cm, gốc thuôn, đầu nhọn, mép khía răng thưa và nông, hai mặt nhăn, gân giữa lồi rõ; cuống rất ngắn.",
+        "hoa": "Hoa màu trắng tím, mọc đơn độc ở kẽ lá gần ngọn, có cuống dài 1cm, nhẵn; lá bắc ngắn hình sợi; đài hình chuông, 5 răng, mép có lông tuyến đa bào; tràng dài gấp đôi đài; nhỉ nhị nhẵn.",
+        "quả": "Quả nang, nhẵn, hình trứng.",
+        "mọc": "Ngoài cây rau om Limnophila aromatic nói trên có mùi rất thơm, còn có rau om Limnophila rugosa Merr, cũng có mùi thơm, rau om Ấn Limnophila indica (L.) Druce, rau om tầu Limnophila chinensis (Osb.) Merr. Cũng được sử dụng."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Rau ngổ chứa 0,13% tinh dầu, flovonid và tanin.",
+        "gồm chất": "Trong tinh dầu chủ yếu là d-limonen",
+        "đã nghiên cứu": "Theo Lưu Thị Thu Cúc và Phó Đức Thuần, trong rau om Limnophila aromatic có tinh dầu, flavonoir, cumarin, axit hữu cơ, đường khử (Dược học 4, 1985, 8-10).",
+        "tinh dầu chứa": "Theo India Perfumer 21, 135, 1977 trích lại trong Miltitzer Berichte 1978, tinh dầu cất từ rau om Limnophila rugosa có tỷ trọng d21 0,9934; no21 1,5272; chỉ số xà phòng 1,74; chỉ số este 15,94 chỉ số este sau axetyl hoá 38,36; độ ta trong cồn 800: 1/8. Trong tinh dầu có 82,2% metylchavicol; 13,5% anisaldehyt; 3% p.metoxyzimtaldehyt;; 0,5% caryophyllenoxyt; 0,4% limonene; 0,2% p.cymol và 0,2% linalot (phân tích bằng sắc ký khí)."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trước đây rau om chỉ là một thứ gia vị dùng nấu canh chua, canh cá ở các tỉnh phía Nam. Chỉ những năm gần đây mọi người lưu ý tới kinh nghiệm dùng rau om chữa sỏi thận của lương y Lê Quang Tốt (Rau om, một loại rau quý-YHCTDTVN 198, 1986, 23): Một người bạn lương y bị sỏi thận, đã mổ một lần nhưng sau một năm sỏi xuất hiện lại. Bác sĩ khuyên mổ nữa nhưng lần này có nguy hiểm. Lương y giới thiệu bệnh nhân ấy lấy rau om giã nhỏ, lấy nước pha ít muối, uống ngày 2 lần. Bệnh nhân làm theo ngày uống 2 lần, sang 1 nắm, chiều một nắm. Uống liền 5 ngày, đến ngày thứ 6, bệnh viện đưa đi X-quang, để biết rõ vị trí viên sỏi trước khi mổ thì viên sỏi đã biến mất. Đối với một số bệnh nhân khác, lương y Tốt cho uống 1 nắm rau om cùng một số vị thuốc lợi tiểu bông mã đề, râu ngô thanh nhiệt và hành khí cũng đem lại kết quả tốt: Bệnh nhân đái thông, cơn đau giảm và mất hẳn Nhân dân Malaixia và Indonexia cũng dùng làm gia vị, giúp sự tiêu hoá, ăn ngon cơm. Còn làm thuốc lợi tiểu, chữa những cơn đau thắt bụng, còn dùng giã nát đắp lên vết thương, vết loét. Ngày dùng 10-16g dưới dạng thuốc sắc hay viên hoàn."
+      },
+      "Cách dùng": {
+        "được_dùng": "Rau om mọc hoang và được trồng khắp nước ta, nhưng được sử dụng nhiều nhất ở các tỉnh phía Nam làm gia vị nấu canh chua, canh cá. Thường dùng tươi hoặc phơi sấy khô làm thuốc.",
+        "làm thuốc": "Tại các tỉnh phía Nam người ta phân ra rau om xanh và rau om tím. Loại tím hay được tìm dùng làm thuốc nhưng vì hiếm nên vẫn dùng phổ biến loại rau om xanh.",
+        "có tác dụng": "Cũng cần lưu ý tránh nhầm lẫn: Ở các tỉnh phía Bắc rau om thường được gọi là rau ngổ, nhưng ngay tại miền Bắc lại có mấy loại rau ngổ: rau ngổ thuộc họ Hoa mõm chó là loại rau om nói ở đây. Còn loại rau ngổ thuộc họ cúc (Compositae) có tên khoa học Enhydra fluctuans Lour. Còn có tên ngổ thơm, ngổ trâu là một loại cây sống nổi hay ngập nước không thuộc loại rau om nói ở đây."
+      },
+      "luu_y": {}
+    }
+  ]
+}

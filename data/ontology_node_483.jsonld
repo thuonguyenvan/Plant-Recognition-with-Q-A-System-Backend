@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sâm cau đỏ",
+      "ten_khac": "Hồng sâm, Sâm cau đỏ, co phạc hia (Thái)",
+      "ten_khoa_hoc": "Dracaena angustifolia Roxb.",
+      "ma_taxon": "123571",
+      "ho": "Thùa (Agavaceae)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, dài 20-35cm, rộng 1-4cm, đầu thuôn nhọn, hai mặt nhẵn, mặt trên bóng, gân lá mờ, bẹ lá ôm thân.",
+        "hoa": "hoa màu trắng xanh, hình ống 6 thùy giống nhau, cùng màu; nhị 6, chỉ nhị hẹp; bầu hình trụ, 3 ô, mỗi ô có một noãn.",
+        "quả": "Quả mọng, hình cầu, chứa 1 hạt.",
+        "cây": "Cây nhỏ cao 1-2m.",
+        "thân": "Thân thường không phân nhánh, mọc thẳng, mang một chùm lá ở ngọn.",
+        "rễ": "Rễ củ phân nhánh nhiều, màu hồng hoặc vàng nhạt.",
+        "mùa hoa": "tháng 3-5.",
+        "mùa quả": "tháng 3-5."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Dracaena Vand.ex L. gồm các loài là cây bụi hoặc gỗ nhỏ. Ở Việt Nam, chi này có 10-15 loài trong đó có 4-5 loài dùng làm thuốc.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Bắc Cạn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Nghệ An"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hà Tĩnh"
+              }
+            }
+          ]
+        }
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ và hoa dùng tươi hoặc phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Chưa thấy tài liệu nói về thành phần hóa học của cây bồng bồng"
+      },
+      "Tính vị": {
+        "Có vị": "Rễ, lá và hoa bồng bồng có tính mát, có tác dụng lợi tiểu, giải nhiệt, giải độc."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá bồng bồng sắc uống để nhuận tràng, lợi tiểu, chữa lỵ, bạch đới và bênh lậu, ngày 20 – 30g. Rễ và hoa chữa lỵ ra máu. Ngày 10 – 20g sắc uống. Hoa sao vàng, sắc đặc, uống hen. Trong sinh hoạt, cụm hoa non của bồng bồng ăn được, rễ nghiền lẫn với các chất thơm để làm hương, lá giã nát, vắt lấy nước dùng nhuộm xanh bánh đúc."
+      },
+      "luu_y": {
+        "luu_y": "Theo nghiên cứu ở Ấn Độ, toàn cây bồng bồng có độc, dùng phải thận trọng"
+      }
+    }
+  ]
+}

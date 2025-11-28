@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây la",
+      "ten_khac": "Ngoi, Cà hôi, Co sà lang (Thái), Toong muốc, La rừng, Phô hức (Tày)",
+      "ten_khoa_hoc": "Solanum verbascifolium L.",
+      "ma_taxon": "169061",
+      "ho": "Solanaceae (Cà)",
+      "Mô tả": {
+        "lá": "Cây nhỏ hoặc nhỡ cao 2,5-5m. Toàn cành, lá phủ một lớp lông dày hình sao màu vàng nhạt, hoặc vàng xám.",
+        "cây": "Lá mọc cách, hình thuôn, hai đầu nhọn, mép nguyên, cả hai mặt đều có lông mịn, dày hơn ở mặt dưới, cuống lá dài 2-4cm.",
+        "hoa": "Cụm hoa hình xim lưỡng phân hoặc xim ngù, hoa hình chén, phủ đầy lông mềm, tràng hoa màu vàng nhạt, đường kính 0,5-1,3cm, với 6 cánh hoa hình mũi mác, đầu nhọn.",
+        "quả": "Quả nhỏ, hình cầu, đường kính 6mm, hạt rất nhiều có vân mạng đường kính 2mm.",
+        "mùi": "Lá cây khi vò có mùi thơm phảng phất mùi hồng bì."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong cây la có solanin, saponozit, một ít tinh dầu.",
+        "gồm chất": "Vỏ rễ có 0,3% solasodin.",
+        "Các hợp chất": "Thành phần khác chưa rõ."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong nhân dân, lá la tươi chữa lòi dom, hắc lào, sán trâu bò. Tại các nước khác, lá la được dùng chữa tiểu tiện đục và phụ nữ khí hư. Tại Malaixia lá tươi giã nát được dùng đắp lên hai bên thái dương chữa nhức đầu (theo Burkill và Haniff, 1930. Gard. Bull. S.S. 6: 226). Trong thú y, lá thái nhỏ cho vào lỗ mũi ngựa chữa bệnh sổ mũi của ngựa. Trong y học nhân dân Malaixia (Medical book of Malayan medicine-Gar. Bull, Str. Sett 6, 130: 335) người ta dùng nước sắc của rễ chống chữa những cơn đau kịch trong người và những rối loạn sau bữa ăn.",
+        "Đắp lòi dom": "Lá tươi ngắt bỏ cuống và gân, giã nát sao nóng dịt vào chỗ lòi dom sau khi đã rửa sạch bằng nước ấm. Có thể để nguyên lá, úp vào dom hay nướng cháy lá, vo lại cho vào hậu môn. Nên làm vào buổi tối trước khi đi ngủ để tránh đi lại. Bệnh nhân bị lòi dom thường khỏi rất nhanh, đi lại bình thường 2-3 năm không thấy tái phát. Có bệnh nhân dom lòi 4-5cm dùng khỏi (Bệnh viện Hà Giang 1966).",
+        "Chữa hắc lào": "Lá la tươi vò lấy nước, chấm vào vết hắc lào đã rửa sạch."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang tại khắp các tỉnh miền Bắc như Hà Giang (la, la rừng), Hoà Bình, Cao Bằng, Lạng Sơn, ngay tại Hà Nội cũng có. Ưa mọc nơi dãi nắng.",
+        "làm thuốc": "Thường người ta hái lá tươi về dùng. Ngoài ra còn dùng rễ đào quanh năm, thái mỏng phơi hay sấy khô. Có khi dùng cả cây thái mỏng phơi hay sấy khô."
+      },
+      "luu_y": {}
+    }
+  ]
+}

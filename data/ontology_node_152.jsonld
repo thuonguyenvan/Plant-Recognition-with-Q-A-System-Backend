@@ -1,0 +1,235 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bọ chó",
+      "ten_khac": "Bọ chó, Búp lệ á, Chìa vôi.",
+      "ten_khoa_hoc": "Buddleja asiatica Lour.",
+      "ma_taxon": "159585",
+      "ho": "Buddlejaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1-2 m hoặc hơn.",
+      "thân": "Cành có lông thưa màu vàng nhạt và lông tuyến.",
+      "lá": "Lá mọc đối, hình trứng thuôn, gốc hẹp, đầu nhọn, dài 7 – 18 cm, rộng 1,5 – 4,5cm, mép nguyên hoặc hơi khía răng, mặt trên sẫm nhẵn, mặt dưới rất nhạt, có ít lông. Cuống lá dài khoảng 1cm.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành chùy, ít phân nhánh gồm nhiều xim; lá bắc hình sợi; hoa trắng, đài 4 răng, có lông ở mặt ngoài, dính nhau ở phía gốc, dài bằng 1/2 tràng, tràng 4 cánh nhẵn, hàn liển, inhi 4, dính vào tràng ở nửa trên, bầu nhẵn.",
+      "quả": "Quả nang, hình trứng thuôn, dài 5-6 mm; hạt hình thoi, có cánh.",
+      "mùa hoa": "tháng 4 – 7.",
+      "mùa quả": "tháng 4 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Buddleja L., chưa được nghiên cứu kỹ ở Việt Nam, ước tính có 3 – 5 loài (Nguyễn Tiến Bân, 1997). Bọ chó là loài cây của vùng nhiệt đới châu Á. Cây phân bố rộng rãi ở Ấn Độ, Malaysia, Philippin, Thái Lan, Campuchia, Lào, Việt Nam, Nam Trung Quốc. Ở Việt Nam, bọ chó phân bố phổ biến từ Tây Nguyên đến các tỉnh ở khu V, khu IV và tất cả các tỉnh thuộc vùng núi và trung du Bắc Bộ.  Bọ chó là cây ưa sáng, mọc nhanh, thường thấy trong các quần hệ cây bụi ở đồi hay trên đất. Sau nương rẫy. Cây có thể mọc lẫn với những cây gỗ nhỏ ở ven rừng, rừng thứ sinh do khai thác. Độ cao phân bố từ vài chục mét đến 1300 m, có khi gần 1500m (Sa Pa, Bát Xát – Lào Cai). Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên từ hạt tốt, nên có những chỗ cây mọc khá tập trung, gần như thuần loại.  Cành và lá cây bọ chó thường được cắt làm phân xanh.",
+      "Đặc điểm sinh trưởng": "Bọ chó là cây ưa sáng, mọc nhanh, thường thấy trong các quần hệ cây bụi ở đồi hay trên đất. Sau nương rẫy. Cây có thể mọc lẫn với những cây gỗ nhỏ ở ven rừng, rừng thứ sinh do khai thác. Độ cao phân bố từ vài chục mét đến 1300 m, có khi gần 1500m (Sa Pa, Bát Xát – Lào Cai). Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên từ hạt tốt, nên có những chỗ cây mọc khá tập trung, gần như thuần loại.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Tây Nguyên"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "khu V"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "khu IV"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "các tỉnh thuộc vùng núi và trung du Bắc Bộ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa, lá non, cành và rễ  Hoa thu hái vào mùa Xuân, lúc chưa nở, phơi khô, Những hoa màu tro ở dạng nụ, có lông mịn, là loại tốt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chất màu vàng trong búp và hoa bọ chó tan được trong nước, bền màu với nhiệt và ánh sáng.  Bọ chó chứa glucosid kết tinh hình kim màu vàng trắng gọi là buddlein hay buddleo glucosid, là một flavonoid glucosid.-  Một số hợp chất flavonoid đã được Li Jiaoshe. Zhao Yuying phân lập từ hoa bọ chó và xác định là acacetin, apigenin, luteollin, linarin (acacilin), luteollin 7 – O – rutosid, luteolin -7-O-glucosid, cosmosiin. Một hợp chất mới là neobudofficid được xác định cấu trúc là 5,7 dihydroxy 4′ – O – methoxyflavon – 7 – O – α – L – rhamnopyranosyl (1 -> 2) – (α – L- rhamnopyranosyl (1 -> 6)) – β – D – glucopyramosid (CA. 127, 1997, 202902 x).  Zhang Huyi, Pan Pingxian đã phân lập các phenyi propanoid glycosid từ nụ hoa là Verbascosid. cistanosid, B hydroxyaceosid poliomosid, echinacosid Và martynosid. Các chất này có hoạt tính ức chế sự tăng sản tế bào in vitro (CA-126, 1997, 314813 e)  Matsuda Hideaki, Cai Hong nghiên cứu các sản phẩm thuốc chống đục thủy tinh thể chế từ hoa bọ chó thấy có tác dụng tốt lên aldose reductase. Các thành phần trong chế phẩm gồm luteolin, luteolin 7 – O – β – D – glucopyranosid, apigenin và acacetin 7 – O – α – L- – Rhamnopyranosyl (6 – 1) β – D – glucopyranosid. (CA. 123, 1995, 188488 a).  Trong hoa bọ chó sản xuất ở Trung Quốc, Ding. Ning, Yahara Shoji đã phân lập được 2 triterpenoid glucosid mới là mimengosid A. (I) và B (II) cùng với acetosid. (CA. 117, 1992, 14284s).  Wang, Bin, Li Jiaoshe nghiên cứu thành phần có tác dụng kháng khuẩn trong hoa bọ chó đã tách được các chất sau từ phần chiết ether dầu: olean – 13 (18) ene – 3 – one – § amyrin; euph – 8 – 24 – dien – 3 – yl acetat (butyrospermyl acetat); α spinasterol; glactiol; và acid vanillic. (CA. 127, 1997, 188231 u).  Houghton, Petter J. Hikino Hiroshi đã nghiên cứu dịch chiết của 3 loài Buddleja dùng trong y học cổ truyền chứa bệnh gan, đã tách được 5 hợp chất iridoid. 2 phenylpropanoid glucosid và một flavonosia glucosid. Hai chất iridoid mới được xác định cấu trúc là I và II.  Theo Trung dược từ hải (TDTH III, 2252, 619). Ngoài những chất trên bọ chó còn có catalpol. Catalposid, acteosid và echinacosid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa và lá bọ chó có vị đắng, cay, mùi thơm. Tính ấm, có độc, có tác dụng tán hàn, tiêu đờm, tán kết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa và lá bọ chó được dùng chữa ho, hen, sốt rét, sưng lách, ứ máu bầm tím, ra máu xấu sau khi sinh đẻ, hóc xương cá. Ngày dùng 1 – 2g, dâng thuốc thuốc bột."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Người suy nhược toàn thân, táo bón, bí đái không nên dùng.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    }
+  ]
+}

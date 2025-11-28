@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Địa hoàng",
+      "ten_khac": "Sinh địa, Địa hoàng, Thục địa",
+      "ten_khoa_hoc": "Rehmannia glutinosa (Gaertn.) Libosch. ex Steud.",
+      "ma_taxon": "544445",
+      "ho": "Scrophulariaceae (Hoa mõm chó)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống nhiều năm cao 20-30cm, toàn cây có lông mềm và lông tiết màu tro trắng.",
+      "rễ": "Rễ mầm lên thành củ.",
+      "lá": "Lá mọc vòng ở gốc; phiến lá hình bầu dục, gốc thuôn, đầu tròn, dài 3-15cm, rộng 1,5-6cm, mép khía răng tròn không đều; gân lá hình mạng lưới nổi rất rõ ở mặt dưới làm cho lá như bị rộp, chia lá thành những múi nhỏ.",
+      "hoa": "Hoa mọc thành chùm trên một cuống chung dài ở đầu cành. Đài và tràng đều hình chuông, tràng hơi cong dài 3-4cm, mặt ngoài tím đẫm, mặt trong hơi vàng với những đốm tím 4 nhị, nhị trường.",
+      "quả": "Quả hình trứng, chứa nhiều hạt nhỏ.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây của Trung Quốc. Từ năm 1958 nhập trồng ở nước ta, hiện nay được phát triển trồng ở nhiều nơi từ Bắc đến Nam.  Địa hoàng có nguồn gốc từ vùng ông đới ấm của Trung Quốc nên cây trồng ở Việt Nam thường đúng vào thời kỳ nhiệt độ trong năm thấp dưới 30 độ C. Khi thời tiết nắng gắt, mưa nhiều đã có thể thu hoạch. Địa hoàng ra hoa kết quả nhiều nhưng người ta thường tận dụng khả năng tái sinh vô tính – nảy mầm tốt của rễ củ làm cây giống để trồng. Nhân giống bằng những mầm rễ, mỗi mầm dài 1-2cm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ củ.  Tuỳ theo cách chế biến, ta có Sinh địa hoàng và Thục địa hoàng.  Sinh địa: Củ Địa hoàng đã được chọn lựa, rồi rải vào lò sấy; sấy trong 6-7 ngày cho khô đều. Thục địa: Củ Địa hoàng lấy về, ngâm nước, cạo sạch đất. Lấy những củ vụn nát nấu lấy nước, nước đó tẩm những củ đã được chọn rồi đem đồ, đồ xong lại phơi, phơi khô lại tẩm. Tẩm và đồ như vậy được 9 lần, khi màu thục đen nhánh là được.  * Khi nấu không dùng nồi kim loại như đồng, sắt.  Tuỳ từng nơi, người ta áp dụng cách chế biến có khác nhau, có thể dùng rượu nấu rồi lại dùng nước gừng ngâm, lại nấu tiếp tới khi có thục màu đen. Do cách chế biến mà tính chất của Sinh địa và Thục địa có khác nhau."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ có catalpol, mannit, rehmannin, glucose và một ít caroten. Còn có tới 15 acid amin và D-glucozamin, acid phosphorie và các cacbohydrat, chủ yếu là stachyoza; còn có chất campesterol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Địa hoàng tươi có vị ngọt, đắng, tính hàn; có tác dụng thanh nhiệt, mát máu. Sinh địa hoàng (Củ địa hoàng khô) có vị ngọt, tính hàn, có tác dụng tư âm dưỡng huyết. Thục địa hoàng có vị ngọt, mùi thơm, tính hơi ôn; có tác dụng nuôi thận, dưỡng âm, bổ huyết, làm đen râu tóc.  Người ta đã chứng minh được tác dụng chống đường huyết, tác dụng cầm máu, lợi tiểu, kháng sinh của Địa hoàng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "+ Tác dụng kháng viêm: Nước sắc Địa hoàng có tác dụng kháng viêm. Đối với chuột cống thực nghiệm gây viêm bằng Formalin vùng chân đùi, thuốc làm giảm viêm rõ (Trung Dược Học).  + Tác dụng đối với đường huyết: Địa hoàng làm hạ đường huyết. Có báo cáo cho rằng Địa hoàng làm tăng cao đường huyết nơi chuột cống hoặc không ảnh hưởng đến đường huyết bình thường nơi thỏ (Trung Dược Học).  + Nước sắc Địa hoàng có tác dụng cường tim, hạ áp, cầm máu, bảo vệ gan, lợi tiểu, chốngchất phóng xạ, chống nấm (Trung Dược Học).  + Đối với hệ miễn dịch: Nước sắc Địa hoàng có tác dụng ức chế miễn dịch kiểu Corticoid nhưng không làm ức chế hoặc teo vỏ tuyến thượng thận. Thực nghiệm cho thấy Sinh địa, Thục địa đều có thể làm giảm tác dụng ức chế chức năng vỏ tuyến thượng thận của Corticoid (Trung Dược Học). Độc tính:  Tác dụng phụ của Thục địa nhẹ, bao gồm tiêu chảy, bụng đau, chóng mặt thiếu khí, hồi hộp. Những triệu chứng này thường hết khi ngưng uống thuốc(Chinese Herbal Medicine)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Sau khi trồng 6 tháng rưỡi có thể thu hoạch. Mỗi năm có thể thu hoạch hai vụ vào các tháng 2-3 và 8-9. Chọn ngày nắng ráo để đào củ. Củ Địa hoàng tươi hình thoi hay hình trụ cong queo, dễ bẻ gẫy; mặt ngoài màu vàng đỏ, có những vùng thắt lại chia củ thành từng khoanh. Trên các rãnh có vết của mầm."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

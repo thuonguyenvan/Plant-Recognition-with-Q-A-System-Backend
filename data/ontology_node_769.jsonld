@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau ngót",
+      "ten_khac": "Bồ ngót, Bù ngót, Hắc diện thần (Trung quốc)",
+      "ten_khoa_hoc": "Sauropus androgynus (L.) Merr.",
+      "ma_taxon": "867160",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, nhẵn, có thể cao tới 1,5-2m.",
+      "thân": "Có nhiều cành mọc thẳng. Vì người ta hái lá luôn cho nên thường chỉ thấp 0,9-1m. Vỏ thân cây màu xanh lục, sau màu nâu nhạt.",
+      "lá": "Lá mọc so le, dài 4-6cm, rộng 15-30mm cuống rất ngắn 1-2mm có 2 lá kèm nhỏ, phiến lá nguyên hình trứng dài hoặc bầu dục, mép nguyên.",
+      "hoa": "Hoa đực mọc ở kẽ lá thành xim đơn ở phía dưới, hoa cái ở trên.",
+      "quả": "Qủa nang hình cầu, hạt có vân nhỏ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoạt chất làm thuốc chưa rõ. Chỉ mới biết trong rau ngót có 5,3% protit, 3,4% gluxit, 2,4% trong trong đó chủ yếu là canxi (169mg%), photpho (64,5mg%), vitamin C (185mg%).",
+      "gồm chất": "Rau ngót có nhiều axit amin cần thiết: trong 100g rau ngót có 0,16g lysin, 0,13g metionin, 0,05g tryptophan, 0,25g leuxin và 0,17 izoleuxin.",
+      "Các hợp chất": "Trong cây rau sắng rất gần với rau ngót có hàm lượng protit cao hơn (6,5%), trong đó thành phần axit amin cần thiết trong 100g rau có 0,23g lysin, 0,19g metionin, 0,08g tryptophan, 0,45g treonin, 0,25g phenylalanin và 0,23 izoleuxin, 0,22 valin, 0,26 leuxin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá rau ngót ngoài công dụng nấu canh, còn là một vị thuốc nhân dân dùng chữa sót nhau và chữa tưa lưỡi.",
+      "chữa": "Chữa sót nhau: hái độ 40g lá rau ngót. Rửa sạch giã nát, Thêm một ít nước đã đun sôi để nguội vào. Vắt lấy chừng 100ml nước. Chia làm 2 lần uống, mỗi lần cách nhau 10 phút. Sau chừng 15-20 phút nhau sẽ ra.Có người dùng đơn thuốc này chữa chậm kinh có kết quả. Có người chỉ giã nhỏ đắp vào gan bàn chân (Y học thực hành, tháng 2/1960 và 10/1961)",
+      "chữa": "Chữa tưa lưỡi: giã lá rau ngót tươi độ 5-10g. Vắt lấy nước. Thấm vào bông đánh lên lưỡi, lợi và nòm miệng trẻ em, chỉ 2 ngày sau là bú được.",
+      "chữa": "Chữa hóc: giã cây tương, vắt lấy nước ngậm. Chú ý nghiên cứu thêm",
+      "làm thuốc": "Để chữa sót nhau, có người chỉ dùng 15 hạt thầu dầu (xem vị này) giã nát đắp ở gan bàn chân, trong vòng 15 phút nhau sẽ ra. Sau khi nhau ra, cần rửa chân ngay (Y học thực hành, tháng 10/1961)"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc hoang và được trồng khắp nơi ở Việt Nam để lấy lá nấu canh. Khi làm thuốc thường chọn những cây rau ngót đã sống 2 năm trở lên. Hái lá tươi về dùng ngay."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

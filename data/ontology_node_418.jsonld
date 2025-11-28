@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dạ hương",
+      "ten_khac": "Dạ lý hương, dạ lai hương.",
+      "ten_khoa_hoc": "Cestrum nocturnum L.",
+      "ma_taxon": "76225",
+      "ho": "Cà (Solanaceae)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, hình bầu dục hoặc trái xoan, dài 5 – 10 cm, rộng 1,5 – 3 cm, gốc hình nêm hoặc tròn, đầu nhọn, hai mặt nhẵn, mép nguyên",
+        "hoa": "hoa màu lục nhạt, thơm về đêm, đài hình chuông, dài 4 mm, nhẵn, có 5 răng rất nhỏ, hình tam giác nhọn; tràng có ống hẹp dài khoảng 2 cm, hình phễu, 5 cánh hình trái xoan, nhị 5, chỉ nhị hình chỉ; bầu 2 ô, chứa nhiều noãn.",
+        "quả": "Quả mọng, hình trứng, đường kính 4 – 5 mm, màu trắng, hạt nhiều, dẹt.",
+        "cây": "Cây nhỏ, dạng bụi, cao 2 – 3m, phân nhánh nhiều.",
+        "thân": "Thân cành mảnh nhẵn, màu lục vàng.",
+        "cuống": "cuống lá dài 0,8 – 1,2 cm.",
+        "mùa hoa": "tháng 2 – 4."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Cestrum L. hiện có 2 loài ở Việt Nam, đều là cây nhập trồng làm cảnh, đó là dạ hương hoa trắng hoặc lục nhạt và dạ hương hoa tím hồng (C. elegans (Brongn.) Schlechter) (Nguyễn Tiến Bân, et al., 2005).  Dạ hương có nguồn gốc từ vùng Nam Mỹ, không rõ được nhập trồng vào Việt Nam từ khi nào. Hiện nay, cây được trồng rải rác trong nhân dân hay các nơi công cộng và đình, chùa.  Dạ hương là loại cây ưa sáng, ưa ẩm, sinh trưởng mạnh trong mùa xuân – hè. Cây ra hoa nhiều hằng năm, hoa nở về đêm và có mùi thơm.",
+        "Bộ phận dùng": "Lá."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Qua quá trình sinh trưởng, cây dạ hương mọc Việt Nam chứa saponin steroid (5,24% ở hoa, 4,50% ở lá, 4,25% ở rễ) 4,11% ở phần trên mặt đất.  Lá chứa một glycosid spirostanol là nocturnosid, 2 glucosid thuộc nhóm cesternosid A và B là 2 – sec – butyl – 4, 6 – dihydroxyphenyl – 8 – D – glucosid và 2 – sec – butyl – 4, 6 – dihydrophenyl – 6 – acetyl – β- D (Compendium of Indian Medicinal Plants V, 1999). Hương thơm có mùi đặc trưng của hoa được nhận dạng là acetaldehyd và linalool."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá dạ hương có thể có độc tính, được dùng trị kinh phong.  Ở Indonesia, hoa dạ hương có trong thành phần một thuốc phức hợp dùng điều trị các rối loạn tâm thần."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

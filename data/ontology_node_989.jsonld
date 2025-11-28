@@ -1,0 +1,180 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Long não",
+      "ten_khac": "Long não, Dã hương, Chương não, Mạy khao chuông (Tày), Cà chăng diẳng (Dao)",
+      "ten_khoa_hoc": "Cinnamomum camphora L. Nees",
+      "ma_taxon": "1591063",
+      "ho": "Lauraceae (Long não)",
+      "Mô tả": {
+        "cây": "Cây thân gỗ cao 10-15m hay hơn tới 40-50m, đường kính thân có thể đạt hơn 2m, cành thưa nhẵn, lá mọc so le, hình bầu dục gân chính nổi rõ, hai bên có gân phụ nổi, tại góc gân phụ và gân chính có một hạch tuyển nổi, bóng; cuống lá dài 2,5-3,5cm. Hoa nhỏ, mọc thành chùy ở kẽ, ngắn hơn lá. Quả hình cầu, to bằng hạt tiêu, phía dưới có cuống nhỏ hình chén. Tất cả các bộ phận của cây đều mang những tế bào chứa tinh dầu. Tuy nhiên có cây cho long não đặc biệt, có cây chỉ cho tinh dầu lỏng. Việc phân biệt hai cây long não cho long não đặc và cây long não chỉ cho tinh dầu rất khó nếu chỉ căn cứ vào hình thái thực vật. Hạt của cùng một cây cho long não đặc, khi trồng lại cho những cây cho long não đặc và những cây chỉ cho tinh dầu, giống như hạt của cùng một cây đu đủ cái khi trồng có thể cho khi thì là cây đu đủ đực khi thì là cây đu đủ cái ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Thành phần chủ yếu của gỗ, lá và rễ long não là tinh dầu và long não tinh thể. Tùy\u00a0theo tuổi cây, hàm lượng tinh dầu và long não tinh thể thay đổi: Long não thiên nhiên, có tinh thể màu trắng, mùi thơm đặc biệt, vị nóng, ở nhiệt độ thường, long não thăng hoa được, ít tan trong nước, tan nhiều trong các dung môi hữu cơ (cồn, ête, clorofoc), quay phải + 43°. Tính chất long não là một xeton. Tinh dầu long não cất phân đoạn sẽ được tinh dầu long não trắng (dùng chế xineola), tinh dầu long não đỏ (chứa safrola, cacvacrola), tinh dầu long não xanh (chứa cadinen, camphoren, azulen)."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Long não được dùng ngoài làm thuốc sát trùng, tiêu viêm, kích thích (dùng dưới dạng cồn hay dầu 5-10%). Dùng trong dưới dạng thuốc tiêm để hồi tỉnh cơ tim, chữa trụy tim hay suy nhược, hoặc dùng uống để chữa đau bụng, làm giảm lượng phân (uống mỗi ngày 0,05-0,20g, tiêm da dưới dạng dung dịch dầu 10-20%). Long não còn dùng trong công nghiệp chế ngà voi nhân tạo, phim ảnh, chất cách điện. Tinh dầu long não có thể dùng ngoài xoa bóp thay long não đặc, hoặc dùng trong công nghiệp làm dung môi, hoà tan nhựa, sơn, chiết safrol, xineol, chế thuốc trừ sâu."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây long não được trồng tại nhiều tỉnh ở miền Bắc nước ta như Hà Giang, Tuyên Quang, Vĩnh Phú, Phú Thọ, Cao Bằng, Lạng Sơn. Ngay tại nhiều đường phố Hà Nội cũng trồng để lấy bóng mát. Người ta cho rằng vốn dĩ cây này không có ở Việt Nam, vì không thấy nó mọc ở rừng. Những cây thấy mọc ở rừng và có mùi gần như long não thuộc những loài như Cinnamomum parthenoxylon Neissn (rè hương-vù hương), C. balansae H. Lee., C. ilicioides A. Chev., (gù hương), C. simondii H. Lee. v.v… Hiện nay ta đã bắt đầu khai thác long não ờ các tỉnh Hà Giang, Tuyên Quang, Yên Bái, Lào Cai. Nhưng long não mọc nhiều nhất tại Nhật Bản, Trung Quốc. Người ta cất gỗ, rễ, lá cây long não, để lấy tinh dầu và tinh thể long não. Đôi khi dùng một ít gỗ hay lá, cành để cho vào nồi nước xông chữa cảm cúm."
+      },
+      "luu_y": {}
+    }
+  ]
+}

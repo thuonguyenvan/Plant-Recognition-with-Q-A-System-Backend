@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khế",
+      "ten_khac": "Khế, Khế chua, Ngũ liễm, Co má phương (Thái), Mạy phường (Tày), Mộc lóc liằng (Dao)",
+      "ten_khoa_hoc": "Averrhoa carambola L.",
+      "ma_taxon": "146977",
+      "ho": "Oxalidaceae (Chua me đất)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 5-7m, có khi lớn hơn.",
+      "thân": "Thân hình trụ, có vỏ bần màu xám đen.",
+      "lá": "Lá mọc so le, kép lông chim lẻ, gồm 7-11 lá chét mỏng, hình trái xoan, lá chét to dần về phía ngọn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm xim ngắn hơn lá; lá bắc nhỏ hình mác; hoa màu hồng hay tím hồng; đài 5 răng rời, ngắn bằng nửa tràng hoa; tràng 5 cánh mỏng, dính với nhau ở phần gốc; nhị 5 đối diện với lá đài, nhị lép đối diện với cánh hoa, chỉ nhị phồng và đính liền với gốc; bầu hình trứng có lông, 5 ô.",
+      "quả": "Quả to, thuôn dài, có đài tồn tại, có 5 múi vắt nhọn, tạo thành hình ngôi sao khi cắt ngang, màu vàng khi chín, hạt nhỏ và dẹp màu nâu vàng.",
+      "mùa hoa": "tháng 5-9",
+      "mùa quả": "tháng 5-9"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, vỏ cây thu hái quanh năm. Lá dùng tươi, vỏ sao vàng. Hoa, quả thu hái vào mùa hạ, thu, dùng tươi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả khế chứa protein 0,5%, dầu 0,2%, carbohydrat 4,8%, đường toàn phần 3,5-11%, acid oxalic, vitamin A, C, B1, B2, P."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá kế có vị chua chát, tính bình có tác dụng thanh nhiệt, mát huyết, tiêu viêm, lợi tiểu"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nhân dân thường dùng lá khế giã nhỏ đắp lên những nơi bị lở sơn (sơn ăn). Có thể dùng quả giã lấy nước mà đắp lên. Còn dùng chữa mẩn ngứa, lở loét sưng đau do dị ứng. Quả dùng lấy nước ép uống cho mát, chữa bệnh scobut.",
+      "chữa": "Sơn lở, dị ứng, lở loét.",
+      "được_dùng": "Lá khế cả cành non và hoa 100-150g. Nấu sôi 15 phút với 5-6 lít nước, dùng xông và tắm. Lá đã nấu rồi dùng sát lên nơi lở loét. Thường chỉ điều trị 3-4 ngày là khỏi.",
+      "làm thuốc": "Lá kế chữa lở sơn, dị ứng, mề đay, cảm nắng, sổ mũi, sốt, ho, sốt xuất huyết, đái buốt, đái ra máu, mụn nhọt, viêm tiết niệu, viêm âm đạo, ngộ độc. Ngày 20-40g hoặc hơn, sắc uống. Hoa khế chữa ho, viêm họng, sổ mũi, ho gà, thận hư, kém tinh khí. Ngày 8-16g, hãm với nước sôi uống. Quả khế chữa ho, viêm họng, sổ mũi, dị ứng, lở sơn, bí đái. Ngày 20-40g hoặc hơn sắc uống. Vỏ thân, vỏ rễ chữa đau khớp, đau đầu mạn tính, ho, viêm họng. Ngày 8-16g hoặc hơn, sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "dị ứng, mề đay, mẩn ngứa: Lá khế giã nát, xoa và đắp lên chỗ bị dị ứng; kết hợp dùng 16g vỏ núc nác, sắc uống.",
+      "được_dùng": "Lá khế tươi 20g, lá chanh 10g, giã nát, vắt lấy nước uống.",
+      "làm thuốc": "Hoa khế 12g, tẩm gừng rồi sao, sắc uống",
+      "sắc uống": "Quả khế tươi 60-80g, ép lấy nước uống",
+      "có tác dụng": "Lá khế 80g, rễ cỏ tranh 40g, sắc uống."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

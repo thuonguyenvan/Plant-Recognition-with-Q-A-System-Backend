@@ -1,0 +1,280 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nắp ấm hoa đôi",
+      "ten_khac": "Trư lưng, bình nước",
+      "ten_khoa_hoc": "Nepenthes mirabilis (Lour.) Druce",
+      "ma_taxon": "348343",
+      "ho": "Nắp ấm (Nepenthaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây leo, sống một năm, cao 0,5 – 2m.",
+      "thân": "Thân mảnh, hình trụ, màu xanh lục nhạt.",
+      "lá": "Lá mọc so le, hình bầu dục – thuôn, thường dài 10 – 25 cm, có cuống khá dài nửa ôm thân và có cánh, gốc thuôn, đầu kéo dài thành cuống mảnh mang một phần hình trụ phình lên như cái bình có nắp tròn, bên trong có nhiều tuyến tiết, hai mặt có những đốm tía, mép nguyên hoặc hơi khía răng, gân phụ 5 – 7 đôi có nhiều gân ngang song song, tua cuốn ngắn hoặc dài bằng lá.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành chùm mảnh, dài 20 – 40 cm; cụm hoa đực có nhiều nhị xếp thành hai dãy; cụm hoa cái có bầu hình trứng hoặc elip, phủ lông trắng.",
+      "quả": "Quả nang dài 1,5 – 3 cm, màu nâu, khi chín nứt thành 4 mảnh; hạt mảnh và dài.",
+      "mùa hoa": "tháng 5 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Họ nắp ấm (Nepenthaceae) ở Việt Nam chỉ có 1 chi Nepenthes L. với 4 loài. Loài nắp ấm hoa đôi trên mới thấy phân bố rải rác từ Quảng Trị trở vào (gồm các tỉnh: Quảng Trị, Thừa Thiên – Huế (Nam Đông), Quảng Nam; Bình Định (Quy Nhơn, Phú Mỹ); Đồng Nai, Tp. Hồ Chí Minh (Bình Chánh); Bà Rịa – Vũng Tàu (Côn Đảo); Bạc Liêu; Cà Mau; Tây Ninh (VQG. Lò Gò – Xa Mát). Cây cũng phân bố ở Nam Trung Quốc, Lào, Campuchia, Malaysia, Indonesia và Philippin.",
+      "thường_mọc": "Nắp ấm hoa đôi là cây ưa sáng, cây thường mọc lẫn với các cây bụi nhỏ hoặc cỏ cao, ở nơi đất chua, hơi trũng, có thể ngập nước ít ngày vào mùa mưa.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Trị"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên – Huế"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bình Định"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tp. Hồ Chí Minh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bà Rịa – Vũng Tàu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bạc Liêu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cà Mau"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tây Ninh"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nắp ấm hoa đôi có vị ngọt nhạt, tính mát, có tác dụng thanh nhiệt lợi thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nắp ấm hoa đội được dùng chữa tiểu tiện ra cát sỏi, viêm gan vàng da, viêm loét dạ dày tá tràng, huyết áp cao, trẻ em ho gà. Ngày dùng 20 – 40g thuốc khô hay 40 – 80g thuốc tươi, sắc uống [Lê Trần Đức, 1997: 878]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

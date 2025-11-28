@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Muỗm",
+      "ten_khac": "Xoài hôi, xoài cà lăm.",
+      "ten_khoa_hoc": "Mangifera foetida Lour.",
+      "ma_taxon": "348333",
+      "ho": "Đào lộn hột (Anacardiaceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây to, cao 10 – 15m, có khi hơn.",
+        "lá": "Lá mọc so le, hình mác – thuôn, dài 15 – 30 cm, rộng 5 – 9 cm, gốc thuôn, đầu có mũi nhọn, mép nguyên, hai mặt nhẵn, mặt trên sẫm bóng, mặt dưới nhạt.",
+        "hoa": "Cụm hoa mọc ở kẽ lá hoặc ngọn cành thành chùy phân nhánh đôi, màu đỏ đen nhạt; hoa nhiều màu lục vàng; đài có răng nhẵn, hình bầu dục nhọn; tràng có cánh hình mũi mác hẹp, dài gấp 3 lần đài; nhị 4 – 5, một cái sinh sản dài bằng cánh hoa và 3 – 4 cái khác ngắn hơn, bao phấn không toàn vẹn.",
+        "quả": "Quả hạch, hình bầu dục tròn, khi chín màu vàng lục, trong chứa thịt màu vàng, vị ngọt chua.",
+        "mùa hoa": "Hai thời vụ hoa chính: tháng 12-3 và 5-7.",
+        "mùa quả": "Quả tháng 3-6 và 10-11."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Muỗm hay còn gọi là “xoài hôi” vốn có nguồn gốc từ quần thể mọc tự nhiên trong rừng cây họ Dầu (Dipterocarpacene) ở bán đảo Malaisia, Thái Lan và các đảo lớn Sumatra và Borneo (Indonesia). Cây đã được đưa vào trồng từ lâu đời tại những nơi được coi là bản địa ở trên, cũng như nhiều quốc gia khác ở Đông Nam Á và Nam Á, trong đó có Việt Nam.  Cây muỗm trồng ở Việt Nam, trên thực tế không biết một cách chính xác về xuất xứ và thời gian nào được đưa vào trồng. Vào khoảng trước năm 1990, muỗm có trồng ở nhiều tỉnh thuộc đồng bằng, trung du Bắc Bộ và Trung Bộ. Cây trồng thường phân biệt thành 2 giống chủ yếu là quả hình ô van và ô van tròn. Muỗm trồng ở miền Bắc có ưu điểm là năm nào cũng có quả (hoặc nhiều hoặc ít), trong khi đó các loại xoài, nếu hoa ra sớm vào đúng thời kì có đợt gió mùa Đông Bắc, sẽ không đậu được quả nào. Mặc dù vậy, muỗm trồng ở miền Bắc và miền Trung nay đã bị thay thế bởi các giống xoài mới có chất lượng và năng suất cao. Đây là giống cây trồng lâu năm, có nguy cơ bị mất giống nên cần nhân giống để bảo tồn nguồn gen.  Muỗm là cây gỗ nhỏ hay gỗ nhỡ trung bình, Nghĩa là khi cây nhỏ ưa ẩm, chịu bóng, khi lớn và ưa sáng và có thể hơi chịu hạn. Cây mọc tự nhiên ở rừng, có thể lên tới độ cao 1.000m."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Vỏ – Cortex Mangiferae Foetida."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Quả có 65% phần ăn được. 100g phần ăn được chứa nước 72,5g, protein 1,4g, carbohydrat 25,4g, calci 21mg, phospho 15mg, thiamin 0,03mg, chất tương ứng với B – carotene 0,218mg và vitamin C 56mg [De Padua et al., Prosea 12 (1), 1992, 210).  Theo Viện Dinh dưỡng Quốc gia 2000, quả muỗm chín chứa 82,9% nước, 0,6% protein, 0,4% lipid, 15,3% carbohydrat, 0,4% cellulose, 4%mg calci, 4%mg phospho, 0,2%mg sắt, 1905%mcg B – caroten, 0,06%mg vitamin B, 0,06mg vitamin Ba, 0,9mg vitamin PP, 60%mg vitamin C [Viện Dinh dưỡng. Bảng thành phần dinh dưỡng thực phẩm VN – 2000, 55]."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Vỏ cây muỗm vị chát, se. Có công năng làm săn da."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Quả ăn không ngon, có mùi vị nồng. Vỏ cây muỗm được dùng để chữa đau răng và để cầm ỉa chảy.  Để chữa đau răng, mỗi ngày dùng 10 – 20g vỏ, sắc đặc hoặc ngâm rượu, mỗi lần ngậm 10 – 20ml, ngày 4 – 6 lần, mỗi lần ngậm 1 phút rồi nhổ ra.  Để chữa ỉa chảy, cũng dùng 10 – 20g vỏ thân, sắc đặc rồi uống.  Ở Indonesia, nhân hạt thái lát, sao vàng, sắc uống để chữa ngứa, nhưng cần tránh nhựa của thân cây vì có thể gây viêm da [Perry et al., 1980: 15], quả ăn được [Med. herb. index, 1995: 363].  Nguồn: 3033 cây thuốc Đông y Tuệ Tĩnh."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phật thủ",
+      "ten_khac": "Phật thủ, Hương duyên, Pục thủ (Tày), Ràng chum piếu (Dao)",
+      "ten_khoa_hoc": "Citrus medica L. var. sarcodactylis (Sieb.) Swingle",
+      "ma_taxon": "570299",
+      "ho": "Rutaceae (Cam)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỏ hay cây nhỡ, thường xanh.",
+        "thân": "Thân thẳng có gai ngắn và cứng.",
+        "lá": "Lá mọc so le, hình bầu dục hoặc hình trứng, gốc tròn hơi thuôn, đầu tù, mép có răng cưa, hai mặt nhẵn; cuống lá không có cánh.",
+        "hoa": "Hoa mọc riêng lẻ hoặc thành chùm ngắn ít hoa, màu trắng, phía dưới hơi đỏ; đài có 5 răng nhẵn; tràng 5 cánh; nhị nhiều; bầu hình trứng.",
+        "quả": "Quả có lá noãn rời nhau ở gần gốc, cong và cụp vào trong ở phía trên nom như bàn tay nhiều ngón, vỏ ngoài sần sùi, khi chín màu vàng, ruột trắng xốp.",
+        "mùa hoa": "tháng 5-8.",
+        "mùa quả": "tháng 10-12."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Phật thủ có nguồn gốc ở cận Himalaya, thuộc Đông – Bắc Ấn Độ và Mianma. Cây được trồng từ xa xưa ở Ấn Độ, Trung Quốc, Nhật Bản, Lào, Thái Lan, Indonesia, Malaysia và Việt Nam. Ở Việt Nam, phật thủ được trồng rải rác ở các địa phương thuộc vùng trung du, đồng bằng Bắc Bộ; khu Bốn cũ và ở cả miền Nam. Trong khi đó, ở các nước ở vùng Đông Nam Á và Ấn Độ, cây được trồng ở cả vùng núi, đến độ cao 1300m.  Phật thủ là cây ưa ẩm, nhạy cảm với thời tiết có Sương mù cũng như với nhiệt độ cao. Cây chịu hạn kém và không chịu được ngập úng, dù chỉ 2-3 ngày. Ở một vài địa phương thuộc tỉnh Hà Tây (Ba Vì); Vĩnh phúc (Lập Thạch, Tam Dương); Thái Nguyên (Phổ Yên, Phú Bình)… nhân dân thường trồng phật thủ xen với các loại cây ăn quả khác ở vườn nhà. Cây ra hoa quả hàng năm, thời gian để cho quả phát triển và chín kéo dài đến 9-10 tháng.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tây (Ba Vì)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Vĩnh phúc (Lập Thạch, Tam Dương)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên (Phổ Yên, Phú Bình)"
+              }
+            }
+          ]
+        }
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Quả thu hái vào mùa thu đông khi có màu vàng. Rễ lấy vào mùa thu. Lá thu hái quanh năm. Quả để nguyên hoặc chứng một giò, thái phiến dày 3-4cm, rồi phơi âm can cho khô."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Quả phật thủ chứa sterolun, limettin, citropten, obacunon, citflavanon etrogol. He Haiyin; Ling Luoging và cộng sự đã tách và xác định câu trúc của 2 đồng phân dime limettin từ quả phât thủ (CA, 107, 1987, 130908r) . Các tác giả trên cũng đã tách bằng sắc ký tớp mỏng trong phật thủ 10 chất đã được xác định, trong đó có citropen, nomilin, limonin β sitosterol và acid palmitic. (CA, 109. 1988, 156041 u). Nomilin là một limonoid chủ yếu trong quả phât thú, tiếp đến là limonin. Hàm lượng limonold toàn phần trong hạt là cao nhất 3270-1600 ppm. Trong quả trưởng thành, limonoid toàn phần đạt mức cao vào tháng 1 1 sau giảm xuống nhanh chóng vào tháng 12, rồi lại tăng lên trong tháng hai. Hàm lượng limonoid giảm nhanh khí quả chín già (Cai, Huhua; Kharel Ganga…CA, 119, 1993, 91420 b) Fleisher, Zhenia, Fleicher Aleander phân tích thành phần tinh dầu của quả và lá phât thủ bằng GCMS thấy có 94 thành phần, chủ yếu là limomen (81,34%, 37,13%) geraniol (4.24-8,22%) geranion (0,24%-6,21%) neral (2,53% – 5.11%) và nerol (0,22 – 4,83%) theo thứ tự là những thành phần chính của 2 loại tinh dầu từ quả và lá phật thủ (CA. 116, 1992. 27783 h)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Quả phật thủ có vị cay, chụa, đắng, tính ấm vào kinh phế và tỳ, có tác dụng hành khí, chỉ thống kiên vị, mạnh tỳ, hoá đờm, cầm nôn."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Phật thủ được dùng chữa bụng đầy trướng, đau dạ đày, chán ăn, nôn mửa, ho dai dẳng có nhiều đờm.  Liều dùng hàng ngày : 3-10g cùi quả khô dạng thuốc sắc, hoặc dùng vỏ quả ngâm rượu uống. Để chữa viêm dạ dày mạn tính, đau dây thần kinh vùng bụng : Lấy cùi và vỏ quả phật thủ tươi 10-15g hoặc khô 6g lát mỏng, ngâm trong nước sôi và uống thay trà. Khi không có quả có thể dùng hoa, lá, rễ để thay thế. Ở Ấn Độ, dịch phật thủ được dùng chữa scorbut, chống khát, chống nôn, hạ sốt. Nước cất vỏ quả có tác dụng an thần chữa nhức đầu, hạ sốt."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "chữa": "Chữa ho đờm, viêm khí quản mạn tính: Nhai cùi lẫn vỏ phật thủ, nuốt nước. Hoặc phật thủ và bán hạ (chế với gừng), mỗi vị 6g, sắc uống. Có thể thêm đường cho dễ uống."
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

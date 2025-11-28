@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cóc kèn leo",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Derris scandens Benth.",
+      "ma_taxon": "1373957",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Dây leo rất to, dài đến 30m.",
+      "thân": "Thân cành có lông màu xám nhạt, sau nhẵn, có những bì không và rãnh dọc.",
+      "lá": "Lá kép mọc so le, lá chét 9 – 19, cứng và dai, hình bầu dục hoặc thuôn, dài 25 cm, rộng 1,5 – 2 cm, gốc tròn, đầu nhọn, mặt trên nhẫn bóng, mặt dưới có lông rải rác màu hơi trắng, gần lá chằng chịt thành mạng lưới rõ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài 8 – 40 cm, có lông màu hung; hoa 5 – 12, màu trắng hoặc hồng nhạt; lá bắc con xẻ đôi dưới đài hoa; đài hình phễu, mặt ngoài có lông, lá đài hơi khía răng, tràng có cánh cờ thuôn đảo, cánh bên có lông, có tại rõ, cánh thìa hình liềm, có tại; nhị 10, ẩn trong bao hoa; bầu có lông, 6 – 10 noãn.",
+      "quả": "Quả dài 2,5 – 7 cm, rộng 1 – 1,5 cm, thuôn ở hai đầu, thắt lại giữa các hạt, có lông mềm, có cánh; hạt 1 – 4 hình thận, dài 8 mm, rộng 6 mm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Derris Lour, trên thế giới có khoảng 70 loài, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á.  Ở Việt Nam, chi này có 13 loài, loài cóc kèn leo mới chỉ thấy phân bố ở các tỉnh phía nam, như Lâm Đồng, Ninh Thuận, Bình Thuận, ngoại thành Hồ Chí Minh, An Giang, Kiên Giang (Phan Ke Lọc và J. E. Vidal, 2000) và một địa phương khác ở đồng bằng sông Cửu Long. Trên thế giới, cóc kèn leo được ghi nhận phân bố Ấn Độ, Xri Lanca, Bănglađét, Pakistan.",
+      "thường_mọc": "Cóc kèn leo là cây ưa sáng, thường leo trùm lên một số cây bụi, cây gỗ nhỏ ở các bờ kênh rạch (vùng đồng bằng sông Cửu Long), bờ suối ở cửa rừng hoặc ở ven rừng kín thường xanh.",
+      "Đặc điểm sinh trưởng": "Cây phân cành nhiều và chỉ có những cành tiếp xúc nhiều với ánh sáng mới ra hoa quả nhiều và hàng năm. Cóc kèn leo tái sinh tự nhiên chủ yếu bằng hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân hoặc rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong loài cóc kèn leo có chứa 6 flavon và 6 diprennilisoflavon: dirissoflavon A – F (Phạm Hoàng Hộ, 2006 Cây có vị thuốc ở Việt Nam, tr.218).  Củ cóc kèn leo chứa scandenin (C26H20O6), nallanin (C26H26O5), chandanin (C24H30O5), acid lonchocarpic và acid robustic. Hai acid này chỉ tìm thấy trong củ loài cóc kèn leo ở châu Mỹ, không tìm thấy trong loài mọc ở Ấn Độ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Chưa có tài liệu để cập vì cây có độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cóc kèn có độc nên nhân dân ta chỉ dùng ngoài.",
+      "được_dùng": "Rễ vầ vỏ thân được dùng để duốc cá. Rễ và thân cóc kèn phơi khô, nghiền thành bột để diệt côn trùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

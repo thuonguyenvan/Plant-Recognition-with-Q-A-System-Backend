@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba gạc bốn lá",
+      "ten_khac": "Ba gạc bốn lá, Ba gạc cu ba",
+      "ten_khoa_hoc": "Rauvolfia tetraphylla L.",
+      "ma_taxon": "167766",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 40-80cm, có thể đến 2m, phân cành nhiều.",
+      "lá": "Lá mọc vòng 4, hai lá nhỏ và hai lá to; lá to có phiến dài 5-8cm, rộng 2-3cm, lá nhỏ dài 2,5-5cm, rộng 1,5-2cm.",
+      "hoa": "Hoa màu trắng lục hoặc trắng ngà, mọc ở nách lá hoặc ở ngọn cành, tràng hoa hình ống ngắn, phình ra ở hai đầu.",
+      "quả": "Quả đại xếp từng đôi khi chín màu đỏ sau chuyển dần sang tím đen."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Trung Mỹ, được trồng ở nhiều nước: Ấn Độ, Trung Quốc, Malaixia… Ta nhập giống trồng từ Liên Xô (trước đây) và Cuba được trồng ở nhiều nơi thuộc vùng trung du và vùng đồng bằng Bắc Bộ. Sau 12-14 tháng, cây có thể cho dược liệu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ- Radix Rauvolfiae Tetraphyllae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Alcaloid toàn phần thay đổi tuỳ giống trồng từ 1,23-2,78% (ở rễ), 0,43-0,83% (ở thân) và 1,35-2,24% (ở lá).",
+      "chứa": "Rễ chứa 0,05% reserpin và có hàm lượng rescinnamin, deserpidin cao."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Viên cao Ba gạc Raucaxin bào chế từ bột rễ R. tetraphylla chứa 2 mg alcaloid toàn phần dùng điều trị bệnh tăng huyết áp đặc biệt đối với thể vừa và nhẹ. Thuốc có tác dụng êm dịu, xuất hiện từ sau một tuần lễ, thuốc dung nạp tốt, không gây buồn nôn, mệt mỏi. Bệnh nhân sau khi dùng thuốc, ngoài huyết áp hạ, cảm thấy đỡ nhức đầu, chóng mặt và dễ ngủ hơn trước. Loài này cũng được sử dụng nhiều ở Ấn Độ, ở Malaixia rễ được dùng chữa vết rắn cắn và dùng làm thuốc chữa sốt rét, ngã nước."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

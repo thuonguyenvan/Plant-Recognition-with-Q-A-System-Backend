@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mã tiền thảo",
+      "ten_khac": "Mã tiền thảo, Cỏ roi ngựa, Verveine (Pháp).",
+      "ten_khoa_hoc": "Verbena officinalis L.",
+      "ma_taxon": "56163",
+      "ho": "Cỏ roi ngựa Verbenaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống dai, mọc thành bụi, cao 30 – 60cm.",
+      "thân": "Thân vuông, mọc đứng, có lông.",
+      "lá": "Lá mọc đối, xẻ thành những thùy hình lông chim không đều, mép có tăng cưa, phiến lá men theo cuống đến tận gốc.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành bông hoặc chùy, dài 20cm, phân nhánh nhiều, lá bắc có mũi nhọn, hoa nhỏ mọc sát nhau, màu lam tím nhạt, đài có 5 răng nhỏ, có lông. Tràng hoa có ống hình trụ hơi cong, 5 cánh có lông ở họng. Nhị hoa có hai dài, hai ngắn, đính vào phần trên của ống tràng. Bầu nhẵn có 4 ô, mỗi ô chứa một noãn.",
+      "quả": "Qủa năng có 4 nhân, hạt nhỏ.",
+      "mùa hoa": "tháng 3",
+      "mùa quả": "tháng 9"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hái vào mùa thu khi cây đã ra hoa và một số hoa đã bắt đầu kết quả. Dùng tươi hay phơi hoặc sấy khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây chứa một glucozit gọi là verbenalin hay verbenalozit kết tinh không màu, không mùi, vị đắng, thủy phân sẽ cho glucoza và verbenalola,Verbenalin + H2O – verbenalola + glucoza. Ngoài ra còn có các mcn invectin và men emunxin. Do đó khi phơi sấy, tỷ lệ glucozid có thể giảm tới hơn 25%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mã tiền thảo có vị đắng, hơi hàn, vào 2 kinh can và tỳ. Tác dụng phá huyết, sát trùng, thông kinh, thanh nhiệt, lợi tiểu, sát trùng và giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mã tiền thảo được dùng chữa tủ cung tích huyết, sốt rét mãn tính, lở ngứa, chường bụng, sưng vú, mụn nhọt, kinh nguyệt không thông, khí hư, lỵ ra mái, ho ra máu, chảy máu cam, phù và chống khối u trên dương vật.  Ở Ấn Độ, người dan cùng mã tiền thảo để làm thuốc hạ sốt, làm sạch và trị giun sán. Cao mã tiền thảo được dùng trong bệnh gan và túi mật. Lá tươi là chất gây sung huyết da trị bệnh thấp khớp, và làm mau lành vết thương. Một số bài thuối bôi từ lá mã tiền thảo trị viêm tử cung, rễ trị lao hạch và rắn cắn. Mã tiền thảo còn được dùng để diệt côn trùng, chữa sốt cho gia súc.  Các nước ở bán đảo Đông Dương, Trung Quốc, Đài Loan, Triều Tiên dùng mã tiền thảo trị cảm lạnh, sốt, viêm, rối loạn tiêu hóa, bệnh về đường ruột, tử cung và đường niệu. Nó được dùng sau khi đẻ làm thuốc lọc máu và giúp xổ ra và để trị phù, thiếu máu, chướng bụng, sung huyết và giải đọc sau khi bị sâu bọ cắn. Dùng ngoài, nó làm thuốc đắp hay rửa để trị bệnh về da, vết thương, áp xe và khối u.  Ở Thái Lan, mã tiền thảo trị bệnh về gan và túi mật, cảm lạnh, sốt, viêm phế quản và rối loạn tâm thần. Lá đắp ngoài trị thấp khớp, vết thương và eczema.  Ở Châu Á, phần trên mặt đất của mãn tiền thảo được dùng trong y học truyền thống làm dễ tiêu và lợi tiêu. Ngoài ra, nó còn được coi là thuốc bổ, lợi sữa, điều kinh, tẩy, hạ sốt và làm ra mồ hôi, làm săn, trị giun sán, chống chảy máu, chống co thắt và bệnh scorbut. Nó được dùng ngoài làm thuốc súc miệng để trị bệnh về họng và viêm miệng và để đắp làm thuốc chữa loét, vết đứt, trĩ và nhức đầu, áp dụng tại chỗ để làm dịu, làm hết ngứa trong những bệnh về da, cháy nắng, bỏng.  Ở Châu Âu, những chỉ định dùng mã tiền thảo là điều trị vàng da, xanh lướt, phù, gút, sỏi thận, sỏi bàng quang, thấp khớp, tiểu tiện ra máu, sốt, đau dây thần kinh và viêm mắt.  Ở Châu Phi, mã tiền thảo được dùng trị eczema mạnh tính, viêm phế quản và rối loạn kinh nguyệt. Ở algieri, lá dưới dạng nước sắc uống làm thuốc chống co thắt, trị viêm họng, sổ mũi. Ở ethiopi, mã tiền thảo chữa vết thương chảy máu (rễ giã nát đắp lên vết thương), bệnh ga (uống dịch ép lá hoặc rễ), đau dạ dày (nhai nuốt rễ), nôn, viêm amidan, tiêu chảy, ngộ độc, rắn và sâu bọ cắn (tán rễ thành bột, trộn với nước uống) và bệnh da (tán lá hoặc rễ thành bột, làm thành thuốc dẻo, đắp)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1.Chữa kinh nguyệt không thông, huyết ứ, đau bụng dưới  Mã tiền thảo giã nhỏ, nấu cao, uống mỗi lần một thìa với rượu vào lúc đói. Ngày uống 3 lần (Nam dược thần hiệu).  Mã tiền thảo 12g, hương phụ chế 16g, quy vĩ 12g, tô mộc 10g, tam lăng 8g, huyền hồ 8g, hồng hoa 8g, cam thảo 4g, nước 400ml. Sắc còn 100ml, uống làm 3 lần trong ngày.  2. Chữa hạ bộ lở ngứa  Mã tiền thảo 80g, hạt xà vàng 40g, đun sôi với nước rồi xông vào chỗ ngứa, sau lấy nước đó rửa, ngày một lần.  3. Chữa đái nhắt buốt  Mã tiền thảo 20g, mã đề 20g. Sắc uống trong ngày.  4. Chữa viêm cầu thận mãn tính (thể thận tỳ dương hư với các triệu chứng: phù không rõ, ít kéo dài, bụng chướng, nước tiểu ít, sắc mặt trắng xanh, lưỡi bệnh, mệt mỏi, lưng mỏi, sợ lạnh, mạch trầm tế):  Mã tiền thảo 500g, bồ hóng bếp 400g, vỏ bưởi đào 600g, bích ngọc đơn (gồm diêm tiêu, lưu huỳnh) 400g, ích mẫu 300g, quế thanh, bạch phản, đại hồi, thảo quả, mỗi vị 200g, khô phàn 100g.  Cách chế: Mã tiền thảo và ích mẫu nấu cao, rồi trộn với bột các dược liệu khác làm thành viên bằng hạt hồ tiêu. Ngày dùng 40g liên tục.  5. Chữa nhọt vú, tắc tia sữa, sưng đau  Mã tiền thảo một nắm, gừng sống 1 củ, giã nhỏ, chế vào một chén rượu, vắt lấy nước cốt uống, bã đắp chố đau (Nam dược thần hiệu).  6. Chữa viêm gan, gan cứng, bụng chướng hay viêm thận thủy thũng  Mã tiền thảo, ích mẫu, mốc thông, cơ xước, rễ cỏ tranh, mỗi vị 20g, sắc uống.  7. Chữa ăn nhầm các loại cá độc sinh cổ trường  Mã tiền thảo, một nắm to, sắc uống (Nam dược thần hiệu).  8. Chữa lở ngứa  Mã tiền thảo, nấu nước tắm rửa, xoa xát.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

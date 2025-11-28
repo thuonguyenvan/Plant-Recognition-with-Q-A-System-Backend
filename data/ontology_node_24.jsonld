@@ -1,0 +1,369 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vảy ốc",
+      "ten_khac": "Đậu vảy ốc, me đất, đầu mũi mác, the the",
+      "ten_khoa_hoc": "Alysicarpus vaginalis (L.) DC.",
+      "ma_taxon": "131566",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo hay cây bụi nhỏ, sống nhiều năm, phân cành ngay từ gốc, thường mọc dựa, bò dài.",
+      "rễ": "Rễ có nhiều nốt sần.",
+      "thân": "Thân và cành mảnh, nhẵn.",
+      "lá": "Lá có 1 lá chét, hình bầu dục, gốc tròn hoặc hơi hình tim, đầu nhọn, mặt trên nhẵn màu lục bóng, mặt dưới nhạt phủ lông áp sát; cuống lá có cánh tạo bởi một đường viền dạng vảy; lá kèm hình mác dài và nhọn.",
+      "hoa": "Cụm hoa mọc ở ngọn thành chùm, hoa nhiều khống cuống, xếp từng đối một, đài 4 răng họp thành hình chuông, tràng có cánh khum; nhị đơn thể, cái trên gần như rời; bầu có 4 – 7 noãn.",
+      "quả": "Quả đậu gần hình trụ, mọc đứng, có viền ngang giữa các hạt, hơi có lông.",
+      "mùa hoa": "tháng 8 – 10.",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Alysicarpus L. gồm các đại diện phân bố chủ yếu ở vùng nhiệt đới châu Á, châu Phi và một số đảo lớn ở Thái Bình Dương. Ở Việt Nam chi này có 3 loài, trong đó có loài vảy ốc trên. Cây phân bố rộng rãi và gần như có thể thấy ở nhiều địa phương, khắp từ Bắc chí Nam.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hải Dương"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tĩnh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên – Huế"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Gia Lai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắc Lắk"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bà Rịa – Vũng Tàu"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Vảy ốc là loại cỏ sống nhiều năm, ưa sáng, ưa ẩm và cũng có thể hơi chịu hạn. Cây thường mọc đám nhỏ trên đất nương rẫy cũ, ven đồi, bãi sông, ven đường đi hoặc trong các trảng cỏ thấp."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây phơi hay sấy khô, cũng có thể dùng tươi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây vảy ốc được dùng chữa bị thương, bị đòn, ngã; sắc nước uống, đồng thời với việc dùng ngoài lá non giã với giấm đắp, xoa bóp cho đỡ đau.",
+      "được_dùng": "Ở Malaysia nước sắc rễ được dùng trị ho. Ở Philippin, cây vảy ốc là một cây họ Đậu được dùng làm thức ăn tốt cho ngựa và đại gia súc (Majunath B.L. et al., 1948). Ở Đài Loan, nước sắc cây vảy ốc được dùng làm thuốc dễ tiêu, đặc biệt ở trẻ em đã ăn quá nhiều [Perry L.M., 1980: 230]. Ở Ấn Độ, cây vảy ốc được dùng trong y học dân gian trị vàng da (Sankaranarayanan A.S., 1988).",
+      "có tác dụng": "Có tác dụng hạ sốt, được dùng điều trị các bệnh sốt như sốt thông thường, sốt trong các bệnh: giun chỉ, viêm phổi, thương hàn, sốt rét (Singh V.K. et al., 1994).",
+      "sắc nước uống": "Nước sắc lá vảy ốc cùng với lá Crataeva adansonii được dùng điều trị bệnh hoa liễu (Ayyamar M. et al., 2005)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

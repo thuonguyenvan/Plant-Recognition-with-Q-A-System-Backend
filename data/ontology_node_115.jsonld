@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đào lộn hột",
+      "ten_khac": "Quả điều, macadơ, giả như thụ, swai chanti (Campuchia).",
+      "ten_khoa_hoc": "Anacardium occidentale L. (Cassavium pomiferum Lamk.).",
+      "ma_taxon": "122988",
+      "ho": "Anacardiaceae (Đào lộn hột)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Đào lộn hột là một loại cây to, cao khoảng 8-9m.",
+        "lá": "Lá mọc so le, cuống ngắn, phiến lá hơi hình trứng, nhẵn, dai, dài 10-20cm.",
+        "hoa": "Hoa nhỏ, trắng mùì thơm dịu, mọc thành chùy tận cùng.",
+        "quả": "Quả khô, không tự mở, hình thận, dài 2-3cm, vỏ ngoài cứng, trên mặt có những hõm, cuống quả phình to thành hình trái lê hay hình quả đào, to bằng nắm tay, màu đỏ, vàng hay trắng, trông toàn bộ ta có cảm tưởng như phần cuống quả phình ra là quả và phần quả thật đính trên là hạt do đó có tên là “đào lộn hột’’ nghĩa là quả đào mà hột lại chui ra ngoài.",
+        "hạt": "Hạt hình thận, chứa dầu béo."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Cuống quả khi thật chín có chất thịt ngọt, hơi chua, mùi thơm như mùi dâu chín, chứa vitamin B1 riboflavin và hàm lượng vitamin C rất cao: Gấp 10 lần trong chuối, 5 lần trong cam và chanh. So với quả màu đỏ, quả màu vàng chứa nhiều vitamin C hơn và ít riboflavin hơn. Ngoài ra còn chứa muối vô cơ, canxi, photpho và sắt.",
+        "thành phần": "Quả thực Noix de Cajou hay Noix d’acajou gồm vỏ quả cứng chiếm khoảng 69%, nhân 26% còn lại là vỏ nhân. Tất cả đều được sử dụng: Từ vỏ quả chiết bằng ête cho bôm đào lộn hột (baume de cajou) thường gọi nhầm là dầu đào lộn hột, vì đây không phải là chất béo mà là chất nhựa dầu (bôm).",
+        "thành phần": "Bôm đào lộn hột là một chất lỏng sánh, màu nâu đen nhạt, rất hắc. Thành phần chủ yếu của bôm này là cardola và axit anacardic. Người ta cho cardol là hoạt chất chủ yếu của bôm đào lộn hột. Đây là một chất lỏng màu vàng đỏ nhạt, ra ngoài trời rất chóng chuyển thành nâu, và có tác dụng gây phồng giống như sâu ban miêu. Hơi của nó cũng có tác dụng kích ứng đối với mắt, gây ho, gây viêm đường hô hấp.",
+        "thành phần": "Vỏ nhún là lớp vỏ mỏng phủ lên nhân. Thành phần chủ yếu của vỏ nhân là cardol và axit anacardic, do đó cần loại khỏi nhân khi dùng hạt.",
+        "thành phần": "Nhân hạt chứa 47,13% dầu; 9,7% hợp chất nitơ; 5,9% tinh bột. Nhân ép nguội cho chất dầu béo màu vàng nhạt, không mùi, vị và các hằng số lý hoá gần giống như hằng số lý hoá của dầu hạnh nhân. Thành phần chủ yếu cùa dầu này là sitosterin là một phytostearin đặc biệt.",
+        "thành phần": "Vỏ thân cây đào lộn hột tươi chứa 4-7% tanin catechic.",
+        "thành phần": "Nhựa đào lộn hột: Khi khía lên vỏ thân cây tươi, một chất dịch chảy ra có vị chát chứa tanin catechic, cardol và axit anacacdic.",
+        "thành phần": "Thân một số cây đào lộn hột già hoặc có bệnh chảy ra một chất gôm hình giọt dài hay ngắn, màu vàng nhạt hay nâu nhạt, tan một phần trong nước lạnh, hầu như hoàn toàn tan trong nước nóng. Thành phần chủ yếu của chất gôm này bao gồm 8% arabin, dextrin, basorin, một ít’ đường, tanin catechic, cardol và axìt anacacdic. Do chất cardol nên gôm này có tác dụng gây kích ứng."
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Quả giả đào lộn hột được xem như một nguồn vitamin C rất quan trọng dù dưới hình thức “quả” tươi hay đóng hộp. Từ “quả” tươi có thể ép được dịch ép vị ngọt, cho lên men thành một thứ rượu nhẹ thơm ngon có tác dụng lợi tiểu; dùng ngoài xoa bóp trong những trường hợp đau nhức, súc miệng chữa viêm họng, nhấm nháp để chống nôn mửa.",
+        "cong_dung_y_hoc": "Nhân đã loại hết vỏ nhân, ngon bùi như hạt dẻ hay hạt hạnh nhân, được dùng như hạt hạnh nhân trong việc chế biến bánh quy, kẹo, bánh kẹo sôcôla. Dùng tươi hay rang lên. Khi ran; cần chú ý cho tinh dầu bay hết đi để tránh tái dụng kích ứng.",
+        "cong_dung_y_hoc": "Bôm đào lộn hột dùng chữa chai chân, vết loét, nứt nẻ chân.",
+        "cong_dung_y_hoc": "Dầu nhân được dùng chế thuốc hay đổ ăn giống như dầu hạt dẻ và dầu hạnh nhân đắng.",
+        "cong_dung_y_hoc": "Nguồn: Những cây thuốc và vị thuốc Việt Nam"
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Đào lộn hột có lẽ vốn là một cây nguồn gốc những nước vùng nhiệt đới châu Mỹ, nhưng từ lâu đã được đưa đi trồng rộng rãi ở nhiều nước nhiệt đới châu Á như Ân Độ, Việt Nam (miền Nam), Campuchia. Đào lộn hột sống được trên những đất pha cát mà nhiều cây khác không sống được.",
+        "được_dùng": "Rất nhiều bộ phận của cây đào lộn hột được khai thác để sử dụng:",
+        "được_dùng": "Phần cuống quả phình ra mà nhân dân vẫn thường gọi là quả được sử dụng trên thị trường với tên “táo ca giu” (Pomme de Caiou) được dùng tươi hay đóng hộp. Phần quả thật (nhân dân gọi nhầm là hạt) được sử dụng trên thị trường thế giới với tên “hạt giẻ ca giu” (Noix de Cajou). Nhựa vỏ và thân cây đào lộn hột đều được sử dụng làm thuốc và làm thực phẩm."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lộc mại",
+      "ten_khac": "Hốc kheo, Lộc mại",
+      "ten_khoa_hoc": "Mercurialis indica Lour.",
+      "ma_taxon": null,
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá đơn, có cuống, có lá kèm, mép có răng cưa đều,dài 10-20cm, rộng 5-10cm.",
+      "hoa": "Hoa đực có cuống, mọc thành bông dài 10-20cm, thõng xuống. Hoa cái nhỏ li ti mọc đơn độc hay thành từng đôi, hầu như không cuống.",
+      "quả": "Quả ba mảnh vỏ, trên mặt có những gai nhỏ, ngấn lì.",
+      "cây": "Cây nhỏ, cao 2-3m, có nhiều cành nhỏ, giòn.",
+      "mặt": "Đặc biệt trên mặt thân và cành có những bì khổng hình châm trảng lâm tấm.",
+      "đầu": null,
+      "thân": null,
+      "cuống": null,
+      "gốc": null,
+      "cao": null,
+      "rễ": null,
+      "củ": null,
+      "mọc": null,
+      "mùa hoa": null,
+      "mùa quả": null
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây lộc mại của ta chưa thấy có tài liệu nghiên cứu.",
+      "gồm chất": "Một loại lộc mại- Mercurialis annua L. (hay Foirolle-Pháp) được nghiên cứu và thấy chất mono và trimetylamin, một chất màu xanh chỉ xuất hiện khi tế bào đã chết, một chất đắng, gôm, tinh bột, chất béo, … tuy nhiên hoạt chất cũng chưa rõ.",
+      "Các hợp chất": null,
+      "chứa": null,
+      "triết xuất": null,
+      "đã nghiên cứu": null,
+      "tìm thấy": null,
+      "thủy phân": null,
+      "các hoạt chất": null,
+      "tinh dầu chứa": null,
+      "có hoạt chất": null,
+      "dấu hiệu đặc trưng": "Chỉ mới biết rằng nhân dân châu Âu dùng làm thuốc tẩy, chất gây tẩy này khi phơi khô bị mất đi, nhiệt độ cao cũng bị phá huỷ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính vị công năng: Lộc mại có vị nhạt, tính bình, có tác dụng nhuận tràng (liều nhỏ), tẩy (liều lớn), tiêu độc, sát trùng.",
+      "được_dùng": "Thuốc dùng trong nhân dân chữa táo bón, đau bụng, kiết lỵ cấp tính, da vàng.",
+      "làm thuốc": "Dùng ngoài chữa lở ngứa (nấu đặc rửa).",
+      "có tác dụng": "Uống mỗi ngày 10- 20g lá khô hoặc 20-40g lá tươi,sắc uống. Lộc mại châu Âu là một thứ thuốc tẩy có tác dụng thông mật và tháo nước, tuy nhiên mỗi người đánh giá một cách, người cho là tốt, người cho là không có tác dụng. Nhưng chính là do cách chế biến sử dụng. Chỉ có dạng dùng tươi hay dịch ép là có tác dụng. Tại châu Âu người ta dùng làm thuốc tẩy cho phụ nữ có thai và làm cho cạn sữa. Còn dùng làm thuốc thông tiểu cho những người bị bệnh gút và bệnh Brai (Bright).",
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "chữa": "Châu Âu dùng dưới dạng thuốc mật hay thụt (trẻ em 10 đến 40g, người lớn 30-60g). Có khi dùng sắc 20g trong một lít nước để thụt.  Đơn thuốc có lộc mại  Dịch ép lá lộc mại 30ml, mật ong 30g, trộn đều, đun sôi. Lọc mà uống trong ngày làm thuốc nhuận tẩy thông mật."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây lộc mại thường mọc hoang phổ biến ở rừng núi và đồng bằng các tỉnh Nghệ An, Hà Tĩnh, Thanh Hoá, Hà Giang, Hà Tây, Bắc Cạn, Thái Nguyên, Hoà Bình.",
+      "làm thuốc": "Người ta hái lá vế làm thuốc.",
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": "Dùng tươi hay phơi khô.",
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

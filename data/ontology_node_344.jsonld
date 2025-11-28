@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hột mát",
+      "ten_khac": "Hột mát, Cây xa, thàn mát",
+      "ten_khoa_hoc": "Antheroporum pierrei Gagnep.",
+      "ma_taxon": null,
+      "ho": "Fabaceae (Cánh bướm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây hột mát là một cây to, cao từ 8-24m.",
+      "lá": "Lá kép lông chim, gồm 5,7 hoặc 9 lá chét, mọc đối, phiến lá chét dai, nhẵn, dài 7-11cm, rộng 3-4cm. cuống chung dài 9-12cm, cuống lá chét dài 6-7mm.",
+      "hoa": "Cụm hoa mọc thành chùm ở kẽ lá hoặc ở đầu cành. Hoa màu hồng hay tím nhạt.",
+      "quả": "Quả giáp dài 6cm, rộng 3,5cm, không cuống, dày 1,5-12mm. Mỗi quả có một hạt. Hạt hình trứng dài 16mm, rộng 14mm, dày 8-10mm, màu đỏ nâu, bóng"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc hoang tại miền rừng núi Việt Nam, nhưng nhiều và hay được sử dụng tại miền Nam Trung Bộ và Nam Bộ, tại Kỳ Anh (Hà Tĩnh), Bố Trạch, Quảng Trạch (Quảng Bình) nhân dân thường trồng quanh vườn",
+      "mùa thu hoạch": "vào tháng 5-6"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Năm 1940, F.Guichard (Rev. Med. Chirurg Fr. Extr. Orient, 3) đã nghiên cứu sơ bộ hột mát và thấy trong hột mát có một số chất dầu, các chất gồm, một số chất nhựa có độc tính đối với cá, một ít rotenone một chất có tinh thể hình lăng trụ, chảy ở 2570, cho màu đỏ vàng với axit sunfuric, không tan trong nước, một chất có tinh thể hình kim màu vàng, độ chảy 1950, cho với axit sulfuric màu đỏ máu, không phải ancaloit, cũng không phải glucozit, không độc với cá, một saponin trung tính độc và một chất saponin axit."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hiện cây này không được dùng làm thuốc. Nhân dân chỉ dùng hạt tán nhỏ, cho xuống nước để duốc cá. Có thể nghiên cứu để làm thuốc trừ sâu bọ hại hoa màu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dền gai",
+      "ten_khac": "Rau giền gai, Thích hiện, Giền hoang, Phjăc hôm nam (Tày), La rum giê la (Bana)",
+      "ten_khoa_hoc": "Amaranthus spinosus L.",
+      "ma_taxon": "62917",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo hàng năm, cao 0,30-0,70m, phân cành nhiều, không lông.",
+      "lá": "Lá mọc so le, hình thuôn dài, cuống dài có cánh, ở gốc có 2 gai dài 3-15mm, mặt trên phiến lá màu xanh dợt.",
+      "hoa": "Hoa mọc thành xim và sắp xếp sít nhau ở nách lá thành những bông dài, các lá bắc như gai 7-8mm.",
+      "quả": "Quả là một túi hình trứng nhọn một đầu. Hạt đen óng ánh.",
+      "mùa hoa": "tháng 9 – 10",
+      "mùa quả": "tháng 9 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của vùng nhiệt đới châu Á, nay trở thành liên nhiệt đới, mọc dại ở bãi hoang, ven đường quanh nhà. Dền gai thường mọc trên đất ẩm ở bãi sông, ruộng cao bỏ hoang và ven đường đi. Cây con mọc từ hạt xuất hiện từ cuối mùa xuân đến suốt mùa hè, sinh trưởng phát triển nhanh, rồi tàn lụi khoảng giữa mùa thu. Dền gai là cây có nhiều hoa quả và hạt giống. Ở một số nơi trên các bãi sông, cây mọc gần như thuần loại tới hàng ngàn mét vuông. Ngọn và lá non là thức ăn cho gia súc nhưng do có nhiều gai, cây trở thành đối tượng gây khó khăn trong quá trình canh tác và thường bị loại trừ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và lá. Có thể thu hái quanh năm, dùng toàn cây rửa sạch, thái nhỏ, phơi khô. Có thể đốt thành tro, dùng dần."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ chứa spinasterol. Toàn cây chứa sterol. Phần trên mặt đất chứa rutin 1,9%"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dền gai có vị ngọt nhạt, tính hơi lạnh; có tác dụng thanh nhiệt, lợi tiểu, trừ thấp, thu liễm ngừng tả."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá và ngọn non dùng luộc ăn như các loại rau dền. Thường dùng trị phù thũng, bệnh về thận, bệnh lậu, chữa lỵ có vi khuẩn và làm thuốc điều kinh. Phần cây trên mặt đất được dùng làm thuốc dịu để trị bỏng, đắp tiêu viêm mụn nhọt. Lá có tính long đờm và được dùng trị ho và các bệnh về đường hô hấp. Hạt có thể dùng như hạt cây Mào gà đắp để băng bó chỗ gãy, trật đả ứ huyết. Nhân dân còn dùng hạt và rễ trị bệnh đau tim. Ở Ấn Độ, rễ được dùng trị rong kinh, lậu, eczema, đau bụng, làm tiết sữa. Rễ và lá sắc cho trẻ em uống để nhuận tràng; còn dùng đắp làm dịu apxe, mụn nhọt và bỏng. Cây dùng trị rắn c  Đơn thuốc:  Trật đả, ứ huyết: Dùng cành lá hay toàn cây nấu nước uống, mỗi ngày 10-15g; hoặc dùng tro uống với nước chín hay nước trà, mỗi lần 8-12g. Lậu: Dùng 5-6 rễ non nhai như nhai trầu trong một ngày liên tục trong vòng một tuần lễ thì đỡ. Lỵ vi khuẩn và viêm ruột nhiệt tả: Dùng 160g lá tươi hay 80g lá khô sắc uống; hoặc phối hợp với cây Mã đề, bằng nửa lượng Dền gai, cùng sắc uống. Mụn nhọt chưa vỡ: Rễ rau dền gai rửa sạch, giã nát, đắp lên mụn nhọt 2 – 3 tiếng thay băng, ngày đắp 2 – 3 lần,  có tác dụng làm nhanh vỡ mủ. Ho có đờm: Dùng thân, lá cây rau dền gai 50g, cam thảo đất 16g, lá bồng bồng 20g, kim ngân hoa 20g. Rửa sạch tất cả các vị thuốc, cho vào ấm đổ 500ml nước sắc còn 250ml, chia 2 – 3 lần. Dùng liền 5 ngày. Hoặc dùng thân, lá cây rau dền gai 50g, cam thảo đất 16g, lá húng chanh 16g, vỏ rễ dâu tằm 16g. Rửa sạch tất cả các vị thuốc, cho vào ấm đổ 500ml nước sắc còn 250ml, chia 2 – 3 lần. Dùng liền 5 ngày. Viêm họng, đau họng: Thân, lá cây rau dền gai, lượng vừa đủ, thêm một ít muối hạt, 1 – 3 lát gừng tươi. Tất cả nhai nát, nuốt nước dần. Ngày nhai, ngậm 1 – 2 lần đến khi đỡ đau họng. Hỗ trợ điều trị sỏi thận: Rễ rau dền gai (sao vàng), vỏ quả bí đao 20g,  kim tiền thảo, mã đề, rễ thiên lý, rễ cỏ tranh, đậu đen (sao thơm) mỗi thứ 12g. Rửa sạch tất cả các vị thuốc, cho vào ấm đổ 500ml nước sắc còn 250ml, chia 2 – 3 lần. Dùng 10 ngày một liệu trình. Bỏng nhẹ: Thân, lá cây rau dền gai rửa sạch, giã nát, đắp lên vết bỏng. Chữa kinh nguyệt không đều: Rau dền gai 15g, bạc thau 20g. Rửa sạch tất cả các vị thuốc, cho vào ấm đổ 450ml nước sắc còn 200ml, chia 2 – 3 lần. Dùng liền 10 ngày. Chữa bạch đới, khí hư: Rễ rau dền gai 20g, lá bạc hà 16g, phơi khô, thái nhỏ, sắc với 400ml nước lấy 200ml, chia làm 2 lần uống trong ngày. Dùng 7-10 ngày. Chữa da nổi mẩn ngứa do tiếp xúc (rơm rạ): Dền gai tươi, rau sam tươi, lá hẹ tươi (hoặc lá bạc hà tươi) các vị đều bằng nhau. Giã nát đắp vào chỗ da nổi mẩn, mỗi ngày 2 – 3 lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

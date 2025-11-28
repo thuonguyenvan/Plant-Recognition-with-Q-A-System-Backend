@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạng hoa",
+      "ten_khac": "Lẻ bạn, Sò huyết, Bạng hoa",
+      "ten_khoa_hoc": "Tradescantia spathacea Sw.",
+      "ma_taxon": "169878",
+      "ho": "Commelinaceae (Thài lài)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sò huyết là một loại cỏ sống dai, cao tới 50cm, thân thô ngắn, hoặc không có thân lá mọc như ngói lợp",
+      "lá": "phiến lá dài 20-30cm, rộng 4-6cm, mép nguyên đầu nhọn, trông hơi mọng nuớc, mặt dưới màu tím sẫm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, có tổng bao màu tím nhạt trông giống hình con sò, do đó có tên cây sò huyết, tên Trung Quốc: bạng cũng là sò. Mặt trong bao hoa màu xanh nhạt. Cụm hoa gồm nhiều hoa màu trắng.",
+      "cuống": "Cuống cụm hoa mọng nước.",
+      "mùa hoa": "Mùa hoa kéo dài từ mùa xuân đến mùa thu ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân Việt Nam và nhân dân vùng Quảng Tây coi hoa cây sò huyết này là một vị thuốc bổ, có tác dụng chữa các chứng ho ra máu, đi ngoài ra máu, các chứng chảy máu. Ngày dùng 40-80g hoa tươi sắc uống hoặc giã vắt lấy nước mà uống. Vị thuốc phổ thông, cần chú ý nghiên cứu.",
+      "chữa": "Hỗ trợ điều trị viêm khí quản: Hoa sò huyết 15g, rửa sạch, thái nhỏ, trộn với đường phèn hoặc mật ong 10g. Đem hấp cách thủy trong 15-20 phút. Để nguội, uống làm 2-3 lần trong ngày. Hoặc có thể áp dụng cách sau: Hoa sò huyết 15g, vỏ núc nác 5g, thái nhỏ, sắc với 400ml nước còn 100ml, uống làm hai lần trong ngày.",
+      "chữa": "Chữa ho do phế nhiệt, đờm vàng, đặc khó khạc ra: Hoa sò huyết 30-40g, để tươi, rửa sạch, giã nát, thêm nước, gạn uống hoặc phơi khô, sắc lấy nước đặc uống làm một lần trong ngày, dùng liền 3 ngày.",
+      "chữa": "Chữa cảm sốt, ho, đau đầu: Hoa sò huyết 15g, rễ cây chòi mòi 10g, vỏ cây kim phượng hoa vàng 10g, phơi khô, thái nhỏ, sắc với 400ml nước còn 100ml, uống làm hai lần trong ngày. Uống 3-5 ngày.",
+      "chữa": "Chữa tiểu tiện không thông: Hoa sò huyết 15g, diếp cá 15g, rau má 20g, rễ cỏ tranh 10g, râu ngô 10g. Tất cả dùng tươi, rửa sạch, sắc uống ngày một thang, chia 2 lần uống trong ngày. Dùng liền 7 ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây này mọc hoang và được trồng ở khắp nơi trong nước ta để làm cảnh vì cây tím đẹp, cụm hoa hình đặc biệt, màu dịu dàng đẹp mắt. Ngoài ra, suốt mùa hoa, người ta hái hoa phơi khô để làm thuốc. Nhưng nhiều người cho rằng dùng tuơi mới tốt."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Rau tàu bay",
+            "ten_khac": "",
+            "ten_khoa_hoc": "Crassocephalum crepidioides (Benth.) S. Moore",
+            "ma_taxon": "160957",
+            "ho": "Cúc (Asteraceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Rau tàu bay là một loại cây thân thảo mọc thẳng, có thể cao từ 20 đến 120 cm. Thân cây có các đường gân dọc rõ ràng.",
+            "lá": "Lá của cây có dạng màng mỏng, hình bầu dục hoặc thuôn dài, dài khoảng 7-12 cm, rộng 4-5 cm. Phần đầu lá nhọn, gốc lá có hình dạng hình nêm. Mép lá có thể có răng cưa không đều hoặc răng cưa kép, đôi khi còn có dạng xẻ lông chim ở phần gốc. Cả hai mặt lá thường không có lông hoặc gần như không có lông. Cuống lá dài khoảng 2-2.5 cm.",
+            "hoa": "Hoa của rau tàu bay mọc thành cụm ở đầu cành, tạo thành dạng tán xếp chồng, có đường kính khoảng 3 cm. Lá bắc của hoa xếp thành một lớp, hình mũi mác hẹp, dài bằng nhau, có viền mỏng dạng màng và đầu có một chùm lông nhỏ. Mỗi hoa nhỏ bên trong đều là hoa lưỡng tính dạng ống, có màu đỏ nâu hoặc cam đỏ. Cánh hoa phía trên có năm răng nhọn. Nhụy hoa có đầu hình cầu nhỏ, phân nhánh, đầu nhụy có lớp lông nhỏ như hạt sần.",
+            "quả": "Quả của rau tàu bay có dạng trụ thuôn dài, màu đỏ thẫm, có gờ dọc và lông bao phủ. Phần lông tơ trên quả có số lượng rất nhiều, màu trắng, mềm mịn như lụa và dễ rụng.",
+            "mùa hoa": "Cây thường ra hoa từ tháng 7 đến tháng 12 hàng năm",
+            "mùa quả": "Cây thường ra hoa từ tháng 7 đến tháng 12 hàng năm"
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Crassocephalum Moench chỉ có một loài là rau tàu bay ở Việt Nam. Cây có nguồn gốc từ vùng nhiệt đới châu Phi và Madagasca, sau phát tán đi khắp các vùng nhiệt đới khác, nhất là các nước ở vùng Nam Á, Đông Nam Á và cả ở châu Đại Dương. Ở Việt Nam, rau tàu bay phân bố rộng rãi khắp các địa phương, từ vùng đồng bằng đến miền núi cao lạnh khoảng 1.500m trở xuống.",
+            "Đặc điểm sinh trưởng": "Rau tàu bay ưa khí hậu ấm áp, ưa sáng, ẩm ướt và phát triển tốt trên đất màu mỡ.",
+            "thường_mọc": "Cây thường mọc hoang ở các khu vực có độ cao từ 300 đến 1800 mét, phổ biến tại:  Đất trống ven đường, bờ suối, hoặc trong các bụi cây. Dưới tán rừng trên sườn đồi, nơi có độ ẩm cao. Khu vực râm mát gần mương nước hoặc những vùng đất ẩm."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Ngọn non và lá."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Rau tàu bay chứa nước 93%, protein 2,5%, glucid 1,9%, cellulose 1,69%, dẫn chất không protein 3,7%, chất khoáng toàn phần 0,9%, trong đó có Ca 81 mg%, P 25%, caroten 3,4mg% và vitamin C 10mg% (Võ Văn Chi, 1997)."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": ""
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Rau tàu bay được dùng làm rau ăn sống hoặc luộc, xào, nấu canh, muối dưa. Khi nấu canh phải để lắng gạn, bỏ hết dầu, mới đỡ mùi hắc. Theo sách y học Bản Thảo Cương Mục, rau tàu bay có các công dụng sau: An thần, điều hòa khí huyết – Giúp thư giãn tinh thần, ổn định khí huyết. Bổ tỳ vị, hỗ trợ tiêu hóa – Giúp tăng cường chức năng tiêu hóa, tốt cho dạ dày và đường ruột. Tiêu đờm, lợi tiểu – Hỗ trợ giảm đờm trong các bệnh về đường hô hấp và giúp lợi tiểu. Ngoài ra, rau tàu bay còn được dùng để hỗ trợ điều trị các bệnh như: Cảm mạo, sốt cao Kiết lỵ, viêm ruột Nhiễm trùng đường tiết niệu Chữa rắn cắn Phù do suy dinh dưỡng Viêm tuyến vú ở phụ nữ cho con bú Ở Campuchia, nhân dân dùng rau tàu bay để điều trị các biến chứng sau khi sinh. Ở Nepal, cả cây hoặc rễ rau tàu bay chế thành dạng bột nhão đắp trị vết đứt, vết thương. Dịch ép lá cây rau tàu bay bối cũng trị vết thương. Ở Nigeria, người ta dùng lá cây rau tàu bay chế thành thuốc xức dùng ngoài hoặc thuốc sắc uống để làm thuốc giảm đau trị nhức đầu và viêm gan."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Cần lưu ý một số điều khi sử dụng rau tàu bay, đó là:  Để khử mùi hăng của rau tàu bay, khi nấu canh bạn nên lắng phần dầu thừa nổi trên mặt nước, sau đó cho gia vị vào, sẽ ngon hơn. Không nên dùng nhiều hoặc trồng rau tầu bay làm rau vì ăn nhiều cũng không tốt. Nên kết hợp với nước mắm chanh hoặc làm các món gỏi với chanh hoặc giấm để tăng khả năng hấp thụ sắt."
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

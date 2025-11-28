@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đại hoàng",
+      "ten_khac": "Đại hoàng",
+      "ten_khoa_hoc": "Rheum palmatum L.",
+      "ma_taxon": "371577",
+      "ho": "Polygonaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Chưởng diệp đại hoàng-Rheum palmatum L. là một cây sống lâu năm, rễ thô, to, thân cao tới 2m, giữa rỗng, mặt nhẵn.",
+      "lá": "Lá ở dưới to dài, có cuống dài, phiến lá hình tim cắt thành 3-7 thuỳ, mép thuỳ hơi có răng cưa hoặc hơi cắt, lá ở phía trên thân nhỏ hơn.",
+      "hoa": "Cụm hoa mọc thành chùm khi còn non, hoa có màu tím đỏ.",
+      "mọc": "Cây này chủ yếu mọc hoang và một phần được trồng ở Tứ Xuyên, Cam Túc (Trung quốc) . Đường cổ đặc đại hoàng Rheum tanguticum Maxim ex Regel cũng là một cây sống lâu năm cao tới 2m, lá có phiến cắt rất sâu thành thùy. Cây này mọc hoang ở Tứ Xuyên, Thanh Hải, Cam Túc. Tại Cam Túc có trồng một số Cây dược dụng đại hoàng (Rheum officinale Baill.) cũng là một cày sống lâu năm, nhưng thấp hơn, chỉ cao chừng 1,50m. Lá mọc so le có cuống dài; phiến lá hình trứng phía cuống hình tim, đường kính 40-70cm, phiến không chia thuỳ mà chỉ cắt sâu chừng 1/4. Hoa màu xanh nhạt hay vàng trắng nhạt ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong đại hoàng có hai loại hoạt chất tác dụng trái ngược nhau.  Loại hoạt chất có tính chất thu liễm-là hợp chất có tanin (rheotannoglucozit). Loại hoạt chất có tác dụng tẩy: Rheoanthraglucozit.",
+      "gồm chất": "Thành phần chủ yếu trong các rheotanoglucozit là glucogalin. Khi thuỷ phân, glucogalin sẽ cho axit galic và glucoza. Ngoài ra còn có axit galic, catechin và terarin. Khi tetrarin chịu tác dụng của axit loãng sẽ cho glucozareosmin (rheosmin), axit xinamic và axit galic.",
+      "Các hợp chất": "Tỷ lệ các antraglucozit toàn bộ trong đại hoàng vào chừng 2-4,5%, trong đó một phần ở trạng thái tự do, một phần ở trạng thái kết hợp. Theo Wasicky và Heinz thì trong đại hoàng tươi chủ yếu có antraglucozit ở dạng kết hợp mà không có ở dạng tự do. Tuy nhiên, theo 1. Kroeber (1923), tác dụng tẩy của đại hoàng không phụ thuộc hoàn toàn vào tỷ lệ antragliicozit thấp mà vẫn tác dụng tẩy mạnh hoặc có loại đã lấy bớt antraglucozit đi rồi mà tác dụng vẫn còn."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đại hoàng đuợc dùng cả trong đông y và tây y. Theo tài liệu cổ đại hoàng vị đắng tính hàn, vào 5 kinh tỳ, vị, can, tâm bào và đại trường. Có tác dụng hạ vị tràng tích trệ, tả huyết phận thực nhiệt hạ ứ huyết, phá trưng hà (kết báng ở bụng) hàn thuỷ. Dùng chữa hạ lỵ, ứ huyết, kinh bế thuỷ thũng, thắp nhiệt gây vàng da, ung thũng đinh độc.",
+      "được_dùng": "Hiện nay dùng với liều nhẹ làm thuốc giúp sự tiêu hoá, chữa kém ăn, ăn không tiêu, da vàng, hay đau bụng. Ngày uống 0,10-0,50gam dưới dạng sắc, bột, hay thuốc viên. Dùng với liều cao làm thuốc tẩy nhẹ, dùng cho người đầy bụng, đi lỵ, hoàng đản (da và mắt vàng). Ngày uống 3-10g. Thường dùng phối hợp với các vị thuốc khác như chỉ thực, hậu phác, hoàng liên, mang tiêu v.v…",
+      "chữa": "Đơn thuốc có đại hoàng  1. Chữa đau bụng, bí đại tiện, nôn mửa  Đại hoàng cam thảo thang: Đại hoàng 7g, cam thảo 4g, nước 300ml, sắc còn l00ml. Uống lúc đói (đơn thuốc của Trương Trọng Cảnh).  2. Chữa hắc lào.  Đại hoàng 10, dấm 5ml, rượu 50ml. Ngâm trong 10 ngày, lấy ra bôi lên các vết hắc lào đã rửa sạch"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Những loài đại hoàng đang được di thực vào nước ta. Cây mọc tốt, ưa khí hậu mát ẩm, độ cao trên l.000m thì thích hợp hơn. Hiện ta phải nhập của Trung Quốc: Trước kia nhập cả của một số nước Châu Âu.",
+      "làm thuốc": "Thường hái thân rễ của những cây đã sống trên 3 năm. Đào vào các tháng 9-10. Đào về rửa sạch đất cát, cắt bỏ phần trên mặt đất, rễ nhỏ, cạo vỏ ngoài, củ to quá có thể bổ hai hay tư mà phơi cho dễ, dùng lạt xâu treo trong thềm nhà để cho khô dần hoặc có thể sấy nhẹ cho khô. Sau khi khô là dùng được (nếu dùng trong nước) hoặc cạo bỏ vỏ ngoài rồi đánh bóng nếu để xuất."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

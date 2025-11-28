@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chuối tiêu",
+      "ten_khac": "Chuối tiêu, Hương tiêu",
+      "ten_khoa_hoc": "Musa paradisiaca L.",
+      "ma_taxon": "170883",
+      "ho": "Musaceae (Chuối)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Chuối tiêu thuộc loại cây thân giả, Thân giả được hình thành từ nhiều lớp bẹ lá chồng lên nhau, tạo thành một thân cây tròn, mềm và cao. Cây cao từ 2 – 3.5m, sống lâu năm, thân cây tròn, mềm, thẳng, có bẹ lá.",
+      "lá": "Lá chuối tiêu to, dài, hình bầu dục, có màu xanh đậm. Phần giữa lá (eo lá) thường có màu tím đỏ rất đặc trưng. Lá chuối mọc so le nhau và xếp thành tầng, tạo nên tán lá rộng. Cuống hình tròn có khuyết rãnh.",
+      "hoa": "Hoa chuối tiêu mọc thành buồng, mỗi buồng có nhiều nải. Hoa chuối thường có màu tím nhạt hoặc trắng.",
+      "quả": "Quả chuối tiêu có hình dáng cong như lưỡi liềm, mỗi nải có từ 10-15 quả. Khi chín, quả chuối có màu vàng tươi, thịt quả mềm, ngọt và thơm.Quả chuối có vị ngọt, tính rất lạnh (tính hàn), không độc.",
+      "củ": "Phần dưới thân giả là củ chuối. Củ chuối chứa nhiều chất dinh dưỡng và là nơi dự trữ thức ăn cho cây.",
+      "mọc": "Xung quanh củ chuối có nhiều mầm ngủ, đây là nguồn gốc để cây chuối sinh sôi nảy nở."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Một quả chuối tiêu trung bình (khoảng 100g) chứa khoảng 89-100 calo, tùy thuộc vào kích thước và độ chín. Dưới đây là chi tiết hơn:  Chuối nhỏ (khoảng 80-100g): 70-90 calo. Chuối trung bình (khoảng 115-120g): 100-105 calo. Chuối lớn (khoảng 150g): 120-135 calo.  Chuối tiêu là nguồn cung cấp năng lượng nhanh chóng nhờ chứa carbohydrate dễ tiêu hóa. Đồng thời, nó còn chứa nhiều dưỡng chất khác như kali, vitamin B6, vitamin C, và chất xơ, rất tốt cho sức khỏe."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chủ yếu có chứa protein, tinh bột, chất béo, các loại đường, calci, phốt-pho, kali, kẽm, vitamin A, C, E, chất gôm, vitamin B11, cụ thể là:",
+      "gồm chất": "Trong 100g phần ăn được, có bột đường (27,7g), chất đạm (1,1g), nước (74,1g), sinh tố C (9 mg), B1 (0,03 mg), B2 (0,04 mg), Caroten (359 Unit), Calcium (11 mg), Magnesium (42 mg), Kalium (279 mg), Sắt (0,56mg), 8,6% Fructos, 4,7% Glucos, 13,7% Sacaros.",
+      "dấu hiệu đặc trưng": "Đặc biệt trong chuối có nhiều Pectin, là 1 Glucid không có giá trị về mặt năng lượng nhưng là chất giúp cho sự tiêu hóa hấp thu tốt, chống nhiễm trùng đường ruột. Chuối cung cấp nhiều năng lượng nhất (trên dưới 100 Calori/100g nạc chuối chín tươi) vì chuối chứa nhiều bột đường nhất."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chuối là một loại trái cây phổ biến, giàu dinh dưỡng và mang lại nhiều lợi ích cho sức khỏe. Dưới đây là một số công dụng chính của quả chuối:"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Chuối tiêu là một loại trái cây phổ biến và giàu dinh dưỡng, nhưng việc tiêu thụ quá nhiều có thể gây ra một số tác hại không mong muốn cho sức khỏe. Dưới đây là những tác hại phổ biến nhất:"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cam xũng",
+      "ten_khac": "Cam xũng, Đơn lưỡi hổ, Lưỡi cọp, Lưỡi hùm, Cam sũng",
+      "ten_khoa_hoc": "Sauropus rostratus Miq.",
+      "ma_taxon": null,
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thuộc loại cây bụi thường xanh nhỏ, có thể cao tới 40cm. Đặc điểm nổi bật của cây là cành nhỏ uốn lượn theo hình chữ “Z”, trên cành có một lớp lông mịn rất nhỏ, khó nhận thấy.",
+      "lá": "Lá đơn, mọc so le, thường tập trung ở đầu cành. Cuống lá ngắn, có lá kèm hình tam giác, khi già chuyển sang màu vàng nhạt. Hình dạng lá: Hình mũi mác thuôn dài hoặc hình ngược mũi mác, một số lá phía dưới có thể gần như hình trứng. Kích thước lá: Dài 5-8cm, rộng 2.5-3.5cm. Đầu lá: Tròn, hơi lõm nhẹ, có một mũi nhọn nhỏ. Gốc lá: Hẹp hoặc gần như tròn. Rìa lá: Nguyên (không có răng cưa). Mặt trên: Xanh đậm, mặt dưới: Xanh nhạt. Gân giữa: Ở phần gốc có một lớp lông mịn khi còn non, nhưng khi già sẽ trở nên nhẵn.",
+      "hoa": "Mọc thành cụm ở nách lá hoặc tạo thành một cụm hoa ngắn. Hoa đơn tính, cả hoa đực và hoa cái mọc trên cùng một cây. Màu sắc hoa: Màu tím đậm. Cuống hoa ngắn. Hoa đực: Đài hoa nhỏ, hơi dày.Nhị hoa hình bầu dục, hơi dày, hơi nhô ra ngoài. Hoa cái: Vòi nhụy mảnh, chẻ đôi ở đầu.",
+      "quả": "Hình dạng: Giống như hạt đậu Hà Lan, có cuống ngắn. Bên ngoài được bao phủ bởi đài hoa tồn tại (đài hoa vẫn bám vào quả khi quả phát triển)."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây có nhiều ở các tỉnh miền Bắc Việt Nam. Tại Trung Quốc, cây xuất hiện chủ yếu ở Phúc Kiến, Quảng Đông, Quảng Tây. Ngoài ra, cam xũng cũng được trồng nhiều ở bán đảo Mã Lai và Ấn Độ.",
+      "thường_mọc": "Môi trường sống: Thường được trồng làm cảnh hoặc mọc tự nhiên ở thung lũng, sườn núi, nơi có độ ẩm cao, đất màu mỡ và nằm trong khu rừng rậm. Cây cam xũng ưa phát triển ở nơi đất tơi xốp, thoát nước tốt và môi trường ẩm ướt.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "các tỉnh miền Bắc Việt Nam"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và hoa – Folium et Flos Sauropi Rostrati."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Một nghiên cứu được thực hiện tại Đại học Y học Cổ truyền Quảng Tây, Trung Quốc đã phát hiện trong lá cây Long lỵ diệp có chứa 12 hợp chất quan trọng. Các hợp chất này bao gồm N-triacontanol, axit 3-acetoxy caffeic, β-sitosterol, sitosterol oleate, -10-Eicosenoic acid, 1,3-tetradecane axit diglyceride, axit lauric, anhydrid thioacetic, axit linoleic, caroten, 3-hydroxy-2-hydroxymethyl-pyran-4-ketone và isoquercitrin. Những thành phần này có thể góp phần tạo nên các tác dụng dược lý của cây, bao gồm kháng viêm, kháng khuẩn và hỗ trợ sức khỏe tổng thể."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây cam xũng có công dụng nhuận phổi, giảm ho, hỗ trợ tiêu hóa, được dùng để chữa ho, đau họng, viêm phế quản cấp, táo bón.  Ngoài ra, nghiên cứu hiện đại cho thấy cây có tác dụng kháng khuẩn. Cụ thể, chiết xuất từ cây có khả năng ức chế viêm cấp và mạn tính, giảm đau ngoại vi nhưng không ảnh hưởng đến hệ thần kinh trung ương. Ngoài ra, cây còn có tác dụng kháng khuẩn mạnh đối với nhiều loại vi khuẩn như tụ cầu vàng, tụ cầu vàng kháng thuốc, E. coli, trực khuẩn mủ xanh, liên cầu khuẩn nhóm A và nhóm B."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Khi sử dụng cam xũng để hỗ trợ điều trị bệnh, bạn cần lưu ý những điểm sau để đảm bảo an toàn và hiệu quả: 1. Kiểm soát liều lượng  Không nên dùng quá nhiều cam xũng trong một lần hoặc uống liên tục trong thời gian dài, tránh gây tác dụng phụ như rối loạn tiêu hóa hoặc ảnh hưởng đến cơ thể.  2. Thận trọng với người có cơ địa dị ứng  Nếu bạn có tiền sử dị ứng với thực vật hoặc dược liệu thiên nhiên, hãy thử với liều lượng nhỏ trước khi sử dụng. Nếu xuất hiện các dấu hiệu như phát ban, nổi mề đay, ngứa ngáy hoặc sưng tấy, hãy ngừng dùng ngay và tham khảo ý kiến bác sĩ.  3. Người có thể trạng hàn không nên dùng  Cam xũng có tính hàn, vì vậy người có thể trạng lạnh hoặc thường xuyên bị tay chân lạnh, đau bụng do lạnh nên hạn chế sử dụng để tránh làm trầm trọng thêm tình trạng.  4. Không dùng cho người bị rối loạn tiêu hóa do hàn  Những người có hệ tiêu hóa yếu, dễ bị đau bụng, tiêu chảy, đầy hơi do lạnh không nên sử dụng cam xũng vì có thể làm tăng tình trạng khó tiêu.  5. Phụ nữ mang thai không nên dùng  Cam xũng có thể ảnh hưởng đến thai kỳ, vì vậy phụ nữ mang thai nên tránh sử dụng để đảm bảo an toàn cho cả mẹ và bé.  6. Người bị huyết áp thấp hoặc có bệnh lý liên quan đến đông máu cần cẩn trọng  Cam xũng có thể làm hạ huyết áp, do đó không phù hợp với người có huyết áp thấp. Ngoài ra, nó có thể có tác dụng chống đông máu nhẹ, nên những người mắc bệnh liên quan đến rối loạn đông máu hoặc đang dùng thuốc chống đông nên tham khảo ý kiến bác sĩ trước khi sử dụng.  Hãy sử dụng cam xũng một cách hợp lý để phát huy tối đa tác dụng mà không gây ảnh hưởng đến sức khỏe!"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

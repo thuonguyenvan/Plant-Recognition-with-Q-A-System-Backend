@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kiệu",
+      "ten_khac": "Kiệu, Dã phỉ, Giối banh",
+      "ten_khoa_hoc": "Allium chinensis G. Don, Allium chinense",
+      "ma_taxon": "122344",
+      "ho": "Alliaceae (Hành)",
+      "Mô tả": {
+        "lá": "Cây thảo nhỏ có thân hành màu trắng, hình trái xoan thuôn, bao bởi nhiều vảy mỏng.",
+        "hoa": "Cụm hoa hình tán kép trên một cuống hoa dài 15-60cm, mang 6-30 tán hoa màu hồng hay màu tím.",
+        "mùa hoa": "tháng 6-8",
+        "cây": "Lá mọc ở gốc, hình dải hẹp, nửa hình trụ, dài 15-60cm, rộng 1,5-4mm."
+      },
+      "Phân bố": {
+        "phân_bố": "Nguyên sản của Trung Quốc, sau lan xuống phía nam, đến Lào, Thái Lan, Malaysia và Việt Nam. Ở Việt Nam, kiệu cũng được trồng khá phổ biến ở những tỉnh miền núi giáp biên giới phía bắc như Lào Cai, Hà Giang, Lai Châu, Cao Bằng và Lạng Sơn. Cây đặc biệt ưa ẩm, ưa sáng hoặc chỉ hơi chịu bóng. Kiệu cũng ưa khí hậu mát, nhiệt độ thích hợp cho cây sinh trưởng từ 15 đến 25\u00a0oC. Kiệu được dùng rộng rãi ở nông thôn để lấy củ muối dưa, làm gia vị hay làm thức ăn."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Cả cây (bỏ rễ) ."
+      },
+      "Thành phần": {
+        "thành phần": "Thân hành cây kiệu chứa chinenosid II.",
+        "gồm chất": "Dịch chiết methanol kiệu cho các saponin steroid.",
+        "có hoạt chất": "Dịch chiết kiệu chứa laxogenin là hoạt chất có tác dụng kháng u cao (CA 114: 135660 h)"
+      },
+      "Tính vị": {
+        "Có vị": "Kiệu có vị cay đắng, tính ấm; có tác dụng làm ấm bụng, tán khí kết, khỏi đầy hơi, bổ thận khí, mạnh dương; còn có tác dụng lợi tiểu."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Kiệu cũng dùng chữa đái dắt và bạch trọc như hành củ. Lại dùng chữa phụ nữ có thai bị lạnh đau bụng, trị lỵ, ngã ngất hôn mê, bỏng. Nếu ăn được đều thì chịu được rét lạnh, bổ khí, điều hòa nội tạng, cho người ta béo khoẻ.",
+        "chữa": "Chữa phụ nữ có thai bị lạnh đau bụng, thai không yên: Dùng Kiệu 32g, Đương quy 8g, sắc uống. Chữa đi lỵ: Dùng một nắm Kiệu nấu cháo ăn. Chữa tự nhiên ngã ngất hôn mê như chết, hoặc trong khi ngủ mà bỗng dưng bị chết là do trúng khí độc: Lấy Kiệu giã vắt lấy nước cốt, nhỏ vào mũi sẽ tỉnh. Chữa bị bỏng: Dùng Kiệu giã nhỏ, hoà với mật, vắt lấy nước bôi thì chóng lành (theo Lê Trần Đức)."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

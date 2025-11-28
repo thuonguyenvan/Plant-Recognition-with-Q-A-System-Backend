@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thăng ma",
+      "ten_khac": "Thăng ma",
+      "ten_khoa_hoc": "Cimicifuga dahurica (Turcz.) Maxim.",
+      "ma_taxon": "742167",
+      "ho": "Ranunculaceae (Mao lương)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Vị thăng ma hiện nay chủ yếu vẫn phải nhập của Trung Quốc, chúng tôi mô tả ở đây để chú ý phát hiện, hoặc để tránh nhầm lẫn. Cây đại tam diệp thăng ma (Cimicifuga heraceifolia) là một cây sống lâu năm, thân mọc thẳng đứng, cao từ 1-1,5m, nhẵn hoặc có ít lông mềm. Lá kép 2 hay 3 lần lông chim, lá có cuống dài, lá chét cũng có cuống, cuống lá chét giữa dài hơn các lá chét bên, mặt lá đều có lông mềm trắng, phiến lá chét hình trứng dài 9-11cm, rộng 5-9cm, phiến lá chét nhiều khi (nhất là lá chét giữa) lại chia thùy, mép phiến lá có răng cưa to. Lá phía ngọn thường nhỏ hơn, cuống lá cũng ngắn hơn. Cụm hoa chùm; hoa màu vàng trắng. Quả kép với 3-5 lá noãn rời nhau. Cây bắc thăng ma (Cimicifuga dahurica) cũng là một cây sống lâu năm, thường chỉ cao lm, trên thân có lông mềm, lá cũng kép 2 đến 3 lần lông chim, lá chét giữa thường có cuống, còn lá chét 2 bên thường không cuống. Cụm hoa chùm, nhưng hoa dơn tính, khác đại tam diệp thăng ma có hoa lưỡng tính. Quả kép có 5 lá noãn. Câv thăng ma (Cimicifuga foetida) cũng là một cây sống lâu năm, cao 1-2m, lá kép nhiều lần lông chim (khác những loài thăng ma kể trên). Cụm hoa hình chùy, hoa lưỡng tính, màu trắng. Quả kép, trên mặt có lông. Cây thăng ma đầu (Serratula sinensis) là một cây sống lâu năm, lá mọc so le, nguyên, mép có răng cưa, dàí 10-18cm, rộng 4,5-7cm, lá dưới có cuống dài, phía trên có cuống ngắn hơn. Hoa hình đầu, lưỡng tính, màu trắng. Quả bế hình thoi, một đầu nhọn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong vị thăng ma Cimicifuga foetida người ta đã chiết ra được chất đắng gọi là ximitin (cimitin) với công thức thô là C20H34O7, ximitin là một chất bột màu vàng nhạt, vị đắng, tan trong axeton, cồn metylic, cồn etylic, clorofoc, không tan trong nước, ête, benzen và ête dầu hoả, độ chảy 169°C, đến 175°C thì phân giải. Theo Orêkhov thì trong thăng ma Cimicifuga foetida mọc ở Liên Xô cũ (Xibêri) có chứa một ít ancaloit. Các loài thăng ma khác chưa thấy tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thăng ma chỉ mới thấy dùng trong phạm vi đông y.  Tính chất của thăng ma theo tải liệu cổ của đông y là vị ngọt cay hơi đắng, tính bình và hơi độc vào 4 kinh tỳ vị phế và đại trường có năng lực thăng thanh, giáng trọc (đưa cái trong lên trên, hạ chất đục xuống), tán phong giải độc, là thuốc thăng để và chữa phong nhiệt: Thường dùng làm thuốc giải độc. trừ ôn dịch, chướng khí, trúng độc mà sinh đau bụng, sốt rét, lở cổ họng.  Ngày dùng 4-10g dưới dạng thuốc sắc để uống hay súc miêng."
+    },
+    {
+      "@type": "Cách dùng",
+      "làm thuốc": "Chữa sốt khi mới lên đậu: Thăng ma 8g, cát căn 5g, đại táo 10g, thược dược 2g, sinh khương 2g, cam tháo 1g, nước 600ml, sắc còn 200ml, chia 3 lần uống trong ngày. Đau nhức răng, cổ họng lở loét:  Thăng ma 4g, sắc với 200ml nước ngâm trong miệng lâu rồi nuốt. Ngày 2-3 lần. Giải cơ, thấu chẩn: Thăng ma 6 – 10g, Thược dược 8 – 12g, Cát căn 8 – 16g, Chích thảo 2 – 4g. Sắc uống ngày 1 thang. Theo cổ phương các vị thuốc lượng đều bằng nhau, tán bột, hoặc sắc uống.  Chú thích:  Triều Tiên xem vị thiên thăng ma (Cimicifuga heracleifolia) là vị thuốc chính thức công nhận trong Triều Tiên hán dược cục phương và quy định như sau: Độ ẩm dưới 13%, độ tro dưới 13%, tro không tan trong axit clohydric dưới 5%, cao tan trong cồn trên 13%."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

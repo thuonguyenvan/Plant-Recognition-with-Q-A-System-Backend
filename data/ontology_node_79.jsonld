@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tước sàng",
+      "ten_khac": null,
+      "ten_khoa_hoc": "Justicia procumbens L.",
+      "ma_taxon": "354064",
+      "ho": "Ô rô (Acanthaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, mọc đứng, cao 10 – 50 cm, sum sê và tỏa rộng.",
+      "thân": "Cành mảnh có 4 cạnh, thường có lông ở 2 cạnh đối nhau.",
+      "lá": "Lá mọc đối, hình trứng thuôn mình mác, dài 2 – 5 cm, rộng 1 – 2,5 cm, gốc đầu nhọn, hai mặt nhẵn hoặc có ít lông; lá dài 1 – 3 cm.",
+      "hoa": "Cụm hoa mọc thành bông ở ngọn; lá bắc hình mặc hình mác, có lông; hoa xếp thành 4 hàng, màu hồng; đài có 4 răng rời gần bằng nhau, dài 4 mm, có lông ở nửa trên: trắng có ống dài 8 mm, hình trụ chia 2 mối, môi trên gần hình tam giác, khuyết ở đầu, mối dưới xẻ 3 thùy, thùy giữa to và ngắn hơn hai thùy bên, nhị 2, định ở họng tràng, chỉ nhị nhăn, bầu có lông ở đỉnh.",
+      "quả": "Quả nang, ngắn và nhẵn.",
+      "mùa hoa": "tháng 4 – 6",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trên thế giới, tước sàng phân bố ở Trung Quốc, Lào, Thái Lan,… Ở Việt Nam, cây phân bố rải rác một số tỉnh miền núi phía Bắc như Lào Cai, Hà Giang, Bắc Kạn, Thái Nguyên và Hoà Bình",
+      "thường_mọc": "Tước sàng thuộc loại cây thảo sống nhiều năm, ưa ẩm và hơi chịu bóng, thường mọc ở ven rừng hay ven lối đi trong rừng kính thường xanh ẩm núi đá vôi."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Có glucosid justicidin C, D, E [Võ Văn Chi, 1997, Trung được từ hải Ill, 1997]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Tước sàng có vị mặn, cay, hơi đắng, có tính mát, tác dụng thanh nhiệt, giải độc, tiêu trệ, tán ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tước sàng được dùng chữa cảm sốt, sưng họng, mụn nhọt, sưng lở, nhọt vú, đau lưng hoặc bị thương ứ máu, đau nhức. Ngày dùng 20g thuốc khô hoặc 40g thuốc tươi sắc uống. Dùng ngoài, lá tươi giã đắp, hay nấu nước rửa.",
+      "chữa": "Ở Trung Quốc, toàn cây tước sàng được dùng trị sốt, đau do viêm họng – thanh quản và trị ung thư. Ở Ấn Độ, cây được coi là có tác dụng phục hồi chức năng, long đờm, nhuận tràng, lợi tiểu. Nước hãm hoặc sắc được dùng trị hen, ho, thấp khớp, đau lưng, đầy hơi. Ở Philippin, lá được dùng ngoài làm thuốc săn để chữa một số chứng ban da.",
+      "làm thuốc": "Chữa cảm sốt, viêm họng: Tước sàng, cửu lý minh, cây tổ kén, mỗi vị 25g sắc uống ngày một thang. Chữa trẻ em cam tích, mụn nhọt sưng lở, hay phụ nữ có nhọt ở vú: Tước sàng, kim ngân rừng, cải rừng tía, mỗi vị 16 – 30g. Sắc uống ngày một thang. Chữa đau lưng hoặc bị thương tí máu đau nhức: Tước sàng, cẩu tích, huyết giác, ngưu tất, mỗi vị 20g. Sắc uống ngày một thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

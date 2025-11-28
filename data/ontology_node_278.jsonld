@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dầu mè",
+      "ten_khac": "Dầu mè, Ba đậu nam, Dầu lai, Đông thụ, Nhao (Tày)",
+      "ten_khoa_hoc": "Jatropha curcas L.",
+      "ma_taxon": "164238",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "Mô tả": {
+        "lá": "Cây nhỏ hay cây nhỡ, cao 1,5 – 5m.",
+        "hoa": "Cành mọc hơi tỏa ra, mập, nhẵn, có nhiều vết sẹo do lá rụng để lại, bấm ra có nhiều nhựa mủ.",
+        "quả": "Lá mọc so le, hình trứng rộng, gốc hình tim, đầu hơi nhọn, có cạnh hoặc chia 3–5 thùy; dài 10–13 cm, rộng 8–11 cm, hai mặt nhẵn, gân chính 5–7, tỏa ra hình chân vịt; cuống lá dài 7–12 cm, phình lên ở gốc.",
+        "cây": "Cụm hoa mọc ở đầu cành thành xim phân đôi, dài khoảng 8 cm, nhẵn hoặc hơi có lông mịn màu trắng; hoa đực có đài 5 phiến rời không bằng nhau, tràng có 5 cánh có lông ở mặt trong, nhị 10, 5 cái rời và 5 cái dính nhau ở phần giữa chỉ nhị; hoa cái có đài và tràng giống nhau, nhị lép 5 hoặc không có, bầu hình trứng, thắt lại ở đầu.",
+        "mặt": "Quả nang, hình trứng, dài và rộng 2–2,5 cm; hạt 3, gần hình cầu.",
+        "đầu": "Mùa hoa quả: tháng 5–8.",
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Jatropha L. chỉ có ít loài, phân bố chủ yếu ở vùng nhiệt đới châu Mỹ và châu Á. Ở Việt Nam có 5 loài trong đó dầu mè là cây trồng, nguồn gốc từ châu Mỹ. Cây cũng được trồng phổ biến ở một số nước vùng Đông Nam Á và Ấn Độ.",
+        "Đặc điểm sinh trưởng": "Dầu mè là cây ưa sáng, chịu hạn tốt, thường được trồng dây làm bờ rào. Ra hoa quả nhiều: tái sinh từ gốc bị chặt và cành khoẻ, nên thường được trồng bằng cách cắm cành."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Lá, rễ, nhựa và dầu béo ép từ hạt."
+      },
+      "Thành phần": {
+        "thành phần": "Nhựa mủ của cây dầu mè có curceain (enzym thuỷ phân protein với trọng lượng phân tử 22.000), 2 peptid mạch vòng là curcacyclin A và curcacyclin B.",
+        "gồm chất": "Thân, cành, lá chứa triacontanol, 7-ceto-β-sitosterol.",
+        "Các hợp chất": "Vỏ thân chứa tanin 37% (tính theo trọng lượng khô), sáp, đường khử, saponin, ít tinh dầu.",
+        "chứa": "Lá tươi có vitexin, isovitexin.",
+        "triết xuất": "Hạt chứa 18,2% protein, 38,0% dầu béo, 17,08% carbohydrat, tinh bột, acid hữu cơ, hai chất độc là curcin (albumin) và một chất nhựa. Dầu béo chứa acid myristic, acid palmitic, acid stearic, acid arachidic, acid oleic 37–63%, acid linoleic 19–40%. Chất độc trong dầu béo là diterpen 12-desoxy-16-hydroxyphorbol.",
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": "Lá có vị đắng và se, tính mát, có độc; có tác dụng làm tan máu ứ, tiêu sưng, cầm máu, chống ngứa. Lá dầu mè giã nát đắp lên bụng để gây tẩy cho trẻ em, có khi còn được dùng ngoài chữa thấp khớp. Rễ dùng ngoài chữa tê liệt, bại liệt.  Dầu hạt gây nôn và tẩy mạnh, giải độc, sát trùng. Nhựa mủ có tác dụng bôi lên vết thương hay vết loét. Cây có độc đối với cá."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hạt dầu mè có tác dụng tẩy mạnh nhưng vì có độc tính cao nên không dùng.  Dùng nhựa mủ bôi lên vết thương hay vết loét, khi khô sẽ thành một màng che như kiểu màng colodion. Lá dầu mè giã nát đắp lên bụng để gây tẩy cho trẻ em, có khi còn được dùng ngoài chữa thấp khớp. Rễ dùng ngoài chữa tê liệt, bại liệt.  Ở một số nước châu Á, nhựa mủ cây dầu mè được dùng ngoài để trị vết thương, cầm máu, bỏng, bệnh da như eczema và bệnh nấm da, vết loét, vết đứt, vết trầy da và ghẻ. Khi khô, nhựa làm thành một màng kín hơi. Lá dầu mè dùng ngoài chữa eczema, ngứa, tê, kỳ sinh trùng ghẻ, và là chất gây sung huyết da trị thấp khớp. Cành tươi dầu mè dùng để đánh răng, làm mạnh lợi, chữa lợi chảy máu hoặc có mủ. Dầu mè cũng là thuốc độc đối với cá. Hạt dầu mè giã nát hòa với dầu cua làm bả chuột. Dầu mè được dùng trị lở loét cho gia súc. Dùng lá xông khói trị rệp. Dịch ép lá bôi ngoài chữa trị. Dầu hạt trị bệnh da, thấp khớp, đau dây thần kinh hông, liệt. Lá dầu mè nghiền nát đắp trị sưng vú và làm lon sữa. Vỏ cây giã nát đắp trị bong gân, sai khớp.  Ở một số nước châu Phi và Nam Mỹ, nhựa mủ cây dầu mè được dùng ngoài chữa vết thương, đau tai và để gây sung huyết da. Lá giã nát đắp trị thấp khớp và làm thuốc xua ruồi khỏi mắt ngựa. Ở Camơrun, dầu hạt được dùng làm chất phụ thêm vào hạt Strophanthus để làm thuốc độc tẩm mũi tên, làm mồi câu cá và bẫy gà rừng.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

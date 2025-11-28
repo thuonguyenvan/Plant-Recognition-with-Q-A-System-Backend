@@ -1,0 +1,198 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/tang-ky-sinh.html",
+            "ten": "Tang ký sinh",
+            "ten_khac": "Tang ký sinh, Tầm gửi cây dâu, Phoc mạy mọn (Tày)",
+            "ten_khoa_hoc": "Scurrula parasitica L.",
+            "ma_taxon": "426641",
+            "ho": "Loranthaceae (Tầm gửi)",
+            "Mô tả": {
+                "cây": "Cây nhỏ, thường xanh, ký sinh trên thân cây dâu tằm nhờ các rễ mút.",
+                "thân": "Cành hình trụ, khúc khuỷu, màu xám hay nâu đen.",
+                "lá": "Lá mọc so le, hình bầu dục, dài 3 – 8cm, rộng 2,5 – 5cm, gốc thuôn hoặc hơi tròn, đầu tù đôi khi lõm, mép hơi lượn sóng, gân phụ cong; cuống lá ngắn.",
+                "hoa": "Cụm hoa mọc ở kẽ lá thành chùm rất ngắn gần như hình tán; lá bắc nhỏ hình tam giác; hoa màu đỏ hoặc hồng tím; đài hình chùy có răng rất nhỏ, tràng hình trụ hơi phình ở giữa, có lông; nhị 4, chỉ nhị dài hơn bao phấn; bầu hạ.",
+                "quả": "Quả hình bầu dục, có vết tích của đài tồn tại.",
+                "mùa hoa": "tháng 1-3.",
+                "mùa quả": "tháng 1-3."
+            },
+            "Phân bố": {
+                "phân_bố": "Tang ký sinh có vùng phân bố tự nhiên hoàn toàn phụ thuộc vào nơi có trồng cây dâu tằm. Song, hiện nay chưa có những nghiên cứu cụ thể để chứng minh loài này còn ký sinh trên những loài cây chủ nào khác. Trên thế giới tang ký sinh cũng được đề cập đến ở Ấn Độ, Mianma, Trung Quốc, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin….  Cây ưa sáng và ưa ẩm, ra hoa quả nhiều hàng năm. Tuy nhiên, ở những vùng trồng dâu tằm rộng lớn cũng hiếm khi gặp tang ký sinh.  Hạt giống của cây phát tán được có lẽ do chim hoặc một số loài động vật nào đó, trong quá trình ăn và tiêu hóa quả chín, đã đưa hạt tang ký sinh sang các cây dâu tằm khác. Bước đầu, hạt giống phải mắc được vào các kẽ nứt của vỏ hoặc hốc cây và gặp điều kiện thuận lợi sẽ nảy mầm nhanh; các rễ cây từng bước len lỏi vào trong lớp vỏ cây chủ để hút chất dinh dưỡng nuôi cây. Trong trường hợp các cành lá của tang ký sinh bị thu hái, phần gốc và rễ ký sinh vẫn bám được ở cây chủ sẽ tiếp tục sinh trưởng phát triển.",
+                "Thành phần hóa học": "Thân, lá tang ký sinh có quercetin, avicularin. Lá còn chứa d–catechin, quercitrin và hyperosid. (Trung dược từ hải II, 1996). Theo Chen Xihong và cs, 1992, tang ký sinh chứa lectin với hàm lượng đường là 14%. Hàm lượng acid amin gốc acid cao, còn các acid amin base ít. Không thấy có arginn (CA 117: 22098 z). Tang ký sinh có chất độc đối với tế bào nhất là tủy xương (CA 120: 235.542 p)."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": ""
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Toàn cây thu hái quanh năm, phơi hay sấy khô."
+            },
+            "Thành phần": {
+                "thành phần": "Thân, lá tang ký sinh có quercetin, avicularin. Lá còn chứa d–catechin, quercitrin và hyperosid. (Trung dược từ hải II, 1996). Theo Chen Xihong và cs, 1992, tang ký sinh chứa lectin với hàm lượng đường là 14%. Hàm lượng acid amin gốc acid cao, còn các acid amin base ít. Không thấy có arginn (CA 117: 22098 z). Tang ký sinh có chất độc đối với tế bào nhất là tủy xương (CA 120: 235.542 p)."
+            },
+            "Tính vị": {
+                "Có vị": "Tang ký sinh có vị đắng, tính bình, vào hai kinh can và thận, có tác dụng bổ gan thận, trừ phong thấp, mạnh gân xương, an thai, lợi sữa."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Tang ký sinh được dùng chữa phong thấp, gân cốt nhức mỏi, tê bại, lưng gối đau, động thai đau bụng, phụ nữ sau khi đẻ không có sữa. Ngày dùng 12 – 20g, dạng thuốc sắc hoặc nấu nước uống thay trà. Thường phối hợp với các vị thuốc khác.  Chữa đau xóc hai bên hông ở phụ nữ có thai, dùng tang ký sinh tươi, rửa sạch, giã nhuyễn, thêm nước gạn lấy một bát uống.  Chữa đại tiện ra máu, lưng gối đau, yếu sức, dùng tang ký sinh phơi khô, tán bột, mỗi lần uống 4g với nước ấm.  Trong y học Trung Quốc, tang ký sinh được coi là có tác dụng kích thích sự tạo máu, để điều trị thiếu máu và chảy máu ở phụ nữ mang thai và sau khi đẻ, thấp khớp, đau kinh và tăng sức khỏe ở người bị bệnh mạn tính. Tang ký sinh còn được dùng phối hợp với các thuốc khác để điều trị tăng huyết áp, trẻ em bị di chứng bại liệt, tay chân tê liệt, động thai, thiếu sữa, phù thũng, đau dạ dày, tâm thần phân liệt. Ngày dùng 8 – 12g, dạng thuốc sắc và thuốc hãm. Ở Ấn Độ, nhân dân dùng lá tang ký sinh giã đắp tri mụn nhọt, lở loét."
+            },
+            "Cách dùng": {
+                "được_dùng": "Chữa tăng huyết áp:  Tang ký sinh 16g; chi tử, câu đằng, ngưu tất, ý dĩ, mã đề, mỗi vị 12g; xuyên khung, trạch tả, mỗi vị 8g. Sắc uống ngày một thang. Chữa tăng huyết áp ở người trẻ, hoặc do rối loạn tiền mãn kinh: Tang ký sinh 20g; rau má 30g; hoa hoè, lá tre, cỏ gianh, mỗi vị 20g; hạt muồng, cỏ nhọ nồi, mỗi vị 16g; ngưu tất 12g; hạ khô thảo long; tâm sen 8g. Sắc uống ngày một thang.  Chữa tăng huyết áp ở người cao tuổi:  Tang ký sinh 12g; mẫu lệ 20g; hà thủ ô 16g; kỷ tử, sinh địa, quả dâu chín, ngưu tất, mỗi vị 12g; trạch tả 8g. Sắc uống ngày một thang. Tang ký sinh, bạch truật, đảng sâm, táo nhân, long nhãn, ngưu tất, mỗi vị 12g; đương quy, viễn chí, hoa hoè, hoàng cầm, mỗi vị 8g; mộc hương 4g. Sắc uống ngày một thang.  Chữa tăng huyết áp kèm theo tăng cholesterol máu:  Tang ký sinh, câu đằng, hoa hoè, thiên ma, ngưu tất, ý dĩ, mỗi vị 16g; bạch truật 12g, phục linh 8g; bán hạ chế, cam thảo, trần bì, mỗi vị 6g. sắc uống ngày một thang. Tang ký sinh, hoa hoè, hoàng cầm, mỗi vị 16g; trúc nhự, long đởm thảo, mỗi vị 12g; chỉ thực, phục linh, bán hạ chế, mỗi vị 8g; trần bì, cam thảo, mỗi vị 6g. Sắc uống ngày một thang.  Chữa xơ cứng động mạch vành, hoặc thời kỳ ổn định sau nhồi máu cơ tim:  Tang ký sinh 16g; hà thủ ô 20g; kỷ tử, hoàng tinh, mỗi vị 16g; thục địa, thạch hộc, quy bản, mỗi vị 12g. Sắc uống ngày một thang.  Chữa viêm cầu thận mạn tính:  Tang ký sinh, câu đằng, mã đề, mỗi vị 16g; cúc hoa, sa sâm, ngưu tất, đan sâm, quy bản, trạch tả, mỗi vị 12g. Sắc uống ngày một thang.  Chữa liệt nửa người không hôn mê do tai biển mạch máu não:  Tang ký sinh 16g; thạch quyết minh 20g; câu đằng, kê huyết đằng, mỗi vị 16g; ngưu tất, cúc hoa, địa long, hà thủ ô, mỗi vị 12g. Sắc uống ngày một thang.  Chữa liệt dây thần kinh VII ngoại biên:  Tang ký sinh, ké đầu ngựa, kê huyết đằng, ngưu tất, mỗi vị 12g; quế chi, bạch chỉ, uất kim, trần bì, hương phụ, mồi vị 8g. sắc uống ngày một thang.  Chữa đau dây thần kinh hông do thoái hóa cột sống gây chèn ép:  Tang ký sinh 16g; thục địa, cẩu tích, tục đoạn, ngưu tất, đẳng sâm, ý dĩ, bạch truật, hoài sơn, tỳ giải, hà thủ ô, mỗi vị 12g. sắc uống ngày một thang.  Thuốc phòng bệnh viêm khớp dạng thấp tái phát:  Tang ký sinh 16g; độc hoạt, phòng phong, đảng sâm, phục linh, ngưu tất, đỗ trọng, sinh dịa, bạch thược, mỗi vị 12g; tế tân, tần giao, đương quy, quế chi, phụ tử chế, mỗi vị 8g; cam thảo 6g. sắc uống ngày một thang.  Chữa thấp khớp mạn, đau nhức:  Tang ký sinh 12g; đảng sâm 20g; hoài sơn 16g; u chặc chìu, kê huyết đằng, đan sâm, thục địa, xích thược, thổ phục linh, thiên niên kiện, độc hoạt, khương hoạt, đỗ trọng, mỗi vị 12g; ngưu tất 10g; nhục quế 8g. Sắc uống ngày một thang.  Chữa đau lưng:  Tang ký sinh, ngưu tất, cẩu tích, mỗi vị 12g. sắc uống ngày một thang.  Chữa đau lưng cấp do co cứng các cơ:  Tang ký sinh, khương hoạt, ngưu tất, mỗi vị 12g; phục linh 10g; quế chi, thương truật, mỗi vị 8g; can khương 6g. sắc uống ngày một thang.  Chữa chân tay tê bại, tắc sữa:  Tang ký sinh 30g, ngưu tất 12g. Sắc uống ngày một thang.  Chữa ho:  Tang ký sinh 30g, rễ chanh 20g, lá trắc bá 10g. Sao vàng, sắc uống ngày một thang.  Chữa suy nhược thần kinh:  Tang ký sinh, thục địa, hoài sơn, hà thủ ô, kim anh, liên nhục, mỗi vị 12g; quy bản, kỷ tử, thỏ ty thử, ngưu tất, đương quy, táo nhân, mỗi vị 8g. Sắc uống ngày một thang.  Chữa viêm tắc động mạch ở thời kỳ đầu và giữa:  Tang ký sinh, thục địa, mỗi vị 16g; xuyên quy, phụ tử chế, xuyên khung, bạch thược, xuyên luyện tử, đan sâm, ngưu tất, hoàng kỳ, mỗi vị 12g; quế chi, đào nhân, hồng hoa, bạch giới tử, mỗi vị 8g. Sắc uống ngày một thang.  Chữa động thai đau bụng:  Tang ký sinh 60g, a giao (hoặc cao ban long nướng thơm) 20g, lá ngải cứu 20g. Sắc và chia 3 lần uống trong ngày.  Thuốc phòng sẩy thai, đẻ non khi bị động thai:  Tang ký sinh, thỏ ty tử, tục đoạn, a giao mỗi vị 20g. Tán nhỏ làm viên, ngày uống 16 – 20g."
+            },
+            "luu_y": {
+                "luu_y": ""
+            }
+        }
+    ]
+}

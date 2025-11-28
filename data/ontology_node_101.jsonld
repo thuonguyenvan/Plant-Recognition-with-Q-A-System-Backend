@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quan âm núi",
+      "ten_khac": "Mẫu kinh, tiểu kinh, đẻn năm lá, ngũ chi phong",
+      "ten_khoa_hoc": "Vitex quinata (Lour.) F. N. Will.",
+      "ma_taxon": "717407",
+      "ho": "Cỏ roi ngựa (Verbenaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 – 25m.",
+      "thân": "Cành non hơi có cạnh, có ít lông hoặc nhắn, cành già nhẵn, có vỏ màu xám và những bì khổng.",
+      "lá": "Lá kép mọc đối, 3 – 5 lá chét rất đa dạng từ hình mác, elip đến hình trứng, bầu dục, gốc thuôn hoặc tròn, đầu tù hoặc hơi nhọn, mép nguyên, hai mặt nhẵn hoặc có lông trên các gân, điểm những hạch nhỏ màu trắng ở mặt trên, màu vàng ở mặt dưới sau chuyển thành nâu đỏ ở lá khô, lá chét giữa dài khoảng 15 cm, những lá bên nhỏ hơn và thường không đều, gần nổi rõ; cuống lá tròn, nhẵn, không có cánh, dài 4- 20 cm.",
+      "hoa": "Cụm hoa mọc ở ngọn cành thành chùy thường kèm theo lá ở những mẫu bên dưới, có lông màu tro, dài 20 – 25 cm, nhánh thứ cấp mọc đối mang nhiều xim 2 – 6 hoa màu vàng nhạt, môi dưới màu lam; lá bắc rất nhỏ hoặc không có; đài hình chuông, có 5 răng nhọn, rất nhỏ, có lông màu xám rất mịn; tráng phủ lông và hạch dày ở mặt ngoài, ống tràng hình phễu nhẫn ở mặt trong, môi trên có 2 thuỳ nhọn, cong, nhẵn, môi dưới 3 thuỷ nhẵn ở trong, thuỷ giữa có lông rất dày ở gốc, nhị vượt ra ngoài tràng, chỉ nhị định ở giữa ống tràng; bầu nhãn có hạch ở đầu.",
+      "quả": "Quả hạch hình quả lê, màu đen xám nhạt, bao bọc bởi đài tồn tại.",
+      "mùa hoa": "tháng 5 – 9",
+      "mùa quả": "tháng 5 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Vitex L. trên thế giới có khoảng 250 loài, phân bố khắp các vùng nhiệt đới và cận nhiệt đới cả 2 bán cầu. Ở Việt Nam, chi này có 15 loài, loài quan âm núi phân bố rải rác ở hầu hết các tỉnh miền núi với độ cao từ 200 – 1.000m. Bao gồm: Hà Giang, Tuyên Quang, Yên Bái, Phú Thọ, Thái Nguyên, Vĩnh Phúc, Bắc Giang, Quảg Ninh, Hà Nam, Ninh Bình, Thanh Hóa,…",
+      "thường_mọc": "Quan âm núi là cây ưa sáng, ưa ẩm và cũng có khả năng chịu hạn. Cây thường mọc rải rác trong các kiểu rừng thứ sinh, ven rừng thứ sinh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, quả và vỏ thân"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ thân chứa ecdysteroid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quan âm núi vị đắng, the, tính bình, có công năng hoá thấp, tiêu tích trệ. Nhưng từng bộ phận cũng có khác nhau.  Lá quan âm núi có vị đắng, tính mát; có công năng thanh nhiệt, giải biểu. Rễ quan âm núi vị ngọt, đắng, the, tính bình; có công năng chỉ khái, định suyễn, trấn tính, thoái nhiệt. Quả quan âm núi có vị cay, tính ấm có công năng thông khí, lợi khí, tiêu đàm. Vỏ quan âm núi vị đắng nhạt, the, có mùi thơm, có công năng tiêu thực, tán ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá quan âm núi được dùng chữa đái ra máu. Quả nhiều hàng năm, tái sinh tự nhiên bằng hạt và đái đục, bạch đới. Ngày 40 – 60g sắc nước uống. Có thể dùng tươi, rửa sạch, giã nát, chế thêm khi chắt nước, vắt lấy nước cốt uống. Lá còn được dùng nấu lấy nước ngâm rửa chữa lở ngứa ngoài da.  Rễ quan âm núi được dùng chữa viêm phế quản, háo suyễn, phong thấp, trẻ em cam tích. Còn dùng chữa cảm nóng, cảm lạnh, chân tay đau mỏi. Dùng 40-60g sắc uống, đắp chăn cho ra mồ hôi.  Quả quan âm núi được dùng chữa đau bụng, tải lỵ mạn tính, khi dồn lên sinh ho hen. Lấy quả, sao vàng, tán bột. Uống mỗi lần 2 – 4g, ngày 3 lần.  Vỏ quan âm núi được sắc với nước hoặc ngâm rượu uống làm thuốc bổ, kích thích tiêu hoá. Nhân dân thường dùng vỏ nấu với nước uống thay trà làm cho ăn ngon, dễ tiêu, làm nhẹ người, trừ thấp trệ. Cũng dùng chữa phong thấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

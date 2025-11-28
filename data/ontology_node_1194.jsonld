@@ -1,0 +1,245 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoắc hương núi",
+      "ten_khac": [
+        "Tía tô dại",
+        "Hoắc hương núi",
+        "É lớn hồng",
+        "É rừng",
+        "Sơn hương",
+        "é lớn tròng",
+        "É Hoang"
+      ],
+      "ten_khoa_hoc": "Hyptis suaveolens (L.) Poit.",
+      "ma_taxon": "870900",
+      "ho": "Lamiaceae (Hoa môi)",
+      "Mô tả": {
+        "cây": "Cây thảo sống hàng năm, cao 40 – 70cm có khi hơn",
+        "thân": "Thân thẳng, có cành, nhân, màu lục, ít phân cành.",
+        "lá": "Lá mọc đối hình trứng, dài 5cm, rộng 3cm, gốc bằng hoặc hình tim, đầu có mũi nhọn hoắt, mép khía răng to, đều, hai mặt có lông nhỏ, cuống mảnh, dài khoảng 1 cm",
+        "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành bông dày, hình trụ như đuôi sóc, dài 7 – 8cm, cấu tạo bởi nhiều vòng hoa rất sít nhau, lá bắc không cuống, ngắn hơn đài, hoa nhiều màu tím hay màu trắng, đài hình ống, có lông nhỏ, 5 răng không đều, răng trên dài và rộng hơn, tràng ngắn, mặt ngoài có lông, chia 2 môi, môi trên xẻ 2 thùy, môi dưới 3 thùy, thùy giữa lớn hơn, nhị 4, bầu có lông ở đỉnh",
+        "quả": "Quả bế.",
+        "mùa hoa": "tháng 6 – 8",
+        "mùa quả": "tháng 9 – 11"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Agastache Clayt. Có khoảng 8 – 10 loài trên thế giới, phân bố rải rác ở vùng nhiệt đới và cận nhiệt đới châu Á và châu Mỹ. Ở Việt Nam, chỉ có một  loài là hoắc hương núi (Vũ Xuân Phương, 2000). Cây còn có ở phía nam Trung Quốc, Đài Loan, Nhật Bản, triều Tiên và Bắc Mỹ.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Nghệ An"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Bắc Cạn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hà Giang"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Hoắc hương núi là cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc thành từng đám nhỏ ở nơi đất ẩm trên nương rẫy, chân rừng núi đá vôi hoặc ven đường đi… ở độ cao 600 – 1600m.",
+        "Đặc điểm sinh trưởng": "Hoắc hương núi mọc từ hạt vào tháng 4 – 5, sinh trưởng nhanh trong mùa hè, đến giữa mùa thu bắt đầu có hoa Hoa nở lần lượt từ dưới lên trên, thu phẩm chủ yếu nhờ côn trùng. Toàn cây bắt đầu tàn lụi khi quả già. Cây nhân giống tự nhiên chủ yếu bằng hạt."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây, rễ."
+      },
+      "Thành phần": {
+        "thành phần": "Hoắc hương núi chứa tinh dầu 0,2 – 0.5% trong đó",
+        "gồm chất": "Có methylchavicol, limonen, α, β. 13 – pimen, p, cymen, linalol, l- caryophylen, β – humulen, Y – Cadinen, β elemen,α – ylangen,β –  farnesen, calamenen, anethol, anisaldehyd, 3 – octanon, 3 – octanol, 3 – (1 – octen – 3 – ol).",
+        "đã nghiên cứu": "Hoắc hương núi mọc ở Hàn Quốc có tinh dầu với 32 thành phần, trong đó các thành phần chính tạo ra mùi thơm là limonen, Caryophylen. eugenol và anethol.  Hoắc hương núi mọc ở Hà Nội có tinh dầu với thành phần chính là estragol 92% (Nguyên Xuân Düng 1996),  Ngoài tinh dầu, còn có acacetin, tilianin, linarin, agastachosid, pogoston, api genin, rhamnctin, ombuin, pachypodol, apigetrin."
+      },
+      "Tính vị": {
+        "Có vị": "Hoắc hương núi có vị cay, tính hơi ôn, vào các kinh phế, tỳ và vị, có tác dụng  khư thử, giải biểu, hóa thấp, hòa vị"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong y học dân gian, hoắc hương núi là một vị thuốc chữa đau bụng, nôn mửa, đi ngoài. ăn không tiêu, cảm sốt mùa hè, nhức đầu, đau mình, hôi miệng. Ngày dùng 6 – 12g dưới dạng thuốc sắc hay thuốc bột.",
+        "chữa": "Hoắc hương núi phối hợp với thương truật chữa tỳ vị hư hàn, bụng trướng đầy: với hậu phác, cát cánh, trần bì, tử tô chữa cảm nắng mùa hè, đau đầu, nôn mửa, ỉa tháo, với bắn hạ, hương phụ, cam thảo chữa nấc, buôn nôn trong thời kỳ có mang"
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa ngoại cảm phong hàn, sốt, đau đầu, bụng lạng đau, hoặc cảm nắng, đau bụng, thổ ta ( Hoắc hương chính khí tán) : Hoắc hương núi 112g, đại phúc bì, bạch Chỉ, tử tô. phục hình mỗi vị 37g, bán ha, bạch truật, trần bị, hậu phác, cát cánh, mỗi vị 75g, cam thảo (chích) 94g. Tất cả nghiền thành bột nhỏ. mỗi lần dùng 7,5g bột với 3 lát gừng, một quả táo, sắc nước uống",
+        "sắc nước uống": "Chữa cảm nắng nôn mửa, nhức đầu, đau bụng đi ngoài: Hoắc hương núi, hương nhu, trận bì, gừng sống. Mỗi vị 10g. Sắc nước uống.",
+        "làm thuốc": "Chữa thai không yên hay ợ nấc:  Hoắc hương núi, hương phụ, cam thảo (lượng bằng nhau), tất cả nghiền thành bột, mỗi lần dùng 7.5g bột với ít muối ăn, bọc trong túi vải, rồi sắc nước uống.  Nguồn : Cây thuốc và động vật làm thuốc ở  Việt Nam."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

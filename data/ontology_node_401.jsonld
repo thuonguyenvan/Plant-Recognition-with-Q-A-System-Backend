@@ -1,0 +1,245 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chanh trường",
+      "ten_khac": "Chanh trường, Cà xoắn, mác díp (Tày)",
+      "ten_khoa_hoc": "Solanum spirale Roxb.",
+      "ma_taxon": "544073",
+      "ho": "Solanaceae (Cà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 0,5-1m.",
+      "thân": "Thân hơi dẹt, đôi khi hóa gỗ ở gốc, nhẵn bóng.",
+      "lá": "Lá mọc so le, hình mác hoặc hình quả trám, gốc có phiến kéo dài đến tận cuống, đầu thuôn nhọn, mép nguyên, uốn lượn, hai mặt nhẵn; cuống lá dài 2-3cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm; hoa nhỏ màu trắng; đài hình chuông hoặc hình đấu, có 5 răng xẻ đến phần giữa ống, tràng 5 cánh nhọn, nhẵn; nhị 5, mở bằng đường nứt ngang.",
+      "quả": "Quả mọng, hình cầu, nhẵn bóng, khi chín màu vàng nhạt, hạt nhiều, có góc.",
+      "mùa hoa": "tháng 7-9.",
+      "mùa quả": "tháng 10-2."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chanh trường là cây thân thảo, thường mọc trên đất ẩm ở bờ rào vườn, trên các bãi hoang quanh làng, ven đường đi hoặc nương rẫy. Chanh trường có nguồn gốc ở châu Mỹ, phân bố rộng rãi ở 1 số vùng cận nhiệt đới hoặc nhiệt đới châu Á bao gồm Trung Quốc, Ấn Độ, Lào và Việt Nam…",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và rễ thu hái quanh năm, dùng tươi hay sấy khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chanh trường chứa 1,29% alcaloid. Rễ chứa các glucoalcaloid, etiolin. Ngoài ra còn có solaspiralidin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Chanh trường có vị đắng, tính hàn, có tác dụng thanh nhiệt, giải độc, lợi thấp, kiện vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân thường dùng lá chanh trường chữa đau bụng, chướng bụng, phù thũng. Ngày dùng 6-12g lá khô dưới dạng thuốc sắc. Rễ được dùng chữa kinh nguyệt không đều với liều 10-12g/ngày, sắc nước uống. Chanh trường ăn được, dùng làm gia vị."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

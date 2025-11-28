@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Súp lơ",
+      "ten_khac": "Bông cải, cải hoa",
+      "ten_khoa_hoc": "Brassica oleracea L.\u00a0var. botrytis L.",
+      "ma_taxon": "63194",
+      "ho": "Cải (Brassicaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống hằng năm hoặc hai năm, cao 30 – 40 cm.",
+      "thân": "Thân ngắn, hình trụ, không phân nhánh.",
+      "lá": "Lá dày, mọc so le rất sít nhau, hình thuôn dài, mép lượn sóng, hai mặt nhẵn, mặt trên màu lục sẫm, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành ngù; hoa màu trắng có cuống mập, áp sát nhau tạo thành một khối dày đặc.",
+      "quả": "Quả cải, thuôn hẹp và dài, có mỏ nhọn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Brassica oleracea L. là tên loài chung cho một nhóm các cây rau như su hào, bắp cải, súp lơ. Gọi là nhóm bởi vì trong su hào có su hào bánh xe, su hào vỏ trắng, vỏ xanh, vỏ tím. Trong bắp cải có loại trắng, xanh, tím… Còn súp lơ cũng có loại cuống hoa dài, ngắn với các màu của nụ hoa rất khác nhau. Theo quan điểm của các nhà phân loại thực vật thì mỗi nhóm cây su hào, bắp cải, súp lơ đều được xếp ở bậc “thứ” (varietas – var), trong trồng trọt lại gọi là “nhóm” (cv. group). Còn các loại khác nhau (về màu sắc) trong một “nhóm” hay “thứ” được gọi là “dạng” (forma – f).  Súp lơ có nguồn gốc ở vùng phía đông Địa Trung Hải. Cách đây khoảng trên 400 năm, cây được đưa vào trồng ở Italia, sau lan ra các nước ở Trung Âu và Bắc Âu. Đến cuối thế kỷ XVII, cây được nhập vào Ấn Độ, sau được thuần hoá trở thành cây thích nghi với điều kiện khí hậu nhiệt đới nóng và ẩm.  Ở Việt Nam, súp lơ có lẽ do người Pháp (có thể cả người Bồ Đào Nha) đưa vào cách đây khoảng 100 năm. Súp lơ trồng ở Việt Nam hiện nay khá đa dạng, gồm các giống hoa trắng, hoa xanh lơ và còn có cả giống hoa trắng điểm các chấm màu tím hồng. Song nhìn chung tất cả các giống này đều là loại cây ưa sáng, ưa ẩm và sinh trưởng phát triển tốt trong điều kiện khí hậu mát."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Súp lơ chứa nước 95%, protid 1,8%, carbohydrat 5,4%, cellulose 1,6%, tro 1,2%, phosphor 31 mg%, calci 4,8 mg%, sắt 1,1 mg, magnesium 30 mg%. Hàm lượng vitamin C chi kém cà chua, cao hơn cà rốt 4,5 lần, hơn khoai tây, hành tây 3,6 lần (Võ Văn Chi, 1997).  Súp lơ chứa 3 – sophorosid – 7 – kaempferol, quercetin và isorhamnetin (lá)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Súp lơ là loại rau ăn quen thuộc của nhân dân Việt Nam và cũng được dùng làm thuốc như cải bắp.  Súp lơ được dùng đắp ngoài để trị nhiễm khuẩn và làm liền sẹo các vết thương, mụn nhọt, đồng thời là loại thuốc trừ sâu bọ đốt (ong, nhện).  Còn làm dịu đau trong bệnh thấp khớp, thống phong, đau dây thần kinh hông, lấy cụm hoa của súp lơ thái mỏng, hơ nóng cho mềm rồi đắp trên các phần bị đau.  Dùng cụm hoa súp lơ sắc uống trị ho, lỵ, làm thuốc an thần, trị mất ngủ và chữa đau dạ dày, loét dạ dày. Súp lơ còn có tác dụng lợi tiểu, nhuận tràng và được dùng trị đái buốt, đái khó, táo bón."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

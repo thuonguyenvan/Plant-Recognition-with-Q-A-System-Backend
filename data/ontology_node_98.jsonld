@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bồ kết",
+      "ten_khac": "Bồ kết, Tạo giác, Phắc kết (Tày), Chùm kết, Co kết (Thái)",
+      "ten_khoa_hoc": "Gleditsia australis Hemsl. ex Forbes et Hemsl.",
+      "ma_taxon": "586496",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to thân gỗ, cao chừng 6-8m, trên thân có những túp gai có phân nhánh, dài tới 10-15cm.",
+      "lá": "Lá kép lông chim, cuống chung có lông và có rãnh dọc, 6 đến 8 đôi lá chét, hình trứng dài, dài trung bình 25mm, rộng 15mm.",
+      "hoa": "Hoa màu trắng khác gốc hay tạp tính, mọc thành chùm hình bông.",
+      "quả": "Quả giáp, dài l-12cm, rộng 15-20mm, hơi cong hình lưỡi liềm hay thẳng, quả mỏng nhưng ở những nơi có hạt thì nổi phình lên, tròn mặt quả có phủ lớp phấn màu xanh nhạt. Trong quả có 10-12 hạt dài 10mm, rộng 7mm, dày 4mm, màu vàng nâu nhạt, quanh hạt là một chất cơm màu vàng nhạt.",
+      "mùa quả": "Tháng 10-11."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Từ quả bồ kết ở Việt Nam, chúng tôi đã chiết được chất saponin tinh khiết với hiệu suất 10% (G. Herman-I. Ciulei, Đỗ Tất Lợi, Y học tạp chí số 1-1961, 26-29), chất saponin này không mùi, vị nhạt, gây hắt hơi mạnh, cho với axit sunfuric đặc màu vàng sau sang màu đỏ và tím (phản ứng Kobert), với phản ứng Lieberman (anhydrit axetic và axit sunfuric đặc) giữa hai lớp chất lỏng cho một vòng màu tím, sau đó lớp trên có màu xanh lục, với axit tricloraxetic nóng (phản ứng Hirschson) cho màu vàng sau ngả sang màu đỏ, độ chảy 198°-202°C, năng suất quay cực -32°, chỉ số phá huyết đối với máu bò 33.000. Saponin này tan trong rượu và nước. Từ chất saponin này, chúng tôi đã thuỷ phân và kết tinh được chất sapogenin có tinh thể hình kim tụ thành hình ngôi sao, không tan trong nước, tan trong ête, cồn và clorofoc, độ chảy 298- 301°C cho phản ứng Lieberman. Hiệu suất sapongenin từ quả bồ kết là 3%. Năm 1929 (Nhật dược chí số 29), một tác giả Nhật Bản có chiết được từ bồ kết cùng loài nhưng mọc ở Nhật Bản chất saponin cấu tạo tritecpenic và gọi là gleđitsaponin với hiệu suất 10%, công thức thô xác định là C59H100O20. Chất saponin này thuỷ phân cho gleditsapogenin và glucoza, ngoài ra còn có arabinoza. Chỉ số phá huyết của gleditsapogenin đối với máu sơn dương là 75.000. Năm 1963, Bùi Đình Sang có chiết được từ bồ kết Việt Nam saponin, men peroxydaza và hai chất khác có tinh thể chưa xác định được tính chất. Năm 1969, Ngô Thị Bích Hải đã chiết được từ quả bồ kết mọc ở Việt Nam 8 chất flavonoit và 7 hợp chất tritecpen: 5 trong số 8 chất flavonoit đã được rút ra dưới dạng tinh khiết và xác định là luteolin, saponaretin, vitexin, homoorientin và orientin. Phần aglycon của hợp chất tritecpen là axit oleanolic và echinoxystic. Phần đường là xyloza, arabinoza, glucoza và galactoza. Ngoài ra tác giả còn chiết được một saponin mới là australozit."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước bồ kết gội đầu, giặt quần áo lụa, len có màu không bị ố. Ngoài việc dùng bồ kết làm nguyên liệu để chế chất saponin, bồ kết còn được dùng trong đông y để chữa nhiều bệnh khác nhau. Bồ kết: Theo các tài liệu cổ thì bồ kết (bỏ hạt, hoặc đốt ra than, hoặc tán nhỏ làm thành viên hay thuốc bột) có vị cay, mặn, tính ôn hơi có độc, vào 2 kinh phế và đại tràng. Có năng lực thông khiểu, tiêu đờm, sát trùng, làm cho hắt hơi dùng chủ yếu chữa trung phong cấm khẩu phong tê, tiêu đồ ăn, đờm xuyễn thũng, sáng mắt, ích tinh.\u00a0Liều dùng hằng ngày 0,5 đến 1g dưới dạng thuốc bột, hay đốt ra than mà dùng, hoặc thuốc sắc. Hạt bồ kết: Trong sách cổ nói hạt bồ kết vị cay, tính ôn, không độc, có tác dụng thông đại tiện, bí kết, chữa mụn nhọt, dùng với liều 5-10g dưới dạng thuốc sắc. Gai bồ kết (tạo thích, tạo giác thích): Có vị cay, tính ôn, không độc. Chữa ác sang tiêu ung độc, làm xuống sữa. Liều dùng 5-10g dưới dạng thuốc sắc. Hiện nay, một số bệnh viện dùng bồ kết để thông khoan chữa bí đại tiện và không trung tiện được sau khi mổ, chữa tắc ruột có kết quả, có thể dùng cho cả trẻ em lẫn người lớn, thường chỉ sau 5 phút là tháo phân ngay (y học thực hành số 58, 6-1960 và 63, 111960). Cách làm đơn giản như sau: Lấy 1/4 quả bồ kết, nướng thật vàng, đừng nướng cháy quá hay còn sống, bỏ hột đi rồi tán thành bột nhỏ. Lấy canulơ, đầu có bôivadơlin hay dầu, chấm vào bột bồ kết, sau đó cho vào hậu môn sâu độ 3-4cm, cứ thế làm 3-4 lần cho bột vào trong hậu môn, sau 2 đến 5 phút bệnh nhân đi ngoài được, có trường hợp hậu phẫu không trung tiện được 2 đến 5 ngày, bệnh nhân chướng bụng, bệnh nhân bí đại, trung tiện, nôn mửa liên tục có khi nôn ra máu mà làm như trên chỉ sau 2 phút trung tiện và đi ngoài được ngay, có bệnh nhân ra tới 500 con giun.  Đơn thuốc có bồ kết dùng trong nhân dân  Thuốc chữa ho:\u00a0Bồ kết 1g, quế chi 1g, đại táo (táo đen) 4g, cam thảo 2g, sinh khương 1g, nước 600ml; sắc còn 200ml chia 3 lần uống trong ngày. Chữa nhức răng, sâu răng:\u00a0Quả bồ kết tán nhỏ, đắp vào chân răng, hễ chảy dãi ra thì nhổ đi. Chữa trẻ con chốc đầu, rụng tóc:\u00a0Bồ kết đốt ra than, tán nhỏ rửa sạch vết chốc, rồi đắp than bồ kết lên. Chữa đi lỵ lâu ngày:\u00a0Hạt bồ kết sao vàng, tán nhỏ, dùng hồ nếp viên bằng hạt ngô. Ngày dùng 10 đến 20 viên, dùng nước chè đặc mà chiêu thuốc (nên uống buổi sáng sớm khỏi mất ngủ). Chữa phụ nữ sưng vú:\u00a0Gai bồ kết thiêu tồn tính 40g, bạng phấn 4g. Hai vị đều tán nhỏ, trộn đều, mỗì lần uống 4g bột này."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây bồ kết mọc hoang và được trồng tại nhiều tỉnh miền Bắc nước ta. Còn thấy mọc tại các tỉnh miền Nam Trung Quốc. Riêng đảo Cát Bà (Hải Phòng) có tới 40.000 cây, hàng năm cho tới 40 tấn bồ kết. Vào tháng 10-11, quả chín, hái về phơi hay sấy khô. Khi mới hái quả có màu xanh hay hơi vàng, phơi và để lâu có màu đen bóng. Gai bồ kết có thể thu hái quanh năm, nhưng tốt nhất vào các tháng 9 đến tháng 3 năm sau, hái về phơi khô hoặc nhân lúc gai còn đang tươi, thái mỏng rồi mới phơi hay sây khô."
+    }
+  ]
+}

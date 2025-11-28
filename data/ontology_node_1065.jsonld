@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kim ngân dại",
+      "ten_khac": "Kim ngân nhẵn, Kim ngân dại",
+      "ten_khoa_hoc": "Lonicera dasystyla Rehd.",
+      "ma_taxon": "430126",
+      "ho": "Caprifoliaceae (Cơm cháy)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây leo bằng thân quấn.",
+      "thân": "Cành non lúc đầu có lông, sau hơi đỏ.",
+      "lá": "Lá mọc đối, cuống hơi dẹt, có rãnh ở mặt trên, phiến lá hình trái xoan – mũi mác, dài 2-8 cm, rộng 1-4 cm, gốc tròn hoặc hình nêm, đầu nhọn, nhẵn ở mặt trên, nhạt hơn và có lông mịn ở mặt dưới và ở mép; lá già thường xẻ thùy nông không đều.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn, thành xim hai hoa; lá bắc và lá bắc con có lông; hoa màu trắng sau vàng; đài 5 răng ngắn; tràng dài 3,3 – 4,7 cm, mặt ngoài nhẵn, mặt trong có lông; ống tràng đôi khi hơi cong; nhị 5, dính ở phía trên của ống tràng, thò ra ngoài; bầu trần.",
+      "quả": "Quả nhẵn, hình cầu, màu đen.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 3-5"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong số các loài kim ngân ở Việt Nam, có lẽ kim ngân dại là loài tương đối điển hình trong các quần hệ rừng núi đá vôi từ Hoà Bình, Hà Tây (vùng Chùa Hương) đến Ninh Bình, Hà Nam, Thanh Hóa. Cây cũng phân bố ở Lào và Trung Quốc.",
+      "thường_mọc": "Kim ngân dại là cây ưa sáng và ưa ẩm, thường mọc ở chân núi đá vôi, đôi khi xuống sát mép nước của vùng lầy thụt trong các thung lũng núi đá vôi (Ninh Bình, Hà Nam).",
+      "Đặc điểm sinh trưởng": "Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu bằng hạt. Cây có khả năng tái sinh chồi khoẻ sau khi chặt. Vụ chồi xuân hè được coi là quan trọng nhất trong năm, vì đa số cành mọc ra từ năm trước đều mọc chồi. Cây trồng dễ dàng bằng thân hoặc cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa sắp nở (có lẫn một số hoa đã nở) thân và cành phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa kim ngân dại chứa flavonoid với hàm lượng khoảng 3% trong hoa và 1% trong lá. Ngoài ra, còn có saponin triterpenic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Kim ngân dại có vị ngọt, tính hàn, không độc, vào các kinh tâm phế, có tác dụng thanh nhiệt, giải độc, thông kinh lạc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Kim ngân dại có công dụng như kim ngân chữa dị ứng, mẩn ngứa, mụn nhọt, cảm sốt, viêm mũi.",
+      "được_dùng": "Liều dùng hàng ngày 5 – 10g hoa phơi khô dưới dạng nước hãm hoặc nước sắc, 10 – 20g cành lá dưới dạng cao.",
+      "chữa": "Ở Trung Quốc, kim ngân dại còn được dùng chữa viêm thận cấp tính với bài thuốc sau :  Kim ngân dại, liên kiều, xa tiền tử mỗi vị 15g, hoàng bá, hoàng cầm, sơn chi tử (sao) mỗi vị 10g, biển súc, cù mạch mỗi vị 12g, mộc thông, cam thảo mỗi vị 5g, bạch hoa xà thiệt thảo 30g. Sắc nước uống. Để chữa viêm tuyến vú thời kỳ đầu, lấy : kim ngân dại 24g, bồ công anh 15g, liên kiều, trần bì mỗi vị 9g, thanh bì, cam thảo mỗi vị 6g. Sắc nước uống, ngày một thang.",
+      "làm thuốc": "*Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

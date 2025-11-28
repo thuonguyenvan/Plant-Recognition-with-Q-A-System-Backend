@@ -1,0 +1,237 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cây sậy",
+            "ten_khac": "Sậy, Sậy trúc",
+            "ten_khoa_hoc": "Arundo donax L.",
+            "ma_taxon": "64017",
+            "ho": "Lúa (Poaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thân thảo dạng bụi, sống nhiều năm, rễ bò dài, rất khỏe.",
+            "thân": "Thân cao 1,8-4m, thân thẳng đứng, rỗng ở giữa; thân rễ có khi phình thành củ.",
+            "lá": "Lá thường khô vào mùa rét, mọc so le, xếp xa nhau, phẳng, hình dải hay hình ngọn giáo, dài 30-60cm, rộng 2-5cm, có mỏ nhọn kéo dài, không ôm lấy thân ở phía gốc, nhẵn hoặc rất ít lông, gân mảnh song song, mép lá ráp; bẹ lá dài, nhẵn, ôm thân, có tai; lưỡi bẹ dạng vòng lông ngắn.",
+            "hoa": "Cụm hoa hình chùy mọc ở ngọn thân, màu tím hoặc nâu nhạt, hơi rủ cong, dài 15-45cm, cuống chung thường có lông mềm dày đặc ở gốc, trục chính mang nhiều nhánh hình sợi, nhánh rất mảnh, nhẵn hoặc hơi ráp, mọc gần vòng. Bông chét mang 3-6 hoa, hoa ở phía dưới đôi khi là trung tính, nhẵn, không có mày hoa; hoa sinh sản có mày dài, mảnh, không lông, xòe ra khi chín, rất nhọn, thường nguyên ở đỉnh, nhị 3, bao phấn hình dải, bầu thuôn, nhẵn.",
+            "quả": "Quả nhẵn, bao bọc bởi mày hoa.",
+            "mùa hoa": "tháng 11 tới tháng 1 năm sau."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Tại Việt Nam, cây có ở Lạng Sơn, Quảng Ninh, Hòa Bình, Ninh Bình. Ngoài ra còn có ở Ngan, Trung Quốc và nhiều nước khác.",
+            "các_tỉnh": {
+                "@type": "schema:ItemList",
+                "mục": [
+                    {
+                        "@type": "schema:ListItem",
+                        "tỉnh": {
+                            "@type": "schema:Place",
+                            "tên": "Lạng Sơn"
+                        }
+                    },
+                    {
+                        "@type": "schema:ListItem",
+                        "tỉnh": {
+                            "@type": "schema:Place",
+                            "tên": "Quảng Ninh"
+                        }
+                    },
+                    {
+                        "@type": "schema:ListItem",
+                        "tỉnh": {
+                            "@type": "schema:Place",
+                            "tên": "Hòa Bình"
+                        }
+                    },
+                    {
+                        "@type": "schema:ListItem",
+                        "tỉnh": {
+                            "@type": "schema:Place",
+                            "tên": "Ninh Bình"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Thân, rễ và măng – Rhizoma et Plantula Arundinis. Trong Đông y, thân rễ được gọi là Lô căn."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Phenylpropanoid: Theo các tài liệu thu thập được, 9 hợp chất phenylpropanoid có trong thân rễ Sậy, bao gồm axit p-hydroxycinnamic, 2,3-dihydroxy-1-(4-hydroxy-3,5-dimethoxyphenyl)-1-propanone, axit caffeic, axit ferulic, eugenol, anethole, 4′-hydroxy-3′-methoxycinnamaldehyde, coniferyl aldehyde, và n-propylbenzene. Steroid: 4 hợp chất steroid có mặt trong thân rễ Sậy, bao gồm stigmasta-3,5-dien-7-one, -sitosterol, stigmasterol và daucosterol. Axit hữu cơ: Tổng cộng có 12 axit hữu cơ từ thân rễ Sậy được phân lập, bao gồm axit vanillic, axit p-coumaric, axit syringic, axit p-hydroxy benzoic, axit palmitic, axit heptadecanoic, axit gentisic, axit pelargonic, axit 2,5-dihydroxybenzoic, crystal Ⅵ, axit L-ascorbic và L-proline. Alkaloid: 10 alkaloid có trong thân rễ Sậy, bao gồm phranisines B, phranisines A, moschamindole, N-p-coumaroyl serotonin, N-p-coumaroyl-tryptamine, aurantiamide acetate, N-[2-(5-hydroxy-1H-indol3-yl)ethyl]-p-coumaramide,\u00a0Riboflavin, coixol và (-)-democolcine. Carbohydrat: 5 loại carbohydrate có trong thân rễ Sậy, chủ yếu bao gồm -D-glucose, -D-glucose, D-L-xylose, L-(+)-arabinose và n-butyl–D-fructopyranoside. Quinon: Cho đến nay, 2 quinon, physcion và 2,5-dimethoxybenzoquinone, đã được phân lập từ thân rễ Sậy. Terpenoid: Có 14 terpenoid trong thân rễ Sậy, bao gồm simiarenol, β-caryophyllene, linalool, (1R)-(+)-camphor, (R)-linalool, -humulene, axit oleanic, b-amyrin, widdrene, cedrol, β-amyrin, taraxerol, 2-etylbutyl methacrylate và taraxerone. Flavonoid: Ngoài ra, 2\u00a0Flavonoid\u00a0là tricin 7-O-glucopyranoside và tricin được tìm thấy trong thân rễ Sậy. Phenol: 6 hợp chất phenolic có mặt trong thân rễ Sậy, bao gồm guasol, vanillin, syringaldehyde, apocynin, tocopherol, và homopolymer 4-hydroxybenzaldehyde.  Hợp chất khác: Ngoài ra, 19 hợp chất khác được tìm thấy trong thân rễ Sậy như 5-hydroxymethylfurfural, 7-chloroarctinone B, widdrene, dioctyl phthalate, furfural phenylacetaldehyde, nonanal, 13-methyl-pentadecanoic acid methylester, ethyl hexadecanoate, 11-methyl-nonadecanoic acid methyl este, axit 6,9,12,15-octadecatetraenoic, metyl este, thiarrubrin A, arctinal, vitamin B1, fmoc-Asn(Trt)-OPfp, bis(2-etylhexyl) phthalat, metyl linoleat, 3-butylphtalen và phenyletyl alcohol."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": ""
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Ở Ấn Độ, nước sắc rễ làm dịu, lợi tiểu, kích thích sự rối loạn kinh nguyệt và giảm sự tiết sữa. Ở Trung Quốc, người ta dùng thân rễ Sậy Trúc trị nhiệt bệnh phát cuồng, đau răng do phong hoả, tiểu tiện bất lợi và dùng ngoài trị mụn nhọt, sưng to bìu dái. Măng Sậy núi dùng trị phế nhiệt thổ huyết, nhiệt lăm, đau răng, váng đầu.  Nguồn: Từ điển cây thuốc Việt Nam tập 2"
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": ""
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

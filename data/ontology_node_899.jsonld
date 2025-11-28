@@ -1,0 +1,209 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/may-vot.html",
+            "ten": "Mây vọt",
+            "ten_khac": "Mây vọt, Mây nước, Mây dốc, Vai cáy (Tày)",
+            "ten_khoa_hoc": "Flagellaria indica L.",
+            "ma_taxon": "360343",
+            "ho": "Flagellariaceae (Mây nước)",
+            "Mô tả": {
+                "cây": "Cây leo, cao đến 20m.",
+                "thân": "Thân hơi hoá gỗ ở gốc, tròn nhẵn, phân nhánh.",
+                "lá": "Lá mọc so le, không cuống, hình mác hẹp, gốc tròn, đầu thuôn nhọn kết thúc bằng một tua cuốn mảnh, vặn xoắn, gân lá nhiều song song; bẹ lá hình trụ, có tai ngắn.",
+                "hoa": "Cụm hoa phân nhánh không đều, mọc thành chùy; hoa không cuống mọc đơn độc hoặc tụ tập trên cụm, rất thơm; bao hoa màu trắng ngà; nhị 6, chỉ nhị mảnh, bao phấn chẻ sâu ở gốc, có hai thùy ở đỉnh; bầu có 3 gốc.",
+                "quả": "Quả màu đỏ, nhẵn, chứa một hạt.",
+                "mùa hoa": "tháng 5-7",
+                "mùa quả": "tháng 5-7"
+            },
+            "Phân bố": {
+                "phân_bố": "Flagellaria L. là chi đơn loài ở Việt Nam. Mây vọt có vùng phân bố rộng rãi ở vành đai nhiệt đới, từ châu Phi qua châu Á, một số đảo ở Thái Bình Dương và vùng Bắc Australia. Ở châu Á, cây có mặt ở tất cả các nước vùng Nam Á, Đông – Nam Á và Nam Trung Quốc.  Ở Việt Nam, cây phân bố ở khắp các tỉnh từ vùng núi ( dưới 1000m) đến đồng bằng, thường mọc thành những khóm lớn lan ra thành đám dọc theo các bờ khe suối ở cửa rừng hoặc các bờ kênh rạch gần cửa sông. Cây có thể sống tốt trên nhiều môi trường sình lầy nước ngọt, nước lợ hay chua phèn, ra hoa quả nhiều hàng năm. Chưa quan sát được cây con từ hạt. Song cây có khả năng sinh chồi gốc khỏe như nhiều loài cây khác trong họ Lúa (Poaceae).",
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "khắp các tỉnh từ vùng núi ( dưới 1000m) đến đồng bằng"
+                            }
+                        }
+                    ]
+                },
+                "thường_mọc": "thường mọc thành những khóm lớn lan ra thành đám dọc theo các bờ khe suối ở cửa rừng hoặc các bờ kênh rạch gần cửa sông."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Rễ, thân, lá và hoa, thu hái quanh năm, thường dùng tươi."
+            },
+            "Thành phần": {
+                "thành phần": "Mây vọt chứa acid cyanhydric dưới dạng glucosid. Hạt độc. (Võ Văn Chi ,Từ điển cây thuốc Việt Nam, 738)."
+            },
+            "Tính vị": {
+                "Có vị": null
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Nhân dân vùng đồng bằng sông Cửu Long đã có kinh nghiệm dùng rễ mây vọt để chữa bệnh như sau:  Chữa đau dạ dày:  Rễ mây vọt, cây thạch hộc vôi, củ nghệ, cỏ hàn the, dây thần nông, cây ớt ruộng, cây màn màn hoa vàng. Mỗi thứ một nắm, phơi khô, thái nhỏ, sắc với 400ml nước còn 100ml, uống làm 2 lần trong ngày trước bữa ăn.  Thuốc hạn chế sinh đẻ:  Rễ mây vọt, thân dây cóc, rễ sắn dây, rễ dứa dại, rễ bách bệnh, rễ cây cứt quạ lá nhỏ. Mỗi thứ một nắm phơi khô, thái nhỏ, sắc nhiều lần với nước, rồi cô thành cao lỏng. Ngày uống 3 lần, mỗi lần 1 thìa canh, uống sau khi sạch kinh. Dùng 2 tháng liền.  Chữa tưa lưỡi:  Gốc, thân mây vọt và quả đu đủ đực, phơi hoặc sấy thật khô, rồi đốt riêng từng thứ cho thành than, tán thành bột mịn. Lấy một phần bột thân gốc mây vọt trộn với 3 phần thân quả đu đủ, dùng bông sạch thấm thuốc bôi vào chỗ đau, chữa tưa lưỡi.  Kinh nghiệm sử dụng ở các nước khác:  Ở Malaysia, nước sắc lá và hoa mây vọt được dùng làm thuốc lợi tiểu trong trường hợp bệnh đường tiết niệu và sỏi thận. Ở Indonesia, lá non giã nát, ngâm với nước dùng để gội đầu, giúp tóc mọc tốt. Lá mây vọt tươi giã nát có tác dụng săn se, đắp chữa vết thương. Ở Philippin, nước sắc thân và thân rễ mây vọt cũng được dùng làm thuốc lợi tiểu. Quả sao cháy thành than, nghiền bột, hòa với nước uống chữa đau đầu. Ở New Guinea, mây vọt là thuốc ngừa thai cho phụ nữ.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+            },
+            "Cách dùng": {
+                "được_dùng": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Hoàng kỳ",
+            "ten_khac": "Hoàng kỳ, Co nấm mò (Thái)",
+            "ten_khoa_hoc": "Astragalus membranaceus (Fisch) Bunge",
+            "ma_taxon": "138362",
+            "ho": "Fabaceae (Đậu)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây sống lâu năm, cao 50-80cm, rễ cái dài và mọc sâu, rất khó bẻ, đường kính 1- 3cm, vỏ ngoài màu vàng đỏ hay nâu.",
+            "thân": "Thân mọc thẳng đứng, trên có phân nhiều cành.",
+            "lá": "Lá mọc so le, kép, dìa lẻ, có lá kèm hình 3 cạnh, 6-13 đôi lá chét hình trứng dài 5-23mm, mặt dưới có nhiều lông trắng mịn.",
+            "hoa": "Cụm hoa mọc thành chùm ở kẽ lá, dài hơn lá, gồm 5-22 hoa, màu vàng tươi.",
+            "quả": "Quả giáp mỏng, dẹt, dài 2-2,5cm, đường kính 0,9-l,2cm đầu dài ra thành hình gai nhọn, trên quả có lông ngắn, 5-6 hạt màu đen hình thận.",
+            "mùa hoa": "Mùa hoa tại Trung Quốc vào các tháng 6-7 (Hà Bắc, Hắc Long Giang, Cát Lâm, Liêu Ninh).",
+            "mùa quả": "Mùa quả vào các tháng 8-9 (Hà Bắc, Hắc Long Giang, Cát Lâm, Liêu Ninh)."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Hoàng kỳ được trồng tương đối phổ biến ở Trung Quốc. Trước đây, Viện Dược liệu có nhập hạt giống hoàng kỳ của Liên Xô trước đây, gieo thử tại Trại thuốc Sa Pa, đến năm 1978 chuyển vào Đà Lạt, nhưng chưa đạt kết quả.",
+            "Đặc điểm sinh trưởng": "Hoàng kỳ là cây ưa sáng và ưa ẩm, phát triển tốt ở vùng có khí hậu ôn đới ẩm, nhiệt độ trung bình khoảng 15°C. Về mùa đông, cây rụng lá, do có phần rễ ăn sâu dưới đất nên có thể chịu được qua thời kỳ băng giá. Cây ra hoa quả nhiều hàng năm. Gieo trồng bằng hạt."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Rễ đã phơi hay sấy khô của cây hoàng kỳ (cả thứ Astragalus membranaceus (Fisch.) Bge var. mongholicus (Bge) Hsiao) và được chế biến như sau:  Hoàng kỳ sống: Dược liệu rửa sạch, đồ mềm, bao hoặc thái phiến mỏng 1 – 2 mm, sấy nhẹ hoặc phơi khô. Hoàng kỳ tẩm mật sao: Lấy mật ong hoà với một ít nước sôi rồi tẩm vào hoàng kỳ đã thái phiến. Trộn đều, ủ cho thuốc ngấm nước mật sao nhỏ lửa cho vàng, khi cảm không dính tay là được. Tỷ người: Cứ 100 kg hoàng kỳ dùng 25 – 30 kg mật ong. (Dược điển Việt Nam III, 2002)"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Trong Hoàng kỳ có polysaccarid: astragalan, saccarose, glucose, tinh bột, chất nhầy, gôm.",
+            "Các hợp chất": "Saponin: người ta đã tách ra được các astragalosid như: astragalosid I, astragalosid II, astragalosid III, astragalosid IV, astragalosid V, astragalosid VI, astragalosid VII, astragalosid VIII,isoastragalosid I, isoastragalosid II, soyasaponin I…",
+            "chứa": "Flavonoid: 2′,4′ – Dihydroxy-5,6- Dimethoxyisoflavane…Các acid amin: Cholin, Betain, acid Folic…Sistosterol."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Hoàng kỳ có vị ngọt, tính ôn vào 2 kinh phế và tỳ, có tác dụng bổ khí, thăng dương, liễm hãn, lợi tiểu, giải độc."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Hoàng kỳ được dùng sống để chữa bệnh đái tháo đường, đái dắt, đái buốt, phù thũng, viêm thận mạn tính, albumin niệu, lở loét, phong thấp, đau xương. Dạng tẩm mật sao chữa suy nhược: lăn ngày, ra nhiều mồ hôi. Ngày dùng 6 – 12g ở dạng sống, 3 – 9g dạng sao tẩm, sắc uống hoặc chế thành cao hoặc viên.",
+            "chữa": "Bài thuốc có hoàng kỳ  1. Chữa toàn thân suy nhược, khô thở, ngắn hơi, kém ăn, miệng khô, tâm dập nhanh hồi hộp, mặt xanh vàng, mồ hôi nhiều, có thể sốt âm ỉ.  Hoàng kỳ sao mật 6 phần, cam thảo 1 phần (nấu uống sống, nửa sao vàng). Tái cả tán nhỏ, mỗi lần dùng 4 – 8g, ngày 3 lần, sáng, chiều và tối. Có thể sắc uống (Hoàng kỳ lục mật thang).  Hoàng kỳ tẩm mật sao 6g, thược dược 5g, quế chi 2g, cam thảo 2g, sinh khương 4g, đại táo 6g, sinh cam 3 lần uống trong ngày. Trước khi uống có thể thêm mạch nha hoặc mật ong (Hoàng kỳ kiên trung thang).  Hoàng kỳ 16g, bạch truật, đẳng sâm, đương quy, mỗi vị 12g, sa tiền, trần bì mỗi vị 6g, thăng ma, trích thảo mỗi vị 4g. Có thể thêm sơn dược 10g, trần bì 8g. Thường dùng khi cơ thể hư nhược trong các bệnh mạn tính (Bổ trung ích khí thang).  Hoàng kỳ 24g, bạch truật, phòng phong mỗi vị 8g. Tán thành bột mịn, tán đều, mỗi lần 6 – 8g, ngày 2 lần. Uống với nước hoắc hương. (Ngọc bình phong tán).  2. Chữa nhũn não  Truyền mỗi ngày 250ml dịch chế từ 4 vị hoàng kỳ, đơn sâm, xuyên khung, xích thước vào tĩnh mạch, mỗi đợt 10 ngày, nghỉ 3 ngày lại truyền đợt khác. Kết hợp uống bài “thông mạch” gồm hoàng kỳ, hồng hoa, xuyên khung, đan sâm, sơn tra, ngưu tất, địa long, quế chi. Đã điều trị 110 ca nhũn não, khỏi 52, kết quả tốt 36, tiến bộ 20, tỷ lệ đạt 98,2%.  3. Chữa sa dạ dày  Hoàng kỳ sống, thăng ma, sa nhân, ngũ vị tử, chế thành dịch tiêm bắp mỗi lần 4 ml, ngày 2 lần, hoặc tiêm huyệt trung quản, ức tâm lý, mỗi huyệt 0,5 ml/ngày, một đợt điều trị khoảng 1 tháng. Sau khi ăn, bệnh nhân nằm nghỉ.  4. Chữa sa trực tràng  Hoàng kỳ sống 30 – 50g, đan sâm 15g, sơn tra nhục 10g, phòng phong, thăng ma mỗi vị 3g. Sắc uống, ngày 1 thang. Nếu có phần lòi ra ngoài, gia thêm thuyền thoái, kinh giới than, băng phiến tán bột, trộn với dầu thơm bôi.  5. Phòng ngừa cảm mạo, viêm mũi dị ứng  Hoàng kỳ sống chế thành viên, mỗi viên 1g, ngày 5 – 6 viên, dùng 10 ngày, nghỉ 5 ngày lại uống đợt thứ hai.  Hoàng kỳ 15g, đại táo 10g, chế thành bột, hoặc sắc uống trong ngày.  6. Chữa ho, viêm phế quản  Hoàng kỳ 24g, tuyền phúc hoa 10g, bách bộ 10g, dã long đở, chế thành viên, uống trong 3 ngày. Dùng 10 ngày, lên 3 – 4 đợt.  7. Chữa bệnh mạch vành (thiếu máu cơ tim và nhồi máu cơ tim)  Hoàng kỳ 30g, ích thược, đan sâm mỗi thứ 15g, đương quy 12g, xuyên khung 10g. Ngày một thang, sắc uống. Dùng 4 – 6 tuần.  8. Thuốc bổ huyết  Khi bị huyết hư có sốt, hoắc sau khi mất nhiều máu. Hoàng kỳ 40g, đương quy 8g sắc uống.  9. Chữa viêm thận  Hoàng kỳ và phòng kỷ đều 12g, bạch truật 8g, cam thảo 4g, gừng tươi 12g, đại táo 3 quả, sắc uống. (Hoàng kỳ phong kỷ thang).  10. Chữa phù do tuyến tiền liệt  Hoàng kỳ sống 100g, hoắc thạch 30g, sắc 2 lần, trộn đều, thêm hổ phách 3g tán bột cho vào thuốc chia ra uống trong ngày lúc đói.  11. Trị đau nhức các khớp  Hoàng kỳ 16g, bạch truật 12g, quế chi 6g, sinh khương 12g, đại táo 3 quả, sắc uống (Hoàng kỳ quế chi ngũ vị thang) dùng trong trường hợp đau nhức các khớp do cơ thể suy nhược, khí huyết hư.  Hoàng kỳ 40 – 160g, đương quy vĩ 8g, ích thược 8g, dạ long đở, xuyên khung 4g, đào nhân 4g, hồng hoa 4g, sắc uống. Dùng trong trường hợp viêm khớp mạn tính, viêm quanh khớp vai, đau trong chứng liệt nửa người do tai biến mạch máu não.  12. Chữa ung nhọt, sang thương lâu ngày không lành miệng, nhọt lở loét khó liền miệng  Hoàng kỳ 16g, đương quy 12g, xuyên khung 6g, bạch truật 12g, kim ngân hoa 16g, táo giác thích, thiên hoa phấn, trạch tả, mỗi thứ 12g, cam thảo 4g. Sắc uống (Hoàng kỳ nội thác thang). Hoặc hoàng kỳ, kim ngân đều 20g, đương quy 16g, cam thảo 6g, sắc uống (Tứ điều thang).  13. Chữa lupus ban đỏ  Hoàng kỳ 30, 60 hoặc 90g, sắc uống ngày một thang; dùng liền 1 – 2 tháng, kết hợp dùng thêm corticoid liều nhỏ hoặc trung bình.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": ""
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

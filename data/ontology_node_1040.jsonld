@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lá tiết dê",
+      "ten_khac": "Tiết dê, Dây sâm nam, Hồ đằng lông",
+      "ten_khoa_hoc": "Cissampelos pareira L.",
+      "ma_taxon": "160643",
+      "ho": "Menispermaceae (Tiết dê)",
+      "Mô tả": {
+        "lá": "Tiết dê là một loại cây leo, thân và cành đều mang ít nhiều lông mịn. Lá hình tim, có khi mép hơi khía tai bèo, thường mềm: dài 2-5cm, rộng 3-6cm, có 5 gân chính, hai mặt đều có lông mịn. Cụm hoa đực mọc thành ngù lưỡng phân, gần như không cuống ở kẽ lá bắc hình thận hay tròn, nhỏ mọc mau. Quả hạch hình cầu, dẹt, đường kính 5mm và có sẹo của vòi ở gốc, màu đỏ có lông. Hạch hình móng ngựa, giữa rỗng, có những mấu sần sùi, nhân có phôi nhũ và phôi cùng dạng."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong lá tiết dê có một chất nhầy, chưa thấy được nghiên cứu",
+        "gồm chất": "Ngoài ra Fluckiger còn lấy ra được một chất nữa, trung tính, kết tinh thành hình phiến họ gọi là deyamitin. Khi trộn tinh thể deyamitin với axit sunfurit ta sẽ thấy màu xanh thẫm sau chuyển xanh lục, cuối cùng sang đỏ rồi mất dần .",
+        "Các hợp chất": "Năm 1952, Bhattacharji S. Sharma V.N và Dhar M.D (J.Sci Industr.Res. India) đã báo cáo chiết được từ rễ cây tiết dê một chất ancaloit gọi là hayatin và một ancaloit nữa gọi là hayatinin; ngoài ra còn chiết được quexitol và một sterol .",
+        "chứa": "Cùng trong năm 1952, các tác giả Ấn độ khác Rey. P.K.Dutta A.T., Ray G.K và Makerji (Indian J.Med Res) đã nghiên cứu tác dụng dược lý của toàn bộ những ancaloit chiết được từ rễ cây tiết dê với chuột nhỏ thì thấy các ancaloit đó độc với liều 50mg/1kg thể trọng.",
+        "triết xuất": "Nó gây giãn cơ trơn và kích thích các trung tâm tủy sống",
+        "đã nghiên cứu": "Cuối cùng các tác giả Pradhan S.N., Roy C và Varadan K.S (Ind.Curr.Sci 21(6):172) đã nghiên cứu tính chất curare và muối methoiodua của hayatin"
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ở nước ta lá tiết dê là một vị thuốc kinh nghiệm nhân dân rất phổ biến để chữa những trường hợp đi tiểu tiện khó khăn, sốt lỵ. Nói chung người ta cho rằng lá tiết dê là một vị thuốc “mát” có tác dụng chữa những trường hợp “nóng” như sốt, nóng, táo bón, tiểu tiện khó khăn, đái buốt ra máu.",
+        "được_dùng": "Hiện nay tại Ấn độ người ta dùng chữa những trường hợp sỏi thận và sỏi bọng đái, viêm bọng đái cấp tính và trường diễn, viêm thận",
+        "làm thuốc": "Tại Ấn Độ rễ cây tiết dê được coi là một vị thuốc có tác dụng giúp sự tiêu hoá, thuốc bổ đắng, thông tiểu tiện, chữa sỏi mật. Rễ hay lá còn được dùng giã nát đắp lên các vết loét",
+        "sắc uống": "Ngày dùng: Rễ 5-10g dưới dạng thuốc sắc",
+        "giã nát": "Lá thường dùng tươi giã nát vắt lấy nước để đông lại mà uống. Ngày 40-100g lá tươi",
+        "chữa": "Tại đông châu Phi người ta dùng rễ làm thuốc kích thích tình dục, chữa tê thấp, đau bụng (theo Bally P.R .O-Native medicinal and poisonous Kew Bull 1967:11) tại đảo Mactinic, lá và quả dùng duốc cá  Đơn thuốc có lá và rễ Tiết dê  Chữa tiểu tiện khó khăn, sốt lỵ: Lá tiết dê tươi 50g, vò hay giã nát, thêm ít nước chín nguội vắt lấy nước để một chốc cho đông lại, có thể thêm đường cho dễ uống Chữa chậm tiêu, đau bụng: Rễ tiết dê 4 phần, hạt tiêu 5 phần, gừng 6 phần. Tất cả trộn đều, thêm mật vào nhào thành bột nhão, viên thành viên. Ngày uống 0,2-0,3g."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây tiết dê mọc hoang khắp nơi ở đồng bằng cũng như rừng núi trong toàn nước ta. Còn thấy mọc ở Ấn Độ, đảo Mactinic, phía Đông châu Phi",
+        "giã nát": "Nhân dân thường hay dùng lá tươi, hầu như quanh năm , giã nát hay vò nát, lọc lấy nước để đông đặc như thạch, uống cho mát giải nhiệt",
+        "phơi khô": "Một số nơi còn dùng rễ hái quanh năm về phơi khô hay sao vàng sắc uống"
+      },
+      "luu_y": {
+        "luu_y": null
+      },
+      "url": "https://tracuuduoclieu.vn/la-tiet-de.html"
+    }
+  ]
+}

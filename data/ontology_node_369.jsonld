@@ -1,0 +1,267 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu mỏ",
+      "ten_khac": "Lộc hoắc",
+      "ten_khoa_hoc": "Rhynchosia volubilis Lour.",
+      "ma_taxon": "474975",
+      "ho": "Đậu (Fabaceae)",
+      "Mô tả": {
+        "lá": "Cây thảo quấn. Thân cành mạnh, có nhiều lông. Lá kép lông chim, mọc so le, gồm 3 lá chét hình thoi, dài 3,5 – 5,5 cm, rộng 2,8 – 4,5 cm, gốc tù tròn, đầu nhọn, mặt trên màu lục sẫm và có lông ngắn, mặt dưới nhạt có lông mềm và nhiều tuyển; các lá chét bên không cân xứng, lá kèm hình mác nhọn; cuống chung và cuống lá chét đều có lông màu xám.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chùm hình tháp, chia nhánh không đều, cuống chung rất ngắn, có vảy dạng lá kèm sít nhau, dài 2 – 4 cm; hoa nhỏ màu vàng mọc khá dày đặc, đài hình chuông có lông ở mặt ngoài, 4 răng đều, răng dưới dài hơn; tràng có cánh cờ hình bầu dục, cánh bên hình dài – trái xoan ngược, cánh thia uốn lượn, có mũi nhọn; nhị hại bỏ; bầu có lông.",
+        "quả": "Quả đậu, hình bầu dục, phẳng, có ngẩn, dài 1,3 – 1,5 cm, rộng khoảng 7 mm, hơi có lông: hạt 2, hình thận, màu đen bóng.",
+        "cây": "Cây thảo quấn.",
+        "thân": "Thân cành mạnh, có nhiều lông.",
+        "cuống": "cuống chung và cuống lá chét đều có lông màu xám.",
+        "mùa hoa": "tháng 6 – 7."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Rhynchosia Lour. ở Việt Nam đã biết có 4 loài đều là những cây mọc tự nhiên. Loài đậu mỏ phân bố rải rác ở một số tỉnh miền núi thấp xuống đến trung du và đôi khi gặp ở cả đồng bằng.  Trong tập “Danh lục các loài thực vật Việt Nam” tập 2 (2003) có ghi nhận các nơi phân bố như: tỉnh Cao Bằng (Trùng Khánh), Lạng Sơn (11ữu Lũng); Quảng Ninh (Quảng Yên, Hòn Gai, Ung Bi, Tiên Yên): Phú Thọ (Đoan Hùng); Hoà Bình (Lạc Thuỷ): Hà Nội (Sóc Sơn): Hải Phòng, Hà Nam (Kiệm Khẽ): Ninh Bình (chợ Ghềnh, Thổ Mật): Thanh Hoá (Ngoại Thôn) và ở Thừa Thiên Huế. Trên thế giới, loại này phân bố ở Trung Quốc và Nhật Bản.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Ninh"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Phú Thọ"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Nội"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hải Phòng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Nam"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thanh Hoá"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thừa Thiên Huế"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Đậu mỏ là loại dây leo nhỏ, sống nhiều năm. Cây ưa sáng, tra ẩm đồng thời cũng hơi chịu được hạn, thường thấy mọc lẫn trong các lùm bụi ở chân đồi, ven rừng thí sinh hoặc trong các đám cỏ cao ở ven đường và bờ nương rẫy. Cây sinh trưởng mạnh trong mùa mưa ẩm, ra hoa quả hàng năm và có thể có hiện tượng rụng lá vào mùa đông. Cây tái sinh tự nhiên chủ yếu từ hạt và mọc chổi sau khi bị cắt."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Tính vị": {
+        "Có vị": "Lá và thân đậu mỏ vị đắng, cay, tính bình, có công năng lợi tiểu, tiêu phù, khu phong, hòa huyết, giải độc, sát trùng. Hạt có công năng bổ ích, tinh huyết.  Sách “Toàn quốc Trung thảo dược hội biên” ghi: lá đậu mỏ vị đắng, cay, tính bình, sách “Bản Kinh” cũng ghi: vị đắng, tính bình. Sách “Tân hoa bản thảo cương yếu” ghi: rễ và lá đậu mỏ vị đắng, tính bình."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Toàn cây đậu mỏ được dùng chữa viêm thận, thủy thũng; trẻ em ăn kém và suy dinh dưỡng, lao cổ, viêm hạch bạch huyết, thấp khớp, viêm khớp, đau lưng. Liều dùng 10 – 20g sắc nước uống, ngày 1 thang.  Dùng ngoài trị mụn nhọt, viêm mủ da. đòn ngã tổn thương, bỏng nước, bỏng lừa, rắn cắn. Lấy ngọn cây tươi vừa đủ, rửa sạch, giã nát. đắp ngoài. Hạt đậu mỏ ăn bổ, ích tinh huyết.",
+        "chữa": [
+          "ho",
+          "lao",
+          "khạc ra máu mủ",
+          "bại liệt nửa người",
+          "thấp khớp",
+          "viêm khớp",
+          "đau lưng",
+          "viêm hạch bạch huyết",
+          "lao hạch ở cổ"
+        ]
+      }
+    }
+  ]
+}

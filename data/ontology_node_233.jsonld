@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dền cơm",
+      "ten_khac": "Rau giền cơm, Dền tái, Dền xanh, Dền đất",
+      "ten_khoa_hoc": "Amaranthus lividus L.",
+      "ma_taxon": "52329",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cỏ thường nhỏ, cao đến 80cm, đứng hay nằm ở gốc thường có một nhánh to, cong, thân to đến 5mm, không lông, không gai.",
+      "lá": "Phiến lá xoan tròn dài, có khi hình bánh bò, dài 3-6cm, rộng 1,5-3cm, đầu tù, có khi lõm, không lông; cuống dài đến 10cm.",
+      "hoa": "Chuỳ hoa ở ngọn hay bông ở nách lá; hoa có 3 lá đài, 3 nhị, 2-3 đầu nhuỵ.",
+      "quả": "Quả bế nhăn, chứa 1 hạt nâu đen, bóng, to 1mm.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 5-7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc ở đất hoang, dọc đường đi, và cũng được trồng lấy lá làm rau. Hàng năm, cây mọc từ hạt xuất hiện vào cuối mùa xuân, sinh trưởng nhanh trong mùa hè, sau khi ra hoa quả thì tàn lụi. Hạt già phát tán ra khỏi quả, tồn tại suốt mùa thu – đông và sẽ nảy mầm vào mùa xuân năm sau. Có thể thu hái quanh năm, rửa sạch, cắt đoạn phơi khô dùng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cành lá rau dền cơm chứa nước 84,5%, protid 3,4%, glucid 1,4%, cellulose 1,6%, vitamin C 63mg%, caroten 10,5mg%, vitamin B2 0,36mg%, vitmin PP 1,3mg%. Cũng có tác giả cho biết lượng vitamin C trong rau Dền cơm là khoảng 21mg%, xào ăn thì lượng vitamin C ít hao tổn hơn luộc."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, tính hàn, có tác dụng thanh nhiệt khu thấp, thu liễm, chỉ tả, ích khí, mát gan, làm sáng mắt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Được dùng trị lỵ trực trùng và viêm trường vị cấp và mạn tính, cũng dùng trị rắn độc cắn. Ngày dùng 40-80g, sắc nước uống. Dùng ngoài lấy rễ tươi giã nát, lấy nước chiết uống và dùng bã đắp. Ở Ấn Độ, người ta dùng lá làm thuốc trị bò cạp đốt và dùng toàn cây trị rắn cắn. Ở Nepal, lá non dền cơm được nấu chín ăn một cách đều đặn để chữa tiêu chảy; rễ giã ép lấy nước, mỗi lần uống khoảng 2 thìa cà phê, ngày 3 lần, uống trong khoảng 3 ngày để làm phân cứng trở nên mềm. Ở Nam Mỹ và Trung Mỹ, lá dền cơm là thuốc lợi tiểu và lợi sữa dưới dạng thuốc hãm và thuốc làm dịu.. Ở châu Phi, lá dền cơm được dùng làm thuốc hạ sốt và thuốc đắp để tiêu viêm, trị nhọt và áp xe. Ở Nigieria, nhân dân dùng lá dền cơm điều trị một số chứng rối loạn tâm thần. Rau dền cơm còn là loại rau xào, luộc ăn ngon, có tác dụng dưỡng sinh. Kinh nghiệm dân gian là kỵ ăn với tiết canh (lợn, vịt) vì nếu ăn chung rau dền cơm luộc với tiết canh sẽ bị ỉa chảy dữ dội. Đơn thuốc trị lỵ: Khi mới mắc bệnh, dùng 1/2 kg rau Dền cơm chia 4 lần nấu với nước, mỗi ngày uống 4 lần; ngày thứ hai dùng 1/4 kg cũng chia 4 lần nấu uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thiên tiên tử",
+      "ten_khac": "Sơn yên tử, Đại sơn yên tử, Jusquiame (Pháp), Mont aux poules.",
+      "ten_khoa_hoc": "Hyoscyamus niger L.",
+      "ma_taxon": "163951",
+      "ho": "Solanaceae (Cà)",
+      "Mô tả": {
+        "lá": "Thiên tiên tử là hạt cùa cây thiên tiên tử, một loại cỏ sống hàng năm hay hai năm, có thể cao 0,50m hay hơn. Thân và lá phủ nhiều lông. Phiến lá có thể dài 20-25cm, rộng 5-7cm, lá phía dưới có cuống, lá phía trên thân không cuống hơi ôm vào thân.",
+        "hoa": "Phiến lá chia nhiều thùy, gần chính lá nổi rõ. Hoa mọc thành xim một ngả, tràng hoa màu vàng nhạt với những thùy tràng không đều nhau, với những đường gân của cánh tràng màu tía, 5 nhị. Ngoài loài Hyoscyamus niger kể trên, người ta còn khai thác cả thiên tiên tử hoa trắng (Hyoscyamus aibus) cũng có cánh tràng màu vàng nhạt nhưng không có đường gân màu tía.",
+        "quả": null,
+        "cây": null,
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Lá thiên tiên tử chứa 0,045 đến 0,08-0,12 và đặc biệt tới 0,20% ancaloit toàn phần trong đó chủ yếu là hynscyamin, một ít atropin,hyoscin hay scorolamin . Hạt thiên tiên tử chứa 0,10 đến 0,14% ancaloit toàn phần trong đó có những ancaloit giống như trong lá. Ngoài ra trong hạt còn chứa 20-30% dầu béo màu vàng lục nhạt và chừng 30% tinh bột.",
+        "gồm chất": null,
+        "Các hợp chất": null,
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong các tài liệu đông y cổ thiên tiên tử có tính hàn (lạnh), vị đắng, có tác dụng giảm đau chấn kinh dùng trong những trường hợp đau răng, điên cuồng. Ngày dùng 1,5-3g. Những trường hợp khí hư, vị nhược cấm được dùng. Đau răng thì nhét bột thiên tiên tử vào nơi răng sâu hoặc hun khói sau khi đốt. Hạ phẩm vì có độc. Tây y. Cả hạt và lá đều được xếp vào thuốc độc bảng A. Thường dùng dưới dạng bột (phải chứa 0,20% ancaloit) với liều 0,1-0,2g cho người lớn, liều tối đa một lần 0,20g, 24 giờ là 0,6g, trẻ em dùng mỗi tuổi dùng 5miligam Liều tối đa trong một lần là 0,10g, trong 24 giờ là 0,30g dưới dạng thuốc viên hay pôxiô. Cồn thiên tiên tử (thuốc độc bảng C) mỗi gam tương đương với 57 giọt. Ngày dùng 1 đến 3g dưới dạng giọt. Liều tối đa một lần 1g, trong 24 giờ là 4g. Cùng những chỉ định như cà độc dược.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Thiên tiên tử được dùng trong cả đông y và tây y. Tây y hoàn toàn nhập và theo chúng tôi biết đông y cũng phải nhập. Có người nói ở nước ta cũng có cây này. Nhưng rất tiếc cho đến nay chúng tôi chưa được biết. Đông y và Tây y đều thống nhất cây này có độc, vì trong Thần nông bản thảo tập bản thảo cổ nhất thế kỷ 2) thì thiên tiên tử được xếp vào hạ phẩm (nghĩa là có tác dụng nhưng có độc). Chúng ta cũng không rõ Trung Quốc có vị này hay cũng chỉ nhập rồi bán sang ta. Tại các nước châu Âu, thiên tiên tử được trồng và thu hoạch ở các vùng ven biển Địa Trung Hải, các nước Trung Á và Tây Á. Người ta thường chọn cây sống 2 năm (chỉ có những cây này mới được công nhận chính thức làm thuốc). Tại những nuớc này trồng vào tháng 2-3, thu lứa đầu vào tháng 7, có thể thu lứa thứ 2 vào tháng 9, lứa thứ 3 vào tháng 10. Nhưng muốn thu hái lá đủ tiêu chuẩn (thu hái lúc cây ra hoa) thì phải trồng vào tháng 6, nếu không cây ra hoa ngay trong những năm đầu. Pháp lại qui định thu hái lá ở những cây có quả non. Hạt để làm thuốc phải được thu hái trên những cây có quả chín hay gần chín. Mỗi quả chứa tới 500 hạt. Hạt rất nhỏ, đường kính 1mm hơi hình thận, màu nâu nhạt hay xám tro.",
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

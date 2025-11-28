@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mã đề nước",
+      "ten_khac": "Trạch tả, Mã đề nước",
+      "ten_khoa_hoc": "Alisma plantago-aquatica L.",
+      "ma_taxon": "60253",
+      "ho": "Alismataceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống một năm, mọc chìm trong nước, rễ ngập sâu trong bùn. Thân rất ngắn hoặc không có thân.",
+      "lá": "Lá mềm, hình bầu dục, có cuống dài, mọc tập trung thành cụm dày, màu lục tía, gốc tròn hoặc hơi hình tim, đầu nhọn, mép lá lượn sóng, gân lá hình cung trông giống lá mã đề.",
+      "hoa": "Hoa lưỡng tính mọc trên cuống dài, màu trắng, tím nhạt hoặc trắng lục; đài hoa có phiến hẹp, màu lục, nhăn ở mép; tràng hoa dài và rộng hơn đài; nhị 6, đều; bầu có nhiều noãn.",
+      "quả": "Quả hình cầu hơi dài, có 5 – 6 cánh mỏng.",
+      "mùa hoa": "tháng 8-10",
+      "mùa quả": "tháng 8-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ottelia Pers. gồm các loài sống ở nước; phân bố ở vùng nhiệt đới. Ở Việt Nam có 4 loài. Mã đề nước có vùng phân bố gần như khắp vùng nhiệt đới Nam Á và Đông – Nam Á, gồm Ấn Độ, Xrilanca, Thái Lan, Malaysia, Campuchia, Lào, Indonesia, Philippin và Việt Nam. Ở Việt Nam, cây phân bố chủ yếu ở các tỉnh đồng bằng và trung du, hoặc vùng núi thấp.",
+      "thường_mọc": "Mã đề nước thường mọc tập trung thành những đám lớn ở các ao hồ (nước nông), kênh rạch, hạ nguồn các con suối lớn và nhất là ở các ruộng trũng quanh năm ngập nước (đồng chiêm trũng). Phần thân ngầm (gốc và rễ) ngập trong bùn, còn phần lá (cuống và phiên) mọc trong nước. Tùy theo môi trường nước ngập nông hay sâu; nước chảy chậm hay nước lặng… hình dạng và kích thước của lá đều có ảnh hưởng. Cây ra hoa hàng năm, việc truyền phấn và thụ phấn diễn ra trong môi trường nước. Mã đề nước và một số loài thực vật thủy sinh khác là nhân tố quan trọng trong thủy vực nông ở Việt Nam. Những loài này vừa góp phần làm sạch nguồn nước, vừa là nơi trú ngụ và sinh sản của nhiều loài tôm cá…"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, dùng tươi hoặc phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây mã đề nước có caroten 2,6 mg%, vitamin C 17 mg% (Từ điển cây thuốc, 1997)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mã đề nước có vị ngọt nhạt, có tác dụng thanh nhiệt, giải độc, tiêu viêm, lợi tiểu, long đờm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây mã đề nước được trồng trong bể nuôi cá cảnh, để làm đẹp, và làm nguồn thức ăn cho loài cá Et ro plus. Về mặt y học, mã đề nước được dùng chữa phù thũng, bí tiểu tiện, lòi dom, hen suyễn, lao phổi. Lá mã đề nước tươi, giã nát, đắp vào gan bàn chân, bàn tay chữa sốt, vào dom để chữa lòi dom. Để chữa bỏng viêm tấy, đau nhức, lở loét, sưng vú, lấy lá mã để nước giã nát, lấy nước bôi hoặc dùng bã đắp. Lá và cuống lá mã đề nước có mùi thơm, được dùng làm thức ăn nuôi lợn, và đôi khi làm rau xanh cho người."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa bí tiểu tiện, phù thũng: Lá mã đề nước 20g, thân hoặc rễ mộc thông 12g, thái nhỏ, phơi khô, sắc chia làm 2 lần uống trong ngày.",
+      "làm thuốc": "*Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kim vàng",
+      "ten_khac": "Kim vàng , Gai kim bóng, Sơn đông, Gai kim vàng",
+      "ten_khoa_hoc": "Barleria lupulina Lindl.",
+      "ma_taxon": "159176",
+      "ho": "Acanthaceae (Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ mọc đứng, nhánh vuông, không lông.",
+      "lá": "Lá nguyên không lông, lá kèm biến thành gai thẳng nhọn.",
+      "hoa": "Cụm hoa bông ở ngọn, các lá bắc kết hợp cao 2cm. Cánh hoa mềm, màu vàng nhạt. Mỗi bông thường có 18-20 hoa nhưng thường không nở hoa một lúc. Mỗi ngày chỉ nở hai hoa. Sau 7 ngày mới nở hết một bông hoa.",
+      "quả": "Quả nang có hạt dẹt, hạt được bao bọc bởi một vỏ cứng. Khi quả chín khô, nổ tách bắn hạt ra xa."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Kim vàng mọc hoang và được trồng ở Ấn Độ, Indonesia…  Ở Việt Nam, cây kim vàng mọc hoang dại ở các tỉnh phía Nam nước ta, được nhiều nhà trồng làm cảnh hoặc\u00a0 thành hàng rào vì có gai nhọn, có người tỉa cây thành hình cầu. có nhiều hoa đẹp hơn. Gần đây nhiều người đã trồng để lấy lá dùng chữa rắn độc cắn. Thường chỉ thu hoạch lấy lá tươi dùng ngay. Chưa thấy mấy người dùng lá khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa có vị ngọt, lá có vị đắng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Công dụng phổ biến nhất của cây kim vàng là dùng chữa vết rắn độc cắn: Hái một nắm lá tươi (ước 20-35g) giã nát vắt, lấy nước cốt cho nạn nhân uống sống, bã dùng đắp lên nơi rắn cắn. Cứ 30 phút cho uống một lần. Có người phối hợp lá kim vàng với phèn chua như sau: Trước hết hút nọc rắn bằng dùng một ống nhựa, hay ống trúc đặt vào vết rắn cắn rồi dùng miệng hút. Hút một vài lần để lấy tối đa nọc độc. Sau đó dùng 30g lá kim vàng tươi, thêm 5g phèn chua, cùng giã. Thêm ít nước vào. vắt lấy nước cho uống. Nếu nạn nhân răng cắn chặt thì cậy miệng cho uống thuốc. Bã lá và phèn chua thì đắp lên vết rắn cắn. Ngoài công dụng chữa rắn cắn, nước giã ép tươi còn được dùng chữa chân nứt, nẻ. Còn dùng chữa ho sốt đối với trẻ em."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bèo tây",
+      "ten_khac": "bèo tây, bèo Nhật Bản, lộc bình.",
+      "ten_khoa_hoc": "Eichhornia crassipes Solms",
+      "ma_taxon": "962637",
+      "ho": "Pontederiaceae (Bèo tây)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": null,
+        "quả": "Quả nang.",
+        "cây": "Cây thảo, sống nổi ở nước hay những nơi ẩm ướt.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": "lá mọc thành hình hoa thị, có cuống phồng lên thành phao nổi, trông giống như chiếc lọ lộc bình.",
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": "Đây là một cây được nhập vào nước ta từ 1905 (không rõ từ nước nào), nhưng mọc lan rất nhanh khắp nơi, do đó nhân dân gọi là bèo Nhật Bản hay bèo tây để chỉ nguồn gốc ngoại lai, khác với cây bèo cái vốn sẵn có lâu đời ở nước ta.",
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Toàn cây chứa 92,6% là nước , protid 2,9%, gluxit 0,9%, xơ 22%,tro 1,4mg%, calci 40,8mg%, phosphor 0,8mg%, caroten 0,86 mg%, vitamin C 20mg%.",
+        "gồm chất": "Thành phần vô cơ trong cây là Si02, Ca, Mg,K, Na,Cl,Cu,Mn,Fe.",
+        "Các hợp chất": "Trong lá có Ca,Fe,P,Mg,Zn,Cu,Na,K,S. Ngoài ra còn có caroten, các vitamimn B1,B2,E,B6,B12, A, caroten và protein , acid béo tự do , đường acid amin.",
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Chỉ mới thấy dùng đắp bên ngoài khi bị đau (mụn nhọt, vết thương) thì hái một nắm bèo tây rửa sạch, giã nát, thêm một ít muối trắng rồi đắp lên nơi sưng tấy. Khô thì lại thay miếng đắp khác. Ngày thay hai hay ba lần. Thường những vết tấy rút rất nhanh. Nếu chưa nung mủ thường sẽ tan, nếu đã nung mủ rồi thời gian nung mủ rút ngắn, chóng vỡ hay chóng trích được hơn. Trong chiến tranh chống Mỹ cứu nước ở Miền Nam, nhân dân thường dùng cây bèo Nhật Bản đắp lên những nơi sưng tấy, viêm loét do các chất độc hoá học của giặc gây ra, có nhiều kết quả tốt.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Như trên đã nói, cây không có ở nước ta. Được đưa vào trồng ở nước ta 1905 để làm thức ăn cho lợn và làm phân xanh.",
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": "Chỉ từ mấy năm kháng chiến chống Mỹ cứu nước, ở Miền Nam nước ta nhân dân dùng toàn lá cây này giã nát với ít muối trắng đắp lên những vết sưng tấy hay bị viêm có kết quả tốt.",
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

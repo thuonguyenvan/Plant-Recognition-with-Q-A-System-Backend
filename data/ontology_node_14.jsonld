@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cảo bản",
+      "ten_khac": "Cảo bản, Hương cảo bản, liêu cảo bản",
+      "ten_khoa_hoc": "Ligusticum jeholense Nak. et Kitaga",
+      "ma_taxon": "973468",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cảo bản là cây thân thảo sống lâu năm, có thân thẳng đứng, rỗng bên trong, bên ngoài có các rãnh dọc.",
+      "lá": "Mọc so le, lá gốc hình tam giác, dài khoảng 8 – 15cm, có cấu trúc hai lần xẻ lông chim, với mỗi lá chét có 3 – 4 cặp hình trứng, mép lá có răng cưa không đều, đầu nhọn. Cuống lá dài 9 – 20cm. Lá phía trên thân có bẹ mở rộng.",
+      "hoa": "Cụm hoa tán kép, mọc ở đầu cành hoặc kẽ lá. Mỗi cụm có 16 – 20 tán hoa nhỏ. Hoa màu trắng, gồm 5 cánh hoa hình bầu dục, hơi cuộn vào trong. Không có đài hoa. Nhị 5 cái, bao phấn hình bầu dục, nở dọc. Bầu nhụy nằm dưới, có 2 vòi nhụy nhỏ cong ngược.",
+      "quả": "Quả bế đôi, hình trứng rộng, không có lông. Mỗi nửa quả có 5 sống dọc, giữa các sống có 3 ống tinh dầu, mặt trong có 5 ống tinh dầu.",
+      "mùa hoa": "Hoa nở vào tháng 7 – 8",
+      "mùa quả": "kết quả vào tháng 9 – 10.",
+      "thân": "Chất nhẹ, khá cứng và dễ gãy. Mặt cắt ngang có màu vàng hoặc vàng trắng, có nhiều xơ sợi.",
+      "mùi": "Cây Cảo bản có mùi thơm nồng đặc trưng, vị cay, đắng và hơi tê."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Đặc điểm sinh thái:  Cây Cảo bản thường sinh trưởng trong môi trường ẩm ướt và mát mẻ, chủ yếu ở các khu vực có độ cao trung bình đến cao. Cụ thể:  Độ cao sinh trưởng: Cây mọc ở vùng có độ cao từ 1000 – 2700m, phổ biến hơn trong khoảng 1250 – 2500m so với mực nước biển.  Môi trường sống:  Dưới tán rừng (rừng thưa hoặc rừng rậm), nơi có bóng râm và độ ẩm cao. Bờ suối, khe suối, vùng đất ẩm ven sông. Thảo nguyên cao nguyên (các bãi cỏ ẩm ướt trên núi). Sườn núi đá có độ ẩm cao, đặc biệt là các vách đá râm mát. Rìa rừng (ranh giới giữa rừng và đồng cỏ), nơi có ánh sáng gián tiếp.  Đặc điểm phân bố:  Cảo bản là tên vị thuốc có nguồn gốc từ 2 loài Ligusticum sinensis Oliv. và L. jeholense L. thuộc họ Hoa tán (Apiaceae). Cả 2 loài này vốn mọc tự nhiên, sau được trồng ở Trung Quốc.  Ở Việt Nam, hiện còn phải nhập dược liệu cảo bản của Trung Quốc. Tại Trung Quốc, cây phân bố ở Hà Nam, Thiểm Tây, Cam Túc, Giang Tây, Hồ Bắc, Hồ Nam, Tứ Xuyên, Sơn Đông, Vân Nam và những nơi khác.",
+      "Đặc điểm sinh trưởng": "Cây Cảo bản thường sinh trưởng trong môi trường ẩm ướt và mát mẻ, chủ yếu ở các khu vực có độ cao trung bình đến cao."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Đã xác định độc tính cấp dùng uống cho chuột nhắt trắng, thấy tinh dầu cảo bản được chưng cất từ cây cảo bản tươi có liều chết trung bình là LD60 = 70,174 4,95 g/kg (Trung tây y kết hợp tạp chi, 1987, vol. 7, 12: 738: TDTH, 1997, III: 1628)."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân, rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ và thân chứa tinh dầu [Đỗ Tất Lợi, Những cây thuốc và vị thuốc Việt Nam, NXB Y học, 1999: 96), levistolid A, xiongterpen, acid linoleic, sucrose, daucosterol, acid ferulic và B sitosterol Zhang B – Sunf M – Chang RL – Zang H, Zong Yao Cai, 2009, May, 32(5) 710 – 2 (Articl in China)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và thân rễ cảo bản vị cay, tính ấm, không độc, có công năng tán phong hàn, khu phong, táo thấp, chỉ thống. Tài liệu Trung Quốc cũng ghi: cảo bản vị cay hơi ngọt, tính ôn có công năng tán phong, khư hàn, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cảo bản là một vị thuốc quan trọng trong Đông y, chủ yếu được dùng để trị đau đầu do phong hàn, nhưng ngoài ra còn có nhiều công dụng khác. Dưới đây là các quan điểm của những tài liệu y học cổ về công dụng của vị thuốc này:  Quan điểm của Trương Nguyên Tố:  Cảo bản là vị thuốc chủ đạo của kinh Dương minh, có tác dụng tán phong hàn rất mạnh. Đặc biệt hiệu quả trong điều trị đau đầu vùng đỉnh đầu (đau ở phần cao nhất của đầu). Khi kết hợp với Mộc hương, có thể trị chứng cảm lạnh do sương mù và hơi ẩm xâm nhập vào phần trên của cơ thể. Khi kết hợp với Bạch chỉ, có thể dùng làm thuốc bôi mặt để trị chứng phong và ẩm gây bệnh ngoài da.  Theo sách Bản Thảo Hội Ngôn:  Cảo bản giúp nâng cao dương khí, phát tán phong hàn, thông suốt từ đầu đến dạ dày. Do có tính cay, thơm, mạnh mẽ, vị thuốc này có thể loại bỏ tà khí ở thượng tiêu, đặc biệt là gió lạnh gây đau đầu, cảm lạnh ảnh hưởng đến răng. Đồng thời, nó có thể loại bỏ ẩm thấp ở hạ tiêu, trị các chứng đau bụng, đau vùng kín ở phụ nữ, bệnh lỵ kéo dài ở người già. Nếu cần trị chứng hàn thấp ở hạ tiêu, nên kết hợp với các vị thuốc có tác dụng hành khí đi xuống.  Theo Bản Kinh Phùng Nguyên:  Ngày nay, người ta thường chỉ biết Cảo bản trị đau đầu vùng đỉnh, nhưng thực tế nó còn có thể chữa đau bụng kinh, lạnh bụng ở phụ nữ, do đều liên quan đến hàn thấp xâm nhập kinh Dương minh. Khi dùng để khử phong, trừ thấp, nó có thể trị cả bệnh bên trong và bên ngoài cơ thể, không chỉ riêng đau đầu do phong hàn.  Theo Bản Thảo Cầu Chân:  Ngoài tác dụng trị đau đầu, Cảo bản còn chữa tiêu chảy do hàn phong, mụn trứng cá do phong nhiệt. Nó có công dụng tác động lên kinh Dương minh, giúp loại bỏ phong thấp gây ảnh hưởng đến da và tiêu hóa. So sánh với Xuyên khung (một vị thuốc cũng trị đau đầu), Cảo bản tác động lên kinh Thái dương và Đốc mạch, giúp thông suốt từ trên xuống dưới, nhưng không ảnh hưởng đến kinh Can và Đởm như Xuyên khung.  Theo Bản Thảo Chính Nghĩa:  Cảo bản có vị cay, tính ấm, chủ yếu tác động lên kinh Thái dương và Thái âm, giúp phát tán phong hàn thấp. Có tác dụng thông suốt khí huyết bị ứ trệ, tương tự như Tế tân, Xuyên khung, Khương hoạt. Trị các chứng bệnh do hàn thấp gây co rút cơ, đau bụng kinh, đau bụng dưới. Tuy nhiên, không phù hợp cho người bị âm hư hỏa vượng hoặc có các chứng tắc nghẽn do nhiệt. Ngoài ra, còn có tác dụng trị chứng yếu chân tay, bước đi không vững do phong hàn thấp xâm nhập kinh lạc.  Một số loại Cảo bản khác được sử dụng làm thuốc  Ở một số địa phương ở Trung Quốc, Cảo bản có thể được lấy từ các loài thực vật khác cùng họ:  Hoàng Cảo bản (云南黄藁本) – thuộc loài Ligusticum jeholense, mọc nhiều ở Vân Nam. Tân Cương Cảo bản (新疆藁本) – thuộc loài Ligusticum sinense, mọc ở vùng Tân Cương. Sơn Cảo bản (山藁本) – còn gọi là Thổ Cảo bản, thực chất là cây Trạch cần (Sium sisarum) hoặc Cốt duyên đương quy (Angelica tenuissima), mọc tại Giang Tô.  Nguồn tham khảo: https://www.zysj.com.cn/zhongyaocai/gaoben/index.html"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa lắc đầu  Cảo bản 6g, xuyên khung 3g, phòng phong 5g, bạch chỉ 3g, tế tân 3g, cam thảo 3g, nước 600 ml, Sắc còn 200 ml chia 3 lần uống sau khi ăn lúc thuốc còn nóng.  Chữa hàn tà, đau đầu, ức óc  Cảo bản, khương hoạt, tế tân, xuyên khung, mỗi vị 3g, thêm thông bạch (hành củ) 2 củ sắc uống.  Chữa đầu có nhiều gầu  Cảo bản, bạch chỉ, hai vị lượng bằng nhau, tán thành bột mịn. Tối hôm trước sát hỗn hợp bột vào đầu, sáng hôm sau gội đầu, có thể sắc, lấy nước gội đầu."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

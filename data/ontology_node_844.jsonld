@@ -1,0 +1,223 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Óc chó",
+      "ten_khac": "Hồ đào, Óc chó, Lạc tây",
+      "ten_khoa_hoc": "Juglans regia L",
+      "ma_taxon": "63935",
+      "ho": "Juglandaceae (Óc chó)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, sống lâu năm, cao đến 20 m, rụng lá về mùa đông, vỏ thân màu xám tro, có vết nứt dọc song song.",
+      "lá": "Lá kép lông chim lẻ, mọc so le, gồm 5 – 9 lá chét hình trứng , to dần về phía đầu, gốc tròn, đầu hơi nhọn, mép nguyên, hai mặt nhẵn hoặc có ít lông ở gân chính mặt dưới, vò ra có mùi thơm đặc biệt; cuống dài.",
+      "hoa": "Hoa đơn tính, cùng gốc, màu lục vàng; lá bắc sớm rụng; hoa đực mọc ở kẽ những lá đã rụng, tụ họp thành hình đuôi sóc rũ xuống; nhị 10 – 20, chỉ nhị ngắn, bao phấn 2 ngăn quay vào trong; hoa cái mọc\u00a0riêng lẻ hoặc 2 – 3 cái ở đầu cành, lá đài và cánh hoa rất nhỏ; bầu một ngăn, có vách giả.",
+      "quả": "Quả hạch, đường kính 3 – 4 cm, có vỏ dày và có phần hoá gỗ, nhân có nhiều rãnh nhăn nheo trông như khối óc chứa nhiều dầu béo.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 9 -10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Juglans L. gồm một số loài là những cây gỗ lớn, phân bố rải rác ở vùng ôn đới ấm và vùng nhiệt đới núi cao. Ở Việt Nam, chi này chỉ có một loài là cây óc chó được nhập trồng từ Trung Quốc.  Óc chó có nguồn gốc ở vùng Himalaya, bao gồm một phần lãnh thổ của Ấn Độ và Trung Quốc. Cây được du nhập sang trồng ở Nam Âu. Tại vùng Assam của Ấn Độ, óc chó mọc tự nhiên trong rừng cây lá rộng, nhân hạt là nguồn thức ăn của một số loài động vật gậm nhấm và khỉ. Tại Lâm trường Sa Pa (Lào Cai) và thị trấn Phó Bảng (Hà Giang), có một số cây óc chó trồng đã được trên 30 năm. Cây thích nghi với điều kiện khí hậu mát và ẩm quanh năm ở các địa phương trên, rụng lá vào mùa đông; ra hoa quả nhiều hàng năm. Đến cuối thu, quả chín rụng xuống đất, thuận lợi cho việc thu lượm hạt. Mỗi cây có thể cho 10 – 30 kg hạt. Khi quan sát các cây con mọc từ hạt xung quanh gốc cây mẹ, thấy phần vỏ gỗ của hạt chỉ tách ra (chưa bị mục nát) để cho rễ mầm cắm xuống đất. Theo người dân địa phương ở Phó Bảng, việc trồng cây óc chó rất có lợi, vừa thu hoạch được hạt, vừa lấy gỗ làm nhà và đồ gia dụng.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Óc chó được trồng ở một số tỉnh miền núi và trung du phía bắc có khí hậu ôn hòa như Lạng Sơn, Cao Bằng, Hà Giang, Lào Cai, Tuyên Quang, Phú Thọ. Cây không kén đất, thường được trồng trong vườn, ven đường, bìa rừng.  Óc chó chủ yếu được nhân giống bằng hạt. Hạt tươi thu xong cần gieo ngay vào tháng 10 – 11, nếu để khô, hạt sẽ mất sức nảy mầm. Hạt óc chó cần phải xử lý lạnh khoảng 3 tháng, nhưng nếu gieo vào tháng 10 – 11 thì chính mùa đông tương đối lạnh đã có thể thay thế được việc xử lý nói trên. Sang xuân, hạt nảy mầm và tháng 8 – 9, có thể đánh cây con đi trồng. Ở các nước, óc chó chủ yếu được nhân giống bằng cách ghép.  Khi trồng, cần đào hố 60x60x60 cm, mỗi hố cách nhau 8 – 10 m và bón lót 40 – 50 kg phân chuồng mục. Trồng xong, lèn chặt gốc và tưới giữ ẩm cho đến khi cây hồi phục. Cây không cần chăm sóc đặc biệt. Tuy vậy, hàng năm nên bón thúc phân cho cây tuỳ theo khả năng và điều kiện. Bón thúc ít nhất 2 lần vào lúc cây chuẩn bị ra hoa và sau khi thu hoạch quả."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt lấy ở quả chín bỏ vỏ ngoài, phơi hay sấy khô, rồi đập bỏ vỏ hạt lấy nhân (Hồ đào nhân). Lá thu hái quanh năm, phơi hay sấy khô. Vỏ quả phơi hay sấy khô (thanh long y). Màng ngăn cách trong nhân, phơi hay sấy khô (phân tâm mộc)."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhân hồ đào chiếm chừng một nửa của quả.  Nhân quả thu thập ở Califonia chứa protein 14,3 – 20,4%, dầu mỡ 60 – 67%. Nhân quả thu thập ở Ấn Độ chứa protein 15,6%, carbohyđrat 11,0%, chất xơ 2,6%, chất vô cơ 1,8%. Các chất vô cơ là Na 2,7, K 687, Ca 61, Mg 131, Fe 2,35, Cu 0,31, P 510, S 104, Cl 23 mg/100g, iod 2,8 ug/100 g, As, Zn, Co, Mn, khoảng 42% phosphor toàn phần có dưới dạng acid phytic. Ngoài ra, còn có lecithin. Nhân còn có globulin, trong đó có cystin 2,18%, tryptophan 2,84%.  Quả chưa chín chứa nhiều acid ascorbic 2 – 2,5% ở quả tươi, 16 – 20% ở quả khô.  Ngoài ra, quả và nhiều bộ phận khác của cây chứa a- hydrojuglon glycosid. Chất này khi bị thủy phân sẽ cho glucose và anpha – hydrojuglon (1, 4, 5 – trihydroxy naphtalen) và khi bị oxy hóa, cho juglon (5 – hydroxy – 1,4 – naphtoquinon).  Dầu béo trong nhân với tỷ lệ 60 – 70% (Trung dược từ hải II, 1996 ghi 58 – 74%), có màu xanh nhạt hoặc không màu, mùi dễ chịu. Các acid béo có trong dầu là acid palmitic 3 – 7%, acid stearic 0,5 – 3%, acid oleic 9 – 30%, acid linoleic 57 – 76%, acid linolenic 2 – 16%.  Dầu được dùng làm dầu ăn, làm xà phòng và trong một số ngành khác. Khô dầu là thức ăn cho gia súc chứa protein 35,0%, dầu béo 12,2%, carbohydrat 27,6%, chất xơ 6,7%, Ca, p, Fe.  Vỏ quả chứa protein 1,7%, dầu béo 0,7%, carbo- hydrat 31,9%. Ngoài ra, còn có a – hydrojuglon, ß – hydrojuglon, a – hydrojuglon – 4 – glucopyranosidl.  Bột vỏ quả chứa celulose, lignin 28%, furfural 5%, pentosan 9%, methylhydroxylamin 6%, đường và tinh bột 2,5% và được dùng làm nguyên liệu chế băng dính, má phanh, than hoạt…  Lá chứa nhiều acid ascorbic (800 – 1300 mg/100 g lá xanh) được dùng để chế dịch đậm đặc giàu acid ascorbic, caroten (30 mg/100g lá xanh) và tinh dầu. (The Wealth of India V, 1959).  Vỏ quả, vỏ thân và lá chứa nhiều tanin (vỏ quả 12,23%, vỏ thân 7,51%, lá trưởng thành 9 – 11%) và juglon."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Óc chó có vị ngọt, hơi chát, tính ấm, vào 2 kinh phế, thận, có tác dụng bổ gan thận, mạnh lưng gối, thu liềm phổi, hạ suyễn, cố thận, sáp tinh."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân óc chó được dùng làm thuốc bồi dưỡng cơ thể, trừ đờm chữa ho, dùng cho người lao lực sinh ho, hen, suyễn, lưng đau mỏi, chân yếu, thuốc dưỡng da, đen tóc, lợi tiểu tiện, chữa trĩ. Lá óc chó là thuốc săn da, sát trùng, khử lọc máu. Nếu không có lá, có thể dùng vỏ quả.  Ngày uống 10 – 20 g nhân, dạng thuốc sắc hoặc viên. Dầu óc chó bôi ngoài chữa bỏng, lở chàm và nhuộm tóc đen.  Y học hiện đại đùng lá óc chó làm thuốc Làm se da, sát trùng, bổ và lọc máu, 20 g lá hãm trong 1 lít nước để uống. Nước sắc lá để súc miệng, thụt âm dạo, chữa khí hư. Chất juglon dưới dạng thuốc bôi dẻo được dùng chữa bệnh ngoài da như chốc lở, vẩy nến, eczema, ngứa.  Ở Ấn Độ, lá óc chó có tác dụng làm săn, bổ và trị giun. Lá và vỏ quả có tác dụng hồi phục chức năng và sát trùng, được dùng trị herpes, eczema, lao hạch và giang mai. Quả là thuốc hồi phục chức năng trong thấp khớp. Vỏ quả xanh được dùng trị giang mai và giun. Dầu ép từ quả nhuận tràng, trị sán dây. Ở Malaysia, nhân hạt chữa đau bụng và lỵ. Ở Nepal, dịch ép lá non, uống mỗi ngày 2 lần, một lần 3 thìa cà phê trong 2 ngày để trị giun. Ở Italia, nhân dân địa phương dùng vỏ quả óc chó ngâm rượu uống làm dễ tiêu. Ở Angieri, vỏ quả óc chó được nhân dân dùng ngoài chữa bệnh về răng, vết nẻ và sát khuẩn. Nhân hạt óc chó dưới dạng uống chữa đau kinh, và lá thuốc bổ, kích dục."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

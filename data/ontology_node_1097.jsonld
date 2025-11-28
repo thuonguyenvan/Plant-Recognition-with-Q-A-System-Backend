@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khương hoạt",
+      "ten_khac": "Khương hoạt",
+      "ten_khoa_hoc": "Notopterygium incisum K.C. Ting et H.T. Chang",
+      "ma_taxon": "910546",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống lâu năm, toàn cây có mùi thơm đặc biệt",
+      "rễ": "Rễ có màu nâu đậm , có chùm rễ con",
+      "thân": "Thân cây cao từ 0,5- 1m, không phân nhánh, thân phía dưới hơi có màu tím",
+      "gốc": "thân rễ to thô, có đốt",
+      "lá": "Lá mọc so le, kép lông chim, phiến lá chia thùy, mép có răng cưa, mặt trên màu tím nhạt, mặt dưới màu xanh nhạt; phía dưới cuống lá phát triển thành bẹ ôm lấy thân",
+      "hoa": "Hoa rất nhỏ, màu trắng, hoa họp thành hình tán kép",
+      "quả": "Quả bế đôi hình thoi dẹp, màu nâu đen, 2 mép và ở lưng phát triển thành rìa."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong khương hoạt có tinh dầu, các hoạt chất khác chưa thấy có tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Khương hoạt chỉ mới thấy dùng trong phạm vi đông y. Theo các tài liệu cổ ghi chép được thì khương hoạt và độc hoạt cùng một công dụng. Khương hoạt ngọt, đắng, bình, không độc. Khương hoạt mạnh hơn đi thẳng lên đỉnh đầu, chạy ngang cánh tay trừ phong, chữa tê, còn độc hoạt chỉ đi vào bụng, ngực, lưng và gối thôi. Khương hoạt chữa chứng thủy thấp phong, còn độc hoạt chữa chứng thủng phấp phục phong. Khương hoạt có công phát biểu đi lên thượng tiêu chữa các chứng du phong nhức đầu, đau nhức các khớp xương, còn độc hoạt có sức trợ biểu đi xuống hạ tiêu, chữa các chứng phong ẩn náu làm cho nhức đầu, hai chân tê thấp. Hiện nay thường dùng chữa nhức đầu, thân lạnh, cảm mạo phong hàn, sốt không ra mồ hôi, gân xương đau nhức. Ngày dùng 4 đến 8g dưới dạng thuốc sắc hay thuốc rượu.",
+      "chữa": "Chữa người có thai bị phù thũng: Khương hoạt, la bặc tử, hai vị sao thơm, tán nhỏ; mỗi lần uống 6 đến 8g. Ngày thứ 1 uống 1 lần, ngày thứ 2 uống 2 lần, ngày thứ 3 uống 3 lần là đủ. Dùng rượu hâm nóng lên mà chiêu thuốc.",
+      "chữa": "Chữa cảm nói ngọng, chân tay co quắp, té dại mất tiếng: Khương hoạt tán nhỏ, mỗi lần cho uống 8 đến 12g, dùng rượu chiêu thuốc. Theo sách cổ nói phàm những người huyết hư không phải chứng phong hàn thực là chớ dùng.",
+      "có tác dụng": "Bài thuốc giải cơ, thanh nhiệt: Sài hồ 6 – 12g, Cát căn 8 – 16g, Cam thảo 2 – 4g, Khương hoạt 4 – 6g, Bạch chỉ 4 – 6g, Bạch thược 4 – 12g, Cát cánh 4 – 12g, Hoàng cầm 4 – 12g, Thạch cao 8 – 12g (sắc trước). Cách dùng: Gia thêm Gừng tươi 3 lát, Đại táo 2 quả sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây này chưa có ở Việt Nam. Chủ yếu mọc ở Tứ Xuyên (Trung Quốc); thu hoạch rễ vào mùa thu; đào về rửa sạch đất cát, phơi hay sấy khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

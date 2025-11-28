@@ -1,0 +1,188 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lười ươi",
+      "ten_khac": "Lười ươi, Cây ươi",
+      "ten_khoa_hoc": "Scaphium macropodum (Miq.) Beumee ex K. Heyne",
+      "ma_taxon": "181381",
+      "ho": "Sterculiaceae (Trôm)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá đơn, nguyên hay xẻ thuỳ, mặt trên màu lục, mặt dưới nâu hay ánh bạc, dài 18-45cm, rộng 18-24cm, cuống dài.",
+      "hoa": "Hoa nhỏ, không cuống, họp từng 35 thành chuỳ ở đầu cành. Mỗi hoa cho 1-2 quả đại, dạng lá, hình trứng hay giống như đèn treo, do đó có tên lychnophora (do chữ lychnus là đèn), dài 12- 16cm, rộng 4-5cm ở phần rộng nhất của phía dưới quả.",
+      "quả": "Màu đỏ hay đỏ nhạt, mặt trong ánh bạc, với 4-5 đường gân nổi rõ. Một hạt dài 2,5cm, rộng 1416mm, dày 5-7mm. Lá xuất hiện vào tháng 3-4 và rụng vào tháng 1, hoa xuất hiện vào tháng 3-4, trước khi lá phát triển. Quả xuất hiện vào cuối tháng 4 đầu tháng 5 và mở ra trước khi hạt chín. Khi chín quả đại tách ra, hạt còn lại thường nhẵn là quả, có hai cánh, thực tế chỉ là hai thuỳ dạng lá của quả đại. Thịt quả gồm 3 lớp: Lớp ngoài mỏng, lớp giữa dày mẫm.",
+      "cây": "Lười ươi là một cây to, cao 30-40m, thân có thể cao 10-20m mà chưa phân nhánh, đường kính thân 0,8-1m."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt lười ươi gồm hai phần: Phần nhẵn chiếm khoảng 35% và phần vỏ chiếm khoảng 65%.",
+      "gồm chất": "Trong nhân có chất béo (2,98%), tinh bột và chất đắng.",
+      "chứa": "Trong vỏ có khoảng 1% chất béo, 59% bassorin, chất nhầy và tanin. Phần đường trong hạt gồm chủ yếu galactoza. pentoza và arabinoza."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ (ghi trong Bản thảo thập di của Triệu Học Mẫn-thế kỷ 18) lười ươi có vị ngọt, có tác dụng thanh nhiệt, lợi cổ họng, giải độc, thường dùng chữa ho khan, cổ họng sưng đau, nôn ra máu, chảy máu cam. Hiện nay công dụng chủ yếu của vị lười ươi là mát và nhuận: Chỉ cần 4-5 hạt vào một lít nước là đủ có một thứ nước sền sệt như thạch, thêm đường vào mà uống trong trường hợp ho khan không đờm, cổ họng sưng đau, viêm đường tiết niệu.",
+      "được_dùng": "Ngày dùng từ 2 đến 5 hạt, cho vào cốc nước nóng, chờ một lúc cho hạt nở ra, thêm đường vào cho đủ ngọt chia nhiều lần uống trong ngày.",
+      "chữa": "..."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Lười ươi chỉ mới thấy phân bố và được sử dụng, khai thác ở miền Nam nước ta tại những vùng Biên Hòa, Bà Rịa, Bình Định, Bình Thuận, Phú Yên, Quảng Trị cũng có một ít. Ngoài ra còn thấy ở Campuchia (khu vực Kampot, dãy núi Kamchay, Srenhiot). Thái Lan, các đảo thuộc Malaixia.",
+      "phơi khô": "Vào tháng 4-5, người ta thu hoạch hạt, phơi hay sấy khô: Hạt hình trứng dài 2,53,5cm, rộng l,2-2,5cm, màu nâu đỏ nhạt, trên mặt nhăn nheo, nổi trên nước, nhưng khi ngâm với nước thì sau một thời gian nở rất to, gấp 8-10 lần thể tích của hạt, thành một chất nhầy màu nâu nhạt, trong, vị hơi chát, mát, do đó châu Âu gọi là “hạt nở” (graine gonflante).",
+      "làm thuốc": "Hạt được khai thác rất nhiều ở miền Nam để dùng tại chỗ và xuất khẩu."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bụng báng",
+      "ten_khac": "Búng báng, Lá báng, Cây đoác, Palmier à sucre",
+      "ten_khoa_hoc": "Arenga pinnata (Wurmb) Merr.",
+      "ma_taxon": "348791",
+      "ho": "Arecaceae (Cau)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Báng hay bụng báng là một cây có thân cột cao từ 7-10m, đường kính tới 30cm, trên phủ những bó sợi to đen, giống như cước do cuống lá bị rữa ra, còn lại.",
+      "lá": "Lá xẻ lông chim to dài 6- 7cm, cuống lá to dài, mặt trên lá màu lục, mặt dưới trắng nhạt.",
+      "hoa": "Bông mo dài 90-120cm, phân nhánh nhiều, rũ xuống. Hoa đực có đến 70-80 nhị, hoa cái có 3 lá đài, còn lại ở quả.",
+      "quả": "Quả hình cầu to bằng quả táo màu vàng nâu nhạt, khi chín đỉnh lõm xuống, có ba hạt hình trứng, hơi ba cạnh, màu xám nâu, dài 25mm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong ruột thân cây báng có nhiều tinh bột",
+      "gồm chất": "trong nước chảy từ bông mo có chứa nhiều đường sacaroza."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bột báng được dùng làm thực phẩm. Nước ở bông mo báng được dùng làm nguyên liệu chế đường, rượu. Ngoài ra thân cây báng còn được dùng làm thuốc, chữa sốt, lợi tiểu.",
+      "sắc uống": "Ngày dùng 30-50g thân cây dưới dạng thuốc sắc"
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Mọc hoang và được trồng ở những chân núi hay vùng núi ẩm tại các tỉnh Cao Bằng, Lạng Sơn, Lai Châu và một số tỉnh miền núi. Còn mọc hoang và được trồng ở nhiều nước khác thuộc nhiệt đới châu Á.",
+      "phơi khô": "Nhân dân vùng núi thường trồng để ngả cây khi cây bắt đầu ra hoa rồi lấy từ ruột thân một thứ tinh bột màu nâu hồng nhạt; lấy phần ruột của thân cây, giã nhỏ, lọc lấy tinh bột rồi phơi hay sấy khô. Một cây có thể cho từ 20-100kg tinh bột. Tại các chợ người ta bán với tên bột báng. Soi kính hiển vi, bột báng là những hạt hình chuông, kích thước 50-60cm dính vào nhau, kèm theo một số hạt tròn, rốn ở cạnh, hình sao hay hình vết rách có nhánh. Tại nhiều nước khác vùng Đông Nam và nam châu Á cũng khai thác loại tinh bột này từ ruột thân nhiều loài tương tự như cây báng có tên khoa học Metroxylon rumphii, M. farinifera, Raphia sag us đều thuộc họ Dừa. Tinh bột này mang tên sagu (sagou). Khi cây bắt đầu có quả, người ta cắt bông mo hoa đực và cái, được một thứ nước rất ngọt chảy ra. Nước này có thể thêm men để cất rượu hoặc cô đặc thêm vôi được một thứ đường. Nhân hạt luộc chín được ăn với tên hạt đác. Những sợi còn lại trong thân có thể dùng làm chỉ khâu hay bện làm thừng, dây. Những sợi nhỏ mịn có thể làm bùi nhùi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

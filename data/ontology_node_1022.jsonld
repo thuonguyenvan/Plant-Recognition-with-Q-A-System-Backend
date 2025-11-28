@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ Đậu",
+      "ten_khac": "Củ đậu, Củ sắn, Đậu thự, Mằn cát (Tày), Mằn phao",
+      "ten_khoa_hoc": "Pachyrhizus erosus (L.) Urb.",
+      "ma_taxon": "122985",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mọc leo, sống một năm.",
+      "rễ": "Rễ củ mập, hình con quay, có khi hơi dẹt, vỏ ngoài màu vàng.",
+      "thân": "Thân hóa gỗ, cành có lông thưa và sớm rụng.",
+      "lá": "Lá kép gồm 3 lá chét rộng, nhẵn, dài 4-8cm, rộng 4-12cm, lá chét bên lệch, gân gốc 3, gân phụ thành mạng, mép hơi khía răng; cuống lá kép dài 7-15 cm; lá kèm rụng sớm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm; lá bắc nhỏ; hoa mọc dày đặc ở ngọn, màu đỏ tía hoặc tím nhạt; đài hoa hình chuông, có lông, có 4 răng; cánh hoa có móng dài, cánh cờ hình mắt chim, có 2 tai nhỏ, cánh môi gần hình liềm; nhị 2 bó; bầu có lông.",
+      "quả": "Quả đậu, thuôn dài, hơi có lông, hạt dẹt.",
+      "mùa hoa": "tháng 6-8",
+      "mùa quả": "tháng 9-11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây củ đậu được trồng khắp nơi ở Việt Nam vùng đồng bằng cũng như miền núi để lấy rễ củ ăn, hạt dùng làm thuốc, nhưng ít dùng vì có độc. Mùa thu hoạch hạt: tháng 11-12."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ củ (củ đậu) sau khi đã bóc vỏ có tới 90% nước; 2.4% tinh bột; 4,51% đường toàn bộ (biểu thị bằng glucoza), 1,46% protit, 0,39% chất vô cơ, không thấy có chất béo, không thấy có tannin, không có axit xyanhydric. Có men peroxydaza, amylaza và photphataza Trong hạt củ đậu có 12,27% độ ẩm; 20,13% chất béo; 30,61% chất protit; 4,8% tannin; 5,85% tinh bột; 3,25% đường toàn bộ (biểu thị bằng đường glucoza). Trong hạt củ đậu có một chất độc gọi là rotenone C23H22O6 và tephrosin C23H22O7 Tỷ lệ rotenone trong hạt củ đậu khoảg từ 0,56-1,01%. Trong lá cũng có các chất như trong hạt"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ củ đậu không độc, được dùng ăn sống hoặc xào nấu chín. Có khi người ta ép củ lấy nước bôi mặt để làm cho da mịn màng và khỏi nẻ. Lá độc đối với cá và các loài nhai lại nhưng không độc đối với ngựa Hạt độc đối với cá và sâu bọ. Tại Trung quốc, người ta dùng nó để trị các loại sâu hại rau, rệp bông, rầy bông (một kg hạt giã nhỏ, thêm nước xà phòng và 200ml nước) Nhân dân ta vẫn dùng hạt củ đậu giã nhỏ trộn với dầu để chữa một số bệnh ngoài da. Tuy nhiên có độc, cần chú ý để tránh ngộ độc  Đơn thuốc có dùng hạt củ đậu  Làm thuốc phun trừ rệp rau và rệp thuốc lá. Hạt củ đậu ngâm nước một đêm, sau giã nhỏ, thêm nước với tỷ lệ 1,5%-2% hoặc 4% trộn đều. phun lên những cây bông, cây rau ấy thuốc lá ở ngoài ruộng. Sau 24 giờ đến 36 giờ rệp và nhện đỏ chết hết hay gần hết (90-100%)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

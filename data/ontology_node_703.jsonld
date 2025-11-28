@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thông thảo",
+      "ten_khac": "Thông thoát, Mạy lầu đông (Tày), Co táng nốc (Thái)",
+      "ten_khoa_hoc": "Tetrapanax papyriferus (Hook.) C. Koch",
+      "ma_taxon": "372170",
+      "ho": "Araliaceae (Cuồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Thông thảo là một cây nhỏ thường cao 3m có khi tới 6m.",
+      "thân": "Thân cứng nhưng giòn. Giữa thân có lõi trắng xốp, cây cành già, lõi càng đặc và chắc hơn.",
+      "lá": "Lá to chia thành nhiều thuỳ có khi cắt sâu, mép có răng cưa to.",
+      "cuống": "Cuống lá dài 30cm, đường kính 1cm có lõi mềm, phiến lá dài 30cm-90cm.",
+      "hoa": "Hoa màu trắng hình cầu, cụm hoa hình tán tụ thành chum.",
+      "quả": "Quả dẹt gần hình cầu"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính vị theo tài liệu cổ: vị ngọt nhạt, tính hàn, vào hai kinh phế và vị. Có tác dụng lợi tiểu, thanh thấp nhiệt, hạ sữa.",
+      "được_dùng": "Dùng chữa thuỷ thũng, tiểu tiện khó khăn, ít sữa.  Nhân dân dùng làm thuốc thông tiểu tiện, giảm sốt, trấn tĩnh, dùng chữa bệnh sốt khát nước, tiểu tiện khó khăn, ho.  Còn dùng làm thuốc lợi sữa.",
+      "sắc uống": "Ngày dùng 3-6g dưới dạng thuốc sắc.",
+      "làm thuốc": "Thông thảo 10g, cám gạo nếp 10g, hạt bông (sao vàng) 15g, nước 600ml, sắc còn 200ml. Chia 3 lần uống trong ngày",
+      "chữa": "Người ta còn dùng và cũng gọi là thông thảo, gỗ phơi khô của cây dút, Aeschynomene aspera L.Tại nước ta nhân dân còn khai thác với tên thông thảo một số loài cây thụôc họ Ngũ gia bì (Araliaceae) như Trevesia palmate (đu đủ rừng) và một số câ khác cùng họ có thân rỗng xốp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ta mới khai thác một số cây mọc hoang dại ở những nơi ẩm thấp vùng Cao Bằng, Lạng Sơn, Tuyên Quang, Hà Giang Có thể trồng bằng hạt hay bằng cách chia gốc.",
+      "làm thuốc": "Nếu trồng bằng hạt thì mùa thu hái quả chin về phơi khô, sang xuân gieo hạt. Sau một tháng cây mọc. Một năm sau có thể đánh cây con để trồng. Có thể trồng bằng cách chia gốc: vào mùa đông, cuốc cho tơi đất xung quanh gốc, năm tới cây sẽ cho nhiều cây con, khi đã khá lớn đem đánh đi trồng chỗ khác Sau khi trồng 33 năm, có thể thu hoạch, cắt bỏ đầu và chia thành từng đoạn dài 50-60cm. dùng que tròn kích thước vừa bằng lõi mà đẩy lõi ra phơi nắng cho khô. Nếu gặp mưa to thì treo trong nhà, chỗ thoáng gió, không dùng thân sấy vì bị biến chất. có thể thu hoạch quanh năm."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

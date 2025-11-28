@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sơn cúc hai hoa",
+      "ten_khac": "Sài đất hai hoa, rau mui, hải cúc, cúc biển",
+      "ten_khoa_hoc": "Wedelia biflora (L.) DC. in Wight",
+      "ma_taxon": "708121",
+      "ho": "Cúc (Asteraecae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống nhiều năm, cao 1 – 1,5 m, phần ngọn hơi quấn.",
+      "thân": "Thân cành nhẵn, có khía.",
+      "lá": "Lá mọc đối có cuống, hình mác, dài 4 – 7,5 cm, rộng 2 – 4 cm, gốc thuôn, đầu nhọn, hai mặt có lông nháp, mép khía răng, gân chính 3, gân phụ kết thành mạng lưới rõ.",
+      "hoa": "Cụm hoa mọc ở đầu ngọn và kẽ lá thành đầu riêng lẻ, đôi khi đôi một, tổng bao rộng cm, gồm những lá bắc hình bầu dục, sau hình mũi mác, có lông nháp ở mặt ngoài, mào lông 0, tràng hình lưỡi có 2 răng, tràng hình ống có 5 răng xẻ tua ở mặt ngoài; nhị 5 có hai tay ngắn ở gốc: bầu hình ống, có lông ở đầu.",
+      "quả": "Quả bế, hình bầu dục tròn, có lông ở đầu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Wedelia Jacq. trên thế giới có khoảng 50 loài, phân bố ở vùng nhiệt đới và cận nhiệt đới. Ở Việt Nam chi này có 5 loài, loài sơn cúc hai hoa phân bố rải rác ở một số tỉnh ven biển như: Quảng Ninh (Trà Cổ, Hòn Gai), Hải Phòng (Đồ Sơn), Quảng Trị (Vĩnh Linh), Thừa Thiên Huế, Đà Nẵng (Hải Vân, Sơn Trà), Quảng Ngãi (Đức Phổ), Bình Định (Phù Mỹ, Phù Cát), Khánh Hoà (Trường Sa), Bà Rịa – Vũng Tàu, Bến Tre và Cả Mau. Trên thế giới, loài này có ở Ấn Độ, Trung Quốc, Campuchia, Thái Lan, Malaysia và Indonesia.",
+      "thường_mọc": "Sơn cúc hai hoa là cây ưa sáng, ưa ẩm đồng thời cũng có thể hơi chịu hạn. Cây thường mọc lẫn với các loài cỏ hay cây bụi khác ven rừng."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Sơn cúc hai hoa chứa veratrysidenehydrazid, 3.3′-di-O-methylquercetin, 2,7-dihydroxy- 3- (3′ – methoxy – 4′ – hydroxy) – 5 – methoxyisoflavon và 7, 3 – di – O – methylquer – cetin. Lá chứa nước 89%, nitơ toàn phần 0,48%, chất chiết tan trong ether 1%, chất xơ 1% đường khử 1%, tinh bột 0,5%, tro 0,5%, vitamin C 10mg%, nhiều protein, nhiều chất xơ (Sastri et al., The wealth of India, 1976, 568)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá sơn cúc hai hoa có công năng bổ huyết, hoạt huyết, tán ứ, tiêu thũng; hoa gây xổ mạch; thân và lá già có độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá sơn cúc hai hoa được dùng để chữa sốt rét định kỳ, đái ra máu, khó đái, nổi mày đay. Ngày 10 – 15g sắc uống. Có thể dùng lá tươi 80 – 100g, rửa sạch, giã nát, vắt lấy nước, hoà thêm đường hoặc muối rồi uống.  Để chữa mụn nhọt, lở loét, côn trùng đốt, lấy lá tươi, rửa sạch, giã nát đắp.  Đọt lá non có thể dùng làm rau ăn, xào nấu với thịt, ốc, cá, rùa.  Ở Quảng Tây (Trung Quốc) toàn cây sơn cúc hai hoa được dùng trị phong thấp, đau nhức xương, đòn ngã tổn thương, sang dương thũng độc. Ở Ấn Độ, nhân dân lấy lá, rửa sạch, giã nát, đắp lên chỗ da bị biến màu, vết chém chặt, côn trùng đốt, lở loét, các chỗ sưng đau, giãn tĩnh mạch. Cũng được dùng đắp vào bụng phụ nữ sau khi sinh và dùng khi bị đau bụng không rõ nguyên nhân.  Bài thuốc có sơn cúc hai hoa  Chữa táo bón mạn tính: Sơn cúc hai hoa (toàn cây) 20g, đại hoàng (thân rễ) 10g. Sắc uống chia làm 2 lần trong ngày [Chopra, 2001: 102].  Chữa mụn nhọt, lở ngứa, côn trùng đốt sưng đau: Lấy lá giã nát, thêm một ít vôi, trộn thật đều, đắp lên chỗ bị bệnh (kinh nghiệm ở Papua New Guinea)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Thân và lá già cây sơn cúc hai hoa độc với dê, ngựa. Khi các loài động vật này ăn phải sẽ bị ngộ độc, sinh non tháo và có thể bị chết. Hoa có tác dụng tẩy mạnh, cần chú ý ."
+    }
+  ]
+}

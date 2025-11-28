@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây đào",
+      "ten_khac": "Đào, Co tào (Thái), Mạy phăng (Tày), Kén má cai, Phiếu kiào (Dao)",
+      "ten_khoa_hoc": "Prunus persica (L.) Batsch",
+      "ma_taxon": "78755",
+      "ho": "Rosaceae (Hoa hồng)",
+      "Mô tả": {
+        "cây": "Cây đào là một cây nhỏ, cao 3-4m, da thân cây nhẵn.",
+        "thân": "Trên thân thường có chất nhầy đùn ra gọi là nhựa đào.",
+        "lá": "Lá đơn, mọc so le, có cuống ngắn, hình mác. Phiến lá dài 5-8cm, rộng 1,2- l,5cm, mép lá có răng cưa. Khi vò có mùi hạnh nhân.",
+        "hoa": "Hoa xuất hiện trước lá, màu hồng nhạt, 5 cánh, 8 nhị màu vàng.",
+        "quả": "Quả hạch hình cầu, đầu nhọn có một ngấn lỏm vào, chạy dọc theo quả. Vỏ ngoài có lông rất mịn. Quả chín có những đám đỏ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Quả đào (phần thịt) có chứa chất màu carotenoit, lycopen, cryptoxantin (cryptoxanthin) C40H56O và zeaxantin (zeaxanthin) C40H56O2: Chừng 15% chất đường, các axit hữu cơ (xitric, tactric) vitamin C, axit clorogenic, rất nhiều tinh dầu, (trong đó chủ yếu có axetandehyl, este của linalola và các axit axetic, valerianic, caprilic…) Hạt đào chứa tới hơn 50% dầu, tỷ trọng 0,9114-0,9325, chỉ số xà phòng 190. Chỉ số iôt 72-99. Ngoài ra còn 3,5% amygdalin, ít tinh dầu (0,4-0,7%), men emunsin. Năm 1952, một số tác giả còn nghiên cứu thấy trong hạt đào có colin và axetylcolin (Formos. Med. Ass. 5 (2) 1952: 75-83). Lá đào có amygdalin, axit tanic, cumarin."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Đào nhân: Ngoài công dụng chữa ho như nhân hạt mơ, đào nhân còn được dùng làm thuốc điểu kinh, cầm máu sau khi đẻ. Theo các nhà nghiên cứu ở Đài Loan, đào nhân được dùng thay chất ecgotin (ergotin) làm co tử cung, tác dụng trên mạch máu của tử cung làm đông máu. Liều dùng hàng ngày 4-6g dưới dạng thuốc sắc. Theo tài liệu cổ đào nhân có vị đắng, ngọt, tính bình, vào 2 kinh tâm và can. Có tác dụng phá huyết, hành ứ, nhuận táo, hoạt trường, dùng chữa huyết ứ, huyết bế, chữa ho, làm tiêu những chất ở bụng dưới, thông kinh nguyệt, sát trùng. Phàm người không ứ trệ không nên dùng.",
+        "được_dùng": "Lá đào: Thường được nấu nước dùng tấm ghẻ, lởi, ngứa. Lá đào giã nát, thêm nước, cất lấy nước cất lá đào như lối chế nước cất hạt mơ sẽ được nước cất lá đào có cùng một công dụng và liều dùng như nước cất hạt mơ.",
+        "chữa": "Chữa đái ra dưỡng chấp: Nhựa đào 10 g phối hợp với đường kính, đun cách thủy uống làm nhiều lần trong ngày. Chữa bệnh tiểu đường: Nhựa đào 20 g, tán nhỏ, uống với nước sắc địa cốt bì và râu ngô (mỗi vị 30g)."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây đào nguồn gốc ở Ba Tư. Hiện được trồng ở nhiều nước như Liên Xô cũ, Trung Quốc, Lào, Việt Nam. Mọc cả ở rừng núi và đồng bằng. Ở Việt Nam nhiều nhất tại Lào Cai (Sapa), Cao Bằng, Lạng Sơn, Hà Giang.",
+        "phơi khô": "Hạt đào thu hái vào tháng 7, lấy hạch về đập lấy hạt phơi hay sấy khô gọi là đào nhân."
+      },
+      "luu_y": {
+        "luu_y": "Trong lá đào có chất HCN độc, khi dùng phải hết sức cẩn thận; liều vừa dùng, dù dùng ngoài hay dùng trong cũng vậy. Hoa đào: Được một số người dùng làm thuốc thông tiểu tiện và tẩy, dùng chữa thuỷ thũng và bí đại tiện. Nhưng chỉ dùng hoa đào bảo quản trong vòng 1 năm. Để lâu mất tác dụng. Liều dùng của hoa đào: Ngày 3-5g dưới dạng thuốc sắc."
+      }
+    }
+  ]
+}

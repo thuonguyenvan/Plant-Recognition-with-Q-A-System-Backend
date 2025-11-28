@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bòi ngòi tai",
+      "ten_khac": "An điền tai, Nhĩ thảo",
+      "ten_khoa_hoc": "Hedyotis auriculata L.",
+      "ma_taxon": "778611",
+      "ho": "Cà phê (Rubiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo khỏe, mọc sum suê, sống hằng năm, hóa gỗ ở gốc.",
+      "thân": "Cành non có bốn cạnh nhẵn hoặc có lông nháp, màu lục nhạt, cành già hình trụ, màu xám nhạt.",
+      "lá": "Lá mọc đối, hình bầu dục hoặc trái xoan, dài 3 – 8 cm, rộng 1 – 2,5 cm, gốc tròn hoặc hơi thuôn, đầu có mũi nhọn, mặt trên nhăn hoặc nháp, mặt dưới hơi có lông và có gân nổi rõ, cuống lá dài 2 -7 cm, lá kèm xẻ thùy, có lông.",
+      "hoa": "Hoa mọc tụ tập ở kẽ lá thành hình cầu, dài 4 – 6 cm; hoa màu trắng, đài có 4 răng hình giáo, có lông, ống đài dài 0,75 mm, có ít lông; tràng 4 cánh tròn, ống tràng dài 1,5 mm, có lông ở họng: nhị 4, đính ở họng tràng, bao phấn đính lưng, bầu 2 ô, nhiều noãn,",
+      "quả": "Quả khô, hình cầu, đường kính 1,25 – 1,5 mm, có đài tồn tại, nhẵn, hạt 6 – 8, có cạnh.",
+      "mùa hoa": "tháng 7",
+      "mùa quả": "tháng 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bòi ngòi là tên gọi chung của một số loài thuộc chi Hedyotis, trong đó có loài trên.  Bòi ngòi tai là loại cây thảo phân bố tự nhiên rải rác khắp các tỉnh thuộc vùng núi thấp và trung du. Cây ưa ẩm và ưa sáng hoặc có thể hơi chịu bóng, thường mọc thành khóm hay từng đám nhỏ lẫn với những cây bụi nhỏ khác ở ven đồi, trên nương rẫy. Bòi ngòi tai được coi là loại cỏ dại ảnh hưởng đến cây trồng nên thường bị loại bỏ.  Bòi ngòi tai ra hoa quả nhiều hàng năm; khả năng mọc cây con từ hạt tốt. Ngoài ra, sau khi bị cắt, các phần còn lại của cây vẫn khả năng tái sinh cây chồi.",
+      "thường_mọc": "ở ven đồi, trên nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây bòi ngòi tai chứa 2 alcaloid hedyotin, auricularin.",
+      "gồm chất": "Hàm lượng alcaloid toàn phần là 0,29%.",
+      "Các hợp chất": "Các thành phần khác là alizarin acid oxalic, đường khử, chất màu, tanin, albumin [The Wealth of India V, 1959], [Võ Văn Chi, 1997, Trung dược từ hải III, 1997]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bòi ngòi tai có vị đắng, tính mát, có tác dụng thanh nhiệt, giải độc, tiêu sưng, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bòi ngòi tai được dùng chữa cảm sốt, viêm họng, ho, viêm ruột, tiêu chảy, lỵ.",
+      "được_dùng": "Ở Malaysia, lá bòi ngòi tai luộc chín được xát lên các chỗ đau ở cơ thể hoặc đắp lên da nứt nẻ. Ở Ấn Độ, nước sắc lá, cao lá, hoặc lá tươi nghiên nát được dùng thống trị bệnh đường ruột. Thuốc nhão từ lá có tác dụng làm dịu da, đắp chữa áp xe và vết thương.",
+      "chữa": "Chữa sưng vú:\nBòi ngòi tai tươi 60g, giã nát, thêm rượu, chiết lấy dịch uống trong ngày, còn bã dùng đắp ngoài uống liên tục trong 4 ngày.\nChữa rết cắn:\nBòi ngòi tai 30g, đậu xanh 60g, sắc uống trong ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vai",
+      "ten_khac": "Vai, Vai trắng, Nhà can, Giao phương mộc",
+      "ten_khoa_hoc": "Daphniphyllum calycinum Benth.",
+      "ma_taxon": "415460",
+      "ho": "Daphniphyllaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1-5m",
+      "thân": "cành tròn, không lông.",
+      "lá": "Lá mọc so le, phiến lá xoan ngược, dài 10-15cm, rộng 3,5-9cm, rộng nhất ở 1/2 trên, đầu tù tròn, gốc tù, gân phụ 6-7 cặp",
+      "cuống": "cuống dài 3-15cm, không lông, mặt dưới màu trắng xám.",
+      "hoa": "Cụm hoa chùm dài 3-4cm, khác gốc; cuống hoa 4-5mm, đài có 4 thùy, nhị 8; hoa cái có 5 lá đài, vòi nhụy 2.",
+      "quả": "Quả hạch xoan, dài 1cm, có phấn trắng, hạt 1, dài 6mm.",
+      "mùa hoa": "Hoa tháng 5-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Nam Trung Quốc và Bắc Việt Nam. Ở nước ta, cây mọc ở vùng rừng núi Quảng Ninh, Hòa Bình. Thu hái rễ vào mùa thu, rửa sạch, phơi khô. Lá thu hái quanh năm, dùng tươi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, cành lá, quả – Radix, Ramulus et Fructus Daphniphylli Calycini."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt, chứa dầu 38,6%, alcaloid 1,2%",
+      "Các hợp chất": "có các chất daphnicaline A, acid fumaric.",
+      "chứa": "Vỏ thân và lá chứa calycine."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ dùng trị cảm mạo phát sốt, sưng amygdal, phong thấp đau nhức khớp xương, đòn ngã sưng đau, gãy xương, rắn độc cắn, mụn nhọt sưng lở. Liều dùng 12-20g. Dùng ngoài không kể liều lượng. Ở Vân Nam (Trung Quốc) rễ cây dùng trị lao phổi, nhiệt tả; cành lá dùng trị sưng vú, phong thấp đau xương, quả dùng trị lỵ mạn tính. Liều dùng 4-6g. Không dùng cho phụ nữ có thai. Dân gian cũng dùng rễ sắc uống chữa viêm họng, viêm ruột và dùng lá để cầm máu chữa vết thương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hương nhu tía",
+      "ten_khac": "Hương nhu tía, É đỏ, É tía",
+      "ten_khoa_hoc": "Ocimum tenuiﬂorum L.",
+      "ma_taxon": "181060",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, sống hàng năm hay sống dai, cao đến gần 1m.",
+      "thân": "Thân, cành màu đỏ tía, có lông mịn.",
+      "lá": "Lá mọc đối, có cuống dài, hình mác hoặc thuôn, dài 2-5 cm, rộng 1-3 cm, mép khía răng, hai mặt màu tím tía, có lông mềm.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chùm xim phân nhánh; lá bắc nhỏ; hoa màu trắng hay tím tía, xếp thành từng vòng 5 – 6 cái trên cụm hoa; đài hoa dài 3 – 5 mm, thùy trên hình mắt chim, thùy dưới hình giùi dài hơn, những thùy bên rất ngắn; tràng hoa có cánh hơi lượn sóng ỏ mép; nhị 4, vượt ra ngoài tràng.",
+      "quả": "Quả bế tư, gần hình cầu, hơi dẹt, màu nâu nhạt hoặc đỏ có đốm đen nhỏ, nằm trong đài tồn tại.",
+      "mùa hoa": "tháng 5-7.",
+      "mùa quả": "tháng 5-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ocimum L. có 8 loài, trong đó ở Việt Nam 5 loài đều là cây trồng. Hương nhu tía vốn là cây cổ nhiệt đới châu Á, được trồng rải rác ờ Trung Quốc, Lào, Thái Lan để làm thuốc và làm rau gia vị. Ở Việt Nam, hương nhu tía mới được trồng hạn chế trong vườn các gia đình hoặc các cơ sở chữa bệnh theo y học cổ truyền.  Cây ưa khí hậu nhiệt đới nóng và ẩm; nhiệt độ trung bình năm khoảng 25 – 30°C; lượng mưa 1800 – 2600mm/năm. Ớ các vùng núi cao có khí hậu cận nhiệt đới và hơi lạnh, không thấy trồng. Hương nhu tía mọc từ hạt vào khoảng cuối mùa xuân, sinh trưởng nhanh trong mùa hè, đến cuối mùa thu hay đầu mùa đông thì tàn lụi. Cây ra hoa quả nhiều. Quả chín tự mở, hạt rơi xuống đất và nảy mầm sau 5-6 tháng. Cây trồng dễ dàng bằng hạt.",
+      "Đặc điểm sinh trưởng": "Cây ưa khí hậu nhiệt đới nóng và ẩm; nhiệt độ trung bình năm khoảng 25 – 30°C; lượng mưa 1800 – 2600mm/năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân mang cành, lá, hoa, cắt thành từng đoạn 2 – 3cm, phơi âm can đến khô để nơi khô mát, tránh làm mất tinh dầu."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất chứa tinh dầu.",
+      "gồm chất": "Theo Dược điển Việt Nam I, tập 2, hàm lượng tinh dầu trong cây phải đạt 0,5%.",
+      "Các hợp chất": "Người ta phân thành phần tinh dầu trong cây thành nhiều nhóm hóa học :  Nhóm methyl eugenol: thứ lá tía (A) 72,7%, thứ lá xanh (B) 70,9%. Nhóm eugenol .và methyleugenol : thứ lá xanh (C) có eugenol 82,8% và methyleugenol 2,5%. Cả 3 thứ (A, B, C) đều chứa caryophylen 17,3% (A), 20,4% (B), 6,7% (C).  Hương nhu tía Việt Nam chứa 30 – 40% eugenol. Tinh dầu hương nhu tía Việt Nam chứa a – pinen, sabinen, p – pinen, myrcen, 1-8 cineol, linalol, camphor, borneol, linalyl acetat, terpinen – 4 – ol, a – terpineol, geraniol, citral, eugenol, methyleugenol và p – caryophylen, a – humulen, methyl isoeugenol, p – elemen, 5 – elemen, sesquiterpen.  Các thành phần chính là eugenol (trên 70%), methyleugenol (trên 12%) và p – caryophylen. Các thành phần này giống như thành phần của tinh dầu hương nhu tía Ấn Độ.  Theo H.Skaltsa và cs, 1999, hương nhu tía chứa các hợp chất polyphenol : apigenin, lutcolin, apigenin – 7 – glucuronid, luteolin – 7 – glucuronid, orientin, molusđisiin, galuteolin, acid galic methylester, acid galic ethylester, acid protocatechuic, acid 4 – hydroxybenzoic, 4 – hydrobenzaldehyd, acid rosmarinic, acid galic, acid vanilic, acid cafeic, acid chlorogenic (Aust. J. of Medical Herbalism 2000,12(1)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hương nhu tía có vị cay, mùi thơm, tính ấm, vào 2 kinh : phế, vị, có tác dụng phát hãn (làm ra mồ hôi), thanh nhiệt, tán thấp, hành thủy, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hương nhu tía được dùng làm thuốc trong phạm vi kinh nghiệm dân gian để hạ sốt, chữa cảm nhất là cảm nắng, say nắng, nhức đầu, đau bụng, đi ngoài, nôn mửa, phù thũng. Ngày dùng 6 – 12g dưới dạng thuốc sắc hoặc thuốc hãm. Eugenol, chiết từ hương nhu tía, được dùng trong nha khoa và là nguyên liệu để tổng hợp vanilin. Ở Ân Độ, nước hãm của lá hương nhu tía được dùng chữa đau dạ dày ở trẻ em, và sốt rét. Dịch ép từ lá chữa nôn mửa và giun móc vì trong dược liệu có thymol; phối hợp với mật ong, gừng và dịch ép tỏi là thuốc lợi đờm, chữa viêm phế quản, ho ở trẻ em. Dịch ép từ lá còn chữa rắn độc cắn. Ớ Myanmar, nước sắc của lá hương nhu tía chữa đầy hơi và tiêu chảy ở trẻ em; hạt hương nhu chữa bệnh thận. Ở Malaysia, dịch hãm từ lá chữa viêm đường hô hấp và rối loạn kinh nguyệt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa cám sốt, nhức dầu, dau bụng, chân tay lạnh: Hương nhu tía 500g, hậu phác (tẩm gừng nưóng) 200g, bạch biến đậu (sao) 2000g. Tất cả tán nhỏ, trộn đều, mỗi lần uống 10g có khi đến 20g với nước sôi để nguội. Chữa cảm, làm ra mồ hôi, hạ sốt: Hương nhu, hoắc hương, bạc hà, sả, tía tô, lá bưởi, lá chanh mỗi thứ 10g. Tất cả rửa sạch, đun sôi dùng xông hơi (Nồi nước xông). Phòng, chữa cảm nấng, say nắng: Lá hương nhu 32g, hạt đậu ván -32g, củ sắn dây 24g, gừng sống 12g. Các vị phơi khô, tán nhỏ, rây bột mịn. Mỗi lần người lớn dùng 16g, trẻ em 8g; hãm với nước sôi, gạn uống (kinh nghiệm của Viện Y học cổ truyền). Chữa trẻ em chậm mọc tóc: Hương nhu sắc đặc, hòa với mỡ lợn bôi hàng ngày (Tuệ Tĩnh, Nam Dược thần hiệu). Chữa hôi miệng: Hương nhu 10g, sắc với 200 ml nước, dùng súc miệng và ngậm.  *Nguồn: cây thuốc và động vật làm thuốc ở Việt nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

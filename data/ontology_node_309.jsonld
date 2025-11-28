@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây tử thảo",
+      "ten_khac": "Cỏ ngọc, Tử thảo",
+      "ten_khoa_hoc": "Lithospermum erythrorhizon Sieb. & Zucc.",
+      "ma_taxon": "715299",
+      "ho": "Boraginaceae (Vòi voi)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống hàng năm, cao 0,6 – 1,2 m.",
+        "thân": "Thân mọc đứng, có nhiều lông, ngọn uốn cong.",
+        "lá": "Lá mọc so le, cứng, hình mác thuôn, mép nguyên, hai mặt nháp.",
+        "hoa": "Hoa màu trắng, sau ngả màu vàng nhạt.",
+        "quả": "Quả hình trứng, đường kính khoảng 3 mm, màu trắng, nhẵn bóng, có đài tồn tại."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ (Radix Lethospermi), thu hái vào mùa xuân lúc cây mọc mầm hoặc mùa thu sau khi lấy quả, loại sạch đất, cát rồi phơi hay sấy khô. Không rửa nước để tránh các hoạt chất bị phân hủy. Còn dùng lá."
+      },
+      "Thành phần": {},
+      "Tính vị": {
+        "Có vị": "Tử thảo có vị đắng, mặn, tính lạnh, có tác dụng thanh nhiệt, làm mát máu, tiêu độc."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Tử thảo được dùng để phòng và trị các bệnh đậu mùa, sởi, thủy đậu, và nổi mẩn lở ngứa, với liều 8 – 12g rễ khô sắc uống. Chữa viêm da, bỏng hay ung thư nang lông, dùng tử thảo 30g sắc uống và bôi rửa ngoài. Chữa sốt, giải nhiệt, làm mát máu, dùng bài thuốc gồm tử thảo, hoàng liên, đại thanh diệp, mẫu đơn bì. Rễ tử thảo được dùng riêng hoặc phối hợp với cam thảo (để sống) và mộc hương, sắc uống để phòng bệnh sởi. Có thể dự phòng bệnh sởi bằng cách uống rễ tử thảo trong 3-5 ngày liền. Nếu có mắc sởi thì bệnh cũng nhẹ. Cách chế biến và sử dụng rễ tử thảo như sau : Rễ phơi khô, tán nhỏ, rây lấy bột mịn. Trẻ em, từ 1 tuổi trở xuống, mỗi lần uống 2g; 2 – 4 tuổi, 4g; 5 – 7 tuổi, 6g; 8-12 tuổi, 8g. Ngày dùng 3 lần. Hoà bột tử thảo với nước, đun sôi trong nửa giờ. Thêm đường uống cho đỡ đắng. Trong y học cổ truyền Trung Quốc, rễ tử thảo là thuốc chống viêm và hạ sốt trong điều trị sởi, eczema, và bỏng do nhiệt. Lá được dùng làm thuốc lợi tiểu. Y học cổ truyền Ấn Độ lại dùng rễ tử thảo làm thuốc lọc máu. Nước sắc rễ và nhánh cây dùng dưới dạng sirô để điều trị các bệnh phát ban như đậu mùa, sởi, và ngứa. Hạt có tác dụng lợi tiểu và làm tan sỏi, chữa bệnh gút và bệnh bàng quang. Nước hãm lá được dùng theo kinh nghiệm dân gian ở Tây Ban Nha làm thuốc an thần."
+      },
+      "Cách dùng": {},
+      "Lưu ý": {}
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Húng chanh",
+      "ten_khac": "Húng chanh, Rau tần dày lá, Rau thơm lông, Dương tử tô",
+      "ten_khoa_hoc": "Plectranthus amboinicus (Lour.) Spreng.",
+      "ma_taxon": "963468",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống lâu năm, cao 20-50cm.",
+      "thân": "Thân mọc đứng hay ngả, phần sát gốc hóa gỗ.",
+      "lá": "Lá mọc đối, dày, mọng nước, hình trứng rộng, gốc hình nêm, đầu hơi nhọn hoặc tù, dài 3-6cm, rộng 2-5cm, mép khía răng tròn.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành bông dày, các vòng mang hoa rất sít nhau; hoa nhỏ màu tím hồng; đài hình chuông ngắn, có lông, chia 5 răng, răng trên hình trứng rộng, răng dưới và răng bên gần bằng nhau; tràng cong, có ống hình phễu, mặt ngoài có lông, mặt trong nhẵn, môi dưới dài hình ống tràng, môi trên ngắn, 3 thùy, thùy trên rộng, hai thùy bên hình mũi mác, nhị 4 thò ra ngoài tràng.",
+      "quả": "Quả bế tư, nhỏ, hình cầu, màu nâu.",
+      "mọc": "Toàn cây có lông rất nhỏ, mùi thơm như chanh.",
+      "mùa hoa": "tháng 3-5."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá dùng tươi"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá húng chanh chứa tinh dầu trong đó thành phần chính là carvacrol khoảng 40,40%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Húng chanh có vị the cay, hơi chua, mùi thơm, tính ấm và 2 kinh can và phế, có tác dụng lợi phế, trừ đờm, giải cảm, thoái nhiệt, tiêu độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá húng chanh được dùng chữa cảm cúm, ho hen, viêm họng, ho ra máu, sốt cao không ra mồ hôi, chảy máu cam.",
+      "được_dùng": "Thường dùng lá tươi với liều 10-16g mỗi ngày, dạng thuốc sắc, xông hoặc giã vắt lấy nước uống. Trong thuốc xông, lá húng chanh được kết hợp với nhiều loại lá khác như sả, hương nhu, hoắc hương.",
+      "giã nát": "Dùng ngoài, lá tươi húng chanh giã nát, đắp lên vết thương chữa rết, bọ cạp cắn.",
+      "chữa": "Bài thuốc chữa ho có húng chanh  1. Chữa ho, viêm họng, khản tiếng  Lá húng chanh tươi nhai ngậm với muối, nuốt nước dần dần. Hoặc lấy 20g lá tươi giã nhỏ, thêm nước gạn uống làm 2 lần trong ngày. Đối với trẻ em, lấy lá tươi rửa sạch, giã nhỏ với ít đường, đem hấp cơm và cho uống 2-3 lần trong ngày.  2. Chữa ho gà  Húng chanh 10g, mạch môn 12g, vỏ rễ dâu 12g, bách bộ 10g, rau sam 10g. Sắc uống ngày một thang. Uống liên tục 15-30 thang.  3. Chữa cảm mạo do lạnh  Húng chanh 10g, bách bộ 12g, tía tô 12g, xạ can 10g, trần bì 8g, bạch chỉ 6g. Sắc uống ngày 1 thang trong 5 ngày liền."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chi Plectranthus Lour. có khoảng 200 loài, phân bố rộng rãi ở vùng nhiệt đới và cận nhiệt đới châu Á, châu Phi. Chi này có 3 loài ở Việt Nam. Ở Việt Nam, húng chanh là cây trồng từ lâu đới.",
+      "có tác dụng": "Cây ưa sáng, ưa ẩm, đôi khi chịu hạn."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

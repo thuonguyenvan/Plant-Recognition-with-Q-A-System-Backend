@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dẻ trùng khánh",
+      "ten_khac": "Dẻ Cao Bằng",
+      "ten_khoa_hoc": "Castanea mollissima Blume",
+      "ma_taxon": "49192",
+      "ho": "Dẻ (Fagaceae)",
+      "Mô tả": {
+        "cây": "Cây to, cao 18 – 20m.",
+        "lá": "Lá mọc so le, hình giáo hoặc hình trứng ngược, gốc tròn hoặc hơi hình tim, đầu thuôn nhọn, mép có răng cưa đều.",
+        "hoa": "Cụm hoa mọc thành đuôi sóc, mang hoa đơn tính đực và cái hoặc thành xim riêng biệt, xim cái gốc và nhiều xim đực ở trên. Xim cái có 3 hoa được bao bọc bởi một đấu có rất nhiều gai cứng; hoa cái có bao hoa gồm 6 mảnh, có nhị lép, bầu hạ do 3 – 6 lá noãn hợp thành. Xim đực có 3 – 7 hoa, hoa đực cũng có bao hoa 6 mảnh, 12 nhị.",
+        "quả": "Quả bế thường có 2 quả phát triển trong một đấu, khi chín, đấu tách thành 4 mảnh; hạt có phôi mang lá mầm dày chứa nhiều chất béo.",
+        "mùa hoa": "tháng 4 – 5",
+        "mùa quả": "tháng 9 – 10."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Castanea Miller trên thế giới có khoảng vài chục loài, phân bố rải rác ở vùng ôn đới ẩm, cận nhiệt đới hay vùng nhiệt đới núi cao.  Một số loài của chi này đã được trồng phổ biến ở nhiều nơi lấy hạt ăn: loài Castanea sativa Miller trồng ở vùng Trung Âu và Bắc Mỹ, C. dentata Borkh trồng ở Bắc Mỹ, C crenata Sieb. Et Zucc. trồng ở Nhật Bản, Triều Tiên… Loài C. mollissima Blume dường như có xuất sứ ở Trung Quốc, cây hiện được trồng nhiều ở các tỉnh phía nam của nước này: như Quảng Tây, Quảng Đông và Vân Nam.  Loài dẻ này cũng trồng rải rác ở các tỉnh miền núi phía bắc nước ta giáp với Trung Quốc: Cao Bằng (Trùng Khánh, Hạ Long, Quảng Uyên, Phục Hoà); Lạng Sơn (Thạch An); ngoài ra còn có trồng ở tỉnh Lai Châu và Lào Cai (?). Trong các địa phương kể trên, cây được trồng nhiều và lâu đời nhất ở huyện Trùng Khánh và Hạ Lang (Cao Bằng), nên ở nước ta thường gọi là “Dẻ Trùng Khánh”, song về nguồn gốc có lẽ được nhập giống từ Trung Quốc.  Dẻ Trùng Khánh thuộc loại cây gỗ nhỡ hoặc gỗ to. Cây ưa sáng, da vùng có khí hậu tương đối ẩm mát. Dẻ Trùng Khánh là cây trồng có nhiều lợi ích. Ngoài giá trị sử dụng chính là lấy hạt ăn, gỗ dẻ.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong hạt của loài dẻ này chứa các hợp chất sau:\nAlcaloid: 6 – (2′ 3′ dihydroxy 4′ – hydroxy methyl – tetrahydro furan 1′-yl) cyclopentadien [c] pyrrol 1,3 diol. (Chinese chemical letter, vol 19, issue 7, July 2008, page 832 – 834).",
+        "Các hợp chất": "Các hợp chất polyphenol, castamolissin, isochesnatin, isochestanin và castanin. Ngoài ra còn 20 chất tanin có thể thuỷ phân được. (Phytochemistry vol 27 issue 4, 1988, pages 1185 – 1189).",
+        "chứa": "Quả còn có các đường arabinose, fructose, glucose, galactose, xylose. (Food chemistry vol.119, issue 3.1, April 2010, page 1211 – 1215)."
+      },
+      "Tính vị": {
+        "Có vị": "Hạt dẻ Trùng Khánh có vị ngọt, mặn, tính ấm, có tác dụng bổ thận khí, lợi tiêu hoá. Vỏ đen có vị ngọt chát."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hạt dẻ Trùng Khánh ăn vào có tác dụng làm mạnh sức, gân gối cứng cáp. Ăn sống hoặc nướng hay rang với dầu ăn thì tốt hơn luộc hay nấu, khi ăn phải nhai kỹ thật nhỏ, không nên ăn nhiều đến no, sẽ khó tiêu.  Vỏ đen của hạt dẻ Trùng Khánh sắc uống chữa nôn ói, đại tiện ra máu. Vỏ quả có lông sắc uống chữa gân cốt đau nhức, giã đắp ngoài chữa đơn sưng, tràng nhạc. Hoa dẻ sắc uống trị tràng nhạc.  Rễ cây sắc uống chữa viêm tinh hoàn [Lê Trần Đức, 1997: 1095 – 1097].  Hạt dẻ được dùng chữa thận hư, khớp gối và lưng yếu mỏi và đau, đi đứng vận động khó khăn.  Ở một số nước Đông Á và Nam Á, các phần khác nhau của quả và cây dẻ được dùng trong y học. Quả nhai thành bột nhão được dùng làm thuốc đắp để trị thấp khớp, động vật cắn và mụn lở loét độc. Nước sắc vỏ cây dùng làm nước tắm rửa trị vết thương nhiễm độc; nhựa vỏ cây dùng làm nước rửa trị viêm da gây bởi sơn. Nước sắc vỏ quả có tác dụng làm săn và dùng trị buồn nôn, khát nước và lỵ. Hoa dùng trị lao hạch, và rễ là thuốc chữa thoát vị [Perry LM. et al., 1980: 153]. Ở Trung Quốc, vỏ quả dẻ Trùng Khánh được dùng trị chảy máu ruột, vỏ cây dùng trị chứng viêm quầng, và lá trị ho gà (Hu Fenglin et al., 2004)."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

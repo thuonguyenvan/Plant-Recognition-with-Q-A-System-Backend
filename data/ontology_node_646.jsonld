@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tỏi",
+      "ten_khac": "Tỏi, Đại toán, Hom kía, Co sluốn (Thái), Sluôn (Tày)",
+      "ten_khoa_hoc": "Allium sativum L.",
+      "ma_taxon": "75363",
+      "ho": "Alliaceae (Hành)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống hàng năm, cao 30 – 40 cm.",
+      "thân": "Thân hành ngắn, hình tháp gồm nhiều hành con gọi là ánh tỏi, to nhỏ không đều, xếp ép vào nhau quanh mỗi trục lõi, vỏ ngoài của thân hành mỏng, màu trắng hoặc hơi hồng.",
+      "lá": "Lá phẳng và hẹp, hình dài, mỏng, bẹ to và dài có rãnh dọc, đầu nhọn hoắt, gân song song, hai mặt nhẵn.",
+      "hoa": "Cụm hoa mọc ở ngọn thành đầu tròn, bao bọc bởi những lá mo có mũi nhọn rất dài; hoa màu trắng hay hồng có cuống hình sợi dài; bao gồm 6 phiến hình mũi mác, xếp thành hai hàng, thuôn; nhị 6, chỉ nhị có cựa dài, đính vào các mảnh bao hoa; bầu gân hình cầu.",
+      "quả": "Quả nang.",
+      "mùa hoa": "tháng 8",
+      "mùa quả": "tháng 11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Tỏi là một trong những cây trồng cổ xưa nhất còn tồn tại đến ngày nay. Cây có nguồn gốc ở vùng Trung A (Tien Shan), ở đây hiện còn loại tỏi đặc hữu mọc hoang dại là Allium longicuspis Regel. Từ 3000 năm trước công nguyên, tỏi được biết đến ở Hy lạp. Ở Ấn Độ và Trung Quốc, tỏi cũng là cây trồng từ thời cổ đại. Người Tây Ban Nha, Bồ Đào Nha và Pháp đã đưa cây tỏi từ châu Âu sang châu Mỹ.  Ngày nay, tỏi là cây trồng rộng rãi khắp thế giới, từ vùng có khí hậu nhiệt đới xích đạo (5⁰) đến 50⁰ vĩ tuyến ở cả 2 bán cầu. Trải qua  hàng ngàn năm trồng trọt và chọn lọc, từ loài tỏi ban đầu đã hình thành nhiều giống tỏi khác nhau, tương đương với các  thứ như A. sativum L. var. sativum; var. typicum Regel; var. ophioscoiodon (Link) Doll và var. controversum (Schrader) Moore. Tất nhiên giữa các giống này, chúng khác nhau về kích thước, hàm lượng tinh dầu, năng suất cũng như đặc tính thích nghi với các vùng có điều kiện khí hậu khác nhau.  Ở Việt Nam, tỏi được trồng khắp các địa phương từ nam chí bắc. Hiện đang có 2 nhóm tỏi khác nhau là nhóm tỏi củ nhỏ, thơm, nhiều tinh dầu, được trồng ở các tỉnh phía bắc vào khoảng tháng 1 -2, thu hoạch vào tháng 5 – 6. Nhóm tỏi củ to, trồng ở các tỉnh phía Nam, nhất là ven biển miền Trung, đảo Lý Sơn – Quảng Ngãi, Bình Thuận và Ninh Thuận.  Theo số liệu của FAO (1990) tổng sản lượng tỏi toàn thế giới xấp xỉ 3 triệu tấn mỗi năm. Trung Quốc, Hàn Quốc, Ấn Độ, Tây Ban Nha, Mỹ và Thái Lan là những nước sản xuất nhiều tỏi nhất. Tỏi trồng ở Việt Nam nhìn chung là dư thừa cho nhu cầu trong nước, một phần cũng đã được xuất khẩu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Nghiên cứu lâm sàng trên bệnh nhân viêm amidan cấp, viêm họng và viêm đường hô hấp trên mạn tính:  Bột tỏi đông khô được dùng điều trị cho 430 bệnh nhân bị các bệnh về tai mũi họng như viêm amidan cấp, viêm họng và viêm đường hô hấp trên mạn tính, viêm tai giữa cấp và mạn tính, viêm loét tiền đình, mũi. Trong các bệnh trên, chế phẩm bột tỏi đông khô có thể thay thế cho kháng sinh hoặc dùng kết hợp với kháng sinh.  ==> Tình trạng viêm nhiễm thoái lui rõ rệt, không có tác dụng phụ. Mười sáu bệnh nhân viêm màng não do Cryptococcus được điều trị với tỏi, kết quả tỷ lệ điều trị có hiệu quả  là 65,75%.  Nghiên cứu lâm sàng trên bệnh nhân có hiện tượng đầy bụng, đau thượng vị, ợ hơi, buồn nôn:  Một thử nghiệm lâm sàng gồm 29 bệnh nhân uống mỗi ngày 1000 mg (hai viên nén) một chế phẩm tỏi khô cho thấy tỏi có tác dụng chữa đầy hơi, giảm đau vùng thượng vị, đau bụng, ợ hơi, buồn nôn.  Nghiên cứu lâm sàng tác dụng làm giảm cholesterol:  Một phân tích tổng hợp kết quả của 16 thử nghiệm lâm sàng trên tổng số 952 đối tượng dùng hàng ngày 600 – 900 mg bột tỏi khô hoặc 10 g tỏi sống, hay 18 mg tinh dầu tỏi,  hoặc cao tỏi lão hóa, trong thời gian trung bình 12 tuần, cho thấy ở các đối tượng dùng tỏi có sự giảm trung bình 12% cholesterol toàn phần và 13% triglycerid trong huyết thanh. Một tổng quan khác của 8 nghiên cứu lâm sàng với 500 đối tượng có kết quả và kết luận tương tự.  Đã nhận xét thấy hoạt tính phân hủy fibrin trong huyết thanh bệnh nhân xơ vữa động mạch sau khi cho uống cao nước tỏi, tinh dầu và bột tỏi. Tỏi gây hoạt hóa sự phân hủy fibrin nội sinh trong nhiều giờ sau khi cho thuốc và tác dụng tăng lên khi uống thuốc đều đặn nhiều tháng. Nghiên cứu tác dụng huyết lưu biến cấp tính của liều 600 – 1200 mg bột tỏi khô cho thấy thuốc làm giảm độ nhớt của huyết tương, làm tăng hoạt tính của yếu tố hoạt hóa plasminogen ở mô và mức tỷ lệ thể tích huyết cầu. Tác dụng của tỏi trên huyết lưu biến học ở mạch kết mạc được xác định trong nghiên cứu lâm sàng. Bột tỏi (900) mg làm tăng đường kính trung bình của tiểu động mạch (4.2%) và tiểu tĩnh mạch (5.9%) so với đối chứng. Trong một nghiên cứu khác, ở những bệnh nhân tắc động mạch ngoại biên giai đoạn II được uống hàng ngày 800 mg bột tỏi trong 4 tuần, có sự tăng tốc độ tuần hoàn hồng cầu ở mao mạch, giảm độ nhớt và mức fibrinogen của huyết tương.  Trong nghiên cứu trên bệnh nhân tăng cholesterol máu điều trị với dung dịch ngâm chứa tinh dầu tỏi trong 3 tháng, sự kết dính và kết tập tiểu cầu giảm có ý nghĩa. Trong một nghiên cứu trong 3 năm, 432 bệnh nhân nhồi máu cơ tim được điều trị với tinh dầu tỏi chiết với ether (0.1 mg/kg/ ngày , tương đương với 2g tỏi tươi mỗi ngày). Trong nhóm điều trị với tỏi có số cơn nhồi máu mới ít hơn 35%, và  số trường hợp chết ít hơn 45%  so với nhóm chứng; nồng độ lipid huyết thanh cũng giảm. Trong thử nghiệm trên 12 người khỏe, liều hàng ngày 900 mg bột tỏi trong 14 ngày làm tăng hoạt tính của yếu tố hoạt hóa plasminogen của mô; sự kết tập tiểu cầu gây bởi adenosin diphosphat và colagen bị ức chế 2-4 giờ sau khi uống tỏi, và vẫn còn có mức thấp 7 – 10 ngày sau khi điều trị.  Cho 120 bệnh nhân uống bọt tỏi (800mg mỗi ngày) trong 4 tuần làm giảm mức glucose máu trung bình 11,6%. Một nghiên ứu cho bệnh nhân mắc bệnh đái tháo đường không phụ thuộc insulin uống 700 mg bột tỏi mỗi ngày trong một tháng không thấy tác dụng hạ đường máu. Xem thêm:https://www.youtube.com/watch?v=amBGIYfN5l4&t=4s"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân hành (giò) thường có tên là đạt toan. Thu hoạch vào cuối đông, có thể dùng tươi hay phơi khô dùng dần."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong tỏi có 3 hoạt chất chính: allicin, liallyl sulfid và ajoen.",
+      "gồm chất": "Trong đó, allicin là hoạt chất mạnh nhất và quan trọng nhưng nó lại không hiện diện rõ ràng trong tỏi. Allicin được tạo ra khi chất alliin tiếp xúc 1 với enzym alliinase khi tỏi được nhai, bằm nhỏ hay được nghiền nát và là thành phần tạo mùi đặc trưng của tỏi (Alliin và enzym alliinase tồn tại trong những tế bào riêng biệt, khi tỏi chưa bị thái hoặc bằm ra), do đó, càng cắt nhỏ hoặc càng đập nát, hoạt tính của tỏi càng cao. Allicin là một chất không bền, dễ biến chất sau khi được tạo ra. Vì vậy, tỏi đập dập rồi nên sử dụng ngay vì càng dể lâu, chất allicin càng mất bớt hoạt tính. Hàm lượng allicin trong tép tỏi tươi sau khi giã nát một phút đã đạt 63%, nhưng sau 30 phút tiếp xúc với không khí chỉ còn 39% do chuyển hóa thành diallyl disulfide, vinydithiin, afoen. Đun nấu sẽ đẩy nhanh quá trình mất chất này. Vì vậy, để tận dụng được hoạt tính allicin trong tỏi chúng ta nên cắt nhỏ hoặc đập nát tỏi càng nhiều càng tốt, không nên để nguyên cả củ tỏi khi xào nấu.",
+      "chứa": "Một kí tỏi có thể cho ra từ 1 – 2g allicin. Allicin được xem là chất kháng sinh tự nhiên rất mạnh, mạnh hơn cả penicillin. Nước tỏi pha loãng 125.000 lần vẫn có dấu hiệu ức chế nhiều loại vi trùng gram âm và gram dương như Staphylococcus, Streptococcus, Salmonella, V. cholerae, B. dysenteriae, Mycobacterium tuberculosis. Tỏi cũng ức chế sự phát triển của nhiều loại siêu vi như siêu vi trái rạ, bại liệt, cúm và một số loại nấm gây bệnh ở da hoặc bộ phận sinh dục nữ như Candida."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Tỏi có vị cay, mùi hôi, tính ấm, có tác dụng giải cảm, giải độc, tiêu đờm, lợi tiểu, hạ khí, trừ giun, thông quan."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tác dụng kháng khuẩn và kháng nấm:  Tinh dầu, cao nước, cao cồn, dịch ép tỏi ức chế sự phát triển  in vintro của tụ cầu vàng, Shigellu sonnei, Erwwinia carotovora, trực khuẩn lao, Escherichia coli, Pasteurella multocida, Proleus spp, Bacillus spp, streptococcus faecolis, trực khuẩn mủ xanh, Candida spp, Cryptococcus, Rnodotorula rubra, Toruloposis spp, Aspergillus niger.  Điều trị tại chỗ với cao tỏi, các thương tổn da hoàn toàn bình phục sau 7 – 10 ngày điều trị. Hoạt tính kháng khuẩn được quy cho allicin, là một hoạt chất của tỏi.  Tuy vậy, allicin là hợp chất tương đối không ổn định và có tính phản ứng cao và có thể không có hoạt tính kháng khuẩn in vivo . Ajoen và diallyl disulfid cũng có hoạt tính kháng khuẩn và kháng nấm.  Tác dụng điều trị giun đũa, giun móc, lỵ:  Allicin có thể là hoạt chất trị giun. Ngoài ra, allicin diallyl disulfid và diallyl trisulfid có hoạt tính kháng siêu vi khuẩn invitro chống virus cúm B, virus herpes type 1, virus bệnh đầu bò, virus bệnh viêm miệng có mụn nước.  Nước cất tỏi có tác dụng diệt lỵ amip in vitro với nồng độ ức chế thấp nhất 1/160. Cao tỏi có tác dụng điều trị tốt trên chuột nhắt  trắng gây nhiễm bệnh do Trypanasoma nhờ có tác dụng của hoạt chất diallyldisulfid. Tỏi làm tăng tác dụng thực bào của đại thực bào ở phúc mạc chuột trắng.  Tác dụng giảm cholesterol và lipid máu:  Tỏi tươi, dịch ép tỏi, cao tỏi lão hóa, hoặc tinh dầu đều làm giảm cholestrerol và lipid huyết tương, sự chuyển hóa mỡ, và sự sinh vữa cả in vitro và in vivo.  Thử nghiệm in vitro trên những tế bào gan cô lập từ chuột trắng và những tế bào Hep G2 người cho thấy cao nước tỏi ức chế sinh tổng hợp cholestrol phụ thuộc vào liều. Đã nhận xét thấy tác dụng chống tăng cholestrol và lipid máu ở các mô hình in vivo thực nghiệm trên các loại động vật khác nhau (chuột cống trắng, thỏ, gà con, lợn) sau khi uống (trong thức ăn), hoặc cho vào dạ dày củ tỏi xay nát, cao chiết với cồn, ether dầu hỏa hoặc methanol, tinh dầu, cao tỏi lão hóa, và tinh dầu cố định. Cho chuột cống trắng uống allicin trong thời gian 2 tháng làm giảm nồng độ của lipid toàn phần, phospholipis, triglycerid và cholestrol toàn phần. Cơ chế tác dụng chống tăng cholesterol máu và lipid máu có thể liên quan đến sự ức chế enzym hydoroxymethylglutaryl CoA (HMG _ CoA) reductase và sự sửa đổi lipoprotein huyết tương và màng tế bào. Ở nồng độ thấp, cao tỏi ức chế hoạt tính của HMG – CoA reductase của gan, nhưng với nồng độ cao hơn (> 0.5 mg/ ml), sự sinh tổng hợp cholesterol bị ức chế ở giai đoạn cuối của quá trình sinh tổng hợp.  Tác dụng chống tăng huyết áp:  Cho uống hoặc cho vào dạ dày tỏi xay nát, hoặc cao cồn hoặc cao nước tỏi, làm giảm huyết áp ở chó, chuột lang, thỏ và chuột cống trắng.  Cao nước và ajoen gây mở kênh kali từ đó gây tăng phân cực màng tế bào ở mảnh mạch máu cô lập, ndẫn đến sự giãn mạch vì các dòg calci đóng lại từ đó gây giãn cơ trơn và thành mạch máu. Các nghiên cứu in vitro và in vivo đã chứng minh cao nước, cồn tỏi hoặc bột tỏi gây hoạt hóa nictric oxyd synthase, từ đó sản sinh ra oxyd nitric dẫn đến giãn mạch và làm giảm huyết áp. Tác dụng này có thể được gây ra do hoạt động của thành phần adenosin có trong tỏi.  Cao nước và tinh dầu tỏi làm thay đổi mức fibrinogen huyết tương, thời gian máu đông, và  hoạt tính phân hủy fibrin trong thử nghiệm in vivo. Hoạt tính phân hủy fibrin huyết thanh tăng lên sau khi cho uống tỏi khô hoặc cao tỏi cho động vật gây xơ cứng động mạch thực nghiệm.  Tỏi ức chế sự kết tập tiểu cầu trong nghiên cứu in vitro và in vivo. Cao chiết với nước, chloroform hoặc methanol của tỏi ức chế sự kết tập tiểu cầu gây bởi colagen, ADP, acid arachidonic, epinephrin và thrombin in vitro.  Tác dụng hạ đường máu của tỏi:  Cho chuột nhắt trắng bình thường hoặc gây đái tháo đường với streptozotocin uống làm giảm ăn nhiều và khát nhiều, nhưng không có tác dụng trên tăng đường máu hoặc giảm insulin máu.  Cho chuột cống trắng và thỏ gây đái tháo đường với alloxan uống allicin làm giảm đường máu và tăng hoạt tính của insulin phụ thuộc vào  liều. Tác dụng giảm đường máu của cao tỏi có thể do làm tăng sản sinh insulin, allicin được chứng minh có tác dụng bảo vệ insulin chống khử hoạt tính. Trên chuột cống trắng gây đái tháo đường với alloxan, S-allyl-cystein sulfoxyd có tác dụng điều trị tốt gần bằng insulin.  Tác dụng ức chế tế bào ung thư:  Cao tỏi các tác dụng ức chế giai đoạn đầu sinh ung thư da gây bởi tetradecanoyl phorbol acetat. Allicin và methyl allyl được chứng minh có tác dụng ức chế enzym geranykgeranyk transterase và như vậy có tác dụng ức chế sự biến đổi tế bào và có khả năng điều trị ung thư.  Tỏi có thể cải thiện quá trình oxy hóa trong động mạch và các triệu chứng ở bệnh nhân có hội chứng gan – phổi. Trên chuột nhắt trắng được tiêm phúc mạc doxorubicin (là thuốc trị ung thư mạnh nhưng gây tác dụng độc hại với tim, có thể do sản sinh các gốc tự do và peroxy – hóa lipid), S – allylcystein có tác dụng chống oxy hóa và thu dọn các gốc tự do, với liều 30 mg/ kg thể trọng tiêm phúc mạc hàng ngày cho chuột nhắt trắng trong 5 ngày, bắt đầu 2 ngày trước khi tiêm doxorubicin, đã có tác dụng làm giảm tỉ lệ chuột chết và giảm các tác dụng không mong muốn khác như sút cân, tăng creatin phosphokinase huyết thanh và các thương tổn  tim và gan. Cao tỏi lão hóa và 4 thành phần: S – allylcystein, S – allyl- mercaptocystein , alliin và allicin có tác dụng ức chế sự biến đổi oxy – hóa của lipoprotein tỷ trọng thấp in vitro. Năm diallyl polysulfid chiết từ tỏi có hoạt tính cao ức chế peroxy hóa lipid ở tiểu thể gan chuột cống trắng.  Cho chuột cống trắng uống methotrexat gây thương tổn ruột non, và do đó làm tăng độ thấm của ruột đối với chất hấp thụ kém dextran, đánh dấu bởi fluorescein isothiocyanat. Trong khi đó, khi cho chuột cống trắng uống methotrexat cùng với cao tỏi lão hóa cho vào thức ăn, độ thấm dextran đánh dấu bởi fluorescein isothiocyanat giảm xuống gần bằng mức của chuột đối chứng không uống methotrexat, cho thấy cao tỏi lão hóa có tác dụng bảo vệ ruột non đối với tổn thương gây bởi methotrexat trên tế bào thành ruột."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1, Chữa vết thương phần mềm, bỏng nước: Tỏi, hành, trầu không dùng tươi, mỗi vị 330g, lá ớt tươi 200g, mật lợn 1 lít. Hành, tỏi bỏ vỏ cùng trầu không, lá ớt giã nhỏ, cho vào nửa lít nước nấu kỹ, lọc, cô còn khoảng 300 ml, cho vào 1kg đường, đun thành cao lỏng, cuối cùng cho mật lợn vào canh kỹ, đựng vào lọ kín. Vết thương rửa sạch, bôi cao vào. Ngày rửa và bôi thuốc một lần.",
+      "sắc uống": "2, Chữa dịch tả: Tỏi 100g sắc với 300 ml nước, còn 100 ml, uống trong ngày.",
+      "giã nát": "3, Chữa sốt truyền nhiễm, cảm cúm:  Tỏi giã vắt lấy nước cốt 10 ml uống. Dùng tỏi bọc bông nút mũi để chống lây. Hoặc mỗi lần dùng 1-2 g tỏi tươi nấu cháo ăn và đắp chăn cho ra mồ hôi.",
+      "làm thuốc": "4, Chữa sốt rét: Tỏi 6 – 7 củ, để sống 1 nửa, nướng chín một nửa, ăn hết, nôn hay đại tiện thông thì khỏi.",
+      "sắc nước uống": "5, Chữa lỵ: Tỏi 10g giã nhỏ, ngâm vào 100 ml nước nguội trong 2 giờ, lọc bỏ bã, lấy nước thụt vào hậu môn, giữ lại khoảng  15 phút. Thụt mỗi ngày một lần. Đồng thời ăn hàng ngày 6g tỏi sống chia làm 3 lần. Điều trị 5 – 7 ngày thì có kết quả.",
+      "phơi khô": "6, Trị giun kim, giun móc: Thường xuyên ăn tỏi sống và dùng nước tỏi 5% thụt vào hậu môn như chữa lỵ",
+      "có tác dụng": "7, Chữa đầy bụng, đại tiểu tiện không thông: Tỏi giã, rịt vào rốn (để cách bằng lá lốt hay lá trầu hơ héo), đồng thời lấy tỏi giã giập bọc bông lại, nhét vào hậu môn.",
+      "xấy khô": "8, Chữa bệnh do Trichomonas, âm đạo lở ngứa: Tỏi 120 g giã nhỏ, ngâm trong 2 lít nước, rửa và thụt vào âm đạo",
+      "chữa": "9, Chữa đơn sưng, mụn lở  a, Tỏi giã trộn với ít dầu vừng mà bôi.  b, Tỏi, bí đao, giã đắp  10, Chữa viêm họng: Lá tỏi, lá mướp, giã vắt lấy nước uống.  11, Thuốc cường dương ích thận: Tỏi, hẹ ăn với thịt dê trắng (400g tái). Cứ 3 ngày ăn một lần.  12, Chữa trúng phong cấm khẩu bại liệt nửa người, trẻ em kinh giản: Tỏi, nhũ hương, phòng phong, thương truật, xuyên khung, khổ tử, bồ kết (bỏ hạt), các vị bằng nhau và tất cả bằng 50%, thạch xương bồ bằng 50%.  Tán bột viên với hồ, dùng hùng hoàng làm áo, mỗi lần uống 1 viên bằng hạt ngô đồng, trẻ em uống nửa viên, với nước thang riêng tùy theo chứng bệnh.  13, Chữa đái rắt, đái buốt: Tỏi 1 củ, dành dành 7 quả. Giã xát đắp vào rốn  14, Chữa sai khớp, bong gân: Tỏi 1 củ, vòi voi (lá và hoa) 30g, muối ăn 10g. Tất cả giã nát đắp vào chỗ sưng tấy. Sau đó băng lại.  Sản phẩm có thành phần dầu tỏi trên thị trường hiện nay  Dầu tỏi Tuệ Linh  Tại Việt Nam, tác dụng của dầu tỏi đã được các nhà khoa học biết đến từ rất sớm. Viện Hóa học- Viện Hàn lâm Khoa học công nghệ Việt Nam đã nghiên cứu thành công công nghệ trích ly dầu tỏi tía và chuyển giao cho công ty TNHH Tuệ Linh nhằm ứng dụng vào sản xuất. Công ty TNHH Tuệ Linh đã nghiên cứu bào chế thành công viên nang mềm Dầu tỏi Tuệ Linh chứa 50mg Dầu tỏi tía nguyên chất phục vụ nhu cầu phòng và chữa bệnh của người dân trong nước.  Sản phẩm có công dụng:  Tăng cường sức đề kháng của cơ thể Phòng ngừa và làm giảm các triệu chứng về đường hô hấp do virus, các trường hợp cảm cúm và ho. Giảm các triệu chứng gan nhiễm mỡ, cao huyết áp Giảm các chứng bụng, ăn uống khó tiêu Hỗ trợ giảm cân hiệu quả.  Dầu tỏi giúp phòng ngừa và làm giảm các triệu chứng về đường hô hấp do virus, các trường hợp cảm cúm và ho  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Sâm tố nữ. Nếu cần tư vấn và tìm hiểu thêm về cây Sâm tố nữ và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rễ gió",
+      "ten_khac": "Rễ gió, Bắc mã đâu linh, Khau nhả gió (Tày)",
+      "ten_khoa_hoc": "Aristolochia contorta Bunge",
+      "ma_taxon": "601633",
+      "ho": "Aristolochiaceae (Mộc hương)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân leo nhẵn, dài hàng mét.",
+      "rễ": "Rễ hình trụ màu nâu vàng.",
+      "lá": "Lá mọc so le, hình tim, dài 13-18 cm, rộng 10 -14 cm, gốc lõm sâu, đầu nhọn, mép nguyên, mặt trên nhẩn, mặt dưới có nhiều lông mịn, gân lá kết thành mạng lưới rõ; cuống lá dài 3 – 7 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, gồm 3-10 hoa; lá bắc màu lục tía; bao hoa hình trụ, hơi cong, dài 3 – 4 cm, gốc phình lên hình cầu, họng có lông, phiến bao hoa chia 2 môi, môi trên thuôn nhọn dài, đầu hơi vặn xoắn, mặt trên xanh nhạt có 3 đường vân màu tím nâu, mặt dưới màu nâu tím, môi dưới có 2 thùy nhỏ; nhị 6, đính quanh vòi nhụy, trên bao phấn có một phần phụ hợp thành vòng; bầu hạ.",
+      "quả": "Quả nang hình trứng, dài 4 – 6 cm, khi chín nứt làm 6 mảnh từ đầu cuống; hạt hình tam giác, dẹt, mép có cánh.",
+      "mùa hoa": "tháng 3-5.",
+      "mùa quả": "tháng 3-5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi\u00a0AristolochiaL. có gần 300 loài trên thế giới, phân bố chủ yếu ở các vùng nhiệt đới và cận nhiệt đới; một số ít loài có ở vùng ổn đới ấm. Tuy nhiên, vùng nhiệt đới Nam Mỹ được coi là có mức độ đa dạng cao về thành phần loài của Chi này. Khu vực Đông Nam Á cũng là nơi có số lượng loài lớn ở châu Á : Malaysia, 28 loài; Việt Nam khoảng 15 loài (mẫu đang được lưu trữ ở Viện Dược liệu). Rễ gió có vùng phân bố chủ yếu ở khu vực Đông Á, bao gồm Triều Tiên, Nhật Bản, Trung Quốc, đảo Đài Loan và cả Việt Nam. Ở Việt Nam, cây mói được phát hiện ở Lạng Sơn, Cao Bằng (?) và Kon Tum (Võ Văn Chi, 1996). Cây ưa ẩm, chịu bóng ở thời kỳ còn nhỏ, sau leo lên các cây bụi khác trở thành ưa sáng. Cây thường mọc ở ven rừng (rừng núi đá vôi), bờ nương rẫy, ở độ cao 350 m trở lên, ra hoa quả hàng năm, mỗi quả chứa nhiều hạt. Hạt có màng mỏng bao quanh, thuận lợi cho việc phân tán nhờ gió. Rễ gió ở Việt Nam là loài tương đối hiếm gặp. Do đó, cần đưa cây thuốc này vào Danh mục Đỏ để chú ý bảo vệ.",
+      "Đặc điểm sinh trưởng": "Cây ưa ẩm, chịu bóng ở thời kỳ còn nhỏ, sau leo lên các cây bụi khác trở thành ưa sáng. Cây thường mọc ở ven rừng (rừng núi đá vôi), bờ nương rẫy, ở độ cao 350 m trở lên, ra hoa quả hàng năm, mỗi quả chứa nhiều hạt. Hạt có màng mỏng bao quanh, thuận lợi cho việc phân tán nhờ gió.",
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Đông Á"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Triều Tiên"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Nhật Bản"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Trung Quốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Đảo Đài Loan"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Việt Nam"
+        }
+      ],
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Kon Tum"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân cây, quả (Herba Aristolochiae), thường gọi là Thiên tiên đằng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ gió\u00a0còn ít được dùng làm thuốc chữa bệnh ở Việt Nam. Trong y học cổ truyền Trung Quốc, quả chín khô của rễ gió được dùng điều trị bệnh đường hô hấp, ho và hen. Phần trên mặt đất cùa cây phơi khô được dùng làm thuốc lợi tiểu chống phù và làm thuốc tri thấp khớp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

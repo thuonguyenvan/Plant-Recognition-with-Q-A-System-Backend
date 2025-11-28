@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngâu rừng",
+      "ten_khac": "Ngâu rừng, Ngâu cánh",
+      "ten_khoa_hoc": "Aglaia pleuropteris Pierre",
+      "ma_taxon": "189063",
+      "ho": "Meliaceae (Xoan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2- 6m.",
+      "thân": "Cành non mềm, có ít lông, vỏ màu xám nâu.",
+      "lá": "Lá kép lông chùm lẻ, mọc so le gồm 11 – 15 lá chét thuôn – mũi mác, dài 2 – 3,5 cm, rộng 1 – 1,5cm, gốc tròn, đầu nhọn, gân lá men theo mép, nổi rõ ở hai mặt; cuống chung dài 6-12cm, có cánh.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm, ngắn hơn lá; hoa nhỏ màu vàng, thơm, thường đơn tính do khuyết bầu; lá bắc ngắn, có lông; đài nhẵn, ngắn hơn tràng, 5 răng có lông ở mép; tràng 5 cánh nhẵn, khum; nhị 5, bao phấn có 4 ô; bầu rất nhỏ, có lông.",
+      "quả": "Quả hình trứng, nhẵn, có một hạt, dài 1 – 1,2cm; hạt màu nâu.",
+      "mùa hoa": "tháng 12-2",
+      "mùa quả": "tháng 12-2",
+      "mọc": "Tránh nhầm với loài ngâu dại, có 5 lá chét to; hoa cũng vàng thơm, rất giống loài trên."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Aglaia Lour. là một chi lớn khoảng 39 loài ở Việt Nam (Nguyễn Tiến Bân, 1997). Loài ngâu rừng hiện chưa rõ nguồn gốc phát sinh, song về phân bố đã ghi nhận được ở Đông Dương, Thái Lan và có thể cả một số nước khác trong vùng Đông – Nam Á. Ở Việt Nam, ngâu rừng phân bố chủ yếu ở các tỉnh phía nam.",
+      "thường_mọc": "Cây ưa sáng, có thể hơi chịu bóng, thường mọc ở kiểu rừng thưa, rừng thứ sinh và đôi khi ở ven rừng nguyên sinh ẩm. Cây ra hoa quả nhiều hàng năm, nhất là ở những cây được chiếu sáng nhiều, tái sinh tự nhiên chủ yếu từ hạt và sau khi chặt có khả năng tái sinh cây chồi khỏe."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá, thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm nhân dân, ngâu rừng được dùng để chữa sốt rét. Ngày uống 20-30g. Dạng nước sắc. Dùng riêng hoặc phối hợp với rễ xoan rừng, rễ cây na với liều lượng bằng nhau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

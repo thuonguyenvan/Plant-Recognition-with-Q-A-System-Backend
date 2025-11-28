@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cần thăng",
+      "ten_khac": "Bằng thăng",
+      "ten_khoa_hoc": "Limonia acidissima L.",
+      "ma_taxon": "343928",
+      "ho": "Cam (Rutaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2 – 3m.",
+      "thân": "Cành hình trụ, có lông, sau nhẵn, màu nâu đỏ, có gai ngắn 2 cm.",
+      "lá": "Lá kép lông chim, mọc so le, nhưng thường tụ họp thành túm, dài 3 – 11 cm; cuống lá kép có cánh; lá chét 2 – 3 đôi, nguyên hoặc hơi có răng tròn, dài 1 2,5 cm, rộng 0,5 – 1 cm, gốc hình nêm, đầu tù hay nhọn, gân lá nổi rõ ở mặt dưới; phiến lá có nhiều tuyến.",
+      "hoa": "Cụm hoa mọc ở đầu cảnh thành chùm tán, có cuống dài 2,5 cm, dài có 4 răng rời, mảnh, cảnh hoa 4, mỏng và có tuyến; nhị 8 rời nhau, dài bằng cảnh hoa, chỉ nhị phình ra ở gốc, bầu hình nón cao ngược, 4 ô.",
+      "quả": "Quả hình cầu, đường kính 1,2 cm, có đài tồn tại; hạt 1 – 4, hình ellip, đầu bằng, bao bọc bởi một lớp cơm nhầy."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Limonia L. ở Việt Nam chỉ có 1 loài cần thăng kể trên. Trên thế giới, loài này phân bố ở vùng nhiệt đới Châu Á, thuộc Ẩn Độ, Mianma, Lào và Campuchia. Ở nước ta, cần thăng có thể gặp tại một số tỉnh ven biển, như Quảng Nam, Khánh Hoà, Ninh Thuận, Bình Thuận,…  Cần thăng thuộc loại cây ra sáng, có thể chịu hạn tốt. Cây thường mọc rải rác trong các quần hệ rừng thứ sinh, rừng thưa khô hạn vùng ven biển."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, vỏ thân, gai, lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ thân chứa 4 – methoxy – 1 – methyl – 2 – quinolin. Theo Bandara BM.R và cộng sự (1989); vỏ thân chứa bergarten và phoralen Bergarten được chứng minh có tác dụng diệt côn trùng Callosobruchus [CATIS: 252105n].  Năm 1991, Ghosh Parthasarathi và cộng sự đã phân lập được từ quả 2 dẫn chất tyramin E acidiosiminol và acidissiminin epoxyd cùng với N-benzoyltyramin (CA116: 148158a)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả, vỏ cần thăng có vị đắng, là có mùi thơm, tính mát. Có tác dụng giải nhiệt, làm săn, lợi tiểu hoá và kích thích"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả chín ăn được và được sử dụng nhiều ở Ấn Độ và ở Campuchia, khi nấu chín, có mùi thơm của dâu tây, nhưng vì có vị chát nên khi ăn thường cho thêm đường.  Dịch của thịt quả có tác dụng kích thích làm ăn ngon miệng, được dùng, trị mụn nhọt ở miệng, và được coi là có tác dụng làm chắc lợi răng.  Vỏ thân (và cả thịt quả) dùng riêng hay phối hợp với vỏ cây lộc vừng, giã đắp ngoài da trị các vết đốt, vết cắn của côn trùng và bò sát độc, và còn được dùng uống trị rối loạn chức năng gan và chứng giảm tiết mật, buồn nôn.  Gai (và cả vỏ) nghiền nát, hãm nước uống để cầm máu trong chúng bằng huyết. Lá có mùi hôi thơm, được dùng nấu nước uống làm lợi tiêu hoá và trị chướng bụng.  Ở Mianma, vỏ cây cần thăng được tán bột và chế thành bột nhão để làm thuốc mỹ phẩm đắp lên mặt. Bằng đường uống, lá dùng trị động kinh, rễ dùng làm thuốc tây, và quà dùng làm thuốc bổ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

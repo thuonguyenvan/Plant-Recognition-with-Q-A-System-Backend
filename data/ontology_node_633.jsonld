@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xấu hổ",
+      "ten_khac": "Xấu hổ, Trinh nữ, Cỏ thẹn, Mắc cỡ, Hàm tu thảo, Nhả nã nhẻn (Tày), La tép (Bana), Mìa nhau (Dao)",
+      "ten_khoa_hoc": "Mimosa pudica L. var. hispida Brenan",
+      "ma_taxon": "81940",
+      "ho": "Mimosaceae (Trinh nữ)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ mọc hoang loà xoà ở ven đường cái, thân có gai hình móc.",
+      "lá": "Lá hai lần kép lông chim, nhưng cuống phụ xếp như hình chân vịt, khẽ động vào lá cụp xuống.",
+      "cuống": "Cuống chung gầy, mang nhiều lông, dài 4cm, cuống phụ 2 đôi, có lông trắng cứng.",
+      "mặt": "Lá chét 15-20 đối nhỏ, gần như không có cuống.",
+      "hoa": "Hoa màu tím đỏ. tụ thành hình đầu trái xoan.",
+      "quả": "Quả giáp dài 2cm, rộng 3mm, tụ thành hình ngôi sao, ở phần giữa các hạt quả hẹp lại, có lông cứng ở mép.",
+      "hạt": "Hạt gần như hình trái xoan, dài 2mm, rộng l,5mm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Từ cây xấu hổ người ta đã lấy ra được một chất ancaloit gọi là mimosin C8H10O4N2",
+      "gồm chất": "Chất mimosin có độ chảy 231 độ C α=-2100 (H20), cho muối đồng C8H8O4N2Cu.",
+      "Các hợp chất": "Theo một số tác giả (R. Adams và J.Wibaut) thì mimosin là đồng phân lập thể của leucenol một chất lấy được từ hạt keodậu Leucaena glauca (xem vị này). Tuy nhiên mimosin chưa phải là hoạt chất độc nhất.",
+      "chứa": "Trong lá vào tháng 8, hàm lượng selen là 3.000 γ/g và giảm dần đến tháng 12 chi còn 300 γ/g.",
+      "triết xuất": "Trong quả vào tháng 8, hàm lượng selen là 290 γ/ g và sau đó tăng dần tới 1.560 γ/g trong tháng 12.",
+      "đã nghiên cứu": "Và tác giả nhận xét rằng lá cây xấu hổ có hàm lượng selen rất cao vào mùa hè rồi giảm nhanh, trong khi đó hàm lượng sclen trong quả lại tăng ( Đàm Trung Bảo và cộng sự 1977, Hội nghi khoa học Trường Đại học dược khoa Hà nội, 1974-1977)"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chỉ mới thấy được dùng trong phạm vi nhân dân. Với những công dụng, dạng và liều dùng như sau:  Lá cây xấu hổ được dùng làm thuốc ngủ và dịu thần kinh.",
+      "được_dùng": "Liều dùng hàng ngày 6-12g dưới dạng thuốc",
+      "làm thuốc": "Rễ cây xấu hổ được dùng chữa bệnh nhức xương.",
+      "sắc uống": "Rễ cây xấu hổ, thái thành từng miếng mỏng phơi khô. Ngày dùng 120g rang sau đó tẩm rượu 35-400 rồi lại rang cho khô. Thêm 600ml nước, sắc còn 200-300ml. Chia số nước còn lại làm 2- 3 lần uống trong ngày. Thường dùng 4-5 ngày thấy kết quả (kinh nghiệm nhân dân ở Diễn Châu. Nghệ An và miển Nam Việt Nam). Cần chú ý nghiên cứu thêm.",
+      "chữa": "Xem thêm: Cây Xấu hổ chữa bệnh xương khớp"
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Mọc hoang ở khắp nơi trong nước ta, không thấy ai trồng.",
+      "phơi khô": "Người ta đào rễ vào quanh năm, rửa sạch đất cát, thái mỏng, phơi hay sấy khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

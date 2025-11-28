@@ -1,0 +1,260 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mã biên thảo",
+      "ten_khac": "Hồ chi, hồ chi sợi, biệt đà tơ, mã biên thảo",
+      "ten_khoa_hoc": "Lespedeza juncea (L.) Pers.",
+      "ma_taxon": "119788",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi sum sê, mọc đứng, cao 0,5 – 1m, có khi hơn.",
+      "thân": "Thân cành mảnh và dài, hơi có cạnh.",
+      "lá": "Lá kép 3 lá chét, hình mác dài 10 – 30 cm, rộng 2 – 5 cm, gốc thuôn hẹp, đầu từ và có mũi lồi ngắn, mặt trên sẫm bóng, mặt dưới có lông mềm màu xám, lá kèm hình giải.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài, không cuống, hoa màu hồng, đài hợp thành ống có lông áp sát màu xám; tràng có cánh cờ hình trái xoan – thuôn, cánh thìa có định công và gốc có tại, cánh bên hẹp; nhị một bó, bao phấn hình bầu dục; bầu ngắn, vòi hình sợi.",
+      "quả": "Quả hình thấu kính, mặt ngoài nhăn nheo, có vẫn khi còn non, sau nhẵn; hạt 1.",
+      "mùa hoa": "tháng 6",
+      "mùa quả": "11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Lespedeza Michx có 2 loài ở Việt Nam. Loài mã biên thảo phân bố tương đối rộng ở vùng núi thấp đến trung bình, từ tỉnh Cao Bằng, Lạng Sơn, Quảng Ninh, Hòa Bình vào đến Ninh Bình, Nghệ An, Kon Tum. Cây còn có ở hầu hết các nước nhiệt đới tại châu Á và Australia.",
+      "thường_mọc": "Mã biên thảo là loại cây ưa sáng, thường mọc lẫn trong các tràng cỏ, đồi cây bụi, nương rẫy mới bỏ hoang… Cây sinh trưởng mạnh trong mùa mưa ẩm, ra hoa quả hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Bên cạnh công dụng làm thuốc, mã biên thảo cũng có tác dụng phủ đất, cành lá dùng làm phân xanh và thức ăn cho trâu bò.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây chứa 5,1 – 8% tanin. Lá chứa 7,5 – 18% tanin và 23,18% protein (Thacker MS et al., (1962), The wealth of India, vol 6, p.76). Lá còn chứa isovetexin (6 – C – β – D – glucosilapigenin), 6, 8 – D – C – pentosilapigenin, vinecin2, juglanin (kaempferol – 3 – arabinosid), pinitol và avicularin (quereetin – arabinosid). Hạt chứa stizolamin và một lượng nhỏ tinh dầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mã biên thảo vị cay, hơi đắng, tính bình, có công năng ích can (có ích cho gan), minh mục (làm sáng mắt), hoạt huyết thanh nhiệt giải độc, lợi niệu, tiêu viêm, kích thích tiêu hóa, giảm ho và long đờm. Sách “Điền nam bản thảo” ghi: mã biên thảo vị cay, hơi đắng, tính hơi ôn; sách “Phúc kiến dân gian thảo dược” ghi: vị đắng, cay, hơi hàn; sách “Tứ xuyên trung được chỉ ghi: vị nhạt, tính ôn; sách “Côn minh dân gian thường dùng thảo dược” ghi: vị cay, hơi đắng, tính bình, Hồ chi nhập vào các kinh phế, can và thận [TDTH, 1996, II: 1021]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mã biên thảo được dùng cho trẻ em suy dinh dưỡng, kém ăn, chữa viêm miệng, viêm dạ dày, ruột, lỵ trực khuẩn, viêm gan, hoàng đản; viêm thận, phù thũng, bạch đới. Liều dùng hàng ngày 15 – 30g toàn cây, nếu cây tươi dùng 30 – 60g, sắc nước uống, ngày một thang. Dùng ngoài, cây tươi (thường ngắt các ngọn) rửa sạch, giã nát, đắp vào chỗ mụn nhọt, đầu đinh, mày đay, mụn rộp, rắn cắn. Ở Cao Bằng, nhân dân còn dùng cây mã biên thảo chữa quáng gà, mắt bị mờ, sốt rét, trẻ em cam tích; Ở Lai Châu, nhân dân dùng chữa bướu cổ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

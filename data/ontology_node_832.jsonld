@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ô môi",
+      "ten_khac": "Bọ cạp nước, Bồ cạp nước, Cây cốt khí, Cây quả canhkina, Sac phlê, Krêête, Rich chopeu (Campuchia), Brai xiêm, May khoum (Viên chăn).",
+      "ten_khoa_hoc": "Cassia grandis L.",
+      "ma_taxon": "160171",
+      "ho": "Vang (Caesalpiniaceae)",
+      "Mô tả": {
+        "cây": "Cây to cao 7 đến 15m.",
+        "thân": "vỏ thân nhẵn, cành mọc ngang, cành non có lông màu rỉ sắt, cành già màu nâu đen.",
+        "lá": "Lá có kích thước lớn, kép lông chim gồm 5-16 đôi lá chét hình hơi quả trám, dài 7-12cm, rộng 4-8cm có phủ lông mịn.",
+        "hoa": "Cụm hoa mọc thành chùm thưa, thõng, dài 20-40cm. Hoa màu hồng tươi.",
+        "quả": "Quả hình trụ cứng, cong lưỡi liềm, màu nâu đen nhạt, dài 20-60cm, rộng 2-3cm, cuống ngắn, không mở, đầu có mỏ nhọn, nhỏ. Quả được phân chia thành 50-60 ngăn nhỏ phân cách nhau bởi những lớp màng mỏng màu trắng nhạt, trong chứa một thứ cơm mềm, đặc sền sệt, màu nâu đỏ hay nâu đen, vị ngọt, lúc tươi hơi có vị chua, khi khô có màu sẫm. Trong mỗi ngăn có chứa một hạt dẹt cứng màu vàng. Khi chín khô long ra, lúc lắc quả có tiếng kêu đặc biệt.",
+        "mùa hoa": "tháng 5",
+        "mùa quả": "10."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong cơm quả có đường, chất nhầy, tanin, Saponin, oxalate canxi, anthraglucosid, sáp, tinh dầu và chất nhựa, trong hạt chứa chất béo. Trong lá có anthraglucosid và flavonoid."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả dùng sống chữa táo bón, với liều 4-6g (nhuận) hoặc 10-20g (tẩy). Ngâm rượu uống làm thuốc tiêu, bổ giúp ăn ngon cơm, đỡ đau lưng, đau người. Nếu nấu cơm và hạt (1kg) với 1 lít nước rồi lọc và cô cách thủy đến thành cao thì dùng để làm thuốc chữa đau lưng, đau người, nhuận tràng hay tẩy hoặc chữa lỵ, ỉa chảy với liều 5-15g. Lá tươi giã nát vắt lấy nước xát vào nơi hắc lào, có thể sắc uống chữa đau lưng, nhuận tràng. Ngày uống 15-20g lá. Vỏ thân được nhân dân Campuchia dùng đắp lên nơi rắn và bọ cạp cắn."
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa trị đau thấp khớp: Vỏ ô môi 50g, dây đau xương 100g, cốt toái bổ 100g, nhục quế 30g. Ngâm trong 1.000ml rượu để 30 – 40 độ cồn trong 15 – 20 ngày. Mỗi ngày uống 2 lần từ 30 – 60ml."
+      },
+      "luu_y": {}
+    }
+  ]
+}

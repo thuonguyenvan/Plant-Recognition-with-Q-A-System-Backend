@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bồ kết tây",
+      "ten_khac": "Bồ kết tây, Hợp hoan",
+      "ten_khoa_hoc": "Albizia lebbeck (L.) Benth.",
+      "ma_taxon": "60832",
+      "ho": "Mimosaceae (Trinh nữ)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, sống lâu năm, cao 8-12 m  hoặc hơn. Cành non màu vàng, có lông tơ, sau nhẵn, màu xám.",
+      "lá": "Lá kép lông chim hai lần, mọc so le, gốc cuống có một tuyến to, lá chét thuôn, gốc và đầu tù, dài 2,2-4cm rộng 1,5 -2,5 cm, 2 mặt nhẵn, mặt dưới rất nhạt, cuống lá kép dài 7-18 cm, lá kèm sớm rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành đầu có cuống dài khoảng 10 cm, hoa nhỏ màu trắng thơm, đài hình phễu, có lông, có răng hình tam giác, tràng có lông ở mặt ngoài, nhị 35, bầu nhẵn",
+      "quả": "Quà đậu dẹt, màu vàng, nhẵn bóng, dài khoảng 20 cm, rộng 3cm, phồng lên ở chỗ hạt. hạt hình bầu dục, nhẵn , màu nâu bóng.",
+      "mùa hoa": "tháng 4",
+      "mùa quả": "7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Albizza Durazz có khoảng vài chục loài, phần lớn là cây gỗ, một số ít là cây bụi, phân bố chủ yếu ở vùng nhiệt đới châu Á, châu Phi và châu Đại Dương. Ở Việt Nam, chi này có 17 loài, tập trung nhiều ở các tình phía nam Bồ kết tây phân bố rải rác khắp Ấn Độ và một số nước ở vùng Đông Nam châu Á, gốm Thái Lan, Campuchia, Lào, Việt Nam. Ở Việt Nam, bố kết tây được trống để lấy bóng mát Đó là loại cây gỗ mọc nhanh, lần trong kiểu rừng thưa nửa rụng lá ở Tây Nguyên hay Nam Trung Bộ, cây còn được trồng nhằm tạo bóng cho các ló cà phê. Cây ra hoa quả nhiều hàng năm, quả già khô tự mở. Tái sinh tự nhiên chủ yếu từ hạt"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ bồ kết tây chứa tanin 7-11%, saponin và một chất gôm. Thành Phần gôm gồm galactose, arabinose, rhamnose, acid glucuronic, acid 4 methyl glucuronic… Ganguli Nivedita B, Bhatt Ranjan M sàng lọc hoạt chất kháng sinh các chất chiết xuất từ vỏ cành bồ kết tây thấy có các glucosid, glucosid trợ tim, anthraquinon glycosid. Hạt chứa dầu có thành phần acid gốm palmitic, oleic, linoleic Hạt bồ kết còn chứa các alcaloid mach vòng phần tử lớn (macrocyclic spermin) tên là budmunchiamin có cấu trúc như trên"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ bố kết tây có tác dụng làm săn da. Vỏ và hạt độc, nên chỉ được dùng ngoài. Dầu hạt chữa bệnh phong, hoa dùng đắp nhọt"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

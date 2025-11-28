@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vả",
+      "ten_khac": "Vả, Mác ngoa (Tày)",
+      "ten_khoa_hoc": "Ficus roxburghii Wall. ex Miq.",
+      "ma_taxon": "361868",
+      "ho": "Dâu tằm (Moraceae)",
+      "Mô tả": {
+        "lá": "Cây to, cao 5 – 10m, tán lá tỏa rộng. Cành mập có lông cứng và thưa. Lá to, mọc so le, phiến dài, mềm, hình gần tròn, dài 15-35cm, rộng 11-30cm, gốc hình tim, đầu tù hoặc hơi có mũi nhọn, mặt trên nhẵn, mặt dưới có lông mịn trên các gân, gân 5 – 7 ở gốc lá, mép khía răng không đều; cuống lá dài, to, nhiều lông thưa; lá kèm màu hung đỏ, có lông.",
+        "hoa": "Cụm hoa mọc ở gốc thân hoặc trên những cành già, hình cầu; hoa đực xếp xung quanh lỗ cụm hoa, đài 4 răng không đều, hàn liền ở gốc, nhị 2 đỉnh ở gốc; hoa cái ở gốc cụm hoa, đài 3 răng hàn liền bao kín bầu lúc non, bầu thuôn ở gốc.",
+        "quả": "Quả phức to bằng nắm tay, hình cầu dẹt, phần trên phẳng và loe to, hơi lõm ở giữa, phần cuống thuôn nhỏ dần, khi chín màu đỏ nâu sầm, thịt mềm, mặt ngoài có lông nhỏ mịn, bên trong có dịch đường sánh như keo, ăn được.",
+        "cây": "Cây to, cao 5 – 10m, tán lá tỏa rộng.",
+        "mùa hoa": "tháng 12-3",
+        "mùa quả": "tháng 12-3"
+      },
+      "Phân bố": {
+        "phân_bố": "Vả có nguồn gốc ở vùng Ấn Độ – Malaysia, phân bố tự nhiên phổ biến từ Ấn Độ, Malaysia, Thái Lan, Philippin, Indonesia, đến Việt Nam, Lào và Nam Trung Quốc, ở các nước này, vả còn được trồng như một loại cây ăn quả thông dụng. Ở Việt Nam, vả là cây mọc tự nhiên trong quần hệ rừng kín thường xanh, mưa ẩm nhiệt đới, thuộc hầu hết các tỉnh vùng núi (từ 1000 m trở xuống) và ở cả miền Bắc lẫn miền Nam. Ở các tỉnh Tuyên Quang, Phú Thọ, Yên Bái, Hoà Bình, Thái Nguyên, Lạng Sơn…đôi khi cây cũng được người dân địa phương trồng ở bờ ao hay vườn nhà. Vả là loại cây ưa ẩm, hơi chịu bóng, thường mọc ở bờ các khe suối dưới tán rừng, thích nghi với điều kiện khí hậu vùng nhiệt đới hay cận nhiệt đới ẩm. Đất ở nơi có cây vả mọc thường khá màu mỡ và có khả năng giữ nước tốt. Vả ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Tác nhân phát tán hạt là dòng nước hoặc qua phân của động vật ăn quả chín như chim, động vật gậm nhấm và bò sát.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Phú Thọ"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Yên Bái"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Vả là loại cây ưa ẩm, hơi chịu bóng, thường mọc ở bờ các khe suối dưới tán rừng, thích nghi với điều kiện khí hậu vùng nhiệt đới hay cận nhiệt đới ẩm. Đất ở nơi có cây vả mọc thường khá màu mỡ và có khả năng giữ nước tốt. Vả ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Tác nhân phát tán hạt là dòng nước hoặc qua phân của động vật ăn quả chín như chim, động vật gậm nhấm và bò sát."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Quả non và quả chín, dùng tươi hoặc phơi khô. Còn dùng rễ và lá."
+      },
+      "Thành phần": {
+        "thành phần": ""
+      },
+      "Tính vị": {
+        "Có vị": "Quả vả có vị ngọt, tính bình, có tác dụng mạnh dạ dày, nhuận tràng, thanh nhiệt, tiêu đờm, lợi tiểu. Rễ và lá vả có tác dụng giải độc, tiêu thũng. Công dụng: Quả vả được dùng trị kiết lỵ, trĩ, táo bón. Nhựa dùng bôi trị mũi có nhiều mụn đỏ. Để chữa suy nhược, kém ăn, gầy yếu, dùng quả vả vừa chín tới, phơi nắng hoặc sấy khô, rồi lấy 500g quả cắt nhỏ, ngâm với một lít rượu trắng trong 10-20 ngày. Ngày uống 3 lần trước bữa ăn và lúc đi ngủ, mỗi lần một chén nhỏ."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": ""
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa họng sưng đau: Quả vả non 100g, lá chó đẻ 50g, búp tre 30g. Tất cả để tươi, rửa sạch, giã nát, sao nóng, đắp vào chỗ đau, băng lại. Ngày làm hai lần. Chữa cảm, ngộ độc: Quả vả, quả sung, mỗi vị 200g; lá móc mèo, rễ canh châu, mỗi vị 50g. Thái nhỏ, phơi khô, tẩm rượu, sao vàng, sắc uống làm hai lần trong ngày. Thuốc tăng tiết sữa: Quả vả khô, sấy giòn, tán bột. Mỗi ngày uống hai lần, mỗi lần 12g với nước đun sôi để nguội vào lúc đói. Dùng 3 – 5 ngày."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

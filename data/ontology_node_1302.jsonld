@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Câu đằng",
+      "ten_khac": "Câu đằng, Vuốt lá mỏ, Câu đằng lá mỏ",
+      "ten_khoa_hoc": "Uncaria rhynchophylla (Miq.) Miq. ex Havil.",
+      "ma_taxon": "809168",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ leo, cành non có tiết diện vuông góc, có rãnh dọc, khi già cứng màu xám đen hay nâu đen.",
+      "lá": "Lá có cuống ngắn, mọc đối, có lá kèm; ở kẽ lá có gai nhọn mọc cong xuống, cứ một mấu 2 gai lại xen một mấu có 1 gai.",
+      "hoa": "Hoa tụ họp thành hình cầu mọc đơn độc hoặc thành chùm ở kẽ lá và đầu cành; lá đài 5, ống ngắn; cánh hoa 5, ống tràng dài, nhị 5 đính ở họng tràng.",
+      "quả": "Quả nang dài và dẹt chứa nhiều hạt có cánh.",
+      "mùa hoa": "tháng 3-7",
+      "mùa quả": "tháng 3-7"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính chất theo tài liệu cổ: Vị ngọt, tính hàn, vào 2 kinh can và tâm bào. Có tác dụng thanh nhiệt, bình can, trấn kinh. Chữa trẻ em hàn nhiệt kinh giản, người lớn đầu nhức mắt hoa.  Hiện nay câu đằng được dùng làm thuốc trấn kinh, trấn tĩnh, bệnh cao huyết áp, mắt hoa, trẻ con kinh giật, khóc đêm, phụ nữ xích bạch đới. Ngày dùng 6-15g dưới dạng thuốc sắc.  Ngoài ra nhân dân nhiều nơi còn dùng cây câu đằng làm nguồn chất chát để ăn trầu.  Đơn thuốc có câu đằng chữa bệnh cao huyết áp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang ở vùng thượng du Cao Bằng, Lào Cai, chưa được trồng. Người ta cắt những mẩu cành đem về, chỉ lấy phần đót có móc câu phơi hay sấy khô. Có đốt có 1 móc, có đốt có 2 móc câu. Loại 2 móc câu được coi là tốt hơn."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây đau xương",
+      "ten_khac": "Dây đau xương, Khoan cân đằng, Tục cốt đằng, Khau năng cấp",
+      "ten_khoa_hoc": "Tinospora sinensis Merr.",
+      "ma_taxon": "556201",
+      "ho": "Menispermaceae (Tiết dê)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Dây đau xương là một loại cây leo, dài 7-8m, thân có nốt sần và có lông.",
+        "hoa": "Hoa mọc thành chùm ở kẽ lá hoặc đơn độc, hoặc mấy chùm tụ lại, chùm dài chừng 10cm, có lông măng, màu trắng nhạt.",
+        "quả": "Quả hạch, khi chín có màu đỏ, có dịch nhầy, hạch hình bán cầu, mặt phẳng của bán cầu hõm lại. Mùa quả ở miền Bắc: tháng 3-4.",
+        "cây": "Lá có lông, nhất là ở mặt dưới làm cho mặt dưới có màu trắng nhạt, phiến lá hình tim, phía cuống tròn và hõm lại, phía đỉnh hẹp lại thành mũi nhọn, dài 10-12cm, rộng 8-10cm, có 5 gân rõ, toả hình chân vịt.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null
+      },
+      "phan_bo": {
+        "@type": "Phân bố",
+        "phân_bố": null
+      },
+      "thong_tin_khac": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Dây đau xương có vị đắng, tính mát, có tác dụng mạnh gân cốt, trừ phong thấp"
+      },
+      "bo_phan_dung": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": null
+      },
+      "thanh_phan": {
+        "@type": "Thành phần",
+        "thành phần": "Toàn cây dây đau xương có nhiều ancaloit (Đỗ Tất Lợi – Những cây thuốc và vị thuốc Việt Nam, 1999).",
+        "gồm chất": "Trong dây đau xương, người ta đã tách và xác định cấu trúc một glucoside phenolic là tinosinen.",
+        "Các hợp chất": "Trong cành người ta tìm thấy 2 chât dinorditerpen glucoside: tinosinesid A và B"
+      },
+      "tinh_vi": {
+        "@type": "Tính vị",
+        "Có vị": null
+      },
+      "cong_dung": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Dây đau xương còn là một vị thuốc mới được dùng trong phạm vi nhân dân để chữa những triệu chứng của bệnh tê thấp, đau xương, đau người. Còn được dùng làm thuốc bổ. Dùng dưới hình thức thuốc uống hay thuốc xoa bóp. Người ta cho rằng thân cây có tác dụng mạnh hơn.",
+        "được_dùng": "Vài hình thức dùng dây đau xương:  Lá dây đau xương giã nhỏ, trộn với rượu để đắp lên những chỗ sưng đau. Thái nhỏ thân dây đau xương, sao vàng ngâm rượu với tỷ lệ 1 phần 5. Ngày uống 3 lần, mỗi lần 1 cốc con. Phụ nữ và những người không uống được rượu có thể sắc với nước mà uống. Thường thời gian điều trị kéo dài 15 ngày."
+      },
+      "cach_dung": {
+        "@type": "Cách dùng",
+        "được_dùng": "Ở Việt Nam, dây đau xương mọc hoang khắp nơi ở Việt Nam, miền núi cũng như miền đồng bằng.",
+        "làm thuốc": "Bộ phận dùng: Thân và lá thu hái quanh năm. Đối với thân già, cắt thành từng đoạn dài 20-30cm, rồi phơi hay sấy khô, dùng sống hay tẩm rượu."
+      },
+      "luu_y": {
+        "@type": "luu_y",
+        "luu_y": null
+      },
+      "url": "https://tracuuduoclieu.vn/day-dau-xuong.html"
+    }
+  ]
+}

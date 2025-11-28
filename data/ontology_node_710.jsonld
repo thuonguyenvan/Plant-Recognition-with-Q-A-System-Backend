@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thanh cao",
+      "ten_khac": "Thảo cao, Hương cao, Thanh hao.",
+      "ten_khoa_hoc": "Artemisia apiacea Hance",
+      "ma_taxon": "1538949",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân cỏ mọc hằng năm hay hai năm, cao chừng 0,3-1,5m, rất nhiều cành ngay từ giữa cây. Toàn thân có mùi thơm.",
+      "lá": "Lá mọc so le, hai lần xẻ lông chim, phiến lá chét rất nhỏ, mép nguyên hoặc mỗi dìa có 1-3 chỗ rách nhỏ. Cuống lá ngắn và hẹp.",
+      "hoa": "Cụm hoa hình đầu, đường kính 6mm, trông như một quả con. Xung quanh là hoa cái ở giữa là hoa lưỡng tính."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc hoang và được trồng ở nhiều tỉnh miền Bắc Việt Nam, nhiều nhất ở Hà Nội, Hải Hưng (xã Tân Quang, thôn Nghĩa Trai), Lạng Sơn, Cao Bằng. Còn thấy ờ ven bờ sông, bờ biển. Tại các nước khác cũng có như Trung Quốc, Ấn Độ, Nhật Bản, Triều Tiên. Vào các tháng 7- 10, cây ra hoa kết quả, hái về, phơi hay sấy khô. Để nơi khô ráo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong cây thành cao có tinh dầu, chất đắng và một ancaloid gọi là abrotanin C21H22N0"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ thanh cao vị đắng, tính hàn, vào 2 kinh can và đởm. Có tác dụng trừ âm phận phục nhiệt. Dùng chữa sốt chưng, lao nhiệt, mồ hôi trộm, sốt rét, mụn nhọt.  Thanh cao chỉ mới thấy dùng trong đông y làm thuốc chữa các chứng sốt, (sốt cảm, sốt do bệnh phổi, thương hàn), sốt mà mố hôi không ra được, mồ hôi trộm, vàng da. Đông y cho rằng vị thanh cao dùng lâu không có hại, mà còn làm cho ăn ngon cơm, chóng tiêu, chữa mệt mỏi về cơ thể và trí não.  Còn dùng cầm máu, chữa đổ máu cam, đại tiện ra huyết.  Dùng ngoài đa có tính chất sát trùng, chữa mụn nhọt lở ngứa.  Ngày dùng 6-12g dưới dạng thuốc sắc. Có thể dùng tới liều 20g một ngày.  Đơn thuốc có thanh cao dùng trong nhân dân  Chữa mệt nhọc, kém ăn:  Lấy một phần lá, 3 phần nước, đun và cô đặc. Viên bằng hạt ngô. Trước khi đi ngủ hoặc lúc đói uống 10-20 viên. Có thể dùng rượu nóng chiêu thuốc.  Chữa bệnh thương hàn, sốt do bệnh phổi, mồ hôi trộm :  Thanh cao 20g, mạch môn 15g, đảng sâm 12g, sinh địa 15g, gạo sống 15g, nước 800ml. sắc và cô còn 300ml. Chia làm 3 lần uống trong ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

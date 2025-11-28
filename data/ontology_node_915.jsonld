@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Máu chó",
+      "ten_khac": "Máu chó, Máu chó lá nhỏ, Co lướt (Thái)",
+      "ten_khoa_hoc": "Knema corticosa Lour.",
+      "ma_taxon": null,
+      "ho": "Myristicaceae (Nhục đậu khấu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to cao, có thể tới hơn 10m.",
+      "thân": "Cành non có lông tơ màu hung đỏ.",
+      "lá": "Lá mọc so le, có cuống, nguyên và nhẵn, mặt trên bóng.",
+      "hoa": "Hoa khác gốc, có lông mịn màu nâu nhạt.",
+      "quả": "Quả hình trứng hay hình cầu, khi chín thì nhẵn, vỏ quả mỏng; áo hạt nguyên vẹn hay bị tước cả đầu.",
+      "hạt": "Hạt có vỏ mỏng và nhẵn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt máu chó có 7-10% độ ẩm, 1,5-2% chất vô cơ, 24-28% chất béo, 8% chất protit, 4-5% chất đường, 22-26%tinh bột. Ngoài ra còn xenluloza và một số chất khác không xác định được và một số men invectaza, amylase vàphotphatase",
+      "dầu hạt máu chó": "Dầu hạt máu chó là màu đỏ sẫm, mùi hắc, rất nhầy, tỷ trọng ở 260 là 0,94, chỉ số khúc xạ ở 260 là1,483, chỉ số axit 90,2, chỉ số xà phòng 196,10, chỉ số iot 59,55, phần không xà phòng hóa được 1,14%.",
+      "Trong phần không xà phòng hóa được": "Trong phần không xà phòng hóa được có phytosterol và lecxitin"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt máu chó được nhân dân ta dùng làm chữa ghẻ.",
+      "làm thuốc": "Trước đây làng Tiên Hội (Bắc Ninh) chuyên môn sản xuất một loại thuốc ghẻ nổi tiếng gọi là thuốc ghẻ Tiên Hội. Cách chế biến như sau: giã chừng 100kg hạt máu chó, xẩy bỏ vỏ, lấy nhân giã nhuyễn, thêm muối đã rang thật khô chừng 10g trộn đều. Dùng chõ đồ như đồ xôi, dùng cây ép lấy dầu. Do cách ép thủ công, nên hiệu suất chừng 15-20% Khi dùng người ta tắm cho thật sạch, gãi cho nốt ghẻ chảy máu rồi bôi nguyên dầu đó hoặc cho thêm vào dầu một ít dầu long não cho có mùi thơm và thêm tính chất sát trùng. Cần bôi thật mỏng, nếu dùng nhiều quá, có thể mưng mủ nhiều hơn",
+      "cách dùng khác": "Còn một hình thức nữa dùng như sau: cân chừng 50g hạt máu chó, giã thật nhỏ, sấy bỏ vỏ, trộn với chừng 200ml rượu trắng (chừng 35-40%) đun sôi trên bếp than cho đến khi được một hỗn hợp sền sệt thì thôi. Rửa nốt ghẻ cho bong vẩy, bôi ngay dầu còn hơi nóng, bôi thật mỏng, ngày hôm sau lại tắm thật sạch bằng xà phòng, bôi lần nữa. Thường chỉ 3 lần là khỏi. Trị ghẻ ruồi rất công hiệu",
+      "chú thích": "Có nơi gọi hạt cây đại phong tử Hydnocarpus anthelmintica perre là hạt máu chó, cây này nhân dân tại nhiều vùng thường dùng chữa bệnh hủi."
+    },
+    {
+      "@type": "Cách dùng",
+      "thu hoạch": "Vào tháng 9-10 người ta thường thu hoạch hạt.",
+      "mô tả quả": "Quả máu chó khi còn non có màu xanh, lúc về già có màu vàng, để lâu vỏ nứt làm 2 mảnh, phía trong có hạt mang áo hạt. Khi quả còn non áo hạt màu hồng nhạt, dính sát vào hạt, khi già áo hạt màu đổ sẫm, bóc được dễ dàng.",
+      "cách dùng": "Người ta dùng nguyên cả hạt máu chó hay ép lấy dầu."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vọng cách",
+      "ten_khac": "Bọng cách, Cách",
+      "ten_khoa_hoc": "Premna serratifolia L.",
+      "ma_taxon": "369642",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mỏng hình dáng thay đổi, khi thì hình trứng, khi thì hình hơi bầu dục, đầu lá tù hoặc hơi nhọn, phía cuống hơi hình tròn, dài từ 10-16cm, rộng 5-6cm, có khi tới 10cm hay hơn; mép lá nguyên hay hơi khía tai bèo.",
+      "hoa": "Hoa nhiều, nhỏ màu xanh lục nhạt, mọc thành ngù ở đầu cành.",
+      "quả": "Quả hình trứng, màu đen nhạt, to bằng hạt đậu, xù xì, ở đầu hơi lõm, có 4 ngăn, mỗi ngăn chứa một hạt.",
+      "cây": "Vọng cách là một cây nhỏ có nhiều cành, đôi khi mọc leo, có khi có gai.",
+      "thân": "Toàn thân cây có mùi thơm dễ chịu, lá cũng có mùi thơm hơi hắc, rễ có vỏ hăng đắng, mùi thơm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chưa thấy tài liệu nghiên cứu Basu N.K và Dandiya P.C (1947) đã chiết được từ vỏ thân hai ancaloit gọi là premnin và ganiarin",
+      "gồm chất": "Trong rễ có tin dầu thơm và một chất màu vàng."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vọng cách chỉ mới thấy được dùng trong phạm vi kinh nghiệm nhân dân. Ngoài công dụng làm thuốc, lá vọng cách được nhân dân dùng ăn gỏi cá",
+      "làm thuốc": "Làm thuốc, lá vọng cách dùng chữa lỵ, thông tiểu tiện, giúp sự tiêu hoá. Rễ vọng cách chữa đau bụng, ăn uống không tiêu, chữa sốt",
+      "được_dùng": "Tại Ấn Độ, Indonexia lá vọng cách được dùng dưới dạng sắc uống chữa tê thấp, thấp khớp, lợi sữa cho phụ nữ mới sinh con. Mỗi ngày dùng 30-40g lá tươi hoặc 15-20g rễ",
+      "chữa": "Chữa kiết: lá vọng cách tươi (30-40g) rửa sạch, vò nát thêm ít nước lã đun sôi để nguội, khuấy đều. Vắt lấy nước thêm tí đường cho ngọt mà uống. ngày uống một chén 30-40ml, trẻ em dùng nửa liều. có thể hái phơi khô hay sao vàng sắc uống (kinh nghiệm dân gian)"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây vọng cách mọc hoang khắp nơi ở Việt nam và các nước Lào, Campuchia. Còn thấy mọc ở Mangat, Ấn Độ, Indonexia, Philipin và Châu Úc.",
+      "làm thuốc": "Thường người ta hái lá quanh năm, có nơi dùng cả vỏ thân, rễ hái về rửa sạch, phơi hay sấy khô hoặc sao vàng mà dùng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

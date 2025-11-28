@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trạng nguyên",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Euphorbia pulcherrima Willd. ex Klotzsch",
+      "ma_taxon": "162845",
+      "ho": "Thầu dầu (Euphorbiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2 – 3m hay hơn, có nhựa mủ trắng.",
+      "lá": "Lá mọc so le, hình bầu dục – mũi mác, dài 9 – 12 cm, rộng 6 – 9 cm, gốc hơi thuôn, đầu nhọn, mép chia 2 – 3 thuỳ nở không đều, mặt trên nhẵn, mặt dưới có lông ngắn; cuống lá dài 3 cm; lá kèm không rõ.",
+      "hoa": "Cụm hoa dạng ngủ ở ngọn, xung quanh có những lá hình mũi mác nguyên, nhọn ở hai đầu dài 4 – 15 cm, rộng 1,5 – 6 cm, màu đỏ tươi; tổng bao có cuống ngắn, hình chuông, một số chứa hoa đực, số khác chứa cả hai loại hoa, nhẫn ở mặt ngoài, 10 thuỳ hình bầu dục, 1 tuyến hình phễu có 2 mỗi hoặc không có tuyến, nhị nhiều, chỉ nhị phân nhánh, bầu có lông, nhụy có cuống dài.",
+      "quả": "Quả ít gặp."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Euphorbia L. là một chi lớn, riêng ở Việt Nam. đã biết có 26 loài (Nguyễn Nghĩa Thìn, 2003). Loài trạng nguyên trên đây có nguồn gốc từ Trung Mỹ, sau được du nhập trong khắp các vùng nhiệt đới trên thế giới, trong đó có Việt Nam.",
+      "Đặc điểm sinh trưởng": "Trạng nguyên là loại cây bụi đặc biệt ưa sáng, chịu được hạn và chịu được thời tiết khô nóng.",
+      "thường_mọc": "Toàn cây."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa các chất 9, 19 – cycloart – 23 – en – 38. Cây càng được chiếu sáng đầy đủ, càng ra hoa và số lá bắc có màu đỏ (tưởng là hoa) cũng diol: cả 2 chất này đều có độc tính với tế bào [CA 125, 1996: 308793 m]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Trạng nguyên có vị đắng, chát, tính mát, có ít tác dụng độc. Có tác dụng điều kinh, cầm máu, làm liền xương, tiêu thũng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Vân Nam (Trung Quốc) trạng nguyên dùng chữa kinh nguyệt quá nhiều, đòn ngã tổn thương, ngoại thương xuất huyết và gãy xương.",
+      "được_dùng": "Dân gian thường dùng cành non và lá giã nát làm thuốc đắp trị rắn rết cắn, các vết đứt và cả các vết thương khác. Cũng dùng uống chữa viêm ruột mạn tính (Võ Văn Chi, 1997)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

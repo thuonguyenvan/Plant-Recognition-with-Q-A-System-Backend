@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/mung-thom.html",
+      "ten": "Mùng thơm",
+      "ten_khac": "Dọc mùng, mùng thơm, ráy bạc hà, dã vu.",
+      "ten_khoa_hoc": "Alocasia odora (Roxb.) C. Koch",
+      "ma_taxon": "362126",
+      "ho": "Ráy (Araceae)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo nhỏ, có thân rễ, sống nhiều năm, cao 0,5 – 1,5m.",
+        "lá": "Lá mọc tụ tập thành tím dày ở ngọn thân, hình bầu dục – mũi mác, gốc hình tim, đầu nhọn, mép lượn sóng, hai mặt nhẵn, gần như cùng màu; cuống lá mập, có bẹ ôm thân.",
+        "hoa": "Cụm hoa là một bông mo có phần ống hình trứng thuôn, phần phiến phía trên có màu lục hoặc vàng lục, hơi uốn cong, sớm rụng. Phần trục mang hoa cái ngắn 2 – 2,5 cm; phần không sinh sản dài hơn, tiếp theo là phần mang hoa đực dài 3 cm, phần cuối trục hình nón hẹp, phình ở gốc, dài hơn phần mang hoa đực.",
+        "quả": "Quả mọng, hình trứng nhẵn."
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Alocasia (Schott) G.Don trên thế giới có tổng số 73 loài, Việt Nam có 6 loài. Loài mùng thơm trên cũng thường gọi là dọc mùng, hiện chưa rõ về nguồn gốc nhưng là cây trồng khá phổ biến làm rau ăn (cuống lá) ở Việt Nam cũng như một số quốc gia nhiệt đới Đông Nam Á khác. Ở nước ta, cây được trồng ở hầu như tất cả các tỉnh, trừ vùng núi cao lạnh (trên 1.500 m).",
+        "Đặc điểm sinh trưởng": "Mùng thơm là cây ưa ẩm, hơi chịu bóng và không chịu được ngập nước. Cây thường được trồng ở vườn gia đình, bờ ao và đôi khi cũng được trồng ở ruộng nhưng ở quanh làng có thể được che bóng một phần trong ngày. Đó là loại cây trồng lấy dọc (cuống lá) thường xuyên nên rất hiếm khi thấy có hoa quả. Nguồn cây giống để trồng là những nhánh con. Đất trồng mùng thơm cần luôn ẩm. Cây giống là các nhánh con tách ra từ cây mẹ, đã cắt bỏ bớt lá."
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lá, củ và thân."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "dấu hiệu đặc trưng": "Sự có mặt của acid oxalic là dấu hiệu đặc trưng của tất cả các loài thuộc chi Alocasia. Trong cây thường tồn tại dưới dạng calci oxalat.",
+        "gồm chất": "Ngoài ra còn có đường, saponin (Mayo et al., 1997) procyanidin, c – glycosylflavon (Williams et al., 1981) anthocyanidin – 3 – rutinosid, flovenol quercetin, kaempferol… và flavon – C – glycosid (Williams et al., 1981) đã được tìm thấy trong tất cả các loài thuộc chi này."
+      },
+      "Tính vị": {
+        "@type": "Tính vị",
+        "Có vị": "Rễ củ mùng thơm vị nhạt, tính hàn, có độc, ăn vào gây ngứa, đau, tê ở vùng miệng và cổ họng, có công năng giải nhiệt, công độc, khu phong.  Ở Trung Quốc, sách “Tân hoa bản thảo cương yếu” và “Toàn quốc trung thảo dược hội biên” đều ghi: thân rễ mùng thơm vị hơi cay, chát, tính hàn, có độc; có công năng thanh nhiệt, giải nhiệt, tiêu thũng [TDTH, 1997, III: 281]."
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Củ mùng thơm, mài ra, bỏ vào miệng cho người bị kinh phong đờm rãi, nhất là trẻ em, sẽ làm giảm đờm (theo lương y Nguyễn Trung Hòa, Việt Nam).  Để chữa ngứa, tấy do lá han (Dendrocnide urentissima Chew), lấy củ, cắt ra, trà xát nhẹ vào chỗ ngứa. Còn dùng làm thuốc chữa mụn nhọt, ghẻ, sưng bàn tay, bàn chân.  Cuống lá mùng thơm có thể được dùng làm rau thái ra, ăn sống, hoặc nấu với canh chua.  Ở Trung Quốc, thân rễ mùng thơm được dùng chữa cảm cúm, sốt rét (ở Quảng Tây), thương hàn, phối kết hạch, viêm khớp, phong thấp. Ngày dùng 10 – 20g hoặc 30 – 60g tươi, sắc thật kỹ rồi uống. Cần sắc kỹ để giảm độc. Dùng ngoài, chữa trùng và giảo thương (rắn và côn trùng đốt cắn), sang loét thũng độc; lấy thân rễ tươi, rửa sạch, giã nát, đắp lên chỗ tổn thương và đau, không đắp lên chỗ da lành vì độc.  Bài thuốc có mùng thơm  Cao dán chữa mụn nhọt: Lấy thân rễ mùng thơm tươi (có thể dùng củ ráy cũng được) nặng khoảng 80 – 100g, nghệ củ tươi khoảng 60g. Gọt sạch vỏ thân rễ mùng thơm và cạo sạch vỏ nghệ. Giã nát thật kỹ mùng thơm với nghệ. Thêm dầu vừng vào, nấu thật nhừ. Sau đó, thêm dầu thông và sáp ong vào vừa đủ, khuấy cho thật đều. Để nguội. Phết cao lên giấy bản. Khi dùng chỉ cần dán cao vào nơi mụn nhọt. Nếu nhọt mới mang đỏ thường tan. Nếu đã có mủ, cao có tác dụng hút mủ."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": null
+      },
+      "luu_y": {
+        "@type": "luu_y",
+        "luu_y": "Mùng thơm có độc, uống dịch sắc chưa kỹ hoặc liều cao có thể bị ngộ độc, biểu hiện bằng lưỡi, miệng tế, sưng, đau, ngộ độc thần kinh. Để giải độc, có thể dùng giấm gạo hoặc gừng tươi ngậm rồi nhổ đi. Thân rễ mùng thơm khi tiếp xúc với da, dễ xuất hiện phản ứng ngứa, tê, sưng tấy."
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gáo tròn",
+      "ten_khac": "Thuỷ dương mai, gáo vàng, gáo viên.",
+      "ten_khoa_hoc": "Adina pilulifera (Lamk.) Franch. ex Drake",
+      "ma_taxon": "556248",
+      "ho": "Cà phê (Rubiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, hình giáo, gốc thuôn, đầu tù hơi nhọn, có khi lõm, mép nguyên lượn sóng, mặt trên màu lục sẫm bóng, mặt dưới nhạt, là kèm nhỏ khía thành hai thuỷ nhọn.",
+      "hoa": "hoa nhiều màu trắng, đài có 4 – 5 răng thuôn tù; tràng hình ống, có 4 – 5 cánh nhẵn; nhị 4 – 5, đính ở họng tràng, chỉ nhị rất ngắn, bao phấn hình dải: bầu có 2 ô, mỗi ô 4 noãn.",
+      "quả": "Quả nang, hình nêm, khi khô mở theo hai khe dài ở gốc; hạt nhỏ, gốc thuôn, đầu xẻ đôi.",
+      "cây": "Cây bụi nhỏ, cao 3 – 4m, có khi hơn. Cành mảnh có nhiều lỗ bì, màu xám.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 8 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Adina Salisb. ở Việt Nam có 4 loài. Loài gáo tròn trên hiện mới ghi nhận được về phân bố một số tỉnh miền núi từ miền Trung trở ra, bao gồm Lào Cai (Sa Pa), Ninh Bình, Nghệ An, Hà Tĩnh và Thừa Thiên – Huế. Trên thế giới, loài này có ở Trung Quốc và Nhật Bản [Danh lục các loài thực vật Việt Nam, III, 2005].",
+      "thường_mọc": "Gáo tròn thuộc loại cây bụi hoặc gỗ nhỏ, trung sinh; thường mọc rải rác ở rừng thí sinh, nhất là nơi cửa rừng, dọc theo các bờ khe suối. Cây ra hoa quả hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Gỗ của loài cây này khá dai, nên thường được khai thác để làm nông cụ hoặc trong các xây dựng nhỏ, như làm bếp, làm chuồng gia súc,…"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ cây chứa 7 – 9% tanin và 0,09% adinin là một sắc tố màu vàng. Theo Phạm Hoàng Hộ (2006), gáo tròn có chứa acid betulinic là chất có tác dụng chống ung thư."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Gáo tròn vị đắng chát, tính mát, có công năng thanh nhiệt, giải độc, tán ứ, tiêu sưng viêm, ngừng tả lỵ, giảm đau. Tài liệu Trung Quốc [Chang, 1992: 61] ghi: Gáo tròn vị cay, tính ấm, mùi thơm, không độc; còn sách “Thường dụng Trung thảo dược thủ sách” ghi: gáo tròn vị ngọt chát, tính mát, có công năng thanh nhiệt giải độc, lợi thấp, hành ứ, tiêu thũng [TDTH, 1993, I: 976]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ cây gáo tròn được dùng trị cảm mạo, sốt cao, viêm nhiễm đường hô hấp trên, viêm họng, viêm tuyến mang tai. Hoa và quà dùng trị lỵ, viêm dạ dày, ruột cấp tính.  Lá được dùng trị đón ngã tổn thương, mụn nhọt, eczema. Liều dùng rễ 15 – 30g, hoa và quả non 10 – 15g. có thể dùng toàn cây 30g. Dùng ngoài, lấy lá tươi rửa sạch, giã nát, đắp lên chỗ tổn thương.  Để chữa cảm sốt, viêm đường hô hấp trên, sưng quai bị, dùng rễ cây 15 – 30g hoặc toàn cây 30 g sắc lấy nước uống, ngày 1 thang.  Để chữa kiết lỵ, viêm ruột, ta chảy, dùng 10 – 15g hoa, quả non sắc uống.  Để chữa đụng giập, đòn ngã tổn thương, đau nhức, mụn nhọt, eczema, dùng lá tươi 20 – 30g sắc uống; kết hợp lấy lá tươi, giã nát, đắp lên chỗ tổn thương.  Sách “Trung dược từ điển” còn giải thích: gáo tròn là thuốc hội khỉ và bổ thận, nên còn được chỉ định chữa chóng mặt hoa mắt, chân tay mỏi rã, di mộng tinh, bất lực. Một tài liệu khác của Trung Quốc [Chang, 1992: 62] ghi: toàn cây và rễ gạo tròn có tác dụng cải thiện được trí não, làm ấm và làm mình thân kinh, mạnh tim và dạ dày, có tác dụng làm dịu sự co thắt cơ trơn nên có hiệu quả trong điều trị la chảy kéo dài, hội chứng suy kiệt do kiết lỵ; các hội chứng mất máu nhiều như ta ra máu, băng huyết, bệnh bạch cầu, nôn ra huyết. Ngoài ra, còn có tác dụng trừ phong nên được dùng chữa sốt, thoát vị, phong thấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa ung thư gan, ung thư dạ dày:  Toàn cây (cả rễ) gáo tròn 120g, toàn cây cỏ seo gà (Pteris multifida Poir.). Sắc lấy nước uống, ngày 1 thang [Chang, 1992: 61].  Chữa u lympho:  Toàn cây gáo tròn (cả rễ), rửa sạch, phơi khô, nghiền thành bột mịn, chế thành viên tròn với mật ong, mỗi ngày uống 1,5 – 3g, uống liền hàng năm, hoặc toàn cây cả rễ gáo tròn 30g, ngâm với 400ml rượu được 10 ngày trở lên, uống mỗi lần 1 thìa canh (15ml); ngày 3 lần, uống liên tục nhiều ngày, hoặc toàn cây cả rễ gáo tròn 45g, sắc với 500ml để còn 250ml, uống mỗi lần 1 thìa canh, cứ nửa giờ 1 lần cho đến hết.  Chữa ung thư đường tiêu hoá:  Rễ gáo tròn 30g, toàn cây Solanum glaba 30g, toàn cây Salvia chinensis 30g, mộc hương (Aucklandia lappa Decie) 9g. Sắc uống ngày 1 thang. Uống nhiều ngày [Charg, 1992: 61]."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

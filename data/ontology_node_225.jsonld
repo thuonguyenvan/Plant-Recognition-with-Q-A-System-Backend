@@ -1,0 +1,254 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây ký ninh",
+      "ten_khac": "Dây cóc, Dây thông, Dây cự hành, Khua cao ho ( Lào ).",
+      "ten_khoa_hoc": "Tinospora crispa (L) Miers.",
+      "ma_taxon": "344276",
+      "ho": "Menispermaceae ( Tiết dê )",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thân leo.",
+        "thân": "Thân cây có màu nâu, có các nốt sần.",
+        "lá": "Lá dày, có hình trứng hoặc hình thuôn, lá có kích thước lớn, dài khoảng 5-8 cm, rộng 6-10 cm, lá mọc so le.",
+        "cuống": "Cuống lá dài từ 2-5 cm , có màu sáng.",
+        "hoa": "Cụm hoa mọc thành 1-2 chùm tại các nách lá.",
+        "quả": "Quả dài từ 7-8mm, khi chín có màu đỏ, có 1 hạt dẹt.",
+        "mùa hoa": "tháng 6-7",
+        "mọc": "Ở Việt Nam, rất dễ nhầm lẫn dây ký ninh với dây thần nông (Tinospora cordifolia Miers) có đặc điểm rất giống nhau khác ở thân ít sần hơn và lá của dây thần nông tròn hình trái tim hơn."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Dây ký ninh được tìm thấy trong rừng nhiệt đới và rừng rụng lá hỗn hợp ở Châu Á và Châu Phi",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tây"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Vĩnh Phúc"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Phú Thọ"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Cây thường mọc lẫn trong các lùm bụi gần bờ suối , ở ven rừng, bờ nương rẫy và quanh làng bản."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Các nghiên cứu khoa học đã chứng minh rằng có nhiều công dụng y học cổ truyền được đánh giá bởi các nghiên cứu dược lý hiện đại  Kongsaktrakoon và cộng sự năm 1984 nghiên cứu đưa ra kết quả nước sắc từ thân cây Dây ký ninh được sử dụng như một loại thuốc hạ sốt, điều trị viêm bên trong, giảm khát, tăng cường cảm giác đói, hạ nhiệt độ cơ thể và duy trì sức khỏe Năm 2006 Li và cộng sự Dây ký ninh đã được sử dụng thông thường để chống lại nhiều loại bệnh tật bởi các cộng đồng Yao của Trung Quốc. Họ sử dụng nó để điều trị vết bầm tím, nhiễm trùng huyết, sốt, gãy xương, ghẻ và các rối loạn liên quan đến loét nhiệt . Dịch truyền từ thân cây được sử dụng như một chất pha trà. Trao đổi với các nhà y học cổ truyền địa phương đã nêu bật công dụng phổ biến của nó như một loại thuốc bổ nói chung. Hơn nữa, nó được sử dụng như một chất chống ký sinh trùng ở cả người và vật nuôi ( Noor et al., 1989).  Tác dụng chống tiểu đường  Noor và Ashcroft (1998) chỉ ra rằng chiết xuất dây kí ninh dùng đường uống cho thấy tác dụng hạ đường huyết đáng kể. Dịch chiết có thể bao gồm các hợp chất bắt đầu bài tiết insulin bằng cách điều chỉnh nồng độ Ca2 + của tế bào β . Do đó, nó có thể được sử dụng bổ sung như một chất chống đái tháo đường để điều trị bệnh tiểu đường loại II. Sriyapai và cộng sự (2009) đã nghiên cứu bột khô của Dây kí sinh tác dụng hạ đường huyết đối với bệnh nhân bị hội chứng chuyển hóa. Uống 250 mg bột khô hai lần mỗi ngày làm giảm đáng kể đường huyết lúc đói so với ban đầu.  Hoạt tính chống oxi hóa  Amom et al năm  2008 ; Zulkhairi và cộng sự năm 2009, chiết xuất thô trong nước của thân cây được phát hiện có hoạt tính  chống oxy hóa cao và hiệu lực chống oxy hóa của nó tương đương với các chất chống oxy hóa đã được thiết lập trước đây như BHT và vitamin C. Năm 2011 Foroemming đã thử nghiệm chống oxy hóa và cho thấy chiết xuất methanol của Dây ký ninh thể hiện hoạt tính chống oxy hóa cao nhất được xác định bằng cách đo tổng hàm lượng flavonoid, tổng hàm lượng phenolic và hoạt động thu gom gốc tự do DPPH. Hoạt động chống oxy hóa có thể có tầm quan trọng điều trị trong việc ngăn ngừa stress oxy hóa liên quan đến sự phát triển của một số bệnh bao gồm cả rối loạn tim mạch và thần kinh."
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Thân cây  Thu hái: Thu hoạch quanh năm, thu hái và cắt thành từng đoạn ngắn chừng 0.5-1 cm, phơi hoặc sấy khô.  Cách trồng: Cây được nhân giống rất dễ dàng bằng cách giâm cành. Vào mùa xuân, chọn cành bánh tẻ không sâu bệnh, cắt thành đoạn 15-20cm để làm giống.Chọn đất trồng ẩm, nhiều mùn cạnh cây lưu niên, bụi tre, bờ rao để lấy cho leo cho cây.Hoặc làm giàn cho cây,"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Thân cây của Dây ký ninh chứa alkaloid . Trong một số nghiên cứu, alkaloid đó là chất berberin. Còn theo Beauquesne thì đó là chất palmatin. Tỷ lệ alkaloid chiếm khoảng 0,10% do với thân khô.  Ngoài ra, L. Benauquensne xác định được trong Dây ký ninh một số chất đắng chiếm tỷ lệ 0.60%- 0,80% so với thân khô. Chất đắng này được xác định là một glucozit không có tinh thể , khó phân hủy bằng axit.  Rễ cây nhiều tác giả nghiên cứu và chiết xuất ra được chất anmcaloit becberin, chất đắng columbin ( khoảng 2,20%) và chất picroretin."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Cây tươi có chất nhựa nhầy, vị rất đắng, tính mát."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Dây ký ninh được dùng chữa sốt rét, cảm cúm , phát ban, ho, làm thuốc đắng giúp tiêu hóa, tiêu mụn nhọt, đắp vết thương, trị ghẻ.  Dây ký ninh sử dụng dưới dạng cao, bột, viên  Dạng viên : Ngày uống 0,5-1g cao dùng để trị sốt rét Bột thân cây : Ngày uống 2-3g bột thuốc , 4-8g rượu thuốc  Ngoài công dụng trên dây ký ninh còn dùng nấu nước rửa mụn nhọt, vết thương hoặc sắc đặc để bôi ghẻ."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "Ở Việt Nam, Dây ký ninh được sử dụng rất nhiều và rộng rãi trong các bài thuốc chữa bệnh  Chữa sốt:  Sài hồ 12g, địa long (sao gừng) 12g, thường sơn sao rượu 16g, dây ký ninh 12g, muồng trâu 12g, thảo quả 8g, binh lang 8g, trần bì 8g, rễ bá bệnh 8g, bán hạ chế 8g. Các vị cho vào 600ml nước, sắc lấy 200ml nước thuốc, uống ngày 1 tháng. Thân rễ dây ký ninh, thân rễ củ gấu và gừng khô, mỗi vị 5g. Sắc với nước uống trong ngày, trong 4 – 5 ngày. Thân cây của dây ký ninh trộn lẫn với vỏ thân của cây tra nhỏ (Thespesia lampas) và lá xuyên tâm liên được dùng dưới dạng thuốc sắc để chữa sốt rét.  Chữa sỏi thận:  Dây thần thông, nhọ nồi, nhục đậu khấu, mỗi vị 100mg, và một số thành phần dược thảo khác.  Dùng điều trị hiệu quả bệnh sỏi thận và các biến chứng khác nhau mà không có tác dụng phụ.  Theo y học cổ truyền, dây ký ninh có tác dụng hạ nhiệt , tiều đờm,.. là vị thuốc ứng dụng để điều trị bệnh lý sốt ho rất hiệu quả.  Sản phẩm chứa thành phần Dây ký ninh trên thị trường hiện nay  Sản phẩm Ký Xuyên Ninh Tuệ Linh"
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

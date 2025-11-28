@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng đằng",
+      "ten_khac": "Hoàng đằng, Dây vàng giang, Nam hoàng nhuộm, Hoàng liên nam, Khau khem (Tày), Tốt choọc, Trơng (Kdong), Co lạc khem (Thái), Viằng tằng (Dao)",
+      "ten_khoa_hoc": "Fibraurea tinctoria Lour.",
+      "ma_taxon": "343808",
+      "ho": "Menispermaceae (Tiết dê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Có tác giả gộp 2 cây hoàng đằng Fibraurea tinctoria và Fibraurea recisa làm một loài; nhưng có tác giả phân thành hai loài khác nhau:  Cây hoàng đằng Fibraurea recisa là một loại cây mọc\u00a0leo, thân rất cứng to. Lá mọc so le, dài 9-20cm, rộng 4-10cm, cứng, nhẵn phiến lá hình ba cạnh dài, phía dưới tròn, có ba gân chính rõ và hai gân cong; cuống dài 5-14cm có hai nốt phình lên, một ở phía dưới, một ở phía trên. Hoa mọc thành chùy, 2-3 lần phân nhánh, dài 30-40cm kẽ các lá đã rụng. Cây Fibrurea tinctoria theo các tác giả chia làm hai loài thì khác cây trên ở chỗ lá nhọn, chùy hai đến bốn lần ngắn hơn, chỉ phân nhánh hai lần thôi."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hoàng đằng chủ yếu là panmatin với tỷ lệ 1-3%. Ngoài ra còn có một ít jatrorrhizin, columbamin Theo Irokawa và cộng sự (Phytochemistry, 28, 4, 905-908, 1986) còn phát hiện 3 diterpenglycosit là tenophylloloside 3, fibleucinoside 4 và fibleucinoside 5. Trước đó một số tác giả đã phát hiện 2 diterpen khác nhau là fibleucine 1 và 2"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo Phạm Duy Mai và cộng sự thì panmitin clorua chỉ có tác dụng ức chế đối với vi trùng Staphylococcus và Streptococcus, còn đối với các loại vi trùng khác (lỵ, thương hàn…) thì không thấy có kết quả rõ rệt. tác dụng ức chế vi trùng của panmatin clorua kém các loại kháng sinh thông thường(1962).  Liều độc DL-50 trên chuột nhắt trắng (tiêm mạch) là 18mg/kg thể trọng. DL-50 uống đối với chuột nhắt trắng là 571,5mg/kg . Đến năm 1968 thí nghiệm lại, Phạm Duy Mai lại thấy DL-50 uống đối với chuột nhắt trắng lên tới 1.260mg/kg.  Năm 1973, chúng tôi tìm thấy liều tác dụng trên người là 2,4-8mg/kg. Như vậy so với liều DL-50 của Phạm Duy Mai đã có mức độ an toàn từ 500-1.660 lần (Đỗ Tất Lợi và cộng sự, Dược học, 3-1974)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ngày dùng 6-12g sắc uống và nấu nước rửa ngoài. Còn dùng dưới dạng thuốc bột, thuốc viên hay thuốc nhỏ mắt.",
+      "làm thuốc": "Kiêng kỵ:  Tỳ Vị hư hàn, huyết lạnh không dùng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

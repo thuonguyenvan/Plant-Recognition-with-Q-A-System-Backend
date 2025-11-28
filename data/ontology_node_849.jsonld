@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quả mơ",
+      "ten_khac": "Mơ, Hạnh, Mai, Má pheng (Thái), Mạy phung, Mác mòi (Tày)",
+      "ten_khoa_hoc": "Prunus armeniaca L.",
+      "ma_taxon": "135331",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây mơ là một loại cây nhỏ, cao chừng 4-5m.",
+      "lá": "Lá mọc so le, có cuống phiến lá hình bầu dục, nhọn ở đầu, mép lá có răng cưa nhỏ.",
+      "hoa": "Cuối mùa đông ra hoa có 5 sắc trắng hoặc màu hồng, mùi thơm.",
+      "quả": "Quả chín vào tháng 3-4. Đây là một quả hạch, hình cầu, màu vàng xanh: Có nhiều thịt trong có một hạt.",
+      "mọc": "Ngoài cây mơ nói ở đây, tại một số tỉnh miền Bắc có loài song mai, mỗi đốt mọc 2 quả được coi là quí hơn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong thịt quả mơ có chừng 2,5% axit trong đó chủ yếu gồm axit xitric, axit tactric, độ 27% chất đường (chủ yếu là sacaroza), một ít dextrin, tinh bột, quexetin, izoquexetin, caroten, lycopen, vitamin C, tanin, pectin, metylsalixylat, men peroxydaza và ureaza.",
+      "triết xuất": "Nãm 1968, từ quả mơ, người ta chiết được một chất có tác dụng đối với vi trùng lao Mycobacterium tuberculosis. Tác dụng này có liên quan đến sự có mặt của axit xitric và malic (Chemical abstract, 1968. 69-686C).",
+      "chứa": "Nhân hạt mơ chứa 35-40% chất dầu (gọi là dầu hạnh nhân) và 3% chất amygdalin C20H27O11 và men emunsin.",
+      "gồm chất": "Men Emunsin gồm 2 men là men amydalaza và men prunaza. Amygdalin chịu tác dụng của men emunsin cho axit xyanhydric, anđehyt benzoic hay benzandehyt và glucoza.",
+      "tìm thấy": "Năm 1951, người ta phát hiện trong dung dịch hạt mơ một chất axit được đặt tên là axit pangamic. về sau người ta xác định axit pangamic chính là vitamin B-15 được phát hiện lần đầu tiên vào năm 1950 trong gan bò. Vitamin B-1S có trong nhân hạt mơ với một tỷ lộ khá cao. Người ta còn chiết được vitamin B-15 trong mầm thóc và trong cám gạo, men bia, máu bò và gan ngựa.",
+      "các hoạt chất": "Vitamin B-15 có tác dụng kích thích quá trình chuyển hoá oxy trong tế bào làm cho tế bào chóng hồi phục và làm cho cơ thể chậm già. Hiện nay vitamin B-15 được dùng trong những bệnh về tim, phổi (nhồi máu cơ tim, tràn khí phổi, vữa động mạch), viêm gan và xơ gan trong giai đoạn đầu… Cấu trúc của axit pangamic hay vitamin B-15 đã được xác định là este của axit gluconic và dimetylglyxin.",
+      "dấu hiệu đặc trưng": "Dầu hạt mơ hay dầu hạnh nhân có tỷ trọng 0,91-0,92, chỉ số xà phòng 188-198, chỉ số iôt 100-108. Thành phần chủ yếu của dầu hạt mơ là axit oleic và axit lilioleic."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước cất hạt mơ có độc, dùng phải cẩn thận. Dùng để chữa ho, khó thở, nôn mửa, đau dạ dày. Mỗi lần dùng 0,5 đến 2ml. Cả ngày có thể dùng 2 đến 6ml. Liều tối đa một lần 2ml. Liều tối đa cả ngày là 6ml.",
+      "làm thuốc": "Ô mai được dùng trong nhân dân làm thuốc chữa ho, trừ đờm, hen suyễn, khó thở, phù thũng. Ngậm hoặc sắc uống.Ngày uống từ 3 đến 6g. Còn dùng chữa giun (phối hợp với các vị thuốc khác) đặc biệt trong trường hợp giun chui ống mật, ô mai có tác dụng do môi trường axit làm cho giun chui khỏi ống mật trở về ruột và bị tống ra. Ô mai còn dùng chữa chai chân, làm rụng trĩ.",
+      "có tác dụng": "Dầu hạt mơ làm thuốc bổ, thuốc nhuận tràng với liều 5-15ml dùng dưới hình thức thuốc sữa. Dầu hạt mơ còn dùng làm thuốc bôi trừ nẻ, bôi tóc cho trơn và bóng.",
+      "được_dùng": "Rượu mơ dùng làm rượu bổ giúp cho ăn ngon cơm, đỡ khát nước. Có thể pha nước uống giải khát. Ngày uống 30-60ml.",
+      "chữa": "Đơn thuốc có mơ và ô mai  Chữa kiết lỵ khát nước: Ô mai 2-3 quả, thêm nước vào đun sôi giữ sôi 15 phút. Dùng uống thay nước trong ngày. Chữa giun chui ra mồm, mũi: Ô mai hai quả, thêm 300ml nước, đun sôi giữ sôi 15 phút, thêm đường vào cho vừa đủ ngọt, cho uống vào buổi tối trước khi đi ngủ. Chữa băng huyết: Ô mai 7 quả, thiêu tồn tính, tán nhỏ, chia làm ba lần uống trong ngày. Dùng nước cơm để chiêu thuốc."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Mọc hoang và được trồng nhiều nhất ở Hà Tây (vùng chùa Hương, thuộc huyện Mỹ Đức), Nam Định, Hà Nam (huyện Kim Bảng), Thanh Hóa, Nghệ An, Hà Tĩnh cũng có. Còn mọc ở Acmênia, Trung Quốc, Nhật Bản.",
+      "quả": "Quả mơ hái vào tháng 3-4 (tháng 2-3 âm lịch), khi quả mơ chín (vỏ vàng ) hái về tãi mỏng. Tùy theo chế mơ trắng (bạch mai) hay mơ đen (ô mai) cách chế biến khác nhau.",
+      "phơi khô": "Chế bạch mai hay diêm mai. Khi quả mơ phơi đã héo, thì dùng muối xát đều, sau đó bỏ vào vại sành muối như muối cà (không đổ nước), muối 3 ngày 3 đêm thì vớt ra, phơi cho tái, rồi lại cho vào vại muối lần thứ hai, thêm một ngày một đêm nữa, rồi phơi cho thật khô. Muối thấm vào quả mơ kết tinh thành một lớp trăng trắng nên gọi là bạch mơ (bạch = trắng), ta còn gọi là ô mai muối mặc dầu chữ ô mai dùng ở đây không đúng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cậy",
+      "ten_khac": "Cậy",
+      "ten_khoa_hoc": "Diospyros lotus L.",
+      "ma_taxon": "83445",
+      "ho": "Thị (Ebenaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, thân có vỏ đen, cành non có lông.",
+      "lá": "Lá mọc so le, hình trứng, gốc và đầu thuôn, mặt trên sẫm nhẵn, mặt dưới nhạt có lông.",
+      "hoa": "Hoa mọc ở kẽ lá, màu vàng, đực và cái riêng; hoa đực có 16 nhị dính nhau từng đôi; hoa cái có 8 nhị lép. bầu nhẵn trừ ở đỉnh, có 8 ô.",
+      "quả": "Quả hình trứng, không cuống, đường kính 1-2cm, màu lục nhạt, đài tồn tại có mép gập lại.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 7 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây cậy có ở Lào, Nam Trung Quốc và Việt Nam. Ở Việt Nam, cây thường được trồng ở một tỉnh trung du như Thái Nguyên, Phú Thọ, Vĩnh Phúc, đế lấy quả ăn, đôi khi cũng gặp cây mọc tự nhiên trong các quần xã rừng. Cậy thuộc loại cây gỗ nhỏ, ưa sáng hoặc có thể hơi chịu bóng. Cây trồng ở vườn thường sinh trưởng phát triển nhanh, sau 5 – 6 năm bắt đầu có hoa quả. Bên cạnh việc gieo giống từ hạt, chồi rễ cũng được sử dụng làm cây con để trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, lá và vỏ thân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả cậy chứa acid tanic, acid malic 0,38% (bảo quản quả chưa chín với ethylen trong 72 giờ, hàm lượng tanin bị giảm). Đường 11,25%, flavonoid myricitrin 0.15% (The Wealth of India vol III, 1952. 81, Võ Văn Chi TĐCTVN. 1999, 206): leucodelphinidin, 7 methylljugilon, mamegakinon, isodiospyrin và biisodiospyrin (TDTH. II, 248). Quả cậy còn có các acid phenolic như Salicylic, 4 hydroxy benzoic, vanillic, genistic, 3.4. dihydroxy benzoic, Syringic, p. coumaric và acid gallic. Hàm lượng các acid phenolic trừ acid galic tăng lên trong tháng 11 và cao nhất vào cuối tháng. Sau đó, giảm xuống nhanh chóng. Quả cậy, thu hái vào các tháng 6 – 10, có hàm lượng acid thấp hơn nhiều khi thu quả vào cuối tháng 11. Acid galic, salicylic và vanilic trội hơn trong tất cả các giai đoạn sinh trưởng của cây (CA. 127, 1997. 15505h)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả cậy có vị ngọt, chát, tính mát, có tác dụng chống tâm phiền bất an, tiêu khát, hạ sốt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả cậy phơi khô được dùng để ăn và làm thuốc giải nhiệt, tiêu khát, chống phiền nhiệt bất an, trị táo bón, lỵ và thúc đẩy sự bài tiết. Ngày 15 – 30g quả khô sắc uống hoặc dùng 60g quả tươi, nghiền nát, ép lấy nước uống. Dùng ngoài, lá hoặc vỏ thân trị lở loét, chảy máu.",
+      "chữa": "lỵ: quả cậy 30g, tần bì 9g, sắc uống (tần bì là vỏ cây tần cửu Justicia gendarussa L., họ ô rô . Acanthaceae).",
+      "chữa": "vết thương chảy máu: Vỏ thân cây cậy 2 phần, long cốt 1 phần. Vỏ cậy sao khô, nghiền thành bột mịn, long cốt (xương hóa thạch của một số động vật thời cổ như voi ma mút, tê giác, lợn rừng) nghiền thành bột mịn. Trộn đều, rắc tại chỗ rồi băng. Nguồn: Cây thuốc và động vật làm thuốc Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

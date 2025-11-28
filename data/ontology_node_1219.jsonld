@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thảo đậu khấu",
+      "ten_khac": "Thảo khấu nhân, ngẫu tử, thảo đậu khấu",
+      "ten_khoa_hoc": "Alpinia hainanensis K. Schum.",
+      "ma_taxon": "363313",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Thảo đậu khấu là một loại cỏ sống lâu năm cao 1 – 2m.",
+      "rễ": "Thân rể màu nâu đỏ.",
+      "lá": "Lá mọc so le, hình mác, dài 30-55cm, rộng 2-9cm.",
+      "hoa": "Cụm hoa hình chùm, dài 30cm, ở đầu cành. Hoa màu trắng, hình ống, dài 1-2cm, trong có đốm màu tím đỏ nhạt.",
+      "quả": "Quả hình cầu đường kính 3,5cm, còn đài tổn tại, khi chín có màu vàng."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong thảo đậu khấu có chừng 4% tinh dầu mùi long não (theo Wehmer, 1929., Die pflanzenstoffe Bd.: 182)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thảo đậu khấu chỉ mới thấy dùng trong đông y. Tính vị theo đông y là vị cay, chát, tính ôn, có tác dụng khù hàn táo thấp, ồn trung khai vị, giải độc.",
+      "chữa": "Dùng chữa dạ đày lạnh đau, nôn ra nước chua, nôn mửa, tả lỵ, có tác dụng chữa say rượu và giải độc cá độc.",
+      "được_dùng": "Ngày dùng 3-6g.  Chú thích:  Ngoài vị thảo khấu nói trên, tại Quảng Tây (Trung Quốc) người ta còn dùng với tên thảo khấu (quả cây sẹ) (Alpinia globosa Horan). Ở Việt Nam ta có cây này. Tại Vân Nam người ta thu mua quả cây Alpinia blepharocalyx K. Schum làm vị thảo khấu, quả cây Globba chinensis K. Schum làm vị tiểu thảo khấu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chưa thấy ở Việt Nam. Chỉ mới thấy khai thác ở đảo Hải Nam, Quảng Đông (Trung Quốc). Vào các tháng 8-9, hái quả về phơi gần khô thì bóc bỏ vò rồi phơi cho thật khô, có khi hái về nhúng vào nước sôi, phơi gần khô, lấy ra bóc vỏ rồi phơi cho thật khò. Tại một vài nơi ở đảo Hải Nam, người ta còn hái về, đun hay đồ với nước sôi trong 2-3 giờ, lấy ra bỏ vỏ phơi khô. Làm như vậy hạt chắc không rời nhau ra nhưng tinh dầu bị giảm bớt."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

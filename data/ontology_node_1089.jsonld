@@ -1,0 +1,253 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cao cẳng bắc bộ",
+            "ten_khac": "Cao cẳng bắc bộ, Xà bì bắc bộ",
+            "ten_khoa_hoc": "Ophiopogon tonki-nensis Rodr.",
+            "ma_taxon": "862476",
+            "ho": "Asparagaceae Juss. (Thiên môn đông)."
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thân thảo, sống lâu năm.",
+            "thân": "Thân rễ ngắn, rễ chùm mảnh, hình sợi.",
+            "lá": "Lá tập trung ở phần gốc, phiến lá hình ngọn giáo ngược dài 15-21cm, rộng 3-4 cm, dày, gốc không cân, nhiều gân phụ, có gân ngang, cuống lá dài 15-20 cm.",
+            "hoa": "Cụm hoa dạng chùm, trục cụm hoa dài 20-25 cm, hoa xếp 2-7 cái trong mỗi lá bắc, lá bắc hình ngọn giáo, cao 8 mm, cuống hoa dài 1cm. Nhị 6; bầu 3 ô, vòi nhụy hình trụ, đầu nhụy chia 3 thùy ngắn.",
+            "quả": "Quả chụm 3, tròn, to 5m.",
+            "mùa hoa": "Tháng 6-9.",
+            "mùa quả": "Tháng 8-12."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Ở Việt Nam, Cao cẳng bắc bộ phân bố ở các tỉnh Hà Giang, Lạng Sơn, Quảng Ninh, Thái Nguyên, Hòa Bình và Ninh Bình.",
+            "các_tỉnh": {
+                "@type": "schema:ItemList",
+                "mục": [
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Hà Giang"
+                        }
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Lạng Sơn"
+                        }
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Quảng Ninh"
+                        }
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Thái Nguyên"
+                        }
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Hòa Bình"
+                        }
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tỉnh": {
+                            "tên": "Ninh Bình"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Rễ (củ) – Radix Ophiopogonis tonkinensis."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": null
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": null
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Ở Vân Nam (Trung Quốc) thân rễ dùng trị viêm niệu đạo, lao phổi, ho, khạc ra máu và viêm nhánh khí quản."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null,
+            "làm thuốc": null,
+            "có tác dụng": null,
+            "sắc uống": null,
+            "giã nát": null,
+            "sắc nước uống": null,
+            "phơi khô": null,
+            "xấy khô": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

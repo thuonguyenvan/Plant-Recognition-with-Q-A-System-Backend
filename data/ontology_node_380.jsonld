@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây lim",
+      "ten_khac": "Dây mấu, cây bánh dày, cây nim, khổ sâm hoa.",
+      "ten_khoa_hoc": "Pongamia pinnata (L.) Merr.",
+      "ma_taxon": "1609449",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 15 – 20m, đường kính thân có thể đến 70 – 80 cm.",
+      "thân": "Cành mọc tỏa rộng, vỏ trơn nhẵn màu lục xám, gỗ màu vàng nâu nhạt.",
+      "lá": "Lá kép dài 20 – 25 cm, cuống chung nhẵn, dài 12 cm; lá chét 5 – 9, hình thuôn hoặc trái xoan, dài 7- 15 cm, rộng 2,5 – 8 cm, gốc tròn hoặc thuôn tù, đầu tròn hoặc hơi nhọn, hai mặt nhẵn hoặc có ít lông trên các gân, gân phụ tạo thành mạng lưới rõ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài 10 – 15 cm, có ít lông, cuống thuyên giảm ở mấu mang 2 – 4 hoa màu trắng, tím hoặc hồng, đài hình chuông cụt, mặt ngoài có lông ngắn; tràng có cánh cờ hình mắt chim, mặt ngoài có lông mịn, cánh bên và cánh thìa thuôn, tù và có lông; nhị 10, một bó, bao phấn hơi nhọn; bầu có lông chứa 2 noãn.",
+      "quả": "Quả nhẵn, dài 3,5 – 5 cm, rộng 2 – 3 cm, dày 6 mm, hơi thắt lại ở hai đầu với một mũi nhọn ngắn, hạt 1, ít khi 2, có vân rõ.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pongamia Vent. ở Việt Nam, mới chỉ biết có một loài trên. Về tên gọi loài cây này có thể tuỳ thuộc theo địa phương. Trong các tài liệu về thực vật học và cây gỗ Việt Nam, người ta sử dụng tên gọi là “cây bánh dầy” [Danh lục các loài thực vật Việt Nam, 2003, Vietnam forest Trees, 2009]. Nhưng trong các tài liệu về cây thuốc ở nước ta lại gọi là “Dây lim”, có lẽ do loài này trước kia người ta xếp trong chi Derris có nhiều loài dây leo, song thực tế đây lại là loài cây gỗ lớn, có thể cao tới hơn 15m.  Trên thế giới, loài này phân bố rải rác ở vùng nhiệt đới châu Á, gồm Ấn Độ, Mianma, Trung Quốc, Lào, Thái Lan, Malaysia, Indonesia, Philippin… và đến tận vùng Đông Вас Australia. Cây còn được nhập trồng ở Mỹ (Florida và Hawaii). Ở Việt Nam, dây lim cũng phân bố rộng rãi khắp từ bắc đến nam. Bắt đầu từ Quảng Ninh (Uông Bí), đến Ninh Bình, Thanh Hóa, Thừa Thiên – Huế, Kon Tum, Đắk Lắk, Khánh Hòa, Bình Dương, Tây Ninh, Đồng Nai, Bà Rịa – Vũng Tàu. Cây còn được trồng ở công viên hay đường phố ở Hải Phòng, Hà Nội và thành phố Hồ Chí Minh.",
+      "thường_mọc": "Là loại cây gỗ ưa sáng, có bộ rễ ăn sâu xuống đất, thường mọc ở ven rừng kín thường xanh, gần bờ suối ở cửa rừng, thậm chí có thể sát với mép nước cây vẫn sinh trưởng phát triển tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt, rễ, vỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Sastri et al., 1969, hạt gồm 5% vỏ và 95% nhân.  Nhân chứa 17,4% protein, 6,6% tinh bột. Ngoài ra, còn có chất nhầy, tinh dầu (vết), acid amin phức là glabrin, 4 furanoflavone: karanjin, pongamin, kanjon và pongaglabrin.  Dầu béo chứa acid palmitic 3,7 – 7,9%, acid stearic 2,4 – 8,9%, acid arachidic 2,2 -4,7%, acid behenic 4,2-5,3%, acid lignoceric 1,1 – 3,5%, acid oleic 44,5 – 71,3%, acid linoleic 10,8 – 13,3%, acid eicosanic 9,5 – 12,4%.  Khô dầu của hạt chứa dầu béo 7,8%, protein 31,9%, carbohydrat 39,8%, glabrin và các acid tự do là acid arachidic, acid lignoceric, acid behenic.  Lá giàu chất mang nitơ và 7,19 mg/100g.  Hoa chứa kaemferol, pongamin, y – sitosterol glucosid.  Vỏ rễ chứa kanugin. Có tài liệu nói là có kananjin 0,08%, pongamin 0,08%, furanoflavon, pinnatin, gamatin…  Vỏ thân cũng có những thành phần như trên nhưng với hàm lượng thấp."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây lim có độc, ở ta thường chỉ dùng ngoài, nên chưa thấy tài liệu đề cập."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt giã nát, đắp ngoài để trị các bệnh ngoài da, Dầu hạt bôi ngoài chữa các bệnh ngoài da như ngứa, ghẻ, herpes (bệnh mụn rộp), mụn nhọt và các bệnh da khác.  Ở Philippin, vỏ dây lim được dùng làm thuốc gây sẩy thai, hạt và rễ cây để duốc cá, dầu hạt xoa ngoài để chữa tê thấp, để chế xà phòng và làm nến. Ở Indonesia, rễ và vỏ thân dây lim để trị ghẻ, lá chữa thấp khớp, hoa chữa đái tháo đường, hạt chữa các bệnh ngoài da, viêm da, thấp khớp [Med. herb index, 1995: 127]. Ở Trung Quốc, dầu hạt dây lim được xoa để chữa thấp khớp, dịch rễ được dùng để rửa các vết hoại thư, lá tươi giã nát đắp lên các vết loét nhiễm trùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

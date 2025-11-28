@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/ngan-hanh.html",
+      "ten": "Ngân hạnh",
+      "ten_khac": "Bạch quả, ngân hạnh",
+      "ten_khoa_hoc": "Ginkgo biloba L.",
+      "ma_taxon": "64350",
+      "ho": "Ginkgoaceae (Bạch quả)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây to, cao 20 – 30 m, tán lá sum suê.",
+        "thân": "Thân hình trụ, phân thành cành dài, gần như mọc vòng, trên cành có những cành nhánh ngắn, mang lá có cuống dài.",
+        "lá": "Lá mọc so le, thường tụ ở một mấu, phiến lá hình quạt, gốc thuôn nhọn, mép lá phía trên tròn, nhẵn, lõm giữa chia phiến lá thành hai thùy rộng. Gân lá rất sít nhau, tỏa từ gốc lá thành hình quạt, phân nhánh theo hướng rẽ đôi, cuống lá dài hơn phiến.",
+        "hoa": "Bạch quả là cây đơn tính khác  gốc, có cây chỉ có hoa đực có cây chỉ có hoa cái. Hoa cái thụ phấn từ hoa đực để kết quả.",
+        "quả": "Quả hạch, hình trứng, kích thước bằng quả mận, thịt màu vàng, có mùi bơ khét rất khó chịu."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lá đã phơi hay sấy khô. Hạt thu hoạch ở quả chín, loại bỏ thịt ngoài, rửa sạch, phơi khô. Khi dùng, đập giập, loại bỏ vỏ cứng lấy nhân, bóc bỏ màng ngoài, rửa sạch, đồ hoặc nhúng vào nước sôi, sấy ở nhiệt độ thấp đến khô. Hạt được dùng sống hoặc sao vàng, có độc nên cẩn thận khi dùng."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Nhân bạch quả chứa 5,3% protein, 1,5% chất béo, 68% tinh bột, 1,57% tro, 6% đường. Vỏ quả chứa ginkgolic axit, bilobol và ginnol. Lá bạch quả chứa hai loại hoạt chất: Các hợp chất flavonoic và các tecpen.",
+        "Các hợp chất": "Các hợp chất flavonoic (ginkgo-flavon glucozit) là những hợp chất trong đó phần agly- con là một flavonol (quercetin, kaempferol, và isorhamnetin), phần đường là glucoza và rham- nose. Ngoài ra còn có một ít proanthocyanidin.",
+        "gồm chất": "Nhóm các tecpen gồm có ginkgolite (là những ditecpen) và bilobalit (một sesquitecpen) có vị đắng. Ngoài hai loại hoạt chất trên, lá bạch quả còn chứa một số axit hữu cơ như hydroxykinurenic, kinurenic, parahydroxybenzoic, vanillic."
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo tài liệu cổ, bạch quả khí ôn, vị ngọt, hơi đắng. Tính chất thu sáp, bạch quả ăn chín thời ôn mà ích khí, ích phổi, tiêu được đờm, trừ được hen, dẹp được ho khỏi chứng khỏi được chứng hư tiểu tiện, hết được chứng khí hư, bạch đới. Bạch quả ăn sống giáng (hạ) được đờm, tỉnh được say rượu, tiêu dược độc, sát được trùng. Nhưng không nên ăn nhiều vì tính nó thu liễm quá mạnh, nên hay sinh chứng đẩy tức khó chịu. Nhân bạch quả ngày dùng 10-20g, bóc bỏ vỏ, dùng dưới dạng sắc hay nướng chín, tán bột. Thịt quả có độc, không ăn sống được. Phải ép bỏ dầu, để lâu trên một năm mới dùng. Ngày dùng 3-4 quả. Dùng riêng hay phối hợp với nhiều vị thuốc khác.  Y học hiện đại dùng dạng cao có chứa 24% heterosit flavonoic và 6% hợp chất tecpenic mang tên ginkogink hay ginkor dưới dạng ống để uống 5ml hay viên nang. Dùng chữa kém trí nhớ, hay gắt bẳn của người có tuổi, hay ngủ gà ngủ gật, do tác dụng trên vi tuần hoàn.  Cao bạch quả tiêu chuẩn hóa được dùng trong y học hiện đại để điều trị triệu chứng trong thiểu năng tuần hoàn não nhẹ và vừa (hội chứng sa sút trí tuệ trong sa sút trí tuệ) thoái hóa tiên phát, sa sút trí tuệ do tuần hoàn và kết hợp hai dạng với những triệu chứng: Suy giảm trí nhớ, rối loạn tập trung, tâm trạng trầm cảm, chóng mặt, ù tai và nhức đầu. Còn được dùng để làm tăng quãng đường đi không đau ở người có tắc động mạch ngoại biên, như tập tễnh cách hồi, xanh tím đầu chi và hội chứng sau viêm tĩnh mạch. Ðiều trị bệnh ở tai trong như ù tai và chóng mặt do nguyên nhân mạch máu hoặc thoái hóa.  Trong y học dân gian, bạch quả được dùng để trị giun, thúc đẻ, điều trị viêm phế quản, viêm mũi mạn tính, cước ở chân tay do lạnh, viêm khớp và phù. Liều dùng cao khô tiêu chuẩn hóa với tỉ lệ dược liệu/cao lá 36 – 67/1: ngày dùng 120 – 240 mg, chia 2 – 3 lần, 40 mg cao tương đương 1,4 – 2,7g lá. Cao lỏng (1:1), 0,5ml, ngày 3 lần. Xem thêm: Bạch quả – Hóa thạch sống thời cổ đại  Đơn thuốc có bạch quả dùng trong nhân dân  Chữa cảm lạnh, ho có đờm, có khi thở suyễn, cổ có tiếng khò khè: Bạch quả 7 trái nướng chín, cùng với lá ngải cứu. Dùng lá ngải là như cái tổ, rồi mỗi bạch quả cho vào một tổ lá ngải, lại bọc giấy ướt xung quanh rồi đem nướng cho thơm, bỏ hết giấy, bỏ hết lá ngải, chỉ ăn nguyên bạch quả. Ngày 3-4 quả như vậy. (Trích trong Bí uẩn phương). Bạch quả định suyễn thang: Bạch quả 21 quả sao vàng, ma hoàng 12g, tô tử 8g, khoản đông hoa, chế bán hạ, tang bạch bì đều dùng mật sao, các vị đều 8g, hạnh nhân bỏ vỏ và đầu nhọn, hoàng cầm sao qua, đều 6g, cam thảo 4g. Nước 600ml. Sắc ba lần. Gạn lấy nước, chia uống trong ngày. (Nhiếp Sinh Phương). Chữa đi đái luôn, tiểu tiện quá nhiều, tiểu tiện trắng đục: Bạch quả 10 quả, 5 dể sống, 5 để chín. Gom cả hai thứ vào mà ăn trong ngày.  Một số sản phẩm có thành phần Bạch quả trên thị trường hiện nay  Sản phẩm Pharhamaxe G2 với công thức đột phá kết hợp với Nhân sâm và Bạch quả – 2 dược liệu đầu bảng giúp hoạt huyết, tăng cường tuần hoàn não  Công dụng:  Giúp bổ máu não, tăng cường tuần hoàn não Giảm các triệu chứng thiểu năng tuần hoàn não: đau đầu, mất ngủ, giảm trí nhớ, thiếu máu não Giảm stress, tê bì chân tay, mệt mỏi vai gáy Bổ sung vitamin, khoáng chất và các nguyên tố vi lượng cho cơ thể  Hình ảnh sản phẩm Pharhamaxe G2  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Bạch quả. Nếu cần tư vấn và tìm hiểu thêm về cây Bạch quả và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Bạch quả là loại cây quý từng tồn tại qua hàng trăm triệu năm từ thời tiền sử có loại khủng long cho tới ngày nay không thay đổi hình dạng. Trong rừng núi Trung Hoa, Nhật Bản có nhiều cây sống lâu cả ngàn năm. Người ta trồng Bạch quả thành đồn điền lớn. Những nơi trồng nhiều bạch quả là tỉnh An Huy, Phúc Kiến, Quý Châu, Hà Nam, Hà Bắc, Hồ Bắc, Giang Tô, Sơn Tây, Tứ Xuyên và Vân Nam.  Pételot (1954) nói ông thấy cây Bạch quả ở Bắc Việt Nam, mọc rải rác ở một số vườn hoa và một số ngôi chùa, để làm cảnh. Nhưng thực tế qua mấy chục năm không tìm thấy cây Bạch quả ở Việt Nam. Từ năm 1995, Việt Nam đã nhập hạt Bạch quả từ Nhật Bản và Pháp về trồng ở Sapa (Lào Cai), nhưng cây sinh trưởng rất chậm."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

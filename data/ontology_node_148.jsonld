@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bí đao",
+      "ten_khac": "Bí đao, Đông qua, Bù rợ, Bí phấn, Fặc moong (Tày), Plăckich (Kho)",
+      "ten_khoa_hoc": "Benincasa hispida (Thunb. ex Murr.) Cogn.",
+      "ma_taxon": "283076",
+      "ho": "Cucurbitaceae (Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le có cuống dài xẻ thùy hình chân vịt, gốc hình tim, mép có răng cưa, đầu nhọn, hai mặt đều có lông cứng.",
+      "hoa": "Hoa màu vàng, đơn tính cùng gốc; hoa đực mọc độc ở kẽ lá, dài có ống hình chuông, 5 thùy dạng lá, tràng 5 cánh; nhị 3 rời nhau; hoa cái có đài và tràng giống hoa đực; nhị lép 3; bầu hình trứng hay hình trụ, có lông dày.",
+      "quả": "Quả thuôn dài, 25-40 cm, màu lục nhạt, có lông cứng khi còn non, sau màu lục sẫm, phủ một lớp sáp màu trắng mốc; nhiều hạt dẹt màu trắng.",
+      "cây": "Dây leo quấn bằng tua, sống hằng năm có lông mịn.",
+      "mùa hoa": "tháng 3-7",
+      "mùa quả": "tháng 3-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bí đao gốc ở Ấn Độ, được trồng rộng rãi ở khắp các vùng nhiệt đới và á nhiệt đới của châu á và miền Ðông của châu Ðại Dương. Ở nước ta, Bí đao cũng được trồng khắp nơi để lấy quả. Ta thường gặp 2 giống chính là Bí đá và Bí gối. Bí đá có quả nhỏ, thuôn dài, vỏ xanh, khi già vỏ xanh xám và xứng, hầu như không có phấn trắng ở ngoài. Bí đá dày cùi, ít ruột, ăn ngon nhưng cho năng suất thấp. Còn Bí gối quả to, khi già phủ lớp sáp trắng, giống này dày cùi nhưng ruột nhiều, lại cho năng suất cao. Bí đao dễ bảo quản; nếu để nơi mát, khô ráo cho thoáng, đừng xếp chồng lên nhau thì có thể để dành bí trong nhiều tháng. Ðể làm thuốc, ta dùng quả già lấy thịt quả, vỏ quả và hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Chữa phù thũng: Khi cả mình và mặt đều phù, dùng Bí đao cùng Hành củ nấu canh với cá chép ăn thường (Nam dược thần hiệu) hoặc dùng Bí đao 40g, Ðậu đỏ 40g sắc đặc uống hàng ngày (Kinh nghiệm dân gian). Chữa đái không thông do bàng quang nhiệt, hoặc đái đục ra chất nhầy: Dùng vỏ Bí đao sắc đặc, uống nhiều sẽ đái thông (Nam dược thần hiệu). Chữa ung nhọt ở phổi hay ở đại tràng: Dùng hạt Bí đao, Bồ công anh, Kim ngân hoa, ý dĩ, Diếp cá, đều 40g. Rễ lau 20g, Hạt đào, Cát cánh, Cam thảo đều 10g, sắc uống."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ quả – Exocarpium Benincasae; thường gọi là Đông qua bì. Hạt cũng được sử dụng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bí đao tươi có tỷ lệ % các chất như sau: nước 67,9; protid 0,1; lipid 0,1; cellulo 0,7; dẫn xuất không protein 30,5; khoáng toàn phần 0,1. Trong các loại chất kháng có calcium 26mg, phosphor 23mg, sắt 0,3mg. Còn có các vitamin caroten 0,01mg, vitamin B1 0,01mg, vitamin B2 0,02mg, vitamin PP 0,03mg và vitamin C 16mg. Nhiệt lượng do 100g bí cung cấp cho cơ thể là 12calo.",
+      "chứa": "Hạt chứa ureaza."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bí đao là loại rau xanh thường dùng trong các bữa ăn của nhân dân ta, cũng như dưa chuột. Có thể dùng Bí đao ăn luộc hoặc nấu canh tôm, canh cua, làm nộm, xào thịt gà, thịt lợn. Bí đao còn dùng làm mứt; mứt Bí đao thường dùng trong dịp Tết Nguyên đán. Ăn Bí đao thông tiểu, tiêu phù, giải khát, mát tim, trừ phiền nhiệt, bớt mụn nhọt",
+      "chữa": "Vỏ quả dùng chữa đái dắt do bàng quang nhiệt hoặc đái đục ra chất nhầy. Hạt Bí đao cũng dùng rang ăn và dùng chữa ho, giải độc và trị rắn cắn. Lá Bí đao giã nát trộn với giấm rịt đắp chữa các đầu ngón tay sưng đau (chín mé). Ở Campuchia, người ta dùng rễ nấu nước tắm để trị bệnh đậu mùa."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

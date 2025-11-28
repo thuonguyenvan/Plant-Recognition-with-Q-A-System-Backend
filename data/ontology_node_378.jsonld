@@ -1,0 +1,193 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đơn nem",
+      "ten_khac": "Đơn răng cưa, đơn Ấn Độ, rau chua chát",
+      "ten_khoa_hoc": "Maesa indica (Roxb.) A. DC.",
+      "ma_taxon": "850424",
+      "ho": "Đơn nem (Myrsinaceae)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, hình bầu dục hoặc hình trái xoan ngọn giáo, dài 8 – 13 cm, rộng 3 – 9 cm, gốc gần tròn, đầu có mũi nhọn, mép có răng cưa to, hai mặt nhẵn, mặt trên màu hơi vàng, mặt dưới nhạt; cuống lá dài 1 – 2 cm.",
+        "hoa": "hoa màu trắng; đài và tràng có 5 phiến hợp thành ống ngắn; nhị 5; bầu hình chóp.",
+        "quả": "Quả hình trứng hoặc hình cầu, đường kính 3 mm, nhẵn bóng, vỏ quả mỏng và cứng hạt nhiều, vỏ ngoài nhăn nheo, có cạnh.",
+        "cây": "Cây bụi nhỏ, cao 1 – 2m. Thân mảnh, hơi có khía có nhiều bì không. Cành non có lông tơ.",
+        "mùa hoa": "tháng 2 – 4",
+        "mùa quả": "tháng 7 – 10."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Maesa Forsk, phân bố chủ yếu ở vùng nhiệt đới châu Á, ở Việt Nam hiện đã biết tới 20 loài, 2 loài làm thuốc trong đó có loài đơn nem kể trên. Loài này phân bố rải rác ở hầu hết các tỉnh thuộc vùng núi thấp, trung du và đôi khi thấy ở cả đồng bằng: Lai Châu (Bình Lư, Phong Thổ), Lào Cai (Bảo Thắng), Tuyên Quang (Sơn Dương), Phú Thọ (Đoan Hùng), Vĩnh Phúc (Lập Thạch, Tam Dương, Vĩnh Tường), Lạng Sơn (Văn Lãng, Hữu Lũng, Quảng Ninh (Hoành Bồ), Bắc Giang (Sơn Động), Hà Nội (Ba Vì), Ninh Bình (Chợ Ghềnh), Thừa Thiên – Huế (Nam Đông), Kon Tum (Đắc Glei), Lâm Đồng (Đơn Dương)… Trên thế giới, đơn nem phân bố ở Ấn Độ, phía Nam Trung Quốc, Lào và Campuchia.",
+        "thường_mọc": "Cây ưa sáng hoặc hơi chịu bóng, có thể chịu được hạn; thường mọc ở đồi cây bụi, nhất là đất sau nương rẫy, ven rừng thứ sinh hoặc có thể thấy trong các lùm bụi quanh làng ở vùng trung du và đồng bằng Bắc Bộ.",
+        "Đặc điểm sinh trưởng": "Đơn nem có lá thường xanh quanh năm, sinh trưởng mạnh trong mùa mưa ẩm."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Đơn nem thường được trồng làm hàng rào. Lá non có thể được dùng để ăn gói và gói nem. Đơn nem là cây dễ trồng, không kén đất chịu hạn tốt và ít sâu bệnh.  Nhân giống bằng cành: chọn loại cảnh bánh tẻ, chặt ra từng đoạn dài 30 – 40 cm. Thời vụ giảm cành vào mùa xuân. Nếu giảm ở vườn ươm cân đặt cành nghiêng 40°C, cách nhau 10 cm/cành; lấp đất, thường xuyên tưới nước cho đất đủ ấm.  Cành giâm sau 15 – 20 ngày ra rễ và chồi, sau 2 – 3 tháng có thể đánh ra trồng. Trên thực tế, người dân thường trồng đơn nem làm hàng rào, bằng cách cắm cành (giâm cành hoặc trồng bằng cả các nhánh con lấy ra từ gốc.  Để làm hàng rào, nên khoảng cách trồng thường mau. Trồng xong tưới nước ngay. Thời vụ trồng cũng thường vào mùa xuân hoặc đầu mùa hè."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Quả, rễ và lá."
+      },
+      "Thành phần": {
+        "thành phần": "Lá chứa 3,1% protein, 10% carbohydrat, 1.6 mg% caroten và 45 mg% vitamin C.  Theo các tác giả Ấn Độ [The Wealth of raw material in India, 1962], lá và vỏ thân chứa saponin và chromo – glycosid nên được nhân dân sử dụng làm thuốc duốc cá.  Theo Apers S. et al. (2005), từ loài Melanceolata đã phân lập được 10 saponin triterpenic 5 vòng. Maes L. kết hợp với Mai Văn Trì (2004) đã xác định loài balause chứa 5% các pentacyclic triterpenic saponin và phân lập được 1 saponin mới có tác dụng chữa bệnh Leismania."
+      },
+      "Tính vị": {
+        "Có vị": "Đơn nem vị đắng, tính mát; rễ có công năng thanh nhiệt giải độc, lá và hạt có công năng trừ giun, sát trùng.  Tài liệu Trung Quốc ghi: đơn nem vị hơi đắng, tính mát, có công năng thanh nhiệt giải độc, trấn thấp, chỉ tả [TDTH,1996,II:189)."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cành và lá đơn nem được dùng làm thuốc tẩy giun sát trùng vết thương và ruốc cá.  Để trừ giun có thể lấy lá nấu canh ăn 3 – 4 bữa thì giun ra. Để trục giun kim, dùng một nắm (khoảng 50g) lá non, rửa sạch, giã nát, chế thêm nước, vắt lấy nước cốt uống vào sáng sớm lúc đói, hoặc dùng nước cốt thụt vào hậu môn lúc chập tối, để khi giun bò ra hậu môn đẻ trứng, giun sẽ chết.  Để chữa nổi mẩn, ngứa, dị ứng, mày đay, lấy lá non tươi, giã nát, chế thêm nước vắt lấy nước cốt uống, còn bã để xoa xát vào chỗ bị bệnh.  Ở nhiều vùng nước ta, cũng như ở Ấn Độ, người ta lấy lá làm gia vị hoặc có thể lấy ngọn và lá non thái nhỏ, xào hoặc nấu canh ăn. Lá non được dùng để ăn gỏi, gói nem ăn hoặc ăn cùng với nem, vì thế nên gọi là đơn nem; mặc dù lá đơn nem độc với cá, có thể dùng để ruốc cá, cá chết. Ở Ấn Độ, người ta dùng rễ để trị giang mai, quả để trị giun, còn lá được dùng để ruốc cá [Chopra 2001: 159; Kirtikar et al., 1998, II: 1482). Ở Trung Quốc, toàn cây đơn nem được dùng chữa viêm gan, hoàng đản cấp tính, ia chảy, đau bụng, cao huyết áp [TDTH, 1996, II: 189]. Chữa mẩn ngứa, dị ứng ngoài da: Lấy lá và ngọn giã nát, xào với mỡ, bôi lên chỗ bị tổn thương đã rửa sạch bằng nước. Nếu có điều kiện, lấy lá và ngọn cành nấu nước tắm, rửa sạch chỗ tổn thương rồi bôi như trên."
+      },
+       "Cách dùng": {},
+       "luu_y": {}
+    }
+  ]
+}

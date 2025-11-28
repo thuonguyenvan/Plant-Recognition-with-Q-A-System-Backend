@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lạc",
+      "ten_khac": "Lạc, Đậu phụng, Thúa đin (Tày)",
+      "ten_khoa_hoc": "Arachis hypogaea L.",
+      "ma_taxon": "63205",
+      "ho": "Fabaceae (Đậu)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Lạc là một loại cây thảo, sống hàng năm, thân cây khi mọc thẳng, khi mọc bò sát dài 0,30-0,50m, có khi tới 0,60-0,80m. Có nhiều thứ lạc nhưng có hai thứ chính: Arachis asiatica Loureiro mọc thẳng, rất nhiều lông được trồng ở châu Á. Arachis africana bò sát đất, tương đối không có lông, được trồng cả ở các nước ven biển phía tây châu Phi. Lá mọc so le gồm 4 lá chét hình trái xoan. Hoa gồm hai loại: Loại lớn ở phía ngoài chùm hoa có màu vàng, không cho quả, loại khác nhỏ hơn, chúc theo chiều thân cây xuống đất để dấu bầu ngập vào trong đất chừng 4-5cm, quả sẽ chín ờ trong đất. Quả là một giáp không khai, đài 3-5cm, có bướu, 2-3 chỗ thắt lại. Những chỗ bướu chứa hạt, thường một quả có 2, 3, 4 hạt.Thành quả cứng, màu vàng, có sơ và thớ nổi lên. Vì quả lạc à dưới đất lên nhân dân ta vẫn gọi là củ lạc."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Quả lạc (củ lạc) gồm 20-30% vỏ và 70-80% hạt. Hạt lạc Semen Arachidis-bao gồm 2-3% lớp vỏ lụa với thành phần một số chất Catechol và một chất leucoanthoxyan (theo Tayeau và Masquelier, 1948) làm cho vỏ lạc có tính chất của các vitamin p. Nhân lạc chứa từ 3-5% nước, 2-4% chẫt vô cơ, khoảng 20% gluxit (glucoza, tinh bột), 20-30% protit gồm một globulinlà arachine (60-75%)không tan trong nước, không chứa muối, một abumin là onarachin (25-40%) tan trong nước, không chứa muối. Cả arachin và conarachin đều cho các axit amin nhưng arachin cho ít hơn conarachin nhất là các axit amin như methionin, tryptophan, và d threonin (axit cc amino p hydroxyn butyric) ardchin cho 4,9% d threonin, còn conarachin cho 7,8%. Có tác giả còn cho rằng trong nhân lạc còn có một chất ancaloit cũng mang tên là arachin, nhưng thực tế chỉ là một cholin không tinh khiết (Molt, 1916). Thành phần chủ yếu trong nhân lạc là 40- 50% chất béo (dầu lạc-OIeum arachidìs).Dầu lạc gồm các glyxerit của nhiều axit béo no và không no, với tỷ lệ thay đổi rất nhiều tuỳ theo loại lạc: Axit oleic (51-79%), axit linolic (7,4- 26%), axit panmitic (8,5%), axitstearic (4,5- 6,2%), axit hexaconic (0,1-0,4%), hai axit chỉ thấy trong dầu lạc: Có trọng lượng phân tử lớn, axit arachidic (C20) và axit lìgnoxeric (C24). Hai axit này còn thấy trong bơ cacao bơ sữa bò. Trong phần không xà phòng hoá được ta thấy các sterol, vết vitamin. Ngoài những thành phần trên người ta còn thấy trong hạt lạc một chất cầm máu có tác dụng tốt đối với những người có bệnh u chảy máu (hemophilie) (theo Prampton và Boudreaux, 1960). Chất này tan trong nước, có tác dụng trên trương lực cơ và tác dụng làm co thắt các động mạch."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo y học cổ truyền: Lạc có vị ngọt, bùi, béo, có tác dụng bổ tỳ, dưỡng vị, nhuận phế, lợi tràng Do thành phần protit và chất béo, lạc có tác dụng dinh dưỡng rất cao, do đó dùng làm thực phẩm trong nhiều nước. Dầu lạc được dùng làm dầu ăn và chế thuốc. Khô dầu lạc (bã sau khi ép dầu) chứa khoảng 50% protit được dùng trong công nghiệp bánh kẹo, trong thực đơn những khu vực thiếu protit, trong thức ăn gia súc và gia cầm… Cần lưu ý rằng khô dầu lạc có thể gây chết cho súc vật và gia cầm với những tổn thương ở gan. Người ta đã phát hiện thấy khô lạc phơi sấy không tốt lại bị ẩm và khí hậu nóng nhiệt đới có giống nấm Aspergillus flavus Link, phát triển và chứa những chất cumarin phức có độc tính đặt tên là aílatoxin B và G (do những chất này dưới tia ngoại tím cho huỳnh quang xanh tím (bleu violace) gọi là aiflatoxin B và huỳnh quang xanh lá cây (green) gọi là aflatoxin G. Những nấm mốc này còn phát triển cả trong vỏ những quả lạc phơi chưa kỹ có những vết thâm đen. Ta có thể phát hiện những chất aflatoxin này sau khi chiết bằng cloroform, tinh chế bằng sắc. ký cột rồi soi huỳnh quang trên sắc ký lớp mỏng. Trong công nghiệp chế biến thuốc dầu lạc được dùng làm dung môi trong dầu tiêm,dầu xoa ngoài, xà phòng, thắp đèn, bôi máy.  Bài thuốc có lạc:  Chữa người mới ốm dậy, sút cân và phụ nữ ít sữa: Lạc rang với ít ,muối giã nhỏ, nấu với củ mài và gạo nếp thành cháo, ăn liền vài tuần vào mỗi buổi sáng. Chữa phụ nữ bị hư lao, ho lâu: Dây lạc phơi khô sắc với bột lộc giác sương (Bã gạc hươu), uống mỗi lần 4g vào buổi sáng."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Người ta cho rằng cây lạc vốn nguồn gốc ở Brazil (nam Mỹ), nhưng hiện nay được trồng ở nhiều nước nhiệt đới, nhiều nhất ở châu Á với sản lượng lớn nhất là Ấn Độ , sau đó đến Trung Quốc, Inđônêxia… Nhiều tỉnh đồng bằng và (trung du nước ta đều có trồng lạc nhưng sản lượng chưa nhiều: Hàng năm khoảng vài chục đến 100.000 tấn chủ yếu dùng làm thực phẩm, một số ít làm thuốc và dùng trong công nghiệp."
+      },
+      "Lưu ý": {}
+    }
+  ]
+}

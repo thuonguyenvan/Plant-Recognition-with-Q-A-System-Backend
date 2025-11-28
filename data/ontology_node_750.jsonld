@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Sở (Trà mai)",
+      "ten_khac": "Sở, Dầu chè, Dầu sở, Trà mại, Mạy slở (Tày)",
+      "ten_khoa_hoc": "Camellia drupifera Lour",
+      "ma_taxon": "1516904",
+      "ho": "Theaceae (Chè)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân nhỡ, cao 4-10m.",
+      "thân": "Thân cành nhẵn, màu xám nhạt.",
+      "lá": "Lá mọc so le, dày ,hầu như không cuống, hình mác thuôn hay hình trứng thuôn dài, đầu nhọn, phía cuống hơi hẹp, phiến lá dai, nhẵn, mép có răng cưa, dài 3-6cm, rộng 1,5-3cm.",
+      "hoa": "Hoa mọc riêng lẻ hoặc đôi\u00a0 ở nách hay ở ngọn, tụ từng 1-4 cái, màu trắng, đường kính 3,5cm.",
+      "quả": "Quả nang, đường kính 2,5-3cm, hơi có lông, đỉnh tròn hơi nhọn, thành dày, có 3 ngăn, mở dọ theo ngăn, mỗi ngăn có 1-3 hạt có vỏ ngoài cứng, lá mầm dày, chứa nhiều dầu.",
+      "mùa hoa": "Tháng 8-11.",
+      "mùa quả": "."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Dầu hạt và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có chứa 0,4-1% tinh dầu. tỷ trọng ở 210 là 1,061, thành phần chủ yếu của tinh dầu là eugenol C10H12O2, tỷ lệ đạt tới 95-96%",
+      "gồm chất": "Trong hạt có chứa chừng 58-60% chất dầu mỏng, màu nâu vàng nhạt hay vàng rơm, mùi nhẹ, dễ chịu:tỷ trọng ở 150C là 0,900, không tan trong cồn 950, độ axit biểu thị bằng axit oleic là 2,876g trong 1kg dầu",
+      "triết xuất": "Từ khô sở: F.Guichard và Bùi Đình Sang đã chiết được 28% asponizit có phản ứng trung tính của những sapotoxin. Sapotoxin này màu vàng nhạt, tan trong nước, trong cồn 90 độ trong cồn metylic, không tan trong cồn nóng.",
+      "thủy phân": "Thuỷ phân cho fructoza và một sapogenin chảy 238-245 độ C"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dầu hạt sở có vị nhờn béo, có tác dụng sát trùng, giải độc"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dầu sở được dùng làm thực phẩm, nấu xà phòng, thắp đèn, chữa ghẻ lở",
+      "làm thuốc": "Khô dầu sở dùng làm phân bón, thuốc trừ sâu, trừ giun đất, không thể dùng cho súc vật ăn dược vì có độc. khô dầu sở còn có thể dùng làm nguyên liệu để chiết saponozit dùng trong những kỹ nghệ khác.",
+      "chữa": "Bó gãy xương: Lá sở 50g, lá náng 50g, hai thứ giã nhỏ. Đắp và bó.",
+      "có tác dụng": "Lá sở ở ta chưa thấy khai thác. Tại Liên Xô cũ người ta coi đây là một nguồn tinh dầu chứa eugenol quan trọng. Ta nên chú ý nghiên cứu để tận dụng.  Chú thích  Ngoài cây sở nói trên, trong Quảng Châu thực vật chí có phân biệt và kể cây du trà Camellia oleosa (Lour Rehd.) cùng họ với sở và có các tên khác là Thea oleosa Lour, Camellia drupifera Lour. Theo Quảng Châu thực vật chí thì cây này mới được nhân dân vùng trung, tây nam và nam Trung Quốc trồng để lấy dầu dùng ăn, làm thuốc. Cần chú ý xác định lại, đối chiếu với cây của ta."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Sở mọc và được trồng ỡ Ấn Độ, Nhật Bản, Trung Quốc, Miến Điện \u00a0Ở Việt Nam, Cây dầu sở được trồng nhiều nhất ở tỉnh Vĩnh Phúc, Phú Thọ rồi các tỉnh khác có ít hơn như Hoà Bình, Hà Tây, vùng huyện Nho Quan thuộc Ninh Bình, Bắc Ninh, Bắc Giang, Tuyên Quang, Lạng Sơn. Cao Bằng. tại miền Trung ở các tỉnh Thanh Hoá, Nghệ An, Hà Tĩnh đến cả những tỉnh Quảng Bình, Quảng Trị, Thừa Thiên Huế cũng có mọc. có một số nơ có cây sở mọc hoang.",
+      "được_dùng": "Muốn trồng sở cần chọn những đất nham thạch (schisteux) cát và đất thó, có độ dốc, hình như cây rất sợ nước đọng, do đó những ven hồ, ao, những bãi ẩm cây không mọc được. Nó còn đòi hỏi độ ẩm cần thiết của không khí và tránh những nơi có gió lạnh. Thường trồng xen kẽ với cây chè và cây sơn. Cuối tháng\u00a02 vào mùa mưa phùn, người ta vùi hạt sâu chừng 3-4cm, cần chọn những hạt vừa thu hoạch tong mùa vừa qua. Thường trồng theo những hang cách nhau 6m và mỗi cây trên mỗi hang lại cách nhau chừng 4,55m, nếu trồng xen kẽ với sơn thì mỗi hang cách nhau 4 cây sơn, trên lỗi hang mỗ icây lại cách nhau 3 cây sơn. Sau 4 năm cây đã cao 1,8-2m, sau 6 năm bắt đầu thu hoạch được quả thì cây cao chừng 3m. cây 8 năm tuổi cao chừng 4,5-5m và cho chừng 8-10kg quả, vào năm thứ 15 là năm ch thu hoạch cao nhất, cây sở cho chừng 40kg quả. Cây lúc này có dáng rất đặc biệt, đứng xa cũng nhận dược dáng hơi hình cầu của tán cây. Mùa hoa tháng 11-12, quả chin và thu hoạch vào tháng 9-10 năm sau. Thường cây sở cho 2 năm thu hoạch cao thì 1 năm lại thu hoạch thấp. nếu đong bằng lít thì 2 năm thu hoạch cao chừng 90 lít quả thì năm thấp chỉ được 20 lít. Việc chăm sóc hầu như rất ít, chỉ mấy năm đầu cần làm cỏ. nhưng thường chăm sóc cho chè và sơn chủ yếu, còn cây sở ít đòi hỏi hơn. Thường 100kg quả cho chừng 50 kg nhân hạt và 100kg hạt cho chừng 15-16 lít dầu và chừng 80-85kg khô sở."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trà my Nhật",
+      "ten_khac": "Trà hoa Nhật, sơn trà hoa",
+      "ten_khoa_hoc": "Camellia japonica L.",
+      "ma_taxon": "83056",
+      "ho": "Chè (Theaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây trà my Nhật ưa ánh sáng nhưng cũng có thể phát triển trong môi trường nửa râm, thích hợp nhất khi trồng dưới tán cây thưa. Cây phát triển tốt trong môi trường ấm áp, ẩm ướt, không chịu được đất kiềm và thích đất giàu dinh dưỡng, ẩm nhưng thoát nước tốt, có tính axit nhẹ. Cây không thích nghi với khí hậu quá lạnh, quá nóng hoặc khô hạn.",
+      "Đặc điểm sinh trưởng": "Thời gian ra hoa: Kéo dài, thường nở vào mùa đông hoặc mùa xuân. Thời gian ra quả: Từ tháng 9 đến tháng 10.  Quá trình phát triển:  Cây thường thay lá mỗi 2-3 năm.  Mỗi năm có thể ra chồi 1-2 lần:  Chồi xuân: Nảy mầm từ giữa tháng 3 đến cuối tháng 4, ngừng phát triển vào giữa hoặc cuối tháng 5. Chồi hè: Xuất hiện từ giữa tháng 7 đến đầu tháng 9.  Sau khi chồi xuân phát triển, các nụ hoa sẽ bắt đầu hình thành ở đầu cành hoặc kẽ lá."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Camellia L. là chi có nhiều loài nhất trong họ Theaceae, riêng ở Việt Nam hiện đã biết tới 45 loài và nhiều thứ khác nhau. Có giả thuyết rằng Bắc Việt Nam và Nam Trung Quốc là nơi phát sinh và đang tập trung nhiều loài nhất trên thế giới (Hakoda, Tran Ninh, et al., 2007). Loài trà my Nhật (hay còn gọi là Hoa trà) vốn có nguồn gốc ở Nhật Bản. Cây đã được thuần hoá đưa vào trồng từ lâu đời ở Nhật Bản, Trung Quốc, Việt Nam và nhiều nước khác trên thế giới.",
+      "thường_mọc": "Trà my Nhật là loại cây bụi hoặc gỗ nhỏ, ưa ẩm, hơi chịu bóng và thích nghi cao với vùng có khí hậu cận nhiệt đới."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cây trà my Nhật có thể được nhân giống bằng hai phương pháp chính: giâm cành và ghép cành. Mỗi phương pháp đều có những kỹ thuật và thời điểm thực hiện khác nhau để đạt hiệu quả cao nhất."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, hoa dùng tươi hoặc phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa cafein, polyphenol, L- epicatechol, d -catechol, 2 tanin là camelliatanin A và B, gemin D, casuariin, pedunculagin và 2, 3 (S) -hexahydroxydiphenoxyglucose. Lá và hoa có theobromin, leucoanthocyanin, camellenodiol. Quả có dầu béo, camellin. Chất sau này nếu đem thuỷ phân sẽ cho camelliagenin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Trà my Nhật có vị cay và đắng, tính hàn. Có tác dụng cầm máu, lương huyết, tán ứ, tiêu thũng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trà my Nhật thường được dùng trị nôn ra máu, chảy máu cam, trị chảy máu, xuất huyết tử cung. Ngày dùng 6 – 9g dạng thuốc sắc.  Dùng ngoài trị vết thương chảy máu, bỏng lửa và bỏng nước, nhọt và viêm mủ da. Giã nát hoa trộn với dầu vừng đắp tại chỗ [Võ Văn Chi, 1997: 1239 – 40].  Ở Trung Quốc, trà my Nhật được dùng trị thổ huyết, chảy máu cam, băng huyết, lỵ ra máu, tiểu tiện ra máu, xuất huyết do bị thương, bỏng. Khi bị bỏng thí nghiền, dùng dầu vừng luyện để bôi. Khi dùng trong thì sắc uống, ngày dùng 5 – 9g [Trường Đại học y khoa Trung Quốc, 1993: 499 – 500].",
+      "chữa": "Chữa ho ra máu: Trà my Nhật (hoa) 10 bông, đại táo 120g, bạch cập 30g, hồng hoa 15g sắc uống ngày một thang. Chữa nôn ra máu, chảy máu cam, trĩ chay máu: Trà my Nhật (hoa), dành dành (quả), trắc bá (lá), sinh địa, mỗi vị 9g sắc uống ngày một thang. Chữa lỵ ra máu: Trà my Nhật (hoa), phơi khô âm can, tán bột, trộn đều với đường thường, hấp trong nồi cơm rồi ăn. Chữa trĩ chảy máu: Hoa trà my Nhật khô, nghiền thành bột rồi uống Chữa nhọt và viêm mủ da: Lá trà my Nhật tươi, giã nát đắp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/la-ngon.html",
+      "ten": "Lá ngón",
+      "ten_khac": "Lá ngón, Co ngón, Thuốc rút ruột, Đoạn trường thảo, Ngón vàng, Khau nguộn (Tày), Co ngón (Thái)",
+      "ten_khoa_hoc": "Gelsemium elegans (Gardn. et Champ.) Benth.",
+      "ma_taxon": "707282",
+      "ho": "Loganiaceae (Mã tiền)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Đoạn là đứt, trường là ruột, tên đoạn trường thảo vì người ta cho rằng uống vị này sẽ bị đứt ruột mà chết Đoạn trường thảo hay cây lá ngón là một loại dây mọc leo, thân và cành không có lông, trên thân hơi khía dọc.",
+        "lá": "Lá mọc đối, hình trứng thuôn dài, hay hơi hình mác, đầu nhọn, phía cuống nhọn hay hơi tù, mép nguyên, bóng nhẵn, dài 7-12cm, rộng 2,5-5,5cm.",
+        "hoa": "Hoa mọc thành xim ở đầu cành hay kẽ lá. cánh hoa màu vàng.",
+        "quả": "Quả là một nang dài màu nâu hình thon dài 1cm, rộng 0,5cm. Hạt nhỏ, quanh mép có rìa mỏng màu nâu nhạt, hình thận",
+        "mùa hoa": "tháng 6-8-10."
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Cây lá ngón rất phổ biến ở vùng rừng núi Việt Nam. Người ta thường không dùng làm thuốc, mà chỉ dùng để tự tử hay với mục đích đầu độc. Còn có ở một số nước ở vùng nhiệt đới và Á nhiệt đới châu Á. ở Trung quốc người ta thấy ở Phúc Kiến, Tứ Xuyên, Bắc châu Mỹ có loài Gelsemium semperviens Art Nhân dân ta hay dùng lá như trên đã nói, trái lại Trung Quốc hay dùng rễ và bán tại các hiệu thuốc để làm thuốc chữa hủi hay chữa bệnh nấm ở tóc (teigne) Cũng được dùng với mục đích đầu độc",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tây"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Giang"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Từ loài cây ngón mọc ở bắc châu Mỹ – Gelsemium semperviens nhiều tác giả đã chiết ra được nhiều loại ancaloit đặt tên là gelsemin C20H22O2N2 có tinh thể, độ chảy 178oC chất gelmixin C19H24O3N2 (lúc trước có tác giả xác định độ chảy 171oC) chất sempecvirin và sempecvin. Hai chất sau tương tự với nhau nhưng độ chảy khác nhau. Tất cả đều có tính độc rất mạnh, gần như tác dụng của strycnin, chất ancaloit trong mã tiền  Năm 1931, Triệu Thừa Cố (Trung Quốc, sinh lý học tạp chí, 1931,5:334 và 1936,10;79) đã nghiên cứu rễ, thân rễ và cành của cây đoạn trường thảo Trung Quốc (Gelsemium elegans) cùng loại với ta, đã chiết xuất được 4 loại ancaloit có tính chất và đặt tên như sau:  Kumin C20H22ON2, độ chảy 170oC, D=2650. Dễ tan trong cồn, khó tan trong ete, không tan trong ete, dầu hoả và nước, tan trong axit sunfuric đặc cho dung dịch không màu, nếu thêm MnO2 sẽ chuyển màu tím nhạt, nhưng nếu thêm kali bicromat sẽ cho màu xanh vàng. Đây là thành phần chủ yếu của cây ngón, chất này không độc lắm Kuminin vô định hình, không màu, dễ tan trong ete và trong nhiều dung môi hữu cơ khác, khó tan trong nước, từ dung dịch ete để bốc hơi sẽ cho chất có độ chảy thay đổi nhưng trên 115oC. Muối clohydrat có tinh thể không màu hình trụ, độ chảy trên 300oC, tan trong axit sulfuric đặc cho dung dịch không màu, thêm kali bicromat lúc đầu cho màu tím, sau chuyển màu nâu và cuối cùng màu xanh Kuminixin vô định hình, muối clohydrat tan trong nước, có năng suất quay cực trái Kuminidin có tinh thể hình trụ không màu độ chảy 200oC có thể tan nhiều trong dung môi hữu cơ và nước, cho muối clohydrat tan trong nước, hoà tan trong axit sunfuric đặc sẽ cho dung dịch không màu, khi thêm kali bicromat sẽ chuyển màu xanh vàng và không xuất hiện màu tím Tỷ lệ cả bốn loại ancaloit trên trong nguyên liệu là 0,3%. Từ lá ngón Triệu Thừa Cố cũng đã lấy ra được 4 ancaloit là gelsemin, kumin, kuminin và một ancaloit mới đặt tên là kaunide C21H24O5N2, độ chảy 315oC. Muối clohydrat có độ chảy 318oC, chất ancaloit này có tác dụng làm yếu cơ và ức chế hô hấp Ba tác giả Kỳ Dục Phong, Cao Di Sinh và Hoàng Diệu Tăng (1938, J Am.Chem Soc, 60;1723) đã báo cáo rằng chất mà Triệu Thừa Cố gọi là kuminin và không có tinh thể thực ra không thuần khiết. từ chất này đã tách ra được chất gelsemin và đính chính rằng chất kuminidin có độ chảy 299oC và có công thức là C19H25O4N2  Tóm lại qua các tác giả trên trong cây ngón Gelsemium elegans có gelsemin và kuminidin có tinh thể  Năm 1936, F. Guichard (Compte rendu du X congres de la For Eastern Association of tropical medicine, Hanoi, 1:607-612) nghiên cứu từ cây lá ngón mọc ở Việt nam và đã chiết từ lá. Vỏ thân và rễ cây những chất giống như những chất trong lá ngón Trung quốc. ông đã thấy chất kumin cả trong quả và hạt, và ông còn tìm thấy một chất có huỳnh quang đối với ngoại tím, không tan trong các axit và ghi là thuộc nhóm chất esculetin Nhưng dù đã nghiên cứu như vậy, việc phát hiện các chất độc trong lá ngón khi bị ngộ độc còn khó khăn, vì phản ứng đặc hiệu tiến hành trên những chất lấy được ở cơ thể người bị ngộ độc, nhất là khi chỉ ăn 3 lá ngón là một việc không dễ dàng Năm 1953, M.M Janot ở Paris nghiên cứu thành phần ancaloit trong từng phần những mẫu cây lá ngón hái ở miền Nam Việt nam đã thấy trong lá có gelsemin, trong rễ có kumin và toàn thân có semperverin (như vậy là semperverin được phát hiện có trong một loài Gelsemium khác loài Gelsemium semperverin mọc ở Bắc Mỹ) Năm 1977, Hoàng Như Tố và cộng sự (Tài liệu học tập tham khảo Cục quân y-II, 1977) đã tiến hành thí nghiệm lại theo như Janol nhưng đối với loài lá ngón mọc ở Bắc Việt nam đã thống nhất thấy lá có gelsemin, rễ có kumin còn chưa xác định được rõ ràng kumidin và semperverin"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Nhân dân Việt Nam không dùng cây ngón làm thuốc, chỉ giới thiệu ở đây để chúng ta biết tránh và có thể phát hiện khi bị ngộ độc Tại Bắc Mỹ và Trung Quốc, người ta dùng rễ chữa bệnh động kinh và giảm đau nhưng cũng rất ít dùng  Chú thích:  Một vài vùng ở nước ta gọi một cây nữa là cây lá ngón. Sự thật cây lá ngón nói trên vào loại độc nhất. cây lá ngón giới thiệu đây còn gọi là cây cơi hay cây lá cơi (phong dương) có tên khoa học là Pterocarya tonkinensis Dode hay Pterocarya stenoptera var. tonkinensis Franchet, thuộc họ Hoa đào (Juglandaceae) Đây là một cây nhỡ cao chừng 5-6m, lá kép lông chim nhẵn gồm 3-6 đôi lá chét mọc đối hay gần như đối không cuống, phía cuống hơi không đều, mép lá răng cưa nhưng lá chét phía trên to rộng hơn, bóng nhẵn, những lá chét dưới có mặt trên nhẵn, mặt dưới hơi có lông. Hoa cái mọc thành bông nhiều hoa mọc sít nhau, hơi có lông. Quả mọc thành bông thõng xuống, dài tới 45cm hay hơn. Hạt nhỏ dài 15-17mm, rộng 2-3mm hơi có lông có 2 cánh hẹp Cây này mọc hoang khắp nơi ở miền Bắc nước ta, nhiều nhất vùng rừng núi, có cả ở miền Trung và ở Lào. Nhân dân thường dùng lá giã nát lấy nước để duốc cá, có khi người ta dùng lá nấu nước nhuộm màu nâu kali. Chưa thấy có tài liệu nghiên cứu."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng"
+      },
+      "Lưu ý": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

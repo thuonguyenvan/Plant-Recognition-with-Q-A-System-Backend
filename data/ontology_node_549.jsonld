@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sa nhân trắng",
+      "ten_khac": "Sa nhân trắng, Dương xuân sa",
+      "ten_khoa_hoc": "Amomum villosum Lour.",
+      "ma_taxon": "1114503",
+      "ho": "Gừng (Zingiberaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 1 – 3 m.",
+      "thân": "Thân rễ mọc bò, chằng chịt trên mặt đất.",
+      "lá": "Lá không cuống mọc so le, dài 30 – 40 cm, rộng 5-9 cm, gốc tròn, đầu thuôn dài thành mũi nhọn, mặt trên sẫm bóng, mặt dưới nhạt, hai mặt nhẵn; lưỡi bẹ nguyên.",
+      "hoa": "Cụm hoa mọc ở thân rễ thành bổng, có 5 – 11 hoa màu trắng; lá bắc ngoài có mũi nhọn ở đầu, lá bắc trong có hai răng nhỏ; đài dài 1,5 – 2 cm, có 3 răng; tràng dài 2 – 2,5 cm, chia 3 thùy, thùy giữa hình khum, hai thùy bốn nhỏ, cánh môi dạng thìa tròn, đường kính 1,6-2 cm, có sọc đỏ tía ỏ giữa phiến, mép nguyên, đầu cánh môi chia hai thùy nhỏ gập ra phía sau, chỉ nhị dài bằng bao phấn; bầu gần hình cầu, có lông mịn.",
+      "quả": "Quả hình cầu, có gai mịn, nguyên hoặc xẻ đôi, chia 3 ô; hạt có áo sần sùi.",
+      "mùa hoa": "tháng 4-5",
+      "mùa quả": "tháng 6-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Sa nhân trắng phân bố rộng rãi ở Quảng Tây, Vân Nam, đảo Hải Nam (Trung Quốc), Việt Nam, Lào, Campuchia và Thái Lan. Ớ Việt Nam, so với các loài cùng chỉ, sa nhân trắng được coi là cây có biên độ sinh thái rộng, phân bố phổ biến khắp các tỉnh từ vùng núi (độ cao dưới 1000 m) đến trung du ở miền Bắc cũng như miền Nam. Theo kết quả diều tra nghiên cứu và thống kê của Viện Dược liệu từ năm 1961 đến nay, sa nhân trắng dược ghi nhận ở 38 tỉnh thành phố, với phạm vi phân bố không liên tục lên đến hàng ngàn hecta rừng. Nhiều vùng sa nhân trắng mọc khá tập trung, được phát hiện ở các tỉnh Thái Nguyên, Bắc Cạn, Bắc Giang, Tuyên Quang, Yên Bái, Phú Thọ, Hoà Bình, Sơn La, Thanh Hoá, Nghệ An, Quảng Bình, Quảng Nam, Quảng Ngãi, Phú Yên, Đắc Lắk và Kon Tum. Sa nhân trắng ưa khí hậu nhiệt đới gió mùa nóng và ẩm.  Ở các tỉnh miền núi giáp biên giói phía bắc hoặc ở tinh Quảng Tây và Vân Nam – Trung Quốc, nơi có khí hậu thiên về á nhiệt đới, cây vẫn sinh trưởng, phát triển tốt. Điều đó khẳng định sa nhân trắng là loại cây có khả năng thích nghi khá rộng. Cây đặc biệt ưa ẩm, chịu bóng và có thể ưa sáng, thường mọc tập trung thành đám ở ven rừng, dọc theo hành lang ven suối, ven các lối đi trong rừng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Giống như sa nhân tím."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả sa nhân trắng thu hái lúc gần chín, bóc vỏ lấy khối hạt màu trắng, phơi khô. Có thể chế biến như sau:  Sa nhân sao: Để cả quả, hay bóc vỏ lấy hạt, sao vàng đến khi có mùi thơm. Có thể sao sém cạnh hoặc sao đen. Sa nhân chích muối: Sa nhân trắng 10 kg, muối ăn 1,5 kg, nước vừa đủ. Hoà muối vào nước, khuấy cho tan, đổ sa nhân vào ngâm 30 phút cho ngấm hết muối, rồi sao cho khô vàng. Có thể sao sa nhân đến khi có mùi thơm, vẩy nước muối vào, rồi tiếp tục sao đến khô. Sa nhân chích gừng: Sa nhân trắng 10 kg, gừng tươi 1 kg. Rửa sạch gừng, cát lát, giã nát vắt lấy nước cốt. Thêm nước giã tiếp làm nhiều lần dễ vắt kiệt dịch gừng rồi tẩm đều vào sa nhân. Khi dược liệu hút hết dịch thì sao cho khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Có Saponin và tinh dầu 2 – 3% gồm: Camphor, Borneol Bomyl Acetate, Linalool, Nerolidol, Limonene. Hạt chứa tinh dầu gồm D-camphor, D-borneol, D-bornylacetat, D-limonen, (-pinen, phellandren, paramethoxy ethyl cinnamat, nerolidol, linalol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sa nhân trắng có vị cay, mùi thơm, tính ấm, vào 3 kinh thận, tỳ, vị, có tác dụng ôn trung, hành khí, chỉ thống, khai vị, tiêu thực, an thai."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Công dụng Sa nhân trắng là vị thuốc kích thích và giúp tiêu hóa, chữa tỳ vị khí trệ, ăn không tiêu, đau bụng lạnh, tiêu chảy, nôn oẹ, động thai, kiết lỵ thuộc hàn. Ngày dùng 3 – 6g dạng thuốc sắc hoặc hoàn tán, thường dùng phối hợp với các vị thuốc khác. Còn được dùng làm gia vị và chế rượu mùi.  Kiêng kỵ : Âm hư, nội nhiệt không nên dùng.  Dùng ngoài hạt sa nhân trắng, giã nhỏ thành bột, chấm vào răng đau, hoặc ngâm rượu cho đặc rồi ngậm để chữa đau răng. Thân rễ của cây (10g) cắt nhỏ, ngâm với 100 ml rượu trong 15 ngày, dùng xoa bóp hàng ngày chữa tê thấp.  Ở Trung Quốc, sa nhân trắng được đùng trị rối loạn về dạ dày và tiêu hóa, nôn, ăn không ngon, khó tiêu, cơn đau bụng, tiêu chảy. Ngoài tác dụng bổ, gãy trung tiện, làm dễ tiêu, sa nhân trắng còn là thuốc điều kinh và hạ sốt. Đôi khi dược chỉ định để chữa lao có khái huyết, bệnh gan, tử cung và thấp khớp. Hạt sa nhân trắng thường có trong thành phần các thuốc lợi tiêu hóa, trị ho và cảm lạnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Chữa tiêu chảy cấp tính:  Sa nhân 8g; hoắc hương 12g; vỏ vối 10g; vỏ rụt, trần bì, hương phụ, hạt vải, mỗi vị 8g. Tán bột, làm viên, uống ngày 10g; hay sắc uống ngày một thang.  Sa nhân 12g; bạch biển dậu 20g; thảo quả, ô mai, sắn dây, mỗi vị 12g; cam thảo 6g. Tán bột làm thành viên, mỗi ngày uống 20g với nước chè đặc.  2. Chữa tiêu chảy mạn tính:  Sa nhân 8g; bố chính sâm, củ mài, ý dĩ sao, mỗi vị 12g; trần bì 8g; gừng khô, vỏ rụt, mỗi vị 6g. sắc uống, ngày một thang. Sa nhân 6g; bạch truật, đảng sâm, hoài sơn sao, ý dĩ sao, mỗi vị 12g; phục linh, trần bì, mỗi vị 8g; cam thảo 6g. sắc uống, ngày một thang.  3. Chữa viêm loét dạ dày – tá tràng:  Sa nhân 8g; hương phụ 10g; diên hổ sách, khổ luyện tử, mỗi vị 8g; trầm hương, chích cam thảo, mỗi vị 6g. Sắc uống ngày một thang. Sa nhân 10g; lá khôi 20g; sâm Bố Chính 12g; mộc hương 10g; bán hạ chế, trần bì, mỗi vị 6g; gừng 4g. Sắc uống ngày một thang.  4. Chữa phụ nữ hay bị sẩy thai:  Sa nhân 8g; đảng sâm 16g; bạch truật, thục địa, bạch thược, tục đoạn, mỗi vị 12g; phục linh, đương quy, hoàng cầm, mỗi vị 8g; xuyên khung 6g; cam thảo 4g. Sắc uống trong ngày.  5. Chữa rối loạn tiêu hóa kéo dài ở trẻ em:  Sa nhân 20g; ý dĩ, hoài sơn, liên nhục, đảng sâm, bạch biển đậu, mỗi vị 100g; cốc nha 30g; trần bì,  nhục khấu, mỗi vị 20g. Ba vị : sa nhân, trần bì, nhục khấu sắc nước đặc, các vị khác tán bột mịn, làm thành dạng cốm. Trẻ em 1 – 3 tuổi, ngày uống 12 – 16g chia 2 lần (Cốm bổ tỳ).  6. Chữa tăng huyết áp:  Sa nhân 6,6g, đỗ trọng 33g, hoàng bá 10g, cam thảo 6,6g. Khi có bệnh tim, thêm quế 6,6g. sắc uống ngày một thang.  7. Phòng chống sốt rét:  Sa nhân vài hạt nhấm ăn hay ăn trầu với sa nhân và nuốt nước.  8. Chữa chứng tăng cholesterol máu:  Sa nhân 8g; phòng đảng sâm, dây câu đằng, củ chóc (chế), mỗi vị 15g; củ tóc tiên (bỏ lõi), thạch cao bạc hà (hoặc phòng phong), vỏ quýt, mỗi vị 12g; cúc hoa vàng, lá tre non, mỗi vị 10g. Làm thành viên hoàn, ngày uống 20 – 30g.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam ."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

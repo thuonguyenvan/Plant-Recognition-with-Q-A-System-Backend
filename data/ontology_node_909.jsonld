@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Măng tây",
+      "ten_khac": "Măng tây",
+      "ten_khoa_hoc": "Asparagus officinalis L.",
+      "ma_taxon": "60265",
+      "ho": "Asparagaceae (Măng tây)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo có thân mọc ngầm trong đất, thường gọi là thân rễ.",
+      "rễ": "Thân rễ dày, mang nhiều rễ dài, đường kính 5-6mm, màu nâu sáng, xốp.",
+      "thân": "Các thân đứng mọc trong không khí lởm chởm những vết sẹo của những nhánh đã rụng. Các thân khi sinh này mang những vòng cành biến đổi thành lá hình kim. Lá thật tiêu giảm.",
+      "hoa": "Hoa rất nhỏ, màu lục, hình chuông, dài độ 6mm, tập hợp 4-6 cái thành nhóm ở nách lá của các cành dạng lá. Hoa tháng 7-8.",
+      "quả": "Quả hình cầu, dày màu đỏ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của miền Nam châu Âu, được trồng ở nhiều nước trên thế giới. Ta cũng trồng chủ yếu để lấy chồi non (măng) làm rau ăn, măng là những chồi của thân rễ của cây. Khi nó vừa ló lên mặt đất thì người ta cắt đi vì khi ấy nó còn mềm; khi nó lên cao nữa thì mạch gồ xuất hiện làm cho màng cứng khó ăn. Có thể thu hái măng và rễ quanh năm."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ – Radix Asparagi Officinalis, thường có tên là Thạch tiêu bách."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Các thành phần đã biết là nước 90-95% glucid 1,70-2,50% lipid 0,10-0,15%, protid 1,60-1,90%, cellulose        0,55-0,70%, các vitamin A, B1, B2, C, khoảng 10% chất khoáng với mangan, sắt, photpho, kali, calcium four, brome, iod, một ít tanin, một saponosid mà genin là sarsasapogenin",
+      "Các hợp chất": "Các chồi non chứa asparagin, coniferin, một ít rutosid (có nhiều hơn ở các phần xanh) các vết anthocyamosid và một chất có lưu huỳnh có thể là dẫn xuất methylsulfonium của methylmercapten (methanethiol) có mùi khó chịu.",
+      "chứa": "Trong rễ có sarsasapogenin coniferin, acid chelidonic, mannit, asparagin, muối kali."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Măng thường dùng để ăn, có mùi dễ chịu, dùng rất tốt, cho người suy niệu, thấp khớp, thống phong, viêm phế quản mạn tính, đái đường, đánh trống ngực.",
+      "được_dùng": "Rễ được dùng cho các trường hợp giảm niệu của bệnh nhãn tim, các bệnh về thận, thuỷ thũng, vàng da. Ở Trung Quốc, Măng tây được dùng trị phổi nóng sinh ho và sát trùng, được dùng ngoài trị bệnh ngoài da, ghẻ, nấm và ký sinh trùng.",
+      "chữa": "Ghi chú: Dùng Măng như rau hoặc dùng dịch chiết. Người bị viêm bàng quang, viêm khớp cấp tính không nên dùng. Rễ dùng dưới dạng nước sắc, cao lỏng hay xirô. Không dùng cho người bị viêm đường tiết niệu cũng như người bị bệnh thần kinh."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

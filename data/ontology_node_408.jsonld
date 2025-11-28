@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ từ",
+      "ten_khac": "Khoai từ",
+      "ten_khoa_hoc": "Dioscorea esculenta (Lour.) Burk.",
+      "ma_taxon": "475628",
+      "ho": "Củ nâu (Dioscoreaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo, dài 4 – 5m, có củ thuôn dài, mọc thành chùm.",
+      "thân": "Thân tròn, mảnh, có lông sau nhẵn, có gai ở gốc.",
+      "lá": "Lá đơn, mọc đối, hình tim, đầu nhọn, dài khoảng 10 cm, rộng 10 – 17 cm, gân 9 – 13.",
+      "hoa": "Hoa đực thường mọc riêng lẻ, đôi khi tụ họp thành chùm dài đến 20 cm, bao hoa hình chén. mặt ngoài có lông; nhị 6, đính trên mép của đĩa, bao phấn hướng trong. Hoa cái hiếm thấy, xếp thành bông cong.",
+      "quả": "Quả nang, có cánh; hạt cũng có cánh."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Củ từ có nguồn gốc được cho rằng ở vùng Đông Dương và Thái Lan, bởi lẽ ở khu vực này, củ từ đã được đưa vào trồng từ thời cổ xưa, hơn nữa ở đây cũng có sự đa dạng cao về nguồn gen của loài Dioscorea esculenta (Lour.) Burkill.  Cho đến sau năm 1500 (đầu thế kỷ XVI), loài cây trồng này đã phát triển rộng rãi ra toàn vùng nhiệt đới châu Á. Bao gồm một phần lãnh thổ Ấn Độ, Trung Quốc, các quốc gia Nam Á, Đông Nam Á, các đảo lớn ở Thái Bình Dương, Tân Ghinê và sang đến tận vùng Caribê. Thái Lan, Malaysia, Philippin, Indonesia và Việt Nam là những quốc gia hiện trồng nhiều củ từ nhất trong khu vực.  Ở Việt Nam, củ từ dường như được trồng rải rác khắp các tỉnh, từ vùng núi thấp xuống đến trung du và cả ở đồng bằng. Tuy nhiên các tỉnh ở miền Trung (Quảng Nam, Quảng Ngãi, Phú Yên, Bình Định); Tây Nguyên và Đông Nam Bộ (Đồng Nai, Bình Dương, Tây Ninh) thường xuyên trồng và trồng với diện tích lớn hơn các tỉnh khác.  Củ từ là loại cây ưa sáng, trưa ẩm nhưng cũng có thể chịu được khô hạn trong thời kỳ cây sắp cho thu hoạch. Cây thích nghi cao với điều kiện khí hậu nhiệt đới điển hình, với nhiệt độ trung bình năm từ 22 – 23,5ºC, lượng mưa 1300 – 2000 mm/năm. Cây không chịu được thời tiết lạnh và vì thế, củ từ trồng ở các tỉnh phía bắc đều cho thu hoạch trước mùa đông. Củ từ có thể sống được trên nhiều loại đất, song loại đất thích nghi và cho thu hoạch cao là đất pha cát nhẹ hoặc đất đỏ bazan.  Là một loại cây trồng từ lâu đời, nên người ta đã tác động nhiều tới khâu chọn, tạo giống củ từ cho chất lượng và năng suất cao. Riêng ở vùng Đông Nam Á hiện nay đã đang trồng tới 4 – 5 giống (Cultivars) củ từ khác nhau. Nhưng xét về thực vật học, loài củ từ (Dioscorea esculenta (Lour.) Burkill) đã được chia ra thành 3 thứ (var. ), đó là:  D. esculenta var. spinosa (Roxb.) Prain et Burkill. D. esculenta var. jasciculata (Roxb.) Prain et Burkill D. esculenta var. esculenta (Roxb.)"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Củ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong củ từ có chứa protid (1,4%), lipid (0,1%), glucid (26,4%), celulosa (1,1%) và chất khoáng (0,6%) [Võ Văn Chi, 1996, Từ điển cây thuốc Việt Nam, tr.331]. Các tác giả Ấn Độ đã ghi nhận trong bộ The Wealth of India (1952) vol 3, tr.72, củ chứa 10,82% albuminoid, 1,72% chất béo và 71,29% tinh bột. Ngoài ra còn chứa saponin mà genin của nó là diosgenin [Phạm Hoàng Hộ, 2006, Cây có vị thuốc ở Việt Nam, tr.629].  Giống Dioscorea esculenta (Lour.) Burkill var. spinosa Knuth chứa manan, vitamin C, acid phytic và cyanidin – 3, 5, diglucosid [Trung Dược từ hải, vol I, p.1380]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Củ từ vị ngọt, the, dùng sống, tính hàn và hơi độc, nấu chín ăn thì ngọt không độc, có công năng bổ tràng vị. Sách “Cương mục” ghi: Củ từ vị ngọt, tính bình, có công năng bổ hư, ích khí lực, kiện tỳ vị, cường thận [TDTH, 1993, I: 1380]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Củ từ nấu chín ăn thì ngọt, ngon, không độc, bổ trường vị, dùng thay lương thực. Người hư nhiệt ăn củ tử nấu chín thì khỏi bệnh.  Củ từ thường dùng làm thuốc tiêu độc, tiêu ứ huyết, trị ho, khô cổ họng. Còn nếu nấu lấy nước uống để chữa tê thấp, các bệnh về thận, làm cho thông tiểu tốt và để chữa phù.  Ở Ấn Độ, củ từ tươi được giã nát đắp để trị sưng tấy (Srivastava, 1989: 47] [Chopra et al., 2001: 98]."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

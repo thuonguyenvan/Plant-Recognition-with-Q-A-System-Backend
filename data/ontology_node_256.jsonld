@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây bánh nem",
+      "ten_khac": "Dây bánh nem, Rễ vàng, Dây gan, Chửa vàng phùi (Thái)",
+      "ten_khoa_hoc": "Bowringia callicarpa Champ. ex Benth.",
+      "ma_taxon": "556202",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá chét thon, dai, dài 6-13cm, rộng 2,5-4cm, tròn ở gốc, nhọn nhiều hay ít, tù hay nhọn sắc ở đầu, nhẵn cả hai mặt; cuống dài 1,2-3cm, phình ở hai đầu.",
+      "hoa": "Hoa có cuống mảnh; đài dạng đấu, có 5 răng rất nhỏ; tràng hoa trắng, dài 13-15mm; nhị thành 2 bó; bầu có cuống, chứa 4-6 noãn.",
+      "quả": "Quả đậu hình thoi, dạng màng dài 2,5-3cm, rộng 1,5cm, chứa 1-2 hạt màu đỏ, bóng. Hoa tháng 6-8, quả tháng 9-11.",
+      "cây": "Bụi dạng dây leo, có nhánh nhẵn, có thể dài tới 20-25m.",
+      "thân": "Dễ nhầm với cây hoàng đằng vì rễ cũng có màu vàng.",
+      "cuống": "Cụm hoa ở nách lá, dạng ngù, dài 2-5cm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài phân bố ở Nam Trung Quốc, Campuchia, Lào, Việt Nam và Malaixia.",
+      "thường_mọc": "Thường mọc dưới tán rừng, rú bụi, dọc các sông suối từ 500m tới độ cao 1100m, nhiều nơi ở các tỉnh Hoà Bình, Vĩnh Phú, Hà Tây, Hải Hưng, Quảng Ninh, Ninh Bình, Nghệ An tới Quảng Nam – Đà Nẵng, Kontum.",
+      "Đặc điểm sinh trưởng": "Ra hoa quả ít, quả khi già trở nên khô xác, tự mở hạt thoát ra ngoài, gặp mưa lũ thường bị cuốn trôi. Cây có khả năng tái sinh cây chồi sau khi bị chặt. Tái sinh tự nhiên chủ yếu từ hạt. Thu hái rễ quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy có tài liệu nghiên cứu về thành phần hoá học của dây bánh nem. Gần đây, một số tác giả người Anh đã xác định trong một số loài mọc ở Tây Phi có chứa chất thuộc nhóm oligosacarid có tác dụng ức chế HIV. Đặc biệt là các chất thuộc nhóm oligomanosid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây bánh nem có tác dụng thanh nhiệt, giải độc, lương huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ sắc uống chữa tê thấp; có thể phối hợp với một số vị thuốc khác (như rễ Kim sương). Liều dùng 6-12g. Rễ nấu đặc lấy nước bôi chữa chốc lở, mụn nhọt. Ở Trung Quốc, rễ và lá dây bánh nem được dùng chữa thổ huyết, chảy máu cam, sốt nóng, phát ban do huyết nhiệt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hành nén",
+      "ten_khac": "Hành nén, Nén, Hành tăm, Tiểu toán",
+      "ten_khoa_hoc": "Allium ascalonicum L.",
+      "ma_taxon": "739210",
+      "ho": "Alliaceae (Hành)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sống dai, cao 15-50cm, hành to 2-3 cm, có cạnh, vẩy mỏng như giấy, thường có màu đỏ hay màu trắng.",
+      "lá": "Lá hình trụ nhọn, rỗng, tròn, màu xanh mốc.",
+      "hoa": "Cụm hoa dạng tán ở đầu một cán cao 20-50cm, rộng; tán hoa hình cầu. Bao chung hình bẹ, trắng. Hoa có 6 phiến hoa rời, màu trắng, hường hay tim tím; cuống hoa 1-1,5cm.",
+      "mùa hoa": "tháng 8-10",
+      "mùa quả": "tháng 11-1"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây được trồng làm rau ăn từ lâu đời ở tất cả các địa phương; thường trồng ở rẫy và ở vùng đồng bằng. Cây chịu được lạnh về mùa đông. Vào tháng 7-8, lúc lá khô, người ta đào lấy củ đem phơi khô, rồi để trong bóng mát."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân hành, củ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Củ Hành cũng chứa acid malic, phytin, các chất sulfid và tinh dầu chứa allicin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị cay, tính bình, không độc; có tác dụng làm ra mồ hôi, thông khí, hoạt huyết. Ta thường dùng thay Hành hoa làm thuốc kích thích tiêu hoá, kháng khuẩn, lợi tiểu, làm ra mồ hôi, điều kinh. Ở Ấn Độ, củ xem như có tác dụng kích dục."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường dùng làm gia vị: Lá dùng ăn sống hoặc xào nấu với các loại rau, thịt, củ dùng xào nấu. Nhân dân ta thường dùng củ hành muối làm dưa ăn, nhất là vào dịp Tết nguyên đán. Trong dưa hành, có nhiều loại men và acid lactic có tác dụng ngăn cản quá trình lên men thối ở ruột giúp cho cơ thể tránh được đầy hơi, nhiễm độc. Trong y học dân gian, ta thường dùng hành chữa thương hàn trúng phong, ác khí, nhức đầu lạnh nóng; mắt mờ tai điếc, thổ nục huyết, đàn bà thai động vú sưng, trẻ em trúng ác và sưng thũng.  Đơn thuốc:  Phong hàn, thời dịch, ôn nhiệt và sản hậu cảm mạo, nhức đầu sợ lạnh: Hành củ, Hương đậu xị, đều 15g, nước tiểu trẻ em một chung. Gừng tươi 3 lát, có thể thêm Chè hương 10g, cho vào 300ml nước sắc uống nóng, sau đó đắp chăn kín cho ra mồ hôi. Tiểu tiện bí: Hành củ dầm tươi với vài con gián đất đặt dưới rốn. Sang thũng: Đâm nát hành củ vắt lấy nước mà thoa. Ghẻ chốc, lở loét, sưng ngứa: Nấu hành lấy nước rửa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

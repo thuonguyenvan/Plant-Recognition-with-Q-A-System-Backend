@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhãn",
+      "ten_khac": "Nhãn, Lệ chi nô, Mạy ngận (Tày), Mác nhan, Lầy ngịn điặng (Dao)",
+      "ten_khoa_hoc": "Dimocarpus longan Lour.",
+      "ma_taxon": "191503",
+      "ho": "Sapindaceae (Bồ hòn)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá kép hình lông chim, mọc so le gồm 5 đến 9 lá chét hẹp, dài 7-20cm, rộng 2,5-5cm.",
+      "hoa": "Mùa xuân vào các tháng 2, 3-4 có hoa màu vàng nhạt, mọc thành chùm ở đầu cành hay kẽ lá, đài 5-6 răng, tràng 5-6, nhị 6-10, bầu 2-3 ô.",
+      "quả": "Quả có vỏ ngoài màu vàng xám, hầu như nhẵn (chỉ có một ô của bầu phát triển thành quả, các ô kia tiêu giảm đi).",
+      "cây": "Cây nhãn cao 5-7m.",
+      "thân": "vỏ cây xù xì, sắc xám, nhiều cành, nhiều lá um tùm, xanh tươi luôn, không hay héo và rụng như lá các cây khác.",
+      "Hạt": "Hạt đen nhánh có áo hạt trắng bao bọc."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cùi nhãn khi tươi có 77,15% nước, độ tro 0,01%, chất béo 0,13%, protit 1,47%, hợp chất có nitơ tan trong nước 20,55%, đường sacaroza 12,25%, vitamin A và B.",
+      "gồm chất": "Cùi khô (long nhãn nhục) chứa 0,85% nước, chất tan trong nước 79,77%, chất không tan trong nước 19,39%, độ tro 3,36%. Trong phần tan trong nước có glucoza 26,91%, sacaroza 0,22%, axit taetric 1,26%. Chất có nitơ 6,309%.",
+      "Các hợp chất": "Hạt nhãn chứa tinh bột, saponin, chất béo và tanin. Trong chất béo có các axit xyclopropanoit và axit dihydrosterculic C19H36O2 khoảng 17,4% (C. A. 1969, 71, 103424m).",
+      "dấu hiệu đặc trưng": "Hạt nhãn cạo bỏ lớp vỏ đen, thái mỏng tán bột rắc lên những vết thương chảy máu, hoặc trộn với dầu bôi lên nơi bị bỏng.",
+      "tìm thấy": "Trong lá nhãn có quexitrin, quexitin, tanin (C. A. 1949, 43, 8611 861lc), ngoài ra còn có β-sitosterol, epifriendelanol friedelin C30H52O và 16 -hentriacontanol (C. A. 1972,76] 1978y).",
+      "có hoạt chất": "Lá nhãn có vị nhạt, tính bình, có tác dụng chữa cảm mạo với liều 10-15g dưới dạng thuốc sắc."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài công dụng làm thực phẩm, long nhãn nhục là một vị thuốc nhân dân dùng để bồi bổ, chữa các bệnh hay quên, thần kinh kém, hay hoảng hốt, thần kinh suy nhược, không ngủ được.",
+      "được_dùng": "Ngày dùng 9 đến 10g dưới dạng thuốc sắc hay cao lỏng.",
+      "làm thuốc": "Hạt dùng ngoài hay dùng hoặc uống trong (rất ít dùng) với liều 3-9g.",
+      "chữa": "Hạt chữa các chứng chốc lở, bị đứt tay, đứt chân (tán nhỏ, rắc lên vết đứt chân, tay), gội đầu.",
+      "có tác dụng": "Theo tài liệu cổ, long nhãn vị ngọt, tính bình, vào 2 kinh tâm và tỳ. Có tác dụng bổ tâm tỳ, nuôi huyết, an thần, ích trí; dùng chữa huyết hư sinh hay quên, hồi hộp mất ngủ.",
+      "luu_y": "Những người đầy bụng kém ăn không dùng được."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ở Việt Nam đâu cũng có, nhưng nhiều và quý nhất là nhãn Hưng Yên. Có mọc ở miền Nam Trung Quốc, Thái Lan, Đông Ấn Độ.",
+      "thu hoạch": "Thu hoạch vào tháng 7-8.",
+      "ghi chú": "Có nhiều loại nhãn: Nhãn trơ cùi rất mỏng, không chế được long nhãn. Nhãn nước cùi rất nhiều nước, chế được long nhãn, nhưng phẩm chất kém, chế tốn nhiều công (18-20kg nhãn tươi mới được 1kg long nhãn). Nhãn lồng (vì khi quả nhãn gần chín người ta thường dùng lồng tre hay nứa để giữ chim, dơi khỏi ăn) loại này cùi dày và mọng.",
+      "làm thuốc": "Nhãn mua về để cả chùm cả vỏ, nhúng vào nước sôi 1-2 phút (không để lâu quá sẽ nứt vỏ), để nguyên cả chùm, ngày phơi, đêm sấy- chừng 36-42 giờ-cho đến khi khô vừa phải (lúc lắc quả nhãn thấy kêu lóc cóc) thì bóc vỏ, bỏ hạt, lấy cùi đem sấy cho đến khi cầm không dính tay là được.",
+      "xấy khô": "Nhiệt độ sấy không cao quá 50-60°C.",
+      "tỷ lệ chế biến": "Tỷ lệ chế biến: 100kg quả tươi cho 10-12kg long nhãn."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

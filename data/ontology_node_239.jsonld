@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba gạc phú thọ",
+      "ten_khac": "Ba gạc phú thọ, Ba gạc phi châu, Bầu giác",
+      "ten_khoa_hoc": "Rauvolfia vomitoria Afzel.",
+      "ma_taxon": "778751",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 4 -8 m, thường gặp dưới dạng cây bụi cao 3-4 m, phân nhánh nhiều.",
+      "thân": "Thân cành màu  nâu bạc, có nốt sần và vết sẹo của lá.",
+      "lá": "Lá mọc vòng 3 -5 cái, phần nhiều là lá 4, hình mũi mác đến bầu dục, đầu nhọn có thể dài đến 20 cm, rộng 7 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành xim hai ngả hình tán, hoa nhỏ, nhiều, màu trắng lục, đài hình chén nhẵn; cánh hoa xoăn, ống tràng phình ở 2 đầu, nhị dính ở họng tràng; bầu 2 ô, vòi nhụy có long ở đáy.",
+      "quả": "Quả hạch , riêng lẻ hoặc đôi một rời nhau, hình trứng hoặc hơi tròn, khi chín màu đỏ da cam, hạt dẹt, cong có khía. Toàn cây có nhựa mủ.",
+      "mùa hoa": "tháng 7",
+      "mùa quả": "tháng 9 – 11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ba gạc Phú Thọ có nguồn gốc hoang dại ở Châu Phi. Loài này cùng với ba gạc hoa đỏ là nguồn cung cấp nguyên liệu ba gạc chủ yếu của thế giới, để chiết xuất hoạt chất làm thuốc chữa huyết áp cao. Ba gạc Phú Thọ được phát triển hiện đầu tiên ở Việt Nam năm 1959 tại vùng Phú Hộ thuộc huyện Phù Ninh, tỉnh Phú Thọ hiện nay. Tuy nhiên, cho đến nay vẫn chưa xác định được cụ thể về xuất xứ của cây này là vốn mọc tự nhiên hay do người pháp đưa vào trồng tại Trại cây nhiệt đới Phú Hộ trước đây, sau trở nên hoang dại hóa. Đó là một cây bụi lớn, ưa ẩm, ưa sang. Cây còn nhỏ có thể hơi chịu bóng. Do khả năng tái sinh cây chồi tốt, nên phần lớn các cá thể còn sót lại ở vùng Phú Hộ hiện nay ( tổng số 56 cây – điều tra năm 1977) là cây chồi, đã bị chặt đốn nhiều lần. Cây sinh trưởng phát triển tốt trong điều kiện khí hậu và đất đồi vùng trung du. Những cây trồng lưu giữ tại vườn thuốc ngoại thành Hà Nội (Viện dược liệu) đã được trên 30 năm vẫn ra hoa quả nhiều hàng năm. Do số lượng cá thể hiện còn sót lại trong tự nhiên ít, nên ba gạc Phú Thọ cũng được đưa vào sách đỏ Việt Nam để bảo vệ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ rễ ba gạc Phú Thọ phơi trong râm hay sấy khô (Dược điển Việt Nam II, tập 3). Rễ có kích thước lớn hơn ba gạc hoa đỏ ( 4 -5 đến 9 cm) mặt ngoài vàng nâu, khía dọc."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chủ yếu là alkaloid tập trung ở rễ và lá. Ở rễ, hàm lượng alkaloid toàn phần là 1 – 1.5 %, tập trung 90% ở vỏ rễ. Cây trồng ở Việt Nam có vỏ rễ chứa 3.28 – 5.66% alkaloid toàn phần. Rễ chứa reserpine (0.2%). Ajmalin, reserpilin và một só alkaloid đặc biệt thuộc các nhóm yohimbin (sederin) và heteroyohimbin . Vỏ rễ là nguyên liệu để chiết xuất reserpine, ajmalin, reserpilin. Lá chứa 1% alkaloid là dẫn chất của heteroyohimbin và oxindol tương ứng. Ngoài ra, lá còn chứa các hợp chất flavonoid dưới dạng heterosid của kaempferol. Từ loài cây ba gạc này, đã chiết xuất được 0.05% reserpine và ajmalin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam, viên Rauvornin được điều chế từ cao ba gạc Phú Thọ đã được điều trị thử nghiệm chống tăng huyết áp, đặc biệt đối với những bệnh nhân tăng  huyết áp vừa và nhẹ. Ở Trung phi và tây phi, ba gạc Phú Thọ được dùng làm nguyên liệu để chiết xuất alkaloid do có hàm lượng alcaloid cao. Liều dùng: Viên Rauvornin 2 mg (alcaloid toàn phần), mỗi lần uống 1 -2 viên, ngày uống 2 lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cốt khí muồng",
+      "ten_khac": "Cốt khí muồng, Muồng lá khế, Muồng tây, Vọng giang nam , Muồng hoàng yến, Muồng hòe, Cốt khí hạt, Nhả pẻ po (Tày), Co nhả pẻ vài (Thái)",
+      "ten_khoa_hoc": "Senna occidentalis (L.) Link",
+      "ma_taxon": "168847",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi cao 1-2m, nhẵn, thơm.",
+      "lá": "Lá kép lông chim gồm 5-8 đôi lá chét hình trái xoan.",
+      "hoa": "Hoa màu vàng mọc thành chùm ở nách lá hay đầu cành.",
+      "quả": "Quả đậu dẹp, hẹp, hơi cong, dài 15cm, thắt lại giữa các hạt, chứa 10-20 hạt dẹt, cứng, nhẵn bóng.",
+      "mùa hoa": "tháng 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài liên nhiệt đới, mọc hoang ven đường, các bãi cỏ, và cũng được trồng. Gieo hạt vào mùa xuân. Khi cây trưởng thành, người ta thu hái thân và lá vào mùa hè và thu, phơi khô dùng dần. Thu hái quả chín, phơi khô, đập lấy hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt – Semen Cassiae Occidentalis, thường gọi là Vọng giang nam. Rễ, thân, lá cũng được dùng."
+    },
+    {
+      "@type": "Thành phần",
+      "Các hợp chất": "Trong cây có các hợp chất anthraquinon. flavonoit và chất nhầy; còn có một albumin độc.",
+      "chứa": "Trong hạt có physcion, physcion -l- glucosid, 1,8-dihydroxy-2-methyl anthraquinon và N-methylmorpholin.",
+      "có hoạt chất": "Trong lá có rất ít oxymethyl anthraquinon. Hoa chứa physcion, emodin, physcion-l-glucosid. Trong rễ có chrysophanol, physcion, emodin, islamdicin, helminthosporin.",
+      "thành phần": "Từ lá đã phân lập được 2 flavonoit. Trong hạt có 36% chất nhầy thuộc loại galactomannon."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chỉ định và phối hợp hạt được dùng trị Huyết áp cao, đau đầu, gan nóng đau mắt Táo bón thường xuyên, lỵ, đau dạ dày, ăn uống khó tiêu Viêm ruột cam tích. Liều dùng 10-15g, dạng thuốc sắc.",
+      "được_dùng": "Thân và lá dùng ngoài trị rắn cắn và sâu bọ đốt. Lá khô tán bột và hãm uống trị sung huyết phổi. Thân lá hãm uống hay sắc uống trị nhiễm trùng đường tiết niệu. Dùng ngoài lấy thân, lá giã nát đắp.",
+      "chữa": "Huyết áp cao, đau đầu, táo bón; dùng hạt Cốt khí muồng 15-30g rang và xay, nấu nước uống. Đau đầu kéo dài; dùng 30g lá Cốt khí muồng, 240g thịt lợn nạc, thêm muối, nấu ăn như canh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Phụ nữ có mang không nên dùng."
+    }
+  ]
+}

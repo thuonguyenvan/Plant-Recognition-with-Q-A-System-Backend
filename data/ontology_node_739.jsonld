@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sui",
+      "ten_khac": "Sui",
+      "ten_khoa_hoc": "Antiaris toxicaria (Pers.) Lesch.",
+      "ma_taxon": "133462",
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sui là một loại cây lớn, có thể cao tới 30m, có gốc rất lớn.",
+      "lá": "Lá nhị lệ, có cuống dài 8-10 cm, phiến lá dài chừng 6cm, rộng khoảng 5,5cm. Cả hai mặt lá đều hơi nháp.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, cùng gốc: hoa đực mọc tụ trên một đế hoa phồng phồng khum lên, quanh đế hoa có tổng bao gồm nhiều hang lá bắc, hoa cái mọc đơn độc trên một đế cũng có tổng bao.",
+      "quả": "Quả thịt dài 18mm, dày 12mm, hạt hình trứng, dài 13mm, rộng 8mm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây sui mọc hoang khá nhiều ở các miền núi Việt nam. Ngoài ra còn mọc hoang cả ở miền Nam Trung quốc (Hải Nam), Ấn Độ, Indonexia và Malaixia. Nhân dân vẫn thường dùng lấy nhựa sui bằng cách băm vỏ cây, thu nhập nhựa chảy ra, dùng để tẩm tên thuốc độc bằng tre hay bằng kim loại để săn bắn thú dữ lớn. Vỏ cây sui được làm chăn đắp hay may quần áo hoặc làm túi đựng các đồ vật."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhựa sui được nghiên cứu tại các nước từ lâu. Năm 1890 người ta đã phân tích lấy được từ trong nhựa sui hai chất glucozit làm mạnh tim, độc gọi là anpha antiarin (α-antiarin) và beta antiarin (β-antiarin), αC29H42O11.4H2O là một chất bột có tinh thể, phản ứng trung tính. Nó tan trong 250 phần nước ở 200 và 27 phần nước sôi, 70 phần rượu 850, 2.800 phần ester",
+      "Các hợp chất": "Thuốc thử kiliani (axit sunfuric có pha sắt ba dunfat) hoà tan antiarin cho dung dịch màu vàng sau ngả màu vàng cam",
+      "thủy phân": "HCl pha loãng trong môi trường rượu đun sôi, thuỷ phân antiarin để cho một đường tương tự như ramnoza gọi antiaroza hay d gulometyloza C6H12O5 và một chất không đường có tinh thể gọi là antiarigenin có độ chảy 180oC",
+      "dấu hiệu đặc trưng": "Α-antiarin chảy ở 242oC (có tài liệu nói độ chảy của antiarin.4H2O là 220-225oC) độ quay cực αD=-40",
+      "chứa": "β-antiarin C29H42O11.3H2O có cùng một công thức như α-antiarin, nhưng ngậm có 3 phân tử nước. thuỷ phân β-antiarin cho 1.ramnoza và antiarigenin",
+      "tìm thấy": "β-antiarin có tinh thể hình kim hay hình trụ. Độ chảy 225oC (có tài liệu nói 206-207oC)",
+      "đã nghiên cứu": "Cả hai chất α-antiarin β-antiarin khi thuỷ phân mạnh đều cho dihydroantiagenin. Do đó các tác gỉ Tschesche và Haupt (1936) cũng như Reichstein (1948) cho rằng hai chất antiarin chỉ khác nhau do phần đường mà thôi và antiaroza hay d.gulometyloza ở antiarin cũng chỉ là đồng phân cỏa 1.ramnoza (ở antiarin)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Có người cho rằng nhựa sui uống vào chữa đau bụng và gây ỉa mạnh nhưng việc sử dụng rất nguy hiểm có thể chết người. Thường người ta chỉ hay dùng nhựa sui tẩm tên độc để săn bắn các thú rừng lớn. Thịt những thú rừng săn được mềm mại ăn được.",
+      "làm thuốc": "Muốn làm chân sui thay thế vỏ sui may quần áo, người ta ngâm vỏ cây sui trong hồ ao trong vài ngày. Sau đó bóc lấy vỏ. khi làm vỏ cần chú ý tay và cánh tay không có vết sây sát, thương tổn, vì nếu để nhựa sui vào máu thì bị độc rất nguy hiểm. Cần chú ý nghiên cứu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

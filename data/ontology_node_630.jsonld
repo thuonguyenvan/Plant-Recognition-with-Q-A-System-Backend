@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xương khô",
+      "ten_khac": "Xương khô, Cành giao, San hô xanh",
+      "ten_khoa_hoc": "Euphorbia tirucalli L.",
+      "ma_taxon": "162855",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, có thể cao tới 4-8.",
+      "thân": "Thân to bằng cổ tay, nhiều cành gần như mọc vòng, hình trụ, dài, màu lục, nom như cành san hô.",
+      "lá": "Các cành nhỏ có lá. Lá hẹp, rụng rất sớm, dài 12-16mm, rộng 2mm.",
+      "hoa": "Cụm hoa có bao chung nhỏ, 5 tuyến hình bầu dục, nhị nhiều; nhụy có 3 vòi chẻ đôi, đầu nhụy hình đầu.",
+      "quả": "Quả nang ít lông, có 3 mảnh lồi. Hạt hình trái xoan nhẵn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài nguyên sản ở châu Phi (Madagascar), được nhập trồng làm cây cảnh, có khi được trồng làm hàng rào. Có thể thu hái cây quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây –\u00a0Herba Euphorbiae Tirucalli."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây chứa euphorbon; từ nhựa tươi đã tách được isoeuphorol, từ nhựa khô có một ceton là euphorone."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Trung Quốc, người ta dùng toàn cây trị thiếu sữa, nấm ngoài da, khớp xương buốt đau. Ở Ấn Độ, nhựa cây được dùng trị mụn cóc, thấp khớp, đau thần kinh, đau răng, trị ho, hen suyễn, đau tai và dùng duốc cá. Ở Inđônêxia cũng dùng nhựa trị bệnh ngoài da, rò, mụn mủ, bướu, táo bón và làm thuốc tẩy. Ở Thái Lan, nhựa tươi cũng được dùng ngoài trị mụn cóc. Ở nước ta, cành lá cũng được dùng trị bệnh ngoài da, táo bón và liệt dương (Viện Dược liệu); rễ cây dùng trị loét mũi và trĩ. Nhân dân cũng dùng cành tươi ngâm rượu chữa đau răng. Ở nhiều nước (Ấn Độ, Inđônêxia, Philippin,… ) người ta dùng cây và nhựa để duốc cá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Nhựa thường dùng bôi; cành và rễ dùng dưới dạng thuốc sắc.",
+      "làm thuốc": "Ðơn thuốc:\u00a0Chữa đau răng: Hái lấy chừng 50g cành Xương khô, rửa sạch, ngâm ngay vào trong 100ml cồn 90°. Mỗi lần dùng một thìa cà phê (15ml) cho vào cốc nước, ngâm một chốc, sau đó nhổ đi; ngày ngậm 3-4 lần."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

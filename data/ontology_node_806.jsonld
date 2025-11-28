@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quy",
+      "ten_khac": "Con quy",
+      "ten_khoa_hoc": "Alphitobius diaperinus Panzer",
+      "ma_taxon": "53926",
+      "ho": "họ Quy Tenebrionidae. Bộ cánh cứng Coleopterae.",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Con quy là một loại côn trùng nhỏ, chỉ dài 2- 3mm, rộng 1-2 gram, cánh cứng màu đen, sinh nở rất nhanh. Thường một cặp con quy sau 30- 35 ngày sinh ra được từ 35-50 con quy nhỏ. Sau khi giao phối, 10-12 ngày thấy xuất hiện giun con, và sau 30-35 ngày con quy trưởng thành. Kết quả theo dõi 3 thí nghiệm:  Thí nghiệm 1 giao phối ngày 2-5-1957, ngày 2-6 thấy xuất hiện ấu trùng, 22-6 thấy xuất hiện con quy khoảng 60 con. Thí nghiệm 2: giao phối ngày 10-6-1957, ngày 22 xuất hiện ấu trùng, ngày 7-7 xuất hiện khoảng 50 con. Thí nghiêm 3: 23-7-1960 giao phối, 1-8 xuất hiện ấu trùng, 25-8 xuất hiện quy con (Đỗ Tất Lợi)."
+      },
+      "distribution": {
+        "@type": "Phân bố"
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Con quy thường sống ở những nơi tích trữ lương thực, nhất là ngũ cốc. Một số người thường nuôi con quy bằng bỏng ngô để lấy phân (cứt quy) làm thuốc. Phân quy thu được phải qua rây nhỏ để loại bỏ con quy, sâu quy và bỏng ngô là thức ăn của quy rồi đem sao cho khô và thơm dùng nguyên chất hay phối hợp với một số vị thuốc khác. Phân quy gồm những hạt rất nhỏ, màu nâu xám nhạt, không mùi, vị nhạt."
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Năm 1978, Trần Thả và Phạm Nguyệt Hạnh, trường Đại học y khoa miền núi ở Bắc Thái đã phân tích 3 mẫu quy, mỗi mẫu 10g bằng phương pháp sắc ký trên giấy cho thấy các axit amin sau đây: Ly sin (trên 70mg%), acginin (trên 70mg%) histidin (trên 50mg%), valin (trên 50mg%), lơxin và isoloxin (trên 50mg%), threonin (trên 40mg%) metionin (trên 30mg%) phenylanin (trên 30mg%) (Công trình nghiên cứu khoa học y dược 1978 Nhà xuất bản y học Hà Nội 1979, 189). Chúng tôi cho rằng trong phân quy còn những men tiêu hóa chất bột nhưng chưa có dịp kiểm tra (Đỗ Tất Lợi)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị"
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Nhân dân thường dùng phân quy sao cho khô và thơm làm thuốc chữa những chứng cam tích (ăn uống không tiêu, gầy yếu …) của trẻ em. Có thể dùng riêng hay phối hợp với một số vị thuốc khác. Liều dùng hằng ngày 2-4g phân quy.  Đơn thuốc có phân quy dùng trong nhân dân  Chữa trẻ em gầy còm, ăn uống kém và không tiêu: Phân quy 10g, bạch chỉ 2g, sử quân tử 2g, tất cả tán nhỏ, ngày dùng 2-3g bột này, chia làm 2 hay 3 lần uống."
+      },
+      "preparation": {
+        "@type": "Cách dùng"
+      },
+      "caution": {
+        "@type": "luu_y"
+      },
+      "url": "https://tracuuduoclieu.vn/quy.html"
+    }
+  ]
+}

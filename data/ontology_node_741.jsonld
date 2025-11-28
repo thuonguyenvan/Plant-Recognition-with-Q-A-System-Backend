@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tầm gửi gạo",
+      "ten_khac": "Mộc vệ trung quốc, Tầm gửi, Chùm gởi, Mạy phác (Tày)",
+      "ten_khoa_hoc": "Taxillus chinensis (DC.) Danser",
+      "ma_taxon": "425805",
+      "ho": "Loranthaceae (Tầm gửi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ, có bụi hoặc cây bụi nhỏ, một vài trường hợp dây leo. Không rễ hoặc có rễ (đúng hơn là giác mút), nửa ký sinh ở các phần trên mặt đất của cây chủ, ít khi ký sinh trên rễ của cây chủ.",
+      "thân": "Thân gỗ, giòn, cành có thể chia đốt, không có lông đến lông tơ.",
+      "lá": "Lá đơn, nguyên, mọc đối hoặc chụm ba ( ít khi giảm thành vảy hoặc không có lá ), phiến lá hình mác đến oval, gân lá hình lông chim hoặc song song . Không có lá kèm.",
+      "hoa": "Hoa lưỡng tính hoặc đơn tính .Cụm hoa dạng xim , bông, chùm, tán mọc ở kẽ lá bắc( hai lá bắc hợp sinh trông giống như một đài phụ bên ngoài đài hoa).Bao hoa có đài, tràng phân biệt hoặc tiêu giảm chỉ còn lại một loại (thường tràng tiêu giảm chỉ còn là vành nhỏ hoặc không còn ).Đài một vòng, lá đài hợp , hình thuỳ hay hình chén, mép nguyên khía răng .Tràng (3-)5- 6(-9), một vòng thường cánh hợp, hình ống màu vàng, da cam, hoặc đỏ.",
+      "quả": "quả mọng hay quả nạc, vỏ thường có chất dính giúp cho việc phát tán trên thân cây chủ.1 – 3 hạt, không có vỏ, nhiều nội nhũ, có 1 – 3 phôi khá phân hoá. Hầu hết hạt của các loại tầm gửi đều được phủ bởi 1 lớp chất lỏng sền sệt trên bề mặt,điều này cho phép chúng bám được trên cây chủ.",
+      "mọc": "Xem thêm: Nghiên cứu đặc điểm vi phẫu của thân và lá cây tầm gửi cây gạo (Taxillus chinensis)"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây tầm gửi gạo phân bố ở khắp các tỉnh trên cả nước, từ đồng bằng đến trung du miền núi.",
+      "thường_mọc": "Cây thường mọc, ăn bám trên những cây gỗ lớn như: Cây đa, cây gạo và cây gỗ nhỏ như cây Dâu (Tầm gửi dâu rất quý và hiếm). Ở đây chúng ta đang tìm hiểu về tầm gửi trên cây gạo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Nghiên cứu của Vũ Xuân Giang (2014) đã xác định được trong dịch chiết ethanol của Tầm gửi gạo có chứa những hoạt chất có tác dụng sinh học như trans-phytol, alpha-tocopherol quinone, afzeline, quercitrin, catechin và quercituron. Đa số các thành phần này đều có tác dụng chống oxy hóa, bẫy gốc tự do, bảo vệ màng tế bào. Đặc biệt, catechin là một hợp chất phenol có nhiều trong chè xanh, có tác dụng chống oxy hóa, giảm nguy cơ mắc bệnh tim mạch, đột quỵ.  Một số nghiên cứu cho thấy catechin còn có tác dụng ngăn hình thành sỏi canxi, có thể được dùng để điều trị sỏi tiết niệu, sỏi thận, sỏi bàng quang. Cao lỏng Tầm gửi gạo còn thể hiện tác dụng chống oxy hóa thông qua làm giảm hàm lượng malonyl dialdehyd (MDA) dịch đồng thể gan. Trên mô hình gây phù nề thì nhận thấy cao lỏng Tầm gửi gạo có tác dụng chống viêm cấp. Tác dụng chống viêm của Tầm gửi gạo liều 20g/kg tương đương với tác dụng của aspirin liều 150 mg/kg. Những nghiên cứu này đã phần nào chứng minh cách sử dụng Tầm gửi gạo theo kinh nghiệm dân gian dùng để bổ can thận, chữa phong thấp, đau nhức là có cơ sở.  Bo Ding và cs (2013) phân lập 4 dẫn chất hemiterpenoid, taxilluside A-D từ thân và lá tầm gửi. Trong số các chất này, chất C và D có tác dụng ức chế tăng nồng độ calci trong cơ tim.  Lin Zhang và cs (2013) chiết polysaccharide bằng nước nóng từ gốc tầm gửi, sau đó phân tách tiếp thu được các phân đoạn TCP1-3. Phân tích cấu trúc cho thấy thành phần đường của nó gồm fructose, glucose, xylose, arbinose và rhamnose. Đây là một polysaccharide gắn với protein. Các phân đoạn TCP2, 3 có hoạt tính chống oxy hóa rõ rệt và cũng có tác dụng điều hòa miễn dịch."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây gồm: Thân, lá và cành nhỏ đều được dùng làm thuốc. Theo kinh nghiệm những lá to và dầy, không mục nát thì tốt hơn những lá mỏng, nhỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong tầm gửi cây gạo có các chất như: Trans-phytol, alpha-tocopherol quinone, afzeline, quercitrin, catechin và quercituron. Trong đó hoạt chất catechin trong cây tầm gửi gạo có tác dụng ngăn chặn sự hình thành sỏi canxi, rất tốt cho những bệnh nhân mắc sỏi thận, sỏi bàng quang, sỏi tiết niệu.  Xem thêm: Nghiên cứu thành phần hóa học của cây Tầm gửi gạo Taxillus chinensis (DC) Dans. sống trên cây gạo"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo y học cổ truyền, mỗi loại tầm gửi lại có một công dụng khác nhau. Loại được đánh giá cao trong các loại cây tầm gửi là tầm gửi mọc trên cây gạo tía. Có một thời gian, tầm gửi gạo còn được ví như cây bách bệnh vì tác dụng điều trị được nhiều chứng bệnh của vị thuốc này.",
+      "có tác dụng": "Tầm gửi gạo có các tác dụng chính như sau:  Tác dụng hỗ trợ điều trị bệnh sỏi thận Hỗ trợ điều trị sỏi bàng quang, sỏi đường tiết niệu Làm thuốc hỗ trợ điều trị viêm cầu thận Tác dụng tốt cho những bệnh nhân mắc bệnh xương khớp, phong tê thấp Điều trị bệnh hậu sản ở phụ nữ sau sinh"
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa viêm cầu thận, sỏi bàng quang, sỏi thận: Tầm gửi gạo 15g, kim tiền thảo, rễ cỏ tranh, thổ phục linh, cây mã đề mỗi loại 10g. Đem các nguyên liệu này sắc cùng với 1,5 lít nước rồi uống hàng ngày.  Đây là bài thuốc có tác dụng giúp độc tố, cặn bã trong thận được đào thải ra bên ngoài tốt hơn.",
+      "được_dùng": "Hiện nay, trên thị trường sản phẩm tốt nhất về hỗ trợ phòng ngừa và bảo vệ “thận” chứa thành phần chiết xuất của dược liệu Tầm gửi gạo là Dưỡng thận đan của Công ty TNHH Tuệ Linh.  Dưỡng thận đan  Sản phẩm Dưỡng thận đan là sự kết hợp từ 7 vị thuốc nổi tiếng (Kim tiền thảo, Tầm gửi gạo, Cỏ mần trầu, Mã đề, Cối xay, Cỏ tranh, Thổ phục linh), với 100% dược liệu tự nhiên, được trồng theo tiêu chuẩn GACP – WHO. Và được đưa vào sản xuất trong dây chuyền sản xuất đạt tiêu chuẩn GMP – WHO của công ty TNHH Tuệ Linh.",
+      "có tác dụng": "Lợi niệu, hỗ trợ tăng cường chức năng thận, tăng khả năng đào thải các chất tích tụ lâu ngày trong cơ thể qua đường tiết niệu. Hỗ trợ giảm các triệu chứng đái đỏ, đái đục, đái rắt, đái buốt do viêm thận cấp và mạn tính. Hỗ trợ phòng ngừa và làm giảm nguy cơ sỏi thận, sỏi tiết niệu, sỏi bàng quang.",
+      "làm thuốc": "Hình ảnh sản phẩm Dưỡng thận đan  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Tầm gửi gạo. Nếu cần tư vấn, tìm hiểu thêm về cây Tầm gửi gạo và sản phẩm Dưỡng thận đan bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

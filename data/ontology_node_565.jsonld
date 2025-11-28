@@ -1,0 +1,232 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xoan rừng",
+      "ten_khac": "Xoan rừng, Sầu đâu cứt chuột, Nha đảm (tử), Sầu đâu rừng",
+      "ten_khoa_hoc": "Brucea javanica (L.) Merr.",
+      "ma_taxon": "184507",
+      "ho": "Simaroubaceae (Thanh thất)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá kép lông chim lẻ, mọc so le, gồm 7 – 9 lá chét mọc đối, hình trứng, gốc tròn, đầu nhọn, mép có răng thô tù, hai mặt có lông mềm, dày hơn ở mặt dưới; cuống lá dài có lông.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm xim; hoa nhỏ, đơn tính, khác gốc; lá bắc nhỏ dễ rụng; đài 4 răng hình mác; tràng 4 cánh thuôn, có lông tuyến ở đầu; hoa đực có 4 nhị, nhụy tiêu giảm; hoa cái có 4 nhị rất ngắn, bầu có 4 lá noãn rời, đầu uốn cong, mỗi ô chứa 1 noãn.",
+      "quả": "Quả hạch, hình bầu dục, khi chín màu đen; hạt hình trứng dẹt, màu nâu đen, vị rất đắng.",
+      "cây": "Cây nhỏ, mọc thành bụi, cao 1 – 2m. Thân mềm, lúc non có lông, sau nhẵn và có màu nâu nhạt.",
+      "thân": "Thân mềm, lúc non có lông, sau nhẵn và có màu nâu nhạt.",
+      "mùa hoa": "tháng 3 – 4",
+      "mùa quả": "tháng 5-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Brucea J. F. Mill, có 3 loài ở Việt Nam, trong đó 2 loài được dùng làm thuốc là xoan rừng (B. javanica (L.) Merr.) và mạy téc (B. mollis Wall. ex Kurz). Xoan rừng phân bố từ vùng Nam Á, gồm Ân Độ, Xrilanca sang phía đông là Campuchia, Việt Nam, đảo Hải Nam Trung Quốc. Xuống phía nam, cây trở nên hiếm dần ở Thái Lan, Malaysia, đảo Molucca (Indonesia) và Australia. Có tài liệu cho rằng, xoan rừng có mặt ở Malaysia là do nhập trồng.  Ở Việt Nam, xoan rừng phân bố rải rác khắp các tỉnh thuộc vùng trung du, núi thấp (dưới 600 m) và cả ở đồng bằng. Cây mọc tập trung nhiều nhất ở các tỉnh dọc ven biển, từ Quảng Ninh đến Đồng Nai. Xoan rừng cũng gặp nhiều ở tất cả đảo lớn như Cát Bà, Hòn Mê, Lý Sơn, Hòn Hèo, Côn Đảo và Phú Quốc. Xoan rừng là cây ưa sáng, chịu được khô hạn và nắng nóng, thường mọc lẫn trong các quần xã cây bụi ở đồi, nương rẫy, ven rừng núi đá vôi. Ở các vùng đồng bằng từ Thanh Hóa trở vào, xoan rừng mọc lẫn trong các lùm bụi quanh làng. Cây có thể sống được trên nhiều loại đất, kể cả đất đồi khô cằn cũng như loại đất cát ở các truông gai ven biển. Xoan rừng có hoa quả rải rác gần như quanh năm, song mùa hoa quả chính của cây ở các tỉnh phía nam thường sớm hơn ở phía bắc khoảng một tháng. Hoa xoan rừng thụ phấn chủ yếu nhờ côn trùng, tái sinh tự nhiên tốt từ hạt. Khi cây bị chặt phá, phần còn lại vẫn có khả năng sinh cây chồi.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hóa"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "thường mọc lẫn trong các quần xã cây bụi ở đồi, nương rẫy, ven rừng núi đá vôi. Ở các vùng đồng bằng từ Thanh Hóa trở vào, xoan rừng mọc lẫn trong các lùm bụi quanh làng. Cây có thể sống được trên nhiều loại đất, kể cả đất đồi khô cằn cũng như loại đất cát ở các truông gai ven biển."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả chín loại bỏ vỏ và tạp chất phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả xoan rừng chứa albumin độc, brutoxin, alcaloid (brucamarin), dầu béo 20 – 23%, trong dó có acid oleic, triglycerid, acid béo 26 c, acid brucelic, ngoài ra còn có tinh dầu, saponin.  Xoan rừng chứa nhiều quassinoid đắng là thành phần chính. Quassinoid thuộc nhóm diterpen mạch vòng gọi là picrasan.  Xoan rừng còn chứa các glycosid của quassinoid như các brucein A – H và Q, các dehydrobucein A và B 3, 4 – dihydrobrucein A, brusatol (yatansin), dehydrobrusatol, bruceantin, bruceantinol, dehydrobruceantinol, bruceantarin, acid bruceacetolic, bruceen, các bruceosid A – F, yadanziolid A – c, yadanjiosid A – K và M – p và yadanzigan, bruceantinosid A, bruceolid, dehydrobruceantinol, yadanzigan, yadanziolid A – D, yadanziosid A – p.  Thân cây chứa 3 triterpenoid nhóm apotirucallan: bruceajavanin A, dihydrobruceajavanin A, bruceajavanin B và một alcaloid glycosid là bruceacanthinosid (CA 122: 128592 z).  Lá có glycosid (20 R) – o – (3) – a – L. arabinopyranosylpyranosyl – pregn – 5 – en – 3 ß, 20 – diol (CA 122: 261 086 d).  Bằng nuôi cấy mô, nhiều chất đã được lạo ra là 5,11 – dimethoxycanthin – 6 – 011, canthin – 6 – on – 3 – N oxyd, 11- hydroxycanthin – 6 – on, canthin – 6 – 011, 5 – methoxycan – thin – 6 – on và 11 – methoxycanthin – 6 – on (CA 120: 101 909 e).  Hàm lượng chất chiết tan trong nước không được dưới 18%, trong ethanol loãng không dưới 26%. Hàm lượng chì và cadmi không quá theo thứ tự 10,0 và 0,3 mg/kg.  (WHO monographs on selected medicinal plants, vol. I, 1999)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả xoan rừng có vị đắng, tính mát, hơi có độc, vào kinh đại trường, có tác dụng sát trùng, tiêu độc, chỉ lỵ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả xoan rừng được dùng chữa lỵ amíp, sốt rét. Ngày dùng 4 – 6g, dạng thuốc sắc hoặc thuốc bột. Dùng ngoài chữa trĩ ngoại (giã nát nhân hạt hoặc ép lấy dầu đắp và bôi ngoài).  Xoan rừng có độc, uống quá liều có thể gây đau bụng, nôn mửa, kém ăn, người mệt.  Kiêng kỵ: Suy nhược toàn thân, tỳ vị hư hàn không nên dùng.  Muốn giảm độc tính của xoan rừng, dùng nhân hạt đã ép loại bỏ hết dầu. Lá xoan rừng được dùng nấu nước tắm chữa ghẻ và giã nhỏ đắp chữa trĩ ngoại. Rễ xoan rừng phối hợp với rễ na và lá cây ngâu rừng sắc uống chữa sốt rét.  Theo tài liệu của Tổ chức y tế thế giới; các dược điển và hệ thống y học cổ truyền dùng quả xoan rừng điều trị lỵ amíp và sốt rét; và theo y học dân gian dùng làm thuốc đắp trị nhọt, bệnh nấm da, giun tóc, giun đũa, sán dây, vẩy cám ở da, rết cắn, trĩ, lách to. Hạt và dầu hạt trị hột cơm và chai chân tay. Quả xoan rừng điều trị bệnh do Trichomonas, hột cơm và mụn cóc.  Liều uống quả xoan rừng mỗi ngày để điều trị lỵ amíp là 4 – 6g dưới dạng thuốc sắc hoặc bột, chia làm 3 lần uống, trong 3-7 ngày; để điều trị sốt rét: 3 – 6g chia làm 3 lần uống sau bữa ăn, trong 4-5 ngày.  Chống chỉ định: không dùng quả xoan rừng cho trẻ em, phụ nữ mang thai và phụ nữ cho con bú.  Trong y học cổ truyền Trung Quốc, quả chín xoan rừng là thuốc trị sốt rét và lỵ. Dùng ngoài để điều trị hột cơm và mụn cóc. Trong y học dân gian Ân Độ, xoan rừng phối hợp với các vị khác trị trĩ, hột cơm, mụn cóc, loét và ung thư. Lá dùng đắp trị lách to, vảy cám (da), bệnh nấm da, nhọt và rết cắn. Nước sắc lá trị đau bụng, ho và ngộ độc. Ở một số nước Đông Nam Á, nhân dân dùng hạt và rễ xoan rừng trị lỵ amíp, tiêu chảy, sốt rét và sốt. Ở Australia, thổ dân dùng xoan rừng trị đau răng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa lỵ cấp tính (thường gặp ở lỵ do amíp):  Quả xoan rừng (khổ luyện tử), hoàng liên gai, hạt dưa hấu, bồ kết, hạt cau, đại hoàng, mỗi vị 20 g. Tán bột, uống mỗi ngày 20g, chia làm hai lần. Quả xoan rừng, hoàng liên gai, binh lang, trần bì, ngô thù, mỗi vị lOOg; anh túc xác 20g. Tán bột, làm viên, mồi ngày uống 20g, chia làm hai lần.  Chữa lỵ mạn tính (thường gặp ở lỵ do amíp):  Quả xoan rừng 100g, sáp ong 50g, buồng cau rũ (để làm áo). Tán bột làm viên, ngày uống 10g, chia làm hai lần uống. Quả xoan rừng, bách thảo sương, sáp ong, liều lượng bằng nhau. Tán nhỏ làm viên, ngày uống 10g, chia làm hai lần.  Chữa viêm túi mật, viêm đường dẫn mật, sỏi túi mật, sỏi đường dẫn mật:  Quả xoan rừng 6g; kim tiền thảo, nhân trần, mỗi vị 40g; sài hổ, mã đề, mỗi vị 16g; chi tử 12g; chỉ xác, uất kim, mỗi vị 8g; đại hoàng 4g. sắc uống ngày một thang."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

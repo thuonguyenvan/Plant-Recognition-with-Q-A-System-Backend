@@ -1,0 +1,196 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Ngô đồng",
+            "ten_khac": "Vạn linh, sen núi",
+            "ten_khoa_hoc": "Jatropha podagrica Hook.",
+            "ma_taxon": "154558",
+            "ho": "Thầu dầu (Euphorbiaceae)",
+            "Mô tả": {
+                "cây": "Cây nhỏ, cao 30-60cm, có khi cao hơn.",
+                "thân": "Thân có gốc phình to.",
+                "lá": "Lá mọc so le, hình bầu dục hoặc hình trứng, gần tròn, mép khía nông thành 5 thùy; cuống lá dính vào trong phiến lá, gân tỏa hình chân vịt; lá kèm chia thành phiến hẹp.",
+                "hoa": "Cụm hoa mọc ở kẽ lá thành ngù, màu đỏ; hoa có 5 cánh đài.",
+                "quả": "Quả nang đường kính 1,5 cm.",
+                "mùa hoa": "tháng 5-7"
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Jatropha L. trên thế giới có khoảng 175 loài, phân bố rộng rãi khắp các vùng nhiệt đới. Ở Việt Nam có 5 loài, chủ yếu được trồng làm cảnh trong các vườn gia đình, các vườn thuốc.",
+                "Bộ phận sử dụng": "Lá và vỏ thân"
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": ""
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": ""
+            },
+            "Thành phần": {
+                "thành phần": "Nhựa mủ ngô đồng chứa 2 peptid cyclic là podacyclin A và podacylin B Hạt chứa 46% dầu béo, trong đó có acid palmitric 9%, acid oleic 11%, acid linoleic 77% Theo tài liệu khác , dầu béo chứa 15% acid béo no trong đó có 0,26% acid arachidonic và 14,6% acid oleic."
+            },
+            "Tính vị": {
+                "Có vị": "Theo y học cổ truyền Trung Quốc, ngô đồng có vị ngọt đắng, tính hàn, có tác dụng thanh nhiệt, giải độc, tiêu thũng, chỉ thống."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Theo kinh nghiệm dân gian, vỏ thân ngô đồng được dùng làm thuốc tẩy gây nôn, chữa táo bón. Lá ngô đồng chữa ghẻ lở và cuống lá giã nát, đắp chữa sa tử cung. Để chữa ho ra máu lấy lá và thân ngô đồng giã giập, chế nước sôi uống."
+            },
+            "Cách dùng": {
+                "được_dùng": ""
+            },
+            "luu_y": {
+                "luu_y": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hồ tiêu",
+      "ten_khac": "Hồ tiêu, Tiêu, Hạt tiêu, Mạy lòi (Tày)",
+      "ten_khoa_hoc": "Piper nigrum L.",
+      "ma_taxon": "83583",
+      "ho": "Piperaceae (Hồ tiêu)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "...",
+      "hoa": "...",
+      "quả": "...",
+      "cây": "Hồ tiêu là một loại dây leo, nhẵn, thân dài không mang lông, bám vào cây khác bằng rễ. Hình như giữa cây tựa và cây hồ tiêu có sự sống nhờ nhau, cho nên khi gỡ cây hồ tiêu khỏi cây tựa thì phần nhiều cây hồ tiêu bị chết. thân mọc cuốn mang lá mọc cách. Lá như lá trầu không nhưng dài và thuôn hơn. Có hai loại nhánh: 1 loại nhánh mang quả và một loại nhánh dinh dưỡng, cả hai loại nhánh đều xuất phát tư kẽ lá. Đối chiếu với lá là một cụm hoa hình đuôi sóc. Khi chin rụng cả chùm.",
+      "mặt": "...",
+      "đầu": "...",
+      "thân": "...",
+      "cuống": "...",
+      "gốc": "...",
+      "cao": "...",
+      "rễ": "...",
+      "củ": "...",
+      "mọc": "...",
+      "mùa hoa": "...",
+      "mùa quả": "Quả hình cầu nhỏ, chừng 20-30 quả trên một chùm, lúc đầu màu xanh lục sau có màu đỏ, khi chin màu vàng. Đốt cây rất dòn cho nên khi vận chuyển cần thận trọng để cây khỏi chết."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hồ tiêu có tinh dầu và hai ancaloit. Ngoài ra còn có một số chất khác như xenluloza, muối khoáng.",
+      "gồm chất": "Tinh dầu chừng 1,5-2,2%. Tinh dầu này tập trung ở vỏ quả giữa cho nên hồ tiêu sọ ít tinh dầu hơn. Tinh dầu màu vàng nhạt hay lục nhạt, gồm các hydrocacbua như phelandren, cadinen, cariophilen và một ít hợp chất có oxy.",
+      "Các hợp chất": "Haiancaloit là piperin và chavixin",
+      "chứa": "Piperin C17H19O3N có trong hạt tiêu từ 5-9%, có tinh thể không màu, không mùi, không tan trong nước sôi, rất tan trong rựơu nóng, tính kiềm nhẹ, đồng phân với mocphin. Khi đun với dung dịch rượu kali cho axit piperic C12H10O4 và một ancaloit khác lỏng, bay hơi là piperidin C5H10N",
+      "triết xuất": "AXIT PIPERIC đun với KMnO4 sẽ cho piperonala dùng chế nước hoa.",
+      "đã nghiên cứu": "Chavixin C17H19O3N có người cho là một chất nhựa, có trong hồ tiêu từ 2,2-4,6%. Chavixin là một chất lỏng sền sệt, có vị cay hắc, làm cho hồ tiêu có vị cay nóng, tan trong rượu, ete, chất béo, đặc ở O°C. Vì Chavixin tập trung ở phía ngoài vỏ cho nên hồ tiêu, sọ ít hắc hơn hồ tiêu đen. Chavixin là đồng phân quang học CH3a piperin.",
+      "tìm thấy": "Thuỷ phân sẽ cho piperidin và axit chvinic C12H10O4. Ngoài tinh dầu và ancaloit ra, trong hồ tiêu còn 8% chất béo, 36% tinh bột và 4,5% độ tro",
+      "thủy phân": "...",
+      "các hoạt chất": "...",
+      "tinh dầu chứa": "...",
+      "có hoạt chất": "...",
+      "dấu hiệu đặc trưng": "Do thành phần hoá học trên cho nên muốn kiểm tra xem có phải hồ tiêu không ta có thể tìm piperin bằng một số phản ứng sau đây:  Nhỏ lên bột hồ tiêi axit sunfuric đặc sẽ thấy màu hồng sau chuyển màu hồng nâu (phản ứng piperin).  Nhỏ lên bột hồ tiêu ít giọt cồn 90-95°C. Chờ hơi khô nhỏ lên ít giọt nước, đậy kính mỏng lên sẽ thấy ở mép tấm kính mỏng ít tinh thể piperin hình trám."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài công dụng làm gia vị, hồ tiêu được dùng làm thuốc kích thích sự tiêu hoá, giảm đau (chữa răng đau), đau bụng. ngày dùng 1-3g dưới dạng bột hay viên.",
+      "được_dùng": "...",
+      "làm thuốc": "...",
+      "có tác dụng": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "chữa": "..."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hạt tiêu được trồng ở nhiều tỉnh miền Nam nước ta, nhiều nhất là ở Châu Đốc, Phú Quốc, Hà Tiên, Bà Rịa, Quảng Trị. Tại miền Bắc đã bắt đầu trồng tại các vùng như Vĩnh Linh, hiện đang cố di chuyển dần ra phía bắc miền Bắc nước ta.",
+      "làm thuốc": "Mỗi năm thu hoạch 2 lần, tuỳ theo người ta muốn có hồ tiêu đen hay hồ tiêu trắng, cách thu hái có khác nhau.",
+      "có tác dụng": "Muốn có hồ tiêu đen người ta hái quả vào lúc thấy xuất hiện một số quả đỏ hay vàng trên chùm quả, nghĩa là lúc quả còn xanh. Những quả non quá chưa có sọ rất giòn, khi phơi sẽ dễ bị vỡ vụn. còn những quả khác khi phơi sẽ nhăn nheo lại, màu sẽ ngả đen nên có tên là hồ tiêu đen.",
+      "sắc uống": "Muốn có hồ tiêu trắng (còn gọi là tiêu sọ) phái hái vào lúc quả thật chín, sau đó lấy chân đạp loại vỏ ngoài hoặc cho vào rổ, ngâm dưới nước chảy 3-4 ngày, đạp loại vỏ đen rồi phơi khô. Loại này có màu trắng ngà hoặc xám, ít nhăn nheo hơn, ít thơm hơn (vì lớp vỏ ngoài chứa tinh dầu bị loại đi) nhưng cay hơn.",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "phơi khô": "...",
+      "xấy khô": "..."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

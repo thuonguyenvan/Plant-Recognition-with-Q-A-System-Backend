@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau diếp",
+      "ten_khac": "Rau diếp, Xà lách",
+      "ten_khoa_hoc": "Lactuca sativa L. var. longifolia Lam.",
+      "ma_taxon": "122976",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hàng năm.",
+      "thân": "Thân mọc đứng, hình trụ, phân cành ở ngọn.",
+      "lá": "Lá ở gốc mọc tụ họp rất dày thành hình hoa thị, có cuống; lá trên thân không cuống, gần như chia thùy, hai mặt màu xám nhạt, lá ở gần ngọn tiêu giảm rất nhỏ.",
+      "hoa": "Cụm hoa là một chùy dài phân nhánh gồm nhiều đầu; lá bắc xẻ tua, cái ngoài lớn hơn cái trong; mỗi đầu có hơn 20 hoa màu vàng, mào lông màu trắng; tràng hình lưỡi nhỏ; nhị 5.",
+      "quả": "Quả bế, màu nâu, có khía dọc."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Rau diếp chỉ là một thứ (var.) trong loài xà lách. Cây có nguồn gốc ở vùng Trung Á và Tiểu Á. Cách đây khoảng 4500 năm trước Công nguyên, các bộ tộc ở Trung Á đã biết dùng rau diếp làm rau ăn hoặc làm thuốc. Những người Hy Lạp và La Mã cổ đại cũng sớm biết sử dụng và gieo trồng loại rau xanh này. Đến thế kỷ thứ 14, xà lách và rau diếp được nhập trồng ở Tây Âu. Ngày nay, rau diếp đã được trồng khắp thế giới, từ những vùng ôn đới ấm của Châu Âu, Châu Mỹ, đến các vùng cận nhiệt đới và nhiệt đới thuộc các châu lục. Mỗi vùng khí hậu khác nhau có những loại rau diếp khác nhau. Tuy nhiên, căn cứ vào hình dạng, kích thước, người ta thường chia ra 3 nhóm giống rau diếp sau:  Nhóm rau diếp lá: lá dài, hoặc hơi cuộn lại vào giữa, trồng nhiều ở Nam Âu, châu Á nhiệt đới dùng làm rau sống hay nấu canh ăn. Nhóm rau diếp thân: nguồn gốc ở Trung Quốc, có thân cao từ 30 đến 50 cm, đường kính thân 3 5cm, mang nhiều lá dài màu xanh; dùng ăn sống, luộc hay xào ăn; trồng nhiều ở Trung Quốc và Đông Nam Á. Nhóm rau diếp latinh: cây nhỏ, lá xanh, các lá trong cuộn lai với nhau, thường để ăn sống, trồng nhiều ở Pháp và Châu Âu. Trong nhóm này có giống chịu được ở vùng nhiệt đới nóng và ẩm.  Rau diếp được gieo trồng ở Việt Nam có thể chỉ khoảng vài trăm năm trở lại đây. Các giống đang được gieo trồng dường như có đủ đại diện của cả 3 nhóm giống trên. Ở các tỉnh phía Bắc, trước đây giống thuộc nhóm lá dài và nhóm rau diếp thân thường được trồng. Cây ưa khí hậu ẩm mát của vụ đông – xuân. Hạt gieo đươc 4-5 ngày bắt đầu nảy mầm; ở giai đoạn đầu (khoảng 10 ngày) cây mầm sinh trưởng chậm. Sau khi nhổ cây non đem trồng, cây sẽ sinh trưởng nhanh. Cây trồng sau 3 tháng bắt đầu có hoa quả; khi quả già cũng là lúc cây bắt đầu tàn lại."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Rau diếp là cây rau vụ đông ngắn ngày, được trồng phổ biến khắp nơi, nhất là các vùng rau.  Cây được gieo trồng bằng hạt. Cần chọn các cây to mập, lá dày, đốt ngắn và chăm bón tốt để thu hạt. Khi quả chuyển sang màu vàng, cắt lấy cành quả, phơi khô vò lấy hạt, phơi lại cho thật khô, bảo quản kín nơi khô mát để làm giống. Thời vụ gieo hạt vào tháng 8 – 9, khi cây con có 3 – 4 lá thật thì nhổ ra trồng. Có thể trông xen với nhiều loại rau, đậu hoặc trồng thuần loại.  Nếu trồng thuần loại, cần làm đất tơi, nhỏ, lên luống cao 20 – 25 cm, rộng 1 – 1,2 m. Dùng phân chuồng ủ kỹ bón lót hoặc nước phân, nước giải ngâm kỹ để tưới thúc. Khoảng cách trồng 15 x 20 cm hoặc 20 x 20 cm. Rau diếp là cây rau ăn sống, vì vậv cần chú ý dùng phân thật hoại, hạn chế dùng thuốc bảo vệ thực vật và phải tuân thủ quy phạm sử dụng."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau diếp chứa 1,7% protid, 0,5% lipid, 9% celulose, 3,2% dẫn xuất không protein và 1% các chất khoáng toàn phần, 0,023 mg% asen và 0,071% acid oxalic, các chất lactucin, lactupicrin, 8ị3 – deoxylactucin; lip – 13 dihydrolactucin; 3p hydroxy 11 p, 13dl hydro (X icanthopermolid; 3(3-14 dihyđroxy – 11Ị3, 13dl – hydrocostunolid; Iactusid A và c maclinisid.  Ngoài ra, rau diếp còn có lupeol, lactucaxanthin và các nguyên tố vi lượng như Ca, Fe, Mn, Zn, I và P."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân lá rau diếp có vị ngọt, hơi đắng, tính mát, vào kinh đại tràng, vị, có tác dụng lợi niệu, thông sữa, lợi ngũ tạng, thanh đờm thủy, lợi khí, dễ ngủ, sáng mắt, giải độc rượu. Hạt rau diếp có vị đắng, tính hàn, có tác dụng lợi tiểu, thông sữa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rau diếp được dùng chữa lo âu, mất ngủ đái khó đái ra máu, thiếu sữa, ho.",
+      "được_dùng": "Liều hàng ngày: 20 – 30g hạt. Lá và thân (100 g) ăn sống hoặc sắc uống chữa háo khát, đầy chướng.",
+      "chữa": "Dùng ngoài, trị bỏng, viêm da trĩ, áp xe.",
+      "làm thuốc": "Trong nhân dân, rau diếp thường được dùng làm rau, ăn sống, trộn dầu, giấm hoặc làm cuốn diếp."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa sữa không thông: Hạt rau diếp 30 g, cam thảo sống 9 g, gạo nếp 15g nấu cháo ăn. Hoặc lấy hạt rau diếp và cam thảo sắc nước, rồi thêm gạo nấu cháo ăn vào sáng và tối. Một đợt điều trị là 3 – 5 ngày. Có thể dùng thân lá rau diếp 100 g, sắc lấy nước, thêm ít rượu, uống.",
+      "làm thuốc": "Chữa viêm da: Lá rau diếp, nghiền với dầu ô liu, bôi xoa hàng ngày."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

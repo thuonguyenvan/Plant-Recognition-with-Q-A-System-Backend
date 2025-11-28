@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khổ Sâm cho lá",
+      "ten_khac": "khổ sâm cho lá",
+      "ten_khoa_hoc": "Croton tonkinensis Gagnep.",
+      "ma_taxon": "908769",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao độ 0,7-1m.",
+      "lá": "Lá mọc cách hay gần như mọc đối, có khi mọc thành vòng giả gồm 3-6 lá. Lá hình mũi mác, mép nguyên dài 5-10cm, rộng 3cm. Cả hai mặt lá đều có nhiều lông hình khiên óng ánh (kiểu lông ở lá cây nhót) nhưng mặt dưới nhiều hơn ở mặt trên. Khi phơi khô, mặt lá dưới có màu trắng bạc, mặt trên có màu nâu đen.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hay đầu cành, lưỡng tính hay đơn tính. Hoa đực có 5 lá đài, 12 nhị, hoa cái có 5 lá đài, 3 vòi nhị.",
+      "quả": "Quả gồm 3 mảnh vỏ, màu hung hung đỏ.",
+      "mùa hoa": "Tháng 5-8",
+      "mùa quả": "Tháng 5-8"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy có tài liệu nghiên cứu"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây khổ sâm trị ung nhọt, kiết lỵ, viêm loét dạ dày hành tá tràng, chốc đầu.",
+      "được_dùng": "Mỗi lần uống 12 – 20g dưới dạng thuốc sắc. Cây này mới được nhiều người chú ý mấy năm gần đây do được dùng trong đơn thuốc chữa đau dạ dày, có lá khôi sau đây: Lá khôi Ardisia sylvestris 50g Lá bồ công anh Lactuca indica 20g Lá khổ sâm Croton tonkinensis 12g Nước 600ml Sắc đặc và cô còn chừng 200ml chia làm 2 hay 3 lần uống trong ngày. Uống liên tục trong 10 ngày, lại nghỉ 3 ngày. Cứ như vậy cho đến khi khỏi đau, uống thêm một tuần nữa. Có người thêm vào đơn thuốc trên 3 lát gừng sống đối với người hay đi ỉa lỏng. Nếu dùng riêng thường dùng với liều 24-40g (lá khô sao vàng), thêm 600ml nước (3 bát), sắc còn 1 bát (200ml), chia 2 hay 3 lần uống trong ngày, 15 phút đến nửa giờ trước khi ăn cơm. Để ăn ngon cơm, giúp sự tiêu hoá.",
+      "chữa": "Chữa đau bụng không rõ nguyên nhân: Hái mấy lá Khổ sâm, nhai với mấy hạt muối; nếu có nôn hay sôi bụng thì nhai với một miếng gừng sống. Chữa đau bụng lâm râm, hay sau khi ăn đau bụng, khó tiêu: Lá Khổ sâm, dây Ngấy hương, đều phơi khô, mỗi thứ một nắm (30-40g), thêm 3 lát gừng, sắc uống. Hoặc thường dùng sắc 2 thứ lá trên uống thay trà. Chữa kiết lỵ hay đau bụng đi ngoài: Dùng lá Khổ sâm và lá Phèn đen mỗi thứ một nắm sắc uống, hoặc lá Khổ sâm, Rau sam, Cỏ sữa, Nhọ nồi, Lá mơ lông, mỗi vị 10g sắc uống, ngày 1 thang. Chữa khắp mình nổi mẩn ngứa, muốn gãi luôn: Dùng lá Khổ sâm, Kinh giới, lá Đắng cay, lá Trầu không, nấu nước xông và tắm rửa."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

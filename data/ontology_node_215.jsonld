@@ -1,0 +1,240 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây săng máu",
+      "ten_khac": "Dây săng máu",
+      "ten_khoa_hoc": "Celastrus paniculatus Willd.",
+      "ma_taxon": "639646",
+      "ho": "Celastraceae (Dây gối)",
+      "Mô tả": {
+        "lá": "Lá thuôn, xoan hay xoan thuôn gần tròn hay gần như nhọn ở gốc, có mũi nhọn ngắn và tù; có răng, dai.",
+        "hoa": "Hoa thành chùm hay chuỳ ở ngọn, dài 5-10cm.",
+        "quả": "Quả nang gần hình cầu, kèm theo các lá đài và vòi nhuỵ tồn tại, dài 4-6mm, có 3 van nâu, gần như nhẵn.",
+        "cây": "Dây leo to.",
+        "thân": "Cành non hình tròn, màu xám sẫm hoặc màu nâu, có lông và những chấm trắng.",
+        "mùa hoa": "Tháng 5 – 8.",
+        "mùa quả": "Tháng 5 – 8."
+      },
+      "Phân bố": {
+        "phân_bố": "Loài phân bố ở Ấn Độ, Mianma, Trung Quốc, Campuchia, Lào, Malaixia, Inđônêxia, Philippin và Việt Nam.",
+        "ở_vùng": [
+          {
+            "tên": "Ấn Độ"
+          },
+          {
+            "tên": "Mianma"
+          },
+          {
+            "tên": "Trung Quốc"
+          },
+          {
+            "tên": "Campuchia"
+          },
+          {
+            "tên": "Lào"
+          },
+          {
+            "tên": "Malaixia"
+          },
+          {
+            "tên": "Inđônêxia"
+          },
+          {
+            "tên": "Philippin"
+          },
+          {
+            "tên": "Việt Nam"
+          }
+        ],
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Lâm Đồng"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Đồng Nai"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Cây thường mọc ở ven rừng thứ sinh độ cao từ 800 đến 1300m; rụng lá vào mùa khô và sinh trưởng mạnh trong mùa mưa ẩm. Những cây lớn có lượng hoa quả rất nhiều; hoa tự thụ phấn hay nhờ côn trùng; nhân giống tự nhiên chủ yếu bằng hạt. Cây trồng bằng hạt hay bằng cách vít cành (cho ra rễ sau tách khỏi cây mẹ) đều sinh trưởng, phát triển tốt."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Vỏ, hạt. Còn dùng lá."
+      },
+      "Thành phần": {
+        "thành phần": "Khi chưng cất khô, hạt sẽ cho một chất dầu màu vàng đo đỏ, vị chát và cay, sau một thời gian sẽ cho một lượng chất béo đặc. Áo hạt chứa 30% chất mỡ nửa đặc, 0,15% phytosterol là celasterol và một chất nhựa có màu. Người ta còn chiết được 2 alcaloid là celastrine (0,0015%) và paniculatine. Lá chứa dulcitol."
+      },
+      "Tính vị": {
+        "Có vị": "Hạt đắng, nhuận tràng, gây nôn, kích thích và kích dục."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dầu hạt dùng để thắp sáng, làm xà phòng và cũng dùng trong y học dân gian ở một số nơi. Hạt được dùng ở Ấn Độ, cả uống trong lẫn xoa bóp ngoài để trị bệnh thấp khớp, thống phong, bại liệt, phong cùi, sốt rét. Người ta bắt đầu từ 1 hạt và nâng dần lên đến 50 hạt. Để trị bệnh beri beri (bệnh tê phù) người ta chế một chất dầu có mùi khét bằng cách chưng cất trong một bình chứa hạt Dây gối với An tức hương, Đinh hương, Nhục đậu khấu, với liều 8-15 giọt, nó tạo nên một chất kích thích mạnh và làm toát mồ hôi. Có nơi lá cũng được sử dụng như là thuốc giải độc thuốc phiện. Vỏ cây được dùng gây sẩy thai. Ở Philippin, nhựa cây được xem như thuốc giải độc các ngộ độc do thuốc phiện. Hạt được dùng ngoài làm thuốc đắp và dùng trong làm thuốc uống trị thấp khớp và bại liệt."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

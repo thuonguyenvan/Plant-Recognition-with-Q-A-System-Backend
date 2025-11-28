@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ chỉ",
+      "ten_khac": "Cỏ gà, Cỏ ống, Hàng ngu chi",
+      "ten_khoa_hoc": "Cynodon dactylon (L.) Pers.",
+      "ma_taxon": "58371",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 20 – 30 cm.",
+      "thân": "Thân rễ mảnh, cứng, mọc bò dài. Thân khí sinh mọc đứng, tụ tập thành búi nhỏ. Ngọn thân thường bị sâu ký sinh tạo thành một khối phồng mang lá.",
+      "lá": "Lá mọc so le, ngắn, hình dài hẹp, gốc có bẹ, đầu mút nhọn, màu lục hơi vàng, mép nguyên hơi ráp; bẹ lá ngắn, lưỡi bẹ có lông thưa.",
+      "hoa": "Cụm hoa là bông đơn gồm nhiều bông nhỏ, mảnh (thường là 4) xếp tỏa tròn, màu lục hay tía; bông nhỏ xếp thành 1 – 2 dây, không cuống, mang hoa lưỡng tính và hoa bị lép, mày phẳng, hình mũi mác, mày hoa nạc lớn hơn mày; nhị 3; bầu nhẵn.",
+      "quả": "Quả thuôn, thường dẹt bên, bao bọc bởi mày hoa.",
+      "mùa hoa": "tháng 3 – 10",
+      "mùa quả": "tháng 3 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Cynodon Rich có khoảng hơn 10 loài trên thế giới, phân bố chủ yếu ở vùng nhiệt đới. Ở Việt Nam có 2 loài, trong đó cỏ chỉ là cây quen thuộc và có thể gặp ở khắp nơi, trừ vùng núi cao lạnh trên 1500 m. Ở châu Á, cỏ chỉ cũng là loài phân bố rộng rãi khắp các nước như Trung Quốc, Lào, Campuchia, các nước Đông Nam Á và Nam Á.  Cỏ chỉ là cây ưa sáng, ưa ẩm và có thể chịu được khô hạn, thường mọc thành thảm dày ở ven đường đi, bờ ruộng, bãi hoang. Cây có khả năng sinh trưởng nhanh nhờ những chồi nhánh từ tất cả các đốt của hệ thống thân bò lan trên mặt đất. Cỏ chỉ ra hoa kết quả nhiều hàng năm. Hạt giống rất nhỏ, dễ phát tán xa nhờ gió. Trong đám cỏ chỉ thường thấy một số đầu cành di dạng. Hiện tượng này do một loài côn trùng đẻ trứng vào búp non, làm cho đỉnh sinh trưởng không phát triển được bình thường. Các lóng và lá non bị co ngắn lại, khiến cho bẹ lá ôm sát vào nhau và khi bóc thấy một con sâu nhỏ ở trong.  Cỏ chỉ được coi là nguồn thức ăn cho gia súc (trâu, bò, ngựa…) và cũng là đối tượng cần loại bỏ của nhà nông vì sự phát triển nhanh, lấn át cây trồng của nó."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ hoặc toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Khi phân tích phần cỏ xanh trên mặt đất thấy có protein, carbohydrat và chất khoáng là các chất đa lượng và vi lượng như calci 0,29 – 0,97%, phosphor 0,15 – 0,41%, magiê 0,08 – 0,22% và các oxyd của chúng như CaO, P₂O₅, MgO, Na₂O, K₂O.  Gần đây đã tìm thấy có các hợp chất hữu cơ như β-sitosterol. Từ thân rễ cây cỏ chỉ, người ta còn chiết được một chất kết tinh là cynodin. Ngoài ra, còn thấy tinh bột, đường và vitamin C."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân rễ cỏ chỉ có vị ngọt nhạt, tính mát, có tác dụng thanh nhiệt, làm mát máu và lợi tiểu tiện."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ cỏ chỉ được dùng làm thuốc thông tiểu tiện dưới dạng thuốc hãm hay thuốc sắc (20g trong 1 lít nước). Có thể dùng dưới dạng cao chiết với nước. Hải Thượng Lãn Ông đã dùng lá cỏ chỉ sắc uống chữa sưng họng.  Ở Ấn Độ, nhân dân dùng nước sắc cỏ chỉ làm thuốc lợi tiểu để điều trị phù và phù toàn thân. Nước ép cỏ gà có tác dụng làm săn và được dùng bôi chữa vết đứt và vết thương chảy máu.  Thân rễ cỏ chỉ trị những rối loạn niệu – sinh dục. Dịch ép toàn cây cỏ chỉ dùng uống có tác dụng trị rắn cắn.  Trong y học dân gian Nepal, dịch ép cỏ chỉ được dùng mỗi lần 2 thìa cà phê, ngày 3 lần để trị khó tiêu. Nếu pha loãng dịch ép với nước và uống mỗi lần 2 – 3 thìa cà phê, ngày 2 – 3 giờ lại chữa được tiêu chảy.  Ở Angieri, nhân dân dùng nước sắc rễ cỏ chỉ uống làm thuốc lợi sữa. Ở Ruanda, cỏ chỉ loại bỏ rối loạn viêm kết mạc, và rễ trị bệnh lậu.  Bài thuốc có cỏ chỉ  1. Chữa ho gió nhiều đờm:  Cỏ chỉ (sao cháy) 1 nắm, vỏ quýt 1 cái, củ sả (sao vàng) 3 củ, gừng 3 lát. Sắc uống.  2. Chữa ho gà:  Cỏ chỉ 12g, bọ mắm 20g, lá dâu tằm, lá liễu, cam thảo nam, lá chanh, lá tre gai, màng vỏ tre, bạc hà, mỗi vị 12g; gừng tươi 8g. Tất cả rửa sạch, thái nhỏ, phơi hoặc sao vàng. Sắc với 3 bát nước còn 1 bát. Người lớn uống mỗi ngày 1 thang, trẻ em hai ngày 1 thang.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

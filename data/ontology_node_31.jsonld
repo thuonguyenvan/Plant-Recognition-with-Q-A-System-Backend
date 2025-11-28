@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Găng tía",
+      "ten_khac": "Găng tía, Găng tu hú, Tu hú đông, Lôi thọ leo, Cây trời cho",
+      "ten_khoa_hoc": "Gmelina asiatica Roxb.",
+      "ma_taxon": "425647",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi leo, cao khoảng 10m, phân cành nhiều.",
+      "thân": "Cành màu nâu vàng nhạt, cành non ở kẽ lá thường biến thành gai thẳng.",
+      "lá": "Lá mọc đối, hình trái xoan hoặc bầu dục, gốc thuôn hoặc hình nêm, đầu nhọn, dài 2-7cm, rộng 1,5-6cm, phiến nguyên, đôi khi chia 3-5 thuỳ nông, mặt trên nhẵn, mặt dưới có lông dài ở gân.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chùm dài 3-10cm, cuống có lông hung, lá bắc sớm rụng, hoa màu vàng, dài nhỏ có 4 răng, phủ lông rậm và có tuyến dẹt, tràng hình phễu, ống tràng hẹp, 4 cánh hợp thành hai môi; nhị 4, thọt hoặc hơi thò ra phía ngoài, đỉnh ở giữa ống tràng, bầu nhẵn.",
+      "quả": "Quả hạch, hình trứng nhẵn, khi chín màu vàng.",
+      "mùa hoa": "tháng 4-7.",
+      "mùa quả": "tháng 4-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Găng tía là loài có phạm vi phân bố tương đối rộng, bao gồm hầu hết các tỉnh vùng núi và trung du. Độ cao phân bố tới 500m. Cây còn có ở Ấn Độ, Malaysia, Thái Lan và Lào.",
+      "thường_mọc": "Găng tía thuộc loại cây bụi ưa sáng và có thể chịu hạn, thường mọc rải rác trong các quần hệ thứ sinh, đồi cây bụi, ven rừng, bờ nương rẫy. Ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Sau khi bị chặt, phần còn lại có khả năng tái sinh cây chồi. Đôi khi được trồng làm bờ rào nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, cành nhánh và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Găng tía chứa glycosid. Hạt chứa dầu béo. Phần không xà phòng chứa sitosterol và chất vàng da cam nhạt."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá và quả găng tía được nhân dân ta dùng làm thuốc chữa bệnh có kết quả.",
+      "chữa": "Lá tươi giã nát, thêm nước, gạn uống, bã đắp tại chỗ, chữa rắn, rết cắn.",
+      "được_dùng": "Lá non găng tía 30g, rửa sạch, vò nhẹ, cho vào một lít nước đun sôi để nguội, ngâm trong 1-2 giờ. Chất nhầy có trong lá sẽ tan trong nước làm cho nước ngâm sánh nhớt, dùng uống mát, dễ chịu, có tác dụng giải nhiệt, chữa cảm, khát nước, nhất là khi đi nắng đường xa. Để dễ uống có thể thêm ít đường.",
+      "chữa": "Lá găng tía phơi khô 20-30g, sắc với 400ml nước còn 100ml, uống làm 2 lần trong ngày, chữa chứng yếu mệt của phụ nữ sau khi đẻ.",
+      "được_dùng": "Quả găng tía được dùng làm thuốc kích thích tiêu hoá, giúp ăn ngon, ngủ tốt, sức khoẻ tăng, làm việc lâu mệt. Lấy 5-10 quả chín, bổ đôi, bỏ hạt, phơi khô, thái nhỏ, sao với đỗ đen (10g) ngâm với 200ml rượu càng lâu càng tốt. Mỗi ngày uống 3 lần, mỗi lần uống một thìa canh trước bữa cơm và trước khi đi ngủ.",
+      "có tác dụng": "Theo tài liệu nước ngoài, rễ găng tía có mùi thơm làm dịu viêm, gây se săn.",
+      "chữa": "Ở Ấn Độ, rễ được dùng chữa lậu, viêm bàng quang, thấp khớp.",
+      "chữa": "Ở Campuchia, nước sắc của rễ găng tía, vỏ cây sao đen và chùm bao lớn chữa chứng đái dầm; nước sắc của toàn cây găng tía chữa bệnh ghẻ cóc."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

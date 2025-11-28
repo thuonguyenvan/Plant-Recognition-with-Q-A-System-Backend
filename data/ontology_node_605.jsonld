@@ -1,0 +1,334 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau dớn",
+      "ten_khac": "Dớn rừng, Dớn nhọn, Phjăc cút (Tày), Lay nhái (Dao)",
+      "ten_khoa_hoc": "Cyclosorus acuminatus (Houtt). Nakai",
+      "ma_taxon": "341841",
+      "ho": "Dớn (Thelypteridaceae)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Cây có thân rễ ngắn, mọc bò, sống dai, cao 0,5 – 1 m. lá mọc so le, kép lông chim 2 lần, hình ngọn giáo, phiến dài 35 – 45 cm, rộng 20 – 25 cm gồm nhiều lá chét không cuống, gốc tròn, đầu nhọn, mọc rất sít nhau, mép khía răng tròn, mặt lá có lông; lá non cuộn lại hình thoa; cuống lá đài 25 – 35 cm, hơi có 4 cạnh, có vảy ở gốc, có lông suốt chiều dài.",
+        "hoa": null,
+        "quả": null,
+        "cây": null,
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": "Mùa sinh sản, tháng 5-8."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Ở Việt Nam, rau dớn phân bố khắp các tỉnh miền núi như Lào Cai, Lai Châu, Hà Giang, Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên, Sơn La, Tuyên Quang, Hòa Bình, Thanh Hóa các tỉnh Tây Nguyên và vùng cao của tỉnh Quảng Nam, Quảng Ngãi, Khánh Hòa. Cây đặc biệt ưa ẩm, chịu bóng hoặc có thể hơi ưa sáng, thường mọc tập trung, đôi khi trở nên thuần loại trên diện tích lớn ở những nơi rừng mới bị tàn phá, ở ven rừng ẩm hoặc dọc theo các bờ khe suối ngoài cửa rừng.  Độ cao phân bố đến 2000 m (vùng đèo Hoàng Liên Sơn và Ngũ Chỉ Sơn ở Sa Pa). Cây sinh trưởng tốt ở những vùng có khí hậu ẩm mát của vùng núi; về mùa đông chịu được nhiệt độ thấp kéo dài. Rau dớn mọc lá non rải rác quanh năm, nhưng ở vùng nhiệt đới núi cao như Sa Pa, Sìn Hồ (Lai Châu) mùa lá non tập trung vào tháng 3-5. Mỗi khóm nho chỉ mọc lên khoảng 1 – 3 lá mới mỗi năm, nếu lá non bị hái trong thời kỳ sinh trưởng mạnh, cây có thế mọc lên lá non mới thay thế. Rau dớn sinh sản bằng bào tư, phát tán nhờ gió và nảy mầm ở môi trường nước. Rau dớn là loại rau rừng quen thuộc đối với\u00a0đồng\u00a0bào các dân tộc miền núi.  Gần đây, người ta đã thu hái rau dớn để bán ở các đô thị hay đồng bằng.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bắc Cạn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thanh Hóa"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "các tỉnh Tây Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Nam"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Ngãi"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Khánh Hòa"
+              }
+            }
+          ]
+        },
+        "được_trồng": null,
+        "chủ_yếu": null,
+        "thường_mọc": null,
+        "Đặc điểm sinh trưởng": null
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Toàn cây"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Rau dớn chứa 86% nước , 4% protid, 8% hydrat carbon, chủ yếu là celulose. ( The Wealth of India voL III. 1952,88), các hợp chất\u00a0 acid phenolic, acid protocatechic, và acid phenolic và acid syringic (CA.11,1993,113341f)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": null
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Lá non rau dớn thường được luộc, xào, nấu canh hoặc ăn sống, về mặt thuốc, rau dớn cho các bộ phận dùng sau:  Lá non (50 g) rửa sạch giã nhỏ, đắp lên vết thương có tác dụng cầm máu, hàn vết thương. Lá bánh tẻ (100 g), ruột quả bí ngô (100 g); hai thứ dùng tươi giã nát, đắp chữa bỏng. Thân rễ (20 g) cắt bỏ rễ con, rửa sạch, thái nhỏ, sắc với 200 ml nuớc còn 50 ml, uống làm 2 lần trong ngày, chữa sốt rét. Dùng 7-10 ngày cho một đợt điều trị. Ở Đài Loan, rau dớn được dùng làm thuốc hạ nhiệt. Ở Philippin, nước sắc thân rễ và lá non chữa ho và ho ra máu. Ở Malaysia, người ta thường sắc nước rau đớn cho phụ nữ sinh đẻ uống.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam ."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cây dung",
+            "ten_khac": "Chè lang, Chè dại, Duồi gia, Chè dung",
+            "ten_khoa_hoc": "Symplocos racemosa Roxb.",
+            "ma_taxon": "602317",
+            "ho": "Dung (Symplocaceae)",
+            "Mô tả": {
+                "cây": "Dung là một cây nhỏ cao 1,5-2m, nhưng có thể cao 4-5m hay 8-9m (nếu để lâu không bị đốn chặt). Thân cành mọc ngang, hình trụ, vỏ màu xám.",
+                "lá": "Lá mọc so le, đơn, nguyên, cuống ngắn, hình trứng thuôn dài, phía cuống hẹp lại hơi tù, phiến lá dài 9- 15cm, rộng 3-6cm, mép có răng cưa ngắn, thưa, mặt nhẵn, khi khô có màu vàng xanh hay vàng nâu.",
+                "hoa": "Hoa nhiều, màu trắng hay vàng lục nhạt, mọc thành chùm ở nách lá hay ở đầu cành, cuống hoa ngắn, trên mặt có phủ lông mịn. Hoa mùi thơm nên ong rất thích.",
+                "quả": "Quả hình cầu, dài 6-10mm, trên đỉnh có phiến đài tồn tại, thịt quả màu tím đỏ. Hạt thường đơn độc, màu nâu.",
+                "mùa hoa": "Mùa ra hoa quả khoảng tháng 5 -8."
+            },
+            "Phân bố": {
+                "phân_bố": null
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Rễ, lá và vỏ thân."
+            },
+            "Thành phần": {
+                "thành phần": "Vỏ thân cây dung chứa một glycosid (chất này đem thủy phân cho D – glucose và pelargonidin).  Lá chứa steroid, terpen, saponin.  Trong cây dung còn chứa glucosid 3 – monogluco furanosid của 7 – 0 – methyllcucopelargonidin."
+            },
+            "Tính vị": {
+                "Có vị": "Rễ dung có vị ngọt, nhạt, tính mát, có tác dụng hạ sốt, tiêu khát, giảm đau, làm săn. Lá dung có vị chua, ngọt, có tác dụng trợ tiêu hóa, chữa đau bụng, tiêu chảy."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Nhân dân nhiều vùng dùng lá dung làm chè uống cho tiêu cơm, chữa đau bụng, chữa ỉa chảy. Tại Ấn Độ người ta dùng vỏ sắc uống chữa đau bụng, đau mắt và rửa vết loét, rong kinh do cơ tử cung bị dãn, tiểu tiện ra đường chấp. Dùng dưới dạng bột hay thuốc sắc, mỗi ngày uống 3 đến 4 lần, mỗi lần uống 1g. Mới đây bệnh viện Việt Tiệp Hải Phòng dựa vào kinh nghiệm dân gian đã dùng nước sắc và xirô lá dung chữa đau dạ dày có tăng toan, kết quả tốt. Liều dùng cho người lớn mỗi ngày 15 đến 30g lá khô. Nhân dân còn dùng nhuộm vải, sau đó nhuộm cánh kiến đỏ cho có màu đỏ."
+            },
+            "Cách dùng": {
+                "được_dùng": "Mọc phổ biến ở khắp các tỉnh miền Bắc, có cả ở Lào (tên Lào là mot, kho mươt he, kho meut, dam krong), Campuchia (tên Campuchia là thvet, luot). Còn mọc ở Ấn Độ, Nam Trung Quốc. Tại miền Bắc, một số nơi được nhân dân hái lá dùng làm thuốc như vùng Thủy Nguyên (Hải Phòng), Quảng Ninh. Hái lá tươi về phơi hay sao khô để dành dùng dần. Còn có nơi dùng vỏ thân hay vỏ rễ: Bóc vỏ về phơi hay sấy khô. vỏ mềm, dễ gẫy vụn, màu vàng nâu nhạt, khi cắt ngang giữa lớp bần và lớp mô vỏ có một lớp màu đỏ, chứa một chất màu đỏ."
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

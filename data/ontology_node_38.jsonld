@@ -1,0 +1,235 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Giáng hương",
+      "ten_khac": "Giáng hương, Giao bát, Mắt chim",
+      "ten_khoa_hoc": "Pterocarpus indicus Willd.",
+      "ma_taxon": "348101",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Cây to, cao 10-12m.",
+      "hoa": "Cành lá sum sê, mọc tỏa rộng nằm ngang, nhan, hơi có khía.",
+      "quả": "Lá kép lông, mọc so le, dài 20-25cm, cuống chung có lông tơ, lá chét 5-9, hình bầy dục, gốc tròn, đầu hơi nhọn, mỏng nhân, dài 4,5 – 10cm, rộng 2,5-5cm, lá chét tận cùng lớn nhất, gân lá hình mang rất dày ở hai mặt.",
+      "cây": "Cụm hoa mọc ở kẽ lá và đầu cành thành chùm dài khoảng 10-12cm, có lông, đài hoa hẹp ở gốc, có lông, răng ngắn đều, tràng có cánh cờ thuôn dần ở móng, cánh bên có tai, cánh thìa hẹp, nhị 2 bó đính ở gốc tràng, bầu có lông.",
+      "thân": "Quả có cánh ở mép, 3 ô chứa 3 hạt thuôn.",
+      "mùa hoa": "Mùa hoa quả tháng 5-9.",
+      "mùa quả": "Mùa hoa quả tháng 5-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pterocarpus Jacq. có 2 loài ở Việt Nam đều gọi chung là “giáng hương”. Song do một số đặc điểm sinh học, phẩm cấp gỗ và dễ phân biệt, người ta thường gọi loài P. indicus Willd. là giáng hương, và loài kia (P. macrocarpus Kurz) là giáng hương quả to.  Giáng hương là loài cây gỗ lớn, phân bố chủ yếu ở vùng nhiệt đới Đông Nam Á bao gồm Lào, Campuchia, Indonesia (Sumatra, Java) và Việt Nam. Ở Việt Nam, cây chỉ thấy ở một số tỉnh phía nam, như Đắk Lắk, Đồng Nai, phía tây nam tỉnh Lâm Đồng và Bình Thuận. Cây thường mọc trong các kiểu rừng kín thường xanh mưa mùa nhiệt đới, còn nguyên sinh hay thứ sinh trên đất sinh do khai thác gỗ. Ở một số nơi, giáng hương mọc tương đối tập trung và trở thành loài cây ưu thế trong rừng. Giáng hương là cây ưa sáng, có thể sống được trên nhiều loại đất có tầng đất thịt sâu, ra hoa kết quả hàng năm, tái sinh tự nhiên từ hạt.  Gỗ của cả hai loài giáng hương đều thuộc loại cứng và có vân đẹp. Tuy nhiên, gỗ của giáng hương quả to được xếp vào nhóm gỗ ngoại hạng và không bị mối và được dùng trong xây dựng các công trình bền vững, đóng bàn ghế, giường, tủ… Do đó cây giáng hương quả to đã được đưa vào Sách Đỏ Việt Nam do cây đã bị khai thác một cách quá mức ở các tỉnh phía nam (Vũ Văn Dung et al., 1996 và Sách Đỏ Việt Nam, T. II. 1996).",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắk Lắk"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bình Thuận"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Nhựa trích từ cây, có màu đỏ, se, đông cứng sau vài giờ, thường được gọi là kino. Còn dùng vỏ cây, gỗ thân, lá và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhựa giáng hương chứa một tanin riêng biệt là acid kinotanic và một chất quả đỏ nếu chưng cất khô cho pyrocatechin và acid protocatechic. (Từ điển cây thuốc Việt Nam – Võ Văn Chi, 1999 – 519)  Nhựa được dùng ở Philippin để chế tạo chất màu đỏ nhóm B. Chất này chứa các dẫn xuất của narin, santalin và angolensin. Narin là bột màu đỏ sẫm khi chưng cất với kiềm cho resorsinol và phloroglucinol (The Wealth of India vol VIII 1969, 302).  Một tanin ngưng tụ kiểu procyanidin được tách từ vỏ cây với hàm lượng 0,23 – 3,73%, có trọng lượng phân tử 20.000 và có tác dụng kháng virus, ức chế protease (CA. 1991, 118544 f).  Thành phần có tác dụng kháng nấm được phân lập từ dịch chiết ether của gỗ là một chất tinh thể không màu được xác định là angolesin. Hàm lượng angolesin trong dịch chiết methanol là 3% (CA. 1995, 222755 x).  Từ gỗ giáng hương, người ta đã phân lập được formononetin, isoliquiritigenin, acid (-)-p-hydroxyhydratropic, pterofuran, pterocarpol, eudesmol, 3 hydroxy formononetin (Indian. f. chem. 1969, 7.110)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nhựa của cây có tác dụng như chất chát, không mùi và làm săn da.  Vỏ quả gây nôn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhựa giáng hương được dùng uống trong trường hợp tiêu chảy mạn tính, xuất huyết, bạch đới, lậu và dùng trám răng. Ở Malaysia, nhân dân dùng nhựa chữa đau dạ dày, tím hồi hộp, thấp khớp, bạch đới, thường phối hợp với những vị thuốc khác có mùi thơm để tăng hiệu lực. Ở Campuchia, nhựa được dùng chế thuốc trị sốt rét, làm thuốc lợi tiểu, chống lỵ và để trám răng.  Ở Ấn Độ, nước sắc gỗ giáng hương được dùng trị phù và sỏi bàng quang. Vỏ cây cho nhựa dẻo lên men trị loét; nước sắc vỏ cây hoặc nhựa trị lậu, lỵ, tiêu chảy. Hạt có tác dụng gây nôn. Lá hãm nước làm thuốc gội đầu; giã tắt làm thuốc gây hắt hơi trị nhức đầu.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

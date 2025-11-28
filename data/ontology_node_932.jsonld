@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngấy tía",
+      "ten_khac": "Ngấy tía, Ngấy lá nhỏ",
+      "ten_khoa_hoc": "Rubus parvifolius L.",
+      "ma_taxon": "51645",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi trườn, phân nhánh nhiều, nhánh mảnh; có lông và gai cong.",
+      "lá": "Lá mọc so le, thường gồm 3 lá chét; lá chét tương đối nhỏ, mặt trên không lông hay phủ lông thưa, mặt dưới đầy lông trắng nhạt hoặc xám nhạt. Lá chét cuối có thuỳ; lá kèm hẹp, cao 3-5mm.",
+      "hoa": "Ngù hoa ở ngọn, cao 4-5cm; hoa hồng, rộng cỡ 1cm, đài đầy lông, có gai nhỏ, cánh hoa cao 5mm, nhị nhiều; lá noãn cỡ 30.",
+      "quả": "Quả hình bán cầu, màu đỏ, vị chua ngọt, ăn ngon.",
+      "mùa hoa": "tháng 5-6",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Ấn Độ, Trung Quốc, Mông Cổ, Triều Tiên, Nhật Bản và Việt Nam. Cây mọc rải rác ở nhiều nơi ở bình nguyên, cao nguyên Bắc Bộ từ Cao Bằng tới Ninh Bình, Thanh Hoá. Thu hái toàn cây vào hè- thu (cả thân và lá), phơi khô hoặc dùng tươi, rễ thu hoạch vào mùa thu, mùa đông, rửa sạch, thái nhỏ, phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Herba Rubi Parvifolii. Thường gọi là Mao môi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa tanin, thân dây chứa ceton các loại, tanin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả ăn được, có vị ngon (Cao Bằng). Cây dùng trị thổ huyết, đòn ngã, dao chém bị thương, phụ nữ có mang đau bụng, lỵ, trĩ, mụn ghẻ. Cành lá sắc nước rửa viêm da, thấp chẩn, giã nát đắp mụn nhọt độc. Rễ dùng trị: 1. Cảm mạo, sốt cao, sưng hầu họng; 2. Viêm gan truyền nhiễm cấp tính, gan lách sưng to; 3. Khái huyết, thổ huyết; 4. Thận viêm thủy thũng, viêm nhiễm đường tiết niệu; 5. Đòn ngã ứ đau, phong thấp đau xương. Dùng rễ khô 15-30g, sắc nước uống. Rễ dùng ngâm rượu có công hiệu dưỡng cân hoạt huyết, tiêu sưng thũng. Hoa vắt lấy nước bôi mặt trị tàn nhang, cành lá sắc lấy nước rửa trĩ rò, lá giã đắp mụn nhọt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Thấp khớp: Ngấy tía 30g, Cúc chỉ thiên 15g, Hy thiêm 10g, sắc nước uống. Gan lách to: Ngấy tía 30g, Thóc lép (Desmodium pulchellum) 30g, sắc nước uống. Viêm đường tiết niệu: Ngấy tía, Rau má lông, Kim tiền thảo, mỗi vị 30g, sắc uống. Chữa ho ra máu, thổ huyết và bị thương sưng đau: Dùng Ngấy tía, Thiên thảo, Cây cứt lợn, Thanh thiên, Mạch môn, mỗi vị 20g, sắc uống."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ráng bay",
+      "ten_khac": "Ráng bay, Thu mùn lá sổ",
+      "ten_khoa_hoc": "Drynaria quercifolia (L.) J.Sm.",
+      "ma_taxon": "154637",
+      "ho": "Polypodiaceae (Dương xỉ)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây ráng bay thường mọc ở rìa rừng, ven đường trên các thân cây già, trong rừng mưa theo mùa hoặc trên các vách đá. Loại cây này ưa môi trường râm mát, sinh trưởng phát triển mạnh vào mùa mưa ẩm và có thể chịu được sự thay đổi nhiệt độ khá lớn.  Cây có khả năng mọc chồi nhiều từ thân rễ, nên thường phát triển thành những mảng lớn, khó phân biệt từng cá thể, phủ kín một tảng đá hay cành và thân cây gỗ lớn. Cây tái sinh tự nhiên bằng bào tử, phát tán nhờ gió.  Nhờ có lá hơi dày, ráng bay có thể chịu lạnh ở mức khoảng 10℃, nhưng nếu thời tiết lạnh kéo dài, cây sẽ sinh trưởng kém và khó ra lá non. Khi nhiệt độ trên 30℃, lá non có thể bị biến dạng, làm cây mất dáng và kém thẩm mỹ. Nhiệt độ thích hợp nhất để cây phát triển là từ 22℃ đến 28℃."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây ráng bay phân bố chủ yếu ở Trung Quốc, đặc biệt tại các khu vực như Tam Á, Lăng Thủy, Định An và Đam Châu (Hải Nam). Ngoài ra, loài cây này còn xuất hiện ở nhiều quốc gia khác như Sri Lanka, Ấn Độ, Nepal, Bhutan, Bangladesh, các nước Đông Nam Á (Malaysia, Thái Lan, Campuchia và Việt Nam), quần đảo Mã Lai, quần đảo Fiji và các khu vực thuộc vùng nhiệt đới của châu Đại Dương.  Ở Việt Nam, ráng bay chỉ thấy ở các tỉnh phía nam, từ Phú Yên, Tây Nguyên đến đảo Phú Quốc. Cây được khai thác chính thức từ năm 1977."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ, thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ráng bay có vị đắng, tính ôn, có tác dụng bổ thận, cường cốt, hoạt huyết, chỉ thống, tiêu viêm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây ráng bay là một loại dương xỉ có giá trị trang trí cao, thường được trồng làm cây cảnh để trang trí sân vườn, tiểu cảnh, hồ nước hoặc trên các tảng đá trơ trọi để tăng thêm sự sinh động.  Xét về công dụng trong y học, cây ráng bay có tác dụng trừ phong thấp, bổ thận, giúp xương chắc khỏe, hoạt huyết và cầm máu.  Dược liệu này thường được dùng để hỗ trợ điều trị các bệnh như: đau nhức xương khớp do phong thấp, suy yếu gan thận, đau lưng, mỏi gối, căng cứng gân cốt, ù tai do thận hư, đau răng, tiểu nhiều, chấn thương do té ngã, gãy xương và cầm máu vết thương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa thấp khớp, làm khí huyết lưu thông: Ráng bay 12g, lưu ký nô 12g, cây dâu 12g, rễ nhàu 12g, thổ phục linh 12g, ngũ gia bì 12g, quế chi 10g, gắm đen 10g, thiên niên kiện 10g, đỗ trọng dây 8g. Tất cả tán nhỏ, làm thành viên. Mỗi lần uống 3g, ngày 3 lần (kinh nghiệm ở tỉnh An Giang).  Chữa giảm bạch cầu: Ráng bay 15g, đương quy 15g, hổ trượng 8g, thục địa 30g. Sắc nước uống (Trung dược từ hải – Trung Quốc).  Chữa thận hư, đau mình mẩy, bong gân tụ máu, ù tai, đau răng: Mỗi ngày dùng 6 – 12g sắc với 200 ml nước còn 50 ml, chia làm 2 lần uống trong ngày. Dùng riêng hoặc phối hợp với rễ, thân, lá cây thanh thiên (lưu ký nô) với liều lượng bằng nhau.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

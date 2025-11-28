@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khởi tử",
+      "ten_khac": "Câu khởi, Khởi tử, Địa cốt tử, Câu kỷ tử",
+      "ten_khoa_hoc": "Lycium sinense Mill.",
+      "ma_taxon": null,
+      "ho": "Cà (Solanaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 0,5-1,5m cành nhỏ, tỉnh thoảng có gai ngắn mọc ở kẽ lá, dài 5cm.",
+      "lá": "Lá mọc so le một số mọc vòng tại một điểm. Cuống lá ngắn 2-6mm. Phiến lá hình mác, đầu lá và phía cuống của lá đều hẹp, hơi nhọn, dài 2-6cm, rộng 0,62-5cm, mép lá nguyên.",
+      "hoa": "Hoa nhỏ mọc đơn độc ở kẽ lá hoặc có một số hoa mọc tụ lại. Cánh hoa màu tím đỏ.",
+      "quả": "Quả mọng hình trứng dài 0,5-2cm, đường kính 4-8mm. Khi chín có màu đỏ sẫm hoặc vàng đỏ. Hạt nhiều, hình thận, dẹt, dài 2-2,5mm.",
+      "mùa hoa": "tháng 6-9.",
+      "mùa quả": "tháng 7-10."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong khởi tử có chừng 0,09% chất betain C5H12O2N. C5H12O2N Theo Từ Quốc Vân và Triệu Thủ Huấn trong 100g quả có 3,96mg caroten; 150mg canxi; 6,7mg P; 3,4 mg sắt; 3mg Vitamin C; 1,7mg axit nicotinic; 0,23mg amon sunfat. Theo một tác giả khác trong khởi tử có lyxin, cholin, betain 2,2% chất béo và 4,6% chất protein, axit xyanhydric và có thể có atropin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Khởi tử được coi là một vị thuốc bổ toàn thân, dùng trong các bệnh đái đường (phối hợp với các vị thuốc khác), ho lao, viêm phổi, mệt nhọc, gầy yếu, bổ tinh khí, giữ cho người trẻ lâu. Liều dùng: 6-15g dưới dạng thuốc sắc hoặc rượu thuốc. Theo tài liệu cổ, khởi tử có vị ngọt, tính bình, vào 3 kinh phế, can và thận. Có tác dụng bổ can thận, nhuận phế táo, mạnh gân cốt. Dùng chữa chân tay yếu mỏi, mắt mờ, di mộng tinh.",
+      "chữa": "chân tay yếu mỏi, mắt mờ, di mộng tinh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Trước đây kỷ tử chỉ là một vị thuốc nhập, gần đây ta đã bắt đầu trồng để lấy quả làm thuốc. Trồng bằng hạt hay dâm cành. Gieo hạt vào mùa hạ, tưới nước giữ độ ẩm, sau 7-8 ngày hạt mọc. Khoảng cách cây từ 0,6m đến 1m. Có thể cắt cành thành từng mẩu nhỏ 20-25cm. Sau 3 năm có thể thu hoạch. Thời kỳ thu hoạch kéo dài 20-30 năm nhưng thu hoạch cao nhất vào năm thứ 10. Chế biến: Quả hái trong 2 mùa hạ và thu vì thời kỳ quả chính kéo dài. Theo kinh nghiệm trồng của Trung Quốc 1 hecta kỷ tử tốt và sai quả cho 1.500kg quả. Cây 3 năm cho khoảng 500-800 kg/ha. Hái quả cần hái vào sáng sớm hoặc chiều mát, nếu vào giữa trưa nóng quá có thể bị kém chất. Khi mới hái về phải tải mỏng phơi râm mát cho tới khi da bắt đầu nhăn mới phơi chỗ nắng đến thật khô. Nếu sấy phải giữ ở nhiệt độ thấp 30- 45°C. Cho đến nay, kỷ tử vẫn phần lớn nhập của Trung Quốc. Tại Trung Quốc người ta trồng ở nhiều tỉnh, tại những tỉnh biên giới Việt Nam như Quảng Đông, Quảng Tây, Vân Nam đều có. Ngoài ra cây còn mọc và được trồng ở Nhật Bản, Triều Tiên. Chế biến: Quả thường dùng sống hoặc tẩm rượu sao, đem sắc ngay hoặc sấy nhẹ (dưới 50oC) đến khô giòn, tán bột hoặc phun rượu cho quả trở nên đỏ tươi, khi dùng giã nát."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

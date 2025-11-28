@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngoi",
+      "ten_khac": "Ngoi, Cà hôi, Co sà lang (Thái), Toong muốc, La rừng, Phô hức (Tày)",
+      "ten_khoa_hoc": "Solanum erianthum D. Don",
+      "ma_taxon": "133286",
+      "ho": "Solanaceae (Cà)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỏ, cao 1,5 – 5m.",
+        "thân": "Thân và cành có lông hình sao màu vàng nhạt, cành non mọc toả rộng.",
+        "lá": "Lá mọc so le, hình trái xoan hoặc hình trứng, dài 12 – 20cm, rộng 6 – 11 cm, gốc hình nêm, đầu thuôn nhọn, mép nguyên, hai mặt phủ lông mịn; cuống lá dài 3 – 5cm.",
+        "hoa": "Cụm hoa mọc ở kẽ lá hoặc cành bên thành xim phân nhánh, có lông mịn như len, nhiều hoa màu trắng; dài nhẵn hình phễu, xẻ 5 thuỳ nhọn; tràng dài gap hai lần dài; cánh hoa có lông tơ ở mặt ngoài; nhị 5, bao phấn nứt ngang ở đỉnh; bầu có lông.",
+        "quả": "Quả nhỏ, mọng, hình cầu, khi chín màu vàng, chứa nhiều hạt có vân mạng.",
+        "mùa hoa": "tháng 3-11.",
+        "mùa quả": "tháng 3-11."
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Ngoi có nguồn gốc ở vùng Tây Ấn Độ hoặc Mexico. Đến thế kỷ 16, cây được người Tây Ban Nha du nhập vào Philippin, sau đó lan ra các nước khác trong vùng và Australia (M.M Blomqvist & Nguyen Tien Ban, 1999; Solanum L, in : PROSEA – NO 12(1), Med. and poisonous plants; 458 p). Hiện nay, ngoi phân bố rộng rãi khắp các vùng nhiệt đới, cận nhiệt đới, nhất là vùng Đông – Nam Á và Nam Á.  Ở Việt Nam, ngoi cũng gặp rải rác khắp các tỉnh vùng núi và trung du, cá biệt còn thấy cả ở đồng bằng. Cây ưa ẩm và ưa sáng, có thể hơi chịu bóng khi cây còn nhỏ, thường mọc ở ven rừng, nương rẫy cũ hoặc ở đồi. Độ cao phân bố ở các tỉnh phía bắc đến gần 1000m (ở Tam Đảo) hoặc 1300m (ở Pà Cò – Hoà Bình); ở các tỉnh phía nam độ cao có thể đến 1500m.  Cây ra hoa quả nhiều hàng năm, khi chín quả có màu vàng cam, là thức ăn của một số loài chim và động vật gặm nhấm. Hạt giống theo phân của chúng phát tán khắp nơi. Cây con mọc từ hạt thường thấy vào tháng 4-5 hàng năm. Cây trồng được dễ dàng bằng hạt."
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Rễ, lá. Rễ sau khi đào lên, thái mỏng rồi phơi hay sấy khô. Lá thường dùng tươi."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Rễ và lá chứa solasonin, solamargin, solasodin, solaverbascin, solaverin, solaverol A,B (Trung dược từ hải III, 1997).  Theo tài liệu của Chapman et Hall, 1997, phần trên mặt đất của cây ngoi chứa solaverin I, solaverin II, solaverin III. Theo Hoàng Thanh Hương 1980, lá và rễ cây ngoi mọc ở Việt Nam đều chứa solasonin, solamargin, a – tomatin, solaverbascin và một số chất khác: 2 chất sterol, vanilin, progesteron, ß – hydroxy – pregna – 5, 16 – dien – 20 – on, cafein. (Luận án tiến sĩ hoá học, Halle, 1980)."
+      },
+      "Tính vị": {
+        "@type": "Tính vị",
+        "Có vị": "Ngoi có vị cay, tính bình, có tác dụng tiêu thũng, chỉ thống, thu liễm, sát trùng."
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo kinh nghiệm nhân dân, cây ngoi được dùng chữa lòi dom, tràng nhạc, hắc lào.  Chữa lòi dom: Lấy lá ngoi tươi rửa sạch, bỏ cuống, đập dập, sao nóng, rịt vào chỗ dom lòi ra sau khi đã rửa sạch bằng nước ấm. Có thể để nguyên lá, úp vào dom hoặc đem lá nướng cháy vo tròn nhét vào hậu môn. Sau khi đắp lá, cần băng lại cho chắc, nằm nghỉ. Mỗi ngày đắp rịt 1 – 2 lần. Nên làm thuốc vào buổi tối trước khi đi ngủ để tránh đi lại. Sau vài ba ngày, dom sẽ co lên. Người bị lòi dom chữa bằng lá ngoi khỏi nhanh, hoạt động bình thường, lao động được ngay. Trong thời gian rất lâu có khi 2- 3 năm, vẫn không thấy tái phát. Bệnh viện Hà Giang cũ đã chữa khỏi nhiều trường hợp lòi dom bằng lá ngoi. Chữa tràng nhạc: Lá hoặc quả cây ngoi 10g, lá dâm bụt 10g, vỏ rễ hoặc vỏ thân cây gạo (cạo sạch vỏ ngoài) 20g. Tất cả giã nát, đổ ngập xâm xấp nước vo gạo đặc, đun sôi nhỏ lửa cho đến khi sền sệt. Để nguội đắp vào chỗ tràng nhạc. Băng lại, ngày thay một lần. Kinh nghiệm cho thấy có thể chữa tràng nhạc chữa mưng mủ hoặc đã có mủ. Chữa hắc lào: Lá ngoi tươi giã nát, vắt lấy nước đặc bôi. Ngày làm một lần. Ở Trung Quốc, ngoi còn được dùng chữa thống phong, băng huyết ở phụ nữ, sưng tấy, viêm đa, eczema, mụn nhọt, liều dùng: 4,5 – 9g/ ngày, sắc nước uống. Dùng ngoài,lấy nước sắc rửa hoặc giã nát sao nóng với rượu, đắp tại chỗ.  Ở Đài Loan, ngoi dược dùng chữa lỵ, viêm ruột, sốt.  Ở Malaysia, lá ngoi đắp lên trán chữa đau đầu, nước sắc uống chữa chóng mật, phụ nữ sau khi đẻ tắm bằng nước lá ngoi rất tốt. Nước sắc rễ ngoi là thuốc giảm đau, chữa rối loạn tiêu hoá.  Ở Indonesia, nước sắc rễ ngoi với gừng và hành chữa tiểu tiện ra máu. Lá ngoi được dùng chữa khí hư ở phụ nữ, vò nát với muối dùng cho phụ nữ khi đẻ. Bột lá ngoi trộn với các vị thuốc khác chữa bệnh loét mũi cho ngựa. Ở Philippin, lá ngoi hơ nóng đắp lên trán chữa đau đầu, nước sắc rễ ngoi chữa kiết lỵ và tiêu chảy.  *Nguồn: Cây thuốc và động  vật làm thuốc ở Việt Nam"
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "Lưu ý": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sả chanh",
+      "ten_khac": "Cỏ sả, mao hương, sả chanh, cà phéc (Tày), phác chấu (Thái), chà gung (Dao), mờ blạng (K’Ho)",
+      "ten_khoa_hoc": "Cymbopogon citratus (DC) Stapf.",
+      "ma_taxon": "123728",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Sả là loại cỏ sống lâu năm, mọc thành bụi, cao từ 0,8-1,5m hay hơn.",
+      "thân": "Thân rễ trắng hay hơi tím.",
+      "lá": "Lá hẹp, dài giống như lá lúa, mép hơi nháp.",
+      "hoa": "Cụm hoa gồm nhiều bông nhỏ không cuống.",
+      "mùi": "Toàn cây có mùi thơm đặc biệt mùi sả.",
+      "mọc": "Trồng làm thuốc, người ta ít phân biệt sả này với sả khác, nhưng khi trồng để cất tinh dầu người ta phân biệt sả ra hai nhóm có tinh dầu có giá trị khác hẳn nhau:  Nhóm sả cho tinh dầu với thành phần chủ yếu là Citronellal và genariola (citronnelle). Trong nhóm này có loài Cymbopogon winterianus, Cymbopogon nardus (L.) Rendl. (Andropogon nardus L.) có hàm lượng tinh dầu cao và chất lượng tốt nhất, sau đấy đến cây sả Cymbopogon confertiflorus Stapf cho ít tinh dầu hơn, chất lượng cũng kém hơn. Nhóm sả cho tinh dầu với thành phần chủ yếu là citral (Lemon grass-Verveine des indes) làm tinh dầu có mùi chanh rất rõ. Đứng đầu nhóm sả này là sả Cymbopogon flexuosus Stapf. (Andropogon flexuosus Nees), sau đến loài Cymbopogon citratus Stapf, (Andropogon schoenanthus L.).  Ngoài hai nhóm này còn một số loài sả cho tinh dầu có thành phần khác hẳn mặc dầu về hình thái và giải phẫu rất khó phân biệt như loài sả Cymbopogon martinii (Roxb.) Wats, thì thứ motia cho tinh dầu gọi là essence Palma rosa hay Geranium des Indes chứa tới 75-95% geraniola, còn thứ Sofia lại cho một thứ tinh dầu không chứa geraniola mà lại chỉ có ancol perilic."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Sả chanh chứa 1-2% tinh dầu màu vàng nhạt, thơm mùi chanh với thành phần chủ yếu là citral (65-85%), geraniol 40% ( Võ Văn Chi – 1999)",
+      "Với Sả Java": "lá chứa khoảng 3,18-4,72% tinh dầu (so với trọng lượng tươi), thành phần hóa học chính là citronellal (32-45%), geraniol (12-18%), citronellol (11-15%) (theo Tài nguyên thực vật có tinh dầu ở Việt Nam)",
+      "Tùy theo loài sả": "thành phần của tinh dầu thay đổi và có giá trị khác nhau. Tinh dầu sả cất từ cây sả Cymbopogon nardus (L.) Rendl. (sả Xrilanca) và cây Cymbopogon winterianus Jowitt (sả Giava) có từ 20 đến 40% geraniola và citronellola, 40 đến 60% xitronellala. Loài thứ hai được trồng nhiều ở Giava, Đài Loan, Trung Mỹ (Guatemala), Ghinê, Mangat.",
+      "Tinh dầu sả cất từ cây sả chanh Cymbopogon flexuosus và C. citratus": "chứa từ 70 đến 80% citral. Loại sả chanh này đuợc trồng nhiều ở Ấn Độ, Mangat, đảo Como, Trung Mỹ (Guatemala), Châu Phi (Côngô, Kênya).",
+      "Tinh dầu sả cất từ loài Cymbopogon martinii var. motia": "chứa 15-95% geraniola còn var. Sofia chứa ancol perilic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sả có vị the cay, mùi thơm, tính ấm, vào phế, tỳ, vị, ó tác dụng khư phong thanh thấp, tán hàn giải biểu, thông kinh lạc, tiêu thũng, phòng côn trùng cắn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài công dụng dùng làm gia vị, Sả đã được dùng làm thuốc từ lâu đời trong nhân dân ta, Tuệ Tĩnh từng nói về Sả: vị đắng, tính ấm, mùi thơm.\u00a0Bạt hôi thối, trừ tà khí, giải cảm hàn thấp nóng sốt, trị đau bụng lạnh dạ, nôn mửa. Ngày nay, ta dùng Sả chữa: cảm mạo, nóng sốt đau đầu, đau dạ dày, ỉa chảy, phong thấp tê đau, đòn ngã tổn thương, bụng dạ trướng đau, viêm tai giữa có mủ, ho, cước khí, kinh nguyệt không đều, phù thũng khi có mang.",
+      "được_dùng": "Người ta còn dùng toàn cây Sả chưng cất tinh dầu; tinh dầu Sả dùng khử mùi hôi tanh, xua ruồi muỗi. Dùng xoa ngoài chữa cúm và phòng bệnh truyền nhiễm. Ngày dùng 10 – 15g Sả hoặc một lượng nhỏ tinh dầu.",
+      "chữa": "Sả được dùng chữa cảm sốt, đau bụng, đi ngoài, đầy hơi, trướng bụng, nôn mửa, trẻ em phong kinh, ho, viêm phổi, ngộ độc. Ngày dùng 8-12g lá và củ dưới dạng xông hay hãm nước uống.",
+      "Lá sả nấu nước gội đầu": "làm sạch gầu, trơn tóc, tránh bệnh về da đầu.",
+      "Tinh dầu sả": "dùng trừ muỗi, khử mùi tanh hôi, dùng xoa ngoài chống cúm phòng bệnh truyền nhiễm.",
+      "Tinh dầu sả còn dùng": "trong công nghiệp chất thơm, làm nước hoa, xà phòng thơm…",
+      "Bài thuốc có vị sả": "Trị ho do cảm lạnh, cảm cúm:  Củ sả 40g, gừng tươi 40g. Hai thứ rửa sạch, giã nát, nấu với 650ml nước, sôi khoảng 10 phút, bỏ bã, thêm đường vào nấu cô lại thành cao, ngậm nuốt dần trong ngày.",
+      "Trị cảm sốt do phong hàn, nhức đầu, không ra mồ hôi": "Lá sả, lá chanh, lá bưởi, hương nhu, húng chanh, bạc hà, ngải cứu, kinh giới… một lần dùng 4 – 6g mỗi loại nấu nước xông cho ra mồ hôi.",
+      "Giải cảm": "Kinh giới, tía tô, trắc bách diệp, bạc hà, chanh, ngải cứu, lá tre, lá ổi (mỗi nồi dùng 5 loại lá)… đun sôi, dùng để xông giải cảm rất hiệu nghiệm. 15 – 30g củ sả hoặc lá tươi nấu nước xông. Lá sả, lá tía tô, lá kinh giới, lá ngải cứu, thêm 3 – 4 củ tỏi (thiếu một thứ cũng không được), nấu nước xông sẽ trị được nhức đầu (do thời tiết). Lá sả, lá tre, lá bưởi (hoặc lá chanh), lá tía tô, lá ổi, nấu nước xông, trước khi xông nên múc sẵn một chén để riêng, xông xong uống rồi đắp chăn nằm một lúc sẽ đỡ.",
+      "Giảm cảm giác buồn nôn khi có thai": "Củ sả băm nhỏ hãm với nước sôi uống hàng ngày.",
+      "Giải nhiệt, thông tiểu, tiêu thực": "Lá sả tươi 30 – 40g nấu với 1 lít nước, đun sôi khoảng 5 phút, uống.",
+      "Trị nhức đầu": "Lá sả, lá tía tô, lá kinh giới, lá ngải cứu với vài củ tỏi nấu nước xông.",
+      "Trị ho": "Rễ sả, trần bì, sinh khương, tô tử, mỗi vị 250g (4 vị này giã nát, ngâm rượu 40oC vừa đủ để được 200ml); bách bộ bỏ lõi, thái nhỏ, sao khô 500g; mạch môn bỏ lõi 300g; tang bạch bì tẩm mật, sao vàng 200g (3 vị này sắc và cô đặc lại thành 300ml cao lỏng), trộn lẫn cao lỏng và rượu thuốc, ngày uống 2 – 3 lần, mỗi lần 10ml.",
+      "Sạch răng miệng": "Củ sả non rửa thật sạch, xắt nhỏ, phơi hoặc sấy khô, tán bột, mỗi lần dùng 10g, ngâm với nước nóng, dùng để súc miệng.",
+      "Đau dạ dày": "Dùng cây tươi 30-45g đun sôi uống.",
+      "Đòn ngã tổn thương": "Dùng cây tươi 30-45g cây tươi, đun sôi trong nước thêm rượu uống.",
+      "Thối miệng, hôi nách": "Bột củ sả 10 phần, phèn phi 1 phần, trộn đều, luyện viên uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây sả được trồng ở khắp nước ta, nhưng diện tích trồng làm thuốc không nhiều, chỉ có tính chất gia đình và người ta chỉ dùng rễ hoặc toàn cây đào về dùng tươi hay phơi trong râm mát."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

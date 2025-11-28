@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thôi chanh",
+      "ten_khac": "Bát giác phong, Thôi chanh, Thôi ba, Tông da",
+      "ten_khoa_hoc": "Alangium chinense (Lour.) Harms",
+      "ma_taxon": "133644",
+      "ho": "Thôi chanh (Alangiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây Thôi chanh hay còn gọi là Bát giác phong Cây gỗ to, cao 4 – 8m, có thể hơn. Cành mọc nằm ngang, cành non có nhiều lông màu hung, cành già nhẵn, màu nâu hoặc đen nhạt.",
+      "lá": "Lá mọc so lem phiến mỏng hình bầu dục, đôi khi có cạnh hoặc thùy ở gần đầu lá, gốc hơi hình tim lệch, đầu nhọn, mặt trên nhẵn bóng, mặt dưới đôi khi có lông, gân nổi rõ, hai gân bên tỏa từ gốc lá; cuống lá ngắn có màu đỏ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành xim phân đôi, lá bắc dễ rụng,  hoa màu trắng, bao hoa mấu 6 – 8 gồm đài hình đầu, có răng ngắn, cành hoa dài và hẹp khi nở.",
+      "quả": "Quả hạch, hình trái xoan hoặc gần hình cầu, phía trên có vết tích của đài.",
+      "mùa hoa": "tháng 6 -8",
+      "mùa quả": "tháng 6 -8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bát giác phong là cây có nguồn gốc ở vùng ôn đới ấm, phân bố ở Trung quốc, Triều tiên và Nhật bản. Ở việt nam, loài này thường chỉ gặp ở các vùng núi phía bắc với độ cao phân bố tới 2000 m. Cây ưa sáng và ưa khí hậu ẩm mát, thường mọc ở ven rừng, bờ mương hoặc sát chân núi. Cây có thể rụng lá (không hoàn toàn) vào mùa đông, ra hoa quả nhiều hàng năm, song hiếm thấy mọc tập trung trong các quần thể tự nhiên."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ thu hái vào mùa hạ, thu dùng tươi hoặc phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ bát giác phong chứa dl – anabasin, neonicorn, veroterpin"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bát giác phong có vị cay, tính ôn, có độc, có tác dụng khư phong, trừ thấp, thư càn, hoạt lạc, tán ứ, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ bát giác phong chữa  phong thấp, đau mỏi, tê liệt, đau lưng do làm việc quá nhiều, vết thương do đánh đập, còn dùng chữa tâm thần phân liệt (Trung quốc) Ngày dùng 3 – 6 g, sắc nước uống.",
+      "luu_y": "Bác giác phong có độc, liều dùng cần khống chế chặt chẽ. Không  dùng cho phụ nữ có thai, trẻ em và người già ốm yếu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1, chữa viêm thấp khớp:  Rễ bát giác phong rửa sạch, thái mỏng, ngâm rượu trắng với tỷ lệ 1:3 trong vòng 20 ngày, cứ cách 1 ngày lắc đều 1 lần. Ngày uống 2 – 3 lần, mỗi lần 10 ml.  2, Thuốc giãn cơ trong phẫu thuật ngoại khoa  Rễ bát giác phong (9g), nước 150ml đun sôi 20- 30 phút, uống trước khi phẫu thuật ½ giờ. Chủ yếu dùng cho tiểu phẫu thuật và khi rạch da cần dùng thêm thuốc gây tê tại chỗ.  3, Chữa tâm thần phân liệt  Bột rễ bát giác phong, mỗi lần uống 1.5 – 2.4 g. Ngày uống 2 lần. Không được dùng quá liều.  4, Chữa mất ngủ  Bột rễ bát giác phong, mỗi lần uống 0.5 – 1.0g. Ngày 2 -3 lần. Uống trước khi đi ngủ.  5. Chữa bán thân bất toại  Bát giác phong (4.6g) ninh với thịt gà ăn trong ngày"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mặt quỷ",
+      "ten_khac": "Mặt quỷ, Nhàu lông, Cây gạch",
+      "ten_khoa_hoc": "Morinda umbellata L.",
+      "ma_taxon": "1415440",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối hình trứng rộng, phía cuống hẹp lại, đầu tù hay nhọn dài 2-12,5cm, rộng 3-4cm, nhẵn hay có lông ở mặt dưới, cuống dài 3-8cm.",
+      "hoa": "Hoa màu trắng hợp thành hình đầu tận cùng, đường kính khoảng 6mm.",
+      "quả": "Quả hạch dính với nhau thành hình đầu nhiều mặt, màu cam đỏ, mỗi hoa để lại trên quả một vết tròn làm cho quả có hình thù quái dị.",
+      "cây": "Dây leo có thể dài tới 10m.",
+      "mùa hoa": "tháng 5-6",
+      "mùa quả": "tháng 7-8."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ chứa glucosid và các dẫn xuất anthraquinone."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cây mặt quỷ có vị đắng, tính lạnh, có tác dụng thanh nhiệt, nhuận tràng, giải độc"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Y học dân gian:  Toàn cây mặt quỷ được dùng chữa thấp khớp, đau lưng, nhức xương. Ngày 12-20g, sắc uống. Lá và thân dùng ngoài trị mụn nhọt, lỵ, mẩn ngứa, ghẻ lở ngoài da. Dùng riêng hoặc phối hợp với cà gai leo, kim cang, dây gắm, dây đau xương, ngũ gia bì. Dùng ngoài cành và lá mặt quỷ để tươi, giã nát, đắp chữa mụn nhọt, nấu nước tắm, mẩn ngứa.  Y học nước ngoài:  Ở Ấn Ðộ, lá phối hợp với một số chất thơm sắc nước uống dùng trị ỉa chảy và lỵ. Ở Trung Quốc, theo Hải Nam thực vật chí, cả cây bỏ rễ chữa sốt, ho, cầm máu, trị đau dạ dày, viêm gan cấp, ngoại thương chảy máu, còn dùng trị đau lưng, tê thấp. Liều dùng 10-15g sắc uống. Ở Inđônêxia dùng chữa đau bụng, ỉa chảy, bệnh về cơ quan tiết niệu, bệnh đái đường bệnh tê phù, bệnh lao phổi, đau ngực, ho, đau gan, chữa các vết cắn, vết đứt và các vết thương khác."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Dây mặt quỷ mọc rất phổ biến ở những đồi có cây bụi hay rừng thưa tại nhiều tỉnh nước ta. Còn thấy mọc ở các nước nhiệt đới châu Á, Trung Quốc, Nhật Bản, châu Mỹ.",
+      "phơi khô": "Người ta dùng lá và rễ tươi hay khô, có khi hái toàn dây và lá. Rễ đào về thái mỏng phơi hay sấy khô. Thường dùng không chế biến gì khác. Nhưng có người sao cho hơi vàng hoặc tẩm rượu sao."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

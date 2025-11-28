@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ gừng",
+      "ten_khac": "Cỏ gừng, Cỏ cựa gà, Cỏ ống, Phổ địa thử",
+      "ten_khoa_hoc": "Panicum repens L.",
+      "ma_taxon": "166096",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây lâu năm vì thân rễ ngầm trắng vàng, đường kính 1-3mm, có vảy, đầu nhọn (cựa gà) mang những bó rễ con.",
+      "thân": "Thân cây mọc thẳng đứng, thường nhẵn.",
+      "lá": "Lá xanh mốc ở trên, xanh đậm ở dưới, không lông, trừ rìa lông ở bẹ và gốc lá, mép có lông dày,",
+      "hoa": "chùy hoa ở ngọn, các bông nhỏ xanh rồi trắng, cao 3mm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây liên nhiệt đới, mọc hoang rất phổ biến ở ven bờ ruộng và nơi khô ven đường. Thu hái thân rễ quanh năm, tốt nhất vào mùa xuân, rửa sạch, thái mỏng, phơi khô trong râm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ – Rhizoma Panici Repentis."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Phong thấp nhức mỏi, bại sụi Ðàn bà huyết nhiệt, kinh nguyệt không đều, bạch đới; Viêm thận và bàng quang; Trẻ em kinh phong, sốt cao, tiểu ít hoặc bí đái, ban sởi; Giải độc ăn uống; Phát ban da, đơn độc, rắn cắn.",
+      "được_dùng": "Ngày dùng 10-20g sắc uống, thường đun sôi 10 phút rồi hãm trong 1/2 giờ.",
+      "chữa": "Ðơn thuốc có cỏ gừng :  Chữa rắn cắn, chó cắn, dùng Củ cỏ ống, Củ sả, Củ bồ bồ, Vỏ gáo vàng, Phèn phi, trái Chanh giấy. Cân lượng đồng đều, bao nhiêu cũng được. Lúc gấp hiệp chung, quết nhừ, vắt lấy nước uống, xác đắp chỗ đau. Lúc hoãn, tán ra bột, vò viên bằng hạt tiêu, mỗi lần uống 5-10 viên (kinh nghiệm ở An Giang)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

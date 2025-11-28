@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây nam sâm",
+      "ten_khac": "Sâm nam, Cây chân chim, Kotan (Lào), Ngũ chỉ thông, cây đáng, lá lằng",
+      "ten_khoa_hoc": "Schefflera heptaphylla (L.) Frodin",
+      "ma_taxon": "1263715",
+      "ho": "Ngũ gia bì (Araliaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ hoặc cây to có thể cao từ 5-10m.",
+      "lá": "Lá kép hình chân vịt, mọc so le có 6-8 lá chét, cuống lá dài 8-30cm, lá chét nguyên hình trứng, đầu nhọn hay hơi tù dài 7-17cm rộng 3-6cm, cuống lá chét ngắn. Cuống lá chét giữa, dài hơn đo được 3-5cm.",
+      "hoa": "Cụm hoa chuỳ hoặc chùm tán. Hoa nhỏ màu trắng, số cánh hoa và nhị bằng nhau thường là 5, bao phấn 2 ngăn bầu hạ có 5-6 ngăn.",
+      "quả": "Quả mọng hình cầu, đường kính 3-4mm. Khi chín có màu tím sẫm đen, trong có 6-8 hạt.",
+      "mùa hoa": "tháng 2-3",
+      "mùa quả": "tháng 4-5."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ thân nam sâm chứa acid asiatic, asiaticosid.",
+      "đã nghiên cứu": "Năm 1989 (Chem. Pharm. Bull., 37 (10), 27′ 2730) J. Kitajama và cộng sự đã chiết từ lá Sch.octophylia của Nhật hai tritecpennoid glucosidla 3 α-hydroxylap.20 (29) ene 23,28 dioic axit 28-0-α L.rhamnopyranosyl và 3-epo-betulinic axit 3-O-β D-glucopyranozit.",
+      "tìm thấy": "Năm 1990 (Chim. Pharm. Bull., 38(3), 714- 716) vẫn tác giả trên còn phát hiện thêm 2 tritecpenoid sulfat cũng từ lá Sch. ociophyllia mọc ở Nhật: 3-epi-betulinic axit 3-Osulfate và betulinic axit 3-0-sulfat. Đây là một điều thú vị vì triterpenoid sulfat thu được từ thiên nhiên ở dạng tự do."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính vị: vị đắng, chát, mùi thơm nhẹ, tính mát.",
+      "có tác dụng": "làm ra mồ hôi, giải biểu, khử phong trừ thấp.",
+      "chữa": "Đau lưng, đau xương cốt do hàn thấp, gân xương co rút, sưng đau, hoặc sưng đau do sang chấn.",
+      "được_dùng": "Liều dùng của vỏ thân 10-15g, sắc nước uống. Dùng ngoài, giã nát vỏ, sao với rượu đắp tại chỗ, hoặc nấu nước ngâm rửa. Vỏ rễ 6-12g sắc nước uống.",
+      "làm thuốc": "Lá thường được phơi khô, nấu canh ăn gọi là rau lằng để giải nhiệt, kích thích tiêu hóa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bài thuốc chứa Nam Sâm:",
+      "chữa": "Sổ mũi, đau họng: Rễ nam sâm 15g, Cúc hoa vàng (toàn cây) 35g sắc uống.",
+      "chữa": "Phong thấp đau nhức xương: Vỏ rễ nam sâm 180g ngâm trong 500ml rượu, hàng ngày uống 2 lần, mỗi lần 40ml.",
+      "chữa": "Bệnh cước khí, chân sưng đau: nam sâm, Lõi thông, Hạt cau, Hương phụ, Tử tô, Chỉ xác, Ké đầu ngựa, mỗi vị 8-16g sắc uống (Nam dược thần hiệu)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc rải rác khắp nơi Việt Nam, nhiều nhất tại các tỉnh Vĩnh Phúc, Phú Thọ, Lào Cai, Hòa Bình, Hà Tây, Bắc Giang, Bắc Ninh, Ninh Bình, Nam Định, Hà Nam."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

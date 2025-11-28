@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa mai vàng",
+      "ten_khac": "Lão mai, Huỳnh mai, Hoàng mai, Hoa mai vàng",
+      "ten_khoa_hoc": "Ochna integerrima (Lour.) Merr.",
+      "ma_taxon": "363256",
+      "ho": "Ochnaceae (Hoàng mai)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, phân cành nhiều, cao 5 – 10 m.",
+      "thân": "Thân cành tỏa rộng, màu nâu sẫm, có nốt sần.",
+      "lá": "Lá mọc so le, hình trứng hoác bầu dục, đôi khi hình mác – thuôn, đầu nhọn, mép khía răng nhỏ, hai mặt nhẵn, mặt trên sẫm bóng, mặt dưới nhạt; lá kèm sớm rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành chùm, hoa màu vàng, dài thường mọc gập xuống khi hoa nở, tràng 5 cánh mỏng hơi dài hơn lá đài, nhị nhiều: bầu thượng chứa 10 – 12 noãn.",
+      "quả": "Quả hạch, dài 6 – 7 mm, khi chín mầu đen, chứa 1 hạt: các quả xếp thành vòng đều.",
+      "mùa hoa": "tháng 3-5.",
+      "mùa quả": "tháng 3-5.",
+      "mọc": "Cây rất đa dạng, có nhiều thứ đôi khi cũng được sử dụng như Ochna harmandii H. Lec. var. annamensis H. Lec. Oharmandii H. Lec. var. latifolia. H. Lec. và Oharmandii H. Lec. var. retusa H. Lec."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ochna L, gồm vài loài là cây bụi hay gỗ nhỏ, phân bố rải rác ở vùng nhiệt đới và cận nhiệt đới châu Á, châu Phi và châu Mỹ. Ở Việt Nam có 2 loài. Hoa mai vàng có vùng phân bố chủ yếu ở khu vực Đông Nam Á và Nam Á bao gồm Việt Nam, Lào, Campuchia, Thái Lan, Malaysia, Ấn Độ. Ở Việt Nam hoa mai vàng chi thấy ở vùng có khí hậu nhiệt đới điển hình, từ Quảng Trị, Quảng Nam, Trị Thiên – Huế dọc theo các tỉnh ven biển miền Trung trở vào. Cây ưa sáng, chịu được khô hạn, thường mọc lẫn với các loại cây bụi khác ở kiểu rừng thưa, rừng cây bụi ở đồi hay núi thấp. Cây rụng lá vào đầu mùa khô, ra hoa trước khi ra lá. Mùa hoa thường trùng vào dịp Tết nguyên đán. Số lượng hoa quả trên cây rất nhiều, tái sinh tự nhiên chủ yếu từ hạt. Tuy nhiên, cây cũng có khả năng tái sinh cây chồi khỏe, vì thế khi trồng ở chậu thường được cắt tỉa, tạo thành cây cảnh cổ dáng đẹp."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây hoa mai vàng thu hái quanh năm, phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ cây hoa mai vàng có vị đắng, có tác dụng kích thích tiêu hóa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm dân gian, ở các tỉnh phía Nam Việt Nam, người ta dùng vỏ thân cây hoa mai vàng ngâm rượu uống làm thuốc bổ đắng, giúp tiêu hóa dễ dàng. Ở Campuchia và Lào, các lá non của cây thường được dùng làm rau ăn sống.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

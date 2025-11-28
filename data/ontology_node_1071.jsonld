@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kim anh",
+      "ten_khac": "Kim anh, Mác nam coi, Mác nam lỷ (Tày), Đường quán tử, Thích lê tử",
+      "ten_khoa_hoc": "Rosa laevigata Michx.",
+      "ma_taxon": "83066",
+      "ho": "Rosaceae (Hoa hồng)",
+      "Mô tả": {
+        "cây": "Cây kim anh là một loại cây mềm, mọc thành bụi, xen lẫn với những cây khác như sim, tre v.v… Cây có thể mọc dài tới 10m.",
+        "thân": "Thân cây có đường kính tới 2cm, thân và cành đều có gai mọc cúp xuống phía gốc như cây hoa hồng. Mỗi mẩu thân thường có 1-2 cành vươn ra rất dài, có thể tới 2-3m.",
+        "lá": "Lá có lá kèm và gồm 3 lá chét. Lá chét hình trứng, 2 đầu nhọn, mép có răng cưa, lá chét giữa dài và rộng hơn. Đừng nhầm với cây tầm xuân có số lá chét nhiều hơn (5-7).",
+        "hoa": "Hoa màu trắng, đơn độc, mọc ở đầu cành, khi nở có đường kính rộng tới 5-8 cm, nhị màu vàng.",
+        "cuống": "Đế hoa lớn, hình chén có gai nhỏ, nhọn, cuống hoa dài 1,53 cm.",
+        "lá": "Lá đài 5, tràng cũng có 5 cánh, nở vào cuối xuân sang hạ (các tháng 2, 3), quả chín vào các tháng 8, 9, 10.",
+        "quả": "Quả giả (thực ra đó là đế hoa) tươi có màu vàng đỏ bóng, cứng hình cái chén, dài 1,52cm có cuống dài 2-3cm, phía trên còn sót lại 3-5 lá đài bao vây nhị và vòi hơi nổi phồng lên ngoài mặt có nhiều gai. Khi khô có màu nâu đỏ sẫm hay nhạt, sau khi chế biến, trên mặt có những vết sẹo của gai đã rụng đi. Trong “quả” có rất nhiều lông và “hạt” (thực ra đây mới là quả) hình thon, dẹt, dài 6-7mm, màu vàng nâu nhạt có góc rất cứng. Có hạt có cuống, có hạt không có cuống."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Kim anh tử là một nguồn vitamin C, khá lớn, tỉ lệ hơn 1%. Định lượng vitamin C trong quả giả kim anh ở Lạng Sơn, chúng tôi thấy 1,360 mg trong 100 g. Trong quả (ta gọi nhầm là hạt) có chất glucosid độc, do đó “khi dùng ta vẫn phải bỏ hạt đi. Ngoài ra còn có tanin, đường, chất nhầy, acid hữu cơ chất nhầy."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Kim anh được dùng cả trong đông y và tây y. Tây y coi kim anh là một nguồn vitamin C quan trọng. Thường chế thành mứt có‘vị vừa ngọt, vừa chát và vừa chua, dùng làm thuốc bổ, thuốc cầm máu. Thuốc pha hay cồn thuốc chế bằng toàn bộ quả (cả cùi và hạt) được dùng chữa bệnh về thần kinh với những triệu chứng như lo âu, thần kinh bất định, trằn trọc thâu đêm. Khi dùng phải cẩn thận, tránh ngộ độc. Quả giả kim anh còn dùng dưới dạng siro (1ml có 5mg vitamin C), bột (1g bột có 30mg vitamin C). Đông y coi kim anh có tác dụng kiện tinh, mạnh ruột, Dùng chữa di tinh, đái són, tiểu tiện nhiều lần, phụ nữ khí hư, bạch đới, tỳ hư mà hay đi ỉa lỏng. Dùng dưới hình thức bột hay cao mềm. Ngày dùng 6 đến 12g. Ngoài ra người ta còn dùng lá kim anh giã nhỏ, thêm ít muối mà đắp lên mụn nhọt, có khi phối hợp với lá dâu tằm cùng giã với muối mà đắp lên vết thương để cầm máu.  Đơn thuốc có kim anh dùng trong đông y:  Thuốc viên thủy lục nhị tiên đơn, chữa di mộng tinh, phụ nữ khí hư, bạch đới: Quả giả kim anh, khiếm thực, hai vị bằng nhau, tán nhỏ làm thành viên bằng hạt ngô. Ngày uống 10-20 viên. Lục là đất, thủy là nước vì bài thuốc gồm một vị mọc trên đất (kim anh) và một vị mọc dưới nước (khiếm thực). Thuốc viên chữa lỵ lâu ngày: Hoa kim anh, quả kim anh (bỏ hạt), lá kim anh và anh túc xác, tất cả bằng nhau, tán nhỏ viên thành viên bằng hạt ngô; ngày dùng 7 viên, dùng nước sắc vỏ quít mà chiêu thuốc. Bài thuốc chữa suy nhược thần kinh tự ra mồ hôi, nam giới di mộng tinh, phụ nữ bạch đới trẻ em đái dầm: Lấy 60g kim anh uống sắc chia thành 3 ngày."
+      },
+      "Cách dùng": {
+        "được_dùng": "Mọc hoang trên các đồi ở nước ta, một số tỉnh miền núi biên giới như Cao Bằng, Lạng Sơn, tại đây một số người trồng làm hàng rào vì cây có nhiều gai. Còn thấy ở Trung Quốc (Quảng Đông, Quảng Tây, Phúc Kiến, Hà Nam, Giang Tô, Triết Giang, Hồ Nam, Hồ Bắc, Tứ Xuyên). Trồng bằng cách giâm cành hay đào các cây con có sẵn trên đồi về. Thu hái vào tháng 10 đến 11, khi ‘quả’ chín tới biến thành màu đỏ. Hái về, sau khi phơi khô, cho vào thùng, dùng gậy đảo cho hết gai rồi phơi khô lại lần nữa, gọi là kim anh tử, nếu sau khi loại hết gai đem bổ dọc, loại bỏ hết hạt (thực tế đây là quả thực) rồi phơi khô thì gọi là kim anh nhục hay kim anh phiến. Ngoài quả giả ra, người ta còn dùng rễ và vỏ rễ, hoa lá kim anh làm thuốc, nhưng hay dùng nhất vẫn là quả giả."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

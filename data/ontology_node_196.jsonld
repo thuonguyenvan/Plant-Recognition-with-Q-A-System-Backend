@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dọt sành",
+      "ten_khac": "Dọt sành lông trắng, Dọt sành",
+      "ten_khoa_hoc": "Pavetta indica L.",
+      "ma_taxon": "464610",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, có hình dạng thay đổi, hình trái xoan thuôn, dài 6-23cm, rộng 2-7cm, nhẵn, có lông bột hay lông mềm ở mặt dưới.",
+      "hoa": "Hoa trắng, thành xim ở ngọn, có khi thành chuỳ, ngắn hơn lá; lá bắc dạng màng, rộng, dạng đấu, tồn tại.",
+      "quả": "Quả dạng quả mọng, hình cầu, đường kính 4-5mm, có 2 ô, mang một đầu nhuỵ tồn tại dạng vòng, khi chín ăn được, có 2 hạt màu nâu đen.",
+      "cây": "Cây nhỏ mảnh, cao khoảng 3m hay cây gỗ nhỏ, có cành mọc đối với nhánh non mảnh, nhẵn, có lông bột hay lông mềm.",
+      "hạt": "Hạt 1 trong mỗi ô, màu nâu đen đen, phẳng hay lõm ở trong, lồi trên mặt lưng.",
+      "mùa hoa": "tháng 8-12",
+      "mùa quả": "tháng 8-12"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Có nhiều thứ khác nhau phân bố khắp nước ta, mọc dọc theo các suối ở rừng thứ sinh sau nương rẫy, gặp trong rừng đất sét ở Hoà Bình, Quảng Ninh, Vĩnh Phú. Còn phân bố ở Ấn Độ, Malaixia, Trung Quốc, Úc châu. Cây ưa ẩm, chịu bóng, thường mọc dưới tán rừng cây lá rộng thường xanh. Ở vùng trung du, có thể gặp dọt sành trong các quần thể cây bụi dọc theo bờ suối. Độ cao thay đổi từ vài chục đến hơn 1000m. Cây ra hoa quả nhiều và tái sinh bằng hạt. Trồng được bằng cây con và bằng hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá, gỗ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ rễ chứa một glucosid đắng và thơm."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ đắng, ngọt, đun sôi với nước cho mùi thơm dễ chịu, có tác dụng khai vị lợi tiểu. Lá tiêu viêm, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam, gỗ chẻ mỏng nấu nước như Chè, dùng chữa tê thấp. Ở Ấn Độ, người ta dùng rễ nấu uống khai vị và trị tắc nghẽn ruột và cũng như ở Philippin, người ta nghiền vỏ rễ, rồi lẫn với Gừng và nước cơm, dùng chữa thuỷ thũng và làm thuốc lợi tiểu. Ở Malaixia, người ta dùng đắp trị ghẻ. Lá dùng làm cao dán trị mụn nhọt. Nước sắc lá để nguội qua đêm, trong sương dùng làm thuốc xức rửa trị loét mũi. Nước sắc lá, cũng dùng cho phụ nữ sinh đẻ uống 3 ngày liền sau khi sinh và cũng dùng trị sốt. Lá nấu với nước dưới dạng thuốc chườm nóng, dùng để làm dịu các cơn đau do bệnh trĩ. Quả ngâm giấm được dùng làm gia vị. Rễ dọt sành dùng làm thuốc kích thích tiêu hóa, khai vị. Rễ đào về rửa sạch, tách lấy vỏ rễ, phơi hoặc sấy khô. Khi dùng lấy 100-200g sao qua, tán nhỏ, ngâm với 500ml rượu 35 độ, càng lâu càng tốt. Ngày uống 2 lần, mỗi lần 30ml. Có thể thêm đường cho dễ uống vì vỏ rễ có vị đắng. Lá dọt sành loại bánh tẻ, rửa sạch, giã nát, đắp ngoài chữa mụn nhọt, hoặc ép lá lấy nước, bôi chữa vết bỏng do cơn giời leo. Nước sắc của lá đem tắm chữa ghẻ.  Ghi chú: Thứ Giọt sành lông trắng – Pavetta indica L. var. canescens Pit., gặp nhiều ở các tỉnh Tây Nguyên, cũng được dùng chữa tê thấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

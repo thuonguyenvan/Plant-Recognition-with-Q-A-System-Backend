@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu răng ngựa",
+      "ten_khac": "Đậu tằm, tàu kê.",
+      "ten_khoa_hoc": "Vicia faba L.",
+      "ma_taxon": "57309",
+      "ho": "Đậu (Fabaceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, sống hằng năm, cao 0,6 – 1m hoặc hơn.",
+        "rễ": "Rễ mang nhiều nốt sần.",
+        "thân": "Thân cứng mọc thẳng, rỗng giữa, có cạnh rõ, không phân nhánh, đôi khi có tua cuốn.",
+        "lá": "kép lông chim gồm 1 – 3 đôi lá chét hình trái xoan hoặc hình mác thuôn, dài 4 – 8 cm, rộng 2,5 – 4 cm, đầu từ hơi nhọn, màu lục mốc.",
+        "hoa": "Cụm hoa mọc thành chùm, hoa màu trắng, viền tím sẫm.",
+        "quả": "Quả đậu, dài 40 cm, có khoảng 10 hạt to, dẹt, màu lục nâu, tỉa hoặc đen, vỏ hạt dày. Hạt non mềm, màu nâu lục nhạt, hạt già cứng, màu lục nâu.",
+        "mùa hoa": "tháng 1 – 2",
+        "mùa quả": "tháng 3 – 5."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Vicia L. ở nước ta ghi nhận có 5 loài, nhưng về nguồn gốc đều là cây nhập trồng [Danh lục các loài thực vật Việt Nam, tập 2, 2003].  Theo nhân dân ở một số địa phương giáp biên giới phía Bắc, đậu răng ngựa mà họ đang trồng có xuất xứ Trung Quốc. Các địa phương hiện có trồng đậu răng ngựa gồm có: Hà Giang (Đồng Văn, Mèo Vạc, Yên Ninh, Quan Bạ): Cao Bằng (Trung Khánh, Hạ Lang), Lạng Sơn (Tràng Định); Lai Châu (Phong Thổ), Lào Cai (Bắc Hà, Mường Khương), Yên Bái (Mù Cang Chải). Được biết về nguồn gốc xa xưa của loài đậu này ở vùng Đông Bắc Á, sau lan rộng ra nhiều quốc gia.",
+        "Đặc điểm sinh trưởng": "Đậu răng ngựa là cây ưa sáng, khi còn nhỏ thì ưa ẩm, sau khi có hoa quả cây có khả năng chịu hạn và chịu lạnh tốt."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Hạt đã phơi hoặc sấy khô. Ngọn và chồi non còn tươi. Rễ tươi."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Hạt tươi chứa 20% protein; 1% lipid; 66,6%, dẫn xuất protein dễ tiêu.  Hạt khô chứa 25% protein; 1,6% lipid; 70,30, dẫn xuất không protein; 4,9% chất xơ; 3,9% tro, Hạt còn có wyeron, điểm chảy 63% (0,001%). Wyeron có tác dụng với một chất gây bệnh cho cây và một số nấm da.  Quả chưa chín chứa S – hydroxylysin.  Vỏ hạt ngoài chứa β[3 – O – glucopyranosid] và β – glucose.  Lá chứa kaemplerol – 3 glucosido – 7 ramnosid, acid glyceric, acid folinic, plastoquinon, albumin, lysin, polyphenol oxidase.  Hoa chứa (E)β – ocimen."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Hạt đậu răng ngựa vị ngọt nhạt, tính mát, có độc; có công năng cầm máu, lợi tiểu, tiêu thũng.  Tài liệu Trung Quốc ghi tính vị: lá vị đắng, hơi ngọt, tính ấm, hạt quả vị ngọt, tính bình, hoa vị ngọt, tính bình; về công năng: thân chỉ huyết, chỉ tả; hoa lương huyết, chỉ huyết; vỏ quả lợi niệu, tiêu thấp; hạt quả kiện tỳ, lợi thấp, khu phong, chỉ huyết (TDTH, 1996, II: 1901].  Sách “Cương mục” ghi: lá vị đắng hơi ngọt, tính ấm, có công năng chỉ huyết, trừ thấp, tiêu thũng. Vỏ quả có công năng lợi thuỷ, tiêu thấp [TDTH, 1996, II: 1902]."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Hoa đậu răng ngựa được dùng làm mát, thanh nhiệt, lương huyết. Ngày dùng 6 – 9g, hoa tươi 15 – 30g sắc uống. Hoa tươi có thể giã nát, lấy dịch uống, hoặc chưng cất lấy nước uống.  Vỏ quả để lợi niệu, trừ thấp, ngày 15 – 30g sắc uống. Hạt luộc chín, chiết bỏ nước hoặc rang để khử chất độc dùng để ăn hoặc làm tượng như hạt đậu nành.  Quả đậu răng ngựa khô, nghiền cả quả thành bột. được dùng để ướp hương một số món canh.  Ở Ấn Độ, chồi của cây đậu răng ngựa được dùng có hiệu quả trong việc làm tình người say rượu khỏi trạng thái sững sờ [Nadkarini AK, 1999: 1272]. Củ tươi để lợi tiểu và chữa bệnh suy chức năng gan [Chopra et al., 1998: 100]. Ở Indonesia, hạt được dùng làm thực phẩm [Medi. herb index, 1995: 132]."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

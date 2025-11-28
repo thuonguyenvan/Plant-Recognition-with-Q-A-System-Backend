@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rung rúc",
+      "ten_khac": "Rung rúc, Rút dế, Đồng bìa, Cứt chuột, Câu nhi trà, Lão thử đằng, Khẩu slan (Tày)",
+      "ten_khoa_hoc": "Berchemia lineata (L.) DC.",
+      "ma_taxon": "641902",
+      "ho": "Rhamnaceae (Táo ta)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, dạng bụi leo, cao 1 – 4 m.",
+      "thân": "Thân, cành mảnh, nhẵn, lúc non màu xám nhạt, sau màu nâu.",
+      "lá": "Lá mọc so le, hình bầu dục, dài 1 – 3 cm, rộng 0,5-2 cm, gốc và đầu tròn, mép nguyên, hai mặt nhẵn, mặt trên màu lục sẫm, mặt dưới nhạt, gân nổi rất rõ; cuống lá ngắn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành chùm dài 1-3 cm; hoa nhỏ màu trắng; đài có 5 răng nhỏ, hình mác, ống đài ngắn; tràng dài hơn đài, 5 cánh hoa thuôn, hình trứng; nhị 5, chỉ nhị dài và dẹt; bầu 2 ô.",
+      "quả": "Quả hạch, hình bầu dục, màu đen, có đài tồn tại ở gốc và mũi nhọn ở đầu; hạt 2, thuôn.",
+      "mùa hoa": "tháng 9-10",
+      "mùa quả": "tháng 12 – 1"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi\u00a0Berchemia\u00a0Neck, ex DC. có 15 loài trên thế giới, đều là cây bụi nhỏ leo, phân bố phần lớn ở vùng Đông Á, Đông Nam Á và Nam Á. Ở Việt Nam, có 5 loài. Loài rung rúc phân bố từ Nhật Bản, Trung Quốc đến Việt Nam, một số nước vùng Đông Nam Á và cả ở Ấn Độ. Ở Việt Nam, rung rúc phân bố tương đối phổ biến ở các tỉnh phía bắc, từ vùng núi thấp (khoảng 400 m trở xuống) đến vùng trung du và đồng bằng.",
+      "thường_mọc": "Gây thưòng mọc lẫn trong các quần xã cây bụi ở đồi, bờ nương rẫy hay ven rừng, ở vùng đồng bằng, đôi khi gặp rung rúc mọc ở các gò đống hay lẫn trong các lùm bụi quanh làng.",
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, có thể chịu được hạn do có hệ thống rễ khỏe cắm sâu xuống đất, nhất là trong các trường hợp cây mọc ở những vùng đồi thấp, đất trơ sỏi đá. Cây ra hoa quả hàng năm, tái sinh tự nhiên chủ yếu từ hạt; chịu được chặt phá nhiều lần do khả năng tái sinh cây chồi khỏe."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ thu hái quanh năm (Radix Berchemiae Lineatae), rửa sạch, thái phiến, phơi khô. Khi dùng, có thể tẩm rượu, sao thơm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ rung rúc có vị hơi đắng, tính bình, có tác dụng hóa ứ trễ, chỉ huyết, chỉ khái (trị ho), chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân cành cây rung rúc thường được dùng làm dây buộc hoặc bộn thành rế để đỡ nồi. Rung rúc là một vị thuốc còn được dùng trong phạm vi nhân dân để chữa tê thấp, đau lưng, mỏi gối. Ngoài ra, còn chữa sốt, sốt rét, tiêu chảy. Ngày 10 – 20g dưới dạng thuốc sắc hoặc ngâm rượu uống. Hải Thượng Lãn Ông đã dùng rễ rung rúc làm thuốc giải độc do cá, hoặc bọ cạp. Ở Trung Quốc, rễ rung rúc được dùng chữa lao phổi, ho ra máu, loét hành tá tràng chảy máu, đau xương phong thấp.  Bài thuốc có rung rúc:  Chữa tê thấp nhức mỏi:\u00a0Rễ rung rúc 200g; huyết giác, cốt toái bổ, cẩu tích, dây đau xương, mỗi vị 20g, ngâm với 1 lít rượu 30 – 40° trong 15 ngày trở lên. Ngày uống 20 – 30 ml. Chữa lao phổi, ho ra máu:\u00a0Rung rúc 60g, xuyên phá thạch 30g, bạch cập 12g, a giao 9g. Tất cả tán nhỏ, đun sôi uống"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

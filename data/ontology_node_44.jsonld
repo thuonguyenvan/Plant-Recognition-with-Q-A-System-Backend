@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đơn Rau Má",
+      "ten_khac": "Đơn rau má, Cây quả bi, Vảy ốc đỏ, Cỏ bi đen, Vảy ốc nho, Nhả hoa, Phắc nóc đeng (Tày)",
+      "ten_khoa_hoc": "Pratia nummularia (Lam.) A.Br. et Aschers.",
+      "ma_taxon": "486255",
+      "ho": "Lobeliaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc bò, bén rễ ở mấu thân.",
+      "thân": "Thân mềm, có lông nhỏ.",
+      "lá": "Lá mọc so le, gần tròn, gốc hình tìm, đầu tù hoặc hơi nhọn, mép khía đều, mặt trên nhẵn màu lục sẫm, mặt dưới nhạt có lông mềm, cuống lá dài có lông.",
+      "hoa": "Hoa màu hồng, mọc đơn độc ở kẽ lá, có cuống dài, lá đài 5,hình mác hẹp dài và nhọn, mép có lông, phần dưới hàn liền với bầu, tràng hợp thành ống, có 5 cánh nhọn, nhị cong, bao phấn tụ họp thành ống chung bao quanh đầu nhụy, bầu hạ 2 ô có nhiều noãn.",
+      "quả": "Quả mọng, hình trái xoan, màu đỏ tím có đài tồn tại. Hạt nhỏ nhiều, dẹt và nhẵn.",
+      "mùa hoa": "Tháng 3-6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pratia Gaudich chỉ có ít loài phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á, châu Mỹ và Australia. Ở Việt Nam có 2 loài trong đó đơn rau má chỉ thấy ở các tỉnh vùng núi có độ cao từ vài trăm đến 2000 m như Cao Bằng, Lạng Sơn, Thái Nguyên, Tuyên Quang, Yên Bái, Hòa Bình, Lai Châu, Sơn La, Hà Giang…Cây còn phân bố ở Lào, Trung Quốc.",
+      "thường_mọc": "Đơn rau má thuộc loại cây hơi chịu bóng, thường mọc thành đám ở đất ẩm ven rừng, chân núi đá vôi, gần nguồn nước. Cây sinh trưởng mạnh trong mùa xuân hè, ra hoa quả nhiều hàng năm. Quả chín là thức ăn của động vật gặm nhấm. Đơn rau má có khả năng mọc chồi nhánh ở hầu hết các kẽ lá, tốc độ bò lan nhanh, khó phân biệt thành từng cá thể."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm. Quả hái vào mùa hạ. Dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá đơn rau má chứa protid 2,3% carbohydrat 6,9%, chất xơ 1,2%, caroten 3,6 mg% và vitamin C 5mg%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Đơn rau má có vị chát, tính hơi ôn, có tác dụng cố tinh, tiêu tích, tán ứ, lợi thấp, hoạt huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong kháng chiến chống Mỹ, nhân dân và bộ đội ở một số vùng giải phóng miền Nam thường lấy lá ngọn non cây đơn rau má nấu canh ăn nên được đặt tên là “rau giải phóng”. Về công dụng chữa bệnh, đơn rau má được dùng theo kinh nghiệm nhân làm thuốc giải nhiệt, lợi tiểu, chữa sốt, đái buốt, đái vàng. Liều dùng hàng ngày là 20-30 g cây tươi giã nát, thêm nước gạn uống, hoặc phơi sấy khô, sắc nước uống. Dùng ngoài, cả cây đơn rau má tươi giã đắp tại chỗ, chữa mụn nhọt, viêm da cơ mủ.  Ở Trung Quốc, đơn rau má được dùng toàn cây hoặc riêng quả làm thuốc trị di tinh ở nam giới, khí hư ( bạch đới ) ở phụ nữ, thoát vị, sưng tấy, cam tích trẻ em, phong thấp. Ở Indonesia, lá giã nát ép lấy nước uống chữa bệnh sprue.  Bài thuốc có thuốc rau má:  Chữa di tinh ở nam giới, khí hư ở phụ nữ:\u00a0Quả đơn rau má, quả kim anh, rễ bạch quả, rễ thích lê, rễ hoa phấn, mỗi vị 9g. Sắc nước uống. Chữa thoát vị:\u00a0Quả đơn rau má 30g, xuyên luyện tử 12g, tiểu hồi hương 12g. Sắc nước uống. Chữa cam tích trẻ em:\u00a0Đơn rau má hầm với gan lợn, ăn thường xuyên. Chữa phong thấp tê đau, vết thương:\u00a0Đơn rau má toàn cây 120g, ngâm với 500ml rượu trong 2-5 ngày. Mỗi lần uống 10-15 ml. Ngày uống 3 lần.  Nguồn: Cây thuốc và động vật làm ở thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

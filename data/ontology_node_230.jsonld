@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dền tía",
+      "ten_khac": "Rau giền tía, Xích hiện, Giền canh",
+      "ten_khoa_hoc": "Amaranthus tricolor L.",
+      "ma_taxon": "158256",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mọc đứng, cao 1m hay hơn, xẻ rãnh.",
+      "lá": "Lá hình thoi hay hình ngọn giáo, dài 3,5-12cm, rộng 2,5-10mm.",
+      "hoa": "Hoa thành ngù ở nách lá, hình cầu. Các hoa ở phía trên sít nhau hơn và tận cùng thân hay cành bằng một bông gần như liên tục.",
+      "quả": "Quả hình túi nhẵn, hình trứng-nón, dài 2mm, có núm vòi nhuỵ ở phía trên dài 1mm, mở thành một khe ngang. Hạt hình lăng kính, đường kính 1mm, màu đen.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 5-7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Ấn Độ, đã được thuần hoá ở các nước nhiệt đới; ở nước ta, Dền tía đã được trồng làm rau ăn. Do trồng trọt mà có nhiều thứ tuỳ theo dạng cây, màu sắc của lá. Có thể thu hoạch toàn cây quanh năm, dùng tươi. Cây được trồng bằng hạt, ưa sáng và ưa ẩm. Nhiệt độ thích hợp cho cây sinh trưởng từ 20-30 độ C, dưới 15 độ C cây gần như không phát triển được. Nhu cầu nước cho rau dền tía trong thời kỳ sinh trưởng mạnh cao. Cây ra hoa kết quả nhiều. Hạt nhỏ, 1200-2900 hạt/gam. Tỷ lệ nảy mầm của hạt cao và có thể bảo quản trong điều kiện nhiệt độ bình thường từ 6 tháng đến 1 năm. Trong thời kỳ sinh trưởng mạnh, cây có khả năng tái sinh chồi nhanh. Do đó, cứ sau 5-7 này ngắt ngọn người ta lại thu hoạch được lứa tiếp theo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong Dền tía, có các thành phần tính theo g%: nước 69,2; protid 1,7; glucid 1,9; cellulose 0,8; khoáng toàn phần 1,4; và theo mg%: calcium 75; phosphor 34,5; caroten 1,44; B1 0,03; B2 0,10; PP 1,0 và vitamin C 26. Hạt Dền tía chứa 62% tinh bột và 6% chất béo. Lá của chúng chứa nhiều vitamin A, C, B2, PP; lá và hạt chứa hàm lượng protid rất cao, tới 16-18%, trong đó acid amin quan trọng là lizin của nó cao hơn ở ngô gấp 3-3,5 lần, hơn bột mì 2-2,5 lần. Hạt của rau dền này là loại lương thực có giá trị hơn lúa mì, ngô, lúa và đậu tương."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dền tía có vị ngọt, se, tính mát; có tác dụng lợi khiếu, sát trùng. Hạt có vị ngọt, tính lạnh; có tác dụng làm mát gan ích khí lực."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cành lá Dền tía dùng làm rau ăn luộc, xào hay nấu canh vì thân của chúng khi còn non, mềm và mọng nước. Ăn rau dền canh lợi đại tiểu tiện và còn dùng trị lỵ. Cũng dùng trị nọc độc ong, rắn rết cắn, dị ứng, lở sơn. Ở Ấn Độ, người ta dùng trị rong kinh, ỉa chảy, lỵ và xuất huyết ở ruột. Dùng ngoài tán bột hay giã đắp các vết lở loét. Lá dền tía được dùng mỗi lần 40-50g, cắt nhỏ, nấu lấy nước bỏ bã rồi thêm gạo nếp nấu cháo ăn chữa sản hậu (Nam dược thần hiệu). Để chữa rắn cắn, lá dền tía giã nát thêm nước gạn uống, bã đắp lên vết cắn. Rễ dền tía phối hợp với rễ bí ngô sắc uống chữa chảy máu do sẩy thai. Ở Ấn Độ, nhân dân dùng cây dền tía uống chữa đa kinh, tiêu chảy, lỵ và chảy máu ruột, và dùng ngoài làm thuốc đắp làm dịu da, cây còn được bôi trị loét họng, miệng và rửa các vết loét. Bột nhão từ lá đắp lên vết đứt và vết thương làm mau lành và giảm đau. Nước ép chồi non thêm đường uống chữa đa kinh, mỗi lần uống 4 thìa cà phê, ngày 2 lần, trong 3 ngày. Ở Malaysia, nhân dân dùng rau dền tía để trị chảy máu. Hạt dền tía dùng chữa phong nhiệt, mắt có mộng trắng, mắt mờ, có hoa đen. Dùng 10g hạt tán bột uống với nước sắc hạt muồng ngủ (Thảo quyết minh) 12g làm thang.  Bài thuốc có dền tía:  Chữa phát ban (thời kỳ mới phát sốt): Dền tía 8g; rễ, lá lức 10g; ké hoa vàng, cát căn, cỏ mần trầu, đậu chiều, rau má, dây giác tía, mỗi vị 8g; kinh giới 6g; cam thảo đất 5g; bạc hà 4g, gừng sống 2 lát. Sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ma hoàng",
+      "ten_khac": "Ma hoàng",
+      "ten_khoa_hoc": "Ephedra sinica Stapf",
+      "ma_taxon": "135489",
+      "ho": "Ephedraceae (Ma hoàng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Thảo ma hoàng-Ephedra sinica-là một cây mọc thẳng đứng cao chừng 30-70cm, thân có nhiều đốt, mỗi đốt dài chừng 3-6cm, trên có rãnh dọc.",
+      "lá": "Lá mọc đối hay mọc vòng từng 3 lá một, thoái hoá thành vẩy nhỏ, phía dưới lá màu hồng nâu, phía trên màu tro trắng, đầu lá nhọn và cong,",
+      "hoa": "hoa đực hoa cái khác cành, cành hoa đực nhiều hoa hơn (4-5 đôi),",
+      "quả": "quả thịt, màu đỏ giống như quả nho. Vì cây lại hay mọc ở bờ biển cho nên châu Âu gọi ma hoàng là loại nho biển (Raisin de mer). Hạt hơi thò ra.",
+      "mọc": "Mộc tặc ma hoàng-Ephedra equisetina-cũng là một cây nhỏ mọc thẳng đứng, cao tới 2m, cành cứng hơn, màu xanh xám hay hơi có phấn trắng, đốt ngắn hơn, thường chỉ dài 1-3cm, lá dài 2mm, màu tía. Hoa đực và hoa cái khác cành, quả hình cầu, hạt không thò ra như thảo ma hoàng. Như vậy chỉ căn cứ vào chiều dài của đốt ta cũng có thể phân biệt hai loài ma hoàng: Thảo ma hoàng có đốt dài hơn (3-6cm), hạt thò ra, còn mộc tặc ma hoàng đốt ngắn hơn (1-3cm), hạt không thò ra. Tuy nhiên cũng cần nhớ rằng loài trung ma hoàng Ephedra intermedia cũng có đốt dài như thảo ma hoàng, nhưng đường kính cành trung ma hoàng thường hơn 2mm, còn đường kính thảo ma hoàng chỉ khoảng l,5-2mm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trước đây ma hoàng chỉ là một vị thuốc kinh nghiệm lâu đời của đông y, vào những năm 1885 và 1887 hai nhà bác học Nhật Bản là Nagai và Hamanashi chiết được từ vị ma hoàng ra chất ancaloit gọi là ephedrin. Từ đó ma hoàng được dùng cả trong tây y. Nhưng dần dần, người ta thấy là tuỳ theo nguồn gốc ma hoàng, hoạt chất thay đổi, tỷ lệ hoạt chất cũng thay đổi. Trong ma hoàng người ta đã chiết được những hoạt chất chủ yếu sau đây: Ephedrin hay 1. ephedrin C10H15NO, d. pseudoephedrin\u00a0C10H15NO, 1 .N metyl ephedrin C11H17NO, d. N. metyl ephedrin\u00a0C11H17NO, L. nor ephedrin C9H13NO, d. nor- ephedrin C9H13NO. Trong tất cả những hoạt chất kể trên, ephedrin có tác dụng hơn cả, tỷ lệ vào mùa thu cao hơn, có thể đạt tới 1,3%, sau đến d. pseudo ephedrin chừng 0,20%, những hoạt chất khác đều ở những tỷ lệ rất thấp. Sau đây chúng tôi xin giới thiệu tỷ lệ ancaloit toàn phần trong một số loài ma hoàng thường gặp, đồng thời tỷ lệ của chất ephedrin hay 1. ephedrin trong đó Dược điển Trung Quốc có quy định vị ma hoàng dùng làm thuốc phải chứa ít nhất 0,8% ancaloit toàn phần, độ tro không được quá 9%. Ngoài các chất kể trên, năm 1934 Triệu Thừa Hà và Mai Bân Phu (Trung Hoa y học tạp chí, 20: 697) đã chiết được từ thảo ma hoàng một chất gọi là ephedin C8H18H2O3, độ chảy 76-87°C Loài ma hoàng Tỷ lệ ancaloit toàn phần Tỷ lệ ephedrin:  – E. sinica 1.315% 80-85%  – E. equisetina 1.754% 85-90%  – E. intermedia 1.155% 40-46%  – E. gerardiana 1.65-1.70% 70-80%"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ma hoàng được dùng trong cả đông y và tây y. Tây y chủ yếu dùng chất ephedrin chiết xuất từ ma hoàng, đông y chỉ dùng toàn cành phơi khô. Đông y dùng ma hoàng làm thuốc ra mồ hôi, lợi tiểu tiện, chữa ho, trừ đờm, dùng trong bệnh ho lâu năm, viêm khí quản, hen suyễn, đau khớp xương. Tính chất của ma hoàng theo các tài liệu cổ như sau: Vị cay đắng, tính ôn, vào 4 kinh tâm, phế, bàng quang và đại trường, không độc, có khả năng khai thấu lý, ra mồ hôi, lợi tiểu tiện, làm thuốc chữa lỵ long đờm, dùng chữa trúng phong, thương hàn, nhức đầu, chữa ho, phá tích tụ, chữa chứng hay ngủ, tiêu xích ban độc, nhưng không nên uống nhiều sợ người hư hao. Phàm những người khí hư, tự ra mồ hôi (mồ hôi trộm), phổi nóng khó thở thì không dùng được. Liều dùng hàng ngày: Ngày uống 5-10g dưới hình thức thuốc sắc, thường phối hợp với nhiều vị thuốc khác. Tây y dùng ephedrin dưới dạng muối clohydrat hay sunfat, dùng riêng hay phối hợp với aspirin, cafein, papaverin. Liều dùng hàng ngày là 0,05 đến 0,15g để chữa hen (bắt đầu dùng liều 0,02g, tăng dần tới liều 0,12 và 0,15g). Có khi dùng ephedrin làm thuốc nhỏ mũi chữa sổ mũi (dung dịch 3% trong nước, mỗi lần nhỏ 1,2 giọt dung dịch này) Cần chú ý là trong đông y người ta phân biệt cành và rễ. Tác dụng cành đã giới thiệu ở trên. Theo đông y rễ ma hoàng (ma hoàng căn) và đốt ma hoàng (ma hoàng tiết) có tác dụng ngược lại, làm giảm mồ hôi, dùng trong những bệnh mồ hôi trộm, đẻ xong người yếu mồ hôi ra nhiều."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa viêm khí quản, hen suyễn, cảm mạo: Ma hoàng thang (bài thuốc của Trương Trọng Cảnh), ma hoàng 8g, quế chi 6g, hạnh nhân 8g, cam thảo 4g, nước 600ml, sắc còn 200ml chia 3 lần uống trong ngày. Đơn thuốc khác chữa hen suyễn, viêm phế quản mãn tính, lao: Ma hoàng 5g, tế tân 3g, Bán hạ 2g, Ngũ vị tử 1g, nước 600ml, sắc còn 200ml, chia 3 lần uống trong ngày."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

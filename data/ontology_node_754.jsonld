@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau sam",
+      "ten_khac": "Rau sam, Mã xỉ hiện, Phiắc bỉa, Slổm ca (Tày)",
+      "ten_khoa_hoc": "Portulaca oleracea L.",
+      "ma_taxon": "58991",
+      "ho": "Portulacaceae (Rau sam)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Toàn cây: Không có lông, bề mặt trơn nhẵn.",
+      "thân": "Mọc bò sát đất hoặc hơi nghiêng, ít khi mọc thẳng. Nhiều nhánh, dạng trụ tròn, dài khoảng 10-15 cm. Màu xanh nhạt hoặc có sắc đỏ sẫm.",
+      "lá": "Mọc so le hoặc gần đối nhau. Dạng dẹt, dày, hình trứng ngược. Dài 1-3 cm, rộng 0.6-1.5 cm. Đầu lá tròn hoặc hơi lõm, gốc hình nêm. Màu xanh đậm ở mặt trên, mặt dưới nhạt hơn hoặc có sắc đỏ.",
+      "hoa": "Không có cuống, nhỏ (đường kính 4-5 mm). Thường mọc thành cụm 3-5 bông ở đầu cành. Cánh hoa màu vàng, dài 3-5 mm, có 5 cánh (đôi khi 4 cánh). Nhị hoa màu vàng, khoảng 8 nhị hoặc nhiều hơn. Bầu nhụy không có lông, nhụy dài hơn nhị hoa, đầu nhụy chia thành 4-6 phần mảnh.",
+      "quả": "Quả hình trứng tròn, dài khoảng 5 mm, nứt ra khi chín. Hạt nhỏ, tròn hơi lệch, màu đen nâu bóng. Đường kính chưa đến 1 mm, bề mặt có vết sần nhỏ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoạt chất của rau sam hiện nay chưa ra. Chỉ mới biết trong rau sam có 6,49% hydrat cacbon, 0,5% chất béo, 1,8% chất protit, 2,23% tro, Một tài liệu khác (Trung Quốc khoa học xã hội Trung dược tân biên trích dẫn) thì có vitamin C, men ureaza, 0,4% chất béo, 1,6% tro. Cũng trích dẫn trong Trung dược tân biên của Khâu Thần Ba thì theo một tác giả khác, trong 100 gram rau sam có 4.900 đơn vị quốc tế vitamin A, 20 đơn vị quốc tế vitamin B và 280 đơn vị quốc tế vitamin C. Ngoài ra, theo một tác giả khác, trong rau sam có glucozit, saponin, chất nhựa, thành phần chủ yếu là glucozit."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Từ 6-12g khô dưới dạng uống sắc. Dùng ngoài không kể liều lượng.  Đơn thuốc có rau sam"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

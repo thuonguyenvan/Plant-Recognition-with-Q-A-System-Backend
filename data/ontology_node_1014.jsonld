@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cơm nếp",
+      "ten_khac": "Cơm nếp, Chuỗi sò",
+      "ten_khoa_hoc": "Tarphochlamys affinis (Griff.) Bremek.,  Pandanus amaryllifolius",
+      "ma_taxon": "123046",
+      "ho": "Acanthaceae (Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, thân mọc bò và bén rễ ở những mấu, sau đứng thẳng.",
+      "lá": "Lá mọc đối, hình bầu dục hay hình trứng, gốc tròn, đầu hơi nhọn, mép có răng tròn và nhăn nheo, dài 2,5 – 6 cm, rộng 1,5 – 4 cm, có lông rải rác ở cả hai mặt. Lá để héo có mùi thơm như cơm nếp.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành bông dày đặc, lá bắc có lông trắng, hoa màu trắng, có khi hơi tím hồng, lá đài không đều, rời nhau, có lông, tràng hoa hợp cánh, ống tràng dài bằng nửa ở phía gốc, phần trên loe rộng, nhị thò ra ngoài tràng, bầu có lông.",
+      "quả": "Quả ít gặp",
+      "mùa hoa": "tháng 3 – 5 và tháng 8 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Strobilanthes Blume là một chi lớn có khoảng 180 loài trên thế giới. Ở Việt Nam, có 30 loài (Nguyên Tiến Bản,1997).  Cơm nếp là loài ít được nhắc đến, do phạm vi phân bố cũng như ý nghĩa sử dụng còn hạn chế. Cây phân bố tự nhiên ở một số tỉnh miền núi phía bắc, như Cao Bằng, Lạng Sơn, Thái Nguyên, Hòa Bình, Lào Cai, Lai Châu. Còn có ở Ấn Độ và Nam Trung Quốc.",
+      "thường_mọc": "Cơm nếp là cây ưa ẩm, ưa bóng, thường mọc thành khóm dưới tán rừng núi đá vôi ẩm hoặc rừng kín thường xanh.",
+      "Đặc điểm sinh trưởng": "Cây ra hoa quả hàng năm chỉ ở những cành mọc lên từ chồi của năm trước. Thân và cành khi tiếp xúc với đất đều có khả năng ra rễ. Cây trồng được dễ dàng bằng cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, thu hái quanh năm, tốt nhất vào đầu mùa hạ, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây cơm nếp được sử dụng theo kinh nghiệm nhân dân, làm thuốc lợi sữa, bồi dưỡng sức khỏe cho phụ nữ sau đẻ, an thần, chữa đau đầu khó ngủ. Dùng ngoài, lá giã nát dùng riêng hoặc phối hợp với các vị thuốc khác để bó gãy xương.",
+      "làm thuốc": "Thuốc lợi sữa: Lá cơm nếp tươi, 50g luộc chín, vớt bỏ bã, cho gạo nếp vào, nấu cháo ăn. Chữa gãy xương: Lá cơm nếp tươi 50g, lá chanh 20g, lá dâu tằm 20g, muối trắng 5g, một con gà con giã nhỏ đắp bó."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

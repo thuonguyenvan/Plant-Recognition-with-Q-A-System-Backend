@@ -1,0 +1,200 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Củ nâu trắng",
+            "ten_khac": "Củ nâu trắng, Củ nầng, Củ nê, Dây năn, Từ nhám, Dây tẽn",
+            "ten_khoa_hoc": "Dioscorea hispida Dennst.",
+            "ma_taxon": "427518",
+            "ho": "Dioscoreaceae (Củ nâu)",
+            "Mô tả": {
+                "cây": "Cây leo, sống lâu năm, dài hàng chục mét.",
+                "rễ": "Rễ củ khi non có hình cầu, sau chia nhánh như những ngón tay, ruột màu trắng hay vàng lục.",
+                "thân": "Thân tròn, có lông mềm màu vàng nhạt, đôi khi có gai.",
+                "lá": "Lá kép, mọc so le, gồm 3 lá chét, hình trứng rộng, lá giữa lớn hơn, gốc tròn thuôn, đầu có mũi nhọn… dài 16 cm, rộng 10cm, gân lá hình cung, cuống lá dài.",
+                "hoa": "Cụm hoa to, mọc ở kẽ lá, dài đến 30-40 cm, có lông đơn màu vàng nhạt gồm bông đực ngắn mang hoa dày đặc, lá bắc nhỏ, bao hoa có lá đài hình mắt chim, có lông, cánh hoa dài hơn, nhị 6, bông cái cong, mọc thõng xuống, hoa to bằng hoa đực, nhưng nạc hơn.",
+                "quả": "Quả nang, có cánh dài, rộng ở phía giữa, hạt to, có màu vàng nâu.",
+                "mùa hoa": "3-4."
+            },
+            "Phân bố": {
+                "phân_bố": "Củ nâu trắng là loài đặc hữu của vùng nhiệt đới châu Á, phân bố ở Ấn Độ, NePan, Malaysia, Philippin, Tân Guine, Thái Lan, Campuchia, Lào, Việt Nam và một vài tỉnh ở Nam Trung Quốc.  Ở Việt Nam, củ nâu trắng phân bố rải rác ở các tỉnh vùng núi Lạng Sơn, Quảng Ninh, Cao Bằng, Tuyên Quang, Thái Nguyên và đặc biệt từ Quảng Trị trở vào Độ cao phân bố thường dưới 1000 m. Củ nâu trắng là cây ưa ẩm, ưa sáng, thường mọc trùm lên các cây bụi hoặc gỗ nhỏ, dọc theo các bờ sông suối ở vùng núi như thượng nguồn sông Mã và sông Đà ở Sơn La, sông Lô ở Tuyên Quang và nhất là một số sông ở Tây Nguyên và miền Trung.",
+                "thường_mọc": "Cây mọc ở đất còn màu mỡ, một khóm có nhiều củ nổi trên mặt đất, có củ to nặng tới 35 kg (The wealth of Jndia. 1952; III: 73-74). Ở Việt Nam, cũng có những củ nặng tới 5 kg.",
+                "Đặc điểm sinh trưởng": "Củ nâu trắng sinh trưởng mạnh trong mùa xuân hè, phần thân leo tàn lụi mùa đông. Đến cuối tháng 3 năm sau, nhiều chồi non mọc lên từ củ."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Rễ, củ."
+            },
+            "Thành phần": {
+                "thành phần": "Củ nâu trắng có diosgenin, các alcaloid dioscorin, dioscorecin (Trung dược từ hải I. 1762) và dioscorin N-oxyd.",
+                "đã nghiên cứu": "Đem oxy hóa dioscorin bằng peracid thu được dioscorin-N-Oxyd và các đồng phân của nó (CA 1996, 124, 25562b)",
+                "thủy phân": "Thủy phân các saponin của Dioscorea hispida bằng HCl hoặc bằng men p glucuronidase – arylsulfatase cho một hỗn hợp sapogenin, 1 chất trong đó được xác định là (25 R) – spirost-5 ene – 3P – 14p diol (CA 1988. 109. 3867 t)"
+            },
+            "Tính vị": {
+                "Có vị": "Củ nâu trắng có vị ngọt, chát, tính bình, không độc, vào các kinh: tràng, vị, có tác dụng thanh nhiệt, cầm máu, sát trùng, chữa tích huyết tử cung đau bụng dưới, xích bạch đới, băng huyết."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Thông thường để làm thuốc, người ta hay dùng củ nâu nói chung trong đó có củ nâu trắng để chữa tiêu chảy, kiết lỵ. Ngày dùng 10-16g, dưới dạng bột hay thuốc sắc uống.  Cao đặc 5/1 hoặc 10/1 được dùng chữa bỏng độ II, III. Để nhuộm vải, người ta thường dùng củ nâu trắng để nhuộm những nước đầu, rồi mới nhuộm với loại củ nâu đỏ vì cho rằng củ nâu trắng làm cho vải thêm dày và bền.  Kiêng kỵ: Không phải hư chứng mà có thực tà thì không dùng .  Ở Ấn Độ, nhân dân một số vùng dùng một thuốc đắp làm từ lá củ nâu trắng để trị bỏng, vết đứt, vết thương và mụn, lở loét. Thuốc đắp từ rễ củ nâu trắng được dùng trị viêm, sưng do thấp khớp và sưng phù.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+            },
+            "Cách dùng": {
+                "được_dùng": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

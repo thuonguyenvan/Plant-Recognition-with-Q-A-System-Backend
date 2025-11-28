@@ -1,0 +1,226 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cọ lùn",
+      "ten_khac": "Cọ lùn",
+      "ten_khoa_hoc": "Serenoa repens (W. Bartram) Small",
+      "ma_taxon": "83102",
+      "ho": "Cau (Arecaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá của cây cọ lùn phát triển từ một thân cây lớn dưới lòng đất, mang hình dáng giống như quạt và màu xanh đặc trưng.",
+      "hoa": "Hoa của cọ lùn có màu trắng, thường mọc thành từng chùm và xuất hiện vào mùa xuân.",
+      "quả": "Quả của cây cọ lùn thay đổi màu sắc theo thời kỳ trưởng thành: từ màu xanh lục vào tháng 5 – tháng 6, chuyển sang màu vàng vào giữa tháng 8, và cuối cùng là màu xanh lam-đen khi chín vào tháng 9.",
+      "cây": "Cây cọ lùn, hay còn được biết đến với tên khoa học là Serenoa repens. Đôi khi cũng được gọi là Saw palmetto hay Sabal serrulata. Đây là một loại cây bụi thấp mọc ở những nơi gần bờ biển.",
+      "mặt": null,
+      "đầu": null,
+      "thân": null,
+      "cuống": null,
+      "gốc": null,
+      "cao": null,
+      "rễ": null,
+      "củ": null,
+      "mọc": null,
+      "mùa hoa": null,
+      "mùa quả": null
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây cọ lùn xuất xứ ở Bắc Mỹ, mọc trên các cồn cát dọc biển Đại Tây Dương và bờ biển Caribbean từ miền Nam Carolina đến Texas. Nó cũng được tìm thấy ở các khu vực khác trên thế giới như: Georgia, Cuba và Bahamas.",
+      "thường_mọc": "Cây cọ lùn thường mọc ở các vùng rừng thông cát, cồn cát, rừng lá rộng ẩm và bụi cây, tạo thành các thảm thực vật dày đặc ở tầng dưới. Loài cây này phổ biến ở độ cao từ 0 đến 50 mét.",
+      "Đặc điểm sinh trưởng": "Cây được trồng bằng hạt giống vào mùa xuân, thích hợp đất khô và có ánh nắng mặt trời.\nCây cọ lùn thường được thụ phấn nhờ ong. Tuy nhiên, việc ra hoa và đậu quả không đều mỗi năm, có những năm ra hoa nhiều nhưng lại ít quả. Khi có quả, chúng là nguồn thức ăn quý cho gấu đen, hươu, gấu trúc Mỹ, cáo, chồn, và nhiều loài chim khác.\nThu hoạch: Cây được thu hoạch quả khi chín vào mùa thu, phơi khô, bỏ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Như đã nói ở trên Cọ lùn có tác dụng điều trị bệnh phì đại tiền liệt tuyến.\nCông dụng của dầu cọ lùn (Saw palmetto) cho bệnh phì đại tiền liệt tuyến đã được ứng dụng để sản xuất nhiều sản phẩm điều trị và được kiểm chứng qua các bằng chứng lâm sàng sau:\nMột tổng quan hệ thống đánh giá những kết quả từ 21 thử nghiệm lâm sàng ngẫu nhiên có đối chứng (RCTs) liên quan đến 3139 người đàn ông tham gia. Saw palmetto cải thiện các triệu chứng đường tiết niệu, các giá trị về dòng nước tiểu so với placebo, có tác dụng đến điểm số liên quan đến đường tiết niệu và lưu lượng nước tiểu cực đại tương tự như finasteride. Thêm vào đó, việc sử dụng saw palmetto ít tác dụng không mong muốn hơn sơ với finasteride, các triệu chứng cũng được báo cáo là giảm nhanh hơn. \nMột phân tích META được cập nhật với 14 RCTs và 3 nghiên cứu nhãn mở được công bố. Phân tích này đã sử dụng dữ liệu từ 4280 bệnh nhân từ các thử nghiệm lâm sàng, lưu lượng nước tiểu cực đại và tiểu đếm được coi là 2 thông số đầu ra chính. Điều trị tích cực liên quan đến giảm giá trị IPSS trung bình là 4.78 và sự cải thiện có ý nghĩa về lưu lượng nước tiểu cực đại và giảm tiểu đêm được báo cáo. Trong nghiên cứu TRIUMP – một nghiên cứu quan sát cắt ngang ở 6 nước châu Âu gồm 2351 nam giới được chẩn đoán mới mắc triệu chứng đường tiết niệu dưới gợi ý của BPH, sự cải thiện có ý nghĩa được quan sát ở 43% bệnh nhân sử dụng Serenoa repens, 68% bệnh nhân sử dụng thuốc chẹn kênh alpha (tamsolusin), và 58% bệnh nhân dùng thuốc ức chế enzym 5-alpha reductase. Một nghiên cứu tiến hành hơn 5 năm trên 26 người sử dụng serenoa với liều là 320mg 2 lần mỗi ngày làm giảm các triệu chứng bệnh, cải thiện có ý nghĩa chất lượng cuộc sống và làm giảm kích thước tuyến tiền liệt trung bình 30%.\nTìm hiểu:\u00a0Tác dụng của cây CỌ LÙN trong việc cải thiện chức năng tuyến tiền liệt"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả của cây cọ lùn được thu hái phơi khô bỏ hạt để dùng làm thuốc, trà.\nQuả này có thể được sử dụng trực tiếp dưới dạng trà, hoặc chúng có thể được chiết xuất thành viên nén, viên nang hoặc chế phẩm dạng lỏng (chiết xuất dầu)"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả của cây cọ lùn có chứa các thành phần hoạt chất của thực vật. Các thành phần hoạt tính, được cho là các axit béo, dường như ức chế 5-alpha-reductase, do đó chống lại sự biến đổi để dihydrotestosterone.",
+      "triết xuất": "Chiết xuất từ quả này để nghiên cứu khoa học và điều chế dưới dạng thực phẩm chức năng.",
+      "Các hợp chất": "Hầu hết các công thức được đánh giá trong các nghiên cứu lâm sàng là các chiết xuất hexane của quả cọ mọng, có từ 80 đến 90% axit béo thiết yếu và phytosterol.",
+      "gồm chất": "Dịch chiết ethanol chứa acid béo tự do chuỗi ngắn như capric, caprylic, lauric and myristic acids. Ngoài ra còn có Palmitic, stearic, oleic, linoleic and linolenic acids. Cũng có các hợp chất phytosterols với lượng nhỏ (như beta-sitosterol, stigmasterol, ampesterol and cycloartenol), aliphatic alcohols and polyprenic.",
+      "chứa": null,
+      "đã nghiên cứu": null,
+      "tìm thấy": null,
+      "thủy phân": null,
+      "các hoạt chất": null,
+      "tinh dầu chứa": null,
+      "có hoạt chất": null,
+      "dấu hiệu đặc trưng": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tương tác thuốc\nThuốc ngừa thai hoặc thuốc tránh thai: Hầu hết các loại thuốc tránh thai đều có chứa estrogen, và saw palmetto có thể làm giảm tác dụng của estrogen trong cơ thể. Thuốc chống đông máu: Với những người đang dùng thuốc chống đông máu như aspirin, warfarin, plavix… mà sử dụng thêm saw palmetto có thể làm tăng khả năng bị bầm tím và tăng nguy cơ chảy máu.\nTác dụng phụ\nMột số tác dụng phụ có thể xảy ra khi sử dụng cọ lùn bao gồm buồn nôn, tiêu chảy, đau đầu, và chóng mặt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Khi sử dụng cây cọ lùn, có một số lưu ý quan trọng cần nhớ để đảm bảo an toàn và hiệu quả:\nTrước khi bắt đầu sử dụng bất kỳ loại thảo dược nào, đặc biệt nếu đang có bệnh lý, hãy thảo luận với bác sĩ hoặc chuyên gia y tế. Tuân thủ hướng dẫn sử dụng và liều lượng được chỉ định trên bao bì hoặc bởi chuyên gia y tế. Không vượt quá liều lượng khuyến nghị trừ khi được chỉ dẫn bởi bác sĩ. Kiểm tra kỹ thành phần để đảm bảo rằng nó không gây dị ứng hoặc tương tác không mong muốn với các loại thuốc bạn đang sử dụng. Cây cọ lùn có thể gây ra các phản ứng phụ như tiêu chảy, đau dạ dày hoặc dị ứng da. Nếu bạn gặp bất kỳ dấu hiệu nào, ngưng sử dụng và tham khảo ý kiến của bác sĩ. Không dành cho trẻ em và phụ nữ mang thai hoặc cho con bú. Tránh sử dụng trong những trường hợp này mà không có sự giám sát của bác sĩ. Bảo quản sản phẩm theo hướng dẫn trên nhãn để đảm bảo tính ổn định và an toàn. Hiệu quả của cây cọ lùn thường không thể thấy ngay lập tức và có thể cần một thời gian để thấy hiệu quả đáng kể nên cần kiên nhẫn.\nNhớ rằng, việc sử dụng\u00a0cây cọ lùn hoặc bất kỳ loại thảo dược nào khác nên được thực hiện một cách cẩn thận và theo dõi sát sao để đảm bảo an toàn và hiệu quả nhất.\nTài liệu tham khảo\n[1]: Serenoa hỗ trợ điều trị tăng sản tuyến tiền liệt lành tính [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3090655/] [2]:Serenoa Repens: Nó có vai trò gì trong việc quản lý chứng rụng tóc do nội tiết tố nam không? [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2840915/] [3]:Serenoa repens gây ra sự ngừng tăng trưởng và apoptosis của nhiều tế bào u nguyên bào ở người thông qua việc vô hiệu hóa tín hiệu STAT 3 [https://www.researchgate.net/publication/26648686_Serenoa_repens_induces_growth_arrest_and_apoptosis_of_human_multiple_myeloma_cells_via_inactivation_of_STAT_3_signaling] [4]:Hiệu quả và độ an toàn của chiết xuất Serenoa repens trong điều trị bệnh nhân viêm tuyến tiền liệt mãn tính/hội chứng đau vùng chậu mãn tính: một thử nghiệm đa trung tâm, ngẫu nhiên, mù đôi, kiểm soát giả dược [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8510895/]"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

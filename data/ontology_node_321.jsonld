@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trạch tả",
+      "ten_khac": "Cây mã đề nước",
+      "ten_khoa_hoc": "Alisma plantago-aqulica L. var. orientale Sam.",
+      "ma_taxon": "60253",
+      "ho": "Trạch tả (Alismataceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây trạch tả mọc ở ao và ruộng, cao 0,3-1m.",
+      "rễ": "thân rễ trắng, hình cầu hay hình con quay thành cụm,",
+      "lá": "lá mọc ở gốc hình trứng thuôn, hay lưỡi mác, phía cuống hơi hẹp lại hình tim.",
+      "hoa": "Hoa họp thành tán có cuống dài đ u, lưỡng tính có 3 lá đài màu lục, 3 cánh hoa trắng hay hơi hồng, nhị nhi u",
+      "quả": "quả là một đa bế quả"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Trong chuyên san của Viện nghiên cứu tỉnh Bắc Bình có báo cáo: bắt đầu, tiêm kali nitrat cho thỏ để gây viêm thận đưa đến hiện tượng ứ đọng ure và cholesterin trong máu, sau đó tiêm thuốc trạch tả. kết quả là lượng ure và cholesterin trong máu giảm xuống. Cho người mạnh khoẻ, uống nước sắc trạch tả, thấy lượng nước tiểu, lượng ure và lượng natri clorua bài tiết đ u tăng lên."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong trạch tả, người ta mới phân tích thấy được tinh dầu, chất nhựa 7%, chất protit và 23% chất bột.",
+      "thành phần hoạt chất": "thành phần hoạt chất chưa rõ, Dược điển Triều tiên quy định: độ ẩm dưới 15%, tro dưới 7%, tro không tan trong HCl dưới 2%, cao rượu trên 7%"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chủ yếu làm thuốc thông tiểu chữa bệnh thuỷ thũng trong bệnh viêm thận.",
+      "được_dùng": "Ngày dùng từ 10-30g dưới dạng thuốc sắc hoặc dùng riêng hay phối hợp với các vị thuốc khác.",
+      "chữa": "Có người nói là có thể chữa bệnh sỏi thận và lợi sữa"
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa thuỷ thũng:  Trạch tả 40g, bạch truật 40g, tán nhỏ, mỗi lần uống 10-12g. dùng nước sắc phục linh để chiêu thuốc.",
+      "sắc uống": "Phục linh trạch tả thang:  Trạch tả 6g, phục linh 6g, bạch truật 4g, cam thảo 2g, quế chi 2g, nước 600ml. Sắc còn 200ml chia 3 lần uống trong ngày. Cũng chữa bệnh thuỷ thũng."
+    }
+  ]
+}

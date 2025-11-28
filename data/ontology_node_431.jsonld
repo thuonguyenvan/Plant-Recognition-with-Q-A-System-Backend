@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ đuôi chồn",
+      "ten_khac": "Thỏ vĩ thảo, đuôi chồn chân thỏ",
+      "ten_khoa_hoc": "Uraria lagopodioides (L.) Decne ex DC.",
+      "ma_taxon": "370067",
+      "ho": "Đậu (Fabaceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo cứng, cao 20 – 50 cm, phân cành từ gốc.",
+        "thân": "Thân và cành mềm, hình trụ, khi non màu lục và có lông nhung, sau nhẫn và màu đỏ nhạt.",
+        "lá": "Lá kép mọc so le, 1 – 3 lá chét, cuống chung dài 1,5 – 3 cm, có lông mềm; lá chét hình trái xoan hay bầu dục, dài 2,5 – 5 cm, rộng 1,5 – 3 cm, gốc tròn hoặc gần hình tim, đầu tủ hoặc hơi khuyết, hai mặt màu lục nhạt và có lông nhất là ở mặt dưới; lá kèm hình tam giác nhọn, dài 4 – 5 mm.",
+        "hoa": "Cụm hoa mọc ở đầu cành thành chùm trụ hoặc hình trứng, dài 3 – 5 cm; lá bắc hình mác nhọn. dài làm cho chùm hoa có nhiều lông như tóc: hoa có rất nhiều lông, mọc cong xuống, dài hình chuông, rất nhiều lông, răng không đều, tràng có cánh cờ hình bầu dục, cánh bên không cuống, cảnh thìa có móng dài; nhị 1 bó; bầu 2 ô.",
+        "quả": "Quả đậu, nhẵn, chứa hai hạt có vân mạng.",
+        "mùa hoa": "tháng 4 – 10."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Uraria Desv. trên thế giới có khoảng vài chục loài, ở Việt Nam có 12 loài. Cỏ đuôi chồn phân bố rải rác hầu như khắp các tỉnh trong cả nước, từ vùng núi thấp xuống vùng trung du, đồng bằng và ra các đảo lớn. Trên thế giới, loài này có ở Ấn Độ, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin và Australia.",
+        "thường_mọc": "Cây ưa sáng, có biên độ sinh thái khá rộng. nên có thể thấy mọc rải rác ở các đồi cây bụi thấp, ven rừng, trảng cỏ, nương rẫy cũ, rừng thưa rụng"
+      },
+      "thong_tin_khac": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "bo_phan_dung": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Thân cây."
+      },
+      "thành_phần": {
+        "@type": "Thành phần",
+        "thành phần": ""
+      },
+      "tinh_vi": {
+        "@type": "Tính vị",
+        "Có vị": "Cỏ đuôi chồn vị ngọt, nhạt, tính bình, có công năng thanh nhiệt, giải độc, tán kết, tiêu thũng [TDTH, 1997, III: 477]."
+      },
+      "cong_dung": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Lá và rễ cây cỏ đuôi chồn được nhân dân ta dùng để chữa kiết lỵ và trừ giun. Liều dùng 30 – 100g (không hạn chế liều vị ít độc) sắc lấy nước uống trong ngày. Nếu là lá thường dùng 15 – 30g.  Để tiêu sưng, lấy cành lá sắc uống, kết hợp dùng lá tươi giã nát, đắp ngoài.  Ở Ấn Độ, cây này là một thành phần trong phương thuốc Dashamula Kadha (hoặc Dashamularishta) rất hay được dùng với tác dụng bổ, hồi phục sức khỏe, chống viêm xuất tiết, nhưng có thể dùng riêng cỏ đuôi chồn. Nhân dân Ấn Độ còn dùng toàn cây cỏ đuôi chồn để chữa sốt, sốt rét, cảm giác nóng bừng, khát, mê sảng, rối loạn thị giác, nhuận tràng, bệnh lỵ, thấp khớp, kích dục (aphrodisiac) [Kirtikar et al., 1998, I: 750 – 751].  Ở Malaysia, nước sắc của lá, rể được dùng chữa kiết lỵ. Ở Indonesia toàn cây cỏ đuôi chồn được dùng có tác dụng bổ, chống viêm xuất tiết và để gây sẩy thai."
+      },
+      "cach_dung": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "@type": "Lưu ý",
+        "luu_y": ""
+      }
+    }
+  ]
+}

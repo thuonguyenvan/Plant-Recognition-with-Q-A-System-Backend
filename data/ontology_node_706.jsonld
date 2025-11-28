@@ -1,0 +1,204 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Sao đen",
+            "ten_khac": "Sao đen, Cây sao, Mạy khèn (Tày)",
+            "ten_khoa_hoc": "Hopea odorata Roxb.",
+            "ma_taxon": "193455",
+            "ho": "Dipterocarpaceae (Dầu)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây to cao 30-40m, vỏ vàng xù xì và nhiều xơ.",
+            "lá": "Lá hình trứng thon và nhọn, đầu tù, gân cấp 2 có 7-16 đôi, dài 6-13cm, rộng 3-5cm, mặt dưới nhạt hơn mặt lá trên.",
+            "hoa": "Hoa mọc thành chùm ngắn hơn lá hay dài bằng lá, trên có phủ một lớp lông tơ màu tro, có 10-12 nhánh, mỗi nhánh có 4-6 hoa mọc cạnh nhau và xếp một bên.",
+            "quả": "Quả hình tháp, có 2 cánh dài, có 7-11 gân song song và không đều.",
+            "mùa hoa": "Tháng 5-6.",
+            "mùa quả": "Tháng 5-6."
+        },
+        {
+            "@type": "Phân bố"
+        },
+        {
+            "@type": "Thông tin khác"
+        },
+        {
+            "@type": "Bộ phận dùng"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Mới biết trong sao đen có chất nhựa được dùng trên thị trường quốc tế với tên dammar.",
+            "gồm chất": "Tên dammar còn đuợc dùng để chỉ nhiều loại nhựa chích từ nhiều cây khác thuộc họ Dầu (Dipterocarpaceae) như Hopea, Balanocarpus, Vaíica, Dryobalanops, Shorea, Valeria; họ Thông Abietaceae như Dammar a, Pinus; họ Trám Burseraceae như Canarium, Aucumea; họ Măng cụt Guttiferae như Garcinia. Nhựa dammar của sao đen có màu vàng nhạt đến vàng đỏ hoặc nâu sẫm. Có loại tốt gần như không màu. Tỷ trọng 0,900 (loại không màu), đến 1,055 (loại có màu), độ chảy 110°C (loại không màu), 141°C (loại có màu), chỉ số axit 53, chỉ số xà phòng 81.",
+            "Các hợp chất": "Thành phần chủ yếu của nhựa dammar sao đen là các axit damarolic và các damaresen α và β. Mặt trong của vỏ cây hay cành lớn còn chứa một tỷ lệ cao tanin (14,57 %) có thể dùng trong thuộc da."
+        },
+        {
+            "@type": "Tính vị"
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Vỏ cây sao đen được dùng ở nhiều nơi trong nước ta làm vỏ ăn trầu (trầu không). Nhưng công dụng phổ biến nhất tại nhiều tỉnh miền Nam là chữa các bệnh viêm lợi, apxe lợi, sâu răng.",
+            "có tác dụng": "Thuốc làm cho lợi răng chắc lại, răng chậm rụng.",
+            "được_dùng": "Ngâm vỏ sao đen trong rượu 30 hay 40° (rượu nhân dân vẫn uống), sau vài giờ ta được một dịch chiết màu nâu đen hơi đỏ. Dùng rượu này súc miệng ngày 3 lần, mỗi lần súc 3 ngụm liền: Ngậm 15 đến 20 phút rồi nhổ đi. Thường chỉ súc một lần đã thấy đỡ đau nhức. Có thể sắc vỏ với nước: 50g vỏ, thêm một bát nước (300ml), cho nước vào đun sôi, giữ sôi trong 15 phút. Dùng nước này súc miệng. Cho vào miệng, ngậm trong 15-20 phút. Ngày làm 2 hay 3 lần. Dùng luôn trong 3-4 ngày. Có khi người ta phối hợp vỏ sao đen với một vị thuốc khác. Nhựa sao đen được chích trên thân và cành to. Người ta dùng nhựa sao đen trong công nghiệp-sơn, vecni, công nghiệp thuốc ảnh."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Cây mọc phổ biến chủ yếu ở các tỉnh miền Nam nước ta. ở Hà nội, vài phố có những hàng cây sao đen trồng làm cây bóng mát. Còn mọc và được trồng ở Malaixia, đảo Bocnêô. Thường trồng chủ yếu làm cây bóng mát và lấy gỗ đóng đồ dùng, đóng thuyền, làm cầu và các công trình kiến thiết lớn.",
+            "thu hái": "Người ta dùng vỏ cây và nhựa. Thu hái gần như quanh năm. Dùng tươi hay khô."
+        },
+        {
+            "@type": "luu_y"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nghể trắng",
+      "ten_khac": "Nghể dại, Nghể râu, Nghể trắng",
+      "ten_khoa_hoc": "Polygonum barbatum L.",
+      "ma_taxon": "369916",
+      "ho": "Rau răm (Polygonaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "thân": "Thân mập, rỗng, hơi phình ở các đốt, đôi khi bén rễ ở phần gốc.",
+      "lá": "Lá mọc so le, hình mũi mác, lá ở ngọn hình dải, bẹ chìa hình trụ, dài đến gần 1/2 dóng, mảnh, phủ lông tơ ở mặt ngoài: cuống lá rất ngắn.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành bông dài, đôi khi thành chùm; lá bắc có nhiều lông tơ; bao hoa màu trắng hoặc hồng, nhị 5 – 8 không đều, bầu có 3 cạnh.",
+      "quả": "Quả hình 3 cạnh nhẵn.",
+      "mùa hoa": "tháng 9 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Nghể trắng phân bố rộng rãi  ở vùng nhiệt đới nóng và ẩm thuộc Nam Á và Đông Nam Á  bao gồm Ấn  Độ, Srilanca, Malaysia, Lào, Thái Lan. Cây cũng mọc rải rác ở Nhật Bản, Nam Trung Quốc và Australia. Ở Việt Nam, nghể trắng cũng thường gặp ở hầu hết các tỉnh từ đồng bằng đến trung du và vùng núi thấp.",
+      "thường_mọc": "Nghể trắng là loài đặc biệt ưa ẩm và ưa sáng, thường mọc thành đám trên đất lầy, ruộng trũng, bờ các ao hồ lẫn với các loại cây cỏ ưa nước khác.",
+      "Đặc điểm sinh trưởng": "Nghể trắng sinh trưởng mạnh trong mùa mưa ẩm, ra hoa qua nhiều hàng năm, hạt phát tán nhờ nước, sau chìm xuống bám được vào lớp bùn nhão mới có thể nảy mầm được. Nghể trắng có khả năng tái sinh khỏe sau khi bị cắt cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, rễ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nghể trắng có vị cay, tính ấm, có độc, có tác dụng tẩy độc, sinh cơ, trừ mủ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nghể trắng chưa được dùng làm thuốc trong y học dân gian Việt Nam. Trái lại, ở Ấn Độ, rễ nghể trắng có tác dụng làm săn và làm mát. Nước sắc rễ và chồi non được dùng để rửa các vết loét, dịch ép làm lên sẹo. Hạt có tác dụng tẩy, gây nôn, và được dùng trị cảm cúm, đau bụng, tiêu chảy, kiết lỵ,\nỞ Ấn Độ và Malaysia, lá nghể trắng nghiền nát đắp lên vết thương nhiễm trùng do ruồi nhặng của gia súc. Ở Trung Quốc, cây được dùng chữa nhọt sưng lấy làm mưng mủ, bệnh ngoài da, lở ngứa.\n*Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

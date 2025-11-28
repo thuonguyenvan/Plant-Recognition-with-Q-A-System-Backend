@@ -1,0 +1,260 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cà Trời",
+      "ten_khac": "Cà trời, Cà vú, Cà vú dê",
+      "ten_khoa_hoc": "Solanum mammosum L.",
+      "ma_taxon": "169074",
+      "ho": "Solanaceae (Cà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1 – 1,5m.",
+      "thân": "Thân cành cứng, có gai và lông dày.",
+      "lá": "Lá mọc so le, hình bầu dục hoặc hình trứng, dài 10 – 15 cm, rộng 4-8 cm, chia thùy không đều, mép có lông dạng mi, gai dài 1 – 2 cm ở gân, mặt dưới có nhiều lông.",
+      "hoa": "Cụm hoa mọc ở ngoài kẽ lá, 3 – 4 cái màu lam hoặc tím; đài 5 răng nhọn có lông; tràng 5 cánh hẹp; nhị 5 màu vàng.",
+      "quả": "Quả hình con quay, dài 5 – 8 cm, đầu tù hoặc hơi nhọn, gốc có nhiều u lồi bao xung quanh; hạt màu nâu.",
+      "mùa hoa": "tháng 6-8",
+      "mùa quả": "tháng 9 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cà trời có nguồn gốc từ vùng nhiệt đới Trung Mỹ, sau được du nhập đi khắp các vùng nhiệt đới khác. Ở Việt Nam, cà trời không rõ được nhập trồng từ bao giờ, chỉ biết rằng đó là một cây cảnh có quả hình thù đặc biệt, khi già màu vàng dặm rất đẹp.",
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Hải Dương"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Hà Nội"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Cà trời là cây sống một năm, ưa sáng và ưa ẩm. Ở các tỉnh phía bắc, cây thường được trồng vào mùa xuân, dễ có quả già vào đầu mùa hè. Trong khi đó, ở Đà Lạt, cà trời có quà già vào cuối mùa thu. Cây trồng từ hạt sau 2 – 2,5 tháng bắt đầu có hoa quả. Khi quả già, lá thường rụng nhiều, sau đó cây tàn lụi. Theo kinh nghiệm của một số người dân ở Tuyên Quang, Phú Thọ, khi cây tàn lụi, người ta hái quả bày làm cảnh thêm một thời gian nữa, sau đó treo ở gần bếp cho khô, đầu năm sau gỡ lấy hạt đem gieo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây thu hái quanh năm, dùng tươi hoặc phơi, sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cà trời có vị đắng, có độc, có tác dụng sát khuẩn diệt côn trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cà trời có độc ở quả, nên ít được dùng uống. Với liều rất thấp, nó có tác dụng như một chất đắng gây ngủ. Ở Hải Nam (Trung Quốc) cả cây cà trời dược dùng chữa tràng nhạc. Ỏ Saint – Dominica, người ta dùng dạng cao toàn cây để trị chứng đau vùng tâm vị. Dùng ngoài, toàn cây và quả có tác dụng diệt côn trùng như gián, sâu, bướm và động vật thân mềm.  Nguồn tham khảo: Cây thuốc và vị thuốc Việt Nam – Đỗ Tất Lợi"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

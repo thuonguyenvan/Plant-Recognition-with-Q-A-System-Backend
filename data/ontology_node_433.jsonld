@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sanh",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Ficus benjamina L.",
+      "ma_taxon": "50996",
+      "ho": "Dâu tằm (Moraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ cao to có thể đến 30m, nhưng do môi trường mà cây có kích thước thay đổi.",
+      "thân": "Cành mọc ngang từ gốc với rất nhiều rễ phụ. Toàn cây có nhựa mủ.",
+      "lá": "Lá hình trái xoan, nhẵn cả hai mặt, dài 5-9cm, rộng 3-5,5cm, cuống dài 12-20mm.",
+      "quả": "Quả kép (do đế hoa lõm bao lấy các quả thật ở bên trong) mọc từng cặp trên cành non, không cuống; hình cầu hay hình trứng, đường kính 10 12mm, khi chín có màu đỏ máu rồi đâm đen. Có nhiều thứ khác nhau, thông thường là var. camosa (Roxb.) Kurz. Có hoa quả từ tháng 9 đến tháng 2."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": ""
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Nhựa và rễ phụ, lá"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhựa cây có chất sáp và acid cerotic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhựa si là một vị thuốc rất phổ biến và rất được tín nhiệm trong nhân dân để chữa những trường hợp ứ huyết do ngã hay bị đánh, bị thương, nhức mỏi chân tay. Còn dùng chữa ho hay cắt cơn hen. Mỗi ngày uống 10-20ml nhựa si hoà vào 10-20ml rượu mà uống. Có thể pha thêm rượu để xoa bóp nơi đau nhức.  Nếu không có nhựa si, có thể lấy rễ phụ cây si, rửa sạch, thái nhỏ, sao vàng, thêm nước vào sắc cho uống hoặc ngâm vào rượu cho uống. Mỗi ngày dùng 25-40g rễ si.  Ở Ấn Độ, nước sắc lá lẫn với dầu dùng đắp loét…  Dịch lá cũng dùng chống giác mạc bị trắng ra.  Ở Trung Quốc, lá được dùng trị đòn ngã và mụn loét.  Dùng 10-20ml nhựa hoà vào rượu mà uống hay xoa bóp, hoặc dùng 25-40g rễ Si sắc uống. Có khi dùng cả cành non.  Lá dùng ngoài giã đắp không kể liều lượng.  Đơn thuốc có nhựa si dùng trong nhân dân 1. Cắt cơn hen: Nhựa si 10ml, rượu uống 10ml, khuấy đều uống mỗi ngày.  2. Chữa đau nhức do ngã, bị thương ứ huyết: Rễ si 100g, giã nát, thêm ít nước xào cho nóng, đắp lên nơi bị thương, có thể uống nước, ba đắp lên nơi sưng đau.  3. Chữa đau nhức ứ huyết: Dùng nhựa Si 10ml, hoà với 10ml rượu để uống và xoa bóp. Hoặc dùng 40g rễ Si giã nát, xào nóng để đắp, có thể thêm nước để nấu lấy nước uống, bã đắp.  Nguồn: 3033 câu thuốc Đông y Tuệ tĩnh, Những cây thuốc và vị thuốc Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây si mọc hoang và được trồng tại nhiều nơi khắp nước ta để làm cảnh, bóng mát, hay trồng nhất tại các đình chùa. Thường người ta dùng nhựa và rễ phụ của cây si. Nhựa chích ở toàn thân, thường cho vào rượu mà uống ngay. Rễ phụ cây si hái về rửa sạch, sao cho hơi vàng, thơm sắc uống hay ngâm rượu mà uống hoặc xoa bóp."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

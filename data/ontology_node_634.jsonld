@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lược vàng",
+      "ten_khac": "Lược vàng, Lan vòi",
+      "ten_khoa_hoc": "Callisia fragrans (Lindl.) Woodson",
+      "ma_taxon": "159678",
+      "ho": "Commelinaceae (Thài lài)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "dạng mác thuôn, dài 18-25 cm, rộng 3,5-4cm, cuống lá có gân rõ, ôm thân, có lông mịn và thường có sọc tía",
+      "hoa": "mọc thành cụm 2-3 hoa dạng xim trên phát hoa hình chùy dài tới 60 cm, mỗi cặp xim được ôm bởi các lá bắc dạng răng cưa (3 răng) dài 10-15mm; lá đài trong suốt, màu trắng, khô xác, dạng mác, dài 5-6mm; cánh hoa bóng, trong suốt, màu trắng, mỏng, có dạng trứng hẹp; nhị 6.",
+      "cây": "Cây thảo nhiều năm, thân mọng nước có thể dài tới 100 cm hay hơn, phân nhánh với thân bò ở gốc.",
+      "mùa hoa": "mùa xuân."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây lược vàng có nguồn gốc từ vùng Châu Mỹ. Sau này nó được du nhập qua tới Nga, và về Việt Nam. Cây xuất hiện gần như trên cả nước. Với hình dáng dẹp, cây vừa làm cảnh, vừa làm thuốc thảo dược."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cây thường lấy cả phần thân và lá cây lược vàng làm thuốc, thường thu hái quanh năm, sau đó đem về phơi khô để dùng dần."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Năm 2008, nhóm nghiên cứu của TS. Trịnh Thị Điệp tại Viện Dược liệu đã định tính sơ bộ thành phần hoá học của thân, lá Lược vàng và cho biết chúng có chứa flavonoit, carotenoit, phytosterol, axit hữu cơ, chất béo, đường tự do và polysacharit."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo Đông y, cây lược vàng có tính mát, vị nhạt, chua nhẹ và ít độc, quy kinh phế. Có tác dụng trong việc giải độc, thanh nhiệt, cầm máu, hóa đờm và tiêu viêm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam, cây Lược vàng được người dân sử dụng theo kinh nghiệm hoặc truyền miệng để chữa khỏi (hoặc giảm nhẹ) các bệnh như: viêm răng lợi, sâu răng, viêm họng, viêm mũi dị ứng, viêm xoang, ho, cảm cúm, viêm phế quản, hen, viêm tai giữa, thối tai, băng huyết, cầm máu vết thương, bỏng, đau đầu mất ngủ, viêm bờ mi mắt, đau mắt đỏ, mẩn ngứa, trĩ, đi ngoài, đau dạ dày, táo bón, gút, ung thư vú, ung thư dạ dày  Ngoài ra, Lược vàng còn có hoạt tính chống oxy hóa, chống tiểu đường, hạ mỡ máu. Người dân sử dụng cây Lược vàng bằng các phương pháp hết sức đơn giản như:  Nhai lá, nuốt cả nước lẫn bã; Giã nát để đắp vết thương, xoa bóp, dịt băng cầm máu, làm tan máu tụ, bầm tím; Dùng lá, thân cây, vòi và rễ ngâm rượu trắng; Phơi khô lá pha nước sôi, nấu nước uống như uống nước chè; Nấu cao, sau đó pha loãng uống, bôi da;  Bài thuốc có vị lược vàng  Chữa đau răng, sưng mộng chân răng: nhai, ngậm lá lược vàng ngày 3 lần sáng, trưa, tối cho đến khỏi vẫn sử dụng cho triệt để. Bệnh huyết áp thấp: uống rượu ngâm lược vàng 2 buổi trưa, tối trước lúc ăn, mỗi lần khoảng 15 giọt, buổi sáng sớm, tối ăn 1 lá, kết hợp đi bộ. Viêm khớp: kết hợp vừa uống vừa xoa bóp bên ngoài. Hoặc cũng có thể dùng lá lược vàng giã nhỏ rồi đắp lên mỗi lần bị đau khớp, một ngày chỉ cần đắp vài lần là khỏi, không cần uống. Bệnh trĩ: nhai lá lược vàng già, mỗi ngày khoảng 3 lá. Bị thương chảy máu hoặc bị bầm tím, rạn xương, ảnh hưởng đến xương: Dùng lálược vàng già nhai sau đó đắp lên vừng bị thương, băng bó lại, hoặc dùng rượu cây lược vàng xoa bóp lên chỗ thương,vết mổ, ngày 2- lần, mỗi lần xoa bóp khỏang 30 phút. Chữa sỏi thận: ăn lá hoặc uống rượu Lược Vàng hoặc vữa ăn vừa uống, uống phải có thời gian nghỉ theo 10-5-10-5. Các bệnh về mắt như đục thủy tỉnh thể mắt, đau mắt hột: dùng lá lược vàng giã nhỏ rồi đắp lên, ngày 2 lần, mỗi lần 30 phút. Các bệnh về miệng như lở miệng, nhiệt miệng: dùng lá lược vàng nhai, ngậm mỗi ngày 3 lần mỗi lần một lá, khoảng 20 – 30 phút. Các bệnh về xương, khớp như bị đau, thoái hóa xương ở các loại xương cổ, xương cột sống, xương tay, chân: dùng rượu lược vàng xoa bóp ngày 3 lần, mỗi lần khoảng 20 phút, vừa ăn ngày 3 lá 3 bữa sáng, chiều, tối. Dùng cho đến sau khi khỏi vẫn dùng để triệt để bệnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

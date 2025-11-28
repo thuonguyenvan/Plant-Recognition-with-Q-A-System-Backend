@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa huệ",
+      "ten_khac": "Huệ",
+      "ten_khoa_hoc": "Polianthes tuberosa L.",
+      "ma_taxon": "290891",
+      "ho": "Thua (Agavaceae)",
+      "Mô tả": {
+        "lá": "Lá không cuống, mọc tụ họp thành hình hoa thị ở gốc, hình dải hẹp dài, gốc có bẹ, đầu nhọn hoặc hơi tù, gân lá song song, hai mặt nhẵn, mặt trên bóng.",
+        "hoa": "Ở nách mỗi lá bắc, có hai hoa màu trắng rất thơm, tràng đơn hay kép, có ống hẹp loe ở đầu; nhị đính vào họng của ống tràng; bầu hạ, 3 ô.",
+        "quả": "Quả chứa nhiều hạt dẹt.",
+        "cây": "Cây thảo, sống hàng năm hoặc nhiều năm.",
+        "thân": "Thân rễ dạng củ, thuôn như quả lê, đường kính 1 – 1,2 cm, màu nâu.",
+        "mùa hoa": "gần như quanh năm, rộ vào tháng 6-9."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Polianthes L. ở Việt Nam chỉ có một loài hoa huệ trên. Cây có nguồn gốc từ Mexico, sau được du nhập nhiều vùng khác của thế giới. Cây được trồng nhiều ở các quốc gia Đông Nam Á, Ấn Độ và Trung Quốc.  Ở Việt Nam, hoa huệ là cây trồng khá quen thuộc, nhưng không rõ thời gian được nhập nội từ bao giờ. Cây trồng rải rác khắp các tỉnh trên toàn quốc. Với mục đích làm cảnh, hoa huệ thường được trồng ngay tại vườn gia đình hay trồng trong chậu. Ở vùng ngoại ô các đô thị, hoặc ở những nơi có chùa chiền, cây được trồng đại trà trên cánh đồng. Hoa huệ là cây ưa ẩm và ưa sáng.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "các tỉnh trên toàn quốc"
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hoa và củ."
+      },
+      "Thành phần": {
+        "thành phần": "Thành phần chủ yếu của hoa huệ là tinh dầu.",
+        "triết xuất": "Khi chiết với ether petrol thu được 0,08 – 0,11% chất dầu đậm đặc, có màu đồng tối, nặng, ít tan trong cồn. Khi cất kéo bằng hơi nước thu được khoảng 0,7% tinh dầu mà thành phần chủ yếu là: geraniol, nerol ở dạng tự do và dạng axetat, farnesol, benzylalcohol, benzyl benzoat, methyl salicilat, methylantranilat, eugenol, acid butyric, acid phenylacetic và methyl vanilin, trong đó methylantranilat là chất có mùi thơm rất bền nên còn được sử dụng như một chất định hướng (Phạm Hoàng Hộ, 2006).",
+        "gồm chất": "Trong củ chứa saponin steroid mà phần genin là hecogenin và tigogenin (The Wealth of raw material in India, 1969). Ngoài ra, củ còn chứa một alcaloid là lycorin."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hoa huệ có tác dụng lợi tiểu, gây nôn. Ở một số địa phương, nhân dân dùng củ chữa sốt rét và hóc xương. Để chữa hóc xương, giã nát củ, vắt lấy nước, nhỏ vào cuống họng (tránh nhỏ vào răng).",
+        "được_dùng": "Ở Ấn Độ, theo kinh nghiệm y học dân gian, thân hành dưới dạng phơi khô tán bột hoặc rượu thuốc được dùng làm thuốc trị bệnh lậu, Thân hành giã nát được bôi lên da cùng với nghệ và bơ để chữa các mụn mủ đỏ nhỏ làm cho trẻ sơ sinh đau đớn khó chịu, và cũng được dùng dưới dạng thuốc nhão với dịch ép cỏ gà để bôi trị hạch sưng (hạch xoải) [Kirtikar K.R ct al., tập 4, 1998; 2474; Nadkarni K.M, 1999. 997).",
+        "chữa": "Từ thời cổ đại, các bộ phận khác nhau của cây hoa huệ đã được sử dụng để điều trị nhiều bệnh lý và nhiễm trùng ở người. Cây hoa huệ có nhiều bộ phận như củ, thân hành, hoa… được sử dụng vào nhiều mục đích khác nhau:",
+        "làm thuốc": "Thân hành (bulb): Thân hành được dùng để chữa bệnh lậu ở nữ giới. Ở trẻ sơ sinh, thân hành còn giúp làm dịu các vết mẩn đỏ. Người ta thường giã thân hành trộn với nghệ và bơ, sau đó bôi lên các nốt mụn để giảm nhiễm trùng. Ngoài ra, thân hành thái nhỏ trộn với nước ép cỏ gà rồi đắp lên các hạch sưng ở nách, giúp giảm đau và chống thấp khớp ở khớp xương. (Mudassir, S., Ahmad, R., & Anjum, M. A. (2021)",
+        "có tác dụng": "Củ (tuber): Củ hoa huệ được dùng bôi ngoài để hỗ trợ điều trị nhiễm trùng da và vết bỏng. Ngoài ra, còn có công dụng trong việc chữa sốt rét và làm lành vết thương.",
+        "sắc nước uống": "Hoa: Dịch chiết từ hoa huệ được dùng để rửa mắt khi điều trị đục thủy tinh thể. Nước sắc từ hoa cũng được dùng trong điều trị loét và đau họng."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

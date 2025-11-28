@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chùm bao lớn",
+      "ten_khac": "Chùm bao lớn, Đại phong tử, Lọ nồi",
+      "ten_khoa_hoc": "Hydnocarpus anthelminticus Pierre ex Laness.",
+      "ma_taxon": "426900",
+      "ho": "Achariaceae",
+      "Mô tả": {
+        "lá": "Cây gỗ lớn cao 8-20m, cành nhánh to và xoè rộng, tán hình ô, dày rậm. Vỏ màu xám đen, có xơ. Lá đơn mọc so le, phiến lá khi non màu hồng, khi già cứng và bóng, thường hình trái xoan dài hoặc thuôn, dài 15-30cm, rộng 3-7cm, gốc không cân xứng, gân bên 8-10 cặp.",
+        "hoa": "Chùm 2-3 ở nách lá, ít hoa; hoa đơn tính cùng gốc hay lưỡng tính; 5 lá đài không lông, 5 cánh hoa rời nhau dài 15mm; 5 nhị; bầu 1 ô có lông với 5 giá noãn.",
+        "quả": "Quả tròn to 7-12cm; vỏ quả có lông như nhung đen; hạt 30-50, to 1,5-2,2cm, có nhiều góc cạnh và có vỏ cứng như sừng.",
+        "cây": "Cây gỗ lớn cao 8-20m, cành nhánh to và xoè rộng, tán hình ô, dày rậm.",
+        "mùa hoa": "tháng 4-6",
+        "mùa quả": "tháng 7-11"
+      },
+      "Phân bố": {
+        "phân_bố": "Cây phân bố rộng ở Campuchia, Lào, Thái Lan, Nam Việt Nam. Ở nước ta, cây mọc ở miền Trung và miền Nam, trong rừng rậm, thường ở gần các sông suối. Cũng thường được trồng làm cây bóng mát ở các đường phố và làm cảnh ở Hà Nội và thành phố Hồ Chí Minh. Vào mùa quả chín (8-10) lấy quả về đập lấy hạt phơi khô. Khi dùng đập bỏ vỏ cứng lấy nhân; uống trong thì ép bỏ dầu; dùng ngoài để nguyên không cần ép. Nếu dùng dầu thì ép hạt lấy dầu hoặc chiết dầu bằng dung môi.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "miền Trung"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "miền Nam"
+              }
+            }
+          ]
+        },
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "Hà Nội",
+                "ghi_chú": "làm cảnh"
+              }
+            },
+            {
+              "nơi": {
+                "@type": "schema:Place",
+                "tên": "thành phố Hồ Chí Minh",
+                "ghi_chú": "làm cảnh"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hạt phơi hay sấy khô – Semen Hydnocarpi Anthelminticae; thường gọi là Ðại phong tử."
+      },
+      "Thành phần": {
+        "thành phần": "Nhân hạt chứa dầu 64,8-65,5%, một glucosid thuỷ phân cho glucose và acid cyanhhydric. Hạt chứa 16,3%; dầu này chứa acid hydnocarpic 67,8%, acid chaulmoogric 8,7%, acid garlic 1,4%, acid oleic 12,3%, acid palmitic 7,5%, các đồng phân dưới các acid hydnocarpic 0,1%."
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dùng uống trong chữa phong hủi, lở ngứa ngoài da, giang mai, hay nấu với Hạt gấc, Khinh phấn, Hùng hoàng, dầu Vừng để bôi ngoài. Ngày dùng 2-4g (bỏ dầu) dạng thuốc hoàn hoặc sắc. Khi uống trong thường dễ bị nôn. Do đó, dùng thuốc có Ðại phong tử thì phải có bao ngoài bọc đường hay cao, hoặc cho vào giữa quả chuối mà nuốt để khỏi nôn mửa. Uống trong bắt đầu dùng liều ít nhất 1-2g, ngày chia uống 2 lần; sau vài ba ngày sẽ tăng lên dần đến liều 2-4g ngày; kị ăn các chất sống lạnh. Dùng ngoài liều lượng không hạn chế. Trong y học, người ta thường dùng các dẫn xuất của cây như ethyl hydnocarpat gồm chủ yếu là ethyleste của chaulmoogric và acid hydnocarpic được dùng tiêm bắp thì thuốc ít gây kích thích hơn. Có khi dùng uống dầu hoá dưới dạng giọt, nhưng thuốc rất độc, cần hết sức thận trọng khi sử dụng. Hiện nay trong điều trị bệnh hủi. Chùm bao lớn đã được thay thế bằng những loại thuốc chữa khác có tác dụng và tiện sử dụng hơn. Ở Campuchia người ta cũng dùng dầu hạt trị bệnh như dầu Ðại phong tử. Vỏ cây, phối hợp với những vị thuốc khác dùng chế uống bồi dưỡng cho các phụ nữ sau khi sinh con. Quả ăn được nhưng hạt lại có độc. Ở Thái Lan dầu hạt dùng trị phong và bệnh ngoài da khác.  Ðơn thuốc:  Chữa phong hủi, giang mai, chàm và lở ngoan cố ở chỗ: Ðại phong tử 20g, Khổ sâm bắc (củ) 120g, tán viên với hồ bằng hạt đậu xanh, mỗi lần uống 8g; ngày uống 2 lần. Các loại mụn nhọt sưng đau: Ðại phong tử, Hoàng Long não đều 4g, Phèn phi"
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

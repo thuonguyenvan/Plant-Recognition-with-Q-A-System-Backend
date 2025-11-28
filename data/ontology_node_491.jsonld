@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Mần tưới",
+      "ten_khac": "Mần tưới, Trạch lan, Lan thảo, Co phất phứ (Thái)",
+      "ten_khoa_hoc": "Eupatorium fortunei Turcz",
+      "ma_taxon": "447266",
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "lá": "Mần tưới là một loại cỏ cao tới 1m, trung bình 50cm, cành phân nhánh nhiều, thân và cành nhẵn màu hơi tím, trên có những rãnh chạy dọc. Lá mọc đối, phiến lá hẹp, mép có răng cưa to và nông, dài 8-10cm, rộng 1,5-2cm, gân chính nổi rõ, nhiều gân phụ phân nhánh, phiến lá có màu hơi tím.",
+        "hoa": "Hoa mọc ở đầu cành hay kẽ lá thành xim hai ngả. Lá bắc nhỏ, hoa mùa tím hồng, tràng hoa loe dần về phía đầu, mào hoa dài 3mm, bao phấn không có tai ở gốc.",
+        "quả": "Quả bế màu đen nhạt 5 cạnh.",
+        "cây": "Mần tưới là một loại cỏ cao tới 1m, trung bình 50cm, cành phân nhánh nhiều, thân và cành nhẵn màu hơi tím, trên có những rãnh chạy dọc.",
+        "cuống": "Cuống hoa có nhiều lông ngắn.",
+        "mùa hoa": "tháng 4-5."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân và lá. Người ta hái thân và lá hoặc nhổ toàn cây, dùng tươi hay phơi khô trong mát dùng dần."
+      },
+      "Thành phần": {
+        "tinh dầu chứa": "camphen, longifolen, caryphylen, caren, pinen."
+      },
+      "Tính vị": {
+        "Có vị": "Mần tưới có vị đắng, mùi thơm, tính hơi ấm, vào kinh can, tỳ, có tác dụng hoạt huyết, tán ứ, lợi tiểu, tiêu thũng, sát trùng."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Mần tưới là một vị thuốc dùng theo kinh nghiệm nhân dân: Thường nhân dân dùng để trừ bọ gà, mạt gà, bọ chét, hay rệp mọt, chấy rận.  Dùng trong một số vùng dùng mần tưới ăn như một gia vị: Ngọn mần tưới non hái về rửa sạch ăn sống như rau thơm, hoặc mầu tưới băm nhỏ đúc dồi chó, dồi lợn.  Nhân dân Trung quốc dùng mần tưới uống làm thuốc lợi tiểu, bổ dạ dày, chữa sốt, điều kinh.  Dùng trong: uống 50-150g cây tươi dưới dạng thuốc sắc nếu dùng khô chỉ dùng 10-20g Dùng ngoài không kể liều lượng  Kiêng ky: Phụ nữ băng huyết, bệnh nhân đái ra máu không dùng.  Đơn thuốc có mần tưới dùng trong nhân dân:  Chống mọt đậu xanh, đậu đen, cau khô: Cho mần tưới vào hũ đựng đậu hay hũ đựng cau. Chống mạt gà, bọ chét, bọ chó: Hái cả cành cho vào ổ chó hay ổ gà sau khi đã dọn sạch phân rác cũ, cứ 3-4 ngày thay một lần cho đến khi hết. Trừ rếp: Hái cành mần tưới trải xuống dưới chiếu hay cho xuống gầm giường. Chữa sốt, giúp sự tiêu hóa: Mần tưới khô 20g, nước 600ml, sắc còn 200ml chia 2 lần trong ngày và 15 phút trước khi 2 bữa ăn chính. Chữa mụn nhọt, vết thương ứ huyết: Mần tưới, huyết giác 20g. Sắc uống, ngoài dùng mần tưới giã nát.  Chú thích:  Tại một số nước người ta cũng dùng một số cây thuộc chi Eupatorium làm thuốc như: Eupatorium aya-pana Vent (E. triplinerve Vahl) cây cao 2-2,5m, lá hẹp, cuống ngắn mọc đối, trên có 3 gân nổi rõ, lá và cành khô có mùi thơm cumarin dùng uống thay chè (hay dùng ở nam Mỹ) Eupatorium rebaudianum Bert. Cỏ ngọt Paraguay hay kaahee (Stevia rebaudiana Hemsl) lá có vị rất ngọt. Bridel và Lavielle năm 1931 đã chiết từ lá 6% một glucozit gọi là steviozit: thuỷ phân cho 3 phân tử steviol và isosteviol. Chất steviozit ngọt hơn đường 300 lần; có trong cây với tỷ lệ 12-15g trong 1kg. Tại Paraguay và Achentina người ta dùng với tên Kaahee Eupatorium crenatum đường dùng ở Nam mỹ chữa rắn cắn và bò cạp cắn Rễ cây Eupatorium purpureum L. (E. verticillatum Mild) được nhân dân châu Mỹ dùng làm thuốc thông tiểu"
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang và được trồng nhiều nơi ở nước ta. Thường trồng làm hàng rào, hai bên đường vườn hoa, đường đi.  Cách trồng rất đơn giản: Cắt cành thành từng đoạn dài 20-30cm, cắm xuống đất, hơi nghiêng, để hai hay ba đốt chìm dưới đất, sau 5-10 ngày là cây bén rễ và sống. Một-hai tháng sau cây đã tốt, thường khi đó người ta dùng dao hay kéo cắt xén cho phẳng đẹp."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

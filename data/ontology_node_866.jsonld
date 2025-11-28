@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Me rừng",
+      "ten_khac": "Me rừng, Chùm ruột núi, Mận rừng, Cam lam, Trám rừng, Chùm ruột rừng, Me quả tròn, Mắc kham, Mạy kham (Tày), Diều cam (Dao), Xi xa liên (Kho)",
+      "ten_khoa_hoc": "Phyllanthus emblica L.",
+      "ma_taxon": "68666",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỡ cao 3m, phân nhiều cành, cành nhỏ mềm, có lông, dài 20 cm.",
+        "lá": "Lá xếp thành hai dãy trên các cành nhỏ trông giống như một lá kép lông chim, cuống lá rất ngắn. Lá kèm rất nhỏ hình ba cạnh.",
+        "hoa": "Hoa nhỏ, đơn tính cùng gốc. Cụm hoa thành xim co mọc ở nách lá phía dưới của cành, với rất nhiều hoa đực, vài hoa cái.",
+        "quả": "Quả hình cầu trước mọng, sau khô thành quả nang. Hạt hình ba cạnh, màu hồng nhạt.",
+        "mùa hoa": "từ tháng 3 đến tháng 11."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Quả chứa khoảng 45% tanin.",
+        "quả còn xanh chứa": "30-35% tanin (Trung Quốc kinh tế thực vật chi, 1961, 1178).",
+        "Các hợp chất": "Thành phần tanin gồm axit chebulinic C11H32O27, axit chebulagìc corilagin C41H30O27, terchebin C27H22O18, axit chebulic C41H30O26 axit galic, axit ellagic (C. 1966, 64, 3961 d).",
+        "Ngoài ra còn": "axit phyllemblic C16H28O17(COOH)8, emblicol (OCH3)6 (C. A. ,1959, 53, 5416), axit muxic C6H10O8. A., 1962, 56, 15830 C), rất nhiều vitamin C (l-l,8g/100g) (C. A., 1961, 55, 4815 d).",
+        "Lá chứa": "tanin (lá non 23-28%), ngoài ra còn kaempferol 3-glucozit (Sumbra-manian s . s . et al., Phytochemistry, 1971, 10, 2549), sitosterol, axit ellagic và lupeol (C. A., 1968, 69, 74455y).",
+        "Vỏ thân chứa": "28-29,36% tanin, 2,25% lupeol, 3,75% d-Leucodelphinidin (C. A., 1958, 52, 20455 b)."
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Trong tài liệu cổ “Đường bản thảo” và “Nam phương thảo mộc trạng”) ghi: Quả có vị chua, ngọt, đắng, tính mát, có tác dụng nhuận phế, hóa đờm, sinh tân; rễ vị đắng, chát, tính mát, có tác dụng thu liễm và giáng áp.",
+        "Thường dùng": "chữa cảm mạo, phát sốt, ho, đau cổ họng, miệng khô khát. Mỗi ngày dùng 10-30 quả sắc uống.",
+        "Viêm ruột": "đau bụng đi ngoài, cao huyết áp: Ngày dùng 15-20g rễ sắc uống.",
+        "Lở loét": "mẩn ngứa dùng lá nấu nước rửa bên ngoài.",
+        "Tại Ấn Độ": "người ta coi quả me rừng như một nguồn vitamin C, dùng với tên “myrobalan emblic”. Tươi thì là một vị thuốc mát lợi tiểu, nhuận tràng, dùng dưới hình thức mứt (thêm đường mật), khô dùng chữa lỵ, ỉa chảy.",
+        "Vỏ cây": "cũng được dùng làm thuốc chữa ỉa chảy nhưng chủ yếu làm nguồn chất chát dùng thuộc da và nhuộm."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "Cây mọc": "phổ biến trên các đồi trọc, các bãi hoang, trong các rừng thưa ở nước ta. Cây ưa ánh sáng, chịu được khô hạn. Còn thấy mọc ở nhiều nước vùng nhiệt đới châu Á như Trung Quốc (Quảng Đông, Quảng Tây, Vân Nam), Ấn Độ.",
+        "Làm thuốc": "người ta dùng quả, rễ và lá. Trong công nghiệp người ta còn dùng vỏ thân, làm nguồn nguyên liệu chế tanin.",
+        "Rễ thu hái": "quanh năm, đào về rửa sạch đất cát, phơi hay sấy khô.",
+        "Quả thu hái": "vào mùa thu, đồ hơi nước rồi phơi hay sấy khô."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

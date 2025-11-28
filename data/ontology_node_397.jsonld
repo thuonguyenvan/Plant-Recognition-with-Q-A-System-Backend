@@ -1,0 +1,302 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dó tròn",
+      "ten_khac": "Tổ kén tròn, thấu kén tròn",
+      "ten_khoa_hoc": "Helicteres isora L.",
+      "ma_taxon": "356161",
+      "ho": "Trôm (Sterculiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao đến 2m. Cành non hình trụ, phủ đầy lông hình sao, cành già nhẵn.",
+      "lá": "Lá mọc so le, hình trái xoan, dài 10 – 12 cm, rộng 7 – 9 cm, gốc tròn hoặc hình tim, đầu tù rồi hơi nhọn, mép khía răng không đều, phía đầu lá gần như phân thùy nhỏ, mặt trên rải rác lông hình sao, mặt dưới lông rất dày, màu trắng, gân gốc 5; cuống lá ngắn có lông tơ; lá kèm hình sợi, dễ rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành sim co, dài 2 cm gồm nhiều hoa màu đỏ hoặc tím, xếp 2 – 4 cái trên một mấu; đài hình ống, có lông hình sao, 5 răng hình tam giác nhọn; tràng có 5 cánh không đều, nhẵn; nhị 10, nhị lép 5; bầu hơi có gợn.",
+      "quả": "Quả nang gồm 5 lá noãn vặn xoắn như cuốn thừng, phủ đầy lông hình sao; hạt có khía.",
+      "mùa hoa": "tháng 4 – 6",
+      "mùa quả": "tháng 7 – 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Helicteres L. ở Việt Nam có 9 loài trong đó có tới 6 loài được nhân dân các địa phương dùng làm thuốc.  Loài tổ kén trên đây có nơi gọi là “dó tròn”, song đây là loài duy nhất của chi Helicteres L. ở nước ta có quả khá đặc biệt bởi có các đường lõm vặn chéo theo chiều kim đồng hồ, nên còn có tên gọi là “Tổ kén vặn” hay “Tổ kén xoắn”.  Trên thế giới, tổ kén vặn phân bố khá rộng ở hầu hết các nước nhiệt đới châu Á, bao gồm Ấn Độ, Mianma, Lào, Trung Quốc, Campuchia, Thái Lan… Ở Việt Nam, loài cây này cũng có thể gặp ở các tỉnh thuộc vùng núi thấp và trung du như: Lai Châu, Điện Biên, Phú Thọ, Hà Tây, Hoà Bình, Nghệ An Hà Tĩnh, Quảng Trị, Thừa Thiên – Huế, Kon Tum, Gia Lai, Đắk Lắc, Bình Phước…",
+      "thường_mọc": "Cây ưa sáng và có thể hơi chịu hạn và thường mọc trong các quần hệ cây bụi, ven rừng thứ sinh, rừng thưa rụng lá.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Điện Biên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tây"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tĩnh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Trị"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên – Huế"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Gia Lai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắk Lắc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bình Phước"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, quả, vỏ thân và vỏ rễ. Thu hái quanh năm, rửa sạch, thái phiến và phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ lấy sợi, chứa các chất diệp lục, phytosterol, acid hydroxy carboxylic, một chất màu vàng cam giống như curcumin, saponin, đường amilid, phlobotamin và 22,4% lignin (Võ Văn Chi, 1997).",
+      "gồm chất": "Gỗ chứa 74,86% celulose, lignin, chất béo và hợp chất nitơ chưa được xác định [The Wealth of raw material in India, 1962].",
+      "chứa": "Rễ chứa cucurbitacin B, isocucurbitacin D và diosgenin (Phạm Hoàng Hộ, 2006).",
+      "Các hợp chất": "Các nhà khoa học Ấn Độ còn phân lập được tự do tròn các hợp chất isorin, tetratriacontanyl, tetratriacontanoat, diosgenin, a – amyrin, fridelin và taraxeron [Trung Dược đại từ điển, 1975][CA, 1989 V]. Nadkarnis M.K. (1976) còn phát hiện thấy các hợp chất tanin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ, vỏ rễ và vỏ thân cây dó tròn có vị nhạt, hơi đắng, tính bình, có công năng giải biểu, lý khí, bình vị, giảm đau. Rễ và vỏ cây đều có công năng long đờm, làm dịu và săn da; quả cũng làm dịu và săn da.  Theo sách “Toàn quốc Trung thảo dược hội biện”, dó tròn vị cay, hơi đắng, tính ấm, có công năng lý khí, chỉ thống, được dùng trị cảm mạo phát nhiệt, viêm dạ dày mạn tính, loét dạ dày, ruột [TDTH, 1993, I: 1290]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ, vỏ rễ (rễ to dùng vỏ), vỏ thân hoặc quả cây dó tròn được dùng chữa viêm dạ dày mạn tính hoặc loét dạ dày, ngày dùng 12 – 20g, sắc nước uống.  Để chữa rối loạn tiêu hoá sinh đau bụng, dùng rễ và vỏ như trên, có thể dùng lá dó tròn 20g (hoặc 40g tươi), sắc lấy nước uống.  Ở Thái Lan, người ta dùng vỏ thân và rễ làm thuốc lợi tiêu hoá, quả được dùng trị đau dạ dày, đau cơ, viêm gan, chống đầy hơi, trừ tiêu chảy, lỵ và làm thuốc long đờm. Ở Indonesia, quả được dùng chữa đau bụng, chống co giật, gỗ được sắc uống để chống giun, chữa đau bụng, viêm miệng áp-tơ (Med. herb index, 1995: 77). Ở Trung Quốc, dó tròn cũng được dùng chữa viêm dạ dày mạn tính, loét dạ dày, cảm mạo nóng sốt [TDTH, 1993, I: 1290]. Ở Ấn Độ, dó tròn rất hay được dùng để chữa nhiều bệnh khác nhau: Quả và hạt dó tròn có tác dụng làm dịu và sẵn se, được dùng chữa đau tai, đau bụng, quặn ruột, đầy hơi, đặc biệt là cho trẻ em và chữa lỵ mạn tính; rễ, vỏ rễ và vỏ thân để chữa lòng đờm, làm dịu, săn se nên cũng được dùng để chữa kiết lỵ, tiêu chảy, chống tiết sữa và cảm cúm, dịch rễ tươi để chữa đái tháo đường, viêm mủ màng phổi (emprema), đau dạ dày, rắn cắn.",
+      "chữa": "Bài thuốc có dó tròn  Chữa đau dạ dày, viêm loét dạ dày tá tràng:  Rễ cây dó tròn, ba chạc, rễ hoàng lực (Zanthoxylum nitidum DC) mỗi vị 16g, sắc lấy nước uống [Lê Trần Đức, 1997: 523].  Chữa đau tai có dịch tại chảy ra, loét tai:  Hạt dó tròn được tán thành bột mịn, trộn thật kỹ với dầu thầu dầu tinh khiết, lấy dịch trong nhỏ vào tai [Nadkarni, 1999: 615]"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

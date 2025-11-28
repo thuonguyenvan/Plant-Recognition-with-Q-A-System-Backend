@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa ban",
+      "ten_khac": "Hoa ban, Móng bò sọc",
+      "ten_khoa_hoc": "Bauhinia variegata L.",
+      "ma_taxon": "68225",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ, cao 5 – 7m, có khi hơn.",
+      "thân": "Thân cành hình trụ, lúc non có lông mịn sau nhẵn, vỏ màu nâu.",
+      "lá": "Lá mọc so le, hình gần tròn, gốc hình tim, đầu khuyết sâu thành 2 thuỳ lông, dài 5 – 7cm, rộng 7 – 9cm, mép nguyên, hai mặt nhẵn, lúc non có lông, cuống lá dài 2.5 – 3,5cm, phình lên ở hai đầu.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chuỳ ngắn trước khi cây ra lá; hoa to màu trắng hay hồng nhạt, có sọc tím, lá bắc nhỏ, đài 5 răng thành ống ngắn, có lông màu xám, tràng 5 cánh có móng dài, nhị 5 gần đều, không có nhị lép, bầu có lông.",
+      "quả": "Quả giẹp nhẵn, dài 15 – 25cm, rộng 2,5cm, chứa nhiều hạt.",
+      "mùa hoa": "tháng 3 – 4."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Bauhinia L. có khoảng 250 loài trên thế giới, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới Nam Á và Đông Nam Á. Một số loài có hoa đẹp được trồng làm cảnh hoặc làm nguyên liệu lấy tanin.  Ở Việt Nam, chi này có tới 40 loài, trong đó hoa ban được coi là biểu tượng ở vùng Tây Bắc. Cây mọc tự nhiên nhiều ở Lai Châu, Sơn La, Hoà Bình, Tây Thanh Hoá và Nghệ An. Trên thế giới, trung tâm phân bố của loài này ở Nam Ấn Đỏ và Mianma. Cây còn thấy ở Lào, Trung Quốc và Thái Lan  Hoa ban thuộc loại cây gỗ trung bình, ưa sáng, chịu được khí hậu khô nóng, thường mọc trong các kiểu rừng thưa, rừng thứ sinh và đôi khi cả trong rừng xen tre nứa. Cây rụng lá vào mùa đông, có hoa vào mùa xuân, trước khi ra lá.  Do cây có tán lá nhẹ nhàng, uyển chuyển, hoa màu trắng hay trắng hồng đẹp, nên được trồng làm cảnh ở các vườn hoa, dọc đường đi. Cây trồng ra hoa quả nhiều. Hoa ban trồng ở Hà Nội được nhân giống từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, vỏ thân, lá và hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây hoa ban chứa gôm, vỏ chứa tanin 10 – 15%, thân có kampferol 3 – glucosid, đường và acid amin, (TDTH-I-1900).  Hạt chứa 16,5% dầu màu vàng nếu chiết bằng ether dầu, còn ép thường chỉ được 6,1 %.  Hạt còn chứa protein, globulin, albumin và lectin (CA – 117, 1992, 102321 u).  Hàm lượng protein trong loài Bauhinia variegata var candida là 31.6% các acid amin chủ yếu gồm lysin, threonin, valin, methionin, isoleucin và phenylalanin. Các acid amin khác như histidin, arginin, serin, acid as partic, acid glutamic, prolin, glycin alanin và tyrosin chiếm tỷ lệ trung bình (CA. 111, 1989, 113970v)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Ấn Độ, vỏ cây hoa ban được dùng làm săn, hồi phục cơ thể, bổ, chữa lao hạch, bệnh da và mụn lở. Nụ hoa non phơi khô trong râm, sắc uống chữa tiêu chảy và lỵ. Hoa tươi và khô được dùng trị đau bụng: Đun hoa trong nước sôi trong 5 – 7 phút và sau đó trộn với sữa đông rồi cho bệnh nhân uống mỗi sáng một lần trong 7– 10 ngày, để giảm đau. Rễ hoa ban có trong thành phần một bài thuốc gồm 21 dược liệu được dùng ở Ấn Độ để điều trị sỏi niệu.  Ở Nepan, hoa ban nấu chín được ăn như rau đều đặn trị tiêu chảy. Hoa ban, 50 – 60g, đun sôi với 500ml nước trong 2 – 4 phút, uống từng ít một trong ngày, liên tục 2 – 3 ngày, để giảm sốt. Hoa phơi khô và bảo quản cũng dùng được. Dịch ép vỏ cây, uống mỗi lần 2 thìa cà phê, ngày 3 lần để chữa lỵ amip. Vỏ thân giã nát, bọc trong một miếng vải sạch và vắt lấy dịch, uống mỗi lần 4 thìa cà phê, ngày 1 lần trong 4 ngày trị giun. Bột nhão vỏ cây đắp tại chỗ chữa vết đứt và vết thương mới. Vỏ thân các cây hoa ban, ổi và võ rừng, lượng bằng nhau, giã nát và vắt lấy dịch ép. Mỗi lần uống 2 thìa cà phê, ngày 4-5 lần, cách nhau 3 – 4 giờ để trị tiêu tháo và lỵ  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

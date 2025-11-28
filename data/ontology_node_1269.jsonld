@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa hồng đỏ",
+      "ten_khac": "Hoa hồng, Hồng đỏ, Hường, Co coi (Thái), Bjooc coi (Tày)",
+      "ten_khoa_hoc": "Rosa chinensis Jacq.",
+      "ma_taxon": "133614",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, dạng bụi, cao 0,5 – 1,5m.",
+      "thân": "Thân cành có gai dẹt, cong, vỏ nhẵn màu nâu hoặc xám nhạt.",
+      "lá": "Lá mọc so le, cuống ngắn có rãnh, lá chét 3 (ở gần ngọn) hoặc 5 (ở phía dưới) hình bầu dục – mũi mác, hai mặt nhẵn, mặt trên màu lục sẫm bóng, mặt dưới nhạt, có gai ngắn ở gân; lá chét tận cùng to và có cuống dài hơn, mép khía răng nhọn, lá kèm dài chẻ đôi, dính liền với cuống.",
+      "hoa": "Cụm hoa mọc đơn độc ở kẽ lá hoặc thành ngù ở đầu cành, hoa to rất đa dạng, màu hồng, đỏ hồng hoặc đỏ tía, thơm, lá bắc hẹp, dài hình đấu, 5 răng hẹp và mảnh, nhẵn, tràng gồm nhiều cánh khum, hình trứng rộng, nhị rất nhiều, màu vàng, đế hoa lõm chứa nhiều lá noãn rời nhau.",
+      "quả": "Quả giả, hình trứng ngược hoặc hình cẩu chứa nhiều quả bế thuôn dài.",
+      "mùa hoa": "Mùa hoa quả gần như quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Rosa L gồm nhiều loài, phân bố chủ yếu ở vùng ôn đới ấm và cân nhiệt đới. Ở Việt Nam chi này có khoảng 10 loài, trong đó một số loài là cây trồng làm cảnh và làm thuốc. Hoa hồng vốn xuất xứ ở vùng Đông Á, sau được thuần hoá thành cây trồng làm cảnh ở khắp nơi trên thế giới. Hoa hồng được trồng ngày nay đã có hàng trăm giống, có những loại chuyên để sản xuất tinh dầu ở những nước vùng Địa Trung Hải và Đông Âu. Nhóm hoa hồng làm cảnh đặc biệt phong phú về chủng lọai. Người ta đã tạo ra những giống hoa hồng có màu sắc độc đáo như màu xanh hoặc màu xanh đen. Hoa hồng ở Việt Nam cũng có nhiều giống. Các giống cổ như hồng đại doá, hồng nhung, hồng quế thường có mùi thơm quyến rũ. Hiện nay đã có thêm nhiều giống hồng mới hoa to, mọc đơn và không có gai được nhập trồng ở một số địa phương. Song, nhìn chung các loại hoa hồng đều thuộc loại cây có biên độ sinh thái rộng. Tuỳ theo loại giống, cây có thể thích nghi với vùng có khí hậu ẩm mất quanh năm, như Sa Pa, Đà Lạt.. hay có thể trồng ở vùng nắng nóng, lượng mưa hàng năm rất thấp, như ở Nam Trung Bộ (Ninh Thuận. Bình Thuận). Các giống hoa hồng cũ trồng ở Việt Nam thường kết quả. Khả năng tái sinh vô tính của các loại hoa hồng rất lớn. Những khóm hoa hồng già cỗi thường bị chặt tỉa hết thân cành, để cây tái sinh thế hệ cây chồi mới và có sức sống mạnh mẽ hơn. Ngoài ra, từ các đoạn thân cành đem giâm xuống đất, đều có khả năng tạo ra các cây con mới."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa hồng chứa tinh dầu trong đó có linalyl acetat 14,98%, limonen 12,07%, methoxymethyl benzen 9.88%, citronelo 4,82%, p – caryophyllen 4,55%, acetat hexanyl 3,98%, linalol 3, 18%, hexanol 3.17% (Gu xin và cs, 1987)  Ngoài ra, hoa hồng còn có acid galic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa hồng đỏ có vị ngọt, tính ôn, vào kinh can, có tác dụng hoạt huyết, điều kinh, tiêu thũng, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa hồng đỏ được dùng chữa kinh nguyệt không đều, đau bụng kinh, xích bạch đới, vết thương sưng tấy, ung nhọt, tràng nhạc",
+      "được_dùng": "Liều dùng hàng ngày 3 – 6g sắc nước uống hoặc nghiền thành bột uống. Dùng ngoài đắp tại chỗ. Ngoài ra, hoa hồng đỏ còn dùng chữa băng huyết, lở mồm, loét lợi, rộp lưỡi, ho viêm họng. Ngoài ra, theo phương pháp Ajuveda – Ấn Độ tinh dầu hoa hồng (1 giọt) cho vào nước tắm có tác dụng chống mất ngủ.",
+      "làm thuốc": "Bài thuốc có hoa hồng đỏ:  Chữa rối loạn kinh nguyệt, đau bụng kinh: Hoa hồng đỏ, ích mẫu, mỗi vị 9g. Sắc nước uống trong ngày 1 hoặc lấy rễ hoa hồng đỏ phối hợp với hoa mào gà (mỗi vị 30g), ích mẫu 9g, sắc nước, lọc bỏ bã thêm trứng gà,hầm kỹ uống. Chữa băng huyết ở phụ nữ: Lấy 20g cánh hoa hồng đỏ mới nở, hãm với 1 lít nước sôi trong bình sứ trong khoảng 30 phút. Khi nước đã có màu đỏ đem lọc rồi cho thêm 50g đường khuấy tan. Mỗi lần uống 200 – 250ml, uống đều hàng ngày đến khi máu cầm thì thôi. Chữa loét lở mồm, phồng rộp lưỡi:  Bột hoa hồng đỏ (hoa sấy khô, tán nhỏ) 5g,ngâm với 25ml rượu trong vòng 24 giờ, đem đun lửa nhỏ cho rượu bay hơi, còn lại nước sền sệt, cho thêm 30g mật ong vào đun nhẹ, khuấy đều, để nguội. Dùng bông chấm thuốc bôi vào chỗ loét rộp. Ngày bôi 2 – 3 lần. Chữa viêm họng:  Mật ong, hoa hồng đỏ đem pha loãng với nước đun sôi để nguội, thêm vài hạt muối hoặc ít hàn the, dùng làm thuốc súc miệng hàng ngày. Chữa loa lịch (tràng nhạc, lao hạc): Rễ cây hoa hồng đỏ 15g hầm với cá ăn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

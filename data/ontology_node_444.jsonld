@@ -1,0 +1,260 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bìm bìm dại",
+      "ten_khac": "Bìm bắp, bìm nắp, dây chìa vôi .",
+      "ten_khoa_hoc": "Operculina turpethum (L.) S.Manso",
+      "ma_taxon": "348466",
+      "ho": "Bìm bim (Convolvulaceae)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cỏ leo, sống dai.",
+      "thân": "Thân cành đôi khi có cạnh, lúc đầu có lông sau nhẵn.",
+      "lá": "Lá mọc so le, hình trái xoan hoặc mũi mác, thường hình tam giác, dài 5 – 12 cm, rộng 2,5 – 7,5 cm, hình tim, đầu nhọn, gân chỉnh 5 – 7; cuống lá dài 2,5 -7 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, có 1 – 3 hoa, màu trắng hoặc vàng nhạt; lá bắc thường dài 1,5 cm, đôi khi đến 2 cm ở những lá dưới hoa, sớm rụng, đài có răng tù, những cái phía ngoài hơi dài hơn, tràng hình ống rồi loe ra ở đầu, cánh hoa mỏng, nhị đính ở gốc tràng, chỉ nhị đều, bao phấn xoắn; bầu nhẵn, đầu nhọn, 2 ô mang 2 noãn.",
+      "quả": "Quả nang, đường kính 1,5 – 1,7 cm, bao bọc bởi đài tồn tại, hạt 3 – 4, nhẵn, màu đen nhạt."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Operculina S. Manso ở Việt Nam đã biết 3 loài, trong đó có loài bìm bìm dại hay còn gọi là bìm nắp kể trên. Cây phân bố chủ yếu ở các tỉnh phía Bắc, bao gồm Bắc Giang (Lạng Giang: Kép), Hà Tây cũ (Ba Vì: Thủ Pháp), Phú Thọ (Đoạn Hùng), Hà Nội (Gia Lâm), Hải Dương (Chí Linh: Bảy chùa), Thanh Hoá (Hà Trung), và ở tỉnh Đắk Lắk (Hồ Lắk),…Trên thế giới, loài này có ở Ấn Độ, Nam Trung Quốc, Thái Lan và một vài quốc gia Đông Nam Á khác.",
+      "thường_mọc": "Bìm bìm dại là dây leo sống nhiều năm, ưa ẩm sáng và thường leo quấn lên các loài cỏ cao, cây bụi ở ven rừng thí sinh thưa, đồi cây bụi, trảng cỏ và bờ nương rẫy,… Ở vùng đồng bằng và trung du Bắc Bộ đôi khi thấy cây mọc lẫn trong các lùm bụi quanh làng và bờ rào vườn.",
+      "Đặc điểm sinh trưởng": "Bìm bìm dại sinh trưởng mạnh trong mùa mưa ẩm, từ cuối mùa xuân đến gần cuối mùa thu. Cuối thu, sau khi quả đã già cây có hiện tượng bán tàn lụi.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tây"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phú Thọ"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Nội"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hải Dương"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắk Lắk"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Ai không nên dùng bìm bìm dại?  Bìm bìm dại có tính năng tẩy xổ mạnh nên không được dùng cho phụ nữ có thai, phụ nữ đang cho con bú  Dùng bìm bìm dài có cần kiêng ăn uống gì không?  Khi sử dụng bìm bìm dại chữa bệnh cần kiêng ăn đồ mặn, đồ nhiều muối, kiêng uống rượu bia."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân, rễ"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Dây bìm bìm dại chứa 6 – 10% nhựa, 2% turpethin, tinh bột, chất béo, tinh dầu, một chất màu vàng.",
+      "gồm chất": "Rễ củ có turpethin, jalapin, turpethein, các acid jalapic, ipomoea tampinolic và valeriania."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây bìm bìm dại vị ngọt, hơi cay, tính bình, có công năng lợi thuỷ tiêu thũng, cường cần hoạt lạc. Rễ có công năng tẩy, nhựa cũng tẩy tương tự như jalap, nhưng tác dụng tẩy kém hơn.  Sách “Toàn quốc trung thảo dược hội biên” cũng ghi: Hạp quả đằng (tức là bìm bìm dại) vị ngọt, hơi cay, tính bình, có công năng lợi thủy tiêu thũng, thư cân hoạt lạc” [TDTH, 1997, tập 3:433]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây bìm bìm dại (có thể dùng riêng rễ củ hoặc riêng thân lá) là thuốc lợi tiểu và tẩy xổ mạnh, được dùng để chữa phù thũng, táo bón.  Cũng dùng chữa đau khớp, thống phong, tê thấp, liều dùng 4 – 12g sắc lấy nước uống. Có thể dùng dạng rễ củ nghiền bột uống, mỗi lần 1 – 4g.  Ở Philippin, rễ củ được tán thành bột, chế ra dạng cồn thuốc là thuốc tây mạnh. Cũng sắc uống chữa đau khớp, thấp khớp và bệnh gút. Thân là bìm bìm lại được dùng cho phụ nữ đau bụng sau khi sinh. Lấy thân lá tươi, giã nát, họ vào lửa cho nóng rồi đắp lên bụng phụ nữ mới sinh để điều các cơn đau bụng và giúp cho sự co hồi cơ tử cung trở lại bình thường [Perry et al., 1980: 108]. Ở Indonesia, rễ củ bìm bìm lại được dùng chữa sốt, lợi tiểu, nhuận tràng, viêm khớp, thấp khớp [Med.herb index Indonesia, 1995: 241]. Ở Trung Quốc, toàn cây bìm bìm lại được dùng chữa thuỷ thũng, đại tiện bị kết, rễ củ để hạ sốt, lợi tiểu, nhuận tràng [Perry et al., 1980: 108]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "– Bài thuốc chữa đại tiện bí kết, thường xuyên táo bón: Dùng rễ củ 4 – 12g sắc uống, hoặc phơi khô tán bột mỗi lần dùng 1 – 4g.  – Chữa bọ cạp hay rắn cắn: Lấy rễ nhai nuốt nước, đắp bã lên vết cắn.  – Chữa đau bụng sau sinh: Thân cây giã nhuyễn hơ vào lửa, áp vào bụng phụ nữ mới sinh đẻ để điều trị các cơn đau bụng, giúp sự co rút của các cơ trở lại bình thường."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

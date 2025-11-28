@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây thần thông",
+      "ten_khac": "Rễ gió.",
+      "ten_khoa_hoc": "Tinospora cordifolia (Willd.) Miers.",
+      "ma_taxon": "702441",
+      "ho": "Tiết dê (Menispermaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá có cuống, hình bầu dục, dài 8 cm, rộng 7 cm, gốc hình tim, đầu hơi nhọn, hai mặt nhẵn, mép nguyên, gân chính 5 – 7.",
+      "hoa": "Cụm hoa mọc kẽ lá thành chùm đơn, mang ít hoa ở phần trên cuống; lá bắc nhọn; hoa có 3 lá đài ngoài rất nhỏ, 3 lá đài trong, cong lớn hơn; cánh hoa 6, xếp đối diện và bọc lấy nhị, ngắn hơn các lá đài trong, nhị 6, bao phấn hình vuông, chỉ nhị dài; nhị lép 6; bầu hình trứng, thắt lại ở đầu chứa 1 noãn.",
+      "cây": "Dây leo.",
+      "thân": "Thân mảnh có cạnh khía, thắt lại ở những mấu.",
+      "mùa hoa": "tháng 11 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Tinospora Miers. ở Việt Nam đã biết có 5 loài, 4 loài trong số đó là cây thuốc. Song loài dây thần thông kể trên hiện mới biết về phân bố rất hạn chế, bao gồm Ninh Bình, An Giang, Cần Thơ nên những hiểu biết khác về mặt sinh học cũng chưa được đầy đủ. Về phân bố trên thế giới của dây thần thông mới ghi nhận được ở Ấn Độ và Trung Quốc.  Đây là loài cây mang tính chất nhiệt đới, ưa sáng, rụng lá vào mùa khô và ra hoa trước hoặc đồng thời với mọc lá non. Tái sinh tự nhiên chủ yếu bằng hạt và có khả năng mọc chồi sau khi chặt.  Cần đi sâu điều tra, nghiên cứu thêm về các đặc điểm sinh học của cây thuốc này ở Việt Nam.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "An Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cần Thơ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thân và rễ dây thần thông chứa các nhóm chất chính sau đây: các chất đắng: columbin, chasmanthin, palmarin, tinosporin, acid tinosporic, một glycosid đắng có tên là giloin. Các glycosid không đắng như: giloinin, tinocordifoliosid, tinocordifolin, tinosposid, tinosporasid, cordifolid, tinocordiosid (Trung dược đại từ điển, 1993).  Ngoài ra còn chứa berberin (The Wealth of India, 1976) phytosterol: ginosterol, các glucosid của siringin và các chất khác như: tinosponon, tinosporid, picroretin, magnoflorin, tembetarin, epimer của 6 – hydroxyarcangelisin và arabinogactan có tác dụng miễn nhiễm (Phạm Hoàng Hộ, 2006).  Thân và lá còn chứa tinh dầu và acid béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây thần thông có vị rất đắng, tính hàn, có tác dụng hạ sốt, tiêu tích trệ, tiêu huyết ứ, tán ung độc, lợi tiểu, thông kinh, lợi tiêu hóa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dây thần thông được dùng chữa sốt, sốt rét, viêm họng, đầy hơi, táo bón, bế kinh, kinh nguyệt không đều. Còn trị thấp khớp, đái tháo đường, làm thuốc bổ đắng giúp cho tiêu hóa dễ.  Liều dùng chữa sốt rét: ngày uống 1-2g cao dưới dạng viên. Thân cây, ngày uống 2-3g dưới dạng thuốc bột, 4-8g dưới dạng rượu thuốc.  Dây thần thông dùng ngoài giã đắp hoặc sắc lấy nước rửa các vết loét."
+    }
+  ]
+}

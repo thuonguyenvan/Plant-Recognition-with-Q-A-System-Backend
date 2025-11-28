@@ -1,0 +1,184 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Trạch quạch",
+            "ten_khac": "Muồng nước, Cây gió, Trạch quạch, Thuốc rắn, Kiền kiện",
+            "ten_khoa_hoc": "Adenanthera pavonina L.",
+            "ma_taxon": "158007",
+            "ho": "Mimosaceae (Trinh nữ)",
+            "Mô tả": {
+                "cây": "Cây to, cao 15 – 18m. Cành hình trụ nhẵn.",
+                "lá": "Lá kép hai lần lông chim lẻ, mọc so le, dài 30 – 40cm hay hơn, cuống chung mập, lá chét không bằng nhau, hình bầu dục hoặc hình trái xoan ngược, mặt trên nhẵn, mặt dưới hơi có lông áp sát.",
+                "hoa": "Cụm hoa mọc ỏ kẽ lá thành bông, lá bắc nhỏ rụng sớm; hoa nhỏ rất nhiều, màu vàng, xếp dày đặc thành vòng; đài dạng đấu, có răng tù; tràng có cánh hình dải; nhị 10, bao phấn hình bầu dục; bầu nhần có nhiều noãn.",
+                "quả": "Quả hình lưỡi liềm, cong xoắn; hạt hình mắt chim hay hơi hình thận, màu đỏ bóng.",
+                "mùa hoa": "tháng 6-9.",
+                "mùa quả": "tháng 6-9."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Adenatithera L. có 2 loài ở Việt Nam thường gọi là trạch quạch và ràng ràng. Trạch quạch là cây của vùng nhiệt đới châu Á, phân bố rải rác ở Ấn Độ, Malaysia, Thái Lan, Campuchia, Việt Nam và Nam Trung Quốc. Ở Việt Nam, trạch quạch có ở các tỉnh miền núi có độ cao dưới 600m, đôi khi thấy ở vùng đổi trung du; thường gặp nhiều hơn ở các tỉnh miền Trung và đảo lớn. Cây ưa sáng, có thể chịu được khô hạn, thường mọc ở rừng thưa, các đồi cây bụi ở ven biển hoặc đảo. Cây ra hoa nhiều vào cuối mùa khô, quả chín tự mở để hạt rơi vãi xung quanh gốc. Hiện chưa quan sát được cây con mọc từ hạt; Cây tái sinh khoẻ sau khi bị chặt.",
+                "Bộ phận dùng": "Hạt thu hái ở quả chín. Còn dùng lá và vỏ cây phơi khô."
+            },
+            "Thành phần": {
+                "thành phần": "Hạt trạch quách chứ 28% dầu, HCN glucosid, acid lignoceric. Lá chứa alcaloid (Võ Văn Chi – Từ điển cây thuốc) Hạt chứa 14% dầu béo, acid lignoceric với hàm lượng 25% trong dầu hoặc 2,24% trọng lượng hạt Hạt trạch quạch còn chứa lipid mà acid béo chủ yếu là linoleic bên cạnh acid lignoceric và acid cerotic, các men ức chế trypsin gồm một chuỗi đơn polypeptid có 182 acidamin gồm 4 nửa đơn vị cystein và 1 chuỗi acid pyroglutamic. Các men ức chế cystein proteinase là một protein có trọng lượng phân tử 29KDa và có các thành phần acid amin tương tự như papain trong hạt đu đủ."
+            },
+            "Tính vị": {
+                "Có vị": "Hạt trạch quạch có tính hơi hàn, hơi độc, có tác dụng khử độc, tiêu viêm. Rễ gây thượng thổ, hạ tả."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Lá trạch quạch được dùng chữa thấp khớp mạn tính, thống phong, đái ra máu. Vỏ cây sắc uống chữa thấp khớp, lỵ. Gỗ sắc uống để tăng lực. Hạt được dùng làm thuốc đắp làm vỡ mủ chữa nhọt, áp xe, viêm vết thương nhiễm khuẩn, đau nửa đầu, thấp khớp. Để chữa rắn cắn, lấy 7 – 10 hạt trạch quạch, đập vỡ vỏ, lấy nhân, giã nát, thêm nước, gạn uống, bã đắp lên vết cắn.  Chú ý: Toàn cây trạch quạch có chất độc, nhất là hạt, vì vậy khi dùng phải rất thận trọng. Nếu chưa có kinh nghiệm không nên dùng uống."
+            }
+        }
+    ]
+}

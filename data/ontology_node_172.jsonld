@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bán chi liên",
+      "ten_khac": "Bán chi liên, Hoàng cầm râu",
+      "ten_khoa_hoc": "Scutellaria barbata D. Don",
+      "ma_taxon": "500874",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc bò, cao 15 – 20 cm.",
+      "thân": "Thân mảnh, hình trụ, mọc đứng, nhẵn hoặc có lông nhỏ.",
+      "lá": "Lá mọc đối, hình trứng, dài 1,25 – 2,5 cm, rộng 0,7 – 0,8 cm, gốc hình nêm hoặc hình tim, đầu nhọn, mép khía răng, mặt dưới rất nhạt; những lá gần ngọn không cuống, những lá phía dưới có cuống mảnh dài 5 – 6mm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá; lá bấc dạng lá; đài hình chuông, dài 1,5 – 2mm, nhẵn hoặc hơi có lông, có đường sống rõ; tràng màu xanh lơ, đài 9 – 10 mm, hơi loe ra ở đầu, chia 2 môi, môi trên có 3 thùy, thùy giữa lớn, thùy bên hẹp, môi dưới rộng và tròn; nhị 4, đính vào 1/3 phần dưới của tràng, không thò ra ngoài, chỉ nhị có lông ở gốc; bầu nhẵn.",
+      "quả": "Quả nhẵn hoặc có lông.",
+      "mùa hoa": "tháng 11."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây bán chi biên chứa scutellarin scutellarein, carthamidin, isocarthomidin (W. Tang và cs, 1992). Ngoài ra, còn có alcaloid, hợp chất phenol, sterol, tanin. Rễ có cholesterol, β – sitosterol, acid stearic (Trung dược từ hải 1,1993)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bán chi liên có vị hơi đắng, tính mát, có tác dụng thanh nhiệt giải độc, lợi tiểu, tiêu sưng, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bán chi liên được dùng chữa đinh nhọt, viêm gan vói liều 20 – 40g cây khô, sắc uống. Dùng riêng hay phối hợp với các vị thuốc khác. Trong y học Trung Quốc, toàn cây khô bán chi liên được dùng làm thuốc hạ sốt, lợi tiểu, và điều trị khối u tân sinh, áp xe phổi, lao phổi xơ, viêm ruột thừa, viêm gan, xơ gan cổ trướng. Dùng ngoài, cây tươi giã đắp và nấu nước rửa, trị mụn nhọt sưng đau, viêm vú, viêm mủ da, sâu quảng, rắn độc cắn, sâu bọ cắn đốt, đòn ngã tổn thương. Ngày 20 – 40g sắc uống. Còn dùng thay ích mẫu trị bệnh phụ khoa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa ung thư phổi, ung thư gan, ung thư trực tràng ở thời kỳ đầu:  Bán chi liên 40g, bạch hoa xà thiệt thảo 40g. sắc uống ngày một thang hoặc nấu nước uống thay trà hàng ngày."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

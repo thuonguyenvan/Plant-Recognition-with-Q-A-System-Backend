@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vừng",
+      "ten_khac": "Mè, Du tử miêu, Cự thắng tử, Chi ma, Bắc chi ma, Hổ ma",
+      "ten_khoa_hoc": "Sesamum indicum L.",
+      "ma_taxon": "285850",
+      "ho": "Vừng Pedaliaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây vừng là một loại cỏ nhỏ, thân có nhiều lông, cao chừng 0,6m, sống hằng năm.",
+      "lá": "Lá mọc đối, đơn, không có lá kèm, nguyên, có cuống.",
+      "hoa": "Hoa trắng mọc đơn độc ở kẽ lá, lưỡng tính, không đều, có cuống ngắn. Đài hơi hợp ở gốc. Tràng hình ống loe ra thành hai môi, môi dưới gồm 3 thùy, môi trên 2 thùy, 4 nhị, 2 to, 2 nhỏ, 2 lá noãn, đầu nhụy có 2 núm, bầu có vách giả chia thành 4 ổ, mỗi ô chứa một dãy dọc nhiều noãn.",
+      "quả": "Quả nang dài, 4 ô mở thành 4 mảnh. Nhiều hạt nhỏ màu vàng hay nâu đen. Lá mầm chứa nhiều dầu."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt vừng có từ 40-55% dầu, có khi lên tới 60%. Ngoài ra còn chừng 5-6% nước, 20- 22% chất protein, 5% trong đó có: 1,7mg đồng, 1% canxi oxalat, 6,3-8,8% chất không có nitơ, pentozan, lexitin, phytin và cholin.",
+      "gồm chất": "Dẩu vừng chứa khoảng 12-16% axit đặc (7,7% axit panmitic, 4,6% axit stearic, 0,4% axit arachidic), 75-80% axit lỏng (trong đó có 48% axit oleic, 30% axit linolic và, 0,04% axit lignoxeric). Phần không xà phòng hóa được chiếm 0,9-1,7% và chừng 1% lexitin.",
+      "Các hợp chất": "Trong dầu vừng Villelavecchia và Fabris còn phân tích được chất sesamin C20H18O6 với tỷ lệ chừng 0,25-1%. Ngoài ra còn chừng 0,1% chất sesamol là một phenol có công thức C7H6O3."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong tây y dùng dầu vừng thay dầu ô liu để chế thuốc tiêm, thuốc cao dán nhọt.",
+      "được_dùng": "Đông y coi dầu vừng và vừng là một vị thuốc bổ, nhuận tràng, lợi sữa. Trong các sách cổ đông y người ta viết về vừng như sau: Vừng có vị ngọt, tính bình, không độc, vào 4 kinh phế, tỳ, can và thận, có tác dụng ích gan, bổ thận, nuôi huyết, nhuận táo, là thuốc tư dưỡng cường tráng, chủ trị thương phong, hư nhược, bổ ngũ tạng, ích khí lực, dầy tủy não, bền gân cốt, sáng tai mắt, quên đói sống lâu. Thường dùng nấu với muối chì và các vị thuốc khác làm thuốc cao dán nhọt.",
+      "có tác dụng": "Khi kết hợp chất sesamin hay dầu vừng với thuốc trừ sâu pyretrin, người ta thấy với tỷ lệ thêm chừng 5% dầu vừng thì hiệu lực trừ sâu của pyretrin tăng lên rõ rệt.",
+      "làm thuốc": "Dầu vừng là một thực phẩm quý và còn dùng để chế xà phòng, dầu máy.",
+      "chữa": "Khô dầu vừng có thể dùng làm phân bón, thức ăn cho súc vật, nuôi cá. Tuy nhiên có tác giả cho rằng khô dầu vừng cho súc vật ăn sẽ gây đau bụng, đầy hơi, khó tiêu, run rét. Thực tế người ta vẫn cho súc vật ăn mà không làm sao và sở dĩ có hiện tượng độc nói trên là do khô dầu lên Irten mà sinh ra chăng? Hoa vừng ngâm vào nước đắp lên mắt đau làm mát mắt, dịu đau. Nước sắc lá và rễ vừng được nhân dân Ấn Độ, Trung Quốc dùng làm thuốc mọc tóc và giữ cho tóc được đen lâu.",
+      "sắc uống": "Liều dùng hằng ngày: Ngày uống 10 đến 25ml làm thuốc bổ, muốn nhuận và tẩy, tăng liều lên tới 40 đến 60g. Vừng đen: Ngày có thể dùng 12 đến 25g dưới dạng thuốc viên, thuốc bột hay thuốc cao."
+    },
+    {
+      "@type": "Cách dùng",
+      "làm thuốc": "Thuốc chữa cao huyết áp: Vừng đen, hà thủ ô, ngưu tít, các vị bằng nhau tán nhỏ, dùng mật viên thành viên bằng hạt ngô. Ngày uống 3 lần, mỗi lần uống 10g, dùng chữa bệnh cao huyết áp, mạch máu bị xơ cứng, bị cảm mà bán thân bất toại, táo bón.",
+      "được_dùng": "Thuốc lợi sữa: Vừng đen sao qua, giã nhỏ cho thêm ít muối ăn hằng ngày cho lợi sữa, chữa phụ nữ cạn sữa. Trẻ con bị xích bạch ly : Dùng dầu vừng 5 hay l0g tùy theo tuổi hòa với mật ong cho uống. Cháo vừng: Vừng đen 6g sao thơm để riêng, gạo tẻ 30g, cho vào nồi thêm nước nấu thành cháo. Khi cháo chín cho vừng vào khuấy đều, thêm chút đường cho vừa khẩu vị. Dừng làm món ăn điểm tâm buổi sáng. Có tác dụng bổ ngũ tạng, mạnh gân cốt, nhuận tràng và bổ sung vitamin E cho cơ thể.",
+      "chữa": "Chữa viêm mũi mạn tính: Lấy một ít dầu vừng đem đun sôi, giữ nhỏ lửa cho sôi nhẹ 15 phút. Khi nguội, đổ dầu vào lọ sạch có nút kín, dùng dần. Ngày nhỏ mũi 3 lần: mới đầu chỉ nhỏ 2-3 giọt, khi đã quen thì tăng lên 4-5 giọt. Sau khi nhỏ thuốc không cử động mạnh 2-3 phút cho dầu lan ra ngấm kỹ vào niêm mạc mũi. Dùng sau 2 tuần sẽ khỏi bệnh. Chữa chân tay đau buốt hơi thũng: Đây là chứng do thấp nhiệt thâm nhiễm làm chân tay đau buốt và hơi thũng. Cách chữa: lấy 40g hạt vừng đen, rang có mùi thơm, tán bột, đổ vào 40g rượu, ngâm trong một đêm, chia đều uống nhiều lần, bệnh sẽ giảm dần và khỏi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

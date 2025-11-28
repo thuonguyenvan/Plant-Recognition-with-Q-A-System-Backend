@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mã thầy",
+      "ten_khac": "Củ năn, Mã thầy, Ô vu",
+      "ten_khoa_hoc": "Eleocharis dulcis (Burm.f.) Hensch var. tuberosa (Roxb.) T. Koyama",
+      "ma_taxon": "122977",
+      "ho": "Cyperaceae (Cói)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây có củ to, mọc dưới nước.",
+      "thân": "Thân không có lá, tròn dài, gần như chia đốt, ngoài mặt có khía dọc, phía trong có nhiều vách ngang, lá được thay thế bởi những bẹ hình trụ.",
+      "hoa": "Cụm hoa chỉ gồm có một bông nhỏ màu vàng nâu ở ngọn",
+      "mọc": "Theo Merill thì loài mã thầy Heleocharis tuberose (Roxb.) Schult cũng chỉ là một dạng đã được tuyển chọn và đưa vào trồng trọt của loài Heleocharis plantaginea. Dạng trồng này rất ít khi ra hoa."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Củ mã thầy có tới 77% hydrat cacbon (gồm tinh bột và đường với số lượng bằng nhau) 8% protein (theo Hooper) nhưng có tác giả lại phân tích thấy trong mã thầy có 60% tinh bột và 7% protein và một ít đường (theo Hemmi)",
+      "đã nghiên cứu": "Năm 1945, Chen và cộng sự (An antibiotic substance in the Chinese Water Chesnul Heleocharis tuberose-Nature 156:234-Anh) đã nghiên cứu thấy dịch ép của mã thầy có tác dụng ức chế đối với vi trùng staphyllococ và vi trùng coli ."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài công dụng làm thức ăn bổ mát, mã thầy được dùng làm thuốc chữa bệnh tiêu khát (đường tiện), bệnh viêm gan (vàng da), trường hợp nhiệt (lỵ ra máu), đại tiện táo bón, mắt sưng đỏ). Ngày dùng 10-20g dưới dạng thuốc sắc"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mã thầy được nhân dân những vùng núi cao lạnh gần biên giới Việt Nam-Trung Q.uốc trồng để lấy củ ăn. Củ mã thầy (miền Nam gọi là củ năng) to bằng củ hành, ngoài có lớp vỏ màu nâu đen. Khi dùng thì cạo bỏ lớp vỏ này rồi ăn sống hay nấu với thịt. Có khi nấu chè ăn cho máy"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

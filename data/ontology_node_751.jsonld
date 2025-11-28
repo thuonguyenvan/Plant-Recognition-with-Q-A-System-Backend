@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau má mỡ",
+      "ten_khac": "Rau má mỡ, Rau má chuột, Rau má họ, Thiên hồ thái, Thạch hồ tuy",
+      "ten_khoa_hoc": "Hydrocotyle sibthorpioides Lam.",
+      "ma_taxon": "128684",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, sống dai.",
+      "thân": "Thân mảnh mọc bò mang rễ ở các mấu, rồi đứng thẳng, nhẩn hoặc hơi có lông, có thể dài đến 50cm.",
+      "lá": "Lá mọc so le, hình tim hoặc hình thận, gần tròn, chia nhiều thùy nông, rộng 1 – 1,5cm, mép khía răng tù; cuống lá dài 1 – 4cm; lá kèm dễ rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành tán đơn; cuống cụm hoa dài, có lông; tổng bao gồm 4 – 10 lá bắc, nhẵn hoặc hơi có lông; hoa nhỏ, 3-8 trong một tán, màu trắng; đài 0, tràng có 5 cánh nhọn; nhị 5, xếp xen kẽ với cánh hoa.",
+      "quả": "Quả dẹt, có cạnh lồi, nhẵn hoặc có lông rất nhỏ, khi chín màu vàng hoặc nâu.",
+      "mùa hoa": "tháng 4-8",
+      "mùa quả": "tháng 4-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Hydrocotyle L. có 9 loài ở Việt Nam đều là loại cây thảo, trong đó đáng chú ý cây rau má mỡ về sự phân bố tương đối phổ biến ở khắp các tỉnh đổng bằng, trung du và cả ở vùng núi có độ cao khoảng 1000m. Tuy nhiên, ở các tỉnh phía nam, cây chỉ thấy mọc ở vùng núi từ độ cao khoảng 500m trở lên.  Rau má mỡ còn có ở Trung Quốc và các nước khác ở vùng Đông Nam Á. Rau má mỡ là cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc thành đám dày đặc hoặc xen lẫn trong đám cỏ thấp. Có thể gặp rau má mỡ ở hầu hết các bờ ruộng lúa, ruộng trồng hoa màu, bờ kênh mương, ven đường đi, ở chân đồi hay ven rừng và những nơi đất trũng của vùng nương rẫy. Cây còn mọc cả ở bờ ao và vườn nhà. Rau má mỡ ra hoa quả nhiều hàng năm, có khả năng đẻ nhánh và bò lan trên mặt đất; mọi đốt của thân bò khi tiếp xúc với đất đều mọc rễ. Rau má mỡ làm rau ăn, đồng thời cũng là loài cỏ dại ảnh hưởng đến cây trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, dùng tươi.  Thành phần hoá học Rau má mỡ chứa tinh dầu trong đó thành phần chính là trans – P- farnesen. Ngoài ra, còn có L – sesamin và một cafeoyl galactosid (PROSEA 8, Vegetables, 1994), các nhóm chất phenol, acid amin, và coumarin."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau má mỡ chứa tinh dầu trong đó thành phần chính là trans – β – farnesen. Ngoài ra , còn có L – sesamin và một cafeoyl galactosid ( PROSEA 8, Vegetables,1994) các nhóm chất phenol, acid amin và coumarin ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau má mỡ có vị ngọt nhạt, hơi cay, tính mát, có tác dụng thanh nhiệt, giải độc, lợi thấp, tiêu đờm, tiêu viêm, lợi tiểu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rau má mỡ dược dùng toàn cây chữa viêm gan vàng da, viêm gan truyền nhiễm và xơ gan. Ngàv 20 – 40g sắc uống. Dùng riêng hoặc phối hợp với các dược liệu khác. Rau má mỡ còn được đùng chữa cảm cúm cảm sốt, ho, viêm họng với liều 40 – 80g sắc uống.  Trong y học cổ truyền Trung Quốc, rau má mỡ trị viêm, vết thâm tím, vàng da và bí tiểu tiện. Ở Ấn Độ, nhân dân dùng rau má mỡ trị thấp khớp, rối loạn chức năng hô hấp và tiêu hoá, bệnh giang mai, bệnh da giun. Để trị tiêu chảy và lỵ, uống dịch ép pha đường của hỗn hợp rau má mỡ và thìa là tươi, mỗi lần khoảng 3-5ml cứ 3 giờ một lần.  Dịch ép rau má mỡ bôi ngoài da trị ban da. Lá rau má mỡ đắp nhọt làm chóng mưng mủ. Dịch ép rau má mỡ uống liều cao có thể gây nôn.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

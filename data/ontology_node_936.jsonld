@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Màn kinh tử",
+      "ten_khac": "Mạn kinh, Đẹn ba lá, Quan âm, Vạn kim tử, Từ bi biển, Mác min (Tày)",
+      "ten_khoa_hoc": "Vitex trifolia L.",
+      "ma_taxon": "133332",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay nhỡ, mùi thơm, có thể cao tới 3m.",
+      "thân": "Cành non có 4 cạnh, có lông mềm bao phủ.",
+      "lá": "Lá kép và thường gồm 3 lá chét. Có thể chỉ có 1 lá chét (var. unifoliata). Trên cùng một cành nhiều khi phía trên hay phía dưới có lá đơn, chỉ gồm một lá chét. Cuống gầy hơi tròn có lông, dài 1-3cm, lá chét không cuống, phiến lá chét hình trứng ngược hay hình mác, dài 2,45-9cm, rộng 1-3cm, phía dưới hẹp lại. Mặt trên nhẵn, mặt dưới nhiều lông trắng. Những lá chét hai bên nhỏ hơn, gân không nổi rõ.",
+      "hoa": "Hoa màu lơ nhạt, dài 13-14mm, mọc thành chùy xim ở đầu cành, nhiều khi phía dưới có lá.",
+      "quả": "Quả hình bầu dục có rãnh, đầu hơi dẹt, rộng chừng 6mm, được che kín quá nửa bởi đài phát triển và tồn tại."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong màn kinh tử có tinh dầu.",
+      "gồm chất": "Trong tinh dầu có camphen, pinen (55%), ditecpen ancola C20H32O (2%) và tecpenylaxetat (10%).",
+      "chứa": "Theo Wehmer (1931, Die Pflanzenstoffe, Bd, 1023) thì trong màn kinh tử có ancaloit và vitamin A."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ, màn kinh tử vị cay, đắng, tính hơi hàn, vào 3 kinh can, phế và bàng quang. Có tác dụng tán phong nhiệt. Dùng chữa đầu nhức, mắt hoa, mắt đau.",
+      "có tác dụng": "Hiện nay, màn kinh tử là một vị thuốc có tác dụng chữa cảm mạo, sốt, nhức đầu, nhức bên thái dương, đau nhức trong mắt, mặt mũi tối tăm; còn có tác dụng giảm đau.",
+      "được_dùng": "Ngày uống 6-12g dưới dạng thuốc sắc hoặc với liều 2-3g dưới dạng thuốc bột."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa thiên đầu thống: Màn kinh tử 10g, cam cúc hoa 8g, xuyên khung 4g, tế tân 3g, cam thảo 4g, bạch chỉ 3g, nước 600ml. sắc đặc còn 200ml. Chia 3 lần uống trong ngày (Diệp Quyết Tuyền).",
+      "được_dùng": "Đơn thuốc chỉ có một vị màn kinh tử: Màn kinh tử 80g, rượu uống (30-40°) một lít. Ngâm khoảng 10 ngày trở lên. Ngày uống 2 lần mỗi lần từ 10-15ml.",
+      "làm thuốc": "Bài thuốc làm cho tóc đen và dài: Màn kinh tử và húng chi (mỡ gấu) hai vị bằng nhau, trộn với dấm thanh để bôi vào tóc (theo sách cổ Thánh huệ phương ghi lại trong Bản thảo cương mục).",
+      "sưng vú": "Sưng vú: Khi mới bị, dùng màn kinh từ sao giòn, tán nhỏ, mỗi lần uống 4g hoà với rượu, gạn lấy rượu uống còn bã đắp lên vú (theo Đặc huệ phương ghi lại trong Bản thảo cương mục)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Chú thích:  Trong sách đông y người ta có ghi những người vị hư không nên dùng màn kinh tử sợ sinh đờm, những người đau mắt đỏ, huyết hư có hoả không phải phong tà chớ dùng. Tại Malaysia nhân dân rất hay dùng lá màn kinh tử để chữa mọi bệnh. Ngoài ra họ còn dùng tán nhỏ cho vào gạo hay nơi để vải vóc để chống côn trùng khỏi ăn gạo hay phá hỏng vải."
+    }
+  ]
+}

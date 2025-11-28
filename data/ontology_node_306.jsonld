@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dương kỳ thảo",
+      "ten_khac": "Cỏ thi, Dương kỳ thảo",
+      "ten_khoa_hoc": "Achillea millefolium L.",
+      "ma_taxon": "52821",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cỏ lâu năm, cao 40 – 80cm",
+      "thân": "thân có gờ dọc, phân nhánh, phủ lông trắng",
+      "lá": "Lá mọc so le; phiến lá dài 2 – 20cm, rộng 1 – 2,5cm, kép lông chim 2 – 3 lần, mềm; lá chét hình thuôn, dài 3 – 9mm, mặt trên phủ lông tơ mảnh, mặt dưới dày hơn, hình dải, đỉnh nhọn.",
+      "hoa": "Cụm hoa đầu, đường kính 4 – 7mm, cuống dài 2 – 4mm, phủ lông mềm; lá bắc tổng bao hình trứng, xếp 4 hàng, 1 lá bắc dài 4 – 5mm, hàng phía ngoài đỉnh nhọn, hàng phía trong đỉnh tù, mặt ngoài phủ lông dài, mềm. Hoa ở viền cụm hoa thường 5; tràng dạng lưới nhỏ, hình bầu dục dài 2 – 3mm, màu trắng pha tím nhạt, ống tràng phía dưới dài bằng lưỡi nhỏ là hoa cái; tất cả hoa ở giữa có tràng hình ống dài 3,5mm, màu trắng là hoa lưỡng tính, đỉnh ống có 5 thuỳ ngắn.",
+      "quả": "Quả bế hình bầu dục dài 2mm, dẹt.",
+      "mọc": "Toàn cây có mùi thơm như long não.",
+      "mùa hoa": "tháng 10-11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc ở vùng núi cao các tỉnh Lao Cai (Sapa), Sơn La và Lâm Ðồng (Ðà Lạt) trong các savan cỏ trên đường đi, rìa rừng và đất hoang. Dương kỳ thảo là cây ưa sáng, hơi chịu bóng, thường mọc trên đất ẩm lẫn với các loài cỏ thấp khác ở bãi hoang ven rừng, trong thung lũng, ven đường đi hay trên các nương rẫy. Cây mọc từ hạt được thấy vào tháng 3 hàng năm, sinh trưởng nhanh trong mùa xuân hè và ra hoa quả rất nhiều. Đến cuối thu hoặc đầu đông, toàn bộ phần trên mặt đất bị tàn lụi, phần gốc tồn tại qua mùa đông và sẽ mọc lại vào mùa xuân năm sau. Dương kỳ thảo gieo trồng tự nhiên chủ yếu bằng hạt. Mặc dù, số hạt của một cây rất nhiều, nhưng lượng cây con mọc lên xung quanh cây mẹ hạn chế. Thời gian trồng dương kỳ thảo thích hợp ở Sapa vào cuối mùa đông (khi cây đã lụi) hoặc đầu mùa xuân. Thu hái cây lúc có hoa, dùng tươi hay phơi trong râm đến khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây có hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây chứa tinh dầu, chất nhựa, tanin, phosphat, nitrat, muối kali, acid hữu cơ.",
+      "gồm chất": "Glucosid đắng đã biết là achillein; nó là một glucosid cyanogenetic hay một glucoalcaloide.",
+      "Các hợp chất": "Còn một alcaloid kết tinh gọi là betonicin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, đắng, cay, tính hàn, có ít độc; có tác dụng thanh nhiệt giải độc, lương huyết tiêu thũng, chỉ thống, điều kinh. Trong Tây y, người ta cho nó là chất kháng viêm và chống co thắt, kích thích nội tiết các dịch tiêu hóa (giúp ăn ngon) nó điều hòa và chống co thắt trong chứng rối loạn kinh nguyệt, và còn là chất làm tan sưng. Nhưng với liều cao nó gây chóng mặt và đau đầu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ðược dùng chữa:  Mệt mỏi toàn thân, ăn uống không ngon, trướng bụng, ỉa chảy; Ho, hen suyễn; Kinh nguyệt không thông, hành kinh đau bụng, rối loạn khi mãn kinh; Thấp khớp, thống phong; Sỏi mật và sỏi niệu; Trĩ, sốt liên miên. Liều dùng 4-12g, dạng thuốc hãm uống hay phối hợp với các vị thuốc khác. Dùng ngoài trị bạch đới, lậu, trĩ, đau khớp, viêm da, viêm mủ da, mụn nhọt, nứt da, cầm máu các vết thương, rắn cắn, chó cắn… lấy cây tươi giã đắp.  Bài thuốc có dương kỳ thảo:  Chữa chán ăn, tiêu hoá kém: Dương kỳ thảo 60g, rễ long dởm 15g, rễ angelica pancicii vandas 40g, toàn cây marrubium vulgare L. 40g. Tất cả phơi sấy khô, tán bột. Mỗi lần 10g, hãm uống trước khi ăn 30 phút. Chữa kinh nguyệt không đều: Dương kỳ thảo, vân hương, rễ cây biệt thảo Valeriana officinalis L., lá bạc hà, toàn cây cỏ ba lá trifolium fibrium L.. và hoa cây cam cúc, mỗi vị 30g. Tất cả phơi sấy khô, tán thành bột. Ngày 20-30g sắc kỹ chia làm ba lần, uống sau khi ăn. Dùng 2-3 tháng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

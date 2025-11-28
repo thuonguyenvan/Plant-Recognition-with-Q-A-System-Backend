@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gai cua",
+      "ten_khac": "Gai cua, Mùi cua, Lão thử lặc, Gai ma, Cà gai, Cà dại hoa vàng",
+      "ten_khoa_hoc": "Argemone mexicana L.",
+      "ma_taxon": "128533",
+      "ho": "Papaveraceae (Thuốc phiện)",
+      "Mô tả": {
+        "cây": "Cây thân  thảo, cao 0,3-0,5 m.",
+        "thân": "Thân tròn màu lục xám, có nhiều gai.",
+        "lá": "Lá mọc so le, xẻ thùy sâu, gốc bẹ ôm thân, đầu nhọn, mép khía răng dạng gai không đều, gân màu trắng.",
+        "hoa": "Hoa mọc riêng lẻ ở đầu cành, màu vàng, lá đài 3, sớm rụng, tràng 6 cánh mỏng, nhị nhiều, chỉ nhị rất ngắn, bầu thượng 1 ô do nhiều lá noãn hợp thành, đầu nhụy màu đỏ.",
+        "quả": "Quả nang có gai dài, hạt tròn, dẹt, màu đen.",
+        "mùa hoa": "tháng 3-5.",
+        "mùa quả": "tháng 3-5."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Argemone L có tổng số 12 loài, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Mỹ. Ở Việt Nam chỉ có một loài là cây gai cua.  Gai cua có nguồn gốc từ vùng nhiệt đới Mexico sau lan ra khắp nơi. Ở Việt Nam, gai cua thường mọc nhiều ở các tỉnh đồng bằng và trung du Bắc Bộ, ít hơn các tỉnh miền Trung. Cây thường mọc rải rác hay tạo thành những đám nhỏ trên các bãi đất hoang, dọc đường đi, chân đê hoặc ven đồi. Cây ưa sáng, ưa ẩm, sinh trưởng nhanh, phát triển từ hạt vào giữa mùa xuân, đến đầu mùa hè đã có hoa quả, sau đó tàn. Lúc này, quả chín tự mở, phát tán hạt ra xung quanh và mọc  lại vào đầu năm sau."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ và phần thân mặt đất, thu hái quanh năm, dùng tươi hoặc phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Toàn cây gai cua chứa norsanguinarin, nor- chelerithrin, cryptopin,  các  alcaloid alocryptopin, protopin, berberin, coptisin.",
+        "gồm chất": "Hạt chứa 29,4% dầu, các acid béo là acid oleic 22%, acid linoleic 48%.",
+        "Các hợp chất": "Hạt cây gai cua mọc ở Pyatigorsk ( CHLB Nga) chứa 35,57% dầu trong đó có sanguinarin 0,35% và alocryptopin 0,31%.",
+        "chứa": "Hạt cây thu nhập ở Việt Nam cho 52,8% dầu trong đó có 0,43% sanguinarin (Bùi Chí Hiếu, 1974).",
+        "Rễ chứa": "alcaloid gồm chủ yếu protopin, alocryptopin, berberin, sanguinarin, cheleritrin."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ở Việt Nam, cây gai cua chưa được dùng làm thuốc.  Ở Ấn Độ, nhân dân dùng dầu từ hạt gai cua bôi ngoài trị bệnh về da, và dùng uống làm thuốc tẩy. Khi cây bị dập nát, tiết ra chất nhựa mủ màu vàng, dùng trị phù, vàng da, bệnh về mắt và bệnh về da. Hạt có tác dụng nhuận tràng, gây nôn, long đờm, dùng nhiều có độc, có tác dụng làm dịu và làm chất giải độc rắn. Rễ điều trị bệnh da mạn tính. Để chữa chứng nói ngọng, nhỏ 1 -2 giọt nhựa mủ vào lưỡi, ngày một lần trong 3 – 4 tháng. Để trị bệnh lậu, sắc khoảng 250g rễ khô trong 2 lít nước còn nửa lượng, mỗi lần uống 10 – 15ml thuốc sắc, ngày 2 lần. Đồng  thời, trộn dịch ép lá tươi gai cua với dịch ép lá Aristolochia sp với tỷ lệ bằng nhau, bôi vào âm đạo. Cai cua được dùng phổ biến là chất giải độc chống rắn cắn dịch ép toàn cây dùng uống và bôi đắp ngoài, hoặc toàn cây  tán bột mịn, ngày uống 10g lúc đi ngủ, uống liên tục trong 3 ngày.  Trong y học dân gian Nepan, rễ gai cua là thuốc hạ sốt, uống mỗi lần 15g, ngày 2 lần trong 2-3 ngày, đối  với trẻ em dưới 15 tuổi, giảm liều xuống một nửa. Để điều trị bệnh đục thủy tinh, nhỏ vào mắt khoảng 2-3 giọt nhựa mủ vàng từ cây gai cua. Nhựa này cũng được bôi vào vết đứt và vết thương hở để sat trùng. Quả còn xanh đắp trị vết bỏng. Hạt gai cua giã nát trộn với mù tạt, trị eczema. Ở Haiti, nhân dân uống nước sắc lá trị cúm và ho. Ở đảo Martinic, nhựa mủ cây gai cua chữa chai chân, mụn cơm và bệnh ngoài da."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng liên ô rô",
+      "ten_khac": "Hoàng liên ô rô, Thích hoàng bá, Mã hồ, Thập đại công lao, Thích hoàng liên, Tông plềng (Hmông)",
+      "ten_khoa_hoc": "Mahonia bealei (Fortune) Pynaert",
+      "ma_taxon": "277657",
+      "ho": "Berberidaceae (Hoàng liên gai)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao 2 – 3 m.",
+      "thân": "Thân và rễ màu vàng.",
+      "lá": "Lá kép hình lông chim, mọc so le, dài 15 – 35 cm, có 7 – 15 lá chét không cuống hình bầu dục hoặc hình trứng lệch, dài 3 – 9 cm, rộng 2,5 – 4,5 cm, dày và cứng, lá chét tận cùng to hơn và có cuống, gốc tròn hoặc hơi hình tim, đầu nhọn sắc, mép khía răng nông như gai sắc nhọn, gân chính 3 và gân phụ kết thành mạng nổi rõ.",
+      "hoa": "Cụm hoa mọc thành bông ngắn hơn lá ở ngọn; lá bắc nhỏ; hoa nhiều màu vàng; lá đài 9 xếp thành 3 vòng; cánh hoa 6, nhỏ hơn lá đài trong; nhị 6, bao phấn dài hơn chỉ nhị; bầu hình trụ.",
+      "quả": "Quả thịt, chứa 1 hạt.",
+      "mùa hoa": "tháng 10 – 11",
+      "mùa quả": "tháng 12 – 2"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Các loài hoàng liên ô rô phân bố ở các vùng ôn đới ấm hoặc cận nhiệt đới châu Á như Trung Quốc, Nê Pan, Ấn Độ và một số nước Trung Á.",
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Trung Quốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Nê Pan"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Ấn Độ"
+        }
+      ],
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          },
+          {
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Điện Biên"
+            }
+          }
+        ]
+      },
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Phan-xi-păng",
+              "ghi_chú": "Lâm Đồng"
+            }
+          },
+          {
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "Bát Xát",
+              "ghi_chú": "Lào Cai"
+            }
+          }
+        ]
+      },
+      "chủ_yếu": "Cây hoàng liên ô rô được chọn để làm thuốc phải đủ 5 năm tuổi trở lên.",
+      "Đặc điểm sinh trưởng": "Cây có thể trồng bằng hạt hoặc cây con thu từ tự nhiên."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cả cây: lá, thân, rễ và quả. Thân, rễ, lá thu hái quanh năm, quả thu hái vào mùa hạ, rửa sạch, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Alkaloid nhóm benzyliso quinolein: berberin, berbainin, oxyacanthine, isotetrandrin, palmatin, jatrorrhizin.",
+      "Các hợp chất": "Hạt: berberin và jatrorrhizin.",
+      "triết xuất": "Chiết xuất berberin: Dùng H2SO4 0,5% ( dung môi chiết ), nước muối 24%, chiết ở nhiệt độ 25oC trong 48 giờ, ở pH 1,5. Dịch chiết để yên trong 24 giờ để kết tinh berberin HCl với hiệu suất 1,45 – 1,47%"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoàng liên ô rô có vị đắng, tính mát, có tác dụng thanh nhiệt ở phế, vị, can, thận. Quả có tác dụng lợi tiểu và làm dịu kích thích."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cả cây đều có tác dụng chữa kiết lỵ, tiêu chảy, viêm ruột, ăn uống không tiêu, đau mắt đỏ, viêm da dị ứng, mẩn ngứa, mụn nhọt.",
+      "được_dùng": "Ngày 10 – 20g sắc hoặc tán bột uống.",
+      "chữa": "viêm gan vàng da, ho lao, khạc ra máu, sốt cơn, lưng gối yếu mỏi."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa kiết lỵ, tiêu chảy, viêm ruột, ăn không tiêu: Rễ, thân hoặc cả cây hoàng liên ô rô 15g, rễ cốt khí củ 15g, thái nhỏ sắc uống làm 2 lần/ngày, có thể dùng dạng bột trong nhiều ngày.",
+      "sắc uống": "Chữa đau mắt đỏ, viêm gan, vàng da: Rễ hoặc thân hoàng liên ô rô 20g, hạ khô thảo 10g, sắc uống.",
+      "nấu nước đặc để rửa": "Chữa viêm da dị ứng, mẩn ngứa, mụn nhọt: Rễ hoặc lá hoàng liên ô rô 15g, lá khổ sâm 20g, nấu nước đặc để rửa."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Hoàng liên ô rô là một dược liệu quý, có tác dụng tốt trên bộ máy tiêu hóa, ngoài ra còn được sử dụng trong các trường hợp vàng da, đau mắt, mụn nhọt, mẩn ngứa, … Do sự tuyên truyền thái quá về công dụng, hoàng liên ô rô bị khai thác mạnh, đồng thời loài này còn bị giảm mạnh về số lượng do nạn phá rừng. Những nguyên nhân này khiến cho hoàng liên ô rô đang bị đe dọa nghiêm trọng, nhất là loài Mahonia beali Carr, vì vậy vấn đề bảo tồn hoàng liên ô rô ngày càng trở nên cấp bách.  Chú thích:  Cây này tại địa phương thường không có tên, hoặc được nhân dân gọi là cây Hoàng liên, thổ Hoàng liên hay thổ hoàng bá…để tránh nhầm lẫn và vì lá của cây này giống lá ô rô cho nên từ năm 1967, chúng tôi  (Đoàn nghiên cứu đại học Dược Hà Nội) mới đặt tên cây này là Hoàng liên ô rô. Tại Trung quốc cây này có tên là thập đại công lao."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bọ mẩy đỏ",
+      "ten_khac": "Bọ mẩy đỏ",
+      "ten_khoa_hoc": "Clerodendrum fortunatum L.",
+      "ma_taxon": "474009",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, thân cành hình vuông, có lông mịn.",
+      "lá": "Lá mọc đối hình mác, dài 6-15 cm, rộng 3-6 cm, gốc thuôn đầu nhọn, mép nguyên hoặc khía rang không đều, hai mặt nhẵn trừ gân ở mặt dưới, cuống lá dài 0,8 – 2 cm, có lông.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành xim phân đôi, ngắn hơn lá, hoa 5-10 , màu trắng ,dài hình chuông, đài hình vuông phình ở đầu, trắng có lông, ống hình trụ, cánh hoa tù, nhị 4 hơi thò ra ngoài tràng, đính ở hông, bàu nhàu.",
+      "quả": "Qủa mọng, hình cầu fifnhs trên đài tồn tại, khi chín màu đỏ.",
+      "mùa hoa": "tháng 7-9",
+      "mùa quả": "tháng 7-9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bọ mẩy đỏ phân bố rải rác ở một số nơi thuộc Trung Quốc, Ấn độ, Malaysia và Philippin. Ở Việt Nam cây chưa được nghiên cứu kỹ.",
+      "thường_mọc": "Cây ưa sáng và có thể hơi chịu hạn, thường mọc rải rác hay tập trung thành đám ở các bãi đất hoang. Bọ mẩy đỏ có khả năng tái sinh chồi khỏe sau khi bị chặt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây, thu hái quanh năm, rửa sạch , thái nhỏ, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bọ mẩy đỏ chứa alkaloid , các flavonoid một chất đắng elerodin, các chất cabruvin, queroetin được phân lập từ rễ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bọ mẩy đỏ có vị đắng, tính lạnh, có tác dụng thanh nhiệt, tiêu viêm, chống ho, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bọ mẩy đỏ được dùng trị cảm , sốt, sốt rét, ho, viêm họng, viêm phế quản, lao phổi, đau dạ dày, đau thượng vị, hoàng đản, rối loạn kinh nguyệt , bệnh lậu. Ngày 15-30g rễ , lá hoặc toàn cây, sắc uống. Dùng ngoài cây tươi giã đắp chữa đòn ,ngã tổn thương, mụn nhọt, viêm mủ da, bỏng, rắn, bọ cạp cắn. Để chữa giun , đọt non bọ mẩy đỏ giã nát, ép lấy dịch, người lớn uống 1 thìa cà phê lúc đói, trẻ em uống nửa liều người lớn . Có tài liệu cho rằng elerodin là một hoạt chất đắng có tác dụng tẩy giun."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

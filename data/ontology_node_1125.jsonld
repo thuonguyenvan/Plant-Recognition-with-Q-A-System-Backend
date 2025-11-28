@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/khoai-so.html",
+      "ten": "Khoai sọ",
+      "ten_khac": "Khoai sọ, Khoai môn, Khoai nước, Môn nước, Môn ngọt",
+      "ten_khoa_hoc": "Colocasia esculenta (L.) Schott",
+      "ma_taxon": 122835,
+      "ho": "Araceae (Ráy)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, có thân rễ phình thành củ tròn, phân nhánh.",
+        "lá": "Lá mọc ốp vào nhau, hình khiên, gốc hình tim lõm sâu, đầu tù hơi nhọn, mép lượn sóng, hai mặt nhẵn, mặt trên bóng, mặt dưới nhạt, gân lá hình chân vịt ở gốc và hình lông chim ở phía trên.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành bông mo; mo hình ống thuôn, màu lục vàng nhạt, phiến hình mũi mác hẹp có mũi dài gấp 2-3 lần phần ống; trục hoa ngắn hơn mo, gồm 4 phần: phần dưới cùng là hoa cái, tiếp đến phần không sinh sản, rồi đến phần mang hoa đực dài gấp 2 lần phần mang hoa cái, phần trên cùng nhọn không sinh sản; hoa không có bao hoa; hoa đực có nhị dính liền nhau thành cột hình nhiều cạnh; hoa cái có bầu 1 ô.",
+        "quả": "Quả mọng."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Colocasia Schott có 8 loài ở châu Á, Việt Nam có 3 loài, trong đó khoai sọ là cây trồng. Các nhà thực vật dân tộc học chưa xác định được khoai sọ được trồng trước hay sau cây lúa. Tuy nhiên, đó lại là giống cây rất quen thuộc và đã được trồng từ xa xưa ở Việt Nam.  Khoai sọ là loại cây ưa ẩm, ưa sáng và có thể sinh trưởng được trên nhiều loại đất, song tốt nhất là đất pha cát. Cây sống nhiều năm do hệ thống thân củ được sinh ra liên tục hàng năm. Trong khi đó, toàn bộ phần trên mặt đất, sau khi đã hoàn thành chu kỳ dinh dưỡng sẽ bị tàn lại.  Loài khoai sọ trồng ở Việt Nam hiện nay gồm nhiều giống (cultivars). Sự khác biệt giữa các giống bởi những tên gọi khác hản nhau như môn hương, môn riềng, môn đốm, môn tía… Đương nhiên ở mỗi giống khoai sọ này, có những đặc điểm sinh thái cũng như phẩm chất củ cũng khác nhau. Đây cũng là sự đa dạng di truyền trong loài khoai sọ ở Việt Nam.",
+        "Đặc điểm sinh trưởng": "Khoai sọ là loại cây ưa ẩm, ưa sáng và có thể sinh trưởng được trên nhiều loại đất, song tốt nhất là đất pha cát. Cây sống nhiều năm do hệ thống thân củ được sinh ra liên tục hàng năm. Trong khi đó, toàn bộ phần trên mặt đất, sau khi đã hoàn thành chu kỳ dinh dưỡng sẽ bị tàn lại."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Thân củ và lá."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Thân củ khoai sọ chứa tinh bột 69,6- 73,7%, lipid 0,47 – 0,68%, Ca 0,059 – 0,169%, p 0,113 – 0,274%, Fe 0,0042 – 0,0050%, galactose, arabinose (Trung dược từ hải I, 1993).  Các polysaccharid trong khoai sọ được phân đoạn bằng sephadex G – 100, DEAE A – 50 và trao đổi ion cho 7 phân đoạn. Các polysaccharid không hấp phụ trong cột trao đổi ion bao gồm glucose và một ít galactose, rhamnose, arabinose, manose và acid galacturonic (CA 112: 213.929 c).  Hàm lượng amylose trong tinh bột là 14 – 19% (CA 119: 7.622p).  Khoai sọ có 17 acid amin vói hàm lượng toàn bộ là 89,8mg/100g, trong đó có 7 acid amin cần thiết cho người (CA 125: 53.624 n). Khoai sọ giàu acid glutamic, acid aspartic và có ít acid amin có lưu huỳnh (CA 122: 238.171 u).  Các chất bay hơi chiết được từ khoai sọ gồm 41 chất, đa phần là octan, acid eicosanoic, 2 – methyl – butanal và pyridin (CA 120: 105.395 g)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Lá và bẹ lá khoai sọ có vị cay, tính bình, có tác dụng liễm hãn, chỉ tả, tiêu thũng độc. Củ khoai sọ có vị ngọt, cay, tính bình, có tác dụng tiêu tích tán kết. Hoa khoai sọ có vị cay, tính bình, có tác dụng chỉ thống, chỉ huyết."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Các bộ phận của cây khoai sọ đều ăn được. Củ khoai sọ có giá trị dinh dưỡng gấp 1,5 lần khoai tây. Củ đồ chín là một thực phẩm giàu năng lượng. Hạt tinh bột của khoai sọ có kích thước nhỏ nhất so với hạt của các cây lương thực khác nên dễ tiêu hóa. Củ khoai sọ luộc ăn chống đói, hoặc nấu canh với rau rút, cua đồng là món ăn ngon. Bột củ khoai sọ ở Ấn Độ còn được dùng nấu cháo, làm bánh kẹo và làm nguyên liệu sản xuất cồn công nghiệp, củ khoai sọ không ăn sống được vì gây ngứa.  Bẹ lá dùng nấu giấm với cá, ốc, thịt hoặc dùng để muối dưa ăn. Lá và bẹ lá còn dùng làm thức ăn xanh cho lợn.  Trong y học cổ truyền, củ khoai sọ nấu với cá quả, cá diếc ăn có tác dụng điều hòa nội tạng, hạ khí đầy, bổ hư tổn chữa hư lao yếu sức; với rau rút, cua đồng làm dễ ngủ, bớt mỏi mệt; củ khoai sọ thái nhỏ, nấu sôi, lấy nước tắm rửa chữa mẩn ngứa. Trẻ con bị chốc đầu, chảy nước mủ, dùng củ khoai sọ to giã nát đắp rất tốt. Lá khoai sọ 20 – 30g sắc uống hoặc phối hợp với các vị thuốc khác chữa tâm phiền ở phụ nữ có mang, thai động không yên. Để chữa rắn cắn, mụn nhọt, ong đốt, lấy lá khoai sọ tươi giã nát đắp.  Ở Trung Quốc, lá khoai sọ chữa tiêu chảy, đổ mồ hôi trộm; củ khoai sọ chữa lao hạch ở cổ (loa lịch), mụn nhọt sưng tấy, hắc lào, bỏng; hoa khoai sọ chữa nôn ra máu, đau dạ dày, sa tử cung, lòi dom ở trẻ em. Ở Malaysia, lá và bẹ lá khoai sọ giã nát đắp chữa vết thương, củ khoai sọ nghiền nát đắp chữa rắn cắn. Ở Indonesia, củ khoai sọ, hành và quả me dùng xát vào chân để chữa trạng thái bồn chồn không yên, đau đầu, đau bụng và dùng cho phụ nữ khi đẻ."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": null
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

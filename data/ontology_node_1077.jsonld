@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ gà",
+      "ten_khac": "Cỏ gà, Cỏ chỉ",
+      "ten_khoa_hoc": "Cynodon dactylon (L.) Pers",
+      "ma_taxon": "58371",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá phẳng, ngắn, hẹp, nhọn, dài 3-4cm, hơi có màu lam.",
+      "hoa": "Cụm hoa gồm 2-5 bông hình ngón tay mảnh, dài 2,5-5cm, màu xanh hay tím, tỏa trên đỉnh một cuống mảnh, mỗi bông có các hoa phẳng, họp thành hai dãy bông nhỏ song song.",
+      "quả": "Quả thóc, hình thoi thường dẹt, không có rãnh.",
+      "cây": "Cỏ sống dai nhờ thân rễ ngắn.",
+      "thân": "Thân có nhiều cành, mọc bò dài, thỉnh thoảng lại phát ra những nhánh thẳng đứng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây phổ biến khắp thế giới. Mọc hoang khắp nơi ở nước ta. Thường gặp nơi ẩm thấp, trong các vườn. Ðào cây, cắt lấy thân rễ, rửa sạch đất cát, phơi hay sấy khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ hoặc toàn cây – Rhizoma et Herba Cynodonis."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thân rễ Cỏ gà chứa một chất kết tinh (cynodin) có thể là asparagin, còn có tinh bột, đường, các muối kali.",
+      "gồm chất": "Trong lá có vitamin C (64mg/100g lá tươi)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Các bệnh nhiễm trùng và sốt rét; Các trường hợp rối loạn tiết niệu, viêm thận và bàng quang, vàng da, sỏi thận, sỏi gan, sỏi mật; Thấp khớp, thống phong; Phụ nữ kinh nguyệt không đều; Trẻ em sốt cao, tiểu ít hay bí đái; Viêm mô tế bào, rắn cắn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Có thể dùng dưới dạng thuốc sắc hay thuốc hãm.  Có khi dùng toàn cây hay thân rễ sắc uống lấy 20g cho vào 1 lít nước sắc kỹ, ngày uống 2 chén, liên tục trong 3-4 ngày. Nếu hãm uống, dùng 20g rễ hãm 1 phút trong 1 lít nước đun sôi, loại bỏ nước này, bóc vỏ thân rễ đi rồi lại cho vào 1 lít nước khác đun sôi trong 10 phút, có thể thêm 1 nắm Cam thảo, 1 nắm Bạc hà, 1 quả Chanh, mỗi ngày uống 2 chén. Có thể dùng dịch tươi. Ðể trị rắn cắn, dùng thân rễ nhai nuốt nước, lấy bã đắp vào chỗ bị cắn."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

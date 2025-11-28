@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa hòe",
+      "ten_khac": "Hòe, Lài luồng (Tày), Hòe hoa, Hòe mễ",
+      "ten_khoa_hoc": "Styphnolobium japonicum (L.) Schott",
+      "ma_taxon": "53945",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ thường xanh cao 5-7m, có khi đến 10m.",
+      "thân": "Thân có vỏ hơi nứt nẻ và cành nằm ngang. Cành hình trụ, nhẵn, màu xanh lục nhạt, có những chấm trắng.",
+      "lá": "Lá kép lông chim lẻ, mọc so le, 11-17 lá chét mọc đối, hình bầu dục – thuôn, gốc tròn, đầu hơi nhọn, dài 3-4cm, rộng 1,2-2cm, màu lục nhạt, nhất là ở mặt dưới, hơi có lông.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chum dài 20cm, phân nhánh nhiều; hoa nhỏ màu trắng hoặc vàng nhạt; đài hình chuông, gần như nhẵn; cánh hoa có móng ngắn, cánh cờ rộng, hình tim cụt ở gốc, mép cong lên; nhị 10 rời nhau; bao phấn hình bầu dục.",
+      "quả": "Quả đậu, hình tràng hạt, thắt lại không đều giữa các hạt, nhẵn, không mở, đều có mũi nhọn ngắn; hạt 2-5, hình bầu dục, hơi dẹt, màu đen bóng.",
+      "mùa hoa": "tháng 5-8.",
+      "mùa quả": "tháng 9-11."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Theo các nghiên cứu và báo cáo đã được công bố, cây hoa Hòe là một nguồn nguyên liệu giá trị để chiết xuất Rutin. So với hơn 50 loài thực vật có chứa Rutin, Hòe có hàm lượng cao hơn cả. Hiệu suất chiết xuất rutin trong nụ hoa Hòe có thể đạt 34,44%- cao gấp 4 đến 5 lần các nguyên liệu thường được sử dụng để chiết xuất hoạt chất này trên thế giới."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nụ hòa là nguyên liệu giàu rutin so với các nguyên liệu khác (theo Dược điển Việt Nam tập 2) quy định hàm lượng rutin phải đạt 20%. Với nụ hòe Việt Nam, hiệu suất chiết xuất có thể đạt tới 34%.  Rutin còn có ở bộ phận khác của cây: 4-11% ở vỏ quả, 0,5-2% ở hạt, 5-6% ở lá chét và 0,5-2% ở cành non. Qua chế biến, hàm lượng rutin có thể thay đổi, đạt 34,7% ở dạng sống; 28,9% ở dạng sao vàng và 18,5% ở dạng sao cháy (theo Phạm Xuân Sinh và cs.1997).  Ngoài các chất rutin và quercetin, quả còn chứa genistein, sophoricoside.  Hạt hòe chứa 1,75% flavonoid toàn phần, trong đó có rutin 0,5%, một số alkaloid 0,035% trong đó có cytisin, sophocarpin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính chất hoa hoè theo tài liệu cổ: hoa vị đắng, tính bình, quả vị đắng tính hàn. Hoa vào 2 kinh can và đại tràng. Quả và kinh can. Có tác dụng lương huyết, thanh nhiệt, chỉ huyết (hoa). Quả tính chất gần như hoa nhưng có thể gây ra thai. Dùng chữa xích bạch lỵ, trĩ ra máu, thổ huyết, máu cam, phụ nữ băng huyết. Hiện nay nhân dân dùng hoa hoè làm thuốc cầm máu, dùng trong những bệnh ho ra máu. Đổ máu cam, tiểu tiện ra huyết, ruột chảy máu. Ngày uống 5-20g dưới dạng thuốc sắc. Rutin thường dùng cho bệnh nhân bị cao huyết áp mà mao mạch dễ vỡ, đứt, để đề phòng đứt mạch máu ở não, xuất huyết cấp tính do viêm thận, xuất huyết ở phổi mà không rõ nguyên nhân, còn có tác dụng đối với bệnh cao huyết áp. Rutin thường được chế thành thuốc viên, mỗi viên có 0,02g. ngày uống 3 lần, mỗi lần 1-2 viên (0,06 – 0,12g/ngày)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hoè mọc hoang và được trồng khắp nơi ở nước ta, vì trước đây người ta dùng để uống nước cho mát và dùng để nhuộm màu vàng. Hàng năm khả năng ta có thể thu mua rất nhiều, thừa dùng trong nước. Nhưng gần đây nhu cầu xuất khẩu lớn nên ta đang phát triển trồng. Trồng bằng hạt hoặc dâm cành. Sau 3- 4 năm bắt đầu thu hoạch. Cây sống lâu, càng những năm sau thu hoạch càng cao. Hoa phải hái lúc còn nụ mới chứa nhiều hoạt chất. Phơi hay sấy khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

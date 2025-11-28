@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhót tây",
+      "ten_khac": "Tỳ bà, Nhót tây, Sơn trà Nhật Bản, Phì phà",
+      "ten_khoa_hoc": "Eriobotrya japonica (Thunb.) Lindl.",
+      "ma_taxon": "76949",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhót tây hay phì phà (Cao Bằng) là một cây cao 6-8m.",
+      "lá": "Lá mọc so le, hình mác, nhọn, dài, dài 12-30cm. rộng 3-8cm, phía trên có răng cưa, mặt dưới có nhiều lông, màu xám hay vàng nhạt.",
+      "hoa": "Hoa rất nhiều, gần như không có cuống, mọc thành chùm, đường kính 15-20mm, có lông màu hung đỏ.",
+      "quả": "Quả thịt, hơi hình cầu, hơi có lông, chín có màu vàng, dài 3-4cm, đỉnh quả có hình mắt quanh mép mang đài tồn tại. thịt dày, có 4 hạch đơn, hơi dày, mỗi hạch mang 1-2 hạt không phôi nhũ.",
+      "mùa quả": "tháng 4-5."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có một chất saponin, vitamin B, chừng 2,8mg trong 1g lá. (theo Từ Quốc Quân). Theo Arrhur và Hui (Chem, Soc., 1954 và CA.. 1955) trong tì bà diệp có axit ursolic C20H48O3 axit oleanic và caryophylin. Trong hạt có amydalin và HCN."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "chữa": "ho, nôn mửa, giúp sự tiêu hoá, phụ nữ có thai nôn mửa.",
+      "được_dùng": "Nước sắc dùng ngoài để rửa vết thương.",
+      "cong_dung_y_hoc": "Ngày uống 6-12g dưới dạng thuốc sắc, có thể dùng tới 15-20g. Theo tài liệu cổ, tì bà diệp có vị đắng, tính bình, vào 2 kinh phế và vị. Có tác dụng thanh phế hòa vị, giáng khí hoá đờm. Dùng chữa bệnh do nhiệt mà sinh ho, nhiều đờm, nôn khan, miệng khát.",
+      "làm thuốc": "Đơn thuốc có tỳ bà diệp:  1.Chữa ho, viêm khí quản mãn tính:  Tì bà diệp 20g (lau sạch hết lông), khoản đông hoa 10g, cam thảo 5g, nước 600ml. sắc còn 200ml. Chia 3 lần uống trong ngày (Diệp Quyết Tuyền).  2.Chữa đổ máu cam:  Tì bà diệp (lau sạch lông), sao vàng, tán nhỏ. Ngày uống 2 lần, mỗi lần 4g bột, chiêu bằng nước chè."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây trồng và mọc hoang nhiều nơi ở Việt Nam, nhiều nhất ờ vùng Cao Bằng, Lạng Sơn, Hà Nội. Nguồn gốc của cây ở Trung Quốc và Nhật Bản.",
+      "phơi khô": "Lá hái vào tháng 4-5. Cần lau sạch lông, thái nhỏ, phơi hay sấy khô mà dùng.",
+      "làm thuốc": "Nhân hạt tỳ bà gọi tì bà nhân."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

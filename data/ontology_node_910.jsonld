@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Màn màn vàng",
+      "ten_khac": "Màn màn hoa vàng, Sơn tiên, Mần gi",
+      "ten_khoa_hoc": "Cleome viscosa L.",
+      "ma_taxon": "160710",
+      "ho": "Capparaceae (Màn màn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hàng năm.",
+      "rễ": "Rễ khỏe, vặn vẹo.",
+      "thân": "Thân và cành hơi khía rãnh, phủ lông mềm và dính.",
+      "lá": "Lá mọc so le, hình chân vịt, 3 – 5 lá chét dài 3 – 4 cm, rộng 1 – 1,5 cm, hai mặt có lông nhất là ở mặt trên, mép có lông nhỏ dạng mi.",
+      "hoa": "Cụm hoa tận cùng mọc thành chùm; hoa màu vàng, đài có 4 phiến có lông ỏ mặt ngoài; tràng có 4 cánh hình trái xoan; nhị 25, chỉ nhị mảnh đính ở dưới bầu; bầu hẹp, thuôn dài.",
+      "quả": "Quả giống quả cải, có khía, có lông, dài 6-10 cm, rộng 4cm; hạt xếp thành 2 hàng, hình thận dẹt và cong.",
+      "mùa hoa": "tháng 8-10",
+      "mùa quả": "tháng 11-1"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Màn màn vàng là loại cây nhiệt đới, phân bố chủ yếu ở khu vực nhiệt đới Nam Á và Đông Nam Á, bao gồm Ấn Độ. Malaysia, Thái Lan, Philippin, Campuchia, Lào, Việt Nam và một số điểm ở phía Nam Trung Quốc.  Ở Việt Nam, cây phân bố rải rác khắp các tỉnh vùng trung du, đồng bằng và vùng núi thấp. Cây ưa sáng và ưa ẩm, thường mọc rải rác hoặc thành đám trên các bãi đất hoang, dọc đường đi, nương rẫy và các bãi sông. Cây con mọc từ hạt vào cuối mùa xuân hay đầu mùa hè; sinh trưởng nhanh; ra hoa quả nhiều. Khi quả chín (khô), tự mở thành 2 mảnh, hạt phát tán ra xung quanh. Hạt tồn tại 5 – 6 tháng qua mùa đông và gần hết mùa xuân. Cây mọc dày có tác dụng phù đất và được cắt làm phân xanh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, thu hái quanh năm, tốt nhất vào mùa xuân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây màn màn vàng chứa ergost – 5 – en – 3 – O – α – L. rhamnopyranosid; 5,4’ – di – O – methylenedioxycol – 4 – O – β – D – glucopyranosid.  Rễ chứa 3’,4’,5 – trihydroxyflavanon – 7 – O – α – L. rhamnopyranosid; maringenin – 4’ – galactosid; dihydrokaempferol – 4’ – xylosid.  Phần trên mặt đất và rễ còn chứa cleomoelolid, cleosandrin, cleomiscosin A, B, C, D; stigmassta – 5, 24(28) – dien – 3β – O – α – L.rhamnosid, acid cleomaleic (Trung dược tư liệu III, 1997)  Hạt chứa acid viscosic 0,1%, viscosin 0,04% (Từ điển cây thuốc, 1997). Ngoài ra, còn có dầu béo trong đó có acid palmic, acid oleic (Trung dược tư liệu III, 1997).  Lá non chứa vitamin C, với hàm lượng 213 mg/100g."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Màn màn vàng có vị cay, ít độc, có tác dụng làm chuyển máu, gây phồng, làm ra mồ hôi, giảm đau, trừ thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân ở một số nơi đôi khi hái ngọn non của cây màn màn vàng luộc ăn thay rau, hoặc muối chua như muối dưa. Rau, dưa màn màn vàng ăn nhiều, thấy cồn cào khó chịu, ăn vừa chống hàn thấp, lợi tiêu hóa.  Hạt màn màn vàng có 25 – 35% chất béo, đem rang vàng tán nhỏ với muối ăn thay muối vừng.  Màn màn vàng chữa nhức đầu (lá tươi giã nát với muối, đắp vào thái dương), chảy máu chân răng (ngọn non giã nát, ép lấy nước uống), cam tẩu mã (lá khô, đốt tồn tính, hòa với mật ong, bôi vào lợi răng), viêm tai giữa (lá tươi, ép lấy nước, nhỏ vào tai), vết thương lở loét, mụn nhọt, chín mé (lá tươi, giã nát, đắp băng, có thể thêm ít tỏi). Ngày 30 – 50g cây tươi, sắc uống. Dùng ngoài không kể liều lượng.  Bài thuốc có màn màn vàng:  Chữa viêm, đau dạ dày: Màn màn vàng 30g, thạch hộc 30g, nghệ 20g, cỏ hàn the 20g, dây thần thông 20g, rễ mây vọt 20g. Tất cả đã phơi khô, thái nhỏ, sắc chia làm 2 lần uống trong ngày, trước bữa ăn. Chữa rắn cắn: Màn màn vàng 50g, củ gấu 50g, hạt cải củ 50g. Giã nát, thêm nước, gạn uống, bã đắp lên vết cắn.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

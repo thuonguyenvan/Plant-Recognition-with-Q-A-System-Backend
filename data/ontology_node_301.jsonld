@@ -1,0 +1,281 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu biếc",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Clitoria ternatea L.",
+      "ma_taxon": "160759",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo, sống nhiều năm, dài 4 – 5m.",
+      "thân": "Thân cành mềm, hình trụ, hơi có lông.",
+      "lá": "Lá kép lông chim, mọc so le, có 5 – 7 lá chét hình trái xoan rộng, dài 2,5 – 4 cm, rộng 1,8 – 2,5 cm, gốc tủ, đầu tròn hoặc hơi khuyết, mép nguyên, hai mặt rải rác có lông áp sát; cuống lá kép dài 5 – 6 cm, gần như nhẵn; lá kèm hình dải.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, lá bắc 2, hình mắt chim; hoa màu lơ, hồng hoặc trắng, dài khoảng 5 cm; đài hình ống, dài 1,8 cm, có răng hình trái xoan nhọn, tràng có cảnh cờ hình bầu dục, viền giữa màu vàng cam, thắt lại ở gốc, không có móng, dài 4,5 cm, các cánh bên có móng dài 2 cm, cánh thia có móng dài 1,2 cm; nhị hai bó, bao phấn hình elip, bầu có lông, vòi nhụy dẹt.",
+      "quả": "Quả dài 10 cm, có mỏ, rộng 1 cm, màu hung, hơi thắt lại giữa các hạt, có lông nhỏ; hạt 5 – 10, hình thận dẹt, dài 6 mm, điểm màu lục đen.",
+      "mùa hoa": "tháng 6 – 8",
+      "mùa quả": "tháng 9 – 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Clitoria L. ở Việt Nam có 5 loài, trong đó có một loài nhập nội còn 4 loại mọc tự nhiên, loài đậu biếc trên nằm trong số các loài vốn có này. Cây phân bố rải rác ở một số tỉnh miền núi, từ Bắc vào Nam, bao gồm: Quảng Ninh (Quảng Yên); ngoại thành Hà Nội và bãi giữa, Ninh Bình (Phúc Nhạc), Thừa Thiên – Huế, Đà Nẵng: Khánh Hòa (Nha Trang, Ninh Hòa, Vọng Phu); Ninh Thuận (Bà Râu, Ba Lap); Bình Thuận (Phan Thiết), Bà Rịa – Vũng Tàu và thành phố Hồ Chí Minh. Trên thế giới, cây phân bố ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin, Australia [Danh lục các loài thực vật Việt Nam I, II, 2003].",
+      "Đặc điểm sinh trưởng": "Đậu biếc là loại dây leo nhỏ, sống nhiều năm. Cây ưa sáng, ưa ẩm, nhưng cũng có thể hơi chịu hạn. Cây thường mọc lẫn trong các tràng cỏ cao, cây bụi, đồi, bờ nương rẫy và đôi khi thấy trong các lùm bụi quanh làng. Đậu biếc ra hoa quả hàng năm. Tái sinh tự nhiên bằng hạt và đường nhiên có thể gieo trồng dễ dàng bằng hạt.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Nội"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên - Huế"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đà Nẵng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Khánh Hòa"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Thuận"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bình Thuận"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bà Rịa - Vũng Tàu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hồ Chí Minh"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, hạt và lá thu hái quanh năm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá và hạt dùng làm chất nhuộm màu lam (Phạm Hoàng Hộ, 2006). Lá chứa astragalin (Kaemperol – 3 – glucosid), Kaemperol – 3 – rutinosid, clitorin, các hợp chất triterpenoid, alcaloid, gamma – lactose, aparajitin và xích ma – lacton. Hợp chất aparajitin khi bị oxy hoá tạo thành các acid arachidic và beta – methylglutamic [Cây thuốc Đông và Đông Nam Á, 1980]. Vỏ thân và hạt chứa một ít alcaloid độc. Dầu hạt chứa các acid oleic, linoleic, myristic, palmatic, stearic, arachidic và gama – sitosterol. Theo Nadkarnis (1976), vỏ rễ chứa tinh bột, tanin, chất nhựa, hạt chứa chất nhựa đắng, acid tanic, glucosa và cotyledon. Hạt chứa các acid amin như leucin, isoleucin, valin, adenin, glycin, arginin, acid glutamic, aspartic và tyrosin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và vỏ cây đậu biếc có vị chát, đắng, có công năng lợi tiểu, nhuận tràng, gây xổ, làm dịu và săn da. Lá tiêu viêm, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ cây đậu biếc được dùng để giải nhiệt, lợi tiểu, nhuận tràng, tẩy xổ. Hạt cũng dùng để nhuận trùng và tẩy xổ. Liều dùng 10 – 20g tươi, sắc lấy nước uống. Riêng để tẩy xổ có thể dùng liều 20 – 40g, nhưng cần chú ý vì dễ gây đi ngoài đau buốt và buồn nôn. Ở Madagascar, rễ để lợi tiểu, nhuận tràng và tẩy nhưng gây nên. Ở Malaysia, hạt đậu biếc cũng được dùng để nhuận tràng. Ở Indonesia, rễ đậu biếc để nhuận tràng, chữa táo bón, xổ tẩy và chữa nhức đầu. Lá để chữa ho, đau ngực, lao, dùng ngoài chữa mụn nhọt, lở loét ngoài da. Hoa để chữa đau mắt và viêm phế quản."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

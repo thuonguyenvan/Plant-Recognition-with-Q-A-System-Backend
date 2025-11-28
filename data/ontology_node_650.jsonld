@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tiền hồ",
+      "ten_khac": "Tiền hồ, Quy nam, Tử hoa tiền hồ, Thổ đương quy, Phiéc cần đeng (Tày)",
+      "ten_khoa_hoc": "Angelica decursiva (Miq.) Franch. et Sav",
+      "ma_taxon": "452065",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, cao 0.7-1.4m, mọc thẳng đứng, trên có phân nhánh trên thân có khía dọc.",
+      "lá": "Lá ở gốc cây lớn, 1-2 lần xẻ lông chim, cuống dài 14-30cm, phiến lá chia thành thuỳ hình bầu dục có răng cưa to. Lá ở thân nhỏ, cuống ngắn có bẹ lá phồng và rộng. Lá ở phía không cuống hay thu lại còn bẹ lá.",
+      "hoa": "Cụm hoa tán kép. Hoa màu tím.",
+      "quả": "Quả hình bầu dục, cụt ở hai đầu, rộng 3-5mm. Phân liệt quả, có múi ở cạnh, khi chưa chín 2 phân liệt quả dính chặt vào nhau. Khi chín phân liệt quả nở tung ra, có dìa rộng và hơi dày."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong tiền hồ, người ta phân tích thấy có chất glucozit gọi là nodakenin có công thức C20H24O9, tinh dầu, tanin, spongosterola.",
+      "gồm chất": "Chất nodakenin, khi thuỷ phân sẽ cho nodakenitin hay nodagenin C20H24O9 và glucoza.",
+      "dấu hiệu đặc trưng": "Nodakenin có độ chảy 215°C, tan trong nước lạnh, cồn, axit axetic, không tan trong ete, dầu hoà, benzen. Nodakentin có độ chảy 185°C."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ tiền hồ có vị đắng, cay, tính hơi hàn, vào hai kinh phế và tỳ. Có tác dụng tuyên tán phong nhiệt, hạ khí chỉ ho, tiêu đờm. Dùng chữa phong nhiệt sinh ho, đờm đặc, xuyên tức. Không thực nhiệt, ngoại cảm không dùng được.  Thường tiển hồ là một vị thuốc chữa ho, trừ đờm. Ngoài ra còn là một vị thuốc chữa sốt, giảm đau dùng trong trường hợp cảm mạo, sốt nóng, đầu nhức.",
+      "được_dùng": "Thường tiển hồ là một vị thuốc chữa ho, trừ đờm.",
+      "làm thuốc": "Ngoài ra còn là một vị thuốc chữa sốt, giảm đau dùng trong trường hợp cảm mạo, sốt nóng, đầu nhức.",
+      "chữa": "Dùng chữa phong nhiệt sinh ho, đờm đặc, xuyên tức."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Liều dùng 9-15g dưới dạng thuốc sắc chia làm 2-3 lần uống trong ngày.",
+      "làm thuốc": "Chữa viêm khí quản, đờm không tiết ra được: Tiền hồ 10g, tang bạch bì 10g, đào nhân 10g, khoản đông hoa 8g, bối mẫu 10g, cát cánh 5g, cam thảo 3g, nước 600ml. sắc còn 200ml, chia 3 lần uống trong ngày. (Đơn thuốc kinh nghiệm của Diệp Quyết Tuyền)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

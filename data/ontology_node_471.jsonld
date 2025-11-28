@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dứa cơm nếp",
+      "ten_khac": "Cây lá dứa, cây cơm nếp, dứa thơm",
+      "ten_khoa_hoc": "Pandanus amaryllifolius Roxb.",
+      "ma_taxon": "123046",
+      "ho": "Dứa dại (Pandanaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, mọc thành bụi sum sê, có thể cao 1m hoặc hơn, phân nhánh.",
+      "thân": "Thân có đường kính 1 – 5cm.",
+      "lá": "Lá hình mác, xếp lợp lên nhau thành hai hàng thẳng, dài 40 – 50 cm, rộng 3 – 4 cm, gốc có bẹ ôm thân, đầu nhọn có ít lông ở mép, mép lá nguyên, hai mặt nhẵn, gân chính lõm ở mặt trên như máng thuyền và lồi rõ ở mặt dưới. Phiến lá khi khô vò ra có mùi thơm như cơm nếp.",
+      "hoa": "Hoa đực màu trắng, mọc thành cụm, có mùi thơm.",
+      "quả": "Quả hình nón, đường kính 25 cm, khi chín màu vàng đỏ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Họ Pandanaceae ở Việt Nam chỉ có hai chi: Freycinetia Gaudich. và Pandanus Parkins. Loài Pandanus amaryllifolius Roxb. trên đây có lá khi đem nấu hoặc làm khô tạo ra mùi thơm của cơm nếp, nên có tên gọi thông dụng là “dứa cơm nếp”.  Về xuất xứ của loài này hiện cũng chưa biết chính xác từ đâu. Song theo FM. Setyowati và J.S. Siemonsna, 1999 (PROSEA 13 – Spices, p. 164 – 166), có lẽ ở quần đảo Molucca (Indonesia) do tại đây trước kia người ta đã thu thập được tiêu bản có hoa của loài này. Ngày nay, dứa cơm nếp được trồng rộng rãi khắp các quốc gia ở vùng Đông Nam Á, bao gồm từ Indonesia sang Philippin, Thái Lan, Campuchia, Malaysia, Lào đến Việt Nam và ở cả một số nước Nam Á khác như Ấn Độ, Sri Lanca.  Ở Việt Nam, cây được nhập trồng trước hết tại các tỉnh phía Nam; sau ngày thống nhất đất nước (1975), loài cây này mới được đưa ra trồng ở miền Bắc (có thể bắt đầu vào khoảng sau năm 1980). Hiện tại, dứa cơm nếp được trồng rải rác khắp các địa phương, nhất là xung quanh các đô thị lớn, thị xã và thị trấn. Cây trồng nhằm lấy lá, dùng trong chế biến thực phẩm (sữa đậu nành, kẹo bánh…) và hấp vào cơm để có mùi thơm của com nếp. Dứa cơm nếp là loại cây thảo sống nhiều năm. Cây ưa ẩm, ưa sáng và có khả năng chịu bóng tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Dứa cơm nếp có thể coi là cây gia vị, hiện cây đã được trồng rải rác khắp các địa phương.  Cây giống là các nhánh con, tách ra từ khóm cây mẹ. Cây trồng không kén đất nên có thể trồng trên đất thịt, đất pha cát hoặc đất bạc màu. Thời vụ trồng gần như quanh năm, nhưng tốt nhất vào mùa xuân. Cự ly trồng 30 x 40 cm/nhánh. Bón lót bằng phân chuồng mục. Cây trồng cho thu hái lá thường xuyên, sau 2 – 3 năm mới phải trồng lại. Chú ý từ năm thứ hai cần bón thúc phân chuồng vào cuối mùa xuân. Chưa phát hiện thấy sâu bệnh."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, quả, hạt và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chủ yếu là tinh dầu (The Wealth of India, 1966) mà thành phần chính (65%) là methylester của alcol β – phenyl ethylic, các diterpen như d linalool phenylethylaxetat, citral, ester của acid phtalic, acid béo.  Hoa chứa 0,1 – 0,3% tinh dầu mà thành phần chính là benzyl benzoat, benzyl benzylacetat geraniol, linalool, linalylacetat, bromostyren, guaiacol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đọt non và rễ dứa Cơm nếp được dùng trong nhân dân làm thuốc thông tiểu tiện, trong những trường hợp đái rắt, đái ra sỏi, sạn, và còn dùng giã đắp chữa trĩ.  Ngày dùng 6 – 10g rễ, hoặc 15 – 20g đọt non dưới dạng thuốc sắc uống, thuốc được dùng ngoài không kể liều lượng [Đỗ Tất Lợi, 1999: 2611].  Ở Ấn Độ, lá dứa cơm nếp được dùng theo kinh nghiệm dân gian để trị bệnh phong, ghẻ, bệnh tim và não. Các bao phấn của cụm hoa đực được dùng trị đau tại, nhức đầu và bệnh về máu. Tinh dầu từ cụm hoa được dùng trị nhức đầu, thấp khớp và đau tai [Deshaprabhu S.B. et al., 1966, VII: 218 – 220].  Một thuốc bột chế từ các bao phấn và ngọn của lá bắc được dùng hít thường xuyên để chữa bệnh động kinh và cũng dùng hít để chữa viêm họng và các bệnh khác về họng. Rễ dứa cơm nếp tán trong sữa dùng trị vô sinh và động thai [Nadkarni K.M., 1999: 894) Lá dứa cơm nếp được dùng ở Philippin làm thuốc trợ tim và thuốc tẩy. Ở Thái Lan, rẽ dứa cơm nếp được coi là có tác dụng hạ sốt, long đờm và lợi tiểu, và cụm hoa đực có tác dụng trợ tim [Lemnens R.H.M.J. et al., 2003: 321 – 322]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

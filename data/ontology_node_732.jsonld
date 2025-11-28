@@ -1,0 +1,229 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Tế tân",
+            "ten_khac": "Tế tân",
+            "ten_khoa_hoc": "Asarum heterotropoides F.Schmidt",
+            "ma_taxon": "894367",
+            "ho": "Aristolochiaceae (Mộc hương)",
+            "Mô tả": {
+                "lá": null,
+                "hoa": null,
+                "quả": "Quả gần hình cầu.",
+                "cây": "Tế tân là một loại cỏ nhỏ, cao chừng 12-24cm.",
+                "mặt": null,
+                "đầu": "đầu nhọn",
+                "thân": "Thân rễ dưới đất bò ngang, đầu thân rễ có phân nhánh.",
+                "cuống": "có cuống dài 5-18cm, thường là nhẵn hay hơi có lông, trên có rãnh chạy dọc",
+                "gốc": null,
+                "cao": "cao chừng 12-24cm",
+                "rễ": "Rễ nhiều, nhỏ và dài vê ở tay có mùi thơm.",
+                "củ": null,
+                "mọc": null,
+                "mùa hoa": null,
+                "mùa quả": null
+            },
+            "Phân bố": {
+                "phân_bố": null
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": "Vào tháng 5-6, đào toàn cây phơi trong mát, không nên phơi nắng, phân biệt liêu tế tân và hoa tế tân người ta dựa vào chiều dài của thân rễ và kích thước của đốt thân rễ."
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": null
+            },
+            "Thành phần": {
+                "thành phần": null,
+                "gồm chất": null,
+                "Các hợp chất": null,
+                "chứa": null,
+                "triết xuất": null,
+                "đã nghiên cứu": null,
+                "tìm thấy": null,
+                "thủy phân": null,
+                "các hoạt chất": null,
+                "tinh dầu chứa": null,
+                "có hoạt chất": null,
+                "dấu hiệu đặc trưng": null
+            },
+            "Tính vị": {
+                "Có vị": "Vị cay, tính ôn."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Phát hãn, tán hàn, trấn thống, khu đàm, chỉ khái.",
+                "được_dùng": null,
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "chữa": "Trị ho tức, nhức đầu (thiên đầu thống), tê nhức khớp xương, đau răng (dùng tươi) Đau đầu do phong hàn: Dùng tế tân với xuyên khung\u00a0trong bài Xuyên Khung Trà Điều Tán. Đau răng do phong hàn: Dùng tế tân với bạch chỉ Đau răng do Vị nhiệt: Dùng tế tân, thạch cao\u00a0và hoàng cầm. Đau khớp do phong hàn thấp ngưng trệ: Dùng tế tân với khương hoạt, Phòng phong và quế chi. Cảm phong hàn biểu hiện như nghiến răng, sốt, đau đầu và đau toàn thân: Dùng tế tân với Khương hoạt, phòng phong\u00a0trong bài Cửu Vị Khương Hoạt Thang. Đàm lạnh xâm nhập phế biểu hiện như hen và ho có đờm nhiều, đờm lỏng: Dùng tế tân với Ma hoàng và can khương\u00a0trong bài Tiểu Thanh Long Thang. Sổ mũi, chảy nước mũi nhiều, xung huyết mũi và đau đầu: Dùng tế tân với Bạch chỉ, Tân di và Bạc hà.  Ứng dụng lâm sàng  Trị chứng ngoại cảm phong hàn: Đau đầu, nghẹt mũi, thường phối hợp với Phòng phong, Kinh giới hoặc Quế chi, Sinh khương hoặc dùng bài: ma hoàng phụ tử tế tân thang\u00a0gồm: Ma hoàng 4g, Phụ tử 8g, Tế tân 4g, sắc uống trị người bệnh vốn dương hư mắc chứng ngoại cảm phong hàn. Trị các chứng đau đầu\u00a0 đầu phong thống), đau răng (do thần kinh), đau khớp (do phong thấp). Trị chứng đau răng gặp lạnh đau nhiều dùng bài ĐỊNH THỐNG TÁN gồm: Tế tân 4g, Xuyên ô 2g, Nhũ hương 4g, Bạch chỉ 4g, tán bột mịn mỗi lần 1 -2g rắc vào chỗ đau ngày 3 – 4 lần. Trường hợp đau răng kèm sưng đỏ, dùng bài: Tế tân 4g, Thạch cao sống 40g sắc uống. Trị đau nhức các khớp do phong thấp dùng bài: Tế tân 4g, xuyên khung 12g, tần giao 12g, Cam thảo 4g, sắc nước uống. Trị ho nhiều đờm loãng: trong các bệnh viêm phế quản mạn tính, hen phế quản, giãn phế quản dùng bài LINH CAM NGŨ VỊ KHƯƠNG TÂN THANG gồm: Phục linh 12g, Cam thảo 4g, Tế tân 4g, Can khương\u00a06g, Ngũ vị tử 4g sắc uống. Ngoài ra, lở mồm miệng dùng Tế tân và hoàng liên, lượng bằng nhau tán bột mịn bôi vào chỗ lở, Hôi miệng ngậm Tế tân để chữa. Dùng quá liều có thể gây tê ở họng, lưỡi và gây tức ngực. Liều lượng thường dùng: 1 – 4g.  Chú ý khi dùng thuốc:  Đối với người bệnh khí huyết kếm nên dùng lượng ít. Người xưa có nói: Can khương,\u00a0Tế tân, Ngũ vị tử là thuốc tốt đối với chứng đàm ẩm khái thấu nhưng đối với chứng ho khan, ho lao có triệu chứng âm hư (hư hỏa ) không nên dùng. Tế tân không nên dùng với lê lô."
+            },
+            "Cách dùng": {
+                "được_dùng": null,
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "phơi khô": null,
+                "xấy khô": null
+            },
+            "Lưu ý": {
+                "luu_y": null
+            }
+        }
+    ]
+}

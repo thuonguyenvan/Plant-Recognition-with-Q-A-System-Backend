@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ dền",
+      "ten_khac": "Củ cải đường.",
+      "ten_khoa_hoc": "Beta vulgaris L.",
+      "ma_taxon": "54498",
+      "ho": "Rau muối (Chenopodiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "...",
+      "hoa": "...",
+      "quả": "...",
+      "cây": "Cây thảo nhỏ, sống 1 – 2 năm.",
+      "rễ": "Rễ phình thành củ nạc, hình cầu, màu đỏ thẫm.",
+      "thân": "Thân ngắn, mọc đứng hoặc ngả, có cạnh, phân nhánh.",
+      "mọc": "Lá mọc rất sít nhau và toả ra ở gần gốc, lá ở gốc to hơn là ở ngọn, phiến dày nhẵn, màu lục sáng hoặc đỏ tía, mép uốn lượn, gân nổi rõ; cuống lá có phiến men theo.",
+      "hoa": "Cụm hoa mọc thành bông đứng, dài 10 – 16 cm, phân nhánh; hoa màu lục nhạt, tụ họp 1 – 2 cái ở mấu mỗi nhánh, bao hoa có 5 phiến hình màng, lúc đầu xòe ra sau uốn cong vào trong nhiều hay ít; nhị 5, chỉ nhị ngắn, nhọn, bao phấn hình bầu dục; bầu nửa hạ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Củ dền hay còn gọi là củ cải đường vốn có nguồn gốc ở vùng Địa Trung Hải, đã được nhập nội vào Việt Nam nhưng không rõ cụ thể từ bao giờ. Theo Võ Văn Chi, 1997 thì trước kia đã từng trồng thử ở Ninh Bình nhưng kết quả không khả quan, sau đó họ nhập một giống khác (Beta vulgaris L. var. rubra (L.) Moq.) trồng ở Đà Lạt – Lâm Đồng đã cho thu hoạch.  Củ dền là cây ưa sáng, ưa ẩm. Cây trồng ở Đà Lạt đã tỏ ra thích nghi với điều kiện khí hậu nhiệt đới vùng núi cao hoặc cận nhiệt đới. Cây trồng bằng hạt có thể ra hoa ngày cuối năm thứ nhất hoặc ở năm thứ hai. Cây sẽ cho thu hoạch củ sau."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Củ dền là cây nhập nội, mới chỉ được trồng thử ở một vài nơi. Cây ưa khí hậu ẩm mát ở vùng núi cao.  Củ dền gieo trồng bằng hạt. Thời vụ gieo hạt vào vụ thu đông.  Đất trồng cần cày bừa kỹ để ai, vợ sạch cỏ, diệt trừ các loại mầm bệnh và trứng sâu có trong đất. Sau đó lên luống cao 20 – 25 cm, rộng 90 – 120 cm để trồng 3 – 4 hàng. Bón đầy đủ phân lót rồi bổ hố hay rạch hàng để gieo hạt. Quá trình cây trưởng thành phải bón thúc 3 – 4 lần, làm cỏ, xới đất, vun đất, phòng trừ sâu bệnh,…"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Củ, hạt và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong củ chứa 12 – 20% đường (Stephan Nicolov, 2006). Để sản xuất đường người ta chỉ cần thái củ thành lát, đem ngâm với nước nóng, khi để nguội dịch chiết, đường đã kết tinh [The wealth of raw material in India, 1948).",
+      "đã nghiên cứu": "Gần đây, trong một nghiên cứu để chứng minh nhóm hoạt chất có tác dụng hạ tiểu đường, Masayuki Yoshikawa et al. ở trường Đại học Dược Kyoto (M. Yoshikawa, 1996) đã phân lập, xác định cấu trúc và chứng minh tác dụng hạ đường huyết của các saponin betavulgarosid I, II, III và IV.",
+      "chứa": "Các tác giả Trung Quốc (Trung được đại từ điển, 1975) lại ghi nhận trong củ dền chứa các chất betain, cholin, vulgaxanthin, acid ferulic, cateol và men transglutaminase.",
+      "tìm thấy": "Ngoài ra, còn tìm thấy trong củ dền còn chứa các hormon sinh dục nữ, phytosterol, chất béo và các acid amin [Cây thuốc Đông Nam Á, 1980]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Củ của cây củ dền vị ngọt, hơi đắng, tính hàn: có công năng thông tâm, khai vị, mạnh tỳ, hạ khi, bổ nội tạng, làm mát máu, thông huyết mạch, chống đau đầu, sườn hông căng tức, giải phong nhiệt độc, cầm máu, sinh tân.",
+      "Có vị": "Hạt củ dền vị đăng có công năng thanh nhiệt, lương huyết, làm ra mô hội.",
+      "Có vị": "Lá có công năng tiêu sưng viêm, lợi tiểu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Củ dền là loại rau bổ dưỡng và tạo năng lượng, kích thích ăn ngon miệng, giải nhiệt, chữa kiết lỵ, đại tiện ra máu. Còn có tác dụng tốt cho người thiếu ngủ, người bị bệnh thần kinh, lao, ung thư, cảm cúm.",
+      "được_dùng": "Hàng ngày dùng một cốc dịch củ (200 – 300g củ tươi, nghiền nát rồi ép lấy nước) uống trong một tháng có tác dụng bổ dưỡng.",
+      "chữa": "Để chữa bệnh ôn nhiệt sốt cao, giã khoảng 200g củ dền tươi, vắt lấy nước cốt uống để giải giải khát, sốt. Cũng dùng như trên khi bị kiết lỵ, đại tiện ra máu.",
+      "dùng": "Để giải nhiệt mùa hè, dùng 100g củ hoặc cây củ dề luộc rồi ăn.",
+      "dùng": "Nhân dân vẫn dùng củ dền như các loại rau củ để nấu ăn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Củ dền có tỉ lệ đường cao, cẩn thận trọng với người bị đái tháo đường Người thao tác với gỗ (thợ mộc) dùng củ dề dễ bị đau bụng, ỉa chảy Không dùng củ dền cho phụ nữ có thai.  Xem thêm: [Video] Những công dụng của Củ dền có thể bạn chưa biết"
+    }
+  ]
+}

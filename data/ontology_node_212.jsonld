@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lúa mạch",
+      "ten_khac": "Mạch nha, đại mạch.",
+      "ten_khoa_hoc": "Hordeum vulgare L.",
+      "ma_taxon": "57182",
+      "ho": "Lúa (Poaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống nhiều năm, cao 0,6 – 1m.",
+      "rễ": "Rễ hình sợi.",
+      "thân": "Thân mảnh, mọc thẳng.",
+      "lá": "Lá hình dải, dài 10 – 30 cm, rộng 0,6 – 1,2 cm, phiến nháp, lưỡi bẹ ngắn, cụt đầu.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành bông dài 6 – 10 cm, lúc non thẳng đứng, khi chín thì rủ xuống. Các bông nhỏ xếp dày đặc trên trục chính thành 4 dãy, không cuống, bông nhỏ có hai hoa, 1 bị lép thành cuống nháp hay có lông, hoa lưỡng tính, cuống hoa có đốt ở dưới mày hoa; mày hình dải có ba gân, nhị 3; bầu có vòi nhụy rất ngắn.",
+      "quả": "Quả hình trái xoan, có khía dọc dài 0,8 – 0,9 cm, đầu có phần phụ nhiều lông."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hiện chưa biết chính xác về nguồn gốc, nhưng chắc chắn đây là loại cây trồng đã có lịch sử hàng ngàn năm. Cây được trồng ở tất cả các quốc gia ở vùng ôn đới ấm, vùng cận nhiệt đới và có những giống (Cultivars) trồng được ở vùng núi nhiệt đới.  Ở Việt Nam, lúa mạch được ngành nông nghiệp nhập giống từ những năm 60. Cây được trồng thử nghiệm ở nông trường Ba Vì, cao nguyên Mộc Châu và một số nơi khác ở miền núi phía Bắc. Tuy nhiên, gần đây không thấy tài liệu nào đề cập về nơi trồng lúa mạch ở nước ta.  Lúa mạch là cây ưa ẩm, ưa sáng và ưa khí hậu mát. Cây trồng ở các quốc gia ôn đới cũng như ở Việt Nam đều bắt đầu vào đầu mùa xuân. Tuỳ theo loại giống và vùng trồng mà thời gian cho thu hoạch từ bốn tháng rưỡi đến sáu tháng, sau khi quả (hạt) chín, toàn cây tàn lụi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt và quả mạch nha nảy mầm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa protein 11,5%, chất vô cơ 1,5%, chất xơ 3,9%, carbohydrat 69,3%, Ca 0,03%, P 0,23%, Fe 3,7mg%, tinh bột 60 – 68%, pentosan 8 – 12%, cellulose 4,5%, lignin 4%, sucrose 1,5 – 2,5%, đường chuyển hoá 0,1 – 0,5%, pectin 0,5 – 1,0%.  Tinh bột mạch nha gồm amylose (19%), và amylopectin. Đường tự do gồm sucrose và raffinose với một lượng nhỏ glucose, fructose, maltose glucodifructose và fructosan.  Lúa mạch chứa 0,16% phosphatid (chủ yếu là lecithin), các acid béo đặc (chủ yếu là acid palmitic) chiếm 14,8% so với các acid béo toàn phần và các acid béo lòng (chủ yếu là acid linoleic) là 84,6%.  Các vitamin khác là niacin (7mg/100g), cholin (96 – 125mg/100g), acid pantothenic (395- 620ug/100g), acid folic, vitamin D và vitamin E (1,7 – 2,1mg/100g). Hoạt lực vitamin E thấp hơn tocopherol toàn phần do sự có mặt của hợp chất 8 ít hoạt tính lại nhiều (tocopherol toàn phần 5,6 – 7,1mg/100g, a – tocopherol 10%, B. tocopherol 67%).  Lúa mạch chứa nhiều enzym oxidase, catalase, peroxidase, phytase, lichenase, cytase, mannase, cellobiase và manobiase. Các enzym thuỷ phân protein xuất hiện sau khi nảy mầm.  Các vị thuốc thường dùng:  Từ cây lúa mạch có nhiều vị thuốc được sử dụng:  Hạt lúa mạch (đúng ra là quả lúa mạch) và các hoạt chất hoặc phân đoạn chiết từ hạt lúa mạch.  Thân lá cây lúa mạch  Mạch nha: Là hạt lúa mạch đã mọc mầm, muốn có mạch nha, lấy hạt lúa mạch, dùng nước đãi sạch đất cát, ngâm nước cho ẩm các hạt, sau đó ủ kín, thỉnh thoảng tưới nước để giữ ẩm cho đều. Sau vài ba ngày, hạt lúa mạch nảy mầm, khi nào một số mầm bắt đầu xanh (mầm dài trung bình khoảng 3 mm) thì lấy ra, phơi nắng hoặc sấy nhiệt độ dưới 60°C cho khô, để nguyên hoặc tán nhỏ, sảy hết trấu là được.  Cao mạch nha: Tán mạch nha (đã loại bỏ vỏ trấu) thành bột, nấu với nước ở nhiệt độ 60°C để enzym trong mạch nha thuỷ phân toàn bộ tinh bột còn lại trong mạch nha thành các đường có phân tử lượng thấp (nếu để ở nhiệt độ cao hơn, hoạt tính thuỷ phân của enzym kém hơn, và nếu để ở nhiệt độ quá cao, enzym sẽ bị phân hủy). Cuối cùng cô đặc ở nhiệt độ không quá 60°C;  Kẹo mạch nha (còn gọi là kẹo mạ, di đường): Là chất cao mềm do tác dụng của enzym trong mạch nha lên cơm nếp nát hoặc cháo nha đặc từ tinh bột như tinh bột sắn (tỷ lệ mạch nha là 20% so với lượng gạo nếp hoặc tinh bột). Ở nhiệt độ 60 – 70°C trong thời gian 6 – 12 giờ để chuyển hoá tinh bột thành đường, sau đó cô đặc cho đến khi thuỷ phần còn khoảng 8%.  Ở Trung Quốc, ngoài hạt lúa mạch (Trung Quốc gọi là đại mạch) và mạch nha, còn dùng một số vị thuốc khác từ cây lúa mạch:  Mầm lúa mạch: Cách chế biến như mạch nha, nhưng ủ để cho hầu hết các mầm đều xanh (dài khoảng 3 – 5 mm). Thu lấy mầm, phơi khô là được Rơm lúa mạch: Là thân và cành cây lúa mạch đã thu hoạch quả, phơi khô có màu vàng Bã rượu lúa mạch: Lấy gạo lúa mạch, nấu chín, ủ với men rượu, sau đó cất lấy rượu, phần còn lại là bã rượu lúa mạch [TDTH 1993, I: 283 – 4; 1996, II: 9]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lúa mạch vị mặn, tính ấm, vào hai kinh tỳ và vị; có công năng khai vị, tiêu thực, hạ khí (đưa hơi đi xuống), tiểu bĩ hoả tích (tiều các chất bị tích đọng).  Mạch nha (lúa mạch có mầm) vị mặn, tính bình, vào hai kinh tỳ và vị; có công năng khai vị, tiêu thực (giúp tiêu hoá thức ăn), làm giảm sữa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lúa mạch (hạt) được dùng cho người biếng ăn, ăn không tiêu, trướng bụng, đầy hơi, bị viêm ruột gây khó tiêu, Ngày 30 – 60g hạt lúa mạch, sao lên, rồi sắc uống hoặc 20 – 30g sao lên, nghiền thành bột uống, uống liền 3 – 5 ngày.  Mạch nha có chứa enzym thuỷ phân tinh bột thành các chất đường có phân tử lượng nhỏ hơn, nên giúp cho sự tiêu hoá thức ăn có tinh bột.  Ngoài ra, bản thân mạch nha cũng có chất đường phân tử lượng nhỏ, chất béo protid, lecithin, các vitamin B1, C nên có tác dụng bồi dưỡng tốt. Thường được dùng cho người ăn uống kém tiêu, bụng đầy trướng, chán ăn, chống bệnh do thiếu vitamin B1, C. Với mạch nha, ngày dùng 12 – 13g, sao qua, tán bột uống, hãm uống hoặc sắc uống. Còn có thể dùng cao mạch nha, mỗi lần 5 – 20g, ngày 3 lần; kẹo mạch nha, mỗi lần 20 – 40g, ngày 2 – 3 lần.  Cao mạch nha dầu cá hoặc cao mạch nha dầu gấc, ngoài các thành phần của cao mạch nha, còn có các vitamin A, D nên là nguồn đầy đủ chất dinh dưỡng hơn, mỗi lần 5 – 20g, ngày 3 lần. Để giảm sữa, chữa chứng vú căng sữa gây đau hoặc để cai sữa ở phụ nữ nuôi con bú, dùng mạch nha 90g, sắc uống trong ngày, uống liền 3 ngày. Thân và lá non cây lúa mạch được dùng chữa tiểu tiện không thống. Ngày 30 – 60g sắc uống. Lúa mạch còn được dùng làm lương thực, thay thế cho lúa mì, gạo, ngô, để chế bia, rượu; làm bánh mì, bánh quy và nhiều loại bánh khác.  Bài thuốc có lúa mạch  Ở Ấn Độ, lúa mạch được dùng cho người tiểu tiện khó, làm dễ tiêu hóa, là thức ăn tốt cho người bị va chảy, đau bụng, khó tiêu, bụng trướng đầy, người bị bệnh hoặc mới ốm dậy. Thường dùng dạng cháo lúa mạch. Dùng cháo mạch nha còn dễ tiêu hơn cháo lúa mạch. Có thể thêm đường và chanh. Nếu thêm sữa thì không được thêm chanh.  Chữa tỳ vị hư hàn, ăn không tiêu: Mạch nha, đảng sâm, phục linh, bạch truật, mỗi vị 10g; thảo quả, trần bì, hậu phác, mỗi vị 5g, gừng khô, cam thảo, mỗi vị 3g, sắc nước uống, ngày 1 tháng.  Ăn uống không tiêu: Mạch nha sao, Sơn tra mỗi vị 12g sắc uống.  Tích ứ sữa, vú sưng: Mạch nha sao 12g sắc uống trong ba ngày.  Chú ý:  Phụ nữ có thai cần thận trọng khi dùng mạch nha, phụ nữ đang nuôi con bú không nên dùng, trừ trường hợp muốn cai sữa, hoặc vú căng đau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

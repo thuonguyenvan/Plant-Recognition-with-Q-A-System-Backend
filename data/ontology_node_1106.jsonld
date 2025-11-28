@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chùm ruột",
+      "ten_khac": "Chùm ruột, Tầm ruột, Mác nhôm (Tày)",
+      "ten_khoa_hoc": "Phyllanthus acidus (L.) Skeels",
+      "ma_taxon": "166746",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 3 – 5 m, có thân nhẵn.",
+      "thân": "Cành non màu lục nhạt, cành già màu xám mang nhiều vết sẹo do lá rụng để lại.",
+      "lá": "Lá kép mọc so le, có cuống dài, lá chét mỏng, gốc tròn, chóp nhọn.",
+      "hoa": "Hoa nhỏ mọc thành xim, dài 4- 7 cm. Hoa màu đỏ ở nách lá đã rụng.",
+      "quả": "Quả mọng có khía, khi chín màu vàng nhạt, vị chua, ngọt nhạt.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 6-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của Mỹ châu nhiệt đới, được trồng để lấy quả. Có thể thu hái lá, vỏ thân và vỏ rễ quanh năm. Quả hái lúc chưa chín."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Trị phong ngứa, nổi mụn như ghẻ phỏng, chảy nước tới đâu ăn tới đó, hoặc lở cùng mình, ngứa dữ dội, dùng vỏ Tầm Duột, lá Me chua, đọt ổi, đọt Chuối Sứ cùi (cây non). Các vị bằng nhau đem nấu một lần, để vào một cục phèn chua bằng ngón tay cái, nấu nước sôi vài đạo nhắc xuống để nguội, hoặc tắm hoặc thoa vào chỗ bị ngứa để vậy cho khô, làm nhiều lần đến khi hết ngứa mới thôi. (Kinh nghiệm của An Giang)."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, quả, vỏ thân và rễ – Folium, Fructus Cortex et Cortex Radicis Phyllanthi Acidi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong quả có nước, chất proitid, lipid glucid, acid acetic và vitamin C.",
+      "gồm chất": "Vỏ rễ chứa tanin, saponin, acid gallic và một chất kết tinh."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả thường dùng ăn giải nhiệt, chữa tụ máu gây sưng tấy, đau ở hông, ở háng.",
+      "được_dùng": "Vỏ thân được dùng tiêu hạch độc ung nhọt, đơn độc, giang mai, bị thương sứt da chảy máu, ghẻ lở, đau răng, đau mắt, đau tai có mủ, tiêu đờm, trừ tích ở phổi, đau yết hầu, song dao, độc dao."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Quả thường dùng ăn tươi hoặc nấu canh ăn cho mát.",
+      "giã nát": "Lá giã nhỏ với Hồ tiêu để đắp trị các chỗ đau.",
+      "phơi khô": "Vỏ phơi khô tán nhỏ ngâm rượu trắng (200g trong 1 lít) trong 10 ngày đem lọc lấy rượu, mỗi ngày uống 2 lần, mỗi lần 2 thìa canh. Rượu này nhỏ vào tai hôi thối làm hết mủ; thấm bông bôi ghẻ, loét, vết thương mau lành. Bột vỏ Chùm ruột ngâm giấm uống hết bệnh trĩ. Còn có thể nấu cao uống mỗi lần 1/2 thìa cà phê với nước chín trị họng sưng, họng mọc nấm, lỗ mũi lồi thịt. Phối hợp với vỏ Vông đồng lượng gấp đôi, rồi hoà rượu trắng uống mỗi ngày 2 thìa cà phê, trị các bệnh về tim. Rễ và vỏ rễ có độc, chỉ nên dùng ngoài, không được uống."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

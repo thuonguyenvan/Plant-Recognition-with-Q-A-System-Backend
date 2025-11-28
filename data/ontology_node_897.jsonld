@@ -1,0 +1,210 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/nhan-huong.html",
+            "ten": "Nhãn hương",
+            "ten_khac": "Nhãn hương, Thảo mộc tên, Kiều đậu",
+            "ten_khoa_hoc": "Melilotus suaveolens Ledeb.",
+            "ma_taxon": "57064",
+            "ho": "Fabaceae (Đậu)",
+            "Mô tả": {
+                "@type": "Mô tả",
+                "cây": "Cỏ sống hằng năm, mọc thẳng đứng, cao 0,8- 1m, thân hơi khúc khuỷu do các cuống lá men xuống. Cành mọc đứng, mảnh khảnh.",
+                "lá": "Lá kép cấu tạo bởi ba lá chét. Lá chét hình trái xoan dài 1,2- 1,5cm, rộng 0,4-0,8cm, khía răng cưa ở nửa trên, 9-11 đổi gân phụ, không rõ rệt, cuống lá dài 1,5- 2cm, hình sợi chỉ, lá kèm hình dùi, dài 8-10mm dính với nhau và với cuống lá trên 2mm.",
+                "hoa": "Cụm hoa hình chùm ở kẽ lá, mang nhiều hoa rất nhỏ, màu vàng. Đài hình chuông, có 5 răng nhọn bằng nhau. Cánh hoa rụng sớm, có hình thìa. Cánh thuyền hình lưỡi hái, cánh thìa tù ngắn. Nhi lưỡng thể gồm 10 chiếc, trong đó 9 chiếc dính với nhau bởi chỉ, chiếc thứ mười tự do, bao phấn giống nhau. Bầu ngắn, vòi dài, đầu nhuỵ nhỏ.",
+                "quả": "Quả loại đậu ngắn, không mở, thoạt tiên nhẵn, về sau nhăn nheo và có màu đen. Một hay hai hạt hình bầu dục."
+            },
+            "Phân bố": {
+                "@type": "Phân bố",
+                "phân_bố": null
+            },
+            "Thông tin khác": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": null
+            },
+            "Thành phần": {
+                "@type": "Thành phần",
+                "thành phần": "Cây nhãn hương Melilotus suaveolens chưa thấy tài liệu nghiên cứu. Nhưng khi phơi khô cũng có mùi thơm như cây Melilotus officinalis đã được nghiên cứu giới thiệu sau đây:",
+                "gồm chất": "Trong cây tươi Melilotus officinalis có một heterozit gọi là melilotozit. Trong quá trình phơi khô, melilotozit bị men emunsin thuỷ phân cho glucoza và axit cumaric. Axit cumaric bị khử nước, đóng vòng lacton cho cumarin. Hàm lượng cumarin thay đổi tuỳ theo loài, lá chứa nhiều hơn là thân và hàm lượng cao nhất vào trước lúc ra hoa. Trung bình trong cỏ khô có 0,4 đến 0,9% cumarin bên cạnh cumarin còn có axit melilotic:",
+                "Các hợp chất": "Trong cỏ Meliotus officinalis bị thối có một chất độc gọi là icumarola hay metyl-3hydroxy- 4-cumarin. Súc vật ăn phải cỏ thối này có thể bị xuất huyết nặng, có khi chết. Hiện tượng súc vật bị ngộ độc này thường thấy ở Canada và Mỹ. Nhưng mãi tới năm 1931, Scofield mới phát hiện thấy rằng chất này do cumarin bị một thứ nấm trong cây biến thành. Link và những người cộng sự đã xác định và tổng hợp được dicumarol vào năm 1941.",
+                "tinh dầu chứa": "Trong thân, lá và hoa nhãn hương có tinh dầu. Thành phần chủ yếu của tinh dầu là dihydrocumarin C9H8O2 (Trung Quốc kinh tế thực vật chí, 1961, 1360).",
+                "chứa": "Toàn cây chứa khoảng 3,5% chất béo, chừng 7% pectin. Hạt chứa 6% chất béo."
+            },
+            "Tính vị": {
+                "@type": "Tính vị",
+                "Có vị": null
+            },
+            "Công dụng": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Như trên đã nói, nhãn hương hầu như chưa được sử dụng làm thuốc ở nước ta. Tại các nước châu Âu và châu Mỹ người ta dùng chữa đau mắt: Pha 5 đến 10g cỏ này trong một lít nước sôi. Dùng nước này để rửa mắt. Người ta còn chiết từ hoa hay ngọn cây này chất thơm dùng làm thơm thuốc lá: Ngâm hoa hay cỏ với benzen. Bốc hơi benzen này sẽ được 0,10- 0,12% chất thơm đặc, màu xanh lục, nguyên liệu chế cumarin dùng trong công nghiệp nước hoa.",
+                "được_dùng": "Loài Meliỉotus non là một loại cỏ cho gia súc ăn rất tốt do hàm lượng protein cao: 15 đến 20%, dễ tiêu hoá, hàm lượng muối khoáng cao. Tuy nhiên cũng như trên đã nói, loại cỏ này nếu bị thối và do một thứ nấm riêng thì có thể gây cho súc vật ăn phải bị bệnh xuất huyết nặng, có khi chết. Đó là do chất dicumarola có tác dụng ngược lại với vitamin K. Nó cản trở sự tạo thành prothrombaza trong máu và làm cho máu không đông được. Chúng ta biết rằng sự đông máu tiến thành qua hai giai đoạn:  Sự có mật của ion canxi và thrombokinaza, chất prothrombaza sản xuất trong gan sẽ tạo ra chất thrombaza. Chất thrombaza sẽ chuyển fibrinogen của huyết thanh (plasma) thành những cục fibrin. Như vậy vai trò chủ yếu là chất prothrombaza. Chất này được tạo thành trong cơ thể là nhờ vitamin K kết hợp với một thứ men trong gan. Chất dicumarola có ái lực đối với thứ men này mạnh hơn là vitamin K cho nên đã chiếm chỗ của vitamin K và cản không cho vitamin K hoạt động. Cũng nên chú ý rằng chất metyl-3-hyđroxy-4-cumarin là một chất chỉ có một nhóm cumarin của chất dicumarola thì lại không có tác dụng gây xuất huyết. Ngược lại nó lại có tác dụng chống xuất huyết giống như vitamin K. Chúng ta thấy chỉ cần thêm một nhóm thứ hai nữa là tác dụng trái ngược hẳn và biến chất này thành một chất chống vitamin K. Chất dicumarola được dùng để phòng và chữa những bệnh nghẽn mạch, viêm tĩnh mạch, tắc mạch."
+            },
+            "Cách dùng": {
+                "@type": "Cách dùng",
+                "được_dùng": "Đau mắt: Ngọn cây có hoa phơi khô 50-100g hãm với 100ml nước sôi, để nguội, rửa mắt; ngày hai lần.",
+                "chữa": "Viêm họng khản tiếng: Toàn cây 20-30g, nấu nước rồi xông, hít.",
+                "sắc nước uống": "Sốt rét: Nhãn hương 30g, sắc nước uống, dùng 4 giờ trước khi có cơn sốt."
+            },
+            "Lưu ý": {
+                "@type": "luu_y",
+                "luu_y": null
+            }
+        }
+    ]
+}

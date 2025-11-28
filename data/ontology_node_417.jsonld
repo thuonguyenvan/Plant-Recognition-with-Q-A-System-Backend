@@ -1,0 +1,240 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chè đắng rừng",
+      "ten_khac": "Ché khôm, khổ đinh trà.",
+      "ten_khoa_hoc": "Ilex kaushue S.Y. Hu",
+      "ma_taxon": "1113736",
+      "ho": "Trâm bùi (Aquifoliaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, hình bầu dục thuôn, phiến mỏng và dai, dài 10 – 18 cm, rộng 5 – 7,5 cm, gốc tròn, đầu thuôn thành mũi nhọn ngắn, mép khía răng nhỏ và đều, gân bên nổi rõ ở cả hai mặt; cuống lá dài khoảng 2 cm. Lá non có màu đỏ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gồm hoa đực và hoa cái riêng (đơn tính khác gốc); cụm hoa đực dài khoảng 1 cm, có 20 – 30 hoa; cụm hoa cái có 3 – 9 hoa.",
+      "quả": "Quả hạch gần hình cầu, đường kính khoảng 1 cm, có lông mịn, có núm nhụy dài tồn tại, khi chín màu đỏ, hạt 2 – 3, hình bầu dục thuôn, vỏ ngoài có vận hành mạng lưới.",
+      "cây": "Cây to, cao 10 – 15m, có khi đến 20m hay hơn những cây cổ thụ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Họ Aquifoliaceae ở Việt Nam chỉ có 1 chi Ilex L., bao gồm 40 loài và nhiều thứ (var.). Theo kết quả điều tra của Viện dược liệu, thuộc chi này đã ghi nhận được tới 9 loài có công dụng làm thuốc, trong đó loài chè đắng (Ilex kaushue S.Y.Hu) được phát hiện sau cùng, vào đầu những năm 90 của thế kỷ trước.  Cho đến nay, chè đắng rừng đã xác định được về phân bố tại tỉnh miền núi phía Bắc, bao gồm: Cao Bằng (Nguyên Bình: Mai Long, Hạ Lang: An Lạc, Đồng Loan, Đức Quang, Thái Đức; Quảng Hoà: Mỹ Hưng, Tiến Thành, Thạch An: ĐứcXuân); Lào Cai (Sa Pa: Hàm Rồng); Bắc Kạn (Ba Bể); Hoà Bình (Yên Thuỷ, Phố Sấu); Ninh Bình (Cúc Phương: Đồng Cơn). Trên thế giới, loài này mới biết có ở Trung Quốc (các tỉnh: Hồ Nam, Hồ Bắc, Vân Nam, Quảng Tây, Quảng Đông).",
+      "thường_mọc": "Chè đắng rừng thuộc loại cây gỗ trung bình, trung sinh; mọc rải rác ở rừng cây lá rộng thường xanh trên núi đá vôi, nhất là gần các bờ khe suối.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Kạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chè đắng rừng chứa 0,5-0,6% flavonoid, 5,1-5,5% saponin, 2,8-3,4% polysacharid. Ngoài ra còn có coumarin, tanin, carotenoid, acid hữu cơ và acid amin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá chè đắng rừng vị rất đắng, sau có cảm giác ngòn ngọt ở họng, có công năng tiêu viêm, giải thử, nên được dùng điều trị các bệnh viêm nhiệt đau mắt đỏ [TDTH, 1996, II: 604]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá chè đắng rừng được dùng để pha nước uống như uống chè, có tác dụng làm cho người khoẻ mạnh, đỡ mệt mỏi khi làm việc trí óc căng thẳng, hoặc gặp những bất lợi về thời tiết như thời tiết quá nóng. Chè đắng rừng làm cho đầu óc tỉnh táo, nhưng không gây mất ngủ.  Gần đây, còn thấy lá chè đắng rừng có tác dụng hạ huyết áp nhẹ, hạ cholesterol huyết, giải độc, bảo vệ gan. Lá chè đắng rừng có tác dụng an thần ngay sau khi uống, nhưng lại kích thích thần kinh làm tỉnh táo, minh mẫn, mà không làm mất giấc ngủ.  Bài thuốc có chè đắng rừng  Thuốc làm tăng tuần máu, tăng trí nhớ:  Lá chè đắng rừng, lá bạch quả, mỗi vị 1g. Để cả lá hoặc tán thành bột thô, pha uống trong ngày như uống trà."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

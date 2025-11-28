@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngải chân vịt",
+      "ten_khac": "Ngải chân vịt, Tăng ky, Rau bốn mùa, Tan qui",
+      "ten_khoa_hoc": "Artemisia lactiflora Wall. ex DC.",
+      "ma_taxon": "427954",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo thơm, cao 0,8-1,5m.",
+      "thân": "Thân thẳng, có rãnh dọc, màu tím tía.",
+      "lá": "Lá có phiến một lần kép gồm 3-5 lá chét xoan, to đến 5x 3,5cm, lúc khô đen, không lông, gân phụ 2-3 cặp, mép có răng to, thưa. Lá kép chân vịt,",
+      "hoa": "Nhánh không dài, mang các hoa đầu nhóm thành chuỳ, không cuống, màu trăng trắng, cao 4-6mm. Hoa màu trắng hoặc vàng nhạt, hoa hình ống, hoa ngoài cái, hoa trong lưỡng tính. hoa đầu trắng, thành chùy",
+      "quả": "Quả bế không có lông mào.",
+      "mùa hoa": "Hoa quả vào mùa hè, thu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây được trồng ở các vùng miền núi. Thu hái cây quanh năm, tốt nhất là lúc cây chưa ra hoa, dùng tươi hay phơi trong râm mát cho khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây –\u00a0Herba Artemisiae\u00a0Lactiflorae, thường gọi là Bạch bao hao."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, hơi đắng, tính bình"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "có tác dụng hoạt huyết, lợi tiểu, tiêu viêm, tiêu sưng phù, hoạt huyết, tán ứ…",
+      "được_dùng": "Thường dùng chữa: Kinh nguyệt không đều, bế kinh; Viêm gan mạn tính, viêm gan vàng da; Viêm thận, phù thũng, bạch đới; Khó tiêu, đầy bụng, thoát vị.",
+      "làm thuốc": "Dùng 10-20g, dạng thuốc sắc, không dùng cho phụ nữ có thai. Dùng ngoài chữa đòn ngã, vết thương chảy máu, bỏng loét, eczema."
+    },
+    {
+      "@type": "Cách dùng",
+      "giã nát": "Giã cây tươi đắp ngoài, hoặc nghiền thành bột băng bó vết thương."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

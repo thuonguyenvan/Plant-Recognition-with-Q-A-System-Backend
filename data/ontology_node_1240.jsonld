@@ -1,0 +1,220 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Ích trí nhân",
+            "ten_khac": "Riềng lá nhọn, Ích trí, Riềng thuốc, Ích trí nhân",
+            "ten_khoa_hoc": "Alpinia oxyphylla Miq.",
+            "ma_taxon": "544838",
+            "ho": "Zingiberaceae (Gừng)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thảo, sống nhiều năm, cao 1 – 3m.",
+            "thân": "Thân rễ mọc bò ngang. Thân khí sinh mảnh.",
+            "lá": "Lá mọc so le, hình mác, dài 17 – 33 cm, rộng 3 – 6 cm.",
+            "hoa": "Cụm hoa mọc tận cùng thành chùm; đài hình trụ có lông, chia 3 răng; tràng có ống dài khoảng 1 cm, có ba cánh hình bầu dục, màu trắng có đốm đỏ ở giữa.",
+            "quả": "Quả nang, hình trứng hoặc trứng thuôn, đôi khi gần hình cầu, có nhiều nếp nhăn dọc, đầu có mũi nhọn, khi chín màu hồng hoặc đỏ; hạt có cạnh, đầu tù, màu nâu đen.",
+            "mọc": "Toàn cây có mùi thơm đặc biệt.",
+            "mùa hoa": "tháng 3 – 5",
+            "mùa quả": "tháng 6 – 9."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": null
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Quả chín đã phơi khô."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Quả ích trí chứa norsesquiterpn: ozyphyllon E và F là các 14 norcardinen sesquiterpen và tetranor – sesquiterpen [Jun ju, Ning – Hua Tan, Guang Zhi Zeng, Chinese journal of natural medicines, vol.8 issue 1 January 2010, p.6 – 8].",
+            "gồm chất": "Các 4, 5 secoeudesman sesquiter penoid = ozyphylon A và ozyphyllone B [Jun ju, Ning – Hua Tan, Jiang Xiong…, Chinese chemical letters, vol. 20, issue 8 August 2009, p. 945 – 948].",
+            "Các hợp chất": "Ngoài ra còn 14 norcardinan sesquiterpen: ozyphyllonediol A và B; và 11, 12, 13 trinoreudes – mane triterpen: Ozyphyllenon A và B [Osamu Muraoka; Manaba Fujimoto…, Bioorganic & medicinal chemistry letters, vol. 11, issue 16, 20 August 2001, p. 2217 – 2220].",
+            "tinh dầu chứa": "Trong ích trí còn có tinh dầu và tanin protocatechic. (Morikawa T. et al., 2002)."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Ích trí có vị the cay, mùi thơm, tính ấm. Có tác dụng an thần, cố tinh, bổ tỳ vị, trừ nôn, chữa đái són, đái dầm."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Ích trí được dùng chữa bệnh đái nhiều, người già hay đi đái đêm, đái dầm, đái đục, di mộng tinh, xích bạch đới. Chữa tiêu chảy, nôn mửa, kiết lỵ mạn tính,",
+            "được_dùng": "Ngày dùng 10 – 20g, dạng thuốc sắc [Bộ Y tế, 1972: 651 – 652; Đỗ Tất Lợi, 1999: 406 – 407].",
+            "làm thuốc": "Ban đêm đi tiểu nhiều lần:  Dùng 20 hạt ích trí, thêm vài hạt muối, số với 200 ml nước, uống trước khi đi ngủ [Đỗ Tất Lợi, 1999: 406 – 407]. Ích trí, ô dược, mỗi vị 20g, cắt nhỏ, đập giập rồi sắc với 300 ml nước, uống trước khi đi ngủ.",
+            "chữa": "Chữa ăn uống kém, tiêu chảy kéo dài, đi tiểu nhiều, nhất là ban đêm và gần sáng:  Ích trí 12g, nam mộc hương 30g, can khương, trần bì, ô mai, mỗi vị 8g, nước 300 ml, đun sôi trong 3 phút, đậy kín và hăm, để nguội rồi uống làm 2 lần trong ngày [Bộ Y tế, 1972: 651 – 652]."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Các diarylpeptanoid là yakuchinon A và B và oxyphyllacinol chứa trong thân rễ có cấu trúc giống như cấu trúc của curcumin đã được chứng minh có tác dụng ức chế sự phát triển khối u trong mô hình gây ung thư thực nghiệm. Việc điều trị tại chỗ với cao chiết methanol ích trí cải thiện có ý nghĩa sự phát triển ung thư da cũng như viêm phù tại ở chuột nhắt trắng. Nhiều kết quả nghiên cứu khác xác nhận ích trí có khả năng có hoạt tính hoá dự phòng và chống tạo u.",
+            "được_dùng": "Ích trí dạng cao nước được nghiên cứu về tác dụng bảo vệ trên tế bào thần kinh đối với thương tổn do thiếu máu cục bộ và tác dụng độc hại tế bào thần kinh.",
+            "làm thuốc": "Ngoài ra, cao chiết aceton ích trí được thử nghiệm về tác dụng chống loét. Ở liều uống 50 mg/kg, cao chiết ức chế có ý nghĩa tổn thương dạ dày gây bởi acid hydrocloric/ethanol ở chuột cống trắng với tỷ lệ 57%."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Chi Alpinia Roxb. trên thế giới có khoảng 230 loài, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á, một số loài cũng có ở Australia và các đảo lớn ở Thái Bình Dương. Chi này ở Việt Nam có 27 loài, bao gồm cả một loài mới cho khoa học và 4 loài khác mới được bổ sung cho Việt Nam [Nguyễn Quốc Bình, 2005; “Danh lục các loài thực vật Việt Nam”, tập III].",
+            "làm thuốc": "Loài có tên ích trí trên hiện chưa có tài liệu đề cập cụ thể về phân bố, mà mới ghi chung chung có ở Nam Bộ (?) và trên thế giới cũng chỉ ghi được ở Trung Quốc (Quảng Đông, Quảng Tây).",
+            "có tác dụng": "Mọi thông tin khác về mặt sinh học cần nghiên cứu thêm."
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Một lá",
+      "ten_khac": "Một lá, Thanh thiên quỳ, Slam lài, Bửa thoọc (Tày), Trân châu diệp, Lan cò",
+      "ten_khoa_hoc": "Nervilia fordii (Hance) Schltr.",
+      "ma_taxon": "928125",
+      "ho": "Orchidaceae (Lan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây một lá, còn có tên thanh thiên quỳ hay bầu thoọc (bầu là lá, thoọc là một) hay chân châu diệp là một cây địa sinh, loại cỏ sống lâu, cao từ 10-20cm.",
+      "thân": "Thân rất ngắn, củ tròn to, có thể nặng tới 1,5-20g.",
+      "lá": "Thẳng từ củ, chỉ mọc lên có một lá riêng lẻ sau khi hoa tàn. Lá hình tim tròn, xếp theo các gân lá hình chân vịt, đường kính 10-25cm mép uốn lượn. Gân lá tỏa đều từ cuống lá, cuống lá dài 10-20cm, màu tím hồng.",
+      "hoa": "Cụm hoa có cán dài 20-30cm. Hoa thưa 15-20 cái, mọc thành chùm hay bông màu trắng, đốm tím hồng hay màu vàng hơi xanh lục. Lá đài và cánh hoa giống nhau. Cánh môi 3 thuỳ, có rất nhiều gân, có lông ở quãng giữa, thuỳ bên và thuỳ tận cùng hình ba cạnh, cột dài 6mm, phồng ở đỉnh.",
+      "mùa hoa": "Ra hoa tháng 3-4-5",
+      "quả": "Quả hình thoi, trên có múi trông giống như quả khế con, dài 2-3cm.",
+      "mùa quả": "quả nang vào các tháng 4-5-6.",
+      "mọc": "Thường sau khi hoa tàn rồi, lá mới phát triển do đó hoặc ta chỉ thấy cây mang hoa, hoặc quả, không có lá, hoặc chỉ thấy cây có lá, thường một lá."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa có tài liệu nghiên cứu"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chỉ mới thấy sử dụng trong phạm vi nhân dân, nhưng chủ yếu cũng chỉ thấy xuất khẩu, trong nước hầu như rất ít dùng.",
+      "được_dùng": "Theo Quảng Tây trung dược chí thanh thiên quỳ được dùng làm thuốc lợi phế, cầm ho, giải độc, làm hết đau. Dùng uống chữa lao phổi, làm cho phổi mát đỡ nóng, dùng ngoài giã nát đắp lên nơi đau, mụn nhọt.",
+      "sắc uống": "Ngày dùng 12 đến 20g dưới dạng thuốc sắc.",
+      "có tác dụng": "Tại Trung Quốc, thanh thiên quỳ thường bị giả mạo hay nhầm với lá mã đề. Nhưng chỉ cần ngâm lá với nuớc một lúc cho mềm rồi tải lên mặt phẳng xem và so sánh là phân biệt dễ dàng. Tại nước ta, chú ý đừng nhầm với cây bát giác liên (Dysosma chengii) cũng có củ và 1 lá 3. Có tác giả đã xác định tên khoa học của nhưng lá bát giác liên hình 6 cạnh, gân toả từ cây một lá là Pogonia flabellifolium Lind L."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Thanh thiên quỳ ưa mọc ở kẽ núi đá, nơi thấp và ẩm ướt, dưới bóng cây to hoặc dưới đám cỏ dày đặc. Hầu như không thấy mọc ở bờ ruộng hay ở những môi trường khác.",
+      "làm thuốc": "Trước đây ở nước ta hầu như ít chú ý khai thác. Gần đây Trung Quốc đặt mua ở một số tỉnh biên giới nên ta mới chú ý phát hiện khai thác tại một số vùng ở biên giới Tràng Định, Văn Uyên, Cao Lộc, Đổng Mỏ, Hữu Lũng (Lạng sơn), Trùng Khánh, Quảng Uyên (Cao Bằng).",
+      "có tác dụng": "Trị giá thu mua khá cao: 400kg lá khô trị giá bằng một xe hơi vận tải hoặc cứ 10kg lá khô đổi được 350kg phân hóa học loại tốt (Trung Quốc, 1959). Ta mới chỉ phát triển khai thác mấy năm gần đây, chủ yếu để xuất khẩu. Ngoài các tỉnh nói trên, hiện ta đã phát hiện thanh thiên quỳ có ở nhiều vùng núi các tỉnh Lào Cai, Hà Giang, Tuyên Quang, Hà Tây, Hoà Bình, Sơn La, Lai Châu v.v… Còn đang tiếp tục điều tra. Tại Trung Quốc, thanh thiên quỳ là đặc sản của 2 tỉnh Quảng Tây, Quảng Đông. Riêng tỉnh Quảng Tây một năm có thể thu mua tới gần 2 tấn lá khô.",
+      "phơi khô": "Thu hái chủ yếu là toàn cây, nhưng để bảo vệ giống, chỉ nên thu hái lá, để dành củ cho cây phát triển. Tuy nhiên qua cách sinh trưởng của cây, ta thấy hoa quả và hạt nở trước khi biết cây cho nên cần chú ý theo dõi cách vừa khai thác vừa phát triển cây này. Khi thu hái, chú ý phân biệt lá to, lá nhỏ để riêng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

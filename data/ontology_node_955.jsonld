@@ -1,0 +1,232 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nghệ trắng",
+      "ten_khac": "Nghệ trắng, Nghệ xanh, Nghệ rừng, Nghệ Mẹo, Nghệ Lào, ngọc kinh",
+      "ten_khoa_hoc": "Curcuma aromatica Salisb.",
+      "ma_taxon": "347672",
+      "ho": "Gừng (Zingiberaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, cao khoảng 1m.",
+        "thân": "Thân rễ to có nhiều rễ dài mang củ nhỏ hình trứng, màu vàng nhạt, rất thơm. Thân khí sinh do bẹ lá tạo thành.",
+        "lá": "Lá mọc so le, hình bầu dục, thuôn hoặc mũi mác rộng, dài 40 – 50cm, rộng 10 – 15cm, đầu nhọn, mặt dưới có lông nhung; cuống và bẹ ngắn.",
+        "hoa": "Cụm hoa mọc từ thân rễ, trước khi cây ra lá, hình trụ, dài 15 – 20cm; lá bắc nhiều, lợp lên nhau, những lá phía dưới mang hoa màu lục, lá phía trên không mang hoa pha hồng ở đầu; hoa màu vàng, đài có 3 răng tù, có lông dạng mi; tràng có ống dài hơn đài, cánh môi hình tròn hơi chia ba thùy; nhị ngắn, bao phấn hình bầu dục, trung đới mảnh có hai tai ở gốc, nhị lép dài bằng cánh môi, thuôn; bầu có lông.",
+        "quả": "Quả ít gặp.",
+        "mùa hoa": "tháng 3-6",
+        "mùa quả": "tháng 3-6"
+      },
+      "Phân bố": {
+        "phân_bố": "Nghệ trắng phân bố chủ yếu ở vùng nhiệt đới Nam Á và Đông Nam Á, từ Ấn Độ, Malaysia đến Lào, Việt Nam và hai tỉnh Vân Nam, Quảng Tây (Trung Quốc).",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hòa Bình"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc trên đất ẩm, còn tương đối màu mỡ ở vùng nương rẫy, trong thung lũng và ở những bãi đất hoang dọc đường đi và quanh làng bản… Độ cao phân bố có khi đến gần 1000m. Cây thường mọc tập trung thành đám lớn, do sự phân nhánh, phát triển mạnh của hệ thống thân rễ. Cây ra hoa hàng năm. Hiện nay, chưa quan sát được quá trình tái sinh tự nhiên cây con từ hạt."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Nghệ trắng được trồng nhiều ở các vùng trung du và miền núi để làm thuốc. Cách trồng nghệ trắng cũng tương tự như trồng nghệ, nhưng với khoảng cách thưa hơn (30x40cm) và ít khi dùng phân nên năng suất thấp. Cây sống khoẻ, ít bị sâu bệnh, thu hoạch vào tháng 10-11 hàng năm."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ, thu hoạch vào mùa thu – đông, loại bỏ rễ con, rửa sạch ngâm nước 2-3 giờ, ủ mềm, thái mỏng rồi phân loại sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": "Phân tích thành phần củ nghệ trắng thấy có những số liệu như sau: cao ether 12,00%, cao cồn 1,14%, cao nước 6,50%, độ ẩm 13,33%, albunoid 30,63%, tinh bột 23,46%, sợi 8,42% và tro 4,46%.",
+        "gồm chất": "Cất kéo nghệ bằng hơi nước thu được 6% tinh dầu màu xanh nâu, mùi long não, có các hằng số sau: 0,1939; nD302,03, chỉ số ester 2,03, chỉ số ester sau khi acetyl hóa 58,66, chỉ số acid 0,9, aD30 – 12,5. Tinh dầu chứa các sesquiterpen (chủ yếu là a và I3 curcumen) 65,5%, các sesquiterpen alcol 1 vòng 22,0%, d.camphor 2,5%, d camphen 0,8%, acid p.methoxycinnamic và các acid khác 0,7%, phần nhựa không xác định được là 8,5%, chất màu chủ yếu là curcumin. (The VVealth of India tập II. 153. p.141)",
+        "Các hợp chất": "Theo tài liệu Trung Quốc (Trung dược từ hải II – 739), nghệ trắng có curcumyl alcol, zingiberol, 1 p curcumen, demethoxy curcumin, turmeron, p. tolyl methyl carbinol, diferuloyl methon, epiprocurmerol neoprocurmerol, 4S. p. acetoxydehydrocurdinon; p hydroxygermacron, neocurdinon, zedoarondiol, iso. zeđo arondiol methyl zedo arondiol, curcumenon, d. sabinen, linderazulen…",
+        "đã nghiên cứu": "Kuroyanagi Masatsuna, Ujiie Kaosu đã tách và xác định cấu trúc 21 hợp chất sesquiterpen từ phần dịch chiết CHCl3 của củ nghệ tươi. Chúng là các dẫn chất ceton (I) và (4s. 5s) germacron 4,5 epoxy (II) (CA 109, 1988, 190589p). Kuroyanagi Masanori, Ueno Akira tiếp tục phân tích và tách được 11 sesquiterpen có khung guaian, seco guain và germacran (CA. 113, 1990, 3229u).",
+        "triết xuất": "Arai Ichiro và cộng sự đã tách được từ nghệ trắng chất (4s, 5s) – (+) germacron 4,5 epoxy để điều trị bệnh đái tháo đường (CA. 121, 1994, 286576f).",
+        "tinh dầu chứa": "Thành phần các chất bay hơi trong loài nghệ trắng ở Ấn Độ đã được Choudhury S.N; Ghosh Anil.c nghiên cứu. Nguyên liệu được cất kéo bằng hơi nước thu được một loại tinh dầu, đem phân tích bằng sắc ký khí và sắc ký phổ khối thấy có 51 thành phần (trong lá) 50 thành phần (cuống lá) và 61 thành phần (rễ). Thành phần chủ yếu gồm 1,8 cineol (lá 20%, cuống lá 8,8% và thân rễ 9,3%), camphor (lá 18%, cuống lá 16,8% thân rễ 25,6%), germacron (lá 11,8%, cuống lá 0,2% và thân rễ 10,6%), isoborneol (M 6,4%, cuống 6,8% thân rễ 8,2%), camphen (9,4%, 1,2%, 7,4%). Lá nghệ trắng còn có limonen 8,6% oxyd caryophyllen 8,7%, pachouli alcol 8,4% và elsholtzia ceton 6% trong rễ, curzenenon (10,9%) trong thân rễ (CA. 126, 1997, 72585n).",
+        "có hoạt chất": "Năm 1990, Zao và Rongbao đã tổng hợp toàn phần một hoạt chất chống u chủ yếu có trong nghệ trắng là (-) curdion (I) từ carvon (II)."
+      },
+      "Tính vị": {
+        "Có vị": "Nghệ trắng có vị cay, đắng, tính hàn, vào các kinh tâm, phế, can, có tác dụng hành khí, giải uất, lương huyết, phá ứ."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ở Việt Nam, nơi có nghệ trắng mọc, đồng bào Thái thường đào thân rễ về rửa sạch thái mỏng nấu với cá ăn cho thơm và đỡ tanh.  Theo kinh nghiệm nhân dân, nghệ trắng được dùng chữa kinh nguyệt không đều, đau bụng kinh, viêm gan mạn tính, ho gà, tê thấp, sưng tấy. Dùng ngoài chữa bong gân, sai khớp, liều dùng 6-12g. sắc nước uống, hoặc dưới dạng hoàn tán. Thường dùng phối hợp với các vị thuốc khác.  Ở Lào, nhân dân vùng Sầm Nưa coi nghệ trắng là một vị thuốc bổ, dùng cho phụ nữ sau khi đẻ. Ở Trung Quốc, nghệ trắng được dùng chữa đau tức ngực, bụng đầy trướng, vàng da, nôn ra máu, đi tiểu ra máu, kinh nguyệt không đều, động kinh.",
+        "chữa": "Ở Việt Nam, nơi có nghệ trắng mọc, đồng bào Thái thường đào thân rễ về rửa sạch thái mỏng nấu với cá ăn cho thơm và đỡ tanh.  Theo kinh nghiệm nhân dân, nghệ trắng được dùng chữa kinh nguyệt không đều, đau bụng kinh, viêm gan mạn tính, ho gà, tê thấp, sưng tấy. Dùng ngoài chữa bong gân, sai khớp, liều dùng 6-12g. sắc nước uống, hoặc dưới dạng hoàn tán. Thường dùng phối hợp với các vị thuốc khác.  Ở Lào, nhân dân vùng Sầm Nưa coi nghệ trắng là một vị thuốc bổ, dùng cho phụ nữ sau khi đẻ. Ở Trung Quốc, nghệ trắng được dùng chữa đau tức ngực, bụng đầy trướng, vàng da, nôn ra máu, đi tiểu ra máu, kinh nguyệt không đều, động kinh."
+      },
+      "Cách dùng": {
+        "sắc uống": "Chữa băng huyết, máu xấu, đau bụng kinh:\u00a0Nghệ trắng 20g, nhọ nồi 20g (sao cháy), củ gấu 20g (chế với giấm, nước muối, rượu và nước tiểu trẻ em), tô mộc 16g, ngải cứu 12g (sao đen). Tất cả thái nhỏ sắc với 400ml nước còn 100ml, chia làm 2 lần uống trong ngày.",
+        "sắc nước uống": "Chữa viêm gan mạn tính, đau vùng gan:\u00a0Nghệ trắng, nga truật, thanh bì, chỉ xác, lá móng tay, sơn tra, quyết minh tử (sao), mộc thông, tô mộc, huyết giác, mỗi vị 12g. sắc nước uống.",
+        "giã nát": "Chữa ho gà:\u00a0Lấy 20g nghệ trắng tươi giã nhỏ, tẩm rượu vừa đủ ướt, cho vào lọ nút kín, hấp cách thủy 1 giờ, rồi chắt nước uống.",
+        "sắc nước uống": "Chữa sỏi túi mật:\u00a0Nhân trần, kim tiền thảo mỗi vị 30g, nghệ trắng, chỉ xác, đại hoàng, xuyên luyện tử, nguyên hồ mỗi vị 9g, mộc hương 6g, sài hổ 8g. sắc nước uống.",
+        "sắc uống": "Chữa bệnh mạch vành đau nhói vùng ngực, đau các điểm cố định:\u00a0Nghệ trắng, đan sâm, hồng hoa, diên hồ tổ, đương quy, mỗi vị 9g, giáng hương 4,5g, điền tam thất, hổ phách mồi vị 3g, tam thất, hổ phách nghiền thành bột, chia làm 2 phần uống với nước sắc các vị thuốc trên.",
+        "hầm": "Chữa kinh nguyệt không đều:\u00a0Nghệ trắng 6g, sinh địa 6g, hầm với xương lợn ăn."
+      },
+      "luu_y": {
+        "luu_y": "Những người âm hư thiếu máu, không có khí trệ, huyết ứ không được dùng nghệ trắng."
+      }
+    }
+  ]
+}

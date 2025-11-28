@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau câu",
+      "ten_khac": "Rau câu chỉ vàng, rong câu.",
+      "ten_khoa_hoc": "Gracilaria verrucosa (Huds.) Papenf.",
+      "ma_taxon": "345393",
+      "ho": "Gracilariaceae (Rau câu)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": null,
+        "quả": "Bào tử quả màu đỏ tươi.",
+        "cây": "Loài rong hình trụ tròn, mảnh, chia nhánh theo kiểu mọc chuyền, chạc đôi hoặc chùm cao 20 — 30cm, có khi hơn. Gốc tản có bàn bám dạng đĩa. Cấu tạo trong gồm lõi là trục chính được hình thành bởi những tế bào tương đối lớn, xung quanh có một hoặc vài hàng tế bào vây trụ. Phần biểu bì gồm 2-4 hàng tế bào liên kết chặt chẽ với nhau, nhỏ dần về phía ngoài.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": "Rau câu phân bố chủ yếu ở vùng biển nhiệt đới. Ở Việt Nam, rau câu có rải rác từ Quảng Ninh đến Kiên Giang. Cây cũng gặp nhiều ở xung quanh các đảo lớn. Gần đây, ngành thủy sản đã nuôi trồng thành công loại hải sản này để xuất khẩu.",
+        "thường_mọc": "Rau câu thường mọc bám trên đá hoặc trên các thực vật biển khác ở vùng triều. Ở những nơi ít sóng to, rau câu mọc lên từ cát hay đất phù sa pha cát ở các cửa sông. Là một loại tảo có cấu tạo dạng sợi phân nhánh nhiều, rất khó phân biệt được thân với các thể nhánh. Rau câu có hệ thống rễ mút bám chặt vào giá thể, để hút các chất dinh duỡng nuôi cây. Các tế bào diệp lục sắp xếp đều xung quanh sợi tảo giúp cho rau câu thực hiện quá trình quang hợp phức tạp ngay trong lớp nước biển nông. Rau câu đẻ nhánh rất khoẻ, các nhánh con là nguồn giống để trồng.",
+        "Đặc điểm sinh trưởng": "Rau câu là một nguồn lợi của biển, có nhiều chấi dinh dưỡng nên thường được dùng để ăn. Ngoài ra, rau câu là nguồn nguyên liệu agar sử dụng nhiều trong y tế và công nghệ sinh học."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây rau câu, thu hái từ tháng 3 đến tháno 10. Hái về, loại bỏ tạp chất (đất cát, vỏ sò, ốc), rửa bằng nước sạch, phơi nắng nhiều ngày cho trắng.  Rau câu là nguyên liệu chế thạch (agar). Cách chế biến như sau: nấu rau câu với nước sạch (cứ 1kg rau câu dùng 55 – 60kg nước) ở nhiệt độ 80 – 100°c thạch sẽ tan trong nước lọc, để nguội. Ở nhiệt độ 35 – 50°c, nước đông lại thành thạch, cắt thạch thành thỏi hoặc ép qua bàn ép có lỗ để được thạch hình sợi.  Có thể chế thạch theo phương pháp công nghiệp với quy trình sau: chiết xuất rau câu bằng nước nóng lọc tẩy trắng bằng than, lọc qua bàn ép, làm khô và thái nhỏ."
+      },
+      "Thành phần": {
+        "thành phần": "Thạch chứa khoảng 20% nước, 4 – 5% chất vô cơ, lipid (vết), 4 – 5% hợp chất có nitơ. Thạch cơ thể phân tách thành 2 phân đoạn: agarose và agaropectin. Agarose được cấu tạo bởi nhiều đơn vị agarobiose. Agarobiose là disaccharid của p – D — galactose và 3 – 6 — anhydro – a – L — galactose (cấu trúc hoá học được xác định sau khi thủy phân bằng acid. Nếu đem thuỷ phân bằng enzym, cấu trúc có khác).  Agaropectin có cấu trúc chưa được xác định rõ ràng. Agaropectin có galactose, anhydrogalactose, nhiều gốc của acid uronic và ester sulfuric.",
+        "gồm chất": null,
+        "Các hợp chất": null,
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": "Có tác giả cho biết thạch chứa 4 – o – methyl – a – L – galactose.  (Từ điển Bách khoa nông nghiệp, 1991; Từ điển Bách khoa dược học, 1999; Rau câu, 1969; Rau câu chỉ vàng, 1986; Matière méđicale, 1965; sổ tay cây thuốc Việt Nam, 1980)."
+      },
+      "Tính vị": {
+        "Có vị": "Thạch chế từ rau câu có vị ngọt, mặn, tính lạnh, trơn nhầy, có tác dụng bổ mát, nhuận tràng."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thạch được dùng làm thuốc chống bốc nóng lên trên đầu, thanh nhiệt ở thượng tiêu, khỏi uất nóng ở trong, và chữa bệnh viêm sưng tinh hoàn.  Nguồn: Cây thuốc và động vật làm thuốc Việt Nam.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

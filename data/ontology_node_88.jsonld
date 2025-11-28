@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bông ổi",
+      "ten_khac": "Bông ồi, Nhá khí mu, Cứt lợn, ổi nho, Hoa ngũ sắc, Trâm ổi, Thơm ổi, Bông ổi, Hoa tứ thời, Bông hôi, Mã anh đơn, Nhá khí mu (Tày)",
+      "ten_khoa_hoc": "Lantana camara L.",
+      "ma_taxon": "50333",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "hình bầu dục, đầu nhọn, mặt xù xì, mép có răng cưa, mặt trên có lông ngắn, cứng, mặt dưới lông mềm hơn, phiến lá dài 3-9cm, rộng 3-6cm",
+      "hoa": "không cuống, màu trắng, vàng, vàng cam hay đỏ mọc thành bông hình cầu gần giống như hình đầu. Hoa có lá bắc hình mũi giáo. Đài hình chuông, có hai môi. Tràng hình ống có 4 thùy không đều.",
+      "quả": "hình cầu, màu đỏ nằm trong lá đài, mang hai hạch cứng, xù xì.",
+      "cây": "Cây nhỏ mang nhiều cành ngang, có lông và gai ngắn quặp về phía dưới.",
+      "cuống": "lá ngắn, phía trên cuống có dài."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Năm 1943, Low đã chiết được từ cây bông ổi một chất gọi là lantanin",
+      "Các hợp chất": "Năm 1999, Các thành phần chính được tìm thấy trong dầu của lá và cành mỏng của  bông ổi là limonene, α-phellandrene, germacrene-D, β- caryophyllene và sabinene."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "giã nát": "Một số nơi nhân dân dùng lá cây bông ổi giã nát đắp lên những vết thương, vết loét, người ta cho lá bông ổi có tính chất sát trùng lên da, cầm máu.",
+      "được_dùng": "Người ta còn dùng đắp nơi rắn cắn và cho vào nồi nước xông chữa cảm mạo, sốt.",
+      "chữa": "Chú thích:  Cây này không có tác dụng chữa viêm xoang mũi như cây cứt lợn Ageratum conyzoides. Chú ý tránh dùng lầm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây nguồn gốc các nước Trung Mỹ, sau được phổ biến đi khắp các nước vùng Viễn Đông, Mangat, Tân Calêđônia. Tại Tân Calêđônia cây mọc hoang và phát triển tới mức độ chính phủ ở đây phải ra lệnh triệt hết những cây này dù chỉ giữ một gốc để làm cảnh cũng không được phép. Tại Việt Nam cây được trồng làm cảnh và mọc dại.",
+      "phơi khô": "Lá và cành được dùng làm thuốc; hái về phơi hay sấy khô.",
+      "có tác dụng": "Toàn thân cây tỏa ra một mùi đặc biệt có người ưa nhưng cũng có người không ưa."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Húng giổi",
+      "ten_khac": "Húng giổi, Húng quế, Húng chó, É, Húng quế, La lặc, Phắc y tu (Thái), Năng cốp (Tày)",
+      "ten_khoa_hoc": "Ocimum basilicum L.",
+      "ma_taxon": "61398",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, hình trái xoan – mũi mác, dài 3– 5 cm, rộng 1 – 1.5 cm, gốc thuôn, đầu nhọn, hai mặt nhẵn, màu lục, mặt trên bóng, mặt dưới nhạt, mép nguyên hay hơi khía ràng, cuống lá dài.",
+      "hoa": "Cụm hoa mọc thành xim co ở đầu cành gồm nhiều vòng có 5 – 6 hoa nhỏ màu trắng hơi hồng, các vòng mọc cách xa nhau ở phía dưới và sít nhau ở ngọn, lá hắc nhỏ rụng sớm, đài 5 răng không bằng nhau mọc nghiêng, tồn tại khi cánh hoa đã rụng, màu lục hoặc tím tía, tràng hợp ở dưới thành ống, rồi xẻ 2 môi, môi trên chia 4 thùy nông, môi dưới nguyên; nhị 4 hơi thò ra ngoài, bầu 4 ô.",
+      "quả": "Quả bế tư, rời nhau, mỗi bế quả đựng một hạt.",
+      "cây": "Cây sống hàng năm hay lâu năm, cao 25 – 50cm.",
+      "thân": "Thân và cành vuông, nhẵn , phân nhánh nhiều, cành non màu tím đỏ.",
+      "mùa hoa": "tháng 5 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ocimum L. có 5 loài ở Việt Nam, tất cả đều là cây trồng làm gia vị hoặc lấy tinh dầu.  Húng Giổi là loài cây cổ nhiệt đới, hiện được trồng khá phổ biến ở các nước nhiệt đới Đông – Nam Á và Nam Á. Ở Việt Nam, Húng Giổi \u00a0là cây gia vị quen thuộc, được trồng rộng rãi trong nhân dân, ở vườn gia đình và trên đồng ruộng.",
+      "thường_mọc": "Húng giổi là cây ưa sáng và ưa ẩm, sinh trưởng mạnh trong mùa mưa ẩm. Song với kỹ thuật canh tác hiện nay, người nông dân ở xung quanh Hà Nội, có thể trồng được húng giổi gần như quanh năm, kể cả mùa đông là thời kỳ tàn lụi của cây. Húng giổi ra hoa quả nhiều, hạt gieo nảy mầm tốt. Tuy nhiên để sớm được thu hoạch, người ta thường trồng bằng cành. Cây có khả năng mọc chồi nhanh sau khi bị ngắt ngọn. Tốc độ sinh trưởng của chồi có thể đạt 1- 1.5cm/ngày."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây ( cất tinh dầu ). Lá và ngọn có hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất của cây húng giổi chứa tinh dầu.",
+      "gồm chất": "Tinh dầu có thể được phân chia thành nhiều nhóm hóa học:\n Nhóm methylchavicol Nhóm linalol và geranyl acetat Nhóm methylchavicol và linalol Nhóm linalol và eugenol Nhóm linalol và methyl cinnamal"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Húng giổi có vị cay, tính âm, vào hai kinh phế, Lâm, có tác dụng làm ra mồ hôi, giải cảm, tán máu ứ, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Húng giổi được dùng phổ biến làm rau gia vị trong bữa ăn. Trong y học, húng giổi chữa cảm cúm, đầy bụng khó tiêu, vấp ngã hay bị đòn sưng đau. Liều dùng 20g lá tươi giã nhỏ, uống với nước nóng. Dùng ngoài đắp hoặc vò xát chữa vết thương rắn cắn, mẩn ngứa. Hạt húng giổi (6 – 12g) ngâm vào nước thường hay nước đường, đợi cho chất nhầy nở ra rồi uống có tác dụng nhuận tràng.  Ở Ấn Độ,tinh dầu húng giổi là chất làm thơm trong sản xuất bánh kẹo, thực phẩm, đồ uống, và các chế phẩm về răng miệng. Cây được coi là có tác dụng bổ dạ dày, diệt giun sán giải độc, hạ sốt, làm ra mồ hôi, long đờm, gây trung tiện, giảm ho. Nước hãm của cây chữa nhức đầu và bệnh gút ở khớp, làm thuốc súc miệng trị hôi miệng. Nước ép lá có tác dụng gây ngủ nhẹ, làm dịu kích thích họng được dùng để rửa mũi, trị đau tai và bệnh nấm da. Cây húng giổi cũng được dùng trong hiệu pháp vi lượng đồng căn. Hạt có tác dụng làm dịu kích thích, lợi tiểu, làm ra mồ hôi, làm nát, được dùng uống chữa táo bón và trĩ, dùng ngoài đắp trị lở loét.  Cây húng giổi có tính chất nhớt nên giúp ích cho tác dụng long đờm, giảm sung huyết và làm thông đường hô hấp. Hạt húng giổi tán với nước thành bột nhão mịn, uống mỗi lần 5 – 6g, ngày 3 lần để chữa lỵ.  Lá húng giổi (10g) trộn với 5 hạt hồ tiêu và 100 ml nước, sắc lấy nước, cho thêm đường và uống, ngày 3 lần, trong 5 – 7 ngày, chữa thương hàn, kiêng \u00a0ăn thức ăn cứng.  Bài thuốc có húng giổi:  Chữa ho: Húng giổi, húng chanh, xương sông. Giã dập với ít muối và ngậm. Chữa mề đay, dị ứng: Húng giổi giã nhỏ chế với nước nóng, vắt lấy nước cốt uống và lấy bã xoa\u00a0 đắp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

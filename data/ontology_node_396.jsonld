@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cải sen",
+      "ten_khac": "Cải bẹ, cái dưa",
+      "ten_khoa_hoc": "Brassica campestris L.",
+      "ma_taxon": "53271",
+      "ho": "Cải (Brassicaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống một năm hay hai năm, cao đến 1m.",
+      "thân": "Thân hình trụ, nhẵn hoặc hơi có lông, màu lục.",
+      "lá": "Lá mọc so le, có bẹ to, hình bầu dục – mác thuôn, dài 30 – 40 cm, những lá phía dưới nguyên hoặc xẻ, lá phía trên ít xẻ hơn, mép lá lượn sóng, hai mặt nhẵn, mặt trên màu lục sẫm, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân hoặc đầu cành thành chùm dài; hoa nhỏ màu trắng hoặc hơi vàng, có 6 nhị, 4 dài và 2 ngắn.",
+      "quả": "Quả hình trụ, dài 2 – 4 cm, đầu có mỏ dài, hạt hình cầu, vỏ màu nâu đen hay đỏ nâu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cải sen được trồng từ cổ xưa ở vùng Trung Âu và Trung Quốc. Cây được nhập trồng ở Việt Nam vào thời gian nào chưa rõ. Song chắc chắn là cây có nguồn gốc từ vùng ôn đới ấm, vì cây trồng ở miền Bắc Việt Nam chủ yếu cũng vào vụ đông – xuân, với nền nhiệt độ trung bình từ 15 – 24°C.  Cải sen là cây ưa ẩm, mọc nhanh. Vòng đời của cây từ khi gieo hạt đến khi có quả già, chỉ vào khoảng trên 100 ngày. Do là cây được nhập nội vào Việt Nam đã lâu, cùng với quá trình chọn lọc và di chuyển vùng trồng, nên trong loài cải sen hiện nay cũng có nhiều giống địa phương khác hẳn nhau."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cải sen là cây ngắn ngày, ưa ẩm nhưng không chịu được hạn và úng. Cây thích nghi với các loại đất nhẹ, tơi xốp, thoát nước, tốt nhất là loại đất cát pha. Trồng vào mùa đông xuân, có thể cả mùa hè.  Cải sen được gieo trồng bằng hạt bằng cách gieo vãi, gieo theo rạch, trên luống, hoặc các vật nhỏ. Cần phải làm đất ải, cày, bừa hay cuốc cho tơi nhỏ, làm thành luống cao 15 – 20cm, rộng 70 – 90cm cắt rạch ngay trên mặt luống. Sau đó dùng phân chuồng được 1 với trấu thật ai rắc lên các rạch rồi gieo hạt. Trên mặt luống phủ trấu hay rơm, rạ để khi tưới hay gặp mưa không bị trôi hạt. Chăm sóc chủ yếu là tưới nước, nhổ cỏ, bón thúc phần bằng cách pha nước tưới vào gốc hoặc rắc phân vi sinh tổng hợp. Có thể trồng cải sen được nhiều lứa trong một vụ vì một lứa cải chỉ chiếm đất chừng 35 – 45 ngày là thu hoạch."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cải sen chứa quercitrin, vitamin K, amyloid, một polysaccharid có độ phân nhánh cao, một loại 12s globulin, 3 – hydroxycarbofuran, ester của acid isothiocyanic, acid n – eicos – 11 – encic, sitosterol, campesterol, brassicasterol, 24 methylchotesta – 5. 22E – dien – 3 – ol, trans – dehydrocampesterol, acid erucic, vitamin E, sinapin, glucosinat [Trung được từ hải II, 1996: 781].  Hat chứa thiocyanat, PhEt (2-hydroxyhexyl) ester 82% và dẫn chất isothiocyanat [CA 125: 8842w]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hạt cây cải sen còn được gọi là vân đài tử, có vị nhạt, không mùi, có tác dụng phá huyết, kết tán, tiêu thũng, tiêu viêm. Thân lá hơi cay, tính mát, có tác dụng kiện vị."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá cải sen giã nát, đắp ngoài trị áp xe, ung thũng. Rễ và lá để kích thích tiêu hoá, thông mật, chống thôn. Rễ và hạt được dùng chữa chảy máu chân răng, viêm lợi, bệnh scorbut.  Hạt và hoa trị mụn nhọt, đẻ xong đau bụng. Dầu hạt chữa thấp khớp, sưng đau. Liều dùng hàng ngày: 6 – 9g hạt.  Trong thực phẩm, lá cài sen được dùng để luộc, nấu canh hoặc làm dưa để ăn.  Bài thuốc có vị cải sen  Chữa chảy máu chân răng, viêm lợi:  Hạt cải sen, nghiền nát, ép lấy dầu, trộn với muối, lấy bàn chải răng tẩm thuốc rồi chải vào răng [Chatterjee và Pakrashi, 1997, The treatise on Indian med. plants, vol.1: 142, NXB NISC, New Delhi]  Chữa thấp khớp, đau cơ, cứng cổ:  Lấy dầu hạt cải sen trộn với camphor (tỷ lệ 1/10 – 1/5) làm thành thuốc xoa để xoa lên chỗ đau. Còn xoa lên ngực khi bị viêm phế quản, hoặc xoa lên thái dương, trán, mũi khi bị cảm cúm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "..."
+    }
+  ]
+}

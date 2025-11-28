@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hương thảo",
+      "ten_khac": "Hương thảo, Mê điệt hương.",
+      "ten_khoa_hoc": "Rosmarinus officinalis Lamiaceae .",
+      "ma_taxon": "636795",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Cây hương thảo là một loại cây bụi xanh quanh năm, có mùi thơm và lá giống như lá cây thông Tsuga.. Vỏ thân cây màu xám đen, nứt nẻ không đều, tróc vẩy, cành non có mật đồ dày màu trắng. Cây này có thể phát triển theo nhiều dạng, từ thẳng đứng đến rủ xuống. Các dạng thẳng đứng có thể cao từ 1,2 đến 1,8 mét.",
+      "lá": "Lá chụm trên cành, rất nhiều lá, hình dạng lá hẹp, mép lá gập xuống, lá hình dài, không có cuống, màu xanh sẫm và nhẵn ở trên, phủ lông rải rác màu trắng ở mặt dưới. Lá của cây dài từ 2 đến 4cm, rộng từ 2 đến 5mm, mặt trên màu xanh và mặt dưới màu trắng với lớp lông ngắn, dày.",
+      "hoa": "Hoa xếp 2-10 ở các vòng lá, đài cỡ 1cm, màu lam nhạt có hơi màu hoa cả và những chấm tím ở phía trong các thùy. Cây hương thảo nở hoa vào mùa xuân và mùa hè ở các vùng khí hậu ôn đới, nhưng có thể nở hoa liên tục ở các vùng khí hậu ấm áp. Hoa có màu trắng, hồng, tím hoặc xanh đậm. Các cành cây có các nhóm hoa từ 2 đến 3 bông dọc theo chiều dài của nó. Cây hương thảo cũng có thể nở hoa ngoài mùa thông thường, có thể nở muộn đến đầu tháng 12 và sớm nhất là giữa tháng 2 (ở Bắc bán cầu).",
+      "rễ": "dạng rễ trùm"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây có nguồn gốc từ vùng Địa Trung Hải, nhưng cũng có thể chịu được khí hậu mát mẻ. Một số giống đặc biệt như ‘Arp’ có thể chịu được nhiệt độ mùa đông xuống tới khoảng −20°C.  Hương thảo có nguồn gốc từ vùng Địa Trung Hải, cũng như Bồ Đào Nha và tây bắc Tây Ban Nha. Nó được nhắc đến lần đầu tiên trên các phiến đá hình nêm sớm nhất là vào năm 5000 trước Công nguyên. Loại thảo mộc này đã được thuần hóa ở Trung Quốc sớm nhất là vào năm 220 sau Công nguyên, dưới thời Hậu Hán.  Hương thảo đến Anh vào một thời điểm không xác định, mặc dù có khả năng người La Mã đã mang nó đến khi họ xâm chiếm Anh vào năm 43 sau Công nguyên. Tuy nhiên, không có ghi chép đáng tin cậy nào về hương thảo ở Anh cho đến thế kỷ thứ 8 sau Công nguyên. Lần đề cập này nằm trong một tài liệu sau này được cho là của Charlemagne, người đã khuyến khích việc sử dụng chung các loại thảo mộc và đặc biệt ra lệnh trồng hương thảo trong các vườn và trang trại tu viện.  Không có ghi chép nào về việc hương thảo được thuần hóa đúng cách ở Anh cho đến năm 1338, khi các cành giâm được gửi đến Nữ hoàng Philippa bởi mẹ của bà, Nữ bá tước Joan xứ Hainault. Sau đó, nó được trồng trong vườn của cung điện Westminster cũ. Kể từ đó, hương thảo có thể được tìm thấy trong hầu hết các văn bản thảo dược của Anh.  Cuối cùng, hương thảo đã đến châu Mỹ cùng với những người định cư châu Âu đầu tiên vào đầu thế kỷ 17, và nhanh chóng lan sang Nam Mỹ và phân bố trên toàn cầu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Một số tác dụng phụ khi dùng hương thảo quá liều:  Kích ứng dạ dày và ruột: Tiêu thụ một lượng lớn hương thảo có thể gây kích ứng dạ dày và ruột, cũng như gây tổn thương thận.  Viêm da tiếp xúc dị ứng: Một số người có thể bị viêm da tiếp xúc dị ứng khi tiếp xúc với hương thảo, mặc dù hương thảo không được coi là chất gây nhạy cảm da phổ biến ở người.  Gây co giật: Các thành phần trong hương thảo, đặc biệt là monoterpene ketones, có thể gây co giật khi dùng với liều lượng lớn. Tinh dầu hương thảo có thể gây độc nếu nuốt phải. Số lượng lớn lá hương thảo có thể gây ra các phản ứng phụ như hôn mê, co thắt, nôn mửa và phù phổi (chất lỏng trong phổi) có thể gây tử vong.  Gây sảy thai: Hương thảo cũng có tác dụng gây sảy thai.  Vì vậy, cần thận trọng khi sử dụng hương thảo, đặc biệt là ở liều lượng lớn."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hương thảo có mùi rất thơm. Tinh dầu hương thảo là hợp chất thơm dễ bay hơi. Cây chứa tinh dầu và tannin, ở cây khô tinh dầu khoảng 0,5%, lá có 1-2%, hoa có 1,4%. Trong tinh dầu, thành phần gồm có α-pinen (tới 80%), terpen, borned, acetat bornyl, camphor, cineol và 1 sesquiterpen (caryophyllen)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hương thảo có vị chát, nóng, mùi thơm nồng, hơi se, có tính tẩy uế và chuyển máu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": null
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

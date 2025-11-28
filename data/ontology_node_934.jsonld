@@ -1,0 +1,239 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sơn dịch",
+      "ten_khac": "Khoai ca, nam mộc hương",
+      "ten_khoa_hoc": "Aristolochia indica L.",
+      "ma_taxon": "464599",
+      "ho": "Mộc hương (Aristolochiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mọc leo, sống nhiều năm.",
+      "rễ": "Rễ phình thành củ to.",
+      "thân": "Thân nhẵn, cành màu nâu đen.",
+      "lá": "Lá mọc so le, hình mác – trái xoan, gốc bằng hay hơi hình tim, đầu thuôn nhọn, mép lượn sóng, hai mặt nhẵn, 5 gân toả từ gốc lá; cuống dài 1 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, gồm 2 – 3 hoa, lá bắc nhỏ, bao dài 3 – 4 cm, gồm 6 thuỷ thuôn nhãn, phần dưới hẹp, phần trên loe thành phiến hai môi; nhị 6; bầu hạ chứa nhiều noãn.",
+      "quả": "Quả nang, dài 3 – 4 cm; hạt dẹt, có cánh.",
+      "mùa hoa": "Tháng 4 – 7.",
+      "mùa quả": "Tháng 4 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Sơn dịch là loài tương đối hiếm gặp ở nước ta. Theo một số tài liệu hiện có, về phân bố của loài này mới ghi nhận được tại một số điểm thuộc tỉnh Gia Lai, Bình Dương, Bà Rịa – Vũng Tàu [Sách Đỏ Việt Nam, 2007; Danh lục Đỏ cây thuốc Việt Nam, 2006]. Gần đây phát hiện thêm điểm phân bố mới tại ngoại ô thành phố Đà Lạt (Lâm Đồng).  Sơn dịch là loài cây chịu bóng, ưa ẩm và cũng hơi chịu được khô hạn. Cây mọc rải rác ở ven rừng kín thường xanh âm, độ cao lên tới khoảng 1400m (ngoại ô Đà Lạt). Do sự phân bố hạn chế, kích thước quần thể nhỏ, nên sơn dịch được đưa vào “Danh lục đỏ cây thuốc Việt Nam” (1996, 2007) nhằm khuyến cáo bảo tồn.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Gia Lai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bình Dương"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bà Rịa – Vũng Tàu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, thân và lá dùng tươi hay phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây chứa acid aristolochic, acid aristolochic D và Me etler lactam của nó và aristololactam – β – D – glucosid và một sesquiteren 4 vòng là ishwaron."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ sơn dịch có vị đắng và gây buồn nôn. Toàn cây dùng trị bệnh sốt từng cơn, thuỷ thũng (Võ Văn Chi, 1997: 615).  Trong y học dân gian Ấn Độ, rễ sơn dịch là thuốc giải độc trị rắn cắn và côn trùng độc chấm đốt như bọ cạp, được dùng cả bên ngoài và bên trong, nó làm cho chỗ bị cắn không cảm thụ đối với tác dụng nguy hại của chất độc. Xoa với mật ong, nó được dùng trị bệnh phong và trị phù. Ngâm với hạt tiêu, nó được dùng trong trường hợp mắc bệnh tả và tiêu chảy. Nước súc rễ và thân cây có tác dụng kích thích và hạ sốt. Kết hợp với hạt tiêu và gừng nó được dùng làm thuốc giảm chướng bụng trong tiêu chảy và các bệnh đường ruột. Ở Philippin, rễ có nhựa đắng của Sơn dịch là một loại thuốc thông dụng để trị các vết cắn và vết đốt có nọc độc (Selvanaya gam Z E et al., 1994)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

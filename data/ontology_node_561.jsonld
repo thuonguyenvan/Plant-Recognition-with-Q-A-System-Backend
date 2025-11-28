@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mít",
+      "ten_khac": "Mít, Mít dai, Bà la mật, Mác mị (Tày), Pnát (Kho)",
+      "ten_khoa_hoc": "Artocarpus integer (Thunb.) Merr.",
+      "ma_taxon": "347392",
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá đơn, nguyên, dày, dài 9-22cm, rộng 4-9cm, cuống 1-1,5cm",
+      "hoa": "Hoa đơn tính, cùng gốc. Cụm hoa cái mọc ngay trên thân hay trên cành, dài 5-8cm, dày 2-5cm. Cụm hoa đực hình chùy.",
+      "quả": "Qủa phức to, dài 30-60cm, mặt tua tủa những gai ngắn. Khi chín vỏ vẫn giữ màu xanh lục hay hơi ngả vàng. Thịt quả chín màu vàng nhạt, vị ngọt rất thơm, hạt rất nhiều",
+      "cây": "Mít là một cây to, cao có thể tới hơn 30m, với cành non rất nhiều lông ở ngọn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần hóa học trong toàn cây và lá có chất nhựa mủ màu trắng không rất dính.",
+      "gồm chất": "Trong múi mít khô có 11-15% đường, (fructoza, glocuza), một ít tinh dầu mùi thơm, 1,60% protit, 1-2% muối khoáng bao gồm canxi (18mg%) photpho (25mt%), sắt (0,4mg%), caroten (0,14mg%), vitamin B2 (0,04%), Vitamin C (4mg%)",
+      "chứa": "trong hạt mít có 70% tinh bột, 5,2% protit 0,62% chất béo, 1,4% muối khoáng. Ngoài ra trong hạt mít có chất men ức chế men tiêu hóa trong ruột nên ăn mít dễ bị đầy hơi, trung tiện nhiều",
+      "đã nghiên cứu": "năm 1990, một số nhà nghiên cứu đang tìm cách sử dụng hạt mít chữa bệnh Sida",
+      "Các hợp chất": "trong gỗ mít có những hợp chất flavon như artocarpin, isoartocarpin, artocarpetin, artocarpanon, xyanomaclurin và xycloartocarpin"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá mít làm thuốc lợi sữa cho trâu, bò, dê lợn và người. Phụ nữ đẻ ít sữa dùng lá mít nấu uống làm cho ra sữa hoặc thêm sữa. Ngày dùng 30-40g lá tươi.",
+      "làm thuốc": "Gỗ và lá mít còn được dùng làm thuốc an thần, chữa huyết áp cao hay chữa những trường hợp co quắp; Mài gỗ mít lên miếng đá nháp hay chỗ nháp của trôn bát, có thêm ít nước. Nước sẽ vẫn đục do chất gỗ và nhựa mít. Uống thứ nước đục này. Ngày dùng từ 6-10g gỗ mít mài như trên.",
+      "chữa": "Có người còn dùng lá mít chữa ỉa chảy, táo bón, ăn không tiêu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mít được trồng khắp các tỉnh nước ta. Còn thấy cả ở Lào, Campuchia. Chủ yếu người ta trồng để lấy quả ăn. Qủa non luộc làm rau ăn. Hạt nướng hay luộc ăn ngon, thơm và bùi, gỗ quý, màu vàng, không mọt, dùng làm nhà, làm đồ đạc và tạc tượng.",
+      "làm thuốc": "Dùng làm thuốc, thường người ta chỉ hay dùng lá mít tươi. Khi dùng đến mới hái. Một số nơi dùng gỗ mít làm thuốc an thần, dùng gỗ tươi hay khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

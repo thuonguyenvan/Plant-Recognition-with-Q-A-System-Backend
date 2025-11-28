@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/gai-kim.html",
+      "ten": "Gai kim",
+      "ten_khac": "Gai kim hoang, chông",
+      "ten_khoa_hoc": "Barleria prionitis L.",
+      "ma_taxon": "82266",
+      "ho": "Ô rô (Acanthaceae)",
+      "Mô tả": {
+        "lá": "Lá mọc đối, hình trái xoan, dài 2 – 12 cm, rộng 1 – 6 cm, gốc thắt dần lại, đầu thuôn nhọn, mép nguyên, mặt trên đôi khi có lông, mặt dưới có lông rải rác; gai ở kẽ lá, chẻ làm tư.",
+        "hoa": "hoa màu vàng; đài có 2 phiên ngoài hình mác, phiến trong hình dải dạng gai; tràng dài 3 – 4 cm, có ống, chia 2 môi, môi trước một thuỷ, môi sau xẻ 4 thuỳ; bầu nhẵn, mỗi ô chứa 2 noãn.",
+        "quả": "Quả nang, 2 hạt có mỏ.",
+        "cây": "Cây bụi nhỏ, phân cành, có gai, cao 1 – 1,5m.",
+        "thân": "Thân gần bốn cạnh, nhẵn.",
+        "mọc": "Cụm hoa mọc ở kẽ lá, đơn độc hoặc 3 cái một; những hoa ở gần ngọn họp thành bông; lá bắc thuôn, không cuống, lá bắc con hình dải hẹp, dạng gai đơn;"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Barleria L. trên thế giới có khoảng 250 loài (có tài liệu ghi gần 300 loài – PROSEA, 12(2) – Med. and poisonous Pls.2, 2001), phân bố rộng rãi ở vùng nhiệt đới, tập trung nhiều ở châu Phi, sau đến vùng Nam Á và Đông Nam Á, ở Trung Mỹ chỉ có 1 loài. Ở Việt Nam, chi này đã biết 4 loài và 1 thứ (var.), trong đó loài gai kim chi thấy phân bố tự nhiên từ các tỉnh Trung Bộ trở vào; đôi khi cũng được trồng ở bờ rào để làm cảnh vì có hoa màu vàng, đẹp. Vùng phân bố của cây trên thế giới bao gồm suốt châu Phi, về phía Đông bao gồm bán đảo Ả Rập đến các quốc gia ở vùng Nam Á và toàn vùng Đông Nam Á.",
+        "thường_mọc": "Gai kim là cây ưa sáng, ưa ẩm và cũng có khả năng chịu hạn tốt. Cây thường mọc lẫn trong các tràng cỏ cao – cây bụi, hoặc trong các lùm bụi quanh làng cũng như dọc theo các bờ kênh mương. Cây ra hoa quả nhiều hàng năm. Tái sinh tự nhiên tốt từ hạt. Ngoài ra, khi cây chưa ra hoa, nếu bị cắt vẫn có khả năng mọc cây chồi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Lá, vỏ và rễ."
+      },
+      "Thành phần": {
+        "thành phần": "Hoa chứa một lượng đường dưới dạng mật khá cao, cả cây chứa alcaloid và nhiều kali. Theo Phạm Hoàng Hộ (2006) trong loài B. uplina lindl, một loại cây trồng có xuất sứ từ Madagasca, thân và lá chứa các eridioid là barlerin, Shanzhisid, betain, ipolamidosid và 4 iridoid glucosid."
+      },
+      "Tính vị": {
+        "Có vị": "Rễ gai kim sắc lấy nước uống chữa sốt vì tươi giã nát đắp; nếu là rễ khô tán thành bột, chiếc với nước thành bột nhão đắp để làm tan mụn nhọt. Lá gai kim vị đắng, cay, tính ấm, có công năng làm ra mồ hôi, long đờm, trừ ho, giải độc, tiêu thũng."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá gai kim được dùng chữa đau răng. Lấy lá, sắc đặc rồi ngậm. Cành cả lá dùng chữa ho, ngày 20 – 30g sắc uống. Ở Ấn Độ, rất hay dùng các bộ phận của cây gai kim. Để chữa phù và phù toàn thân, thường lấy vỏ cây tươi, giã nát, lấy nước thêm sữa uống. Có thể dùng toàn cây, đốt lấy than, trộn mật ong rồi uống [Kirtikar KR. et al., 1998, Ill: 1876]. Lá gai kim tươi giã nát, lấy nước, trộn mật ong dùng cho trẻ em để chữa ho, sốt, viêm nhiễm xuất tiết, đau răng, viêm lợi xuất huyết, người lớn còn dùng chữa rối loạn tiết niệu, để lợi tiểu, chữa di mộng tinh, liệt [Chatterfee và Pakrashi; 1997, 9: S8]; còn chữa ngạt mũi, đờm dãi đặc quánh dịch. Ở Trung Quốc, rễ cây gai kim được dùng chữa đau răng, họ và đắp để chữa trĩ. Ở Indonesia, lá được dùng chữa đau bụng, nhức đầu, thấp khớp, khó tiểu tiện, đau răng, ghẻ, ngứa, nấm da; rễ giã nát đắp hoặc sắc bôi lên chỗ viêm da, uống nước sắc chữa sốt [Med. Herb Index, 1995: 248]."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

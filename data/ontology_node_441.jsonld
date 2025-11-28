@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chàm quả nhọn",
+      "ten_khac": "Xà chàm, chàm lá tròn, chàm phụng.",
+      "ten_khoa_hoc": "Indigofera galegoides DC.",
+      "ma_taxon": "139009",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo dạng bụi, cao 1 – 3m.",
+      "thân": "Cành mọc trải rộng, có cạnh và lông áp sát.",
+      "lá": "Lá kép lông chim lẻ, mọc so le, gồm 21 – 25 lá chét mọc đối, hình trái xoan – thuôn, dài khoảng 2 cm, rộng 7 mm, gốc tròn, đầu nhọn, hai mặt có lông hình thoi rải rác; lá kèm hình sợi; cuống lá kép dài 10 – 15 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, dài 6 – 10 cm, gần nhẵn, cuống hoa hướng lên rồi gập xuống, hoa màu hồng, rất sít nhau; đài hình đấu, hơi có lông, có răng ngắn hình tam giác, hai cái ở trên gần tròn, tràng có cánh cờ hình trái xoan – thuôn, có lông nhỏ ở lưng, cánh bên thuôn, cánh thìa cong và tròn ở đầu; nhị 2 bó, bao phấn hình trái xoan, bầu nhẵn.",
+      "quả": "Quả đậu, dài đến 7 cm, mọc sít nhau hướng lên, hơi có lông, đầu nhọn; hạt nhiều, hình vuông.",
+      "mùa hoa": "tháng 8 – 9",
+      "mùa quả": "tháng 10 – 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong số 25 loài thuộc chi Indigofera L. đã biết ở Việt Nam, có lẽ chàm quả nhọn có vùng phân bố rộng rãi nhất, từ vùng núi có độ cao gần 1000m xuống vùng trung du và cả ở đồng bằng, bắt đầu từ tỉnh Hà Giang (huyện Bắc Quang), Cao Bằng, Lạng Sơn đến các tỉnh miền Trung, Tây Nguyên vào đến tận tỉnh An Giang (Châu Đốc).  Trên thế giới, loài này phân bố ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Srilanca, Malaysia và Indonesia.",
+      "thường_mọc": "Chàm quả nhọn là cây ưa sáng, có biên độ sinh thái rộng và có thể thích nghi được với nhiều loại đất khác nhau. Trong tự nhiên, cây thường mọc rải rác hay tập trung thành đám nhỏ trên các bài đất trống ở ven rừng thường xanh, rừng thưa rửa rụng lá, đồi cây bụi, nương rẫy cũ hay ở ven đường đi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chàm quả nhọn chứa HCN – glycosid [Võ Văn Chi, 1996, Từ điển cây thuốc Việt Nam, tr.209]. Loài trồng ở Java, lá tươi chứa 0,2% tinh dầu, khi chưng cất bằng hơi nước, có màu vàng sáng.",
+      "tinh dầu chứa": "benzaldehyd, acid hydrocyanic và một lượng nhỏ ethyl và methyl alcohol [The wealth of India, 1959, vol.5, p.179]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cũng giống các cây chùm lá nhỏ (Indigofera tinctoria L.) và chàm bụi (Indigofera suffruticosa Mill), chàm quả nhọn vị đắng, hơi ngọt, tính lạnh, có màu xanh chàm, vào kinh can, có công năng thanh nhiệt, giải độc, mát máu, tiêu ban chẩn, tiêu sưng viêm, cầm máu.  Chàm quả nhọn có độc nhiều."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chàm quả nhọn có độc nhiều nên chỉ được dùng ngoài. Nhân dân dùng lá chàm quả nhọn là thuốc chữa loét ngoài da và diệt cháy rận. Lấy lá tươi rửa sạch, giã nát đắp lên chỗ mụn nhọt, lở loét ngoài da hoặc xoa lên tóc để chống chấy.  Bột chàm quả nhọn (cách chế như bột chàm bụi) được dùng chữa cam răng, thối loét."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Bột chàm nhọn độc, không được dùng trong, không dùng được cho động vật có sừng ăn."
+    }
+  ]
+}

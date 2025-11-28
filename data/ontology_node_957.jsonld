@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nghệ",
+      "ten_khac": "Nghệ, Nghệ nhà, Khương hoàng, Co khản mỉn, Co hem (Thái), Uất kim, Khinh lương (Tày)",
+      "ten_khoa_hoc": "Curcuma longa L.",
+      "ma_taxon": "119386",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "mo_ta",
+      "lá": "mọc thẳng từ thân rễ, gốc thuôn hẹp, đầu hơi nhọn, dài 30-40 cm , rộng 10 – 15cm, hai mặt nhẵn cùng màu lục nhạt, mép nguyên uốn lượn, bẹ lá rộng và dài.",
+      "hoa": "hình trụ hoặc hình trứng đính trên một cán mập dài đến 20 cm, mọc từ giữa túm lá; lá bắc rời, màu rất nhạt, những lá phía dưới mang hoa sinh sản, màu lục hoặc trắng nhạt, những lá gần ngọn không mang hoa hẹp hơn và pha màu hồng ở đầu lá; đài có 3 răng không đều; tràng có ống dài, cánh giữa dài hơn các cánh bên, màu vàng; nhị có bao phấn có cựa do một phần lồi ra của trung đới ở dưới các ô; nhị lép dài hơn bao phấn; cánh môi gần hình mắt chim, hơi chia 3 thuỳ; bầu có lông.",
+      "quả": "nang, 3 ô, mở bằng van; hạt có áo.",
+      "cây": "thảo",
+      "cao": "0,60-1m",
+      "thân": "rễ to, có ngấn, phân nhánh thành nhiều củ hình bầu dục, màu vàng sẫm đến vàng đỏ, rất thơm.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 3-5"
+    },
+    {
+      "@type": "phan_bo",
+      "phân_bố": "Nghệ có nguồn gốc nguyên thủy có lẽ từ Ấn Độ. Từ thời xa xưa, cây đã được trồng ở nhiều nơi về sau trở nên hoang dại, trước hết là ở Trung Quốc. Vào thế kỷ thứ 7 đến thế kỷ thứ 8, cây được du nhập sang Đông Phi; đến thế kỷ 13, sang vùng Tây Phi và thế kỷ 18 người dân Jamaica mới tiếp xúc với cây nghệ. Ngày nay, nghệ là một cây trồng quen thuộc ở khắp các nước vùng nhiệt đới, từ Nam Á đến Đông – Nam Á và Đông Á (Trimurti H. Wardini & Budi Prakoso, 1999, Curcuma L.; in L. s de Padua et al., PROSEA No 12 (1) – Med. and Poi. Pis, 216). Ở Việt Nam, nghệ cũng được coi là một cây trồng cổ ở khắp các địa phương, từ vùng đồng bằng ven biển đến vùng núi cao trên 1500m. Ở một số nơi thuộc huyện Quản Bạ, Yên Minh, Đồng Văn, Mèo Vạc (Hà Giang); Sìn Hồ, Phong Thổ (Lai Châu)… Chính loài nghệ này đã trở nên hoang dại hoá ở các ruộng ngô, nương rẫy.",
+      "Đặc điểm sinh trưởng": "Nghệ là cây ưa ẩm, ưa sáng và có thể hơi chịu bóng; cây có biên độ sinh thái rộng, thích nghi được với nhiều tiểu vùng khí hậu khác nhau. Từ nơi có khí hậu nhiệt đới điển hình, nhiệt độ trung bình đến 25 – 26°C ở các tỉnh phía nam (không có mùa đông lạnh) đến những nơi có khí hậu cận nhiệt đới núi cao phía bắc, nhiệt độ trung bình dưới 20°C, với mùa đông lạnh kéo dài nghệ vẫn tồn tại và sinh trưởng phát triển tốt. Toàn bộ phần trên mặt đất tàn lụi vào mùa đông ở các tỉnh phía bắc và mùa khô ở các tỉnh phía nam. Cây mọc lại vào giữa mùa xuân, có hoa sau khi đã ra lá. Hoa mọc trên những thân của những chồi năm trước. Những thân đã ra hoa thì năm sau không mọc lại nữa và phần thân rễ của chúng trở thành những “củ cái” già, sau 1 – 2 năm bị thối, cho những nhánh non nẩy chồi thành các cá thể mới. Trên một cụm hoa, các hoa phía gốc nở trước và thời gian hoa nở kéo dài 3 – 4 ngày. Hoa tự thụ phấn hoặc nhờ cô trùng. Nghệ có trữ lượng khá dồi dào ở Việt Nam. Bên cạnh nguồn cung cấp do trổng trong nhân dân, một số địa phương phía bắc, nghệ mọc hoang dại hoá ước tính trữ lượng tới 1000 tấn. Người dân tộc H’ Mông, Dao, Hoa…. cho biết nghệ mọc hoang tràn lan ở ruộng ngô hiện nay là do trồng trọt còn sót lại, toàn bộ phần thân lá và củ già khi tàn lụi là nguồn phân bón cho ngô. Vì vậy, trong quá trình canh tác, họ không loại bỏ nghệ ra khỏi ruộng ngô."
+    },
+    {
+      "@type": "thong_tin_khac",
+      "thong_tin_khac": "Nghệ được trồng phổ biến ở nhiều nơi, vừa làm gia vị vừa làm thuốc. Cây không kén đất, ưa ẩm, chịu bóng nhưng không chịu được úng. Những nơi có khí hậu nóng hoặc vùng mát mẻ quanh năm đều thích hợp cho việc trồng nghệ, về mùa đông, cây tàn lụi, sang xuân lại tái sinh. Người ta trồng nghệ bằng rễ củ. Sau khi thu hoạch, chọn những củ to, khoẻ, có nhiều nhánh mang mầm để riêng nơi râm mát. Trước khi trồng, tách lấy những nhánh mầm, nặng trên dưới 10g để làm giống. Một hecta cần chừng 1-1,5 tấn mầm giống. Ở Việt Nam, nghệ thường được trồng vào cuối tháng 2 đến hết tháng 3. Chọn đất thịt nhẹ, đất pha cát hoặc đất đồi, cao ráo, thoát nước. Đất được cày bừa kỹ, đập nhỏ, vơ sạch cỏ. Ở đất bằng, cần lên thành luống, ở đất dốc, có thể trồng thành lô. Khoảng cách trồng là 25x30cm hoặc 30x30cm. Mật độ cây trồng và phân bón có liên quan mật thiết đến năng suất nghệ. Mỗi hecta cần đảm bảo trồng 110.000 – 115.000 cây, bón 20 – 25 tấn phân chuồng, 250 – 300kg N, 200 – 300kg P2O5 và 100 – 150 kg K2O. Phân chuồng, phân lân, 1/3 phân đạm và 1/3 phân kali bón lót. Số phân đạm và kali còn lại dùng để bón thúc vào các thời kỳ cây ra mầm và phát triển thân lá. Có thể dùng nước phân chuồng, nước giải và tro để thay thế một phần phân đạm và kali. Sau khi đặt mầm, lấp đất sâu 3 – 5 cm và phủ rơm rạ, tưới giữ ẩm. Lúc cây còn nhỏ, cần làm cỏ, xới xáo 2- 3 lần. Cây đã lớn có thể lấn át cỏ dại. Trong suốt quá trình sinh trưởng, giữ cho đất luôn ẩm nhưng phải tháo nước kịp thời sau khi mưa ngập. Nghệ sống khoẻ, ít bị sâu bệnh phá hoại, cần đề phòng bệnh thối củ khi bị úng. Nghệ thu hoạch vào mùa đông khi thân lá tàn lụi. Có thể để 2 năm, nhưng không nên thu vào lúc cây ra mầm. Năng suất trung bình đạt 11 – 12 tấn củ tươi một hecta."
+    },
+    {
+      "@type": "bo_phan_dung",
+      "bo_phan_dung": "Thân rễ được thu hái vào tháng 8 và 9, cắt bỏ rễ để riêng. Muốn để lâu, người ta hấp nghệ trong 6-12 giờ, để ráo nước rồi đem phơi nắng hay sấy khô. Trong y học cổ truyền, nghệ được chế biến như sau:  Dạng thái phiến: Đem nghệ thái phiến vát, phơi hay sấy khô. Nếu là củ khô thì ngâm, rửa, ủ mềm rồi thái phiến, phơi khô. Dạng sao với giấm: Nghệ (10kg) giấm (1,5-2 kg). Sau khi tẩm đều, để nghệ hút hết giấm 30 phút, dùng lửa nhỏ sao khô là được. Có thể luộc nghệ với giấm, rồi thái phiến, phơi khô. Dạng phiến sao vàng: Đem nghệ đã thái phiến sao đến khi có màu vàng thẫm Dạng chế với phèn chua: Nghệ thái phiến tẩm nước phèn chua với tỷ lệ 10kg nghệ và 0,1 kg phèn chua, nước vừa đủ, ủ một giờ, sao đến khi vàng. Dạng chế với giấm, phèn chua: Nghệ (10kg), giấm (1kg) phèn chua (0,lkg), nước vừa đủ. Trước hết trộn đều nghệ với giấm, thêm ít nước cháo nóng. Thêm dung dịch phèn chua vào, trộn đều, để 24 giờ, đem luộc đến khi cạn, phơi khô se (còn khoảng 30% nước), ủ mềm 2 ngày rồi thái phiến 3-5 mm,phơi khô. Cũng có thể làm như vậy trong 10 ngày liền, thái phiến, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "thanh_phan",
+      "thành phần": "Củ nghệ trồng ở Ấn Độ cho các chỉ số sau: Nước 13,1%; protein 6,3%; chất béo 5,1%, chất vô cơ 3,5%; sợi 2,6%; carbonhydrat 69,4% và caroten tính theo vitamin A 50 đơn vị quốc tế."
+    },
+    {
+      "@type": "cong_dung",
+      "chữa": "băng huyết, máu xấu, đau bụng kinh: Nghệ trắng 20g, nhọ nồi 20g (sao cháy), củ gấu 20g (chế với giấm, nước muối, rượu và nước tiểu trẻ em), tô mộc 16g, ngải cứu 12g (sao đen). Tất cả thái nhỏ sắc với 400ml nước còn 100ml, chia làm 2 lần uống trong ngày. Chữa viêm gan mạn tính, đau vùng gan: Nghệ trắng, nga truật, thanh bì, chỉ xác, lá móng tay, sơn tra, quyết minh tử (sao), mộc thông, tô mộc, huyết giác, mỗi vị 12g. sắc nước uống. Chữa ho gà: Lấy 20g nghệ trắng tươi giã nhỏ, tẩm rượu vừa đủ ướt, cho vào lọ nút kín, hấp cách thủy 1 giờ, rồi chắt nước uống. Chữa sỏi túi mật: Nhân trần, kim tiền thảo mỗi vị 30g, nghệ trắng, chỉ xác, đại hoàng, xuyên luyện tử, nguyên hồ mỗi vị 9g, mộc hương 6g, sài hổ 8g. sắc nước uống. Chữa bệnh mạch vành đau nhói vùng ngực, đau các điểm cố định: Nghệ trắng, đan sâm, hồng hoa, diên hồ tổ, đương quy, mỗi vị 9g, giáng hương 4,5g, điền tam thất, hổ phách mồi vị 3g, tam thất, hổ phách nghiền thành bột, chia làm 2 phần uống với nước sắc các vị thuốc trên. Chữa kinh nguyệt không đều: Nghệ trắng 6g, sinh địa 6g, hầm với xương lợn ăn."
+    },
+    {
+      "@type": "cach_dung",
+      "sắc uống": "Nghệ trắng 20g, nhọ nồi 20g (sao cháy), củ gấu 20g (chế với giấm, nước muối, rượu và nước tiểu trẻ em), tô mộc 16g, ngải cứu 12g (sao đen). Tất cả thái nhỏ sắc với 400ml nước còn 100ml, chia làm 2 lần uống trong ngày.",
+      "sắc nước uống": "Nghệ trắng, nga truật, thanh bì, chỉ xác, lá móng tay, sơn tra, quyết minh tử (sao), mộc thông, tô mộc, huyết giác, mỗi vị 12g.",
+      "giã nát": "Lấy 20g nghệ trắng tươi giã nhỏ, tẩm rượu vừa đủ ướt, cho vào lọ nút kín, hấp cách thủy 1 giờ, rồi chắt nước uống."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Những người âm hư thiếu máu, không có khí trệ, huyết ứ không được dùng nghệ trắng."
+    },
+    {
+      "@type": "nguon_url",
+      "nguon_url": "Cây thuốc và động vật làm thuốc ở Việt Nam"
+    }
+  ]
+}

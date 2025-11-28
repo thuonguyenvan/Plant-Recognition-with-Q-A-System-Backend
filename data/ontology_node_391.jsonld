@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dâm xanh",
+      "ten_khac": "Chim chích, bông rìa, thanh quan.",
+      "ten_khoa_hoc": "Duranta repens L.",
+      "ma_taxon": "162153",
+      "ho": "Cỏ roi ngựa (Verbenaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, thường xanh.",
+      "thân": "Cành mảnh, sống dựa hoặc leo, đôi khi có gai do cành nhỏ biến đổi, lúc đầu có lông, sau nhẵn.",
+      "lá": "Lá mọc so le, hình bầu dục hoặc trái xoan, dài 2 – 5 cm, rộng 0,8 – 2 cm, gốc tròn, đầu hơi nhọn, mép nguyên hoặc hơi khía răng ở gần đầu lá, hai mặt có lông rải rác, cuống lá dài 4-5 mm.",
+      "hoa": "Cụm hoa mảnh, mọc ở đầu cành thành bông buông thõng, dài khoảng 20 cm, hoa màu xanh lơ tím; đài có lông tơ mịn, dài 6 mm, ống đài có 5 sống dọc tràng chia 2 môi, dài 10 – 12 mm, có lông tơ và lông dài có tuyến, ống tràng dài 7 – 8 mm; nhị 4 không đều, thụt; bầu nhăn có 4 ô.",
+      "quả": "Quả thật, hình cầu, bao bọc bởi đài, khi chín màu vàng, nhẵn bóng: hạt 8.",
+      "mùa hoa": "tháng 5 – 6",
+      "mùa quả": "tháng 7 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Duranta L. chỉ có một loài ở Việt Nam là dâm xanh.  Dâm xanh vốn có nguồn gốc ở vùng nhiệt đới châu Mỹ, sau được du nhập khắp nơi. Ở Việt Nam hiện nay, cây không rõ xuất xứ từ đâu, chỉ biết rằng cây đã được nhân dân trồng làm hàng rào từ rất lâu và đã trở nên hoang dại hoá ở vùng đồi trung du và trong các lùm bụi quanh làng ở đồng bằng Bắc Bộ.",
+      "Đặc điểm sinh trưởng": "Dâm xanh là cây ưa sáng, ưa ẩm và cũng có thể chịu được hạn do có bộ rễ phát triển. Cây sống được trên nhiều loại đất, kể cả ở vùng đất cát ven biển. Dâm xanh được trồng bằng cành, sau một năm đã ra hoa quả; các năm sau nhiều hơn, nhất là những nơi mọc được chiếu sáng nhiều."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả và là"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây dâm xanh chứa β – sitosterol và acid ursolic (Compendium of Indian Medicinal Plants vol. 1 (1960 – 1969). 1999).",
+      "gồm chất": "Lá chứa scutellarein và pectolinarigenin.",
+      "Các hợp chất": "Quả chứa acid oleanolic, methyl p – methoxycinnamat, methyl p – hydroxycinnamat và durantosid IV.",
+      "chứa": "Cây dâm xanh còn có lamid và 3 chất iridoid – durantosid I, II và III, durantosid IV tetraacetat, durantosid I tetraacetat, pentaacetat và durantosid II tetraacetat (Compendium of Indian Medicinal Plants II (1970 – 1979), 1999]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả dâm xanh có vị ngọt, hơi cay, tính nóng, hơi có độc, có tác dụng hạ sốt, lợi tiểu.  Lá hoạt huyết và tiêu sưng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả được dùng để chữa sốt rét, chấn thương, đau ngực. Liều dùng 15 – 30g quả tươi, nghiền nát, ép lấy dịch uống. Để chữa sốt rét, có thể lấy quả, phơi khô, nghiền thành bột mịn, làm thành viên. Mỗi lần uống 0,5 – 1g, ngày 3 lần.  Lá tươi, giã nát, đắp để trị mụn nhọt, viêm da, áp xe, chấn thương tụ máu, bầm tím.  Ở Ấn Độ, nhân dân cũng dùng dịch quả dầm xanh để diệt bọ gậy muỗi, ấu trùng sâu bọ ở ao, hồ, đầm lầy.  Bài thuốc có dâm xanh  Chữa mụn nhọt, viêm da, áp xe:  Lấy một lượng lá tươi vừa đủ, giã nát, thêm đường phèn với lượng bằng 1/10, trộn đều hơ nóng, đắp lên chỗ tổn thương.  Chữa chấn thương đau ngực:  Lấy 15g quả tươi, giã nát, trộn với rượu, hơ nóng, chườm rồi đắp lên chỗ đau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Dâm xanh có độc, phụ nữ có thai không dùng."
+    }
+  ]
+}

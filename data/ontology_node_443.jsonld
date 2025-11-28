@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cải ma lùn",
+      "ten_khac": "Cải đất, đình lịch bản, cải cột xôi, cải hoang",
+      "ten_khoa_hoc": "Rorippa indica (L.) Hiern.",
+      "ma_taxon": "167965",
+      "ho": "Cải (Brassicaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 10 – 30 cm, có khi hơn.",
+      "rễ": "Rễ là một nhánh duy nhất.",
+      "thân": "Ở cây sống hằng năm và cây sống dai, thân phân nhánh ngay từ gốc, có khía, nhẵn hoặc có lông.",
+      "lá": "Lá mọc so le, lá ở gốc có cuống với 2 – 4 tai nhỏ, các lá khác đơn và thuôn thành cuống ngắn; tất cả đều nhẵn hoặc có lông, dài 1, 3 – 3 cm, rộng 2 – 4 cm, mép khía răng.",
+      "hoa": "Cụm hoa mọc thành ngù sau biến thành chùm quả, dài 4 – 10 cm với một lá bắc duy nhất tồn tại. Ở gốc: hoa nhỏ màu vàng; đài 4 răng thuôn, màu vàng ở mép, màu lục ở giữa; tràng 0; nhị 6, 2 cái hơi ngắn hơn, chỉ nhị dài hơn bao phấn; bầu hình trụ, 2 ô, mang 6 tuyến không đều ở gốc, noãn nhiều.",
+      "quả": "Quả cải, hình sợi chỉ, dài 2 cm, rộng 1 mm; hạt xếp thành hai dãy, hình tim dẹt.",
+      "mùa hoa": "tháng 8 – 11 hoặc gần như quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong số 6 loài thuộc chi Rorippa Seop đã biết ở Việt Nam, có lẽ loài cải ma lùi trên đây là cây thường gặp nhất, do cây phân bổ tự nhiên gần như khắp các địa phương, từ vùng núi (có độ cao khoảng 1000m) xuống đến vùng đồng bằng (trừ vùng ven biển có nước lợ).",
+      "Đặc điểm sinh trưởng": "Cải ma lùn là cây sống 1 năm, ưa ẩm và chịu bóng. Cây thường mọc thành đám nhỏ trên đất ẩm, lẫn với một số loài cỏ nhỏ khác, ở trong vườn, ven đường đi, bãi bồi ven sông suối hay trên nương rẫy và ruộng trồng hoa màu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cải ma lùn chứa rorifol, rorifamid, carotein, vitamin [Võ Văn Chi, Từ điển cây thuốc, 1997]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cải ma lùn, vị cay, tính mát, vào 3 kinh phế, thận, và tỳ có công năng thông đờm, ngừng ho, hoạt huyết, giúp tiêu hoá, tiêu tích, lợi tiểu, chống thũng trướng, ứ nước ở nội tạng.  Sách “Bản thảo thập di” ghi: vị cay, tính ấm, sách “Qui dưỡng dân gian thảo dược” ghi: vị cay, tính mát; sách “Tứ xuyên trong dược chí” lại ghi: vị đắng cay, tính mát; còn sách “Toàn quốc trung thảo dược hội biên” và sách “Thường dụng Trung thảo dược thư sách” đều ghi: vị ngọt, nhạt, tính mát; có công năng thanh nhiệt, lợi mật hoạt huyết, thống kinh [TDT, 1997, III – 1318]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cải ma lùn toàn cây được dùng chữa cảm, sốt, đau bụng, tiêu hoá bất thường; ho, viêm khí quản mạn tính, phong thấp cấp, viêm gan, lợi niệu. Còn dùng chữa huyết hư, kinh bế, mụn nhọt.  Liều dùng 15 – 30g hoặc 30 – 60g tươi, sắc lấy thước uống trong ngày. Để chữa sốt nóng mùa hè, người nóng, miệng khát, môi khô. Sắc lấy nước để uống thay trà. Dùng ngoài tùy lượng, lấy cây tươi, giã đắp,  Hạt cải ma lùn (còn gọi là đinh lịch) được dùng chữa hen suyễn, thông đờm, chữa phù, ứ nước trong nội tạng. Ngày dùng 6 – 16g, sắc nước uống.  Bên cạnh công dụng làm thuốc, cải ma lùn còn được dùng làm rau nấu canh ăn.  Ở Ấn Độ, toàn cây được dùng để lợi niệu. Ở Indonesia, toàn cây tươi nghiền nát, lấy một ít nước cho trẻ uống khi bị ỉa chảy [Perry et al., 1980: 112]. Ở Trung Quốc, cải ma lùn được dùng chữa ho, long đờm, lợi tiểu và giải độc [Kce, 1999: 277].  Bài thuốc có cải ma lùn  Chữa bệnh cổ trướng:  Hạt cải ma lùn (đinh lịch) sao (hoặc toàn cây) 12g, trần bì 12g, vỏ rễ cây dâu (lấy lớp trắng) 24g, gừng sống 3 lát. Sắc lấy nước uống chia 3 lần uống lúc đói. Có thể dùng riêng cải ma lùn, sao và tẩm 7 lần. Sau đó, sao khô, tán nhỏ, mỗi lần uống 2 – 3 thìa hoà vào rượu uống lúc đói, ngày 3 lần [Nam dược thần hiệu].  Chữa các chứng phù do viêm gan thể giữ nước, viêm phổi gây tràn dịch màng phổi, ho suyễn ngực căng tức:  Cải ma lùn, mạch môn chế bỏ lõi, ý dĩ sao, xa tiền (mã đề), ngưu tất, mộc thông, dành dành, huyền sâm, mỗi vị 12g. Sắc đặc, chia 2 – 3 lần uống trong ngày [Lê Trần Đức. 1997: 598]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

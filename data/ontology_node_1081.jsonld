@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khôi",
+      "ten_khac": "Khôi, Lá khôi, Khôi tía, Chẩu mã thái (Tày)",
+      "ten_khoa_hoc": "Ardisia sylvestris Pitard, Ardisia silvestris",
+      "ma_taxon": "889360",
+      "ho": "Myrsinaceae (Đơn nem)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây khôi là một loại cây nhỏ, mọc thẳng đứng, cao chừng 1,5 – 2m, thân rỗng xốp, ít phân nhánh hay không phân nhánh, gần trên ngọn có nhiều lá.",
+        "lá": "Lá mọc so le, phiến là nguyên, mép có răng cưa nhỏ và mịn, dài 25-40cm, rộng 60-10cm, mặt trên màu xanh mịn, mặt dưới màu tím, 2 mặt đều có lông mịn như nhung; gân nổi hình mạng lưới, có loại 2 mặt đều màu xanh. Kinh nghiệm thường chỉ dùng loại có lá mặt trên xanh như nhung, mặt dưới tím.",
+        "hoa": "Hoa mọc thành chùm, dài 10-15cm, hoa rất nhỏ, đường kính 2-3mm, màu trắng pha hồng tím 5 lá đài 5 cánh hoa.",
+        "quả": "Quả mọng, khi chín màu đỏ.",
+        "mùa hoa": "tháng 5-7",
+        "mùa quả": "tháng 7-9"
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Chưa được nghiên cứu. Mới đây viên động y và bộ môn dược lý Trường Đại học Y Dược thí nghiệm sơ bộ nhưng mới thấy có ít tanin và glucozit"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Sơ bộ nghiên cứu trên thỏ, chuột bạch và khỉ thấy có một số kết quả sau đây:  Làm giảm độ axit của dạ dày khỉ Làm giảm nhu động ruột cô lập của thỏ. Làm yếu sự co bóp của tim. Làm giảm sự hoạt động bình thường trên chuột bạch.  Bệnh viện 108 thí nghiệm dùng lâm sàng (mới trên 5 bệnh nhân) thì 4 người giảm đau 80-100%, dịch vị giảm xuống bình thường.  Viện đông y áo dụng lá khôi chữa khỏi một số trường hợp đau dạ dày (dùng riêng hay phối hợp với nhiều loại thuốc khác) đã sơ bộ nhận định như sau:  Với liều 100g lá khôi trở xuống uống hằng ngày thì có thể từ đỡ đau đến hết đau, bệnh nhân ăn ngủ được. Nhưng với liều 250g/ngày thì làm bệnh nhân mệt mỏi, người uể oải, da tái xanh, sức khỏe xuống dần nếu tiếp tục uống.  Tóm lại về mặt lâm sàng, kết quả chưa hoàn toàn tốt."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Lá khôi còn là vị thuốc chữa đau dạ dày trong nhân dân. Việc sử dụng này xuất phát từ kinh nghiệm của Phân hội đông y Thanh Hóa dựa trên kinh nghiệm dùng của một vùng dân tộc dùng lá cây này chữa đau bụng. Nhưng bao giờ cũng dùng phối hợp với những vị bồ công anh (Lactuca indica), khổ sâm (Croton tonkinensis). Kết quả hiện chưa thống nhất, có người nói khỏi nhưng cũng có những người uống vào thấy mệt mỏi, đầy bụng khó chịu. Nhưng hiện nay cây lá khôi thành câu chuyện cửa miệng của những người tìm thuốc đau dạ dày cho nên chúng tôi giới thiệu ở đây những hiểu biết hiện nay về cây này để tham khảo. Còn cần nghiên cứu thêm nhiều mới có kết luận chắc chắn. Liều dùng hàng ngày: 40-80g sắc uống phối hợp với các vị thuốc khác.  Đơn thuốc có lá khôi  Nhân dân miền ngược vùng Lang Chánh, Ngọc Lặc tỉnh Thanh hoá thường dùng lá Khôi chế biến, sắc uống chữa đau bụng. Hội Đông y Thanh Hoá đã kếp hợp dùng lá Khôi (80g), lá Bồ công anh (40g) và lá Khổ sâm (12g) sắc uống chữa đau dạ dày; có thể gia thêm lá Cam thảo dây (20g). Nhiều địa phương khác ở tỉnh Nghệ An cũng dùng lá Khôi chữa đau dạ dày. Lá Khôi được dùng với lá Vối, lá Hoè nấu nước tắm cho trẻ bị sài lở, hoặc giã với lá Vối trộn với dầu vừng đắp nhọt cho trẻ. Đồng bào Dao dùng rễ cây Khôi thái nhỏ phơi khô ngâm rượu uống cho bổ huyết, lại dùng sắc uống chữa kiết lỵ ra máu, đau yết hầu và đau cơ nhục.  Sản phẩm có thành phần lá Khôi trên thị trường hiện nay  Khang vị Tuệ Linh  Sản phẩm Khang vị Tuệ Linh được kết hợp từ nhiều dược liệu quý đặc trị về bệnh dạ dày như Khôi, Dạ cẩm, Chè dây, Kim thất tai, Canxi san hô,…  Công dụng:  Hỗ trợ giảm các triệu chứng của viêm loét dạ dày, tá tràng như: ợ hơi, ợ chua, rối loạn tiêu hóa. Hỗ trợ giảm acid dịch vị, trào ngược dạ dày – thực quản, giảm cảm giác khó chịu, nóng rát ở thượng vị.  Sản phẩm Khang vị Tuệ Linh hỗ trợ giảm các triệu chứng của viêm loét dạ dày, tá tràng  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Khôi. Nếu cần tư vấn và tìm hiểu thêm về cây Khôi và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

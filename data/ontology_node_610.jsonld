@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tục đoạn",
+      "ten_khac": "Tục đoạn, Sơn cân thái, Oa thái, Đầu vù (Hmông), Rễ thái, Sâm nam",
+      "ten_khoa_hoc": "Dipsacus japonicus Miq.",
+      "ma_taxon": "777552",
+      "ho": "Dipsacaceae (Tục đoạn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thuộc thảo, cao 1,5-2m.",
+      "thân": "Thân có 6 cạnh trên cạnh có một hàng gai thưa, càng lên trên càng mau dần, gai quặp trở xuống.",
+      "lá": "Lá mọc đối, không có cuống, bẹ ôm lấy cành hoặc thân. Lá non có răng cưa dài, phiến lá nhỏ, thuôn dài, đầu nhọn. Gân lá cách, trên đường gân của mặt dưới có một hàng gai nhỏ cứng, càng lên đầu lá, càng mềm dần. Lá già có phiến lá xẻ sâu, răng cưa mau hơn lá non, phiến lá xẻ cách từ 3-9 thuỳ, gân lá có gai nhỏ như lá non. Cũng có lá nguyên.",
+      "hoa": "Cụm hoa hình trứng hay hình cầu, cành mang hoa dài 10-20cm, 6 cạnh có lông cứng, càng lên trên càng mau dần. Hoa màu trắng có lá bắc dài 1-2cm.",
+      "quả": "Quả bế có 4 cạnh, màu xám trắng còn đài sót lại, dài 5-6mm ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bao gồm: tinh dầu, tannin, saponin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tục đoạn thường dược dùng làm thuốc bổ toàn thân, thuốc dịu đau, chữa đau đớn do bị ngã, bị thương, còn có tác dụng lợi sữa, an thai, cầm máu.",
+      "được_dùng": "Ngày uống 9-18g dưới dạng thuốc sắc hay ngâm rượu.",
+      "có tác dụng": "bổ can, thận, nối gân xương, thông huyết mạch, lợi quan tiết, hết đau, an thai, dùng chữa đau lưng, động thai, di tinh, gân cốt đứt đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bài thuốc có tục đoạn dùng trong nhân dân  Chữa động thai: Tục đoạn (tẩm rượu) 80g, đỗ trọng (tẩm nước gừng rồi sao cho đứt tơ) 80g. Hai vị tán nhỏ trộn với thịt táo đỏ (táo Trung Quốc) viên bằng hạt ngô. Ngày uống 30 viên, chiêu thuốc bằng nước cơm.",
+      "chữa": "phụ nữ có thai 2-3 tháng mà động thai."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bài tử mẫu bí lục cứu người, đẻ xong lúc nóng lúc rét phiền muộn: Tục đoạn 40g, nước 600ml, sắc còn 200ml. Chia làm 3 lần uống trong ngày."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài vị tục đoạn Dipsacus japonicus kể trên, trong đông y còn dùng rễ cây Dipsacus asper Wall, cùng họ với tên xuyên tục đoạn, vì chủ yếu mọc ở Tứ Xuyên (Trung Quốc) còn mọc ở Vân Nam, Tây Tạng. Theo A. Petelot, cây tục đoạn của ta là Dipsacus asper nhưng so sánh cây tục đoạn khai thác ở ta với hình vẽ và mô tả các loài Dipsacus chúng tôi thấy tục đoạn của ta giống Dipsacus japonicus hơn. A. Petelot còn giới thiệu một vị nữa mang tên tục đoạn là rễ cây khổ chu thái Sonchus oleraceus L. thuộc họ Cúc Asteraceae (Compositae)."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Tục đoạn mọc hoang nhiều ở các tỉnh như: Sơn La, Lào Cai, Hà Giang và những vùng núi cao mát mẻ hay trên nương rẫy có bóng cây râm mát.",
+      "thu hái": "Thu hái vào mùa thu đông (tháng 11, 12).",
+      "rễ": "Đào lấy rễ già rửa sạch đất cát cắt bỏ phần trên cổ rễ và rễ con, phơi trong râm hay sấy nhẹ cho khô.",
+      "chế rượu": "Tục đoạn chế rượu: dùng 1 lít rượu cho 10kg tục đoạn đã rửa và thái lát. Phun đều rượu vào tục đoạn ủ trong 30 phút đến 1 giờ. Cho tục đoạn vào chảo duy trì nhiệt độ vừa phải sao đến khi có màu hơi đen.",
+      "diêm": "Diêm tục đoạn: 0,2kg muối/10kg tục đoạn. Hòa muối vào 0,5 lít nước sau đó phun vào thục đoạn, ủ 30 phút đến 1 giờ. Sao ở nhiệt độ vừa phải đến khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

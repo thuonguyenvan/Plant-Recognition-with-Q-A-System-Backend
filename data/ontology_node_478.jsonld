@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bại tượng",
+      "ten_khac": "Trạch bại, cỏ bồng",
+      "ten_khoa_hoc": "Patrinia scabiosaefolia Fisch.ex Link.",
+      "ma_taxon": "447233",
+      "ho": "Nữ lang (Valerianaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây dạng cỏ, sống hai năm hay một năm, cao 0,7-1,5m, phân cành lưỡng phân ở ngọn, thân trong không lông, rỗng ở trong.",
+      "lá": "Lá mọc đối, các lá ở gốc có cuống dạng bẹ, phiến lá đơn hình trứng thuôn hoặc có thêm 2 thùy dạng lá tai, các lá phía trên gần như không có cuống hoặc cuống ngắn, phiến lá kép dạng lông chim, các thùy lá thuôn đầu nhọn, mép lá có răng cưa nhỏ.",
+      "hoa": "Cụm hoa ở ngọn hoặc đầu cành, dạng xim tán. Hoa nhỏ màu vàng nhạt.",
+      "quả": "Quả hình trứng dẹt, mặt có 1 gờ, mặt còn lại có 3 gờ, có lông.",
+      "mùa hoa": "tháng 7-11",
+      "mùa quả": "tháng 7-11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Patrinia Juss. ở Việt Nam có 3 loài, phân bố ở một vài tỉnh miền núi giáp bên giới phía bắc và đều được dùng làm thuốc. Loài bại tượng trên mới phát hiện thấy ở một số điểm phân bố là Sa Pa (Lào Cai), Lai Châu, Hà Giang."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bằng phương pháp sắc ký – phối phổ. 47 thành phần, chiểm 83,919% tổng lượng dầu.",
+      "Các hợp chất": "Các thành phần chính là caryophyllene oxide (12,802%), caryophyllene (6,909%), α-caryophyllene (2,927%), β-damascenone (3,435%), calarene (5,621%) và phenol (3,044%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây bại tượng vị đắng, cay, tính bình, không độc, có công năng thanh nhiệt, giải độc, lợi thấp, hoạt huyết, tán ứ. Về quy kinh, bại tượng nhập vào 3 kinh can, vị và đại tràng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ và toàn cây bại tượng được dùng chữa khó ngủ, mất ngủ, đau dây thần kinh, an thần; viêm họng, viêm phổi, viêm tụy cấp; mụn nhọt, lở ngứa, đau bụng.",
+      "được_dùng": "Liều dùng: 10-20g (tươi 20-40g), sắc uống ngày một thang. Dùng ngoài lấy cây tươi rửa sạch, giã đắp.",
+      "làm thuốc": "Ở Đài Loan, Trung Quốc, rễ khô bại tượng được dùng làm thuốc giải độc, tiêu sưng, săn se, giảm đau, đau sau khi đẻ, sản hậu ít huyết, áp xe.",
+      "có tác dụng": "Rễ khô cũng được dùng làm thuốc hạ sốt, thuốc chống độc, làm tan máu cục, làm tan mủ, lợi tiểu. Ngoài ra, thuốc còn được dùng chữa viêm giác mạc, kiết lỵ, viêm sưng ruột, loét miệng, táo bón, mụn nhọt, lở loét ngoài da .",
+      "chữa": "Bài thuốc có bại tượng 1. Chữa bụng đau đầy trướng Bại tượng (toàn cây) 50g, phụ tử 20g, ý dĩ 100g, mỗi vị nghiền thành bột, trộn đều 3 bột với nhau. Mỗi lần dùng 3 – 5g, sắc với 80 ml còn 40 ml rồi uống [Chang Minyi, 1992: 164]. 2. Chữa đau vùng thắt lưng, đau chân hoặc đau lưng có kèm xuất huyết sau khi đẻ Bại tượng (toàn cây), đương quy 2,4g, xuyên khung 1,8g, bạch thược 1,8g, hạt nhãn 1,8g. Mỗi vị nghiền thành bột thô. Sắc tất cả với 80 ml nước còn 30 ml, uống ngày một tháng [Tài liệu đã dẫn, trang 165]."
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bún thiêu",
+            "ten_khac": "",
+            "ten_khoa_hoc": "Crateva religiosa Forst",
+            "ma_taxon": "427391",
+            "ho": "Màn màn (Capparaceae)",
+            "Mô tả": {
+                "cây": "Cây nhỏ, cành hình trụ, có những nốt sần, cành non khi khô màu đen.",
+                "lá": "Lá kép, mọc so le, có cuống dài 8 – 10 cm, gồm 3 lá chét hình trái xoan hoặc hình thoi, dài 7 – 10 cm, rộng 3 – 5 cm, gốc thuôn, đầu tù có mũi nhọn ngắn, mép nguyên, mặt trên nhẵn màu lục sẫm, mặt dưới bạc trắng có gân lá tạo thành mạng rõ, lá chét bên có phiến hơi lệch.",
+                "hoa": "Cụm hoa mọc ở ngọn và đầu cành thành ngù, hoa màu trắng hay hồng, có 4 lá đài hình tam giác, 4 cánh hoa không đều, hình bầu dục, có móng ngắn, 18 nhị, bao phấn thuôn chỉ nhị không đều; bầu mang bởi một cuống nhụy dài, có nhiều noãn.",
+                "quả": "Quả nang, hình cầu, đường kính 2,5 cm; hạt nhiều, hình thận, nhẵn bóng."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Crataeva L. ở Việt Nam có 5 loài, chúng đều là những cây bụi hay gỗ nhỏ, trong đó có loài bún thiêu kể trên (Nguyễn Tiến Bân và V.I.Dorofeev, 2003).  Bún thiêu phân bố rải rác khắp các tỉnh thuộc vùng núi thấp, trung du hoặc đồi khi gặp ở cả đồng bằng như Quảng Ninh, Lạng Sơn, Tuyên Quang, Vĩnh Phúc, Nghệ An, Hà Tĩnh, Thanh Hóa, Thừa Thiên Huế, Kon Tum, Đồng Nai,…  Bún thiêu là cây ưa sáng, mọc nhanh, thường thấy rải rác trong các kiểu rừng thứ sinh, dọc theo các bờ sông, suối ở cửa rừng. Độ cao phân bố từ 200 đến 600m hoặc hơn. Cây mọc tự nhiên ở các tỉnh phía Bắc có hiện tượng rụng lá hoặc bán rụng lá vào mùa đông; lá non và hoa mọc đồng thời vào vụ xuân hè; quả chín ăn được, vỏ quả và vỏ thân còn là thuốc nhuộm. Bún thiêu tái sinh tự nhiên từ hạt, cây cũng có thể trồng được bằng hạt.",
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Quảng Ninh"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Lạng Sơn"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Tuyên Quang"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Vĩnh Phúc"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Nghệ An"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Hà Tĩnh"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Thanh Hóa"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Thừa Thiên Huế"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Kon Tum"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Đồng Nai"
+                            }
+                        }
+                    ]
+                }
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": ""
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Vỏ thân, vỏ rễ."
+            },
+            "Thành phần": {
+                "thành phần": "Vỏ thân có tanin, saponin, alcol cerylic, friedelin acid betulinic, diosgenin. Vỏ rễ có acid lauric, acid stearic, acid undecylenic, acid oleic và acid linoleic. Ngoài ra, còn có alcol lupa – 11, 20 (29) dien – 3β – ol. Quả có alcol cerylic, triacontan, triacontanol, β- sitoskerol, glucocapparin [The Wealth of Indian VI, Compendium of Indian Medicinal Plants, vol.2, 1999]."
+            },
+            "Tính vị": {
+                "Có vị": "Lá bún thiêu có vị hơi đắng, có tác dụng gây sung huyết da; vỏ nóng và đắng lúc đầu, sau vị ngọt có tác dụng kiện vị, làm ăn ngon, tiêu thực, bài sỏi, hoa săn se và thông mật; quả ngọt có dầu nên nhuận tràng."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Vỏ rễ và vỏ thân bún thiêu được dùng chữa rối loạn tiết niệu như sỏi thận, sỏi bàng quang, đái són đau. Ngày 5 – 9g vỏ khô tán bột uống với nước hoặc sắc lấy nước rồi trộn bột khô vào.  Lá và vỏ rễ để tươi, rửa sạch, giã nát, thêm ít muối làm thành bánh đắp chữa thấp khớp. Vỏ cây tươi 10 – 15g, giã nát, vắt lấy nước uống để nhuận tràng, chữa táo bón.  Ở Srilanka, người ta dùng vỏ rễ làm thuốc trị ho, long đờm, hạ sốt, an thần. Lá giã nát đắp chữa viêm xoang và gút. Ở Indonesia, hoa để thông mật và kiện vị; thân và lá chữa nhức đầu, đau dạ dày, lỵ; vỏ cây chữa táo bón.  Bài thuốc có bún thiêu  1. Chữa thấp khớp: Lá tươi 15 – 30g, giã nát, ép lấy dịch, trộn với sữa dừa hoặc mỡ bơ, rồi uống. Có thể lấy lá tươi 20 – 30g, rửa sạch, nghiền nát, trộn với một ít giấm, nước vôi, làm nóng, đắp lên các khớp đau.  2. Chữa viêm xoang mũi: Lấy lá tươi, rửa sạch, thái nhỏ, phơi khô, cuốn như điếu thuốc lá, hút và thở ra đằng mũi.  3. Chữa lao hạch hoặc tràng nhạc: Vỏ rễ bún thiêu (mỗi lần 6 – 9g) nấu thành cao, trộn với mật ong rồi uống. Ngày 2 lần.  4. Chữa kém ăn, khó tiêu: Lấy hai cái nụ hoa, nghiền nát với muối rồi uống trước khi ăn để kích thích tiêu hoá. Khi bị khó tiêu đầy bụng cũng uống như vậy."
+            },
+            "Cách dùng": {
+                "được_dùng": ""
+            },
+            "luu_y": {
+                "luu_y": ""
+            }
+        }
+    ]
+}

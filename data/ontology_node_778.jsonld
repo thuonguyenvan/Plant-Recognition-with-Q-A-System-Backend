@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây mướp",
+      "ten_khac": "Mướp đắng, Khổ qua, Mướp mủ, Lương qua, Chưa rao (Mường), Cẩm lệ chi, Mác khấy (Tày)",
+      "ten_khoa_hoc": "Momordica charantia L.",
+      "ma_taxon": "61369",
+      "ho": "Cucurbitaceae (Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Dây leo bằng tua cuốn. Thân nhẵn, có cạnh và khía dọc. Lá mọc so le, chia 5 thùy, dài 15-20cm, gốc hình tim, đầu nhọn, mép khía răng, gân lá chân vịt, nổi rõ ở mặt dưới; cuống la dài 10-20cm; tua cuốn dài, mập, thường chẻ 3. Hoa màu vàng, đơn tính cùng gốc, mọc ở kẽ lá; hoa đực tụ họp thành chùm nhiều hoa, đài có ống ngắn hình chuông, hơi có lông, 5 phiến nhọn, tràng 5 cánh rời, đầu tròn, nhị 5, trong đó có 4 cái đính từng đôi; hoa cái mọc đơn độc. Quả hình thoi hay hình trụ, lúc đầu mẫm sau khô, không mở, dài 0,25 đến 1m, có khi hơn, mặt ngoài màu lục nhạt, trên có những đường đen chạy dọc theo quả. Hạt rất nhiều, hình trứng, màu nâu nhạt, dài 12mm, rộng 8-9mm, hơi có đìa. Khi quả đã chín, vỏ ngoài hạt, cũng như chất nhầy đã tróc hết, còn lại khối cứng, dai, không bị nước làm mục hỏng, khi ngâm nước sẽ phồng lên và thành mềm, có thể dùng cọ, tắm rất tốt."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả tươi, lá, thân, dây, rễ, hạt và xơ mướp. Thường dùng quả non hay bánh tẻ. Nếu quả già thì loại bỏ vỏ ngoài và hạt, chỉ dùng xơ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả có saponin, chất nhầy, xylan, chất béo, chất protein (1,5%), vitamin B và C, kali nitrat Hạt có 41,6%-45% (nhân) chất dầu, chất protein. Nếu tính cả hạt và vỏ thì tỷ lệ chỉ là 20-25%. Dầu hạt mướp đặc, màu nâu đỏ nhạt, mùi không đặc biệt nhẹ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả mướp có vị ngọt, tính mát, có tác dụng thanh nhiệt, hóa đàm, lương huyết, giải độc Lá mướp vị ngọt, tính hàn có tác dụng thông kinh lạc, thanh nhiệt, giải độc, chỉ khái, chỉ huyết Xơ mướp có vị ngọt, tính bình, có tác dụng thông kinh lạc, hóa đờm, chỉ khái Rễ mướp có vị ngọt, tính bình, có tác dụng hoạt huyết, thông lạc, thanh nhiệt, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả mướp nấu nước uống làm lợi sữa cho phụ nữ mới sanh và làm cho huyết lưu thông, do chất nhầy cho nên mướp còn có tác dụng làm dịu.  Lá mướp uống chữa ho, hen kéo dài, với liều 10-15g; giã nhỏ với ít muối, thêm nước gạn chữa viêm họng. Lá mướp sắc với cây cứt lợn, uống chữa phù thũng. Dùng ngoài giã nát, ép lấy nước bôi chữa chỗ lở đầu, mẩn ngứa, zona.  Xơ mướp đốt tốn tính, nghiền thành tốt, uống mỗi ngày 4 -8g. chia làm 2 lần, chữa trị ra máu, rong huyết, rong kinh, kiết lỵ, tiêu chảy ra máu.  Xơ mướp 20g (băm nhỏ sao) phối hợp với hạt day quả dài 12g (giã dập sao) sắc với 200ml nước còn 50ml, uống lúc nóng chữa hen. Để thúc sởi chóng, giảm các biến chứng do sởi, lấy xơ mướp 20g, kinh giới 12g, bạch chi 12g, kim ngân 12g, cỏ mần trầu 8g, cam thảo nam 4g, thái nhỏ sao vàng, sắc nước chia làm 2 lần uống trong ngày.  Thân dây mướp lấy phần gốc từ mặt đất trở lên độ 1m, đốt tồn tính, tán nhỏ thành bột, mỗi lần uống 10g với rượu, chữa viêm xoang mũi, chảy nước mũi có mùi hôi.  Rễ mướp chữa đau nửa đầu, viêm mũi, viêm xoang, viêm tuyến vú, ho dau lưng, tràng phong. Với liều dùng hàng ngày 15 – 30g, dưới dạng thuốc.  Bài thuốc có vị mướp  Bài thuốc chữa đau lưng hỏng do thấp nhiệt được dùng ở Trung Quốc gồm: thân dây mướp 30g, xa tiền từ 30g, hổ trượng 15g, hoàng bá 10g, sắc nước uống mỗi ngày một thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mướp là loại rau quen thuộc, được trồng ở khắp các nước thuộc vùng Nam Á, Đông Nam Á, và cả Đông Bắc Á. Cây mướp được trồng ở khắp nơi trong nước ta."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

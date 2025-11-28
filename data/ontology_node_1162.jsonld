@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chè bông",
+      "ten_khac": "Chè bông, Chè lóng, Chè đỏ ngọn, Chè rừng",
+      "ten_khoa_hoc": "Aganosma marginata (Roxb.) G. Don",
+      "ma_taxon": "446902",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá lúc non đỏ, mỏng, không lông, gân phụ 10-12 cm cuống 5-10mm.",
+      "hoa": "Cụm hoa xim ở nách lá và ở ngọn; đài 3-5mm, ống tràng 5-7mm, các phiến màu trắng, nhọn 1-1,5cm; nhị không thò.",
+      "quả": "Quả đại từng đôi, dài 15-25cm, thuỳ hạt dài 1-1,5cm, mào lông 2-3,5cm.",
+      "cây": "Dây trườn, leo cao, to 3-4cm, không lông, có nhựa trắng.",
+      "mùa hoa": "tháng 3-7",
+      "mùa quả": "tháng 11-1"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài phân bố ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaixia, Inđônêxia, Philippin và Việt Nam. Ở nước ta, cây mọc hoang ở bờ bụi, rừng và ven rừng thưa, gặp nhiều ở các tỉnh phía Nam từ Khánh Hoà tới An Giang. Có thể thu hái các bộ phận của cây quanh năm; dùng tươi hay phơi khô dùng dần."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Herba Aganosmae Acuminatae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá Chè bông non được dùng làm rau ăn ở Campuchia. Hoa thơm dùng để ướp trà. Lá hoa và quả đều dùng sắc nước uống hoặc nấu như trà uống lợi tiêu hóa và lợi tiểu. Dùng tốt cho người ăn uống không tiêu, chi thể nặng nề, bí tiểu tiện, đái giắt.  Ở Malaixia và Ấn Độ, rễ cây thường được dùng sắc uống trong trường hợp rối loạn đường tiết niệu, làm tăng lực, trị sốt và dùng điều kinh.  Ở Thái Lan cũng dùng rễ, thân và lá trị sốt. Ở Campuchia, người ta dùng thân và rễ hãm lấy nước uống lợi sữa. Thân cây được dùng phối hợp với những cây khác dùng chế thuốc súc miệng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

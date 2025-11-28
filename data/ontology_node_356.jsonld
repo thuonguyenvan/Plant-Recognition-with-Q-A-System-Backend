@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lan kiếm",
+      "ten_khac": "Lan rừng, Lan kiếm",
+      "ten_khoa_hoc": "Cymbidium ensifolium (L.) Sw.",
+      "ma_taxon": "489079",
+      "ho": "Orchidaceae ( Lan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo địa sinh, cao 0,5 – 0,9m.",
+      "lá": "Lá hình dải, dài 60 – 75 cm, rộng 0,8 – 3,5 cm, gốc có bẹ to mọc ốp vào nhau, gân lồi ở mặt dưới, đầu tù rồi nhọn, gân song song.",
+      "hoa": "Cụm hoa mọc ở gốc thành chùm trên một cán dài 25 – 40 cm; lá bắc dài 1 cm; hoa màu lục nâu, có đốm đỏ ở giữa, lá đài và cánh hoa mảnh và hẹp, cánh môi hình chiếc đàn có thuỳ ở giữa cuộn cong về phía dưới.",
+      "quả": "Quả nang.",
+      "mùa hoa": "tháng 6 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Cymbidium Sw. có 24 loài ở Việt Nam (không tính các loài lai, loài nhập nội). Tất cả đều là những loại lan có giá trị làm cảnh cao, một số loài được dùng làm thuốc (Nguyễn Tiến Bân, et al., 2005; Võ Văn Chi, 1997…). Loài lan kiếm có nguồn gốc từ vùng Đông – Bắc Ấn Độ, phân bố ở Trung Quốc, Nhật Bản, Triều Tiên, Lào, Thái Lan, Malaysia và Indonesia.  Ở Việt Nam, lan kiếm phân bố tự nhiên ở các tỉnh Lào Cai, Lai Châu, Sơn La, Thừa Thiên – Huế, Kon Tum, Lâm Đồng. Đây là loài lan địa sinh, thường mọc trên các hốc mùn đá, hốc cây hay trên đất có nhiều mùn. Độ cao phân bố đế 1.500m.  Cây ưa bóng, ưa khí hậu ẩm mát dưới tán rừng, nhiệt độ thích hợp cho cây sinh trưởng phát triển từ 18 – 25°C. Trong tự nhiên, cây ra hoa quả hằng năm; song chỉ có hoa ở những nhánh trên một năm tuổi, những nhánh này sau một năm sẽ tàn lụi và từ gốc sẽ mọc ra 1 – 3 nhánh mới. Cây tái sinh tự nhiên chủ yếu từ hạt, nhưng chưa rõ về cơ chế nảy mầm của hạt.  Nguồn lan kiếm mọc tự nhiên ở Việt Nam đã trở nên hiếm rõ rệt. Đó là hậu quả của việc thu thập bừa bãi để làm cảnh cũng như xuất khẩu ra nước ngoài. ” Lan kiếm có tên trong Danh sách các loài cần được bảo vệ ở Việt Nam.”  Lan kiếm có thể trồng được, bằng các nhánh con thu thập trong thiên nhiên. Cây trồng bằng mùn núi hay xơ dừa trộn với than trấu đốt yếm khí. Chậu để trồng lan kiếm có nhiều lỗ nhằm thoát nước và thoáng khí. Cây trồng làm cảnh có thể ra hoa hằng năm.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thừa Thiên - Huế"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lâm Đồng"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "trên các hốc mùn đá, hốc cây hay trên đất có nhiều mùn.",
+      "Đặc điểm sinh trưởng": "Cây ưa bóng, ưa khí hậu ẩm mát dưới tán rừng, nhiệt độ thích hợp cho cây sinh trưởng phát triển từ 18 – 25°C."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa lan kiếm có vị thơm ngát, có tác dụng giải uất, lá có vị ngọt the, tính lạnh, không độc, vào các kinh phế, vị, can, có tác dụng thanh phế, khai uất, tiêu đờm, sinh tân dịch, bớt háo khát, làm tan phế khí uất kết và vị khí ngưng trệ, lợi tiểu tiện. Rễ có vị ngọt, có độc, có tác dụng hoà huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa lan kiếm dùng ướp chè hay pha với chè uống, chữa say rượu, điều hòa khí huyết. Sắc uống và nấu nước rửa mắt chữa mắt mờ. Hoa khô sắc uống cầm tiêu chảy, hoặc làm cho dễ đẻ. Cất lấy nước hoa uống và nhỏ mắt sẽ sáng mắt.  Lá lan kiếm chữa nghẹt đờm tức ngực, nôn ọe, kinh nguyệt không đều, bệnh tiêu khát (đái tháo đường), ăn nhiều mà gầy. Lá còn dùng làm thuốc lợi tiểu. Ngày dùng 20 – 40g lá sắc uống hay hãm uống.  Rễ lan kiếm có độc, được dùng làm thuốc chữa họ, thổ huyết hay bị thương chảy máu; nếu bệnh cần có tác dụng nhanh thì giã vắt lấy nước cốt uống. Rễ lan kiếm chỉ được dùng làm thuốc theo liều lượng chỉ định.  Ở Trung Quốc, nước sắc thân rễ và rễ lan kiếm trộn với cơm nếp đã lên men, ăn làm thuốc chữa đau dạ dày, rễ còn là một thành phần của thuốc trị bệnh hoa liễu. Ở Lào và Campuchia, hoa lan kiếm là một thành phần của thuốc rửa mắt, lá là thuốc lợi tiểu, và rễ trị ho.  Bài thuốc có lan kiếm  Chữa bạch đới, đái đục, đái buốt: Lá lan kiếm, lá huyết dụ, mỗi vị 20 – 40g. Sắc uống ngày một thang (Lãn Ông, Bách gia trận tàng).  Chữa trước ho có đờm rồi sau ho ra máu: Rễ lan kiếm, thiên môn, mạch môn, sinh địa, bạch thược, tang bạch bì, địa cốt bì, chi tử, mỗi vị 10 – 16g, sắc uống ngày một thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

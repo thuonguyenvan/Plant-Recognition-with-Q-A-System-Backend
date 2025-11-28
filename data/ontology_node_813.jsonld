@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quán chúng",
+      "ten_khac": "Quán chúng",
+      "ten_khoa_hoc": "Cyrtomium fortunei J.Sm.",
+      "ma_taxon": "161570",
+      "ho": ""
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây Quán Chúng là một loại dương xỉ có hình thái đặc trưng với lá dài hình mác, rãnh nông trên cuống lá, bào tử phủ khắp mặt dưới lá chét.",
+      "thân": "Cây có chiều cao từ 25-50cm.",
+      "rễ": "Mọc thẳng đứng, được bao phủ dày đặc bởi các vảy màu nâu.",
+      "lá": "Lá mọc thành cụm, cuống lá dài 12-26cm, phần gốc có đường kính 2-3mm. Cuống lá có màu rơm, mặt trước có rãnh dọc nông, được bao phủ bởi các vảy hình trứng hoặc hình mác màu nâu, đôi khi phần giữa sẫm màu hơn. Phiến lá có hình mác thuôn dài, kích thước 20-42cm chiều dài và 8-14cm chiều rộng. Đầu lá tù, phần gốc hơi thu nhỏ hoặc không thay đổi nhiều. Lá có dạng lông chim lẻ với 7-16 cặp lá chét mọc so le, gần như trải rộng ngang. Lá chét có cuống rất ngắn, hình mác, hơi cong lên tạo dáng lưỡi liềm, phần giữa dài 5-8cm, rộng 1.2-2cm. Đầu lá nhọn dần, đôi khi có đuôi, gốc lá bất đối xứng với bên trên gần như cụt và có thể hơi tròn, bên dưới thuôn nhọn. Mép lá nguyên hoặc có răng nhỏ hướng về phía trước. Gân lá hình lông chim, các gân con tạo thành 2-3 hàng mắt lưới, không rõ ràng ở mặt trên nhưng hơi lồi ở mặt dưới. Lá chét ở đỉnh có hình trứng hẹp, dài 3-6cm, rộng 1.5-3cm, đôi khi có 1-2 thùy nhỏ ở phần dưới. Lá có dạng giấy, cả hai mặt nhẵn bóng, gân chính có rãnh nông ở mặt trên và có vảy màu nâu hình mác hoặc tuyến tính thưa thớt.",
+      "bào tử": "Nhóm túi bào tử phân bố khắp mặt dưới của lá chét, có màng bao tròn, hình khiên, mép nguyên."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": ""
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Như trên đã nói, tên quán chúng dùng để chỉ thân rễ và phần dưới cuống lá phơi hay sấy khô của rất nhiều cây khác nhau thuộc quyết thực vật. Sau đây là một số cây chính:  Cyrtomium fortunei J. Sm (Polystichum fortunei Nakai). Cây có thân rễ mọc đứng, lá non mọc thành túp cuống dài 5-20cm khía sâu có vảy. Phiến lá hình lông chim dài 15-35cm, ổ tử nang phân phối đều từ gân chính đến mép các thùy của lá. Như trên đã nói, mặc dù có ghi trong tài liệu cũ, nhưng cho đến nay chưa ai phát hiện. Tại Trung Quốc, người ta cũng chưa thấy ở đâu dùng vị thuốc này làm quán chúng. \u00a0Dryopteris crassirhizoma Nakai (Thô hành lân mao quyết) thuộc họ Aspidiaceae, còn có tên quán chúng (Đông Bắc, Trung Quốc). Cây này mới thấy ở Trung Quốc (Hắc Long Giang, Cát Lâm, Liêu Ninh). \u00a0Athyrium acrostichoides (Sw.) Diels-Quán chúng (Tứ Xuyên) họ Athyriaceae. Woodwardia unigemmata Nakai họ Ô kim quyết Blechnaceae có tên là đơn nha cẩu tích quản trọng, cây này có mọc ở Sapa (Lào Cai). Cùng giống còn có Đông phương cẩu tích-Woodwardia orientalis Sw. và Woodwardia orientalis Sw. var. prollifera (Hook. et Arn.) Ching. Những loài này thấy và được dùng ở Triết Giang, Phúc Kiến, Đài Loan, Hồ Bắc, Tứ Xuyên, Cạm Túc, Hồ Nam. Tại nước ta, qua các tài liệu cũ có cây mang tên cẩu tích Woodwardia cochinchinensis Ching (co cút, đong un, Lào) nói là có mọc phổ biến ở miền núi nước ta, nhưng cũng chưa phát hiện. Osmunda japonica Thunb. là cây tử cơ thuộc họ Tử cơ Osmundaceae. Cây này mọc và được dùng ở Hồ Nam, Sơn Đông, An Huy, Giang Tô, Triết Giang, Phúc Kiến, Đài Loan, Quảng Đông, Quảng Tây, Giang Tây, Hồ Bắc, Tứ Xuyên, Quý Châu, Vân Nam, Thiểm Tây.  Qua tài liệu cũ ta có cây quản trọng Osmunda zeylania L (tên khác của Helmithostatchys zeylanca Hook.)"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Do nguồn gốc hỗn loạn cho nên thành phần hóa học cần xác minh lại. Theo Dược học tạp chí (Nhật 39; 905, 1920) trong Đông bắc quán chúng có filixin, filmaron C47H56O16, albaspidin C25H38O8. Filixin thủy phân sẽ cho axit filixic C35H40O12 và aspidinola C12H16O4, ngoài ra còn có axit filmaric chất béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quán chúng là một vị thuốc kinh nghiệm nhân dân. Tính chất theo tài liệu cổ của quán chúng là vị đắng, hơi hàn, có tác dụng thanh nhiệt, hoạt huyết, tán ứ, cầm máu, giải độc, sát trùng, dự phòng bệnh thời khí.  Dùng trong những bệnh trừ\u00a0tà nhiệt, chất độc chứa trong bụng, phá trưng hà (hòn khối trong bụng), trị bạch thốn trùng (sán). Còn dùng làm thuốc sát trùng, chữa băng đới, thuốc phụ khoa.  Coi vậy ta thấy một loài quán chúng có tác dụng tẩy sán như loài dương xỉ đực, trong tây y (dương xỉ đực Aspidium filix-mas Roth, thuộc họ Tàm kiển-Polypodiaceae. Trong dương xỉ đực có chất tanin-axit filicotannic, chất béo, chất sáp, nhựa, tinh dầu, filixin, filmaron).  Liều dùng của quán chúng: ngày dùng 6-12g. Trong sách cổ nói: những người tỳ hư, vị hàn không thực nhiệt không được dùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "băng huyết: quán chúng 20g sắc với rượu mà uống.",
+      "được_dùng": "Xích bạch đới lâu ngày không khỏi, sau khi để mất máu nhiều: một củ quán chúng để nguyên, tẩm dấm cho ướt, nướng thơm để nguội tán nhỏ. Ngày uống 2 lần, mỗi lần uống 6g, dùng rượu mà chiêu thuốc.",
+      "phòng bệnh": "trong mùa ôn dịch người ta thường cho quán chúng vào bể nước ăn cho khỏi độc (theo Hoàng cung Tú-Bản thái cương mục của Lý Thời Trân).",
+      "chữa lỵ": "quán chúng sao vàng tán bột, kim ngân hoa, sao vàng tán bột, mỗi vị 20g, cam thảo bột 10g. Trộn đều, mỗi lần uống 1-2g, ngày uống 3-4 lần (kinh nghiệm của Diệp Quyết Tuyền).",
+      "Trị xuất huyết do nhiệt": "Xuất huyết do nhiệt có thể biểu hiện qua các triệu chứng như nôn ra máu, chảy máu cam, đi ngoài ra máu và chảy máu tử cung. Để điều trị, có thể sử dụng bài thuốc gồm quán chúng, trắc bách diệp, hạc thảo nha và tông lư thán sắc uống.",
+      "Trị và phòng bệnh cảm cúm": "Khi có dịch cúm hoặc vào mùa dễ mắc bệnh, có thể dùng bài thuốc gồm quán chúng 14g, cam thảo 8g, kinh giới 12g, tử tô 12g. Sắc uống nóng mỗi ngày một thang, liên tục trong 3 ngày. Nếu sau nửa tháng dịch bệnh vẫn còn, tiếp tục uống thêm 3 ngày. (Bài thuốc Quán Chúng Thang – Nghiệp Phương).",
+      "Trị thận bị lao nhiệt, chân tay sưng cấp": "Dùng bài thuốc gồm quán chúng, can tất, ngô thù du, hòe bạch bì, duyên phấn, vô di, hạnh nhân. Tán nhỏ, mỗi ngày uống 10-12g chia thành 3 lần, dùng với nước sôi khi bụng đói. (Bài thuốc Quán Chúng Tán).",
+      "Trị thấp nhiệt uẩn kết, lỵ, amip mạn": "Dùng bài thuốc gồm ngân hoa 15g, quán chúng 15g, nha đởm tử 45g, sao vàng 60g. Các vị thuốc tán thành bột, nấu sáp cho chảy ra, hòa bột vào trộn đều rồi vo thành hoàn. Mỗi ngày uống 8-12g, dùng khi bụng đói. Bài thuốc có tác dụng sát trùng, chữa lỵ và cầm máu. (Bài thuốc Nha Đởm Tử Hoàn Phục Phương)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

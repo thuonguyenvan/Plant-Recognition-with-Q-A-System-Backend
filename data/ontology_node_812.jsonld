@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau bao",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Sonchus wightianus DC.",
+      "ma_taxon": "706110",
+      "ho": "Cúc (Asteraceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống hai năm, cao khoảng 1m. Thân mọc đứng, nhăn.",
+        "lá": "Lá mọc so le, hình mác thuôn, gốc có bẹ to ôm thân, khía răng không đều, những lá gần gốc và ở thân to có 2 tại ngắn, mép chia thuỳ nông hình tam giác, những lá ở gần ngọn nhỏ hơn.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành ngù bao quanh bởi những lá bắc hình dài nhọn, có lông cứng, hoa nhiều; tràng có lưỡi ngắn hơn ống 2 – 4 lần, nhị 5, bao phấn có tại mảnh ở gốc, mào lông rất mềm và trắng, bầu hình trụ.",
+        "quả": "Quả bế dẹt, thuôn ở hai đầu, dài 3,5 mm có 5 cạnh."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Sonchus L. có 4 loài ở Việt Nam, vừa là cây rau ăn vừa dùng làm thuốc. Rau bao phân bố nhiều nơi trên thế giới, bao gồm Nhật Bản, Trung Quốc, Lào, Thái Lan, Malaysia, Indonesia và Ấn Độ. Ở Việt Nam, cây phân bố tương đối rộng rãi ở hầu hết các tỉnh miền núi phía Bắc, một số tỉnh ở đồng bằng và trung du như Hà Tây (cũ), Ninh Bình, Thanh Hoá, Vĩnh Phúc…, còn gặp ở các tỉnh Kon Tum, Lâm Đồng. Tại một số tỉnh miền núi phía Bắc, rau bao được đồng bào địa phương trồng trong vườn gia đình để làm rau ăn.",
+        "thường_mọc": "Rau bao là loại cây thảo sống một năm, ưa ẩm và ưa sáng hoặc có thể hơi chịu bóng. Cây thường mọc rải rác trên đất ẩm ở quanh làng, ven đường đi hay trên nương rẫy. Hàng năm cây mọc tự nhiên từ hạt vào tháng 3 – 4, sinh trưởng phát triển nhanh trong mùa hè; đến tháng 10 sau khi quả già, toàn cây tàn lụi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Theo Qu Guirong et al., 1996, rau bao chứa – 3 – O – α – L – rhamnosid và kaempferol – 3, 7 – α – L – dirhamnosid (CA125: 323028).  Theo Qu Guirong et al., 1995, rau bao chứa acacetin, kaempferol chrysoeriol, luteolin và isorhamnetin (CA 123:79557b).  Rau bao chứa mannitol, quercetin, isoramnetin, chrysocniol, isoramnetin – 3-β-D-glucosid, quercetin 7β – D – glucopyranosid, các chất 1, 2 – dilinolenyl – 3 – O – β – D – galactopyranosyl – on – glycerol; 1, 2 – dilinoleny – 3 – O – (αD – galactopyranosyl – (1 →6 – O – β – D – galactopyranosyl – on – glycerol, 1 – linolyl – 3 – O – β – D – galactopyranosyl – on – glycerol. Từ hoa đã phân lập flavonoid, glycosid sonchosid. Rau bao còn chứa flavonoid chủ yếu là luteolin – 7- glucuronid, apigenin – 7 – glucuronid. Ngoài ra, còn có aesculetin, scopoletin. Lá chứa luteolin – 7- glucosid và linarin [Trường đại học Dược Trung Quốc, Trung được từ hải I, 1993, 1084]."
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây rau bao có vị đắng, tính hàn, có tác dụng thanh nhiệt, giải độc, lợi tiểu, thông sữa. “Trung dược từ hải” quyển I, 1993, tr.1043 ghi: có tác dụng thanh thấp nhiệt, hoá ứ, giải độc, khử thũng, bài nùng (mủ)."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Đồng bào dân tộc ở miền núi thường trồng rau bao nấu ăn để giải nhiệt, lợi tiểu vì rau bao mọc hoang ở các nương rẫy, gây hại cho cây trồng. Phụ nữ đang nuôi con uống nước sắc rau bao làm tăng tiết sữa. Còn dùng trị kiết lỵ, lòi dom, ăn không tiêu, viêm họng, viêm loét giác mạc. Ngày dùng 80 – 100g rau tươi hoặc 40 – 50g rau khô sắc uống.  Chữa kiết lỵ cấp tính, ngày dùng 80g rau tươi hoặc 40g rau khô sắc uống. Chữa trĩ nội hoặc lòi dom, toàn cây rau bao cả rễ, nấu nước, ngâm rửa.  Chữa tắc mật vàng da, ăn không tiêu, ia phân sống, rau bao 100g để tươi, sắc uống. Chữa viêm họng, 20g ngọn rau bao tươi, rửa sạch, nhai, ngậm, nuốt nước dần dần.  Ở Trung Quốc, nhân dân dùng rau bao chữa viêm ruột, viêm ruột thừa, bệnh lỵ, trĩ, sản hậu ứ huyết, đau bụng. Còn chữa sốt rét, ung thũng, mụn nhọt lở loét. Ngày 9 – 15g sắc uống [Trung dược từ hải, quyển I, 1993, tr. 1043].  (Nguồn: Tổng hợp)"
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

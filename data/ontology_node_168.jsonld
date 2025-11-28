@@ -1,0 +1,286 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa chông",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Barleria cristata L.",
+      "ma_taxon": "159175",
+      "ho": "Ô rô (Acanthaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo hay cây nhỏ, cao 0,5 – 2m.",
+      "thân": "Thân đứng, phân cành nhiều, khi non có lông.",
+      "lá": "Lá mọc đối, hình mác, dài 4 – 12 cm, rộng 2 – 4 cm, gốc thuôn hẹp, đầu nhọn, mép nguyên, hai mặt có lông, cuống ngắn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành kim nhỏ; lá bắc dạng lá, lá bắc con hình chỉ, hẹp nhọn, mép nguyên hoặc có ít răng, ít lông; hoa màu lam hoặc hồng, đài dài 2 cm, 4 lá đài to gần bằng lá, có răng nhọn như gai, tràng hình phễu dài 3,5 -5 cm, có ống và 5 cánh gần bằng nhau; bầu nhẵn, mỗi ô 2 noãn.",
+      "quả": "Quả nang có 4 hạt.",
+      "mùa hoa": "Tháng 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Barleria L. có 4 loài ở Việt Nam (Trần Kim Liên, 2005), 3 loài trong số đó có công dụng làm thuốc kể cả loài hoa chông. Hoa chông có nguồn gốc từ vùng Ấn Độ – Malaysia. Cây phân bố ở hầu hết các nước Đông Nam Á, Mianma và phía Nam Trung Quốc. Ở Việt Nam, hoa chống phân bố chủ yếu ở các vùng núi thấp, thuộc các tỉnh Cao Bằng, Lạng Sơn, Quảng Ninh, Sơn La, Yên Bái, Hoà Bình, Thái Nguyên, Ninh Bình, Thanh Hoá, Nghệ An, Thừa Thiên – Huế. Hoa chông là loại cây thảo sống nhiều năm, ưa ẩm, ưa sáng và có thể hơi chịu bóng. Cây thường mọc ở rừng núi đá vôi, độ cao phân bố tới 600m. Hoa chông sinh trưởng phát triển mạnh trong mùa mưa ẩm; ra hoa quả nhiều hàng năm, nhất là những cây mọc ở nơi được chiếu sáng. Cây tái sinh tự nhiên bằng hạt và mọc chồi sau khi bị cắt.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thừa Thiên – Huế"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, lá, rễ, hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa chứa apigenin, naringenin và apigenin glucuronid [Compendium of Indian Medicinal Plants (1970 – 1979), vol.2, 1999). Theo Trung dược từ hải III, 1997, cây hoa chông chứa decinin, decamin, Iagerstroemin, lagerin, dihydroverticiltalin, decodin, lageracetal. Theo Prosea 12 (2), 2001, cao cồn hoa chông chứa malvidin – 3, 5 – diglucosid và quercetin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây hoa chông có tác dụng thanh phế, long đờm, cầm máu, cắt cơn sốt rét, làm ra mồ hôi, tiểu sưng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam, cây hoa chông được dùng chữa tê thấp, đau tai, đau mắt, sưng phổi, rắn cắn và dùng cho trẻ em trị bệnh nhiễm khuẩn xuất tiết kèm theo sốt. Ở Trung Quốc, họa chống được dùng trị phổi nóng, ho ra máu, ho gà, sốt rét. Cây hoa chống nghiền nát được dùng đắp trị mụn nhọt lở loét. Ở Ấn Độ, rễ và lá dùng tiêu sưng, trị ho, cây được dùng trị rắn cắn. Nước sắc rễ dùng trị thấp khớp, viêm phổi. Hoa chông còn được trị đau răng, đau mình mẩy. Dịch ép lá tươi được áp dụng làm thuốc giải độc, trị rắn cắn. Ở Nepal, dịch ép lá với liều 5 ml được hoà vào nước và uống mỗi lần, ngày uống 2 lần một cách đều đặn, để điều trị viêm phế quản và hen phế quản."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Âm hành thảo",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Siphonostegia chinensis Benth.",
+      "ma_taxon": "774020",
+      "ho": "Scrophylariaceae",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Phân bố:  Chi thực vật này có tổng cộng 4 loài, trong đó 1 loài phân bố tại Tiểu Á, 3 loài còn lại phân bố ở Trung Á và Đông Á. Riêng tại Trung Quốc có 2 loài.  Cây âm hành thảo phân bố rộng rãi ở Trung Quốc, bao gồm các khu vực như Đông Bắc, Nội Mông, Hoa Bắc, Hoa Trung, Hoa Nam và Tây Nam. Ngoài ra, loài cây này còn được tìm thấy ở Nhật Bản, Triều Tiên và Nga. Cây thường mọc ở các vùng đồng cỏ núi thấp, thảo nguyên, sườn đồi, đất hoang và bụi rậm trên đồi, ở độ cao từ 800 đến 3.400 mét so với mực nước biển.  Sinh trưởng:  Âm hành thảo phân bố rộng rãi ở Trung Quốc, xuất hiện ở nhiều khu vực như Đông Bắc, Nội Mông, Hoa Bắc, Hoa Trung, Hoa Nam và Tây Nam. Ngoài ra, loài cây này còn có mặt tại Nhật Bản, Triều Tiên và Nga.  Cây thường mọc ở những vùng đồng cỏ núi thấp, thảo nguyên, sườn đồi, đất hoang và bụi rậm trên đồi, ở độ cao từ 800 đến 3.400 mét so với mực nước biển. Âm hành thảo ưa môi trường mát mẻ, ẩm ướt và phát triển tốt trên đất chua."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": ""
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": ""
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Âm hành thảo chứa 10-p-coumaroylauricin , 8-isologous tannin và aktoside . Toàn bộ cây chứa 0,45% tinh dầu dễ bay hơi",
+        "Các hợp chất": "Các thành phần này có tác dụng kháng viêm, giảm đau, cầm máu và hỗ trợ tiêu hóa."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Vị đắng, tính hàn, không độc."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Âm hành thảo là một loài thực vật có dược tính, toàn bộ cây đều có thể được sử dụng làm thuốc.",
+        "có tác dụng": "Thanh nhiệt, lợi tiểu, làm mát máu, cầm máu, hoạt huyết giảm đau.",
+        "chữa": "Hỗ trợ điều trị các bệnh về gan như viêm gan vàng da, viêm túi mật. Chữa các vấn đề về đường tiết niệu như sỏi tiết niệu, tiểu khó, tiểu ra máu. Giảm đau bụng do ứ huyết sau sinh, chữa kinh nguyệt không đều, đau bụng kinh. Điều trị các vết thương ngoài da, vết bỏng, mụn nhọt sưng viêm, chảy máu do chấn thương. Giảm đau do phong thấp, chữa rối loạn tiêu hóa, đầy bụng khó tiêu.",
+        "được_dùng": "Dùng trong Đông y: Âm hành thảo được sử dụng làm thuốc sắc, thuốc bột hoặc đắp ngoài da để chữa nhiều loại bệnh. Dùng trong dân gian: Một số bài thuốc từ cây này được dùng để trị đau bụng kinh, ứ huyết sau sinh, sỏi tiết niệu và các bệnh viêm nhiễm ngoài da."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "Uống trong : 6-12g. Đắp ngoài : trộn với rượu đắp nơi vết thương.",
+        "có tác dụng": "Với những công dụng đa dạng, âm hành thảo là một vị thuốc quý trong y học cổ truyền, đặc biệt hữu ích trong điều trị các bệnh về huyết, gan, thận và tổn thương ngoài da."
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": "Kiêng kỵ :  Phụ nữ có thai, không dùng."
+      }
+    }
+  ]
+}

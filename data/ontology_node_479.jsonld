@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Muồng trinh nữ",
+      "ten_khac": "Trả tiền, sơn biển đậu, muồng đậu",
+      "ten_khoa_hoc": "Chamaecrista mimosoides (L.) Greene",
+      "ma_taxon": "53263",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo hay cây bụi, cao 0,2 – 0,5m, có khi đến 1m, phân cành ngay từ gốc, gốc hóa gỗ.",
+      "thân": "Thân mọc thẳng, đôi khi phần gốc mọc bò rồi đứng thẳng. Cành mảnh có lông màu vàng.",
+      "lá": "Lá kép lông chim, mọc so le, gồm 13 – 20 đôi lá chét nhỏ, mọc rất sít nhau, hai mặt nhẵn, lá kèm hình tam giác nhọn; cuống là có một tuyến ở gốc.",
+      "hoa": "Hoa nhỏ mọc 1 – 2 cái ở kẽ lá, màu vàng, đài 5 răng bằng nhau; tràng 5 cánh mỏng; nhị 8 – 10, không đều, bao phấn có 4 mặt, mở bằng lỗ định; bầu có lông dày màu trắng.",
+      "quả": "Quả dài, mỏng, hình liềm hoặc hơi thẳng: hạt 10 – 14 có vách ngăn.",
+      "mùa hoa": "tháng 7 – 9",
+      "mùa quả": "tháng 10 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Chamaecrista Moench ở Việt Nam hiện đã biết 4 loài, trong đó loài muồng trinh nữ trên có vùng phân bố rộng rãi gần như khắp nơi, từ vùng ven biển lên đến vùng núi, tới độ cao khoảng 2.000m (Danh lục các loài thực vật Việt Nam, T.II, 2003). Đây cũng là loài của vùng nhiệt đới Đông Nam Á, nên cây cũng có mặt ở tất cả các quốc gia trong vùng và còn lan sang cả Án Độ, Mianma và phía Nam Trung Quốc.",
+      "Đặc điểm sinh trưởng": "Muồng trinh nữ là cây có biên độ sinh thái rộng, ưa sáng, ưa ẩm và cũng hơi chịu được hạn. Muồng trinh nữ có thể sống tốt trên nhiều loại đất kể cả nơi đất kém dinh dưỡng ở rừng thưa rụng lá, hoặc rừng thông trồng, có pH thấp (rất chua). Cây ra hoa quả nhiều hàng năm. Tái sinh tự nhiên tốt từ hạt, hoặc mọc chồi khỏe từ phần gốc còn lại sau khi cắt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá và hạt chứa emodin và luteolin -7- glucosid. Rễ và hạt chứa physcion và acid emodic. [Ram P.Ras et al., 1999, Compendium of Indian medicinal plants, volume II (1970 – 1979), 147; Trung được từ hải I, 1993, 51].",
+      "gồm chất": "Rễ chứa aloe-emodin là chất có tác dụng nhuận tràng, tẩy.",
+      "chứa": "Lá có tanin.",
+      "Các hợp chất": "Quả chứa tanin là chất có tác dụng ức chế lipase (CA, 126, 1997: 65.371m)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Muồng trinh nữ vị ngọt, nhạt, tính mát, có công năng thanh nhiệt giải độc, tiêu tích, lợi tiểu.  Ở Trung Quốc, sách “Nam Ninh thị dược vật chí” và “Trung được đại từ điển” đều ghi: vị ngọt, tính bình, có công năng thanh can, lợi thấp, giải độc, lợi niệu, tán ứ, hóa tích [TDTH, 1993, I; 511]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây muồng trinh nữ được dùng chữa viêm thận, phù thũng, hoàng đản, ho có đờm rãi, táo bón thường xuyên, trẻ em cam tích, quáng gà.",
+      "được_dùng": "Ngày 30-60g, trẻ em 15-30g sắc uống.",
+      "chữa": "Rễ và lá trị lỵ, ngày 10-20g sắc uống, hoặc dùng lá, sao lên, hãm như hãm trà, ngày 10g.",
+      "giã nát": "Dùng ngoài, lấy là tươi, rửa sạch, giã nát, đắp lên chỗ rắn cắn, lở Sơn, mụn nhọt; hoặc nấu nước tắm rửa trị mụn nhọt, viêm da mů.",
+      "làm thuốc": "Lá non và ngọn có thể được dùng nấu chín làm rau ăn. Quả chín luộc lên ăn được.",
+      "có tác dụng": "Ở Indonesia, nhân dân dùng rễ sắc uống để chữa co thắt dạ dày (gastrospasm) [Med. Herb index, 1995: 107]. Ở Ấn Độ, rễ cũng được dùng làm thuốc chữa đau bụng, chữa co thắt dạ dày [Chopra, 2001:54] và mê sảng .",
+      "sắc nước uống": "Muồng trinh nữ toàn cây 60g, rau má mỡ (Hydrocotyle sihthorpioides Lam) toàn cây 30g; sắc nước, chia 2-3 lần uống trong ngày.",
+      "sắc uống": "Muồng trinh nữ, biển súc (Polygonam avictuare L.), mỗi vị 30g, sắc uống hàng ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

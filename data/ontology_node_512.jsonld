@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nho núi",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Ampelopsis brevipedunculata (Maxim.) Kochne",
+      "ma_taxon": "457553",
+      "ho": "Nho (Vitaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo, thân mọc bò, hình trụ hoặc hình nhiều cạnh.",
+      "thân": "Cành hình trụ, phình lên ở những mấu, hơi có lông; tua cuốn phân nhánh, mọc đối xứng với lá.",
+      "lá": "Lá đơn, hình bầu dục, dài 5 – 8 cm, rộng 4 – 8 cm, gốc hình tim, đầu nhọn, chia 3 – 5 thuỳ nông, mép khía răng, gân chính 5; cuống dài 1,5 – 3 cm, hơi có lông.",
+      "hoa": "Cụm hoa mọc đối diện với lá thành ngù, ngắn hơn lá, rộng 2 – 5 cm, có lông nhỏ; đài hình đấu, hơi có lông, có 5 răng ngắn, tràng 5 cánh hình bị dục tù, đầu cánh cong gập vào trong, nhị 5, thụt, chỉ nhị hình chỉ, hơi dày lên ở giữa, bao phấn gần hình mắt chim; bầu hình tháp, vòi nhụy hình trụ nhẵn, đầu nhụy không rõ, 2 ô, chứa 2 noãn.",
+      "quả": "Quả mọng, màu lam hay tím; hạt 3 – 4, gồ lên và nhẵn ở mặt lưng, có một vạch dọc và 2 hố lõm.",
+      "mùa hoa": "tháng 2 – 3",
+      "mùa quả": "7- 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Nho núi mới chỉ ghi nhận phân bố ở một số điểm tại miền Bắc như: Quảng Ninh (Hà Cối), Hà Nội (Từ điển cây thuốc Việt Nam, 1997 và Danh lục các loài thực vật Việt Nam, T.II, 2003). Ngoài ra cũng thấy có ở Vĩnh Phúc (Tam Dương, Tam Đảo) và Thái Nguyên (Đại Từ: Quân Chu). Loài này còn phân bố tại Nam Trung Quốc, Triều Tiên và Nhật Bản.",
+      "thường_mọc": "Cây ưa ẩm, chịu bóng; thường leo lên những cây bụi và dây leo khác ở ven rừng, bờ suối ở cửa rừng và bờ nương rẫy. Cây ra hoa quả hàng năm tái sinh tự nhiên bằng hạt. Nếu bị chặt phát, phân còn lại tiếp tục tái sinh.",
+      "Đặc điểm sinh trưởng": "Bộ phận dùng:  Quả, rễ. Thu hái vào mùa hè thu, quả phơi khô, rễ rửa sạch, thái nhỏ, phơi khô hoặc dùng tươi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nho núi chứa ampelopsin A, B, C [Trung dược đại từ điển, (1993), 2322, (1996) vol.II, 1567 và (1997) vol.III, 559]. Ngoài ra còn có juglani, astragalin, neohesperidoid, kaempferol – rhamnopyranosyl – (1 – 2) – galactopyranosid và 3 – O – kaempferol 3- O – arabino – pyranosid [Tetrahedron letter, 1990, 46 (15) 5121]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả nho núi vị chua hơi ngọt, tính mát, có tiểu độc; rễ và thân vị đắng hơi ngọt, tính mát, có công năng thanh nhiệt giải độc, hoạt huyết tán ứ, khu phong trừ thấp.  Tài liệu Trung Quốc ghi: rễ nho núi vị cay, tính nhiệt, có công năng hoạt huyết tán ứ, tiêu viêm giải độc, sinh cơ tạo cốt, trấn phong khư hàn [TDTH, 1993, I: 2322]; thân và thân rễ nho núi vị cay, đắng, tính mát có công năng thanh nhiệt giải độc, khu phong hoạt lạc, chỉ lỵ, chỉ huyết [TDTH, 1996, II: 1567]. Một tài liệu khác ghi: nho núi vị ngọt, hơi chua, tính bình, có công năng kích thích tuần hoàn máu, mạnh gân, giảm sưng, giải độc [Chang Minyi, 1992: 229]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ, vỏ rễ (với rễ to) nho núi được dùng chữa ung thư dạ dày, ruột, phong thấp, cước khí, thủy thũng, nôn mửa, ỉa chảy. Ngày dùng 5 – 10g rễ và vỏ rễ sắc uống. Nếu cả thân và thân rễ liều 15 – 30g sắc uống, ngày 1 thang.  Để chữa đòn ngã đau nhức, ngoại thương ứ máu, dùng rễ, vỏ rễ nho núi 1 – 3g tán thành bột mịn, hoà với rượu ấm uống, ngày 2 – 3 lần.  Dùng ngoài, lấy dược liệu tươi, rửa sạch, giã nát, đắp ngoài chữa vết thương chảy máu, đòn ngã tổn thương, bỏng lửa, mụn nhọt, lở ngứa.  Ở Đài Loan, Nhật Bản, có những báo cáo về độc do quả nho núi, nước sắc rễ để rửa mắt khi bị đau mắt. Ở Campuchia, lá nho núi để điều trị vết thương và đau do rết cắn [Perry et al., 1980: 433]. Ở Trung Quốc, tài liệu cổ ghi: để làm giảm đau vùng thắt lưng, bàn chân, bàn tay, cẳng chân, dùng rễ, sắc đặc, lấy nước rửa. Rễ tươi, rửa sạch, giã nát lấy nước uống hoặc sắc uống để lợi tiểu, kích thích hoạt động của ruột non và làm giảm sưng phồng. Để chống nôn, lấy rễ, sắc lấy nước đặc, rồi nhấp dần từng ngụm một [Chang Minyi, 1992: 230]. Tài liệu mới ghi: rễ và thân rễ nho núi được dùng chữa ung thư đường tiêu hoá và đường tiết niệu, chữa u lympho ác tính [Kee Chang Huang, 1999: 482].  Bài thuốc chữa ung thư có nho núi  Chữa ung thư dạ dày – ruột: Rễ nho núi 30g, bạch hoa xà thiệt thảo 30g, long quy 30g, sắc uống ngày 1 thang. Chữa ung thư dạ dày: Rễ nho núi 20g, thủy dương mai 20g, bán chi liên 20g, đằng lê căn (sắc trước 2 giờ), bán biên liên 20g, phượng vĩ thảo 15g, bạch mao căn 20g. Sắc lấy ngày 1 thang. Chữa ung thư phổi: Bài 1: Rễ nho núi 30g, hoàng cầm râu (toàn cây) 30g, bán biên liên (toàn cây) 30g, gáo tròn (rễ) 30g, dương đào Trung Quốc (rễ) 60g, hòe Bắc Bộ (rễ) 15g, bảy lá một hoa (thân rễ) 15g, seo gà (toàn cây) 25g, có tranh (thân rễ) 25g, bạch truật (thân rễ) 10g. Sắc lấy nước uống, ngày 1 thang chia 2 – 3 lần. Bài 2: Nho núi (rễ), đăng lê căn, bán biên liên, đan sâm, bạch hoa xà thiệt thảo, thanh cao mỗi vị 30g, đại hoàng, phật thủ, địa du, cao đồng, mỗi vị 10g. Sắc lấy nước uống, ngày 1 thang chia 2 – 3 lần. Chữa ung thư ruột: Rễ nho núi 30g, thanh cao, địa đu, xà môi, mỗi vị 30g. Sắc lấy nước uống, ngày 1 thang. Chữa ung thư vú: Rễ nho núi, cầu cốt thụ căn, vân thực, mỗi vị 30g, đằng lê căn (sắc trước 2 giờ) 30g, bá giác kim bàn 5g, thiên nam tinh 5g. Sắc lấy nước uống, ngày 1 thang. Chữa ung thư thận: Rễ nho núi 30g, khoai trời (khoai dái), toàn cây bán biên liên, thân rễ cỏ tranh, ý dĩ, mỗi vị 15g. Sắc lấy nước uống ngày 1 thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

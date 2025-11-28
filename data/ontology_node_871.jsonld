@@ -1,0 +1,284 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/mia-do.html",
+      "ten": "Mía dò",
+      "ten_khac": "Mía dò, Cát lồi",
+      "ten_khoa_hoc": "Costus speciosus (Koenig) Smith",
+      "ma_taxon": "764909",
+      "ho": "Costaceae (Mía dò)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo,sống lâu năm, cao 1 – 2m, có khi đến 3m.",
+        "rễ": "Thân rễ to, nạc, mọc bò ngang, phần non có vảy bao bọc, vảy có lông ngắn.",
+        "thân": "Thân xốp, ít phân nhánh.",
+        "lá": "Lá mọc so le, hình trứng thuôn, gốc tròn có bẹ, đầu nhọn, mép nguyên, mặt trên nhẵn, mặt dưới có lông mịn, dài 15 – 20cm, rộng 6 – 7cm, gân chính nổi rõ. Lá non mọc thành một đường xoắn ốc rất đặc biệt. Bẹ lá nhẵn hoặc có lông, lúc non màu lục nhạt sau chuyển trắng ngà hoặc đỏ sẫm; lưỡi bẹ phẳng hoặc hơi vát.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành bông chuỳ, dài 8 – 13cm, rộng 5 – 9cm; lá bắc dày, xếp lớp, màu đỏ, có mũi nhọn, lá bắc con kề bên, cùng màu; đài hình ống loe ở đầu, có 3 răng cứng màu đỏ sẫm; tràng hình phễu, có ống ngắn và cong màu trắng, họng vàng, nhẵn hoặc có lông; nhị dạng cánh mang một bao phấn, chỉ nhị kết hợp vối trung đới kéo dài thành một phần phụ hình trứng đào hẹp, đầu tròn cong lòng máng ôm lấy vòi nhuỵ; cánh môi to, màu hồng, trắng hoặc vàng, khía răng ở đầu; bầu nhẵn hoặc có lông.",
+        "quả": "Quả nang hình trứng hoặc hình bầu dục có 3 cạnh, màu đỏ sẫm, có đài tồn tại; hạt nhiều, có cạnh không đều, màu đen.",
+        "mùa hoa": "tháng 7-11.",
+        "mùa quả": "tháng 7-11.",
+        "mọc": "Loài này còn có một thứ là Costus speciosus (Koenig) Smith var.argyrophyllus Wall, với đặc điểm là mặt dưới lá màu lục nhạt phủ lông dài và dày hơn. Lá bắc, đài hoa, bầu và quả có lông cứng, nhỏ màu hung xám. Cây có công dụng tương tự: Mía dò hoa gốc (Costus tonkinensis Gagnep.) cùng họ. Đó là một cây thảo, phân nhánh nhiều. Lá già mọc theo đường xoắn ốc, hai mặt nhẵn. Cụm hoa mọc từ thân rễ, lúc đầu nằm ngang sau vươn thẳng; hoa có kích thước nhỏ hơn hoa mía dò, cánh môi màu vàng tươi."
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Costus L. có khoảng 175 loài trên thế giới, phân bố ở vùng nhiệt đới và cận nhiệt đới. Ở Việt Nam có 2 loài và một thứ. Mía dò chỉ thấy phân bố ở vùng nhiệt đới châu Á, bao gồm Ấn Độ, Xrilanca, Thái Lan, Malaysia, Lào, Campuchia, Việt Nam, các tỉnh Nam Trung Quốc và đảo Hải Nam. Ở Việt Nam, cây phân bố rộng rãi ở tất cả các tỉnh thuộc vùng núi, trung du và cả đổng bằng.  Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc thành khóm lớn trên đất ẩm, xen với các cây cỏ khác ở ven rừng, ven bờ sông suối, bờ nương rẫy. Ở vùng đồng bằng ít gặp hơn, trong các lùm bụi quanh làng hay vườn đã bị bỏ hoang lâu ngày. Các tỉnh có nhiều mía dò là: Hoà Bình, Sơn La, Lai Châu, Cao Bằng, Lạng Sơn, Thái Nguyên, Tuyên Quang, Tiền Giang, Long An, Đồng Tháp. Ở miền Nam cây mọc trên các bờ kênh rạch. Độ cao phân bố của cây rất rộng, từ vài chục mét đến gần 1500m.",
+        "thường_mọc": "Mía dò là cây sinh trưởng phát triển nhanh trong mùa xuân – hè. Từ thân rễ, hàng năm mọc ra nhiều chồi theo hướng nằm ngang. Loại chổi này mọc thành cây và có thể ra hoa quả ngay trong năm đầu tiên. Sau khi quả già, phần trên mặt đất thường lụi đi. Cá biệt có trường hợp cây không lụi, nhưng lại mọc chồi ở nách lá. Quả mía dò khi già tách thành 3 mảnh để hạt thoát ra ngoài. Cây con mọc từ hạt thường thấy vào tháng 3-4 hàng năm. Mía dò có khả năng tái sinh vô tính khỏe. Các đoạn thân khi sinh cũng như các đoạn thân rễ đều có thể tạo thành cây mới. Nguồn trữ lượng mía dò ở Việt Nam rất dồi dào, ước tính đến hàng ngàn tấn.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tiền Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Long An"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đồng Tháp"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Mía dò đã được nghiên cứu trồng ở Trại cây thuốc Văn Điển và một số địa phương vào cuối những năm 70 đến những năm 80."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Thân rễ, búp non, cành non. Thân rễ, thu hoạch vào mùa thu, rửa sạch, cắt bỏ rễ con, thái phiến phơi hay sấy nhẹ cho khô. Nếu thân rễ khô phải ủ cho mềm rồi thái phiến. Dùng lửa nhỏ sao đến khi bề mặt phiến có màu vàng. Búp và cành non dùng tươi."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Saponin steroid (Diosgenin, tigogenin)."
+      },
+      "Tính vị": {
+        "@type": "Tính vị",
+        "Có vị": "Mía dò có vị chua, tính hàn, có tác dụng thanh nhiệt, giải độc, lợi tiểu, tiêu thũng, chống viêm."
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Ngọn hay cành non mía dò đem nướng, rồi vắt lấy nước nhỏ chữa đau mắt, đau tai. Thân, rễ mía dò chữa sốt đái buốt, đái nước tiểu vàng, viêm bàng quang. Ngày dùng 5-10g dưới dạng nước sắc, cao lỏng hoặc cao mềm. Dùng riêng hoặc phối hợp với lá lành ngạnh chữa bí tiểu tiện, với mộc tặc chữa đái đục, với cỏ xước, cà gai leo, thổ phục linh chữa tê thấp, nhức xương. Dùng ngoài, thân rễ mía dò giã đắp chữa rắn cắn.  Ở Trung Quốc, người ta dùng mía dò chữa viêm thận, phù thũng, xơ gan cổ trướng, tiểu tiện không thông, mề đay. Ở Ấn Độ mía  dò được dùng làm thuốc chữa sốt, bệnh ngoài da, rắn cắn. Ở Indonesia mía dò chữa các bệnh về mắt. Ở Lào và Malaysia, dịch hãm hoặc nước sắc của lá mía dò là thuốc ra mồ hôi hoặc dùng làm nước tắm cho bệnh nhân sốt cao. Ở Malaysia, người ta còn dùng mía dò với trầu không để chữa ho.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+       "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

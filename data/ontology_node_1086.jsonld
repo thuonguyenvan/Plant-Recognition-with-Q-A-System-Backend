@@ -1,0 +1,206 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/co-chua.html",
+            "ten": "Cỏ chửa",
+            "ten_khac": "Cỏ chửa, Cỏ thia lia, Cỏ chân vịt, Thủy hảo",
+            "ten_khoa_hoc": "Hygroryza aristata (Retz.) Nees",
+            "ma_taxon": "431134",
+            "ho": "Lúа (Poaceae)",
+            "Mô tả": {
+                "@type": "Mô tả",
+                "cây": "Cây thảo, sống lâu năm, mọc nổi hay ngập trong nước.",
+                "thân": "Thân mềm, nhẵn, rỗng giữa, mọc bò, dài 30 – 60cm, ít phân nhánh, bén rễ ở các mấu.",
+                "lá": "Lá mọc so le, hình mác hoặc bầu dục – thuôn, gốc tròn, đầu hơi tù. dài 2.5-8 cm, rộng 0,8 – 1,8 cm, màu xanh lục, ráp và có những đốm đỏ nâu ở mặt trên, nhẵn ở mặt dưới, bản song song rất sít nhau, bẹ lá 4 – 5 cm, dài hơn gióng thân, xốp, phát triển rộng thành lòng máng ôm khít gióng, có khía dọc, lưỡi bẹ rất hẹp, mềm.",
+                "hoa": "Cụm hoa mọc ở ngọn thành chùy hình tam giác, dài và rộng 5 – 8 cm, có cuống dài phân nhánh, bông nhỏ xếp đơn độc, có đốt, hình mũi mác hẹp, thẳng, màu lục nhạt, có một hoa, không có mày, nhị 6, bao phấn kéo dài, bầu có vòi ngắn, rời nhau.",
+                "quả": "Quả thuôn hẹp, thắt lại ở gốc.",
+                "mùa hoa": "tháng 7 – 10",
+                "mùa quả": "tháng 7 – 10"
+            },
+            "Phân bố": {
+                "@type": "Phân bố",
+                "phân_bố": "Chi Hygroryza Nees chỉ có một loài là cây cỏ chửa ở Việt Nam. Cây thường mọc thành đám ở các mương máng, ruộng ngập nước vùng đồng bằng. Cỏ chửa có khả năng đẻ nhánh khỏe. Hiện chưa có nhiều thông tin về đặc điểm sinh học của loài này."
+            },
+            "Thông tin khác": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Phần trên mặt đất, thu hái quanh năm, phơi khô."
+            },
+            "Thành phần": {
+                "@type": "Thành phần",
+                "thành phần": "Cỏ chửa chứa 7,92% protein (Compendium of Indian medicinal plants, vol I (1960 – 1969), 1999)."
+            },
+            "Tính vị": {
+                "@type": "Tính vị",
+                "Có vị": "Toàn cây cỏ chửa có vị ngọt, tính mát. Hạt cỏ chửa có vị ngọt, có dầu, dễ tiêu hóa."
+            },
+            "Công dụng": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Cỏ chửa được dùng chữa phỏng dạ: Toàn cây cỏ chửa (40 – 60 g) bỏ rễ và hoa rửa sạch, phơi hay sấy khô. Lấy 20 – 30 g sắc, uống làm một lần trong ngày. Đồng thời lấy nửa còn lại đốt thành than, tán nhỏ rồi rắc và xoa vào chỗ bị phỏng dạ, ngày một lần. Nếu vết phỏng dạ bị cào toạc da, lấy nghệ vàng, bỏ vỏ, giã nát. bọc vào miếng vải sạch, thấm lên vết da toạc đế tránh mưng mủ. Hàng ngày, tắm rửa bằng nước sắc lá kinh giới hoặc vỏ cây sung, rồi rắc bột than cỏ chửa. Để chữa vết thương chảy máu do chém chặt, lấy cỏ chửa tươi, rửa sạch, giã nát với một ít muối, rồi đắр lên vết thương. Cây cỏ chửa phơi khô được dùng làm thức ăn cho trâu bò. Hạt cỏ chửa đôi khi được dùng làm thức ăn chống đói cho người nghèo.  Bài thuốc có cỏ chứa:  Chữa khí hư, tiểu tiện vàng: Cỏ chửa bỏ rễ, lá bạc thau, lá tiết dê, lá lõi tiền. mỗi vị 40 g, giã nát, sắc uống."
+            },
+            "Cách dùng": {
+                "@type": "Cách dùng",
+                "được_dùng": null
+            },
+            "luu_y": {
+                "@type": "luu_y",
+                "luu_y": null
+            }
+        }
+    ]
+}

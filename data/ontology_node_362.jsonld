@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dưa leo dại",
+      "ten_khac": "Hoa bát, lão thử qua, dưa dại, cù nhang, cầu qua dị diệp",
+      "ten_khoa_hoc": "Solena amplexicaulis (Lamk.)",
+      "ma_taxon": "601719",
+      "ho": "Bí (Cucurbitaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo, sống nhiều năm, dài 2 – 3m.",
+      "thân": "Thân có cạnh và có rãnh, nhẵn hoặc gần nhẵn.",
+      "lá": "Lá rất đa dạng: hình bầu dục có răng hoặc khía tại bèo, hình bầu dục có thuỳ rộng hoặc hình bầu dục – thuôn có răng; hoặc xẻ 3 – 5 thuỳ sâu, có thuỷ gần bằng nhau hoặc không bằng nhau; hoặc hình mác có tai choãi ra, hoặc song song, mép nguyên hoặc có răng, đầu nhọn, gân toả hình chân vịt, cuống dài khoảng 1 cm, nhẵn; tua cuốn đơn, dài.",
+      "hoa": "Cụm hoa đơn tính; cụm hoa đực mọc ở kẽ lá thành ngủ hoặc tán, gần như không cuống, hoa nhỏ, đài hình chuông, nhẵn, tràng 5 cánh, hình tam giác, nhị 3, chỉ nhị dài hơn bao phấn, đính ở gốc đài, bao phấn hình tròn, đáy hoa còn vết tích của nhụy; cụm hoa cái có bầu thuôn hẹp, 3 nhị lép hình chi nhẵn, vòi nhụy hình cột, đầu nhụy có 3 thùy.",
+      "quả": "Quả thuôn, dài 4 – 5 cm, dày 2 – 2,5 cm, gần như có cạnh, khi chín màu đỏ, hạt nhiều, gần hình cầu, hơi dẹt, nhẵn bóng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Solena Lour. là một chi nhỏ trong họ Cucurbitaceae, ở Việt Nam chỉ có một loài dưa chuột dại trên. Cây phân bố rất rải rác khắp các tỉnh từ vùng núi thấp xuống vùng trung du và đồng bằng. Trên thế giới, cây có ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia và cả Sri Lanka.  Dưa chuột dại là cây một năm, ưa ẩm, ưa sáng và hơi chụi bóng. Cây thường leo lên các cây bụi, cỏ cao ở ven rừng, bờ nương rẫy, chân đồi (nơi gần nguồn nước và trong các lùm bụi quanh làng.  Cây sinh trưởng mạnh trong mùa xuân, hè và ra hoa quả ngay trong mùa hè hoặc đầu mùa thu. Tái sinh tự nhiên chủ yếu từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Dưa chuột dại chứa hỗn hợp các acid lignoceric, tricosanoic và behenic [Rastogi and Mehrotria, Compendium of Medicinal Plants, II. 1999, 36]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây dưa chuột dại vị ngọt, đắng, hơi chát, tính mát có công năng tiêu viêm, trừ đờm, lợi tiểu, tiêu sưng.  Rễ củ vị ngọt, đắng, tính hàn, có công năng thanh nhiệt, giải độc, tiêu thũng, tán kết ứ.  Sách “Trung thảo dược học” ghi: Rễ củ dưa chuột dại vị ngọt, đắng, tính hơi hàn; sách “Sinh, thảo dược tính bị yếu” ghi: Vị đắng, tính hàn, sách “Nam Ninh Thị dược vật chí” ghi: Vị cay, đắng, tính hàn, có công năng thanh nhiệt giải độc, hoá đàm, lợi thấp, tiêu thũng, chỉ lỵ [TDTH, 1996, 11: 6601]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dưa chuột dại thường được dùng để chữa đau họng, sưng yết hầu, viêm tuyến mang tai, viêm đường tiết niệu, viêm tinh hoàn; đau mắt, viêm kết mạc cấp; luput ban đỏ, thấp khớp. Liều dùng 15 – 30g sắc nước uống.  Để chữa đau họng, viêm đường tiết niệu, dùng rễ củ dưa chuột dại, rửa sạch, phơi khô, nghiền thành bột, mỗi lần uống 3 – 6g. Ngày 2 – 3 lần. Để chữa viêm mủ da, eczema, bỏng, rắn độc cắn, lấy rễ củ dưa chuột dại 15g sắc uống. Đồng thời, lấy lá tươi, rửa sạch, giã nát, đắp lên chỗ tồn thương, hoặc nấu nước rửa. Để chữa đau họng, viêm đường tiết niệu, dùng rễ củ dưa chuột dại, rửa sạch, phơi khô, nghiền thành bột, mỗi lần uống 3-6g. Ngày 2-3 lần. Để chữa viêm da mủ, eczema, bỏng, rắn độc cắn, lấy rễ củ dưa chột dại, 15g sắc uống. Đồng thời lấy lá tươi, rửa sạch, giã nát đắp lên chỗ tổn thương hoặc nấu nước rửa. Để chữa đau bụng tiêu chảy, lấy rễ củ dưa chuột dại 15g sắc hoặc tán bột uống. Có thể dùng tươi 20 – 30g, nhai rồi nuốt nước.  Ở Ấn Độ, rễ củ dưa chuột dại được dùng chữa di tinh, khó đải, bệnh lậu. Lá làm dịu, dịch lá bôi chữa viêm da hoặc các chỗ da bị trầy sát.  Ở Indonesia, quả dưa chuột dại cũng dùng để ăn [Medicinal herb index, 1995).  Ở Campuchia, hạt được dùng để tẩy, rễ cũng được coi như thuốc tẩy [Perry et al., 1980: 116)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

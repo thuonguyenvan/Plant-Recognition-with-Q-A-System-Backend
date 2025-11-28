@@ -1,0 +1,287 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bàng hôi",
+      "ten_khac": "Bàng hôi",
+      "ten_khoa_hoc": "Terminalia bellirica (Gaertn.) Roxb.",
+      "ma_taxon": "415642",
+      "ho": "Combretaceae ( Bàng )"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10-30m.",
+      "thân": "Thân hình trụ có sẹo la rụng sếp gần nhau; lúc đầu có lông màu hung, sau nhẵn.",
+      "lá": "Lá mọc so le hình bầu dục hoặc ellip, dài 14 – 20 cm, rộng 8 – 13 cm, gốc không đểu, đầu tròn, mép nguyên, hai mặt nhẵn; cuống lá dài 5 – 6 cm, nhẵn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành bông dài 13cm, phủ đầy lông màu hung đỏ, hoa gồm hoa đực và hoa lưỡng tính, có rất nhiều lông; đài hình cúp, mặt ngoài có lông màu hung vàng, thùy hình tam giác, dài bằng ống đài; nhị 10, vượt ra ngoài đài, bao phấn khuyết ở đầu; bầu hình trụ, có lông, noãn đảo đính ở phía trên trên thành bầu.",
+      "quả": "Quả gần hình trứng, phía dưới thắt lại thành cuống ngắn, đầu tròn, dài 3 cm, dày 2 cm, hơi có rãnh, có lông ngắn; hạt 1, hình cầu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Terminalia L. có 11 loài đã biết ở Việt Nam trong đó có loài bàng hôi trên.",
+      "chủ_yếu": "Bàng hôi phân bố chủ yếu ở các tỉnh miền núi phía Nam từ Quảng Trị trở vào",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Trị"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Khánh Hoà"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Gia Lai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "An Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kiên Giang"
+            }
+          }
+        ]
+      },
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Làng vây"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Hòn Hèo"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Mang Jang"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Đắk Đoa"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Bảo Chảnh"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Châu Đốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Hà Tiên"
+        }
+      ]
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá, hoa, nhựa, quả, chín đã được phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "The Ali M. 1992, quả chứa ditriacontan-2-ol, tritriacontan-9-on, n-tritriacontan và fetratriacontan.",
+      "gồm chất": "Thịt quả chứa 21.4% tanin",
+      "triết xuất": "Nhân quả chứa 38,6% dầu béo (chiết xuất bằng ether dầu hỏa)",
+      "chứa": "Vỏ thân chứa 1,4 – 7% tanin, α- anyrin và acetat của nó, lipeol và acetat của nó và β – sitosterol"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bàng hôi còn non có vị đắng chát có công năng gây xổ, khi chín có vị ngọt tính bình, có công năng bổ dưỡng, nhuận tràng, thanh nhiệt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả non sắc uống gây xổ.",
+      "được_dùng": "Quả chín được dùng chữa phù, ỉa chảy, đầy hơi, đau đầu.",
+      "sắc nước uống": "Ngày 3-9g sắc nước uống.",
+      "có tác dụng": "Ăn nhiều nhân hạt bàng hôi sẽ gây buồn ngủ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

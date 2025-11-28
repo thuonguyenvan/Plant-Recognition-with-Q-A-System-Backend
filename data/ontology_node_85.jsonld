@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau đay",
+      "ten_khac": "Đay, Rau đay",
+      "ten_khoa_hoc": "Corchorus olitorius L.",
+      "ma_taxon": "160868",
+      "ho": "Tiliaceae (Đay)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây rau đay hay rau đay quả dài là một loại cỏ cao chừng 1-2 mét, thân màu đỏ nâu, ít phân cành.",
+      "lá": "Lá hình trứng dài nhọn, phía gốc lá tròn hay tù, mép có răng cưa, dài 5 đến 10cm, rộng 2-4cm, có 3 đến 5 gân ở phía dưới. Lá kèm hình sợi.",
+      "hoa": "Hoa nhỏ màu vàng mọc ở kẽ lá, họp từng 3 hoa một bên một cuống ngắn. Đài 4-5, tràng 4-5 nhị 45-50 xếp thành nhiều vòng.",
+      "quả": "Quả hình trụ có 5 sống dọc, nhẵn, dài 5cm. Hạt hình lê khi cắt ngang có hình 5 cạnh."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có một chất nhầy, có tác dụng chữa táo bón, chữa ho và làm thuốc bổ.",
+      "đã nghiên cứu": "Hạt cây rau đay được nghiên cứu nhiều:",
+      "gồm chất": "Năm 1952 tại Ấn Độ, Sen N. K. đã nghiên cứu các sterol chứa trong hạt cây đay. Meara M. L. và Sen N. K. đã nghiên cứu chất dầu chứa trong hạt cây rau đay thì thấy rằng chất dầu này giống như dầu hạt cây hoa hướng dương. Tỷ lệ các axit béo trong dầu là axit panmitic 15,65%; axit stearic 4%; axit behenic 1,66%; axit lignoxeric 1,12%; axit linolenic 59,67%; tỷ lệ chất không xà phòng hóa được là 3,05% (theo J. Indian Chem. Soc. 46 (II), 1952).",
+      "tìm thấy": "Cùng năm 1952, các tác giả Ấn Độ Khalique M. A. và Ahmel M. đã tìm thấy trong hạt cây rau đay một chất đắng mới gọi là corchsularin, chất này thủy phân cho một chất đường gọi là corchsularoza. Trước đây Kundu A. K. và Sen N. K. (1951) có chiết được hai chất đắng khác gọi là corchorin và corchoritin.",
+      "triết xuất": "Những năm tiếp theo (từ năm 1956), hạt rau đay (sau khi mất hết khả năng mọc, trước đây chỉ dùng làm phân) đã được một số nước như Liên Xô cũ dùng chiết heterozit chữa tim với tên là olitorizit và corchorozit. Olitorizit C35H52O14 có độ chảy 202-207°C (khan). Khi thủy phân cho một đường đôi gổm boivinoza và glucoza: Phần genin có tinh thể, độ chảy 178°C, αD +40,3° (trong metanol), có cấu trúc giống strophantidin là phần genin của nhiều heterozit chữa tim khác như strọphantin, ximarin, convalotoxin v.v… Theo Turova A. D. (Liên Xô cũ) lg olitorozit tinh thể chứa 63.750 đơn vị ếch hoặc 7.104 đơn vị mèo. Corchorozit là một bột trắng có tinh thể, độ chảy 180°C, αD + 11° rất tan trong etanola, metanola, khó tan trong nước và clorofoc, rất ít tan trong ête etylic, benzola và hầu như không tan trong ête dầu hỏa. Thủy phân cho một đườngg desoxymetylpentoza và phần genin là strophantidin. lg corchorozit chứa 72.000 đơn vị ếch hoặc 10.960 đơn vị mèo (theo Turôva). Olitorozit và corchorozit đã được thí nghiêm trên súc vật và trên lâm sàng ờ Liên Xô cũ làm thuốc chữa tim.",
+      "các hoạt chất": "Từ hạt đay ờ Việt Nam, năm 1970, Đoàn Định Chính và cộng sự đã chiết được 3% glucozit đặt tên là daycozit có tác dụng trên tim (1971, Trav. Sc. Edit. Med. Hà Nội: 5358)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân ta và nhân dân một số nước khác thường dùng rau đay để nấu canh ăn hoặc làm thuốc mát, chữa táo bón, ho, bổ. Người ta còn thấy rau đay là một loại thuốc lợi sữa: Nếu tuần đầu tiên sau khi đẻ, ăn hàng ngày 150 đến 200g vào mỗi bữa ăn chính, các tuần lễ sau, mỗi tuần ăn 2 lần với liều 200 đến 250g thì lượng sữa tăng. Trong sữa tỷ lệ chất béo tăng hơn mức trung bình.",
+      "làm thuốc": "Gần đây, ở Việt Nam đã dùng hạt đay đã hết khả năng mọc làm nguyên liệu chế đay cozit để chữa các bệnh tim.",
+      "chữa": "Ngoài cây rau đay nói trên còn có cây rau đay quả tròn (Corchorus capsularis L.) cùng họ. Nhân dân ta ít dùng để ăn hay làm thuốc, nhưng tại các nước khác, người ta dùng như cây rau đay của ta. Cây này sống hàng năm, cao 1 đến 3m. Lá hình trứng dài và hẹp, đầu rất nhọn, phía gốc lá tròn, mép có răng cưa, dài 6-12cm, rộng 1,5-3,5cm, hai răng cưa cuối cùng có lông dài. Hoa mọc từng cụm 2 hay 3 hoa có cuống ngắn. Đài 4-5, tràng 4-5, nhị 18, bao phấn hình vuông. Quả hình cầu hay hình lê, dài 12mm, rộng 10-11mm, có sông hơi rõ, trong chứa 2 hàng hạt, mỗi hàng 5 hạt. Nhân dân ta có trồng cây này nhưng chủ yếu để lấy vỏ làm sợi dêt bao tải. Đôi khi cũng hái lấy rau ăn. Nhân dân Ấn Độ dùng lá sắc uống làm thuốc bổ, nhân dân Malaixia dùng chữa lỵ, chữa ho trẻ em. Trong lá, Kobert (1906) thấy một glucoãt gọi là capsulin có vị đắng và bổ, tác dụng trên tim như lá Digitalis. Từ hạt cây này, Kaner và E Baneijea (1949) đã lây ra được một glucoat rất đắng gọi là corchotoxin, đồng phân với chất strophantìdừi và calotropagenin, có tác dụng giống như digitalin. Dầu chiết từ hạt cây đay giống như dầu hạt bông. Ta có thể phân tích dầu này thành hai phần dầu khô và dầu không khô. Một số tác giả khác cho rằng trong hạt cây đay còn có 2 chất đắng gọi là corchorin và corchoritin."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ở ta cây rau đay được trồng ở nhiều nơi để lấy lá non nấu canh ăn cho mát và nhuận tràng. Lá non hái sau khi trồng cây chừng hơn 1 tháng. Còn được trồng ở các nước khác thuộc châu Phi, châu Á và châu Mỹ cũng để lấy lá non ăn làm rau, làm thuốc và lấy sợi, có khi người ta dùng hạt làm thuốc."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

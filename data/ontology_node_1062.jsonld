@@ -1,0 +1,235 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mật gấu (Kim thất tai)",
+      "ten_khac": "Lá đắng, Cây mật gấu, Cây kim thất tai",
+      "ten_khoa_hoc": "Vernonia amygdalina Delile",
+      "ma_taxon": "427768",
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": null,
+        "quả": null,
+        "cây": "Cây lá đắng sống lâu năm, là dạng cây bụi mọc thẳng đứng, chỉ cao từ 2-3m, đường kính thân rất nhỏ khoảng 2-4 cm, cây thường phân nhánh ở cành gốc, khi còn non thân cây được phủ một lớp lông trắng mịn về già lớp lông này rụng dần hết",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": "cuống lá dài, phiến lá hình trái xoan ngược, mép lá có hình răng cưa.",
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": "Cây này có nguồn gốc từ châu Phi và hiện nay cây có mặt khắp nơi trên thế giới do cây dễ trồng dễ mọc.",
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": "Ấn Độ (Bihar, Madhya Pradesh, Odisha, West Bengal); châu Phi nhiệt đới; hiện nay cây Lá Đắng đã có mặt ở hầu hết các quốc gia trên thế giới.",
+        "ở_vùng": [],
+        "các_tỉnh": [],
+        "được_trồng": [],
+        "chủ_yếu": null,
+        "thường_mọc": null,
+        "Đặc điểm sinh trưởng": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Theo tài liệu của Trung tâm mẫu cây thuốc Quốc gia Trung ương:  V. amygdalina (Cây lá đắng) thường được dùng để trị tiểu đường tại châu Phi (Akah & Okafor 1992; Atangwho và c.s. 2010). Các người hành nghề thuốc dân tộc ở châu Phi nhiệt đới dùng cây này để trị bệnh giun sán, sốt rét, nhuận trường, trợ tiêu hóa, kích thích thèm ăn, hạ sốt, hay trị vết hương khu vực (Ijeh & Ejike 2011). Ở vài vùng tại Nigeria, thân cây dùng làm thanh nhai làm sạch miệng, và trị một số bệnh răng (Ijeh & Ejike 2011). Ở Malawi và Uganda, nó dùng bởi các bà đỡ truyền thống đẩy nhau ra sau khi sinh, hỗ trợ co thắt tử cung sau khi sinh, kích thích có sữa, và trị xuất huyết sau thai sản (Kamatenesi- Mugisha 2004). Nghiên cứu cây nhiều tính chất dược này cũng nói là nó có nhiều tính chất dược liệu khách như chống ung thư (Izevbigie 2003; Khalafalla et al. 2009), chống vi khuẩn (Ibrahim et al. 2009), chống nhiễm độc gan (Arhoghro et al. 2009), chống oxy hóa (Adaramoye et al. 2008), điều tiết cholesteron (Ugwu et al. 2010), khuẩn độc cũng như  ảnh hưởng của thực vật độc (Alabi et al. 2005). V. amygdalina chứa một lượng đáng kể các chất lipids (Eleyinmi et al. 2008), đạm cần thiết có nhiều acid amin (Eleyinmi et al. 2008), chất  bột  (Ejoh et al. 2007) và chất xơ (Eleyinmi et al. 2008). Nó cũng có nhiều tính chất đáng qúy như vitamin C và caroteinoids (Ejoh et al. 2007). Vôi, sắt, bồ tạt, mangan, đồng và cobalt cũng có một lượng đáng kể trong loài này (Eleyinmi et al. 2008). Một loạt các chất hóa thực vật oxalate,  phytates và  tannins cũng được báo cáo  (Udensi et al. 2002; Ejoh et al. 2007; Eleyinmi et al. 2008) có trong lá cây V. amygdalina. Chất saponin nhóm Stigmastane- như vernoniosides A1, A2, A3 (Jisaka et al. 1992); A4, B2, B3 (Jisaka et al. 1993); C, D và E (Ohigashi 1994) cũng có trong lá. Saponin thuộc A-series làm cho lá có vị đắng của loài V. amygdalina. Các saponin steroidal khác cũng được xác định trong cây này (Igile et al. 1995). Sesquiterpene lactones là một nhóm hóa thực vật khác phát hiện có nhiều trong lá của loài này. Vài chất sesquiterpene lactones xác định được là vernolide, vernodalol (Erasto et al. 2006), vernolepin, vernodalin và hydroxyvernolide (Koshimizu et al. 1994). Igile et al. (1995) báo cáo sự hiện diện của flavonoids luteolin, luteolin 7- -β-glucoroniside và luteolin 7- -β-glucoside, trong lá của V. amygdalina. Các nhà nghiên cứu khác đã xác nhận sự hiện hữu của flavonoids trong cây này (Tonaet al. 2004). Các hóa thực vật khác có trong lá cây V. amygdalina là terpenes, coumarins, phenolic acids, lignans, xanthones và anthraquinones (Tona et al. 2004). Izevbigie (2003) báo cáo sự hiện diện của chất peptides sinh hoạt tố gọi là edotides trong lá của cây V. amygdalina. V. amygdalina là một loại rau xanh quan trọng tại Cameroon, nơi sản xuất 93,600 tấn lá cây cỏ năm 1999, 23% số này (21,549 tons) là từ cây  lá đắng (Smith & Eyzaguirre 2007). Có phạm vi rất tốt để thương mại hóa loài này tại Ấn Độ làm nguồn bổ trợ sức khỏe do ảnh hưởng tốt của nó cho sức khỏe và cũng là loại dược thảo. Chúng tôi hi vọng có những nghiên cứu thêm hoạt chất sinh học của nó, việc trồng cây này, phát tán nó, nghiên cứu phân tử về cây V. amygdalina trong hoàn cảnh Ấn Độ."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân non và Lá."
+      },
+      "Thành phần": {
+        "thành phần": "Vị đắng của lá do những chất alkaloids, saponin, tannin, glycoside.",
+        "gồm chất": null,
+        "Các hợp chất": "Cây chứa các hợp chất có tác dụng sinh học khác như: terpene, steroid, coumarin, flavonoid, acid phenolic, lignan, xanthone, anthraquinone, edotide and sesquiterpene (có tác dụng kháng ung thư).",
+        "chứa": "Ngoài ra lá còn chứa các chất khoáng: magnesium, chromium, manganese, selenium, sắt, đồng, kẽm, Vitamin A, E, C, B1,B2, protein thô, chất xơ, chất béo, tro, carbohydrate, các acid amin quan trọng: Leucine, Isoleucine, Lysine, Methionine, Phenyl alanine, Threonine, Valine, Histidine, Tyrosine.",
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Những hợp chất trong Lá đắng có tác dụng hỗ trợ điều trị các bệnh do quá trình viêm mạn tính, lão hoá, bệnh nhiễm giun sán, động vật nguyên sinh (protozoan) và vi khuẩn. Theo công bố trên Quyển Y – Sinh học thực nghiệm tháng 2 năm 2004 (Experimental Biology and Medicine of February 2004 Edition) cho thấy lá Đắng có tác dụng hạ thấp tỉ lệ nguy cơ bị ung thư vú.",
+        "được_dùng": "Lá Đắng dùng nấu dạng canh rau hay xay nhuyễn lấy nước uống như dạng nước bổ dưỡng trong nhiều dạng bệnh lý khác nhau.",
+        "làm thuốc": null,
+        "có tác dụng": "Nhiều thầy thuốc ở Châu Phi khuyên người dân dùng trị bệnh đường tiêu hoá, đái tháo đường, chán ăn, kiết lỵ và các chứng rối loạn tiêu hoá. Các Polyphenol có tính kháng viêm và anti – oxidant, thải độc, bảo vệ thận, gan, hỗ trợ điều trị một số bệnh ngoài da. Giảm đường huyết, bảo vệ tim mạch do giúp ổn định lipid máu.",
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Lấy 10 lá, rửa sạch, bỏ vào bình hãm với 1.5 lít nước sôi, đợi khoảng 15 phút là uống được. Uống thay nước lọc hàng ngày. Cách này giúp duy trì sức sống tình dục, chống xuất tinh sớm.",
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": "Lấy 8 lá mật gấu, rửa sạch, giã nát hoặc xay nhuyễn, pha với nửa cốc bia, vắt lấy nước uống trước khi đi ngủ để trị thoái hóa đốt sống cổ.",
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

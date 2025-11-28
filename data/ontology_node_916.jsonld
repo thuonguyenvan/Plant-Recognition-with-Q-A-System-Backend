@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mãng cầu xiêm",
+      "ten_khac": "Mãng cầu xiêm",
+      "ten_khoa_hoc": "Annona muricata L.",
+      "ma_taxon": "284503",
+      "ho": "Annonaceae (Na)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 4 – 6m.",
+      "thân": "Cành có nhiều mấu, nhẵn, màu xám nâu.",
+      "lá": "Lá mọc so le, hình mũi mác – trái xoan hoặc trứng ngược, dài 10-12 cm, rộng 3 – 5cm, gốc thuôn, đầu tù, hai mặt nhẵn có gân nổi rõ, mặt trên sẫm bóng, mặt dưới nhạt; cuống lá mập, gấp khúc và nhẵn.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, màu lục vàng; lá đài hình tam giác ngắn, có lông ở hai mặt; cánh hoa rộng và dày, gốc thắt hình tim, có lông; nhị nhiều, trung đới hình vuông, có lông; bầu thượng.",
+      "quả": "Quả hình cầu hoặc hình tim, hơi dẹt, vỏ ngoài có những nốt sần nhọn ứng với những múi ở trong, thịt màu trắng, vị ngọt chua; hạt màu đen.",
+      "mùa quả": "tháng 3-5"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Annona L. có 125 loài, phân bố tập trung ở vùng nhiệt đới châu Mỹ và châu Phi. Ở Việt Nam, có 4 loài, trong đó 3 loài là cây trồng gồm na (Annona squamosa L.), mãng cầu xiêm (Ạ. muricata L.), bình bát (A. reticulata L.) (Nguyễn Tiến Bân, 2000; Thực vật chí Việt Nam, T. I – Annonaceae, NXB KH & KT, Hà Nội, 316-321).  Mãng cầu xiêm có nguồn gốc ở châu Mỹ, chỉ được nhập sang các nước nhiệt đới khác sau khi Colômbô phát hiện ra châu Mỹ. Đó là cây ăn quả được trồng nhiều ở các nước vùng Nam Á, Đông – Nam Á, Trung và Nam Mỹ. Ở châu Á, mãng cầu xiêm có nhiều nhất ở Philippin, mỗi năm cho sản lượng khoảng 8500 tấn. Ở Việt Nam, mãng cầu xiêm được trồng nhiều ở các tỉnh phía nam. Cây ưa khí hậu nhiệt đới nóng và ẩm, được trồng đến vĩ độ 25° Nam bán cầu ở độ cao đến 1000m. Ở các tỉnh thuộc vùng núi cao trên 1000m của Việt Nam không thấy trồng.",
+      "Đặc điểm sinh trưởng": "Cây rụng lá vào mùa đông, không chịu được sương muối và ngập úng dài ngày, ra hoa quả hàng năm. Sau 4-5 năm trồng cây bắt đầu có quả với số lượng cũng như sản lượng tuỳ thuộc vào giống mãng cầu. Ở vùng Trung Mỹ và Hawai cây trồng 35 năm vẫn thu được quả."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Mãng cầu xiêm ưa khí hậu nóng ẩm, được trồng chủ yếu ở miền Nam, từ Nha Trang trở vào. Cây được nhân giống bằng hạt và bằng cành ghép. Hạt giữ được sức sống trong nhiều năm, có thể gieo ươm trên luống hoặc trong bầu. Dù không xử lý, hạt cũng nảy mầm sau 20 – 30 ngày. Khi cây con cao 30 – 40 cm, đánh đi trồng. Cây con dù đút rễ trồng vẫn sống. Ghép cành hoặc ghép mắt, tốt nhất nên chính gốc mãng cầu xiêm hoặc gốc bình bát.  Ghép lên bình bát còn có lợi là có thể trồng trên đất sình lầy, đất thấp hay bị úng ngập. Đất trồng mãng cầu xiêm tốt nhất là loại đất phù sa nhiều thịt, giữ độ ẩm và thoát nước, độ pH 6 – 7,5. Khi trồng, đào hố 40x40x40cm với khoảng cách 3x4m, mỗi hố bón lót 5 – 7 kg phân chuồng. Không cần chăm sóc nhiều, nhưng để có năng suất cao, chú ý bón phân bổ sung hàng năm vào trước và sau khi thu hoạch quả. Cây có thể ra hoa quả quanh năm, nếu độ ẩm đất ổn định. Quả tuy to, nhưng tỷ lệ đậu quả ít do thụ phấn tự nhiên kém hiệu quả. Vì vậy, cần tiến hành thụ phấn nhân tạo cho hoa. Lấy phấn của hoa đầu cành, cành nhỏ, cành trên ngọn, để thụ cho hoa trên cành to hoặc phía gần thân. Hoa lấy phấn là những hoa sắp nở, ngắt vào cuối buổi chiều, để đến sáng hôm sau rũ lấy phấn, dùng bút lông phết lên nhụy vào lúc 8 – 9 giờ sáng.  Mãng cầu xiêm có bệnh thán thư (Colletotrichum gloesporivides) hại ngọn, hoa và quả. Có thể phun thuốc Aliette 80 BTN, Benlat c, Kasuran BTN hoặc Zincopper ngay khi bệnh mới xuất hiện. Ngoài ra, còn có rộp sáp, rệp dính hại lá, quả, trị bằng Bi 58 ND, BAM 50 ND, Applaud,.. Quả mãng cầu xiêm chín hầu như quanh năm. Khi thấy vỏ quả từ màu xanh sẫm chuyển sang màu vàng, các gai tách thưa ra, thì thu hoạch."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá quả và hạt, dùng tươi hay phơi khô. Catur; Putra Hasri CA. 118, 56214v). Trong lá còn chứa 1 lượng khá cao chlorua kali, và tanin."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá mãng cầu xiêm được dùng chữa sốt rét. Lấy 50g lá tươi rửa sạch, giã nát, thêm nước, gạn uống với ít đường. Lá còn có tác dụng chữa ho.  Quả mãng cầu xiêm còn xanh, thái mỏng, phơi khô, tán bột, uống mỗi lần 4 – 8g chữa kiết lỵ, ngày 2 lần. Ở Ấn Độ và Indonesia, thịt quả hoặc quả mãng cầu xiêm còn non có tác dụng chữa bệnh scorbut. Hạt giã nhỏ để duốc cá và hòa với nước để trừ sâu. Ở Haiti, nhân dân địa phương dùng lá mãng cầu xiêm sắc uống trị cúm, ho, và suy nhược (có thể dùng dịch ép quà). Ở Peru, hạt hoặc lá giã nát trị ký sinh trùng, nước sắc lá uống trị lỵ.  Bài thuốc có mãng cầu xiêm:  Chữa sốt rét:  Lá mãng cầu xiêm khô 20 g, vỏ rộp cây ổi 10g. Sao vàng, thái nhỏ, sắc với 400ml nước còn 100 ml, uống làm 2 lần trong ngày. – Lá mãng cầu xiêm, lá na, lá trầu không, rau má, dọt ót, đọt tre, mỗi vị 7 lá hoặc đọt đối với nam, 9 đối với nữ; cỏ mần trầu một bụi sấy khô; gừng một miếng gọt vỏ nướng chín; trà ngon một ấm; đường thẻ một miếng; ổ tò vò 4 – 5 ổ; phèn chua phi đổ vào vỉ sắt nướng đỏ, rồi đổ vào các vị thuốc, sắc uống.  2. Chữa ho: Lá mãng cầu xiêm, lá sả, mỗi vị 20g. sắc uống.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

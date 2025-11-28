@@ -1,0 +1,205 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Ngọc lan tây",
+            "ten_khac": "Hoàng lan, Ngọc lan tây, Bông sứ, Cây công chúa, Ylang y lang (Mnông)",
+            "ten_khoa_hoc": "Cananga odorata (Lam.) Hook.f . et Thoms.",
+            "ma_taxon": "154842",
+            "ho": "Annonaceae (Na)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây to, cao 8 – 10m, có khi hơn. Thân mọc thẳng, cành nằm ngang, nhẵn, vỏ màu xám.",
+            "lá": "Lá mọc so le, hình bầu dục hoặc trứng thuôn, dài khoảng 17cm, rộng 7cm, gốc tròn, đầu tù hơi nhọn, mép hơi lượn sóng, hai mặt nhẵn, gần như cùng màu; cuống lá nhẵn, dài 1cm.",
+            "hoa": "Cụm hoa mọc trên những nhánh ngắn, không lá gồm 1-3 hoa màu vàng lục hoặc vàng, rất thơm; đài có 3 răng nhỏ, hình tam giác; tràng 6 cánh mỏng, rất dai, uốn lượn, móng hơi hẹp lại; nhị nhiều, trung đới hình nón; lá noãn 8-10, nhẵn.",
+            "quả": "Quả tụ họp trên đế chung; hạt dẹt, bóng.",
+            "mùa hoa": "tháng 6-8, đôi khi quanh năm.",
+            "mùa quả": "tháng 6-8, đôi khi quanh năm."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Cananga có 2 – 3 loài, phân bố chủ yếu ở châu Á và Australia. Ở Việt Nam có 2 loài và 1 thứ là ngọc lan tây (C. odorata (Lamk.) Hook. f. et Thoms; hoàng lan bụi (C. odorata var. fruticosa (Craib) Sinel.) và ngọc lan lá rộng (C. latifolia (Hook. f. et Thoms.) Fin. et Gagnep.) (Nguyễn Tiến Bân, 2000).  Ngọc lan tây có nguồn gốc ở vùng nhiệt đới Đông Nam Á, song chưa rõ cụ thể ở nơi nào. Cây sớm được trồng ở Philippin và Indonesia; đến đầu thế kỷ 20 được du nhập sang đảo Comoro, Nosy Bé (thuộc Madagasca) và nhiều nơi khác. Hiện nay, ngọc lan tây được trồng phổ biến ở tất cả các nước ở vùng Đông Nam Á, trong đó có Việt Nam, Ấn Độ, Trung Quốc, Australia, một số nước ở châu Phi, châu Mỹ cũng như các đảo ở Thái Bình Dương (Umi Kalsom Yusuf & v.o. Sinohin, 1999).  Ở Việt Nam, ngọc lan tây được nhập từ lâu và được trồng làm cảnh ở các vườn hoa, công sở và vườn gia đình. Hà Nội là nơi đang có nhiều ngọc lan tây.",
+            "Đặc điểm sinh trưởng": "Ngọc lan tây là loại cây gỗ mọc nhanh, ưa sáng và ưa ẩm, sinh trưởng, phát triển thích hợp ở những vùng có khí hậu nhiệt đới nóng và ẩm, nhiệt độ trung bình 21 – 27°C; lượng mưa hàng năm 1500 – 4000mm. Cây trồng ờ vùng đồng bằng hoặc miền núi, ở độ cao 1200m (ở New Guinea) đều sinh trưởng tốt. Tuy nhiên, cây trồng ở vùng ven biển sau 2 năm, cao 2m đã bắt đầu có hoa, trong khi đó, cây trồng ở vùng núi có độ cao trên 500m sau 7 năm mới thấy hoa. Tại Philippin song song với quần thể trồng, ngọc lan tây mọc tự nhiên sinh trưởng phát triển chậm hơn; cây chỉ phát dục khi đạt được chiều cao khoảng 9 – 10m trở lên. Ngọc lan tây ra hoa quả gần như quanh năm. Ở Malaysia, vụ hoa chính từ tháng 2 đến 5; vụ phụ từ tháng 8 đến 10. Hoa nở vào mùa khô thường có hàm lượng và chất lượng tinh dầu cao hơn hoa nở mùa mưa. Ngọc lan tây được nhân giống tự nhiên và trồng được bằng hạt, cành chiết hay giâm cành. Ở vùng Nosy Bé (Madagasca), người ta biết cách xử lý hạt bằng nước nóng để hạt mọc đều và tỷ lệ cao.  Ngọc lan tây là loại cây cho hương liệu quý. Ngay từ thế kỷ 18, Philippin đã là nước có hoa ngọc lan tây xuất khẩu ra thị trường thế giới để cất tinh dầu làm nước hoa. Hiện nay ở Philippin, Indonesia, Madagasca người ta đã trồng và sản xuất tinh dầu ngọc lan tây nhiều nhất thế giới. Riêng ở đảo Comoro (Indonesia) vào năm 1995, đã có 160.000ha được trồng loài cây này, với sản lượng 120 tấn tinh dầu. Ở Việt Nam, ngọc lan tây chỉ được trồng làm cảnh và lấy hoa thờ cúng."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Hoa, tinh dầu, lá và vỏ thân."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Hoa ngọc lan tây chứa 0,5 – 1% tinh dầu thơm có tên là Ylang và mùi dễ chịu. Thành phần tinh dầu gồm 52 – 64% alcol và ester, 38% sesquiterpen, 3% phenol và phenol ester, 0,3 – 0,6% terpen, 0,1 – 0,2% aldehyd và ceton, p – cresol, linalol, safrol, eugenol, geraniol, pinen, sesquiterpen, cadinon benzoat, các acid acetic, benzoic, formic, salicylic và valeric."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": null
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Ở châu Âu, tinh dầu ngọc lan tây (2-3 giọt) nhỏ vào một miếng đường rồi nuốt có tác dụng hạ huyết áp, sát khuẩn và làm dịu. Ở một số nước Đông Nam Á, lá ngọc lan tây giã nát, lấy nước bôi chữa ngứa, bỏng. Vỏ thân nấu nước đặc dùng tắm chữa ghẻ. Hoa ngọc lan tây phơi khô, sắc uống chữa sốt rét.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

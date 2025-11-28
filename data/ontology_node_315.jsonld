@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu chiều",
+      "ten_khac": "đậu săng, đậu cọc rào, sandekday (Campuchia)",
+      "ten_khoa_hoc": "Cajanus indicus Spreng",
+      "ma_taxon": "139444",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 1-3m.",
+      "thân": "Cành có những đường nổi dọc, mặt trên xanh thẫm, mặt dưới rất nhạt.",
+      "lá": "Lá kép mọc so le, gồm 3 lá chét nguyên, hình mũi mác, dài 7-10cm, rộng 1.5-3.5cm, lá chét tận cùng lớn hơn, gốc thuôn hoặc tròn, đầu rất nhọn, hai mặt có lông mềm, mặt trên màu lục sẫm, mặt dưới trắng nhạt, gân nổi rõ, cuống chung dài 2.5cm, lá kèm nhỏ.",
+      "hoa": "Hoa màu vàng hay điểm những đường dọc tía mọc thành chùm ở kẽ lá. Cụm hoa mọc thành từng chùm ở kẽ lá và đầu cành. Hoa có lông, có 4 răng đều, cánh hoa sớm rụng, cánh cờ rộng, nhị 2 bó, bầu có lông.",
+      "quả": "Quả dài đầu nhọn, hơi có lông, dài 4-7cm rộng 8-12mm, với 2-3 vết lõm chạy chéo trên quả.",
+      "hạt": "Hạt 3-5 màu trắng nhạt, điểm đen, nâu hay đỏ nhạt tuỳ theo loại.",
+      "mùa hoa": "tháng 1-3",
+      "mùa quả": "tháng 1-3"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Người ta dùng hạt và rễ làm thuốc. Hạt thu ở quả chín, rễ đào quanh năm, đào về rửa sạch, thái mỏng, phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt đậu chiều chứa nhiều protein trong đó có tyrosin, cystenin, lysin phenyl alanin, valin, isoleucin, leucin, threonin, histidin, methionin, tryprophan, alanin, cerin, glycin, prolin, acid aspartic, acid glutamic."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt đậu chiêu được dùng làm thực phẩm, một nguồn protit thực vật như nhiều loại đậu khác. Nhưng phải chú ý tránh dùng những loại hạt chứa nhiều axit xyanhydric. Ngoài công dụng thực phẩm, rễ đậu chiêu được dùng làm thuốc chữa sốt và giải độc, tiêu thũng hay đái đêm. Ở Ấn Độ, đậu chiều được dùng để bổ sung protein vào chế độ ăn uống có nhiều tinh bột. Ăn hạt sống với lượng nhiều có tác dụng làm ra mồ hôi. Vỏ quả đậu còn xanh dùng làm rau ăn. Còn người dân ở Rwanda (Trung Phi), dùng lá đậu chiều chữa viêm phổi, bệnh lậu. Ở Senepal, đậu chiều được dùng trị tiêu chảy và lỵ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1.Chữa cảm sốt, mụn nhọt, trẻ em lên sởi, ho  Rễ đậu chiều 15g sắc uống hoặc phối hợp với sài đất, kim ngân hoa, mỗi vị 10g, cùng sắc và uống.  2. Chữa đái tháo đường  Ăn hạt đậu chiều, rau khoai lang đỏ. Đồng thời dùng quả chuối hột xanh 30g, sắc uống hàng ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

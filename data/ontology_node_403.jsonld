@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Một dược",
+      "ten_khac": "Mạt dược",
+      "ten_khoa_hoc": "Commiphora myrrha (Nees) Engl.",
+      "ma_taxon": "789240",
+      "ho": "Trám (Burseraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi hoặc cây nhỏ, cao khoảng 3m.",
+      "thân": "Thân phân nhiều nhánh nhỏ, vỏ thân sần sùi, màu xám nhạt , gỗ màu vàng nhạt. Cành hình trụ có nhiều mấu, những cành nhỏ mọc thẳng góc với cành chính, tận cùng bằng một gai nhọn chia nhánh.",
+      "lá": "Lá kép, mọc so le gồm 3 lá chét, hình bầu dục, gốc thuôn, đầu tròn, màu lục xám, lá chét giữa to, hai lá bên rất nhỏ, sớm rụng; cuống lá ngắn.",
+      "hoa": "Hoa nhỏ đơn tính, mọc ở kẽ lá, màu trắng hoặc vàng nhạt; hoa đực dài 5 mm.",
+      "quả": "Quả hạch, hình trứng, dài 1 – 2 cm, đầu có mỏ ngắn, to bằng hạt đậu, gốc tròn, có đài tồn tại 4 rằng, khi chín màu nâu.",
+      "mùa hoa": "tháng 7 – 8.",
+      "mùa quả": "tháng 7 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây một dược [Commiphora Myrrha( Nees), Engl.)], họ Trám (Burseraceae) là cây phổ biến thường mọc hoang ở những vùng nhiệt đới, cận nhiệt đới, đặc biệt ở bắc Phi, miền nam Ả Rập, Ấn Độ… Hiện nay, dược liệu này chưa tìm thấy ở nước ta, chủ yếu nhập khẩu từ các nước khác."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Phụ nữ có thai có dùng dược một dược không?  Các bài thuốc từ một dược không dùng với phụ nữ mang thai do có nguy cơ ảnh hưởng tới thai kỳ. Ngoài ra, phụ nữ sau sinh cũng không được dùng một dược bởi tác dụng hoạt huyết, khứ ứ của một dược nếu dùng trong thời gian sau sinh có thể gây ra chảy máu quá nhiều, làm mất cân bằng nội tiết tố và ảnh hưởng đến sữa mẹ.  Người bị huyết áp cao có dùng được một dược không?  Một dược có tác dụng hoạt huyết nên người huyết áp cao vẫn có thể dùng tốt  được vị thuốc này. Tuy nhiên việc sử dụng một dược cần theo sự chỉ dẫn của bác sĩ hoặc thầy thuốc để tránh những tác hại không mong muốn. Ngoài ra, người bệnh cần kết hợp theo dõi huyết áp thường xuyên và kiểm tra sức khỏe định kỳ.  Ai không nên hoặc thận trọng khi dùng một dược?  Những đối tượng sau không nên sử dụng một dược:  Phụ nữ mang thai Phụ nữ sau sinh Người bị rong kinh hoặc kinh nguyệt ra nhiều. Người rối loạn đông máu, đang bị chảy máu cấp tính Người bị ung nhọt hay mụn nhọt đã vỡ do bọc nước Trường hợp ngực bụng sườn đau, khớp đau nhức nhưng không phải do huyết ứ mà do huyết hư  Một dược có tương tác với thuốc nào không?  Không sử dụng đồng thời một dược với các thuốc chống đông máu như Aspirin, warfarin,… bởi chúng sẽ làm giảm tác dụng của các loại thuốc này.  Dùng một dược có phải kiêng gì không?  Nếu dùng một dược trị dị ứng thì cần kiêng hải sản, nhộng, lòng trắng trứng. Còn dùng một dược giải cảm thì kiêng thức ăn có vị chua, mặn."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Bộ phận dùng làm thuốc là chất gôm nhựa chảy ra từ kẽ nứt của thân cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Một dược chứa linalyl acetat, 3 – epilupenyl acetat, lupion, 3 – epi – α – amyrin, α – amyron và α-eudesmol acetat, commiferin.",
+      "tinh dầu chứa": "Một dược chứa tinh dầu 7 – 17%, nhựa 25 – 40%, gồm 57 – 61% tinh dầu. Tinh dầu chứa eugenol m – cresol, cumin aldehyd, pinen, dipenten, limonen, aldehyd cinnamic, heerabolen, acid heerabomyrholic, acid commiphoric, acid commiphorinic, heerabomyrrhol, heeroboresen, commipherin, isolinalyl acetat, B – isolinaly! acetat, 3 – epilupenyl acetat, lupenon, 3 – epi – – rin, a-amyron.",
+      "thủy phân": "Ngoài ra, còn có gôm, nếu đem thủy phân sẽ cho arabinose, galactose, xylose."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Gôm nhựa cây một dược có vị đắng the, mùi thơm, tính ấm. Có tác dụng giảm đau, tan huyết, tiêu sưng, làm lên da non."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhựa một dược đã được phơi khô  Gôm nhựa cây một dược được dùng để chế cao dán nhọt có tác dụng hoạt huyết, giảm đau, tiêu thũng. Dùng uống chữa đau nhức gân xương và làm thuốc điều kinh. Dùng uống trong với liều mỗi lần 0,20 – 1g [Bộ Y tế, 1972: 680 – 681; Đỗ Tất Lợi, 1999: 148].  Trong y học hiện đại, dùng cồn thuốc một dược để làm vững chắc lợi trong viêm chân răng, viêm loét miệng, bệnh áp tơ và cả trong viêm thanh quản và viêm họng. Dưới dạng thuốc bôi dẻo dùng trị viêm quầng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa vảy nến, eczema  Một dược (gồm nhựa) 2g; hậu phác, liên kiều, mỗi vị 12g, hồng hoa 6g. Ngâm trong cồn 90° trong 1 tuần. Sau đó, dịch chiết cồn được pha loãng với một thể tích nước cất gấp đôi để tạo một thuốc xức dùng bôi chỗ bị bệnh.",
+      "sắc uống": "Chữa viêm khớp dạng thấp, viêm xương khớp  Một dược (gồm nhựa) 2g: ngưu tất, hy thiêm, mỗi vị 16g; ké đầu ngựa, thổ phục linh, cà gai leo, mỗi vị 12g. Sắc uống ngày một thang.",
+      "tán bột": "Trị đau dạ dày, phụ nữ bế kinh, đau bụng kinh  Bài 1: Một dược 5g, diên hồ sách 10g, hương phụ 6g, ngũ linh chi 6g. Tán bột mịn tất cả rồi trộn đều, mỗi lần dùng 8 – 10g, ngày 2 – 3 lần uống với nước ấm. Bài 2: Một dược tán: một dược, hồng hoa, đều 5g; diên hồ sách, đương quy, mỗi vị 10g. Tất cả tán bột mịt, mỗi lần dùng từ 6 – 10g, ngày uống 2 lần với nước ấm.",
+      "đắp ngoài": "Làm sạch mủ, sinh cơ vết thương, mụn nhọt  Một dược và nhũ hương mỗi vị 10g. Tất cả tán mịn, thêm rượu vào làm hồ và đắp ngoài.",
+      "trộn đều": "Trị đau cơ, đau xương khớp  Một dược 10g, nhũ hương 10g, lưu hoàng 10g, bạch chỉ 30g, xuyên khung 30g. Tán bột mịn tất cả, trộn đều và cho vào túi vải, trải thành lớp mỏng 3mm và buộc chặt miệng túi lại. Đặt túi thuốc lên vùng đau sau khi đã xát lát gừng tuôi, ở phía trên của túi thuốc chườm cám nóng hoặc dùng muối nóng. Hơi nóng từ cám hoặc muối thấm vào gói thuốc có tác dụng giảm đau rõ rệt. Lưu ý: Khi chườm cần tránh bỏng cho bệnh nhân, gói thuốc có thể sử dụng được nhiều lần.",
+      "hoàn thành viên": "Trị mỡ máu cao  Một dược tán mịn, hoàn thành viên 0.1g, ngày uống 3 lần mỗi lần 2-3 viên, uống với nước ấm.",
+      "khuấy tan": "Trị tĩnh mạch chi thể huyết ứ  Rửa sạch các vị thuốc gồm: Hoàng kỳ (16g); đương quy, huyền sâm, đan sâm, sinh địa, tử hoa địa đinh (mỗi vị 12g); bồ công anh (10g); hồng hoa, diên hồ sách (mỗi vị 8g); cam thảo (6g), sau đó mang sắc 2 lần, mỗi lần 45 phút. Sắc xong chắt lấy nước khi còn nóng xong cho thêm 10g nhũ hương và 10g một dược vào khuấy tan. Chia lượng nước này thành 3 phần, uống trong ngày.",
+      "uống khi thuốc còn ấm": "Trị tĩnh mạch chi thể nhiệt độc thịnh  Sắc 2 lần nước các vị: Hoàng kỳ, kim ngân hoa (mỗi vị 16g); cam thảo (6g); xích thược, đan sâm, tử thảo nhung, ngưu tất, đương quy (mỗi vị 12g). Sau đó chắt lấy nước khi còn nóng, tiếp theo cho một dược 10g và nhũ hương 10g vào quấy tan. Tiếp tục cho 10g địa miết trùng và 12g địa long (đã được sao khô, tán bột mịn) vào khuấy đều và uống khi thuốc còn ấm.",
+      "đắp lên vùng bị đau nhức": "Trị vùng gan đau  Lấy các vị gồm: nhũ hương, một dược, miết giáp, ngũ linh chi với lượng bằng nhau đem sắc đặc xong tẩm vào gạc, đắp lên vùng bị đau nhức.",
+      "đắp lên cho đến khi tiêu hạch": "Trị nhũ hạch  Một dược, hoàng bá, đại hoàng, nhũ hương mang tán bột mịn xong trộn với một ít băng phiến rồi cho vào hũ kín tối màu bảo quản. Nếu bị nhũ hạch thì lấy một ít hỗn hợp bột thuốc này trộn với lòng trắng trứng xong đắp lên cho đến khi tiêu hạch."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

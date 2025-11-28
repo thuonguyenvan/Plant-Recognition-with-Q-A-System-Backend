@@ -1,0 +1,210 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Chân rết",
+            "ten_khac": "Chân rết, Cơm lênh, Tràng pháo, Ráy leo",
+            "ten_khoa_hoc": "Pothos scandens L.",
+            "ma_taxon": "473750",
+            "ho": "Ráy (Araceae)",
+            "Mô tả": {
+                "lá": "Lá mọc so le, đa dạng, hình mũi mác hoặc dài mũi mác, gốc tròn, đầu nhọn, cuống lá phình ra thành bản dẹt dạng lá, hai mặt nhẵn.",
+                "hoa": "Cụm hoa mọc ở kẽ lá, ngắn hơn cuống lá, bao bọc bởi một mo nhỏ; trục cụm hoa hình trứng gồm toàn hoa lưỡng tính; hoa đực ở trên, hoa cái ở dưới; bao hoa có 6 thùy bằng nhau; nhị 6, chỉ nhị ngắn; bầu có 3 ô, mỗi ô chứa 1 noãn.",
+                "quả": "Quả mọng khi chín màu đỏ.",
+                "cây": "Cây thảo leo, dài 4m hoặc hơn. Cành non, hình trụ, mọc ngoằn ngoèo, rễ bén ở những mấu.",
+                "mùa hoa": "tháng 2-5",
+                "mùa quả": "tháng 2-5",
+                "thân": "...",
+                "cuống": "...",
+                "gốc": "...",
+                "cao": "...",
+                "rễ": "...",
+                "củ": "...",
+                "mọc": "...",
+                "mặt": "...",
+                "đầu": "..."
+            },
+            "Phân bố": {
+                "phân_bố": "Pothos L. là một chi có các dạng sống tương đối đặc biệt. Hầu hết các loài của chi này là thân leo sống phụ sinh, phân bố rải rác ở vùng nhiệt đới hoặc á nhiệt đới các châu lục, trừ châu Mỹ. Ở Ấn Độ, có khoảng 20 loài; Việt Nam 13 loài, chưa tính một vài loài mới nhập trồng làm cảnh. Trong số các loài, cây chân rết có diện phân bố rộng nhất, bao gồm ở hầu hết các tỉnh miền núi, trung du và thậm chí ở cả đồng bằng.",
+                "thường_mọc": "Chân rết là loại cây sống phụ sinh, thường mọc bám trên đá hay trên các cây gỗ lớn. Cây phân nhánh nhiều và sinh trưởng nhanh, tạo thành những búi lớn, đến mức không thể xác định được từng cá thể.",
+                "Đặc điểm sinh trưởng": "Chân rết ưa khí hậu ẩm mát, nhưng cây cũng có thể chịu được điều kiện khắc nghiệt, khi mọc bám trên những tảng đá trơ trọi hoặc trên các cây gỗ ở vùng đồi khô hạn. Cây ra hoa quả nhiều hàng năm, song chỉ có các hạt giống bám được vào các kẽ đá hoặc vết nứt của vỏ cây mới nảy mầm. Chưa quan sát được cây con mọc trên đất. Chân rết có khả năng tái sinh vô tính khỏe. Dù bị chặt phá nhiều, nhưng phần thân cành còn sót lại, đều có khả năng tiếp tục tái sinh.",
+                "ở_vùng": [],
+                "các_tỉnh": [],
+                "được_trồng": []
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": "Chân rết thường được trồng trong chậu, bồn và cho leo để làm cảnh. Các đốt thân đều mọc rễ. Cây được nhân giống dễ dàng bằng cách giâm cành. Vào mùa xuân, chọn cành bánh tẻ, cắt thành từng đoạn có 2 – 3 đốt đem giâm trong chậu hoặc bồn chứa đất trộn lẫn với một ít phân chuồng mục. Thỉnh thoảng cần tưới nước và bón thêm phân vi sinh. Tránh trồng ở nơi quá nắng."
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Toàn cây."
+            },
+            "Thành phần": {},
+            "Tính vị": {
+                "Có vị": "Cây chân rết có vị đắng, cay, tính ôn có tác dụng sơ cân hoạt lạc, tiếp cốt tục cân (liền xương liền gân), tán ứ tiêu thũng, khư phong thấp."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Cây chân rết được dùng chữa vết thương do đánh đập, gẫy xương, đau xương do phong thấp, đau lưng, mỏi gối.",
+                "được_dùng": "Cây chân rết được dùng chữa vết thương do đánh đập, gẫy xương, đau xương do phong thấp, đau lưng, mỏi gối.",
+                "làm thuốc": "Cây chân rết được dùng chữa vết thương do đánh đập, gẫy xương, đau xương do phong thấp, đau lưng, mỏi gối.",
+                "sắc nước uống": "Liều dùng: thân và lá cây chân rết 15 – 30g, sắc nước uống hoặc ngâm rượu uống.",
+                "giã nát": "Dùng ngoài, giã nát đắp tại chỗ.",
+                "chữa": "...",
+                "có tác dụng": "...",
+                "sắc uống": "..."
+            },
+            "Cách dùng": {},
+            "luu_y": {}
+        }
+    ]
+}

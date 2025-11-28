@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Liễu bách",
+      "ten_khac": "Thùy tì liễu, tì liễu, tây hà liễu",
+      "ten_khoa_hoc": "Tamarix chinensis Lour.",
+      "ma_taxon": "1560974",
+      "ho": "Tamaricaceae (Liễu bách)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2 – 4m.",
+      "thân": "Cành nhẵn, màu hung đỏ, thường mọc nghiêng.",
+      "lá": "Lá rất nhỏ, mọc so le như những chiếc váy móc áp sát vào cành, đầu có mũi nhọn cứng, màu lục xám.",
+      "hoa": "Cụm hoa mọc ở kẽ những búp lá thành chùy dài, thưa, gồm nhiều bông có cuống ngắn; lá bắc hình chỉ nhọn; hoa mẫu 5, có cuống dài bằng đi hoa, 2 – 3mm, lá đài hình trái xoan, nhọn hoặc hai tù, ngắn hơn cánh hoa, cánh hoa hình bầu dục, nhị 5; bầu có 3 nhụy.",
+      "quả": "Quả nang, cắt vách, chứa nhiều hạt.",
+      "mùa hoa": "tháng 4 – 9.",
+      "mùa quả": "tháng 10 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Tamarix\u00a0L. có ba loại ở Việt Nam, tất cả đều là cây nhập trồng làm cảnh.  Liễu bách có nguồn gốc từ Trung Quốc, về sau được du nhập sang nhiều nước khác, trong đó có Việt Nam. Hiện nay chưa rõ cây được nhập trồng vào thời gian nào.  Liễu bách được trồng rải rác ở các tỉnh phía Bắc, trong công viên, quanh các ao hồ hoặc vườn cây cảnh tư nhân. Đó là loại cây ưa sáng và ưa ẩm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành lá. Khi hoa chưa nở, cắt lấy cành, lá non để nới thoáng mát trong bóng râm phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Zhang Xinyao et al. (1991), cành liễu bách chứa isorham – netin, gallic acid Me ester – 3 – Me ether và acid 2 – hydroxy – 4 – methoxy cinnamic (CA 117: 44.520h).",
+      "Các hợp chất": "Theo Chen Fakui et al. (1995), liễu bách chứa quer – cetin – 3′, 4′ – dimethyl ether (Zhong cao yao 1995, 26 (9), 467 – 8. CA 124: 185715g).",
+      "chứa": "Theo “Trung được từ hai II (1996), cây chứa tamarixinol, tamarixon, tamarixol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá liễu bách có vị ngọt, mặn tính bình, không độc, có tác dụng khu phong, làm ra mồ hôi, lợi tiểu tiện, giải độc, làm cho ban sởi mọc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa các chứng phong, bụng chướng đầy; mỗi lần dùng 3 – 4g cành lá liễu bách sắc uống hoặc dùng phối hợp với các vị khác.",
+      "chữa": "Chữa trẻ em lên sởi, gặp gió lạnh, sởi không mọc được, sinh ho, sắc 3g cành lá liễu bách, uống nóng.",
+      "có tác dụng": "Ở một số nước Đông Á và Đông Nam Á, liễu bách được coi là có tác dụng lợi tiểu, lọc máu, làm ra mồ hôi, làm cho sởi mọc, là dễ tiểu tiện, trị ngộ độc rượu. Dùng ngoài, cành lá liễu bách nấu nước rửa chữa dị ứng da, đầy hơi, ở Lào và Campuchia người ta dùng cành lá liễu bách nấu nước tắm cho khi hoa chưa nở, cắt lấy cành, lá non, để nơi thoáng mát trong râm phơi khô (Lê Quý Ngưu 1990).",
+      "làm thuốc": "Bài thuốc có liễu bách  Chữa các chứng phong: Cành lá liễu bách và kinh giới, mỗi vị 4g, sắc đặc, để lắng, rồi hòa với mật ong và trúc lịch (nước vắt từ măng vòi tre nướng lên), hâm nóng rồi chia uống mỗi lần một chén, ngày 3 lần  Chữa sợi mọc không đều: Cành lá liễu bách 10 – 15g, nấu với nước và thêm ít đường uống thay nước trà. Đồng thời, dùng cành lá cây này nấu nước lau rửa.  Dự phòng bệnh sởi: Cành lá liễu bách với liều 1,5g cho mỗi năm tuổi, nấu nước và thêm ít đường mà uống. Ngày 3 lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

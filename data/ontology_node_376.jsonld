@@ -1,0 +1,245 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kháo lông",
+      "ten_khac": "Rè hương, trúc sinh, hàn nhì thầu.",
+      "ten_khoa_hoc": "Machilus velutina Champ. ex Benth.",
+      "ma_taxon": "570192",
+      "ho": "Lauraceae (Long não)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ nhỏ hoặc dạng bụi.",
+      "thân": "Cành có lông.",
+      "lá": "Lá mọc so le, hình trái xoan hoặc bầu dục – thuôn, dài 7,5 – 12,5 cm, rộng 2,2 – 4,5 cm, gốc tròn, đầu thuôn thành mũi nhọn, mép thường gập xuống dưới, mặt trên nhẵn bóng, mặt dưới có lông màu xám nhạt, gân lá nổi rõ; cuống lá dài 1 – 1,2 cm, có lông, có rãnh.",
+      "hoa": "Cụm hoa mọc ở ngọn và đầu cành thành chùy ngắn dạng xim, dài 2 – 3 cm hoặc hơn, phủ một lớp lông dày màu nâu nhạt; lá bắc dài, hẹp và có lông: bao hoa gồm 6 phiến có lông ở mặt ngoài, nhăn ở mặt trong, 3 phiên ngoài hơi hẹp hơn; nhị 9, 3 cái phía ngoài không có tuyến, chỉ nhị có lông ở gốc, 3 cái phía trong có 2 tuyến hình thận; bầu nhẵn, noãn hình trứng.",
+      "quả": "Quả mọng, đường kính 4 mm, khi chín màu đỏ tía.",
+      "mùa hoa": "tháng 10 – 12",
+      "mùa quả": "tháng 2 -3."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Machilus Ness. có 21 loài ở Việt Nam, trong đó có 3 – 4 loài được dùng làm thuốc, kể cả loài kháo lông (Nguyễn Kim Đào, 2003). Kháo lông phân bố ở một số tỉnh miền núi phía Bắc như Lạng Sơn, Quảng Ninh, Sơn La, Hoà Bình, Quảng Trị… Trên thế giới có ở Trung Quốc và có thể cả Lào.  Kháo lông thuộc loài cây gỗ nhỡ, thường mọc rải rác ở ven rừng núi đá vôi hoặc núi đất. Cây cũng thấy trong các quần hệ thứ sinh trên đất sau nương rẫy hoặc đồi cây bụi. Cây mọc ở đồi cây bụi thường sinh trưởng kém, phân cành sớm và có chiều cao chỉ vài mét.  Kháo lông ra hoa quả hằng năm vào đầu mùa động, quả già tồn tại đến tận mùa xuân năm sau, tái sinh tự nhiên chủ yếu từ hạt. Gỗ thân khác lông dùng làm trụ mỏ và trong xây dựng, vỏ có chất nhớt dùng làm gôm và bột hương (nhang).",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Trị"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ cây và vỏ rễ kháo lông có vị ngọt, hơi đắng, tính mát có tác dụng thanh nhiệt, tán ứ, lợi hầu, chỉ huyết [Trung dược từ hải, 1996, tập 2, tr. 1593].  Vỏ cây có tác dụng tiêu viêm, giải độc [Lê Quý Ngưu, Trần Như Đức, 1995]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ kháo lông được dùng chữa viêm xoang miệng, viêm họng, viêm màng bồ đào, đòn ngã tổn thương, gãy xương, ngoại thương xuất huyết.  Vỏ cây và tinh dầu được dùng làm thuốc chữa cảm gió. Liều dùng 15 – 30g vỏ sắc uống. Dùng ngoài, bột vỏ cây kháo lông dùng uống hoặc phối hợp với lá tươi giã nát, làm thành bánh đập bỏ đi xương (liều dùng vừa đủ). Bột vỏ kháo lông phơi khô, dùng làm nhang để thắp cho mùi thơm dễ chịu. Gỗ rất tốt, không mối mọt, dùng để làm đồ gia đình. Dầu hạt dùng trong công nghiệp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

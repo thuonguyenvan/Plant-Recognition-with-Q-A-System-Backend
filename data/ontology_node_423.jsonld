@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "A kê",
+      "ten_khac": "A kê, Akee",
+      "ten_khoa_hoc": "Blighia sapida Koenig",
+      "ma_taxon": "155137",
+      "ho": "Sapindaceae – Bồ hòn"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ cao 12-13m, thẳng có tán lá xòe rộng và các nhánh cứng.",
+      "lá": "Lá to, mang 8 lá chét gần như mọc đối, hình bầu dục, thuôn dài, không lông, màu oliu tươi lúc khô, gân rất lồi ở mặt dưới.",
+      "hoa": "Chùm hoa 1-2 ở nách lá, có lông mịn, cuống hoa dài 1,5cm; lá đài 5; cánh hoa 5 màu trắng, hẹp có một vảy to ở gốc; nhị 8; bầu 3 ô có vòi nhụy ngắn.",
+      "quả": "Quả nang dài 7-10cm, hình tam giác, màu vàng hay đỏ tươi, mở thành 3 mảnh; hạt 3, tròn, bóng loáng, mang áo hạt to ở gốc màu trắng, bao đến 1/2 hạt."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "A kê có nguồn gốc ở các khu rừng tây phi. Chúng phát triển tốt nhất ở những nơi có lượng mưa lớn. Tuy nhiên chúng phát triển tốt nhất ở những nơi có lượng mưa trung bình.",
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "nơi",
+            "tên": "Đồng Nai",
+            "ghi_chú": "A kê Trung Phi"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Áo hạt, Lá, Vỏ và quả- Arillus, Folium et Fructus Blighiae"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Áo hạt chứa 69,2% nước, 5% protid, 20% lipid, 4,6% glucid, 1,2% tro, 40% mg% Ca, 16 mg% P, 2,7 mg% Fe. Cuống noãn giữa hạt và áo hạt chứa 2 chất độc mà một chất là hypoglycin A. Quả chứa những nhân tố làm giảm glucoza huyết thông thường (amino acid cyclopropanoid, hypoglycin A và hypoglycin B) đều là chất độc có thể dùng thay insulin. Tro quả chứa nhiều kalium."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Châu Phi cận Sahara và các khu vực khác nhau trên thế giới( Caribe, Bắc và Nam Mỹ, Châu Âu).Theo truyền thống nó được sử dụng để điều trị nhiều chứng bệnh như đau lưng, táo bón,ung thư,sốt rét ở trẻ nhỏ, bệnh lậu, bệnh kiết lỵ, rối loạn tinh thần, thoát vị, đau dạ dày, sốt rét, thấp khớp, thương hàn,..Nó còn được sử dụng làm mỹ phẩm và nguồn dược liệu.  Ở Châu Âu, A Kê được cho là một thức ăn giúp làm ngon miệng, khi đem nấu chín trong bơ hoặc nấu với cá biển  Bên cạnh đó, áo hạt cứng, có dầu và có mùi vị như hạt dẻ dùng ăn được.  Ở Việt Nam, A kê cũng được sử dụng khá rộng rãi  Lá (và vỏ)\u00a0 sắc nước uống lợi tiêu hoá, cũng dùng chữa cảm lạnh và chảy mủ. Nhiều bộ phận khác của cây được xem như làm giảm đau, chống độc, chống nôn, cũng là chất độc và kích thích Hạt / lá cũng được sử dụng làm chất xua đuổi côn trùng và lá đã được báo cáo là có tác dụng gây chết đối với ấu trùng của nhiều loài muỗi khác nhau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Hypoglycin A và hypoglycin B\u00a0 được tìm thấy trong phần vỏ chưa chín của A kê và việc tiêu thụ sẽ dẫn đến hạ đường huyết, nôn mửa, rối loạn quá trình tạo gluconeogenes có thể dẫn đến hôn mê và tử vong. Không được ăn quả A kê xanh"
+    }
+  ]
+}

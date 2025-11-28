@@ -1,0 +1,187 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây tổ ong",
+      "ten_khac": "Mè hoang, mai hoa, màng màng trắng, bạch thiệt, phong sào thảo.",
+      "ten_khoa_hoc": "Leucas zeylanica (L.) R. Br.",
+      "ma_taxon": "369990",
+      "ho": "Bạc hà (Lamiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 0,25 – 0,5m.",
+      "thân": "Thân hóa gỗ ở gốc, hình vuông, mọc đứng, có lông.",
+      "lá": "Lá mọc đối, có cuống ngắn hoặc gần như không cuống, hình mác, dài 6 – 7 cm, rộng 1 – 1,5 cm, gốc thuôn, đầu nhọn, mặt trên sân bóng, mặt dưới rất nhạt, mép hơi có răng cưa.",
+      "hoa": "Cụm hoa dày đặc mọc ở ngọn, lá bắc ngắn hơn đài, hoa nhiều màu trắng, đài không cuống, hình trụ, mặt trong và mặt ngoài có lông, răng ngăn không đều, hình tam giác, tràng có ống thẳng hơi có lông, môi trên ngắn, khum, có lông rậm, xẻ 2 thùy nhọn, nhị 4, ngắn hơn môi trên, chỉ thị có lông, đính ở họng tràng.",
+      "quả": "Quả bế, gần hình trung thuôn, đầu tròn hoặc cụt, nhẵn, màu nâu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Leucas R Br. trên thế giới có khoảng vài chục loài, phân bố chủ yếu ở vùng nhiệt đới Châu Âu và có thể cả ở Châu Phi. Ở Việt Nam có 5 loài và 2 thứ (var.). Cây tổ ong phân bố rộng rãi từ Ấn Độ qua Mianma, Trung Quốc, xuống Lào, Campuchia, Thái Lan và Malaysia. Tại Việt Nam, loài này cũng có mặt gần như khắp các tỉnh, từ vùng đồng bằng đến trung du và vùng núi thấp. Tuy nhiên, ở các tỉnh thuộc vùng núi thấp, trung du và ở cả Tây Nguyên đều được coi là nơi phân bố phong phú của loài cỏ dại này.  Cây tổ ong thuộc loại cây sống nhiều năm hoặc 1 năm. Tại một số tỉnh miền núi biên giới phía bắc, cây có hiện tượng tàn lụi toàn phần vào mùa đông. Cây ưa sáng, ưa ẩm nhưng có khả năng chịu được hạn. Cây tổ ong thường mọc thành đám dày đặc ở nương rẫy, đổi, ven đường, bãi sông. Cây ra hoa quả rất nhiều, tái sinh từ hạt và mọc chồi nhanh khoẻ. Vì thế, chúng thường nhanh chóng tạo thành thảm dày đặc, lấn át cả cây trồng."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành mang lá, hay toàn cây bỏ rễ, phơi hay sấy khô."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây tổ ong có vị đắng, cay, tính ấm, có mùi thơm, vào kinh phế, có công năng giải biểu, phát hãn, khu phong, chỉ khái, hóa đàm.  Sách “Sổ tay thường dụng trung thảo dược” ghi: cỏ tổ ong vị đắng, tính bình, hơi ấm; có công năng giải biểu, hoá đàm, chỉ khái, trị thống kinh, minh mục (làm sáng mắt) [TDTH, 1997, III: 1188]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây cỏ tổ ong được dùng chữa cảm mạo, sốt, ho, ho gà, viêm đường hô hấp trên, phong nhiệt tê đau, trị sa dạ dày, rối loạn tiêu hóa. Liều dùng mỗi ngày 15 – 25g cây phơi khô hoặc 30 – 60g cây tươi, sắc lấy nước uống.  Nhân dân còn dùng chữa bệnh đau mắt, khi bị đau mắt kéo màng. Lấy lá và ngọn cành cây tổ ong, rửa thật sạch, thêm ít muối ăn, giã nát đắp lên mắt. Khi đau răng, dùng 12g lá cỏ tổ ong, sắc đặc rồi ngậm.  Ở Ấn Độ, dịch lá cây cỏ tổ ong được dùng chữa ghẻ, vảy nến và bệnh ngoài da (Nadkarni. 1999 740); cũng được dùng để trị nhức đầu, cảm mạo (Chopra et al., 2001: 153).  Bài thuốc có cỏ tổ ong  Chữa loét dạ dày:  Toàn cây cỏ tổ ong, chặt nhỏ, vỏ cây mủ, vỏ cây vú sữa, mỗi vị 12g, sao vàng, hạ thổ, sắc lấy nước uống, ngày một thang. Nếu bị đau do sa dạ dày, dùng một vị có tổ ong, chặt nhỏ, sao vàng, hạ thổ, mỗi ngày lấy 20 – 30g sắc lấy nước uống thay trà.  Chữa ho gà:  Lá có tổ ong phơi khô, củ tóc tiên (rễ củ mạch môn) chẻ đôi, bỏ lõi; mỗi vị phải sao vàng riêng. Liều lượng mỗi vị sau khi đã sao vàng 12g, sắc nước uống, chia làm nhiều lần trong ngày."
+    }
+  ]
+}

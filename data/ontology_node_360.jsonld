@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lồng đèn",
+      "ten_khac": "Thù lù lông, Tầm bóp",
+      "ten_khoa_hoc": "Physalis peruviana L.",
+      "ma_taxon": "51988",
+      "ho": "Solanaceae ( Cà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao 60 – 80 cm.",
+      "thân": "Thân hình trụ, phân cành nhiều, phủ lông mềm.",
+      "lá": "Lá mọc so le, hình bầu dục hoặc gần tam giác, gốc bằng hoặc hình tim, đầu nhọn, mép nguyên hoặc có răng nhỏ, hai mặt có lông dày hơn ở mặt dưới.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, màu vàng, điểm màu tím ở gốc; đài hình chuông, xẻ đến tận giữa thành 5 răng hình mác nhọn; tràng hợp có ống hình chuông, phủ nhiều lông tơ ở mặt ngoài, 5 thuỳ ngắn; nhị 5, định ở gốc ống tràng, bao phấn màu tím; bầu 2 ô chứa nhiều noãn.",
+      "quả": "Quả mọng, hình cầu, nhẵn, màu vàng, bao te bởi đài hoa tồn tại, hạt hình đĩa, màu vàng,"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Physalis L. ở Việt Nam hiện đã biết chắc chắn có 4 loài, trong đó có một loài nhập trồng làm cảnh và 3 loài mọc tự nhiên vốn có. Loài lồng đèn hay còn gọi là thù lù lông trên đây có kích thước lớn nhất trong 4 loài hiện có. Cây phân bố tự nhiên ở một số tỉnh miền núi như Bắc Cạn Ba Bể), Lào Cai (Bắc Hà), Bắc Giang (Hiệp Hoà), Hà Tây cũ (Ba Vì), Lâm Đồng (Đà Lạt),…  Lồng đèn thuộc loại cây thảo ưa ẩm, ưa sáng và cũng có thể hơi chịu bóng. Cây thường mọc lẫn với cây trồng ở vườn hay ở nơi đất ẩm trên nương rẫy, ven đường đi xen lẫn một số loài có dại; độ cao phân bố có thể tới hơn 1.000m. Có tài liệu cho rằng đây là cây nhập trồng lấy quả làm rau ăn (Võ Văn Chi, 1997), nhưng thực tế cây cỏ mọc tự nhiên và ở một vùng nào đó người ta có thể trồng. Cây mọc từ hạt vào khoảng tháng 3 -4, sau 2 – 2,5 tháng đã ra hoa quả và sau khi quá già, cây sẽ tàn lụi vào mùa thu hàng năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây và quả."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây lồng đèn có chứa protein, carbohydrat, chất khoáng, kim loại nặng, caroten và các acid hữu cơ như acid clorogenic, acid béo (The wealth of the India, 1969). Ngoài ra đã phân lập được các bioflavonoid như kaempferol, saponin vô định hình, glucosid đắng, phytosterol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây lồng đèn được dùng chữa sốt, ho, sưng họng, phiền nhiệt, nôn, nấc. Ngày dùng 20 – 40g toàn cây khô, sắc uống. Dùng ngoài, lấy lá non và ngọn tươi 40 – 80g, rửa sạch, giã nát, vắt lấy nước cốt uống, bã đắp, xoa ngoài, cũng có thể dùng toàn cây nấu lấy nước để tắm rửa khi bị mụn nhọt, lở loét ngoài da.  Quả lồng đèn cho phụ nữ đẻ khó ăn để dễ đẻ; trẻ em nóng âm, người gầy khô, ăn để da thịt mát, tăng cân.  Để chữa sưng ngón chân, ngón tay, lấy quả lồng đèn tươi vừa đủ, giã nát, đắp vào chỗ đau rồi băng lại.  Ở đảo La Reunion, nhân dân dùng cây lồng đèn để lợi tiểu; ở Nam Phi, người Zulus dùng nước sắc, nước hãm thụt hậu môn cho trẻ em để chữa rối loạn tiêu hoá, đau bụng. Ở Ấn Độ, dịch lá được dùng tẩy giun và chữa rối loạn tiêu bia, Kirtikar et al., 1998, III: 1769: Chopra et al., 2001: 191]. Ở Trung Quốc, toàn cây được dùng trị mụn nhọt, lỵ amíp, bạch hầu, quai bị, biêm tinh hoa, quả được dùng trị ho, nóng, nuốt đau. Ngày 9 – 30g sắc uống, dùng ngoài, giã đắp (dùng 1 hoặc sắc nước rửa. Gần đây, lồng đèn thường được dùng trị ung thư, sốt rét, hen, viêm gan, viêm da, thấp khớp (Wu et al., 2005). Để chữa ung thư, mỗi ngày dùng 15g qua lồng đèn, sắc với 200ml nước, chia làm 3 lần, uống trong ngày. uống nhiều ngày [Chang, 1992: 267].  Bài thuốc có lồng đèn  Chữa bệnh quai bị:  Toàn cây lồng đèn tươi 100g; đại thanh (bo mẩy: Clerodendrum cyrtophyllum Turez) 30g. sắc, chắt lấy nước, thêm đường phèn vào vừa đủ để đỡ đắng, đun sôi, chia làm 3 lần uống trong ngày.  Chữa bệnh ung thư (các loại, chưa tổng kết được loại nào tốt hơn):  Rễ lồng đèn tươi 90g, rửa sạch, thái thành lát mỏng, rồi sắc với nước. Khi nước đang sôi cho vào 1 – 2 quả trứng đã bóc vỏ ngoài. Sau đó, thêm một ít đường nâu sắc kỹ. Bệnh nhân ăn trứng và uống nước sắc, ngày 1 lần [Chang, 1992: 267]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

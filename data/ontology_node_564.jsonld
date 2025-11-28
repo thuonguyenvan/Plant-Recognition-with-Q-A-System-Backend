@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sài đất",
+      "ten_khac": "Sài đất",
+      "ten_khoa_hoc": "Wedelia calendulacea (L.) Less",
+      "ma_taxon": "335655",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá gần như không cuống, mọc đối, hình bầu dục thon dài, 2 đầu nhọn, dài 15-50mm, rộng 8-25mm, có lông nhỏ cứng ở cả hai mặt, mép có 1-3 răng cưa nông, hai bên gân chính có 2 gân phụ xuất phát gần như từ một điểm ở\u00a0phía cuống lá, gân chính và phụ đều nổi ở mặt dưới lá.",
+      "hoa": "Cụm hoa hình đầu, cuống hoa thìa lìa màu vàng tươi (khác với hoa cây lỗ địa cúc thường dùng nhầm với cây Sài đất.",
+      "quả": "Quả bế không có lông, đầu thu hẹp lại, tận cùng mang một vòng có răng.",
+      "cây": "Sài đất còn có tên húng trám vì khi vò cây có mùi trám và được một số nơi dùng nó ăn sống như ăn rau húng. Người ta còn gọi là ngổ núi vì cây giống cây rau ngổ lại mọc hoang trong núi. Tên cúc nháp hay cúc giáp vì hoa giống hoa cúc, lá và thân lại nham nháp.",
+      "thân": "Thân màu xanh có lông trắng cứng nhỏ.",
+      "cao": "nơi đất tốt có thể cao hơn 0,50m.",
+      "mọc": "Sài đất là một loai cỏ sống dai, mọc lan bò, chỗ thân mọc lan tới đâu rễ mọc tới đấy"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây sài đất đã được T. R. Govindadiari, K. Nagarajan nghiên cứu từ nâm 1956 và đã lấy được từ lá rã một chất lacton gọi là wedelolacton C16H10C7 với ty lệ 0,05%. Các tác giả cũng đã đưa ra dược công thức khai triển (theo W.Karrer 1958). Trọng lượng phân tử 314,2. Độ chảy 242-244°C (triaxeiat). Theo cấu trúc wedelolacton vừa là một favonoit vừa là một cumarin. Theo sự nghiên cứu của Bộ môn được liệu trường Đại học dược Hà Nội, trong sài đất có tinh dầu, rất nhiều muối vô cơ. Hoạt chất cho đến nay vẫn chưa xác định được"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân Bắc Ninh, Bắc Giang và nhiều nơi khác vẫn dùng cày sài đất ăn sống như rau với thịt hay cá, Một số nơi khác dùng sài đất tắm trị rôm sảy hoặc uống phòng chạy sởi, chữa báng, sốt rét.  Từ cuối năm 1961, bệnh viện Bắc Giang đã sử dụng điều trị có kết quả mọi trường hợp viêm tấy ngoài da, ở khớp xương, ở răng, vú, sưng bắp chuối, sưng khớp nhiễm trùng, lở loét, mụn nhọt, chốc đầu, đau mắt V.V…. Hiện nay việc sử dụng sài đất được phổ biến rộng rãi, có nơi dã dùng sài đất chữa viêm bàng quang cũng có kết quả tốt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang ở nhiều tỉnh miền Bắc nước ta. Thường ưa nơi ẩm mát. Gần đây, do nhu cầu nhiều nơi đã trồng sài đất để dùng làm thuốc.  Trồng sài đất rất đơn giản: Chọn nơi đất tốt, hơi ẩm cắt nhũng mẩu thân thành từng đoạn dài 20-30cm, hay chọn những đoạn thân có rễ sẵn, vùi 2 phần 3 xuồng đất. Trong vòng 15-20 hôm cây đã mọc tốt, sau một tháng đã có thể thu hoạch, cắt cây sài đất sát đất, tưới nước bón phân tốt thì sau nửa tháng lại thu hoạch được nữa. Thu hoạch gần như quanh năm, nhưng tốt nhất vào vụ hè các tháng 4, 5,8 lúc cây đang ra hoa. Thường người ta dùng sài đất tươi. Có thể dùng khô nhưng tác dụng có vẻ không bằng tươi. Chúng tôi đang thí nghiệm dùng sài đất ổn định bằng cách cho đồ hơi nước sôi trong 5 phút trước khi phơi hay sấy khô.",
+      "làm thuốc": "Có thể dùng tươi hay khô. Nhưng cho đến nay những người dùng thường cho tươi tốt hơn khô.  Dùng cây tươi: Ngày uống 100 g, giã cây tuơi với ít muối ăn, thêm 100ml nước đun sôi để nguội. Vắt lấy nước chia làm 1 hay 2 lần uống trong ngày. Bã có thể dùng đắp lên nơi sưng đau. Có thể giã nát, vắt lấy nước cô đặc thành cao dùng dán. Cao này bảo quản không bị mốc hỏng. Dùng cây khô: Ngày dùng 50g thêm nửa lít nước, sắc và cô cho đến khi còn 200ml, chia 1 hay 2 lần uống trong ngày. Thời gian điều trị chừng 1-2 ngày, nhiều nhất tới 5-7 ngày.",
+      "sắc uống": "Bài thuốc có vị Sài đất  Dự phòng sởi hoặc bạch hầu:\u00a0Dùng 15-30g cây khô, dạng thuốc sắc. Liên tục trong 3 ngày.  Bệnh ban độc, ban trái trẻ em, thường biểu hiện sốt nhức đầu, sốt về chiều, về đêm, sốt xuất huyết: Sài đất 6g, Trùn hổ (chế) 3 con, Cỏ mực 4g, Nhãn lồng 4g, Bạc hà 4g, Thạch cao 2g. Đổ 600ml nước, sắc còn 200ml. Chia làm 3 lần uống trong ngày. Trẻ khi khát nước, kết hợp uống với chanh đường tuỳ thích (kinh nghiệm dân gian ở An Giang).  Chữa rôm sảy trẻ em:\u00a0Sài đất vò nát, pha nước tắm cho trẻ.  Chữa sốt cao:\u00a0Sài đất 20-50 g, giã nát, pha với nước uống, bã đắp vào lòng bàn chân.  Chữa sốt xuất huyết: Sài đất tươi 30 g, kim ngân hoa 20 g, lá trắc bá (sao đen) 20 g, củ sắn dây 20 g (có thể dùng lá sắn dây), hoa hòe (sao cháy) 16 g, cam thảo đất 16 g. Sắc uống ngày một thang. Nếu sốt cao, khát nhiều, thêm củ tóc tiên (mạch môn) 20 g.  Chữa viêm tuyến vú:\u00a0Sài đất 50 g, bồ công anh 20 g, kim ngân hoa 20 g, thông thảo 20 g, cam thảo đất 16 g. Sắc uống ngày một thang.  Chữa nhọt:\u00a0Sài đất 30 g, kim ngân hoa, lá 15 g, khúc khắc (thổ phục linh) 10 g, bồ công anh 20 g. Sắc uống ngày một thang.  Chữa mụn, lở, chàm: Sài đất 30 g, kim ngân hoa, lá 15 g, khúc khắc 10 g, ké đầu ngựa 12 g, cam thảo đất 16 g. Sắc uống ngày một thang. Sài đất giã nát, đắp lên mụn lở cũng tốt."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

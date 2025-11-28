@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ nâu",
+      "ten_khac": "Củ nâu, Củ nầng, Dây tẽn, Plé (Kho), Đâu (Tày)",
+      "ten_khoa_hoc": "Dioscorea cirrhosa Lour.",
+      "ma_taxon": "467955",
+      "ho": "Dioscoreaceae (Củ nâu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây leo, sống lâu năm.",
+      "rễ": "Rễ củ không phân nhánh, hình cầu hoặc đa dạng, vỏ ngoài sần sùi, ruột màu nâu đỏ, có nhựa.",
+      "thân": "Thân tròn, nhẵn, có nhiều gai ở gốc.",
+      "lá": "Lá đơn, mọc so le ở phía dưới, mọc đối ở gần ngọn, phiến lá hình trứng hoặc bầu dục, nhẵn bóng, gốc tròn, đầu thuôn nhọn, dài 20 cm, rộng 16 cm; gân hình cung rõ nét.",
+      "hoa": "Cụm hoa đực không có lá, dài 6 – 8 cm, gồm nhiều bông, trục bông nhẵn, có cánh, hoa 15 – 25 cái; bao hoa gồm 6 lá đài rời, cánh hoa ngắn và hẹp; nhị 6; hoa cái xếp thành bông cong.",
+      "quả": "Quả nang, có cuống thẳng, có cánh; hạt có cánh xung quanh, màu nâu.",
+      "mùa quả": "tháng 5.",
+      "mọc": "Mặc dù tên khoa học chỉ xác định có một nhưng trên thực tế người ta thấy có mấy loại củ nâu:  Củ nâu dọc đỏ: củ xám vàng nhạt, vỏ không sần sùi, nhựa màu đỏ nhạt. Loại củ nâu này nhuộm vải cho màu bóng. Củ nâu dọc trai hay củ nâu dọc dựa: vỏ thường bị nứt, màu nâu xám nhạt, nhựa đỏ hơn loại trên. Củ nâu trắng hay củ nâu tẻ: vỏ củ có rãnh, màu nâu đỏ nhạt, nhựa màu vàng nhạt hơi hồng; người ta thường dùng loại củ nâu này để nhuộm những nước đầu tiên rồi mới nhuộm những loại củ nâu đỏ nói trên vì người ta cho rằng loại củ nâu này làm cho vải thêm dày và bền."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Củ nâu chỉ được trồng với mục đích nghiên cứu, học tập. Thường sử dụng củ con để làm giống.  Vào tháng 2–3, đào hố sâu 30–50 cm, rộng 40–50 cm, để phơi, phân xanh hay phân chuồng hoai trộn đều xuống rồi đặt củ giống và phủ một lớp đất dày 7-10cm. Thường trồng gần cây thân gỗ để lợi dụng làm giàn leo."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Củ nâu chứa tanin gồm tanin (+) catechin và tanin (–) epicatechin, nhưng tỷ lệ (–) epicatechin trội hơn (CA. 1989, 111, 54134 a; CA. 1995, 123, 138763 r); các chất màu dimeric trimeric và tetrameric procyanidin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Củ nâu có vị ngọt, chát hơi chua, tính bình, không độc, vào kinh tỳ, vị. Có tác dụng thanh nhiệt, cầm máu, làm se, sát trùng, chống tiêu chảy."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Củ nâu chữa tiêu chảy, kiết lỵ, các chứng tích tụ hàn uế trong bụng, xích bạch đới, băng huyết, chảy máu tử cung, ho ra máu, đau bụng sau khi sinh… Ngày 10–15 g, sắc uống. Dùng ngoài trị bỏng, đòn ngã tổn thương, bị thương chảy máu, viêm da rụi, dinh nhọt.",
+      "làm thuốc": "Trong sinh hoạt, củ nâu để nhuộm vải, làm vài cứng và có độ bền cao. Có thể dùng để ăn, nhưng phải gọt bỏ vỏ ngoài, ngâm nhiều nước và thay nước nhiều lần cho hết hoặc giảm chất chát, rồi luộc ăn.",
+      "chữa": "Bài thuốc có củ nâu  1. Chữa tiêu chảy, kiết lỵ:  Củ nâu thái mỏng, phơi hoặc sấy khô, ngày 10–20 g, sắc chia 2–3 lần uống trong ngày. Có thể tán bột uống, mỗi lần 2–3 g, ngày 2–4 lần. Rễ củ nâu (củ nâu, gọt bỏ vỏ, mài với nước, vắt lấy nước cốt để nhuộm vải, còn bã) đốt tồn tính, tán nhỏ, uống với nước cơm, mỗi lần 3g, ngày 3–4 lần. Lá củ nâu, lá lẩu, lá sim, mỗi thứ 20g sắc uống (Nam dược thần hiệu).  2. Chữa khí hư:  Củ nâu 30g sao đen, mẫu lệ 12g, ích trí nhân 12g, bạch đồng nữ 20g, đảng sâm 40g, kim anh 12g, thán khương (gừng đốt cháy) 8g. Sắc, chia 2 lần uống trong ngày.  3. Thuốc bó gãy xương:  Củ nâu tươi, giã nát, đắp bó và băng nẹp (sau khi đã nắn xương trở lại bình thường) (Hải Thượng Lãn Ông). Nhân dân còn dùng củ nâu rửa sạch, 50g, gọt bỏ vỏ, đem bó lòng và lưng, cơm nếp 30g, giã nát, đắp bó.  4. Chữa liệt nửa người:  Củ nâu 60g, ngâm 500 ml rượu trắng trong 5 ngày. Chắt lấy nước uống trước khi đi ngủ. Ngày 15–30 ml.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Rễ củ.",
+      "có tác dụng": "Tùy theo màu sắc của nhựa, củ nâu có những tên gọi khác nhau:  Củ nâu đỏ: có nhựa màu đỏ nhạt Củ nâu đục: trái có nhựa màu xám nhạt Củ nâu trắng: có nhựa màu vàng nhạt hay hơi hồng. Người ta cho rằng củ nâu đỏ trái dùng để nhuộm tốt hơn."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

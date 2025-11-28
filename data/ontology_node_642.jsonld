@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tỏa dương (Ngọc cẩu)",
+      "ten_khac": "Nấm ngọc cẩu, Củ gió đất, Cây không lá, Cu chó, Ký sinh hoàn, Củ ngọc núi, Xà cô, Tỏa dương",
+      "ten_khoa_hoc": "Balanophora spp.",
+      "ma_taxon": "50906",
+      "ho": "Balanophoraceae (Dó đất)",
+      "Mô tả": {
+        "cây": "Cây thảo, nạc mềm, nom như cái nấm, màu đỏ nâu, sống một năm hay nhiều năm, ký sinh trên thân rễ cây khác, thường là cây gỗ lớn trong rừng sâu.",
+        "thân": "Thân thoái hóa thành củ nguyên hoặc phân nhánh, có nhiều hình dạng khác nhau, sần sùi, không có lá.",
+        "hoa": "Hoa đơn tính khác gốc, mọc thành cụm dày trông như cu chó, cụm hoa đực hình trụ, dài 10 -15cm, ở gốc có một vài lá bắc; bao hoa xẻ nhiều thùy (4-7) thùy dày và hẹp, dài bằng nhau, có nhị có bao phấn hính móng ngựa; cụm hoa cái hình thoi hoặc hình trứng, dài 2 – 3cm, không có bao hoa, trên cụm hoa có nhiều phần phụ hình chùy không sinh sản.",
+        "quả": "Không có quả.",
+        "mùa hoa": "tháng 10 -2."
+      },
+      "Phân bố": {
+        "phân_bố": "Tỏa dương là dạng hình thái tương đối khác biệt trong giới thực vật có hoa. Trên thế giới, có khoảng 20 loài, đều là những cây sống kí sinh trên rễ của những loài thực vật có hoa khác. Chúng phân bố chủ yếu ở vùng nhiệt đới châu Á, châu Phi và Australia. Một số loài phân bố cả ở vùng cận nhiệt đới và ôn đới ẩm.  Theo Bertel Hansel (1973) ở Đông Dương có 8 loài, trong đó ở Việt Nam có 3 loài. Nhìn chung, các loài củ gió đất thường chỉ phát hiện thấy trong các loại rừng kín thường xanh ẩm hoặc rừng cây lá rộng núi đá vôi.  Khi chưa có hoa , toàn bộ thân dinh dưỡng là một hệ thống dạng sợi, ký sinh vào rễ của một số loài cây thuộc họ Moraceae, Sterculiaceae, Tiliaceae… Cây đực và cây cái thường mọc lẫn với nhau. Do khả năng phát tán hạt hạn chế và sự phát triển của thân dưới dạng sợi nên tỏa dương thường mọc tập trung thành từng đám gần nhau. Nơi đã phát hiện một trong 3 loài này mọc tập trung nhất là vùng núi Bát Đái Sơn, thuộc huyện Quản Bạ, tỉnh Hà Giang, độ cao khoảng 1600m. Hiện nay đã có 2 loại của tỏa dương được đưa vào sách đỏ Việt Nam."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây"
+      },
+      "Thành phần": {
+        "thành phần": "Về thành phần hóa học sơ bộ thấy có nhiều chất màu anthoxyanozit, trong dịch chiết nước nấm tỏa dương đã phân lập 19 hợp chất gồm: balaxiflorins A và B, 3 hợp chất phenylpropanoid, 4 hợp chất lignan, 9 hợp chất tanin và acid gallic."
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Bổ thận tráng dương. Ôn trung táo thấp Tán ứ trừ tê, mạnh gân cốt Bồi bổ cơ thể, chống viêm, kích thích miễn dịch, chống co giật, an thần.  Tỏa dương được nhân dân địa phương dùng làm thuốc bổ, kích thích ăn ngon miệng, chữa đau bụng, nhức mỏi chân tay, nhất là dùng cho phụ nữ sau sinh, mới ốm dậy chóng lại sức. Dạng dùng thông thường là rượu thuốc. Cây hái về rửa sạch, thái mỏng, sao qua, rồi ngâm rượu với tỉ lệ 1:5, trong một tháng hoặc càng lâu càng tốt. Rượu có màu đỏ sẫm, vị hơi chất đắng. Ngày uống 2 lần vào trước bữa ăn, mỗi lần 30ml.  Ở Malaysia, tỏa dương còn được dùng làm thuốc kích dục."
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa liệt dương: Toả dương 12g, thục địa 15g, sơn thù nhục 15g, sơn dược 15g, phục linh 12g, câu kỷ 15g, nhục thung dung 12g, dâm dương hoắc diệp 30g, ba kích nhục 12g, bạch nhân sâm 12g, lộc nhung 6g, sao táo nhân 12g, thỏ ti tử 12g, thiên môn đông 9g, cam thảo 9g. Tất cả đem tán mịn trộn mật làm thành viên, mỗi viên nặng 9g. Mỗi ngày uống 3 lần, mỗi lần 1 viên, uống với nước đun sôi để nguội. Kiêng ăn thức ăn tanh, lạnh.  Món ăn, bài thuốc hỗ trợ tráng dương: Toả dương 5g, nhục thung dung 5g, thịt dê 50g, bột mì 200g. Trước tiên sắc riêng toả dương và nhục thung dung, lấy nước thuốc này nhào với bột mì, cán mỏng, cắt thành sợi, cho vào nấu với thịt dê, nêm gia vị vừa miệng, làm thức ăn điểm tâm hằng ngày.  Hoạt tinh, di tinh, sinh lý yếu, mệt mỏi: Tỏa dương 120g, tang phiêu tiêu 120g, long cốt 40g, bạch phục linh 40g. Tất cả tán mịn, viên to bằng hạt ngô, mỗi lần uống 15-20g với nước muối loãng. Ngày uống hai lần.  Bổ thận, chữa đau lưng mỏi gối, các khớp đau nhức, đại tiện khô táo kết gây đau bụng: Tỏa dương, hoàng bá, quy bản, hoàng cầm, đỗ trọng, ngưu tất, tri mẫu, mỗi vị 16g; địa hoàng, đương quy, mỗi vị 10g; phá cố chỉ, tục đoạn, mỗi vị 8g. Tất cả các vị thuốc tán bột mịn, trộn đều với rượu và hồ hoàn thành viên, ngày uống 2 lần, mỗi lần 15-20g.  Bài thuốc bổ thận tráng dương: (dùng cho người cao tuổi dương hư, thận suy, yếu mệt, liệt dương, di tinh kém ăn, mất ngủ): Toả dương 10g, nhân sâm 12g, hoàng kỳ 16g, đỗ trọng 16g, nhục thung dung 8g, thỏ ty tử 12g, xa sàng tử 12g, phúc bồn tử 12g, đương quy 12g, bạch truật 12g, thục địa 16g, ba kích 12g, dâm dương hoắc 12g, lộc nhung 12g, kỷ tử 12g, đại táo 5 quả, long nhãn 10g, cam thảo 6g, xuyên khung 8g, hà thủ ô đỏ 12g. Tất cả cho vào 750ml nước vào sắc kỹ còn 250ml chia 3 lần uống trong ngày. Uống 7 thang liền thì cơ thể sẽ khoẻ, ăn ngon, ngủ yên, dai sức hết mệt mỏi di tinh, liệt dương.  Cùng bài thuốc trên với số lượng gấp 5 lần mỗi vị cho vào 5 lít rượu, ngâm trong 3 tuần, chắt ra, cho thêm 500ml mật ong loại tốt, mỗi ngày uống 3 lần trước bữa ăn, mỗi lần 20 – 30ml.  Chữa xuất tinh sớm: Thục địa 30g, tỏa dương 20g, đỗ trọng 30g, đuôi lợn 150g, gừng tươi 15g, đại táo 8 quả. Ðuôi lợn cạo bỏ lông, rửa sạch, chặt thành từng khúc. Gừng tươi giã nát. Các vị thuốc rửa sạch. Tất cả cho vào nồi hầm lửa nhỏ trong 2,5-3 giờ là được, cho thêm gia vị, chia ăn vài lần trong ngày. Bài thuốc có công dụng: Tư bổ thận tinh, dùng cho những người bị chứng xuất tinh sớm với các triệu chứng như xuất tinh sớm, tinh dịch ít và loãng, cơ thể hao gầy, suy giảm ham muốn tình dục, da mặt nhợt nhạt, tóc rụng nhiều, tiểu tiện trong dài, đại tiện lỏng loãng, chất lưỡi nhợt, thường có bệnh mạn tính kèm theo như tiểu đường, u phì đại tiền liệt tuyến mạn tính, suy giảm công năng tuyến thượng thận…  Xuất tinh sớm và liệt dương: Toả dương 20g, tang thầm (quả dâu tằm chín đen) 20g. Hai thứ tán nhỏ, hãm trong phích nước sôi với 10g mật ong. Sau 15 phút là uống được. Uống thay nước trà hàng ngày. Chú ý, người bị tiêu chảy không nên dùng loại nước này.  Phục hồi sức khoẻ cho phụ nữ sau khi sinh: Toả dương sau khi thu hái về, tước bỏ những phiến của lá bắc và bao hoa, rửa sạch, thái mỏng, phơi khô, sao qua, rượu 35 – 40 độ. Cứ 1 phần toả dương, 5 phần rượu. Ngâm trên 1 tháng mới dùng được, hoặc càng lâu càng tốt. Khi đó rượu có màu đỏ sẫm, vị hơi đắng, chát. Nếu khó uống có thể cho thêm ít đường hoặc mật ong cho dễ uống. Ngày uống 2 lần trước bữa ăn, mỗi lần uống 1 chén con (khoảng 30ml).  Mới đây, công ty TNHH Tuệ Linh vừa nghiên cứu thành công và cho ra đời 1 công thức thuốc độc đáo mang tên Sâm Nhung Cường Lực Tuệ Linh với sự kết hợp của các thảo dược quý như tỏa dương, sâm cau, nhung hươu bắc cực có khả năng tăng cường sức khỏe toàn thân, tăng nội tiết tố nam một cách tự nhiên, cải thiện chức năng sinh lí và làm chậm quá trình mãn dục nam.  Một số sản phẩm có thành phần Tỏa dương trên thị trường hiện nay  Cao Tỏa dương Tuệ Linh   Cao Tỏa dương với thành phần 100% cao khô dược liệu nguyên chất.   Dược liệu được sản xuất trên dây chuyền hiện đại đảm bảo chất lượng và hàm lượng hoạt chất cao nhất.   Tỏa dương là thảo dược quý giúp nhuận tràng, thông tiểu, bổ thận tráng dương, ích tinh huyết, mạnh tình dục, mạnh gân cốt, kích thích ăn ngon miệng.  Hình ảnh sản phẩm Cao tỏa dương Tuệ Linh  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Tỏa dương. Nếu cần tư vấn và tìm hiểu thêm về cây Tỏa dương và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

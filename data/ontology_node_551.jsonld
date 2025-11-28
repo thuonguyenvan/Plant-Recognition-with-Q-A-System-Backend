@@ -1,0 +1,202 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Thông đỏ",
+            "ten_khac": "Thông đỏ",
+            "ten_khoa_hoc": "Taxus wallichiana Zucc.",
+            "ma_taxon": "135517",
+            "ho": "Taxaceae (Thông đỏ)",
+            "Mô tả": {
+                "cây": "Cây to, thường xanh, cao đến 20m.",
+                "thân": "Thân có vỏ màu hồng xám, phân nhiều cành mảnh, khi non màu lục.",
+                "lá": "Lá mọc so le, thường xếp hai dãy như một lá kép, hình dải rất hẹp, dáng cong, dài 2,5 – 3,5 cm, rộng 2 – 3mm, gốc thuôn, đầu nhọn, mặt trên lõm như lòng thuyền, mặt dưới có hai dãy lỗ khí.",
+                "hoa": "Cụm hoa đơn tính, khác gốc, nón đực và nón cái mọc ở kẽ lá.",
+                "quả": "Quả hình trứng, vỏ cứng, có hạt bao bọc bởi áo màu đỏ để hở đầu.",
+                "mọc": "Loài Taxus chinensis (Pilger) Rehd. (T. cuspidata var. chinensis (Pilger) Rehd. et Wils.) cũng được dùng với công dụng tương tự."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Taxus L. có 6 – 7 loài trên thế giới, phân bố rải rác ở vùng ôn đới ấm, vùng cận nhiệt đới và nhiệt đới núi cao bắc bán cầu. Trong đó, có 3 loài ở khu vực Trung và Đông Á, 3 – 4 loài ở phía bắc châu Mỹ (Nguyen Tien Hiep & Jules E. Vidal, 1996) và 2 loài ở Việt Nam là T. chinensis (Pilger) Rehd. thường gọi là “thông đỏ lá ngắn” và T. wallichiana Zucc. gọi là “thông đỏ lá dài”.  Thông đỏ lá ngắn: Phân bố ở Trung Quốc, Ấn Độ, Malaysia và Việt Nam. Ở Việt Nam, cây phân bố rải rác ở một số vùng núi thuộc các tỉnh Lào Cai (Hoàng Liên Sơn); Hà Tây (Ba Vì); Nghệ An (Quỳ Châu); Hòa Bình (Mai Châu); độ cao: 900 – 1600m (Vu Van Dung et al, 1996; Sách đỏ VN., 1996).  Thông đỏ lá dài: Phân bố ở Nê Pan (vùng núi Himalaya), phía bắc Mianma, Đông – Nam Trung Quốc, Ấn Độ, Indonesia, Philippin và Việt Nam. Ở Việt Nam, loài này cũng chỉ thấy ở một số vùng núi cao thuộc các tỉnh Lào Cai (Hoàng Liên Sơn); Khánh Hòa; Lâm Đồng (Đà Lạt, Đơn Dương); Hà Giang (Thái An – Quản Bạ); độ cao phân bố từ 1400 đến 1600m hoặc hơn (Nguyen Tien Hiep & Jules E. Vidai, 1996; Sách Đỏ VN., 1996; Nguyễn Tập, 1996 và 2001).  Nhìn chung, cả 2 loài thông đỏ đều thuộc loại cây gỗ cỡ trung bình, mọc rất rải rác trong kiểu rừng kín thường xanh ẩm trên đỉnh núi đá vôi hay granit. Chúng được coi là nhóm cây chịu bóng hoặc hơi ưa sáng; thường mọc dưới tán một số cây gỗ thuộc các họ Lauraceae, Magnoliaceae, Fagaceae, Illiaceae… Thông đỏ thường ra lá non vào mùa xuân – hè; nón đực xuất hiện sớm hơn nón cái từ cuối mùa đông, nhưng đến giũa mùa xuân năm sau cả nón đực và nón cái mới nở. Thông đỏ sinh trưởng rất chậm, tái sinh tự nhiên từ hạt khó. Tuy vậy, nếu trên đỉnh núi có vài cây to, vẫn có thể tìm thấy những cây con mọc từ hạt. Vài năm gần đây, một số cơ sở nghiên cứu ở Hà Nội và Đà Lạt đã thí nghiệm thành công việc nhân giống thông đỏ bằng cành.  Thông đỏ lá ngắn cũng như thông đỏ lá dài là những loài cây thuốc có nguy cơ bị tuyệt chủng, nên đã được đưa vào Danh lục đỏ thế giới và Sách đỏ Việt Nam để lưu ý bảo vệ."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Cành và lá."
+            },
+            "Thành phần": {
+                "thành phần": "Trong lá một số thông đỏ chứa các dẫn chất của taxan:  Taxa 4 (20) 11 dien – 5α – 9α – 10α – 13α tetraol tetra acetat (I). Taxa 4 (20) 11 diea – 5 α – 9 α – lOß – 13 α tetraol 9 α, lOß diacetat (II). Taxa 4 (20) 11 dien – 2 α – 5 α – 9 α – lOß – 13 α pentaol penta acetat (III). Taxa 4 (20) 11 dien – 5 α – 7ß – 9 α – lOß – 13 α pentaol penta acetat (IV). Taxa 4 (20) 11 dien – 2 α – 5 α – 7ß – 9 α – lOß, 13 α hexaol hexa acetat (V). Taxa 4 (20) 11 dien – 2 α – 5 α – 7ß – lOß tetraol – 5 α – 7ß – lOß triacetal – 2 α – methyl butyiat (VI) Taxa 4 (20) 11 dien – 2 α – 5 α – 7ß – 9 α – lOß pentaol – 7ß – 9 α – lOß triacetat 2 α methyl butyrat (VH). Taxin (Khim. Prin coedin 1970, 6, 777; CA. 1971,74,95411 z). 14ß hydroxy – 10 deacetyl baccatin III. 2 dẫn chất loại oxetan taxan diterpen là: 2 debenzoyl – 14p benzoyloxy – 10 – deacetyl baccatin III (a) và 10, 15 – epoxy – 11 (15 -> 1) abeo – 10 – deacetyl baccatin III (b) (CA. 1993, 118, 124818 x) cũng được phân lập và xác định cấu trúc. Taxol (0,045 – 0,13%), 10 deacetyl baccatin III, brevifoliol (CA. 1994, 120, 129486 p; Phytochemistry 1993, 33, 145). và các chất: 13 deacetyl baccatin VI; 13 acetyl brevifoliol; 7, 13 – diacetyl – 7 – debenzoyl brevifoliol; 7 debenzoyl – 10 – β hydroxy brevifoliol; 7 – acetyl – 10 – deacetyl – 7 – debenzoyl brevifoliol; 2 acetoxy brevifoliol; 1 p hydroxy baccatin I đều được phân lập từ lá (Phyto chemistry 1993, 33, 145). Chất taxoid walifoliol, một chất nhựa lignan (-) 3 demethyl sccoisolaricừesinol, hợp chất phenolic glucosid: Taxusid cũng đã được xác định cấu trúc (Phytochemistry 1993, 33, 1489).  Các hợp chất flavonoid và biflavonoid như sciadopitisin, sotetsuflavon (CA. 1960, 54, 14235 h; CA. 1962, 57, 16537 b; CA. 1963, 58, 4502 c).  Các hydroxy apocarotenoid đã được phân lập và xác định là deglycosylicarisid B4 và 12 dehydrođeglycosyli – carisid B4. (Fitoterapia 1993,64,396).  Lá thông đỏ còn có betulosid sciadopitycin, ginkgetin và sequoiaflavon (Planta medica 1976, 30, 82); 4 – coumaroyl – myo – inositol (CA. 1977, 86, 136344 y), các acid shikimic, quinic, p sitosterol vomifoliol và dehydrovomifoliol (Phytochemistry 1978, 18, 137; Planta mdica 1965, 13, 261; CA. 1966, 64, 6701).  Quả thông đỏ chứa rhodoxanthin, eschscholz xanthon (CA. 1965, 62, 14735 e).  Vỏ rễ chứa một chất methoxy triterpen là baccatin (đ.c 219°) và một hợp chất D có độ chảy 161°.  Gỗ thông đỏ chứa các chất nhựa lignan, isotaxiresinol, secoisosolariciresinol (Indian f. chem 1972, 10, 677)."
+            },
+            "Tính vị": {
+                "Có vị": null
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Trong y học dân gian Trung Quốc, thông đỏ được coi là có tác dụng tiêu tích, thông kinh mạch, giảm đau. Trong y học cổ truyền Ân Độ, cao lá khô và cao vỏ thông đỏ được dùng trị hen. Ở Thổ Nhĩ Kỳ, nhân dân dùng thông đỏ chữa bệnh tim.  Paclitaxel (taxol) được dùng điều trị ung thư buồng trứng di căn và ung thư vú di căn, sau khi không đạt kết quả với liệu pháp chuẩn. Tất cả bệnh nhân phải được điều trị trước với một số thuốc trước khi dùng paclitaxel để dự phòng những phản ứng quá mẫn. Những tác dụng không mong muốn xảy ra khi dùng paclitaxel là phản ứng quá mẫn nặng, ức chế tủy xương, giảm bạch cầu trung tính, giảm tiểu cầu, chảy máu, thiếu máu, nhiễm khuẩn, bệnh thần kinh ngoại biên, hạ huyết áp, nhịp tim chậm, đau khớp, đau cơ, rối loạn tiêu hóa.  Paclitaxel tương tác với ciplastin và ketoconazol. Việc dùng cisplatin trước khi điều trị với paclitaxel gây ức chế tủy xương nhiều hơn là khi dùng paclitaxel trước cisplatin. Vì ketoconazoI có thể ức chế chuyến hóa của paclitaxel, không nên dùng phối hợp hai thuốc này. Cần thận trọng khi dùng đồng thời paclitaxel và các thuốc được chuyển hóa trong gan vì các thuốc này có thể ức chế chuvển hóa của paclitaxel."
+            },
+            "Cách dùng": {
+                "được_dùng": null,
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "phơi khô": null,
+                "xấy khô": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

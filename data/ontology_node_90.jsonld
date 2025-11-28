@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tra vồ",
+      "ten_khac": "Tra bồ đề, tra làm vỡ, tra bứa",
+      "ten_khoa_hoc": "Thespesia populnea (L.) Soland. ex Correa",
+      "ma_taxon": "82768",
+      "ho": "Bông (Malvaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 5 – 10m.",
+      "thân": "Thân cành nhẵn hoặc có phụ họp thành bởi 3 – 4 lá bắc hẹp, sớm rụng: lông.",
+      "lá": "Lá mọc so le, hình gần tam giác, dài 16 cm, rộng 11 cm, gốc hình tim, đầu nhọn, lúc non có lông mi ở mép; gân chính 5, toả đều; cuống lá dài bằng phiến lá, có lông; lá kèm to nhọn, dễ rụng.",
+      "hoa": "Hoa đơn độc, mọc ở kẽ lá, màu vàng, bên ngoài phủ lông dày, cuống hoa dài 3 – 9 cm, có lông; đài hình chén có 5 răng nhọn, có lông; đài phụ hợp thành bởi 3-4 lá bắc hẹp, sớm rụng; tràng hình đấu, phủ lông hình vảy ở gốc và có lông mi ở mép; nhị nhiều đính trên một cột; bầu có lông hình vảy.",
+      "quả": "Quả hình cầu, dẹt ở đầu, đường kính khoảng 5 cm; hạt hơi hình 3 cạnh, có lông.",
+      "mùa hoa": "tháng 3 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Thespesia Soland ex Correa ở Việt Nam có 2 loài. Loài tra vồ (Tra bứa) trên phân bố chủ yếu ở các tỉnh vùng ven biển, từ Quảng Nam trở vào; cây cũng phân bố ở một số quốc gia nhiệt đới vùng Đông – Nam, nam châu Á và cà ở châu Phi.",
+      "thường_mọc": "Tra vồ là loại cây gỗ nhỡ, ưa sáng, ưa đất phèn và có thể chịu hạn tốt. Cây thường mọc lẫn trong các quần thụ cây gỗ và cây bụi, trên các vùng đồi núi thấp ở ven biển, đảo. Ở đồng bằng Nam Bộ có thể thấy cây mọc trên các bờ kênh rạch."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, vỏ, rễ, lá"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Asakawa Seiichi et al., hoa chứa 5 – 8 – dihydroxy, 7- methoxyflavon, 7 – hydroxyisoflavon và các glycosid tamarixetin 7 – O – β – D – glucosid và kaempferol 7 – O – β – D – rutinosid (CA 125, 1996: 270448 n)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và vỏ tra vồ vị ngọt, cay có công năng bổ dưỡng, chỉ lỵ; quả vị chua, chát, có công năng trừ đầu thống (chống đau nhức đầu), làm lành vết thương; lá làm dịu. Sách “Tân hoa bản thảo cương yếu” ghi: rễ, lá tra vồ có công năng tiêu viêm, chỉ thống [TDTH, 1996, II: 1982]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ tra vồ được dùng để bổ dưỡng, làm phục hồi lại sức khỏe. Vỏ thân và rễ trị kiết lỵ, trĩ, ỉa chảy. Mỗi ngày dùng 10 – 15g sắc uống.  Lá được dùng chữa viêm sưng ngoài da, thấp khớp, lấy lá rửa sạch, giã nát, đắp.  Quả giã nát, lấy dịch bôi lên các vết vảy rộp (herpes); đập rập rồi đắp lên đầu đau nửa đầu; quả giã nát, lấy dịch bôi lên các vết chém chặt để vết thương mau lành.  Hạt có dầu, được dùng chữa táo bón và liều cao gây tẩy xổ.  Ở Ấn Độ, quả, lá, rễ tra vồ (dịch chảy ra hoặc dùng tươi, giã nát, lấy dịch) được bôi ngoài chữa ngửa, lở loét, vảy nến, viêm khớp, sưng phồng do viêm, thâm tím da, bong gân, eczema ở trẻ em, côn trùng đốt, đặc biệt là rất tốt, nấm da và ghẻ nhiều trường hợp khỏi. Thường dùng phối hợp, lấy vỏ sắc lấy nước, rửa hoặc tắm trước khi bôi. Ở Indonesia, dịch lá tra vồ làm dịu và làm cho chỗ da bị bệnh mềm ra, lá giã nát làm thuốc đắp chữa mụn nhọt (đắp), đau đầu hoặc đau nửa đầu (đắp vào thái dương hoặc trán); rễ có tác dụng bổ dưỡng; vỏ cây trị lỵ và trĩ; hoa chữa ngứa; quả chữa đau đầu và ghẻ; ruột gỗ được dùng chữa tràn dịch màng phổi, đau bụng, ia chảy, sốt cao, là thuốc gây trung tiện [Med. herb index, 1995: 86; Perry et al., 1980: 256]. Ở Trung Quốc, tra vồ được dùng chữa viêm màng não, bệnh lỵ, thoát vị thống, trĩ, lở loét, nấm, ghẻ. Ngày 10 – 15g sắc nước uống. Dùng ngoài, lấy lá hoặc quả tươi giã nát, lấy dịch bội [TDTH, 1996, II: 1982].  Bài thuốc có tra vồ  Chữa da lở loét, mụn nhọt, ghẻ: Lấy vỏ khô cây tra vồ, nghiền thành bột, cho vào dầu dừa, đun sôi khoảng 15 phút, lấy dịch bôi [Kirtikar et al., 1998, 1: 340]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

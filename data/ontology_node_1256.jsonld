@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thóc lép động",
+      "ten_khac": "Vũ thảo, thóc lép lá quay, tràng quả động",
+      "ten_khoa_hoc": "Codariocalyx motorius (Houtt.) H.Ohashi.",
+      "ma_taxon": "736621",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, mọc đứng, phân cành nhiều, cao 30 – 50 cm, có khi hơn.",
+      "thân": "Cành non mềm có góc cạnh, hơi có lông, cành già hình trụ, nhẵn.",
+      "lá": "Lá mọc so le 1-3 lá chét thuôn hoặc bầu dục- thuôn, gốc tròn, đầu tù, mép nguyên. Mặt dưới màu lục tro nhạt và có lông áp sát, lá chét giữa to, hai lá bên nhỏ hẹp, có khi tiêu giảm, lá kèm dễ rụng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu ngọn, đơn hoặc kép; lá bắc lợp, dễ rụng; các hoa màu trắng hồng, xếp thành chuỳ ngắn; đài có 4 răng xếp thành dạng đấu; nhị 1 bó; bầu có lông.",
+      "quả": "Quả đầu, mép trên nguyên, mép dưới có khía, hơi cong, chia 8 đốt, hơi có lông mềm.",
+      "mùa hoa": "tháng 8 – 10",
+      "mùa quả": "tháng 11 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Thóc lép động phân bố chủ yếu ở vùng nhiệt đới Nam Á và Đông – Nam Á, từ Ấn Độ, Ne Pan, Myanma sang đến nam Trung Quốc, xuống Việt Nam, Lào, Campuchia, Thái Lan, Malaysia, Philippin, Indonesia và xuống đến Australia. Ở Việt Nam, cây cũng phân bố rộng rãi khắp từ Bắc vào Nam, bao gồm các tỉnh Lạng Sơn, Bắc Giang, Hà Tây, Hoà Bình, Hà Nam, Ninh Bình, Thanh Hoá, Nghệ An, Kon Tum, Gia Lai, Đắk Lắk, Lâm Đồng, Ninh Thuận, Bình Dương, Đồng Nai và Bà Rịa – Vũng Tàu.",
+      "thường_mọc": "Thóc lép động thuộc dạng cây bụi sống nhiều năm. Cây ưa sáng có khả năng chịu hạn, thường mọc trên đất pha cát, đất đỏ bazan. Thóc lép động có thể mọc rải rác hoặc tạo thành đám nhỏ lẫn với các cây bụi nhỏ, trảng cỏ ở rừng thông, ven rừng thưa, đồi cây bụi hay bờ nương rẫy."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thóc lép động chứa trans – crocetindimethyl ester [Hỷ Lan, Hoàng Văn Vinh (2001) Cây thuốc và vị thuốc Đông y, NXB Hà Nội, tr.1891]"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cành lá cây thóc lép động vị đắng cay, tính bình, có công năng hoạt huyết, khư ý, sinh tân dịch, thông kinh hoạt lạc. Ở Trung Quốc, sách “Toàn quốc Trung thảo dược hội biên” ghi: Toàn cây vị đắng hơi chát tính bình, có công năng tán ứ sinh tân, thư cân hoạt lạc, hoạt huyết tiêu thũng [TDTH, 1997, III: 14]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng toàn cây thóc lép động để chữa phong thấp, đau nhức xương, đòn ngã tổn thương. Liều dùng 5 – 9g sắc lấy nước uống, ngày một thang. Dùng ngoài, lấy cây tươi, giã nát đắp.  Ở Ấn Độ, lá cây thóc lép động tươi, rửa – sạch, giã nát làm thành bánh, làm nóng, đáp ứng các chỗ đau lưng, đau gối hoặc vết thương [Chopra et al., 2001: 94], [Perry et al., 1980:214]. Ở Trung Quốc, sách “Toàn quốc Trung thảo dược hội biên” ghi: toàn cây thóc lép động được dùng trị thần kinh suy nhược, thai động bất an, gãy xương, trẻ em cam tích."
+    }
+  ]
+}

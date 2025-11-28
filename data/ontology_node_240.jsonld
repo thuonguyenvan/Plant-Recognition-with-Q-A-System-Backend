@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba gạc lá to",
+      "ten_khac": "Ba gạc campốt, Ba gạc lá to, Hơ rac, Ka day (Ba Na)",
+      "ten_khoa_hoc": "Rauvolfia cambodiana Pierre ex Pit.",
+      "ma_taxon": "852625",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Ba gạc lá to là loại cây thân thảo cao tới 1,5m, có nhựa mủ trắng, vỏ nhẵn, có lỗ bì, màu nâu tươi.",
+      "hoa": "Hoa của cây ba gạc lá to mọc thành xim kép (xim dạng tán) ở ngọn; lá bắc nhỏ, đài xanh, cao 1,5mm; tràng hoa đỏ, cao cỡ 2cm, tai cao 3mm, có đĩa mật.",
+      "quả": "Quả hạch, lúc non màu xanh, khi chín màu tím đen, chứa một hạt.",
+      "cây": "Cành lá xum xuê (3-8 cành).",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 8-11.",
+      "lá": "Lá chụm 3 không lông, mỏng, có thể dài tới 30cm, rộng 8-10cm, gân phụ 10-16 cặp.",
+      "Bầu hai lá noãn rời.": "Bầu hai lá noãn rời."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ba gạc lá to là cây đặc hữu của Ðông Dương, mọc hoang ở chỗ ẩm thấp trong rừng, vùng núi, các tỉnh phía nam. Quảng Nam – Ðà Nẵng, Bình Ðịnh, Gia Lai, Ðắc Lắc, Lâm Ðồng. Loài này có vùng phân bố tự nhiên và trữ lượng lớn hơn cả nhất là ở các tỉnh Tây Nguyên.  Cây ba gạc lá to có thể được trồng từ hạt, thân hoặc rễ. Thời gian để thu hoạch thường kéo dài từ một năm rưỡi đến hai năm.Việc thu hoạch có thể thực hiện quanh năm, nhưng thời điểm lý tưởng nhất là vào mùa thu và mùa đông. Sau khi đào rễ, cần rửa sạch, bóc lấy vỏ và đem phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ rễ – Cortex Radicis Rauvolfiae Cambodianae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ rễ chứa nhiều alcaloid (2,59% ở vỏ rễ đã bỏ lớp bầu, 1,242% nếu tính toàn bộ rễ) sơ bộ thấy có ajmalin và reserpin.",
+      "Các hợp chất": "Lá chứa 1% alcaloid và các hợp chất flavonoid dưới dạng heterosid của kaempferol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường dùng điều trị bệnh tăng huyết áp, giảm triệu chứng loạn nhịp tim trong bệnh cường giáp. Cũng dùng chữa lỵ.",
+      "được_dùng": "Dùng ngoài trị ghẻ lở và bệnh ngoài da, nhất là bệnh mẩn ngứa khắp người."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

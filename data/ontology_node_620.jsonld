@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xương sông",
+      "ten_khac": "Rau súng ăn gỏi, xang sông, hoạt lộc thảo",
+      "ten_khoa_hoc": "Blumea lanceolaria (Roxb.) Druce",
+      "ma_taxon": "709056",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cỏ sống dai hai năm một, cao 0,6-2m, thân thẳng đứng, có rãnh dọc, gần như nhẵn.",
+      "lá": "Lá trứng hình đài, phía dươí gốc lá thuôn dài, phía đầu lá nhọn, dài 15-20cm, rộng 4-5cm, mép có răng cưa, những lá phía trên hơi nhỏ hơn. Những lá ở cành mang hoa lại nhỏ hơn nữa và nhẵn cả hai mặt.",
+      "hoa": "Cụm hoa hình đầu màu vàng nhạt, thành chùy dài ở ngọn. Lá bắc hình sợi, đầu tù có lông.",
+      "thân": "Toàn thân và lá, vò có mùi đặc biệt, hơi mùi dầu hỏa."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Mọc hoang và được trồng tại nhiều nơi ở nước ta. Còn thấy ở Lào, Campuchia, Ấn Độ, Indonesia, Malaysia. Người ta thường chỉ hái lá non để ăn, lá bánh tẻ để làm thuốc. Dùng tươi hay phơi trong bóng mát hoặc sấy nhẹ đến khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá xương sông Việt Nam có 0,24% tinh dầu với thành phần chủ yếu là methylthymol (94,96%), ngoài ra còn p. cymen (3,28%), limonen (0,12%) v..v.. (J. Ess.Oil Res., USA 3, 1990), (Nguyễn Xuân Dũng, Đỗ Tất Lợi, Đỗ Tất Hùng)  Trong khi lá xương sông B. lanceolaria của Ấn Độ có thành phần chủ yếu là p.cymen (99%) (S. c. Dutta, E. M. Saha, Indian Perfum., 33-38- 39, 1989)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Xương sông chủ yếu được trồng lấy lá non dùng làm gia vị: Gói chả nướng hay nấu thịt, cá. Nhân dân một số trong vùng dùng làm thuốc chữa cảm sốt, chữa ho, suyễn, nôn mửa, đầy bụng. Nhân dân Malaixia dùng giã nát, xào nóng chườm lên những nơi đau nhức, thấp khớp. Dùng trong: Ngày dùng 15-20g dưới dạng thuốc sắc, thuốc hãm. Dùng ngoài không kể liều lượng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Hàm ếch",
+      "ten_khac": "Hàm ếch, Trầu nước, Tam bạch thảo, Rau giổi, Bẩu ngoại (Tày), Co nhả lốt (Thái)",
+      "ten_khoa_hoc": "Saururus chinensis (Lour.) Hort. ex Loud.",
+      "ma_taxon": "452025",
+      "ho": "Saururaceae (Giấp cá)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Đặc điểm chung:  Cây hàm ếch là loại cây thân thảo, ưa ẩm, cao khoảng hơn 1 mét. Thân cây khá khỏe, có các đường gân và rãnh dọc rõ rệt. Phần gốc thân thường nằm sát đất, có màu trắng, phần ngọn thân mọc thẳng đứng, có màu xanh lục.",
+      "lá": "Lá có chất liệu như giấy, có nhiều chấm tuyến nhỏ. Hình dáng lá rộng trứng đến hình trứng thuôn dài, dài từ 10 đến 20 centimet, rộng từ 5 đến 10 centimet. Đầu lá nhọn hoặc nhọn dần, gốc lá hình tim hoặc hình tim lệch. Cả hai mặt lá đều nhẵn, không có lông. Lá ở phần ngọn cây nhỏ hơn, 2-3 lá ở đỉnh thân thường có màu trắng như cánh hoa khi cây ra hoa. Gân lá có từ 5 đến 7 gân, đều xuất phát từ gốc lá. Nếu có 7 gân, cặp gân ngoài cùng sẽ mảnh hơn, chạy xiên lên khoảng 2-2,5 centimet rồi cong lại và tạo thành mạng lưới gân rõ ràng.",
+      "cuống": "Cuống lá dài từ 1 đến 3 centimet, nhẵn, gốc cuống lá và lá kèm hợp thành bẹ ôm lấy thân cây.",
+      "hoa": "Cụm hoa màu trắng, dài từ 12 đến 20 centimet. Cuống chung của cụm hoa dài từ 3 đến 4,5 centimet, nhẵn, nhưng trục của cụm hoa có nhiều lông tơ ngắn. Lá bắc gần giống hình thìa, phần trên tròn, nhẵn hoặc có lông thưa ở mép, phần dưới hình sợi, có lông tơ và dính vào cuống hoa. Hoa có 6 nhị đực, bao phấn hình chữ nhật, nứt dọc, chỉ nhị dài hơn bao phấn một chút.",
+      "quả": "Quả gần hình cầu, đường kính khoảng 3 milimet, bề mặt có nhiều mụn nhỏ.",
+      "mùa hoa": "từ tháng 4 đến tháng 6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": ""
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa:",
+      "gồm chất": "Quercetin",
+      "Các hợp chất": "Quercitrin",
+      "chứa": "Isoquercitrin",
+      "triết xuất": "Quercetin-3-L-arabinoside",
+      "đã nghiên cứu": "Hyperin (Goldthread flavone glycoside)",
+      "tìm thấy": "Rutin",
+      "thủy phân": "Thân và lá chứa:",
+      "các hoạt chất": "Tanin thủy phân (Hydrolyzable tannins)",
+      "tinh dầu chứa": "Toàn cây chứa:",
+      "có hoạt chất": "Tinh dầu dễ bay hơi, thành phần chính là Methyl-n-nonylketone"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cây Hàm Ếch có vị ngọt, cay, tính hàn.  Tuy nhiên, toàn bộ cây đều có độc. Nếu con người hoặc động vật ăn phải phần thân, lá tươi, có thể gây ra đau đầu, chóng mặt, viêm dạ dày – ruột, nôn mửa và tiêu chảy."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo sách “Đường Bản Thảo” của Trung Hoa, loài cây này có tác dụng:  Lợi tiểu, tiêu thũng (giảm sưng phù, hỗ trợ điều trị tiểu tiện khó khăn). Thanh nhiệt, giải độc (hỗ trợ điều trị viêm nhiễm, mụn nhọt, bệnh lý liên quan đến nóng trong). Tiêu đờm, phá ứ (hỗ trợ giảm đờm và các chứng bệnh liên quan đến khí huyết ngưng trệ). Điều trị các bệnh về tiết niệu như tiểu buốt, tiểu rắt.",
+      "được_dùng": "Ngoài ra, cây hàm ếch còn được sử dụng rộng rãi trong ny học dân gian ở nhiều vùng dân tộc của Trung Quốc:",
+      "làm thuốc": "Dân tộc Đồng (侗族): Chữa bong gân, tổn thương cơ.",
+      "có tác dụng": "Dân tộc Thủy (水族): Chữa viêm thận, phù thũng.",
+      "sắc uống": "Dân tộc Sán Dìu (畲族): Chữa nhiễm trùng đường tiểu, sỏi thận, viêm khớp dạng thấp, đau thần kinh tọa, viêm amidan, viêm tuyến vú.",
+      "giã nát": "Dân tộc Miêu (苗族): Chữa ho lao, viêm phế quản, sa dạ dày, viêm đường tiết niệu, đau xương khớp, viêm gan vàng da.",
+      "sắc nước uống": "Dân tộc Tạng (藏族): Chữa chóng mặt, xuất tinh sớm, phát ban.",
+      "chữa": "Dân tộc Dao (瑶族): Chữa phù thũng, nhiễm trùng đường tiểu, sỏi thận."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Chữa khí hư bạch đới (ra nhiều khí hư màu trắng):  Dùng 2-3 lạng rễ cây tam bạch thảo, 4 lạng thịt nạc heo. Sắc lấy nước uống, ăn cả thịt. Mỗi ngày dùng 1 thang.",
+      "làm thuốc": "2. Chữa phong thấp, đau nhức xương khớp:  Dùng mỗi loại 3-5 đồng cân rễ tam bạch thảo, rễ cây ngưu tất, rễ cây bạch mao, rễ cây mao trúc. Sắc lấy nước uống, có thể dùng đường đỏ hoặc rượu gạo làm chất dẫn.",
+      "có tác dụng": "3. Chữa thiếu sữa sau sinh:  Dùng 1 lạng rễ tam bạch thảo, 1 cái chân giò heo. Sắc lấy nước uống, ăn cả thịt. Mỗi ngày dùng 1 thang.",
+      "sắc uống": "4. Chữa tiểu ra máu:  Dùng 2 lạng rễ tam bạch thảo, 1 lạng lá cây hải kim sa đằng, 3 đồng cân cây tiên hạc thảo. Sắc lấy nước uống, mỗi ngày dùng 1 thang.",
+      "giã nát": "5. Chữa viêm tủy xương:  Dùng 1 lạng rễ tam bạch thảo, sắc với rượu gạo để uống. Mỗi ngày dùng 1 thang.",
+      "sắc nước uống": "6. Chữa phù chân do bệnh phù thũng (beriberi):  Dùng 1 lạng cây tam bạch thảo, sắc lấy nước uống. Bài thuốc này cũng có thể dùng để chữa mụn nhọt mới sưng.",
+      "phơi khô": "7. Chữa viêm sưng do đinh nhọt:  Dùng một nắm lá tươi cây tam bạch thảo, giã nát đắp lên chỗ bị bệnh, mỗi ngày thay thuốc 2 lần.",
+      "xấy khô": "8. Chữa bệnh “tú cầu phong” (eczema):  Dùng cây tam bạch thảo tươi, giã nát rồi xoa rửa lên chỗ bị bệnh."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

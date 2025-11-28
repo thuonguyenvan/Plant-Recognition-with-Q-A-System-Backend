@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa chùm ớt",
+      "ten_khac": "Hoa rạng đông.",
+      "ten_khoa_hoc": "Pyrostegia ignea (Ker - Gawl.) Miers",
+      "ma_taxon": "126635",
+      "ho": "Chùm ớt (Bignoniaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá kép mọc đổi gồm 2 – 3 lá chét hình trứng, gốc tròn, đầu thuôn nhọn, lá chét giữa thường biến thành hình chỉ, hai mặt nhẵn; cuống có lông.",
+      "hoa": "hoa màu vàng da cam mọc rủ xuống như chùm ớt; đài hình chuông, có răng nhỏ có lông: tràng hợp thành ống dài, hẹp, hơi cong, cánh hoa thường gập xuống bầu có 2 ô.",
+      "quả": "Quả nang dài và nhỏ.",
+      "cây": "Dây leo, dài hàng mét. Thân mảnh có tua cuốn.",
+      "mùa hoa": "tháng 1 – 4",
+      "mùa quả": "tháng 1 – 4"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pyrostegia Presl. chỉ có 1 loài ở Việt Nam là cây hoa chùm ớt. Đó cũng là cây được nhập trồng.  Hoa chùm ớt là cây ưa sáng, có thể mọc được trên nhiều loại đất, cây trồng phải có giàn, hoặc giá thể leo. Cây ra hoa rất nhiều vào mùa khô (ở miền Nam), hiện chưa quan sát thấy quả. Cây hoa chùm ớt có khả năng tái sinh dinh dưỡng khoẻ tử phần thân, cành còn lại sau khi cắt, hoặc từ các đoạn thân cành đem giảm xuống đất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Gusman Antonio Barion et al., flavonoid tập trung ở cánh hoa màu vàng.",
+      "gồm chất": "Hoa màu vàng cam có nhiều sucrose, nhiều acid amin, nhiều carotenoid ở cánh hóa.",
+      "chứa": "Cây chùm ớt chứa β – sitosterol, n – hentriacontan, acacetin – 7 – O – β – D -glucopyranosid và meso – inositol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa chùm ớt có vị ngọt, tính bình, có tác dụng thanh nhiệt, lợi hầu, nhuận phế, chỉ khái, Thân, lá có vị đắng hơi chát, tính bình, có tác dụng thanh nhiệt, lợi hầu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa chùm ớt được dùng để phá kết hạch ở phổi, chữa ho, họng sưng đau. Liều dùng 15 – 30g sắc uống. Hoa có thể tán thành bột, mỗi lần uống 3g, ngày 2-3 lần.  Ở Vân Nam (Trung Quốc), hoa chùm ớt được dùng trị lao phổi, ho, hầu họng sưng đau, viêm nhánh khí quản, viêm gan."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

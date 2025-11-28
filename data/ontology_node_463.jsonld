@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đa lá tròn",
+      "ten_khac": "Đa xoan, đa Bengal",
+      "ten_khoa_hoc": "Ficus benghalensis L.",
+      "ma_taxon": "54880",
+      "ho": "Dâu tằm (Moraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 15 – 20m, có khi hơn, luôn xanh và có khi rụng lá.",
+      "thân": "Cành nằm ngang, lúc non có lông, cành già mang rễ khí sinh, lúc đầu lủng lẳng, sau đâm thẳng xuống đất, vỏ nhẵn màu xám.",
+      "lá": "Lá mọc so le, có cuống dài, hình bầu dục hoặc hình trứng rộng, dài 10 – 30 cm, rộng 7 – 20 cm, gốc tròn hoặc hơi hình tim, đầu tù, mép nguyên, gân gốc 3 – 5, mặt trên sẫm bóng, mặt dưới nhạt; lá kẽm dài 1,5 – 2,5 cm. Búp và lá non màu hồng đỏ.",
+      "hoa": "Hoa đực nhiều, có cuống ngắn, 2 – 3 lá đài và 1 nhị; hoa cái không cuống, 3 – 4 lá đài.",
+      "quả": "Quả 1 – 2, không cuống, mọc ở kẽ lá, hình cầu, hơi dẹt, đường kính 1- 1,5 cm, 2 – 2,5 cm; có lông tơ, khi chín màu vàng cam đến đỏ hoặc đỏ hồng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Đa lá tròn có thể có nguồn gốc xa xưa từ Ấn Độ. Vùng phân bố hiện tại của cây từ Ấn Độ sang phía Tây Nam Trung Quốc, xuống Việt Nam, Lào, Campuchia, Thái Lan, Xri Lanka, Malaysia, Indonesia và Australia.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Việt Nam"
+            }
+          }
+        ]
+      },
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "đình, chùa, công viên, vườn hoa",
+              "ghi_chú": "Cây thường được trồng ở đình, chùa, công viên, vườn hoa và đôi khi ở dọc đường đi."
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Cây trồng bằng cành, nơi có đầy đủ ánh sáng và quang đãng. Cây trồng gần như không cần chăm sóc và dù có bị khô hạn dài ngày cũng vẫn tồn tại được. Đa lá tròn ra hoa quả nhiều hàng năm, Quả chín là nguồn thức ăn của chim và nhiều loài động vật khác. Cây tái sinh tự nhiên chủ yếu từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Gỗ đa lá tròn có taraxasterol Tiglat [Phytochemistry 1970, 9, 2583]; vỏ cành có các hợp chất methyl ether của leucoanthocyanin – delphinidin – 3 – 0 – α – L.  Các chất 20 tetratriaconten 2 – on, pentatriaconten – 5 – on và heptatriaconten – 10 – on cũng tìm thấy trong vỏ cành. Các chất polysaccharid khi thuỷ phân cho xylose, arabinose và một lượng nhỏ glucose và galactose được tìm thấy trong quả [CA, 1993.118, 165217u], ngoài ra còn β – sitosterol- α – D glucosid, mesoinositol [CA, 179,91, 200267n]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ có tác dụng bổ, làm săn, làm mát và lợi tiểu. Hạt hoặc quả làm mát và bổ, chồi non và nhựa mủ làm săn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở các nước Đông Nam Á, lá được dùng trị lỵ và tiêu chảy, dùng đắp trị áp xe để thúc đẩy sự làm mủ và tháo mủ.  Nước sắc lá cùng với gạo rang được dùng làm thuốc ra mồ hôi.  Nước hãm vỏ là thuốc chống đái tháo đường, nước sắc vỏ được dùng để có tác dụng bổ và lợi tiểu, và làm thuốc làm săn trong bệnh khí hư.  Nước sắc các sợi của rễ dùng trị bệnh lậu, còn các ngọn mềm của rễ phụ trên mặt đất được dùng trị chứng nôn.  Nhựa mủ dùng trị đau và sốt, thấp khớp, đau lưng, đau răng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

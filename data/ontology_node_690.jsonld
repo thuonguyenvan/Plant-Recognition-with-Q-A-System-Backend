@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngải đắng",
+      "ten_khac": "Ngải áp xanh",
+      "ten_khoa_hoc": "Artemisia absinthium L.",
+      "ma_taxon": "60350",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, hai mặt phủ lông tơ trắng, mép khía răng; lá ở phía gốc có cuống dài, chẻ lông chim 3 lần, lá ở gần ngọn chẻ ít hơn và có cuống ngắn.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành đầu, các đầu họp lại thành chùy; hoa màu vàng hay trắng.",
+      "quả": "Quả ít gặp.",
+      "cây": "Cây thảo, sống hai năm hoặc nhiều năm, cao 0,40 – 0,60m, có khi đến 1m.",
+      "thân": "Thân mọc đứng, có khía dọc và lông mềm màu trắng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây có nguồn gốc ở vùng ôn đới ẩm thuộc châu Âu và một phần ở châu Á, đồng thời cũng có được trồng ở một số quốc gia Đông Âu và Liên Xô cũ. Ngải đắng được Viện Dược liệu nhập giống từ Hungari vào cuối những năm 60 của thế kỷ trước tại vườn thuốc ở SaPa. Tuy nhiên hiện nay cây đã bị mất giống.  Ngải đắng là cây ưa sáng, ưa khí hậu ẩm mát của vùng núi cao. Cây sống một năm, nên sau khi có quả già, toàn cây sẽ bị tàn lụi vào mùa đông.",
+      "Bộ phận dùng": "Toàn bộ phần trên mặt đất: lá, thân cành, hoa."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Ở nước ta rượu áp xanh nối tiếng huyện Đất Đỏ – Bà Rịa Vũng Tàu. Rượu này được tìm mua như một vị thuốc quý mà độc đáo vì độ lên màu đẹp lôi cuốn khiến ai cũng tò mò muốn uống.  Một điều độc đáo ở rượu Áp Xanh là cách pha chế có thể nhiều người biết  nhưng không ai nắm được bí quyết bốc thang thuốc dùng nấu rượu. Người ta chỉ biết rằng  trong thang thuốc đó có chừng bảy vị thuốc và việc bốc thuốc là nghề “cha truyền con nối” (Trong thang thuốc đó không thể thiếu ngải đắng, các loại đại hầu, riềng, cam thảo).  Rượu áp xanh cũng được ưa chuộng ở một số nước phương tây với tên Absinthe. Tuy nhiên người ta lấy chiết xuất từ cây áp xanh này để dùng pha chế rượu. Đây một loại thức uống gây nghiện được yêu thích vào thế kỷ XIX ở Pháp. Màu sắc xanh ngọc ấn tượng kết hợp hương liệu từ tinh dầu cây ngải đắng (áp xanh). Tuy nhiên rượu này gây kích thích thần kinh vì có hàm lượng thujone cao, dùng với lượng ít nó an toàn nhưng sẽ gây độc nếu dùng quá liều."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Ngải đắng chứa tinh dầu bao gồm myrcen, α – pinen, thujyl alcol, nerol, thujyl acetat.  Theo Kennedy Alan I, 1993, tinh dầu rễ chứa α – fenchen 53%, β – myrcen 6%, endo – bornyl acetat 2%, β – pinen 1%, trong khi đó tinh dầu rễ chứa neryl isovalerat 47% và nery butyrat 6% [CA 119; 1993: 4973 t].  Theo tài liệu khác, tinh dầu có 24 thành phần trong đó có thuyen và isothuyen (12 – 25%), sabinyl acetat (13 – 20%) và 1,8 – cineol (2 – 13%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ngải đắng (toàn cây) vị đắng, mùi thơm, tính ấm, có công năng bổ đắng, lợi tiêu hóa, hạ sốt, làm dịu đau, chống ho, trừ giun."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngải đắng được dùng làm thuốc kích thích tiêu hóa, làm thuốc bổ đắng chữa đầy hơi, đau dạ dày, đau gan, tăng huyết áp, ho, sốt. Liều dùng 2-10g thường dùng dạng thuốc hãm hoặc rượu thuốc.  Để kích thích tiêu hóa thường dùng liều thấp. Khi bị đau răng, sắc đặc ngải đắng, chấm vào chân răng bị đau.  Ở Tuynidi, quả và lá phơi khô rồi quấn làm thuốc hút, hoặc sắc uống làm thuốc trị sốt và trị cúm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Dùng cây khô sắc uống: Liều dùng lá, thân ngải đắng khoảng 15g/ngày sắc nước uống trong ngày.  Dùng ngâm rượu: 1kg lá, thân ngải đắng phơi khô (trong bóng râm), ngâm với khoảng 5 lít ~ 6 lít rượu 40 độ. Ngâm trong tầm khoảng 1 tháng trở lên là dùng được. Liều dùng 2 ly ~ 3 ly nhỏ/ngày. Rượu này thường được quen gọi với tên rượu áp xanh do có màu xanh lá cây, vị đắng."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Không dùng cho phụ nữ có thai. Có thể gây rối loạn thần kinh như co giật, mất ngủ, hoang tưởng. Hoa gây dị ứng."
+    }
+  ]
+}

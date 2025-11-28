@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rút dại",
+      "ten_khac": "Rút nước, điền ma Ấn, điền tạo giác",
+      "ten_khoa_hoc": "Aeschynomene indica L.",
+      "ma_taxon": "158036",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, thân hoá gỗ, cao 0,3 – 1,5m, có khi hơn, phân cành nhiều.",
+      "rễ": "Rễ có nhiều nốt sần.",
+      "thân": "Thân cành hình trụ, màu lục hoặc tía, có nhiều tuyến dính hoặc gai nhỏ.",
+      "lá": "Lá kép lông chim chẵn, mọc so le, gồm rất nhiều lá chét, hình thuôn hẹp, xếp rất sít nhau; lá kèm nhỏ.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm, 2 – 4 hoa, màu vàng.",
+      "quả": "Quả thẳng, dẹt, thắt lại ở những đốt, khi chín các đốt rời nhau và rụng; hạt hình thận, màu nâu.",
+      "mùa hoa": "tháng 7 – 8",
+      "mùa quả": "tháng 9 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Aeschynomene ở Việt Nam có 5 loài, loài rút dại trên phần bố rải rác khắp các tỉnh thuộc vùng đồng bằng, trung du và ở cả vùng núi thấp. Tuy nhiên cây thường gặp nhiều ở các tỉnh từ miền Trung trở vào. Trên thế giới, loài này phân bố ở Pakistan, Ấn Độ, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia.",
+      "thường_mọc": "Cây ưa sáng, thường mọc trên đất ngập nước nông, như gần bờ các ao hồ, đầm phá, kênh mương và ruộng trũng…",
+      "Bộ phận dùng": "Toàn cây. Tủy cây."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây rút dại chứa vicenin – 2, reynoutrin, rutin, myricetin và robinin [Rain I. Rastogi et al., vol. 2, 1999, 18].",
+      "gồm chất": "Theo Ueda Minoru et al., 1995, cây rút dại chứa trigonnellin là chất có tác động đến khép lá ban đêm (CA 123, 1995: 107808 e).",
+      "chứa": "Quả chứa saponin, alcaloid, tanin [Trường Đại học Dược Trung Quốc, tập I, 1993, 2211]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây rút dại vị ngọt, nhạt, tính hàn, có công năng thanh nhiệt, giải độc, bình can, minh mục, lợi niệu.",
+      "Tuỷ cây vị nhạt": "hơi đắng, tính bình; có công năng thanh nhiệt, lợi thấp, thông tiểu, lợi sữa.",
+      "Rễ cây vị ngọt": "tính hàn, có công năng thanh nhiệt, lợi thấp, tiêu tích, giải độc.",
+      "Hạt có độc": "gây tổn thương não, rối loạn thần kinh."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây rút dại được dùng chữa viêm nhiễm niệu đạo, tiểu tiện khó, đau trướng bụng, ỉa chảy, phù thũng, người già mắt mờ, mắt đỏ, quáng gà, viêm khí quản, viêm túi mật, hoàng đản, cam tích, mày đay, mụn nhọt, ngoại thương xuất huyết.",
+      "được_dùng": "Thường được dùng thay cho thông thảo hoặc mộc thông để lợi tiểu, thanh nhiệt, giải độc.",
+      "làm thuốc": "Toàn cây hoặc rễ, ngày dùng 15 – 30g (dùng tươi 30 – 60 g); tuỷ cây 3 – 6g được dùng ưu tiên để lợi tiểu, lợi sữa, làm sáng mắt.",
+      "Thân và lá rút dại": "thường được ủ để làm phân xanh.",
+      "Gỗ nhẹ và chịu ẩm": "nên được dùng làm nguyên liệu sản xuất mũ, làm nút chai."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Hạt rút dại có độc, khi cây có quả, tuyệt đối không cho gia súc ăn."
+    }
+  ]
+}

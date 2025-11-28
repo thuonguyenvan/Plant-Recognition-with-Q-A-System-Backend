@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sâm đất",
+      "ten_khac": "Sâm đất, Sâm rừng, Sâm quy bầu",
+      "ten_khoa_hoc": "Boerhavia diffusa L.",
+      "ma_taxon": "75835",
+      "ho": "Nyctaginaceae (Hóa phấn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "rễ": "Rễ mập, hình thoi.",
+      "thân": "Thân phân nhánh nhiều, mọc tỏa sát mặt đất, màu đỏ nhạt, có ít lông.",
+      "lá": "Lá mọc đối, hình trái xoan hay hình trứng, dài 2-4cm, rộng 1,5-3cm, gốc hình tim, đầu tù, mặt trên nhẵn, mặt dưới có nhiều lông màu trắng bạc, mép hơi uốn lượn, cuống lá dài 0,5-3cm.",
+      "hoa": "Cụm hoa mọc ở lẽ lá và đầu ngọn thành chùy; lá bắc nhỏ, hình tam giác, màu đỏ tía; đài hình chuông, 4 răng ngắn; nhị 3, không thò ra ngoài; bầu thuôn nhăn.",
+      "quả": "Quả hình trụ, phồng ở đầu, có 5 cánh lồi và lông đính.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Boerhavia L. có khoảng 20 loài, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam, có 3 loài, trong đó cây sâm đất phân bố rải rác nhiều nơi nhưng thường gặp ở các tỉnh ven biển, từ Hải Phòng đến Đồng Nai.  Sâm đất là loại cây ưa sáng, có thể chịu hạn, thường mọc trên các bãi cát, ruộng trồng hoa màu. Ở một số tỉnh Thanh Hóa, Nghệ An, Hà Tĩnh còn thấy sâm đất mọc ở các bãi sông, bãi hoang quanh làng.",
+      "Bộ phận dùng": "Rễ và lá – Radix et Folium Boerhaviae Diffusae."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ sâm đất tannin, flavonoid, alkaloid (punarnavine), glycoside, steroid, terpenoids, hợp chất phenolic, rotenoids (boeravinones AO)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ðược dùng chữa hen suyễn, đau dạ dày, phù thũng, thiếu máu, vàng da, cổ trướng, phù toàn thân, tiểu ít, táo bón thường xuyên, các bệnh về gan và lá lách; còn dùng trị viêm nhiễm bên trong và trị nọc độc rắn. Lá được dùng trị sang độc.",
+      "được_dùng": "Ðược dùng chữa hen suyễn, đau dạ dày, phù thũng, thiếu máu, vàng da, cổ trướng, phù toàn thân, tiểu ít, táo bón thường xuyên, các bệnh về gan và lá lách; còn dùng trị viêm nhiễm bên trong và trị nọc độc rắn. Lá được dùng trị sang độc.",
+      "làm thuốc": "Liều dùng 10-15g, dạng thuốc sắc hay thuốc hãm. Có thể tán bột uống. Có thể pha uống như trà (10g trong 1 lít nước sôi) nếu pha rượu thì chỉ dùng liều 2-5g bột rễ trong 1 ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trứng cuốc",
+      "ten_khac": "Trứng cuốc, Tiết xích, Mác nam ngoa (Tày), Co sáy tấu (Thái)",
+      "ten_khoa_hoc": "Stixis elongata Pierre",
+      "ho": "Capparaceae (Màn màn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi.",
+      "thân": "Cành vươn dài, nhẵn, màu trắng mốc.",
+      "lá": "Lá mọc so le, hình mác thuôn, dài 10 – 17 cm, rộng 2 – 5 cm, gốc tròn, đầu nhọn, mặt trên nhẵn, mặt dưới có lông ở gần gân chính, gân phụ kết thành mạng rõ; cuống lá dài 1,2 – 1,5 cm, có lông dày, phình lên ở chỗ tiếp giáp với phiến lá.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành chùm đơn, dài 8-15 cm; lá bắc nhỏ, sớm rụng; hoa nhỏ màu trắng; đài có 5 răng rời, có lông; nhị 20, xếp thành 2 – 3 hàng, những cái phía ngoài rất ngắn; bầu hình trứng, có lông, 3 ô.",
+      "quả": "Quả hạch, giống quả trám, vỏ ngoài dày và cứng, có những chấm trắng; hạt thuôn dài.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 6-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Stixis Lour., gồm một số loài thường là cây bụi. Ở Việt Nam, có 9 loài (Nguyễn Tiến Bân, 1997) trong đó cây trứng cuốc có nguồn gốc từ vùng Ấn Độ – Malaysia, phân bố rải rác khắp các vùng nhiệt đới hoặc cận nhiệt đới ở khu vực Nam Á, Đông Nam Á và Đông Á (Đông Nam Trung Quốc và đảo Hải Nam), ở Việt Nam, cây trứng cuốc phân bố chủ yếu từ vùng núi thấp (độ cao dưới 600 m) đến vùng trung du, thường mọc lẫn trong các quần hệ sau nương rẫy, ở đồi, rừng thứ sinh hoặc trên các tà li đường ở miền núi. Đôi khi còn gặp cây trên các đồng cỏ Ba Vì, Mộc Châu, Phú Bình. Trứng cuốc ra hoa quả nhiều hàng năm; quả chín thường vào mùa mưa ở phía nam, do đó hạt bị nước cuốn trôi. Cây còn có khả năng chịu hạn cao, do có hệ thống rễ phát triển. Sau khi bị chặt phá, thậm chí chỉ còn sót lại rễ cây vẫn có khả năng tái sinh cây chồi mới."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ thu hái vào mùa thu, phơi khô. Còn dùng lá."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây trứng cuốc mới được dùng trong phạm vi kinh nghiệm dân gian, ở một số vùng thuộc Hà Giang, Tuyên Quang, người ta dùng rễ cây trứng cuốc chữa đau nhức gân xương, thấp khớp. Liều dùng hàng ngày 20 – 30g, dưới dạng thuốc sắc hay ngâm rượu. Có thể tán rễ phơi khô, thành bột mịn, lấy xơ nấu cao, rồi trộn bột với cao làm viên uống. Dùng riêng hoặc phối hợp với rễ bồ công anh lượng mỗi thứ bằng nhau. Đôi khi, nhân dân vẫn hái lá nấu nước uống thay chè."
+    }
+  ]
+}

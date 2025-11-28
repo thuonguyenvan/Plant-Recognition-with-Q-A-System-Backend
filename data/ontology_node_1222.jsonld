@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoài Sơn",
+      "ten_khac": "Củ mài, Sơn dược, Mằm chén (Tày), Khoai mài, Mán địn, Co mằn kép (Thái), Glờn (Kdong), Mằn ôn (Nùng), Hìa dòi (Dao)",
+      "ten_khoa_hoc": "Dioscorea persimilis Prain et Burk.",
+      "ma_taxon": "899778",
+      "ho": "Dioscoreaceae (Củ Nâu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây củ mài là một loại dây leo ở trên mặt đất, có thân củ.",
+      "củ": "Củ có thể dài 1m, đường kính 2- 10cm với nhiều rễ con.",
+      "thân": "Thân cây nhẵn hơi có góc cạnh, ở kẽ lá có những củ con gọi là “thiên hoài” hay “dái củ mài”.",
+      "lá": "Lá đơn, mọc đối hoặc có khi so le, đầu lá nhọn phía cuống hình tim. Phiến lá dài 8-10cm, rộng 6-8cm. Cuống dài 1,5 – 3,5cm.",
+      "hoa": "Hoa đực hoa cái khác gốc.",
+      "quả": "Quả khô cổ ba cạnh và có dìa.",
+      "mùa hoa": "tháng 7-8",
+      "mùa quả": "tháng 9-11."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Ngoài tinh bột ra trong hoài sơn của Trung Quốc và Nhật Bản các nhà nghiên cứu Nhật Bản đã lấy ra chất muxin là một loại protit nhớt, allantoin, axit amin, acginin và cholin. Ngoài ra còn có mantaza là mem tiêu hóa mantoza. Về mặt thực phẩm, trong củ mài có chừng 63,25% chất bột, 0,45% chất béo, 6,75% chất protit. Gần đây người ta có tìm thấy trong một số giống Dioscorea chất saponin có nhân sterol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài việc dùng để ăn, chống đói, hoài sơn còn là vị thuốc. Trong đông y hoài sơn được coi là một vị thuốc bổ và hơi có tính chất thu sáp, dùng trong những trường hợp ăn uống khó tiêu, viêm ruột kinh niên, di tinh, đi đái đêm, mồ hôi trộm, đi đái đường. Công năng, chủ trị: bổ tỳ, dưỡng vị, chỉ tả, sinh tân, ích phế, bổ thận, sáp tinh. Chủ trị: kém ăn, tiêu chảy lâu ngày, phế hư, ho suyễn, di tinh, đới hạ, tiêu khát.",
+      "làm thuốc": "Liều dùng ngày uống 10-20g dưới dạng thuốc sắc hay thuốc bột."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc hoang ở khắp những vùng rừng núi nước ta. Trước đây, giữa các vụ thu hoạch nhân dân vẫn đi đào củ mài để ăn chống đói. Nhiều nhất tại các tỉnh Hà Bắc, Lào Cai, Yên Bái, Thanh Hóa, Nghệ An, Hà Tĩnh và Quảng Bình. Hiện nay ta đã bắt đầu trồng củ mài để chế hoài sơn vì nếu chỉ trông vào cây mọc hoang thì công đi tìm đào rất cao.  Mùa đào củ mài tốt nhất vào thu đông và đầu xuân (từ tháng 10-11 đến tháng 3-4). Muốn có hoài sơn phải chế như sau:  Củ mài đào về, rửa sạch đất, gọt vỏ rồi cho vào lò sấy diêm sinh trong 2 ngày hai đêm, lấy ra phơi khô là được. Nhưng nếu muốn có hình dáng đẹp dùng cho xuất khẩu cần chế biến phức tạp hơn.  Củ mài sau khi đào về phải chế biến ngay trong vòng 3 ngày nếu không sẽ hỏng. Việc chế biến gồm có 3 giai đoạn:  Sấy diêm sinh lần thứ nhất:  Sau khi gọt vỏ đem xông diêm sinh (110kg củ mài phải dùng 2kg diêm sinh). Trong lò sấy xếp củ mài thành hình cũi lợn để cho các củ đều hưởng được hơi diêm sinh. Sau khi sấy 2 ngày 2 đêm, cần ủ lại một đêm, rồi phơi nắng nhỏ hoặc sấy nhẹ cho khô. Đem ngâm nước lã 2 ngày 2 đêm rồi rửa sạch và phơi nắng cho khô.  Sấy diêm sinh lần thứ hai:  Lại xếp hoài sơn vào lò như lần trước rồi đốt diêm sinh trong 1 ngày 1 đêm (100kg củ mài phải dùng 1kg diêm sinh). Khi nào củ mài mềm như chuối là được. Nếu chưa mềm cần sấy diêm sinh lại. Sấy xong ủ trong vại, đậy vại bằng bao tải có nhúng nước. Đợi một ngày 1 đêm, đem ra sửa chữa củ mài cho đều đặn rồì đặt lên ván mà lăn. Lăn đến khi hai đầu củ mài lõm vào. Đem phơi nắng nhỏ hoặc sấy nhẹ cho hơi khô, sửa lại lần nữa cho miếng củ mài thật đẹp rổi lại lăn lần nữa cho nhẵn bóng và phơi thật khô. Nhúng nhanh vào nuớc lấy ra dùng giấy ráp đánh cho bóng.  Sấy diêm sinh lần thứ ba:  Trước khi đóng hòm lại sấy diêm sinh lần nữa. Cứ 100kg củ mài lần này chỉ dùng 200g diêm sinh. Sấy trong 1 ngày 1 đêm. Khi đóng hòm cần phải phân loại ra nhiều hạng. Hạng nhất: 4 khúc hoài sơn nặng 0,500kg. Hạng hai phải 6 khúc. Hạng ba tám khúc, hạng bốn 10 khúc, hạng năm 12 khúc và hạng sáu 14 khúc nặng nửa kilôgam."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dừa cạn",
+      "ten_khac": "Dừa cạn, Bông dừa, Hoa hải đằng, Trường xuân hoa, Phiắc pót đông (Tày)",
+      "ten_khoa_hoc": "Catharanthus roseus (L.) G. Don",
+      "ma_taxon": "62924",
+      "ho": "Apocynaceae (Trúc đào)",
+      "Mô tả": {
+        "cây": "Cây nhỏ cao 0,4-0,8m, có bộ rễ rất phát triển, thân gỗ ở phía gốc mềm ở phần trên. Mọc thành bụi đầy, có cành đứng.",
+        "lá": "Lá mọc đối, thuôn dài, đầu lá hơi nhọn, phía cuống hẹp nhọn, dài 3-8cm, rộng 1-2,5cm.",
+        "hoa": "Hoa mọc trắng hoặc hồng, mùi thơm, mọc riêng lẻ ở các kẽ lá phía trên",
+        "quả": "Quả gồm 2 đại, dài 2-4cm, rộng 2-3mm, mọc thẳng đứng, hơi ngả sang hai bên, trên vỏ có vạch dọc, đầu quả hơi tù, trong quả chứa 12-20 hạt nhỏ màu nâu nhạt, hình trứng, trên mặt hạt có các hột nổi, thành đường chạy dọc.",
+        "mùa hoa": "Mùa hoa quả gần như quanh năm",
+        "mùa quả": "Mùa hoa quả gần như quanh năm"
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Từ dừa cạn người ta chiết được các chất sau đây: axit pyrocatechic, sắc tố flavonic (glucozit của quercetol và campferol) và anthocyanic từ thân và lá dừa cạn hoa đỏ (theo Forsyth và Simmonds, 1957). Ngoài ra từ lá người ta còn chiết được axit ursolic và rễ chiết được cholin.  Năm 1969, Battersby và cộng sự còn được chiết được chất vicosid, một glucoalcaloir tiền thân để sinh tổng hợp các ancaloit. Hiện nay người ta đã xác định hoạt chất của dừa cạn là những ancaloit có nhân indol có trong tất cả các bộ phận của cây, nhiều nhất trong rễ và lá Tùy theo nơi thu hái, hàm lượng các ancaloit này thay đổi từ 0,2-1%. Và có thể có những giống có hàm lượng cao hơn.  Việc xác định sự có mặt của các ancaloit trong cây được bắt đầu vào cuối thế kỷ 19, nhưng phải đợi đến sau 1950 mới được nghiên cứu kỹ hơn và có thể chia làm hai giai đoạn: Giai đoạn đầu là tách được các ancaloit có tinh thể: năm 1953 Paris và Moyse chiết được vincein, sau này được Chatterjee, 1955, đặt tên là vincaine. Nhưng vincein hay vincaine cũng chỉ là chất d-yohimbin hay ajmalicine đã được phát hiện trong ba gạc. Giai đoạn hai đánh dấu bằng tách được các ancaloit dimer có tác dụng phân bào (mitoclasique): một số nhà khoa học Canada gồm Noble, Beer và Cutts trong khi nghiên cứu tìm cách chiết riêng những phần của cây dừa cạn có tác dụng đối với bệnh đái đường (vì cây chữa đái đường) tình cờ tách ra được một ancaloit có tinh thể gọi là vincaleucoblastin có tác dụng làm giảm bạch cầu trong máu chuột thí nghiệm (1958). Tin này đưa ra đã được các nhà khoa học Canada và Mỹ đi sâu nghiên cứu thêm.  Tính đến 1964, Svoboda (Laboratories Lilly) và cộng sự đã tách ra hơn 55 chất khác nhau chia làm hai nhóm: Nhóm ancaloit monomer có nhân indol hay indolinic (dihydroindol như ajmalicin, chủ yếu trong rễ, serpenthin, alstonin, akuammin, lochnerin, catharanthin, reserpin và vindolin (chất này chủ yếu chỉ thấy trong lá). Nhóm ancaloit dimer, không đối xứng gần như đặc thù của loài dừa cạn Catharanthus roseus. Tiêu biểu là vincaleucoblastin còn gọi là vimblastin thường được viết tắt là V.L.B cấu trúc hóa học được Neuss làm sáng tỏ năm 1962. công thức thô C46H58N4O9 với 2 nhóm COOCH3, 1 nhóm OCH3, 2 nhóm OH được cấu tạo bởi một phân tử catharan-thin (nhân indol) và một phân tử vindolin (nhân indolinin)  Cùng thuộc nhóm này còn có các ancaloit sau đây: Leurosin (còn gọi là vindoleurosin) đồng phân của vincaleucoblastin. Leurocristin (còn gọi là vincristin) phát hiện năm 1961 rất gần với V.L.B với một nhóm N-formyl thay cho N-metyl. Leurosidin (vinrosidin) leurosivin, rovidin. Những ancaloit thuộc nhóm này đóng vai trò quan trọng nhất vì có tác dụng chống u (antitumorale). Nhưng hàm lượng những ancaloit ấy chỉ chiếm một tỷ lệ rất nhỏ trong tổng lượng ancaloit toàn phần chứa trong dừa cạn (dưới 1/10.000) vả lại việc tách riêng từng ancaloit có tác dụng cũng rất công phu và tốn kém (theo Claus, 1965, phải từ 500kg dừa cạn khô mới chiết được 1g leucocristin). Những loại ancaloit chống u này có nhiều trong lá hơn trong rễ, hạt không chứa ancaloit, hàm lượng còn thay đổi tùy theo giống và điều kiện trồng hái"
+      },
+      "Tính vị": {
+        "Có vị": "Dừa cạn có vị hơi đắng, tính mát, tác dụng hoạt huyết, tiêu thũng, hạ huyết áp, giải độc"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dừa cạn được dùng để thông tiểu tiện, chữa bệnh đi tiểu đỏ và ít, bị bế kinh, huyết áp cao, tiêu hóa kém  Theo kinh nghiệm sử dụng trong y học dân tộc của một số nước khác có cây này mọc hoang dại, rễ dừa cạn có tác dụng tẩy giun, chữa sốt. Thân và lá có tính chất săn da (astringent), lọc máu (depuratif), dùng chữa một số bệnh ngoài da và nhất là chữa đái đường Kinh nghiệm dùng dừa cạn chữa bệnh đái đường được ghi nhận ở Ấn Độ, châu Úc, nam châu Phi, quần đảo Antilles nhưng chứng minh bằng thực tế khoa học thì chưa có."
+      },
+      "Cách dùng": {
+        "được_dùng": "Mọc hoang dại và được trồng ở nhiều nước nhiệt đới như Việt Nam, Ấn Độ, Indonexia, Philipin, Châu Phi, châu Úc, Braxin..tại châu Âu và châu Mỹ ở những vùng nóng cũng trồng quanh năm, nhưng ở những vùng lạnh cây được trồng hàng năm vì không chịu được lạnh. Ở Việt Nam gặp nhiều nhất tại các tỉnh gần biền, nhưng khắp nơi đều trồng được, trước đây chỉ được trồng làm cảnh, gần đây đã được trồng để thu hoạch lấy cây, lá và rễ chế thuốc."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

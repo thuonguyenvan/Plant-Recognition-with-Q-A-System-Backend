@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Khoai nưa",
+      "ten_khac": "Khoai nưa, Khoai na, Củ nưa, Củ nhược, Quỉ cậu",
+      "ten_khoa_hoc": "Amorphophalus konjac K. Koch, Amorphophallus konjac",
+      "ma_taxon": "126233",
+      "ho": "Araceae (Ráy)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây lâu năm, có củ to hình cầu dẹt có khi to hơn đầu một người lớn, thịt màu vàng, ăn hơi ngứa.",
+      "lá": "Lá đơn có cuống dài tới 40cm hay hơn, màu xanh lục nâu có đốm trắng, xẻ ba thành những đoạn dài 50cm, phiến lá khía nhiều và sâu.",
+      "hoa": "Bông mo tận cùng bằng một phần bất thụ, hình trụ, màu tím. Mo màu nâu sẫm.",
+      "mùa hoa": "mùa hạ và thu"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong củ khoai nưa của ta chỉ mới thấy tinh bột là một chất chưa xác định được. Trong một loại khoai nưa Amorphophalus konjac K. Koch người ta đã nghiên cứu lấy được một loại tinh bột riêng có thành phần chủ yếu là konjac-man nan (hàm lượng tới 50%) khi thủy phân sẽ được laevidulin (hay laevidulinoza)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nhân dân thường đào củ ăn khi đói nhưng phải nấu kỹ với vôi mới khỏi ngứa. Thường xuyên chỉ trồng lấy củ cho lợn ăn. Trong y dược củ tươi giã nát dùng đắp mụn nhọt, dùng trong bị ngứa và người ta cho có chất độc nhưng khi nấu với vôi thì chất độc giảm hay mất đi. Người Nhật dùng tinh bột khoai nưa để ăn. Tinh bột khoai nưa còn có thể dùng nấu rượu. Củ còn dùng chữa rắn cắn.",
+      "chữa": "Đơn thuốc chữa liệt nửa người, củ khoai nưa sống 10g, ô đầu 1g, phụ tử 1g, nước 600ml sắc kỹ còn 100ml chia nhiều lần uống trong ngày. Chú ý thuốc có độc, phải đun kỹ mới hết chất độc, khi dùng phải theo dõi."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang khắp những nơi ẩm ướt, có khi được trồng để lấy củ ăn hoặc nuôi lợn. Củ thu hoạch vào các tháng 9-11, cạo sạch vỏ, đồ chín phơi hay sấy khô, khi dùng ngâm cho mềm, thái mỏng rồi ngâm nước phèn chua và gừng, sao cho thơm và hết ngứa. Củ muốn ăn được phải chế biến nấu với vôi cho hết chất ngứa."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

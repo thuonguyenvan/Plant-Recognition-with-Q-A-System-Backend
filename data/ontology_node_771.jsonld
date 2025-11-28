@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau má lá rau muống",
+      "ten_khac": [
+        "Hồng bối diệp",
+        "Dương đề thảo",
+        "Nhất điểm hồng",
+        "Cây rau má lá rau muống cuống rau răm",
+        "Tiết gà",
+        "Tam tróc",
+        "Rau chua lè",
+        "Hoa mặt trời",
+        "Lá mặt trời"
+      ],
+      "ten_khoa_hoc": "Emilia sonchifolia (L.) DC.",
+      "ma_taxon": "121287",
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "cây": "Rau má lá rau muống là loài cây thân thảo, có thể sống một năm hoặc nhiều năm. Rễ cây mọc thẳng xuống đất. Thân cây mọc thẳng hoặc hơi nghiêng, cao khoảng 25-40cm, hơi cong, thường phân nhánh từ gốc. Thân có màu xanh xám, không có lông hoặc chỉ có lông ngắn thưa thớt.",
+        "lá": "Lá cây khá dày. Lá ở phần dưới mọc dày, có dạng lông chim với đầu lá lớn, dài khoảng 5-10cm, rộng 2.5-6.5cm. Phần đầu lá có hình tam giác rộng, đầu lá tù hoặc gần tròn, mép lá có răng cưa không đều. Hai bên lá thường có một cặp thùy dài hình mũi mác, đầu tù hoặc nhọn, mép lá gợn sóng. Mặt trên lá có màu xanh đậm, mặt dưới thường có màu tím và có lông ngắn. Lá ở phần giữa thân mọc thưa hơn, nhỏ hơn, hình mũi mác hoặc hình bầu dục thuôn dài, không có cuống, gốc lá ôm lấy thân, đầu lá nhọn, mép lá nguyên hoặc có răng cưa nhỏ. Lá ở phần trên thân ít hơn, có dạng sợi.",
+        "hoa": "Cụm hoa dài khoảng 8mm, khi hoa nở có thể dài đến 14mm. Hoa lúc còn nụ thì rủ xuống, khi nở thì dựng đứng. Thông thường, mỗi cành có từ 2-5 cụm hoa xếp thành dạng tán thưa. Cuống hoa mảnh, dài 2.5-5cm, không có lá bắc nhỏ. Bao hoa hình trụ, dài 8-14mm, rộng 5-8mm, không có lá bắc con ở gốc. Các lá đài (tổng bao) xếp thành một lớp, có 8-9 chiếc, hình mũi mác dài hoặc hình sợi, màu xanh vàng, dài gần bằng hoa, đầu nhọn, mép có màng mỏng, mặt ngoài không có lông. Hoa có màu hồng hoặc tím, dài khoảng 9mm, phần ống hoa mảnh, phần trên mở rộng và chia thành 5 thùy sâu.",
+        "quả": "Quả có dạng hình trụ, dài 3-4mm, có 5 cạnh, giữa các cạnh có lông tơ nhỏ. Phần mào lông của quả dày, màu trắng, mềm mịn.",
+        "mùa hoa": "từ tháng 7 đến tháng 10.",
+        "mùa quả": "từ tháng 7 đến tháng 10."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Chưa tìm thấy tài liệu nghiên cứu"
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây có vị đắng, tính mát, có tác dụng thanh nhiệt, giải độc, tiêu viêm, tán ứ, giảm sưng, mát huyết."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cây Rau má lá rau muống có giá trị dược liệu quan trọng, đặc biệt được sử dụng trong các bài thuốc của người dân tộc thiểu số ở Trung Quốc như\u00a0 của người dân tộc Đồng, Mục Lao, người Dao, người Choang, người Miêu, người Thổ Giao."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang ở khắp bãi hoang, dọc bờ ruộng, hàng rào, ven đường. Còn thấy mọc ở các nước nhiệt đới châu Á và miền nam Trung Quốc. Dùng toàn cây (cành hoa lá) thu hái quanh năm. Hái về sao khô hoặc sao vàng"
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

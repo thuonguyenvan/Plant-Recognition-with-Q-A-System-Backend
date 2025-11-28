@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng bá",
+      "ten_khac": "Hoàng bá, Hoàng nghiệt",
+      "ten_khoa_hoc": "Phellodendron amurense Rupr.",
+      "ma_taxon": "527541",
+      "ho": "Rutaceae (Cam)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "ép nguyên",
+      "hoa": "tím đen",
+      "quả": "hình cầu",
+      "cây": "Hoàng bá là một cây cao to, có thể cao tới 2-25m, đường kính thân có thể đạt tới 70cm.",
+      "thân": "Vỏ thân dầy phân thành 2 tầng rõ rệt. tầng ngoài màu xám, tầng trong màu vàng.",
+      "mọc": "Tại Trung quốc người ta còn khai thác vỏ cây xuyên hoàng bá Phellodendron amurense Rupr var sachalinense Fr. Schmidt (có tác giả xác định Phellodendron sonensis Schneider), cây nhỏ và thấp hơn, 7-15 lá chét, quả hình trứng, còn quả cây hoàng bá nói trên hình cầu.",
+      "mùa hoa": "mùa hạ"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hoàng bá có chừng 1,5% becberin C20H19O5N, một ít panmatin C21H23O5N. Ngoài ra trong hoàng bá còn có những chất có tinh thể, không chứa nitơ như obakunon C26H30O7 và obakulacton C26H30O8, chất béo, hợp chất sterolic.",
+      "dấu hiệu đặc trưng": "Bột hay mảnh vỏ soi ánh ngoại tím cho hùynh quang màu vàng tươi."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thuốc bổ đắng, giúp cho sự tiêu hóa, kém chưa đi rửa, bệnh do khuẩn ở ruột lỵ. Còn dùng rửa mặt, thay hoàng liên chế becberin, chữa giun, thuốc nhuộm, đắp chữa mụn nhọt, vết thương. Ngày dùng 5-10g dưới dạng thuốc sắc, thuốc bột.",
+      "chữa": "hoàng đản, trĩ hậu môn, phụ nữ bị xích bạch đới."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Vị hoàng bá thật hiện còn phải nhập. Tại Trung Quốc, hoàng bá mọc ở Hắc Long Giang, Hà Bắc, Tứ Xuyên, Vân Nam, Quý Châu. Tại nước Nga, hoàng bá mọc nhiều ở vùng Xiberi. Mấy năm gần đây chúng ta đã xin được hạt và bát đầu trồng thí nghiệm. Sơ bộ thấy cây mọc khỏe, tốt nhưng chưa đưa ra trồng quy mô lớn.",
+      "phơi khô": "Vỏ thân thường hái vào mùa hạ, cạo sạch vỏ ngoài, chỉ còn lớp trong dày chừng 1cm, sau đó cắt thành từng miếng dài 9cm, rộng 6cm, phơi khô.",
+      "có tác dụng": "Loại tốt có màu vàng tươi rất đẹp, vị rất đắng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

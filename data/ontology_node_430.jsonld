@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chổi đực dại",
+      "ten_khac": "Bái nhọn, bái chổi.",
+      "ten_khoa_hoc": "Sida acuta Burm.f.",
+      "ma_taxon": "168922",
+      "ho": "Bông (Malvaceae)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc thành bụi, cao 0,8 – 1m.",
+      "thân": "Thân hoá gỗ ở gốc, có khía, gần như nhẵn. Cành mềm, dẹt.",
+      "lá": "Lá mọc so le, hình mác, dài 2,5 – 6 cm, rộng 0,5 – 2 cm, gốc tròn, đầu nhọn, mép khía răng nhọn, hai mặt nhẵn, gân chính 3, gân phụ mờ; cuống lá dài 5 – 7 mm, lá kèm có 3 gân màu trắng nhạt suốt dọc chiều dài.",
+      "hoa": "Cụm hoa mọc ở đầu cành và kẽ lá, hoa màu vàng nhạt; đài hình cúp, nhẵn ở mặt ngoài, 5 răng hình tam giác nhọn, mép có lông dạng mi; tràng 5 cánh hình tam giác đảo, dài hơn đài; nhị nhiều, cột nhị và chỉ nhị có lông; bầu nhẵn, hơi thắt lại ở đầu; vòi nhụy 5, tách rời ở nửa phía trên.",
+      "quả": "Quả khô, 5 mảnh vỏ có gân mạng ở mặt bên, nổi rõ ở phần lưng, sừng hình chóp nhọn; hạt có lông ở đỉnh.",
+      "mùa hoa": "tháng 3 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ở Việt Nam, cây phân bố rộng rãi khắp nơi, từ vùng núi thấp (dưới 600m) xuống đến vùng trung du, đồng bằng và ra tận một số đảo lớn thuộc nhiều tỉnh ở cả miền Bắc lẫn miền Nam. Trên thế giới, loài này cũng phân bố ở nhiều nước nhiệt đới Châu Á, từ Ấn Độ đến Trung Quốc và xuống các quốc gia khác ở vùng Đông Nam Á.  Chổi đực dại là loại cây ưa sáng, có thể chịu được hạn tốt. Cây thường mọc ở đồi cây bụi, bờ nương rẫy, ven đường đi hay ở các bãi hoang quanh làng bản. Cây ra hoa quả nhiều hàng năm. Tái sinh tự nhiên tốt bằng hạt và mọc cây chổi từ phần gốc sau khi bị chặt phát nhiều lần."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ và phần trên mặt đất chứa cholin, β-phenylethyl – amin, quinazolin, tryptamin đã được carboxyl hoá, α- amyrin, ecdysteron, ephedrin, lại ở cryptolepin, campesterol, stigmasterol, acid oxalic.  Cành chứa β – sitosterol.  Toàn cây chứa heraclenol, β- sitosterol, ligustrin. Ngoài ra còn có daucosterol, syringing. Toàn cây còn chứa tinh dầu 0,5 – 0,7%.  Tinh dầu chứa 35% thuyon và α -pinen, 4% limonen, 15% cineol, 11% ylangen. Nhiều nguyên tố có trong lá: Cd, Zn, Pb."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ cây chổi đực lại có vị đắng, se, tính mát, có công năng làm mát, hạ sốt, lợi tiểu, làm ra mồ hôi, lợi tiêu hoá. Lá có vị đắng, có công năng làm dịu và làm tan sưng.  Ở Trung Quốc, chổi đực lại được cho là có vị hơi cay, tính mát [TDTH, 1997, vol. 3: 55]. Sách “Toàn quốc Trung thảo dược hội biên” ghi: chổi đực dại vị ngọt, nhạt, tính bình, có công năng thanh nhiệt giải độc, thu liễm sinh cơ, tiêu thũng chỉ thống [Van Valkenburg et al., 2001, vol.II: 496]"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ cây chổi đực dại dùng làm thuốc bổ đắng, giúp ăn ngon, cũng dùng để trị thần kinh. Rễ và lá sắc uống cho mát, chữa sốt, thông tiểu, lá giã nát, đắp chữa ung nhọt, sưng đau. Dùng trong, ngày 15 – 30g lá và rễ sắc uống.  Ở Papua Niu Ghinê (Châu Đại Dương), rễ rửa sạch, cạo sạch lớp vỏ ngoài của vỏ rễ, nhai ngày 2 – 3 lần, để chữa la chảy. Lá phơi khô, đun sôi với nước, lấy nước uống để chữa đau dạ dày (David Holdworth, 2001). Ở Indonesia, rễ chổi đực dại được dùng trị ho, lá để chữa sưng phồng và chữa ho [Med,herb index, 1995: 85].  Ở Campuchia, lá và rễ tươi giã nát đắp để làm dịu, chống lở loét ngoài da, đắp lên nhọt áp xe để chóng mưng mủ và để chữa dứt tay, chân. Nước sắc lá và rễ để điều trị sốt, ho, đau ngực, bất lực, bệnh lậu; sắc đặc để chữa trĩ và súc miệng để chữa đau răng [Perry et al., 1980; 255].  Ở Ấn Độ, rễ chổi đực dại được dùng trị đau dây thần kinh, chữa sốt, làm ra mồ hôi, thông tiểu và bệnh đường tiết niệu. Cũng dùng trị đau do viêm ruột mạn tính, đau dạ dày. Nước sắc rễ (hoặc uống bột rễ tán mịn, mỗi lần 1 thìa cà phê, ngày 2 lần) để làm thuốc bổ đắng, giúp ăn ngon, dùng cho người có thể trạng yếu và để kích dục [Srivastava, 1989: 132]. Lá tươi giã nát (có thể làm nóng hay không) làm thành bánh, đắp lên. mụn nhọt, áp xe để làm nhanh vỡ mủ, đắp lên mặt để chữa viêm mắt hoặc đắp lên chỗ sưng phồng ngoài da và bệnh phù chân voi. Lá giã nát, lấy dịch để rửa các vết lở loét ngoài da. Nước sắc và uống để chữa trĩ, bất lực, đau ngực và tẩy giun [Chopra et al., 2001: 226], [Nadkarni, 1999; 134]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

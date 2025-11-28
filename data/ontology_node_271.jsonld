@@ -1,0 +1,251 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dâu dây",
+      "ten_khac": "Dâu dây, Song nho dị diệp, Ích nậm",
+      "ten_khoa_hoc": "Ampelopsis heterophylla Sieb. et Zucc.",
+      "ma_taxon": "938058",
+      "ho": "Vitaceae (Nho)",
+      "Mô tả": {
+        "cây": "Cây leo trông tựa cây nho.",
+        "thân": "Cành hình trụ, nhiều khi có đốt ở trên các mấu, khi còn non có lông.",
+        "cuống": "Tua cuốn phân nhánh, khoẻ, đối diện với các lá.",
+        "lá": "Lá đơn, mọc so le, hình trái xoan dạng tim, khía răng, dài và rộng độ 5-7cm, ít khi chia 3-5 thuỳ; 5 gân gốc, gân giữa kèm theo 3 đôi gân bên, có lông mịn ở cả hai mặt; cuống lá mảnh.",
+        "hoa": "Cụm hoa ngù đối diện với các lá; hoa màu vàng nhạt.",
+        "quả": "Quả mọng gần khô, màu xanh hay hơi tím, hình cầu, đường kính 0,5cm; 3-4 hạt, có 2 rãnh to sâu dọc.",
+        "mùa hoa": "tháng 7-12",
+        "mùa quả": "tháng 9-4 năm sau."
+      },
+      "Phân bố": {
+        "phân_bố": "Cây mọc hoang trong rừng thứ sinh các tỉnh Tuyên Quang, Bắc Thái, Hà Tây, Hà Nội, Nam Hà, Ninh Bình, Quảng Ninh… Thu hái dây quanh năm, dùng tươi hay thái ngắn phơi khô,dùng dần.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bắc Thái"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tây"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Nội"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Nam Hà"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Ninh"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây – Herba Ampelopsis Heterophyllae."
+      },
+      "Thành phần": {
+        "thành phần": ""
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Chữa phong thấp, đau nhức xương và đắp mụn nhọt."
+      },
+      "Cách dùng": {
+        "được_dùng": "Đau quanh vai liền cánh tay, lưng gối đau nhức, hoặc chân gối sưng phù:  Dâu dây 40g, Đơn gối hạc, Huyết giác, Cẩu tích, mỗi vị 20g, sắc uống.  Chữa bị thương sưng đau:  Giã lá dâu dây tươi chưng nóng đắp. Trong uống rễ Dâu dây, Dây đau xương và Huyết giác, mỗi vị 20g, cùng sắc uống."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

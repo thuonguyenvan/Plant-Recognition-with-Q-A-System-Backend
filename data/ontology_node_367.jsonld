@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Húng dũi",
+      "ten_khac": "Húng lũi, húng láng",
+      "ten_khoa_hoc": "Mentha aquatica L.",
+      "ma_taxon": "77990",
+      "ho": "Bạc hà (Lamiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống nhiều năm.",
+      "thân": "Thân ngầm, phân nhánh rất dài, có vảy.",
+      "lá": "Lá mọc đối hình bầu dục hoặc thuôn, gốc tròn, đầu nhọn hoặc hơi tù, mép khía răng to, hai mặt có lông hoặc nhẫn, vò ra có mùi thơm mạnh.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành sim đơn gồm nhiều vòng mang hoa, lá bắc hình mác, ngắn, hoa nhỏ màu trắng, đài 5 răng hẹp, có gân rõ, tràng có ống, có lông ở mặt trong, 4 nhị dài bằng nhau.",
+      "quả": "Quả bế tư, sần sùi."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hiện nay chưa rõ nguồn gốc, xuất xứ của loài húng dũi từ đâu. Nhưng ở Việt Nam, đó là cây gia vị đã được trồng lâu đời trong nhân dân.  Húng dũi là cây ra sáng và chỉ có thể sống được trên đất ẩm. Cây trồng trên đồng ruộng hay ở vườn nhà đều cần có sự chăm sóc thường xuyên, tưới nước và bón phân. Cây sinh trưởng gần như quanh năm, khả năng phân nhánh lưỡng phân khoẻ. Húng dũi trồng hiện nay không thấy ra hoa quả, có thể đó là hậu quả của việc nhân giống vô tính lâu dài từ thế hệ này qua thế hệ khác."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Phạm Hoàng Hộ (2006), cây húng dũi trồng làm gia vị, chứa 0,8% tinh dầu mà thành phần chính là menthofuran (40%), menthol (28%) menthon (0,77%), methylacetat (22,4%). Ngoài ra còn có piperiton, menthen và pulegon [The wealth of raw material in India, 1952].  Theo Stephan Nicolor (2006), hàm lượng tinh dầu là 1%. Ngoài các thành phần trên, tinh dầu húng dũi còn chứa geraniol, pinen, citronelol, acid linolenic, acid linonic, acid myristinic. Ngoài ra húng dũi còn chứa 7% tanin và acid béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Húng dũi thường được dùng làm rau gia vị.  Nước hãm của cây có tác dụng lợi tiêu hoá. Dùng ngoài, cả cây giã đắp làm thuốc sát trùng, chữa vết thương, sưng vú.  Ở Java, nhân dân dùng tinh dầu cây húng dũi trị nhức đầu. Ở các nước Đông Á và Đông Nam Á, hùng dũi được coi là có tác dụng lợi tiểu hoá, làm dịu, bổ, làm ra mồ hôi, điều kinh và giảm ho. Nhân dân Brazil dùng lá húng dũi làm thuốc diệt ký sinh trùng, làm dễ tiêu và giảm chướng bụng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

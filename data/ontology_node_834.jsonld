@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau diếp đắng",
+      "ten_khac": "Diếp dại, rau cúc sữa, rau nhũ cúc",
+      "ten_khoa_hoc": "Sonchus oleraceus L.",
+      "ma_taxon": "53294",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao 0,5 – 0,6m, có nhựa trắng như sữa.",
+      "thân": "Thân thẳng, nhẵn.",
+      "lá": "Lá mọc so le, hình bầu dục, chia thuỳ và răng không đều, hai mặt nhẵn, lá gốc và lá giữa có bẹ ôm thân và tai ngắn.",
+      "hoa": "Cụm hoa mọc ở ngọn thành ngủ hoặc tán gồm nhiều đầu, có cuống nhăn và bóng; đầu hình trứng; lá bắc xếp thành 6 – 7 hàng hoa toàn hình lưỡi, mào lông mềm, màu trắng, tràng có lưỡi hẹp, cụt đầu, 5 răng, ống tràng có lông; nhị 5, có tại; bầu nhẵn.",
+      "quả": "Quả bế dẹt, hơi có cạnh, có khía rõ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Sonchus L. trên thế giới có khoảng 50 loài, phân bố chủ yếu ở vùng ôn đới ấm, vùng cận nhiệt đới và nhiệt đới vùng núi ở bắc bán cầu. Ở Việt Nam, chi này có 4 loài, cũng tập trung chủ yếu ở vùng núi và đôi khi thấy ở vùng trung du (phía Bắc). Loài rau diếp đắng hiện đã ghi nhận về phân bố ở một số địa phương như: Lai Châu (Phong Thổ, Sìn Hồ); Lào Cai (Sa Pa, Bắc Hà); Hà Giang (Quản Bạ, Đồng Văn); Cao Bằng (Quảng Hoà), Lạng Sơn (Tràng Định, Cao Lộc); Yên Bái (Mù Cang Chải), Kon Tum (Đăk Glei) và Lâm Đồng (Đà Lạt). Trên thế giới, cây phân bố ở Ấn Độ, Trung Quốc, Lào, Thái Lan, Indonesia.",
+      "thường_mọc": "Cây ưa ẩm, ưa sáng và thích nghi cao ở vùng có khí hậu ẩm mát của miền núi. Rau diếp đắng thường mọc lẫn với các cỏ thấp ở ven đường đi, trên nương rẫy và các bãi hoang quanh làng bản."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá và ngọn có 2,4% carbohydrat, 1,2% protein, 0,8% lipid, vitamin C (Võ Văn Chi, 1997). Rau diếp đắng chứa một disaccharid (I), scopoletin, esculetin, alcol cerylic, α – amyrin và β – sitosterol, tinh dầu bao gồm các acid heptanoic và hexanoic, ȣ – terpineol, geraniol, geranial, butanol, bornyl acetat và anethol, còn phần không bay hơi chứa acid 3β, 25 – epoxy 3 – hydroxyolean – 18 -en – 28 – oic. Lá non chứa 4,1mg% vitamin C."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau diếp đắng có vị đắng, tính mát, hơi có độc, có tác dụng thanh nhiệt giải độc, lương huyết, chỉ huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rau diếp đắng thường được dùng trị: viêm ruột lý, viêm gan, xơ gan, viêm ruột thừa, viêm vú, viêm miệng, viêm họng, viêm amidan, chảy máu dạ dày nôn ra máu, chảy máu cam, ho ra máu, xuất huyết tử cung. Liều dùng 15 – 30g sắc uống.  Dùng ngoài trị nhọt định và viêm mủ da, viêm tai giữa. Nghiền cây tươi ép lấy dịch hoặc sắc lấy nước đặc để dùng ngoài.  Rau diếp đắng được dùng làm rau ăn ở Việt Nam, Indonesia, Philippin và cả ở châu Phi. Người ta dùng ăn như rau xà lách, có tác dụng trị cảm mạo và dùng cho phụ nữ đang cho con bú ăn để có nhiều sữa.  Ở châu Phi, nước sắc phần trên mặt đất của cây được dùng uống trị bệnh trĩ. Nước sắc này cũng có tác dụng lọc máu và chống đái tháo đường. Ở một số nước Đông Nam Á, nhựa cây rau diếp đắng được dùng làm một thuốc tẩy mạnh."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lộc vừng",
+      "ten_khac": "Lộc vừng, Ngọc nhị, Tam lang, Cây vừng",
+      "ten_khoa_hoc": "Barringtonia acutangula (L.) Gaertn.",
+      "ma_taxon": "345950",
+      "ho": "Lecythidaceae (Lộc vừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ nhỏ, mọc đứng, cao 8-10 m, tiết diện tròn; thân non màu xanh, thân trung bình màu xanh bạc có nhiều nốt sần, thân già màu nâu đen.",
+      "lá": "Lá đơn, mọc cách. Phiến lá dày và nhẵn bóng, màu xanh lục, mặt trên đậm hơn mặt dưới, hình xoan, gốc thuôn hẹp hình buồm, đầu nhọn, bìa phiến có khía răng nhỏ và đều, dài 25-33 cm, rộng 10-11 cm. Gân lá hình lông chim nổi rõ ở 2 mặt, 8-10 cặp gân phụ. Cuống lá ngắn, mặt trên phẳng màu nâu đỏ, mặt dưới lồi màu xanh, dài 0,8-1,2 cm.",
+      "hoa": "Cụm hoa chùm thòng dài ở đầu cành; trục cụm hoa màu xanh, nhẵn, hình trụ, dài 30-110 cm, đường kính 2-2,5 mm, mang hoa suốt chiều dài trục phát hoa. Hoa đều, lưỡng tính, mẫu 4. Cuống hoa màu xanh, nhẵn, hình trụ hơi phình ở đỉnh, dài 0,3-0,45 cm. Lá bắc dạng vẩy, màu xanh nhạt, có lông ở mép, dài khoảng 2 mm, rụng sớm. Lá bắc con 2, dạng vẩy tam giác rất nhỏ, màu xanh nhạt. Lá đài 4, đều, màu xanh, dính nhau phía dưới thành ống dài 0,2-0,25 cm, đường kính 0,3-0,35 cm, phía trên chia 5 thùy hình bầu dục dài 0,25-0,3 cm, rộng 0,2-0,25 cm, bìa dạng màng mỏng màu trắng có nhiều lông, tiền khai van. Cánh hoa 4, đều, rời, màu trắng pha hồng nhạt ở giữa màu xanh ở đỉnh, hình bầu dục đỉnh cong hình muỗng, dài 1-1,2 cm, rộng 0,4-0,5 cm, có lông mịn ở 2 mặt, tiền khai 1 cánh trong, 1 cánh ngoài, 2 cánh vừa trong vừa ngoài. Bộ nhị gồm nhiều nhị không đều, dính nhau ở phía dưới thành ống màu trắng dài 0,3-0,4 cm phía trên rời dạng sợi màu đỏ, đính 3 vòng: 2 vòng ngoài chỉ nhị dài 1,7-2,5 cm; vòng thứ 3 nhị lép không có bao phấn, chỉ có chỉ nhị dài 0,4-0,5 cm, đôi khi chỉ nhị phân nhánh dài 0,1-0,2 cm; bao phấn hình bầu dục, màu vàng, 2 ô, nứt dọc, hướng trong, đính đáy; hạt phấn hình bầu dục dài 37,5-40 µm, rộng 30-32,5 µm, màu vàng nâu, có rãnh dọc và nhiều vân mạng.",
+      "quả": "Quả hình bầu dục, có 8 khía dọc, dài 2,5-3 cm, rộng 2-2,5 cm, màu xanh, mang đài tồn tại ở đỉnh."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Barringtonia Forst có khoảng 45 loài trên thế giới, thường là cây gỗ hoặc cây bụi, phân bố ở các vùng nhiệt đới. Ở Việt Nam có 14 loài. Lộc vừng là cây nhiệt đới châu Á, phân bố ở Lào, Campuchia, Thái Lan, Malaysia, Ấn Độ, Xri Lanca, Mianma và Việt Nam. Ở Việt Nam, lộc vừng phân bố rải rác ở các tỉnh trung du, vùng núi thấp và đôi khi ở đồng bằng như Vĩnh Phúc, Phú Thọ, Tuyên Quang, Bắc Giang, Bắc Ninh, Hòa Bình, Hà Tây, Quảng Ninh, Ninh Bình, Hà Nam, Thanh Hóa… Là loại cây gỗ thường xanh, mọc ở gần bờ nước hay ven rừng ẩm. Cây ra hoa quả nhiều hàng năm. Lộc vừng có khả năng tái sinh vô tính khỏe, gốc bị mất rễ vẫn có thể sống khỏe và sinh trưởng, phát triển tốt trong môi trường có đủ nước. Mùa hoa tháng 7, mùa quả tháng 9."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ thân và quả (Cortex et Fructus Barringtoniae), thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả chứa 6,31% protein, 0,35% chất béo, 1,33% đường, 4,08% tinh bột, 2,26% tanin, 2 saponin (1 chất là chất độc). Hạt chứa một glucosid triterpenoid là 2, 3, 19-trihydroxyolean-12-en-23,28-dioic acid28-O-glucopyranosid và các saponin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân Lộc vừng được dùng chữa đau bụng, tiêu chảy, sốt với liều 8-16g, sắc nước uống. Quả lộc vừng còn xanh, ép lấy nước, bôi chữa chàm, hoặc nghiền nhỏ ngâm với rượu để ngậm chữa đau răng (không nuốt nước)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

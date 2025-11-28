@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu vuông",
+      "ten_khac": "Đậu rồng",
+      "ten_khoa_hoc": "Psophocarpus tetragonolobus (L.) DC.",
+      "ma_taxon": "346168",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cỏ, sống hàng năm, có rễ củ.",
+      "thân": "Thân cành nhẵn, có khía.",
+      "lá": "Lá mọc so le, có 3 thuỷ, lá chét hình tam giác nhọn, dài 6 – 9 cm, rộng 4 – 8 cm, mặt dưới rất nhạt, gân chính 3; cuống lá kép dài 1,2 – 1,4 cm; lá kèm hình nửa mũi tên, tù.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, có cuống dài 13 – 20 em, mang 3 – 6 hoa, cách nhau; lá bắc nhỏ, hình bầu dục, tù; hoa màu tím, đài hình chuông, nhẵn, 4 răng đều; trắng có cánh bằng nhau, cảnh có hình mắt chim, có 2 tại nhỏ, các cánh bên hình trái xoan, cánh thia gần tam giác, hơi cong, có tai tròn, nhị 1 bó, bầu nhẵn, hình vuông, chứa 13 noãn.",
+      "quả": "Quả đậu, dài 15 – 30 cm, rộng 3 cm, có 4 cánh, thắt lại ở hai đầu, cánh dài bằng chiều rộng của quả, có răng, hạt gần hình cầu hoặc hình trứng, hơi dẹt, màu mận."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ở Việt Nam, đậu vuông được trồng chủ yếu ở các tỉnh phía Nam, ở các tỉnh phía Bắc ít hơn. Có thể cây được nhập vào Việt Nam khoảng vài chục năm trở lại đây. Cây thường được trồng rải rác ở vườn gia đình để lấy quả non làm rau ăn."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa 32 – 36% protid, 13 – 17% lipid, 26 – 33% carbohydrat. Hàm lượng Ca trong hạt cao. Thân và lá chứa 6,3% protein, 1% chất béo, 7,9% carbohydrat, 4,1% chất xơ, 0,37% Ca, 0,12P. Ngoài ra thân có acid hydrocyanic.",
+      "Các hợp chất": "Quả chứa nhiều pterocarpa trog đấy. phaseo – lidin – 9 -hydroxy-3-methoxy pleno carpan vál – methoxy – 3.9 -dihydroxy-19.",
+      "chứa": "Rễ có thể ăn được nhưng phải luộc lâu mới chín. Rễ khô chứa 24,6% protein, 24,6% chất béo, 56,1% carbohydrat, 5,4% chất xơ."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ củ đậu vuông có vị hơi chát, có tác dụng lợi thuỷ, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ củ đậu vuông được dùng chữa cuống họng sưng đau, miệng hôi, đau răng, viêm đau đường tiết niệu. Ngày 9 – 15g, có thể đến 60g, sắc uống.",
+      "giã nát": "Dùng ngoài, lá tươi, rửa sạch, giã nát, đắp để chữa mụn nhọt, đau mắt do viêm hoặc có mủ.",
+      "làm thuốc": "Quả non để cả vỏ dùng làm rau ăn, luộc chín hoặc xào. Có thể ăn sống với mắm hoặc cá kho. Lá non và nụ hoa cũng giàu protein và vitamin, luộc, nấu canh hoặc ăn sống, thường trộn lẫn với các loại rau sống khác. Củ đậu vuông có thể ăn sống, nhưng thường nấu chín cũng tăng khẩu phần protein. Hạt đậu vuông là thức ăn giàu dinh dưỡng cho các cháu bé từ 5 tháng tuổi trở lên. Bột chế từ hạt đậu vuông có thể thay thế sữa, chữa suy dinh dưỡng cho trẻ em. Trước khi làm thành bột, cần diệt hết lipoxygenase bằng cách ninh, hấp hoặc sấy kỹ.",
+      "có tác dụng": "Ở Ấn Độ, người ta dùng rễ để kích dục, làm ngừng chảy máu mũi, nhưng cho rằng rễ có độc (Nadkani, 1999, Indian materia medica, Bombay, India).",
+      "chữa": "Ở Indonesia, lá là một thành phần trong bài thuốc để chữa bệnh đậu mùa. Nước sắc của lá rửa mắt, rửa tai khi bị viêm hoặc mưng mủ. Lá tươi nghiền nát đắp trị mụn nhọt, lở loét ngoài da. Rễ chế thành thuốc đắp điều trị chóng mặt (Perry và Metzger, 1980, Med.plants of East and Southeast Asia, The MIT Press, Cambridge – Massachusetts – London)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

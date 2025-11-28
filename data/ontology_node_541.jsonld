@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sa sâm nam",
+      "ten_khac": "Nam sa sâm, Hải cúc trườn, Xà lách biển",
+      "ten_khoa_hoc": "Launaea sarmentosa (Willd.) Alston",
+      "ma_taxon": "588759",
+      "ho": ""
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "rễ": "Rễ mảnh, mềm, màu vàng nhạt.",
+      "thân": "Thân bò dài 20 – 30 cm, bén rễ ở các mấu và mọc chồi thành cây mới.",
+      "lá": "Lá mọc thành hoa thị, phiến hình mác dài 3 – 8 cm, rộng 0,5 – 1,5 cm, chia thùy lông chim không đều, gốc thuôn dần, đầu tù tròn, các thùy to dần về phía đầu lá.",
+      "hoa": "Cụm hoa thưa, mọc ở giữa túm lá thành đầu hình trụ; lá bắc ngoài không đều, lá bắc trong bằng nhau; hoa màu vàng, mào lông màu trắng, tràng hình lưỡi có ống ngắn, 5 răng nhỏ; nhị 5.",
+      "quả": "Quả bế hình trụ có cạnh và mào lông dễ rụng.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Launaea Cass. gồm một số loài đều là cây thảo, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới thuộc châu Á và châu Phi. Ở Việt Nam có 2 loài; loài sa sâm nam chỉ thấy phân bố ở vùng ven biển và các đảo lớn, từ Quảng Ninh, Hải Phòng vào đến Đồng Nai. Cây cũng phân bố ở vùng ven biển phía nam Trung Quốc (Đảo Hải Nam), Ấn Độ, Ai Cập và một số nơi ở châu Phi.  Toàn bộ phần rễ và gốc sẽ moc lên chồi mới vào cuối mùa xuân hoặc đầu mùa hè năm sau. Cây ưa sáng, chịu được mặn; thường mọc trên bãi cát ven biển, thành từng đám hoặc rải rác thành khóm riêng rẽ lẫn với một số loài cây thảo khác như muống biển, cỏ chông, dừa cạn, củ gấu biển… Cây ra hoa quả hàng năm; quả có túm lông thuận lợi cho việc phát tán nhờ gió."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây thu hái vào các tháng 3 – 4 và 8 – 9, rửa sach bằng nước vo gạo, đồ chín rồi phơi khô. Có nơi thu hái về rửa sạch, ngâm nước phèn chua 1/5 hoặc 2/5 phơi cho se, xông diêm sinh hơn một giờ rồi mới phơi khô. (Đỗ Tất Lợi – Những cây thuốc và vị thuốc Việt Nam, 1999, trang 816)."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sa sâm nam có vị ngọt, nhạt, hơi đắng, tính mát, vào kinh phế, có tác dụng bổ, mát phổi, giảm ho, long đờm, lợi sữa, nhuận tràng, lợi tiểu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá sa sâm nam được dùng làm rau ăn sống như rau xà lách hoặc nấu canh. Toàn cây để tươi được dùng làm thuốc lợi sữa cho người và trâu bò. Ngày 20-30g. Toàn cây hoặc lá , giã nát đắp chữa đau khớp phồng rộp do chạm phải con sứa khi tắm biển.\u00a0 Rễ cây phơi khô sao vàng chữa sốt , háo phổi, ho khan, ho có đờm . Ngày 15-20g , sắc uống. Để nhuận tràng, lợi tiểu, có thể dùng rễ dạng sống, không phải sao."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Thuốc bổ mát chữa cảm sốt:  Rễ sa sâm nam, rễ vú bò, hà thủ ô, bạch truật nam, rễ gai, mỗi vị 20g; hoài sơn, rễ sài hồ nam, cam thảo, mỗi vị 12g; trần bì 8g; gừng 4g. Tất cả phơi khô, thái nhỏ, sắc uống làm 2 lần trong ngày. Có thể tán nhỏ, rây lấy bột, trộn với mật ong, làm viên, uống mỗi lần 10 – 20g, ngày 2-3 lần.  2. Chữa viêm phổi, ho đờm, tức ngực:  Rễ\u00a0sa sâm nam 15g, tía tô 10g, gừng nướng 5 lát, cửu lý hương sao 4g, chè tàu 2g, chanh non 1 quả (thái mỏng sao), sắc uống làm 2 lần trong ngày (kinh nghiệm của Hội y học dân tộc Quảng Nam – Đà Nẵng).  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam ."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

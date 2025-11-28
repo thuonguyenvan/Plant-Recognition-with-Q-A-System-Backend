@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nấm linh chi",
+      "ten_khac": "Linh chi",
+      "ten_khoa_hoc": "Ganoderma lucidum (Leyss ex. Fr.) Karst",
+      "ma_taxon": "125932",
+      "ho": "Ganodermataceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Nấm linh chi không phải một loại cỏ, mà là một loại nấm hoá gỗ có cuống dài hoặc ngắn, mũ nấm có dạng hình thận, có dạng hình tròn hay hình quạt. Cuống thường cắm không ở giữa mũ nấm mà cắm lệch sang một phía mũ. Hình trụ tròn hay dẹt có thể phân nhánh cuống và cuống có màu khác nhau tuỳ theo loài, loài đỏ thay đổi từ nâu đến đỏ vàng, đỏ cam, mặt trên bóng loáng như đánh vécni, trên mặt mũ có những vân đồng tâm. Thụ tầng màu trắng ngà, khi già ngả màu nâu vàng, mang nhiều lỗ nhỏ li ti là các ống thụ tầng mang bào tử. Bào tử loài xích chi hình trứng, được bao bọc bởi 2 lớp màng, màng ngoài nhẵn, không màu, màng trong màu gỉ sắt, lỗ nẩy mầm có hình gai nhọn. Toàn nấm gồm những sợi nấm không mầu, trong sáng, đường kính 1-3mm, có phân nhánh.  Phân bố, thu hái và chế biến Linh chi thường thấy mọc hoang dại ở các vùng núi cao lạnh ở một số tỉnh của Trung Quốc (Tứ xuyên, Quảng Đông, Quảng Tây…) Gần đây, trên cơ sở những giống cây hoang dại người ta đã tổ chức trồng theo qui mô công nghiệp để đáp ứng nhu cầu dùng trong nước và xuất khẩu. Ngoài Trung Quốc, Nhật Bản cũng đã tiến hành trồng nhưng khí hậu không thuận tiện như Trung Quốc.  Ở nước ta, một số cơ sở đã bắt đầu trồng nấm linh chi để dùng trong nước và xuất khẩu. Người ta thu hoạch nấm, phơi sấy khô rồi sử dụng bào chế các dạng bột, thuốc nước ngọt hay đông khô…"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Mặc dầu mới được đưa vào sử dụng rộng rãi ở Trung Quốc vào 20 năm gần đây, nhưng nhiều viện nghiên cứu thuộc các tỉnh khác nhau ở Trung Quốc đã nghiên cứu nhưng cũng chưa tìm được hoạt chất. Chúng tôi kê sau đây kết quả nghiên cứu của một số cơ sở: Viện nghiên cứu tỉnh Quảng Đông nghiên cứu thành phần hoá học của nấm linh chi mọc hoang dại thấy: Nước 12-13%, lignin 13-14%, hợp chất có N 1,6-2,1 %, hợp chất phenol 0,08-0,1%, tro 0,022%, xelluloza 54-56%, chất béo 1,9-2%, chất khử 4-5%, hợp chất steroit 0,14-0,16%. Có tài liệu cho biết trong nấm linh chi có 0,3-0,4 % ergosterol (C28H44O). Viện nghiên cứu kháng sinh Tứ Xuyên tìm thấy axit amin, protein, saponin, steroit. Học viện y học Bắc Kinh phát hiện đường khử và đường kép axit amin, dầu béo. Theo những công trình nghiên cứu mới nhất của Viện nghiên cứu linh chi hoang dại của toàn Trung Quốc thì trong hỗn hợp 6 loại linh chi có hàm lượng germanium cao hơn lượng germanium có trong nhân sâm từ 5 đến 8 lần. Germanium giúp khí huyết lưu thông, các tế bào hấp thu oxy tốt hơn. Lượng polysacarit cao có trong linh chi tăng cường sự miễn dịch của cơ thể, làm mạnh gan, cô lập và diệt các tế bào ung thư. Axit ganoderic có tác dụng chống dị ứng và chống viêm."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tác dụng của nấm linh chi đối với hệ tuần hoàn:  Ổn định huyết áp Lọc sạch máu, tăng cường tuần hoàn máu, giảm mệt mỏi, hỗ trợ thần kinh. Chống đau đầu và tứ chi. Điều hòa kinh nguyệt. Làm da dẻ hồng hào, chống các bệnh ngoài da như dị ứng, trứng cá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "6~12g  Bài thuốc có vị Nấm linh chi  Trị mất ngủ hay quên: Linh chi tán bột mịn, ngày uống 2 lần, mỗi lần uống 3g chiêu với nước ấm. Trị phế hư hen suyễn: Linh chi và nhân sâm lượng hai thứ bằng nhau, tán bột mịn trộn đều, ngày uống 2 lần, mỗi lần uống 3g, chiêu với nước còn ấm. Viêm gan đã hồi phục: Linh chi 10g, vịt 1 con. Thịt vịt, lòng tạng, rửa sạch, cho chung với linh chi hầm nhừ bằng lửa nhỏ, chia ra ăn thịt vịt, uống nước hết trong ngày."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

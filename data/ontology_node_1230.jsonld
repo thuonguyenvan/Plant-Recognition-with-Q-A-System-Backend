@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoắc hương",
+      "ten_khac": "Hoắc hương",
+      "ten_khoa_hoc": "Pogostemon cablin (Blanco) Benth.",
+      "ma_taxon": "277910",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá vò có mùi thơm. Lá có cuống ngắn, phiến lá hình trứng hay hình thuỗn, dài chừng 5-10cm, rộng 2,5 – 7cm, mép có răng cưa to, mặt dưới nhiều lông hơn.",
+      "hoa": "Hoa màu hồng tím nhạt mọc thành bông ở kẽ lá hay đầu cành. Tuy nhiên cây trồng ở Việt Nam hầu như không thấy có hoa và kết quả.",
+      "cây": "Hoắc hương là một cây cỏ sống lâu năm, thân có phân nhánh, cao chừng 30cm-60cm, trên thân có lông.",
+      "thân": "thân có phân nhánh, cao chừng 30cm-60cm, trên thân có lông."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá hoắc hương khô có chứa 0,5-0,6% tinh dầu. thành phần chủ yếu của tinh dầu hoắc hương là cồn patchouli C15H26O còn gọi là long não patchouli, chất andehyt xinamic, andehyt bezoic, eugennola, cadinen C15H24, sesquitecpen và azulen. Long não patchouli là một rượu bậc 3, kết tinh dưới dạng tinh thề hình lục lăng, có khi kết tinh ngay trong tinh dầu",
+      "đã nghiên cứu": "Trong tinh dầu cất từ lá cây mọc ở Hà Nội (Nguyễn Xuân Dũng và cộng sự J.Ess Oil Res 2,99-100, March-April 1989) đã thấy cồn patchouli chiếm 32-38%. Ngoài ra còn 10 thành phần khác được phát hiện trong đó có α-bunesine và α-guaiene.",
+      "triết xuất": "Có thể cất tinh dầu hoắc hương bằng lá tươi nhưng tỷ lệ thấp, thường tinh dầu chỉ xuất hiện trong lá khô hoặc lá để thành đống cho hơi lên men khô dần.",
+      "Các hợp chất": "Hoạt chất khác chưa rõ"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hiện nay hoắc hương có nhiều công dụng:  Trong y học nhân dân, hoắc hương là một vị thuốc làm mạnh dạ dày, giúp sự tiêu hoá và ruột, dùng trong những trường hợp ăn không ngon, sôi bụng đau bụng đi ngoài, hôi miệng.  Còn dùng làm thuốc chữa cảm mạo, nhức đầu mình mẩy đau đớn, triệu chứng cảm cúm. Ngày dùng 6-12g dưới dạng thuốc sắc hay thuốc bột, dùng riêng hay phối hợp với vị thuốc khác.  Trong kỹ nghệ nước hoa, hoắc hương là một nguyên liệu quý vì tinh dầu hoắc hương (oil of patchouli) là một tinh dầu thơm và định hương cao cấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hoắc hương được trồng nhiều nơi ở miền Bắc nước ta, chủ yếu lấy lá và cành làm thuốc nhiều nhất tại vùng Kim Sơn (Hà Nam), Hưng Yên. Tại Hà Nội, vườn thuốc Văn Điển có trồng thử. Thường trồng bằng giâm cành, vì cây không có hoa quả hiện việc nghiên cứu trồng chưa có kinh nghiệm chắc chắn. Tại các nước khác tại vùng nhiệt đới châu Á và châu Phi, hoắc hương được trồng rất quy mô để lấy lá cất tinh dầu. Những nước sản xuất hoắc hương nhiều nhất hiện nay là Ấn Độ, Malaixia, Philipin, Mangat, Indonexia. Hàng năm tại Malaixia thu hoạch chừng 500 tấn lá khô hoắc hương để cất tinh dầu, chưa kể còn sản xuất chừng 70-1.000 tấn lá để sản xuất chừng hơn 5 tán lá khô để cất tinh dầu, chưa kể số lá dùng để cất tinh dầu tiêu thụ trong nội địa. Hiện xuất thu hoạch mỗi hecta hàng năm chừng 500kg lá khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

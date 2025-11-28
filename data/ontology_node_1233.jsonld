@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lai",
+      "ten_khac": "Lai, Ly (Thái), Sekiritsu (Nhật Bản)",
+      "ten_khoa_hoc": "Aleurites moluccana Willd.",
+      "ma_taxon": "370011",
+      "ho": "Thầu dầu (Euphorbiaceae)",
+      "Mô tả": {
+        "lá": "Khi còn non lá có màu lục xám nhạt, phủ đầy lông tơ, khi lá trưởng thành mặt trên bóng, ở những cành non lá chia ba thuỳ, nhưng ở những cành già thì lá hơi hình ba cạnh, phía gốc lá ườn, phía đỉnh lá nhọn, cuống lá dài 6-12cm.",
+        "hoa": "Cụm hoa chùm kép, dài 10-15cm mang nhiều hoa.",
+        "quả": "Quả hạch hơi hình cầu nhẵn, trong hạch có một hay hai hạt đường kính 3-4cm.",
+        "cây": "So với cây trẩu thì cây lai mọc chậm hơn, nhưng sau lại có kích thước to lớn hơn, có thể cao tới 10m và cũng sống lâu hơn.",
+        "mùa hoa": "tháng 4-5.",
+        "mùa quả": "tháng 8-9.",
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mặt": null,
+        "đầu": null
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong hạt lai có từ 55 đến 60% chất dầu béo, có khi hàm lượng dầu có thể đạt tới 65%.",
+        "gồm chất": "Trung bình 100kg quả khô cho từ 7 đến 10kg hạt và ép 100kg hạt được từ 40-45kg dầu, nếu dùng dung môi để chiết có thể đạt 55-65%.",
+        "Các hợp chất": "Dầu ép được rất trong, rất lỏng ở nhiệt độ 25°C, màu vàng rơm.",
+        "chứa": "Tỷ trọng ở 15°C là 0,927, độ axit tính bằng axit oleic là 70, chỉ số xà phòng 175, chỉ số iốt 137.",
+        "triết xuất": "Ngoài chất dầu béo, trong nhân còn chứa một chất có tác dụng tẩy mạnh.",
+        "đã nghiên cứu": "Chất này thường nằm gần toàn bộ trong khô dầu nhưng dầu lai cũng vẫn gây tẩy cho người dùng.",
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong dầu lai có chất gây tẩy (chỉ cần 1-5ml đủ gây tẩy) cho nên rất ít được dùng để ăn.",
+        "được_dùng": "Chủ yếu dầu lai được sử dụng làm nguồn dầu pha sơn, vì có tính chất dầu khô, ngoài ra còn có thể dùng nấu xà phòng.",
+        "làm thuốc": "Bài thuốc có cây lai: Chữa đau răng, sâu răng: Vỏ thân cây lai, cạo sạch với bần bên ngoài, thái nhỏ phơi khô. Lấy 10g, sắc nước cho đặc, ngậm hồi lâu rồi nhổ đi hoặc phối hợp với vỏ cây trám, rễ cà dại, rễ chanh cũng sắc ngậm như trên.",
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây lai được di thực vào nước ta từ rất lâu đời,người ta cho rằng cây này vốn nguồn gốc châu Úc.Hiện nay được trồng phổ biến ở nhiều tỉnh cùng với\u00a0cây trẩu.",
+        "làm thuốc": "Nhiều nhất ở Nghệ An, Hà Tĩnh, Nam Định, Hà Nam, Ninh Bình, Hà Tây, Hoà Bình, Phú Thọ, Hà Giang, Bắc Cạn, Thái Nguyên, Cao Bằng, Lạng Sơn. Tại Trung Quốc thấy mọc ở Quảng Tây, Quảng Đông.",
+        "có tác dụng": "Chủ yếu trồng để lấy hạt ép dầu hặc xâu vào que để đốt thay nến cho nên có nước gọi quả này là quả nến (noix chandelle).",
+        "sắc uống": "Vào các tháng 8-9 và 10 người ta hái lấy quả đập lấy hạt phơi khô rồi đem ép dầu.",
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

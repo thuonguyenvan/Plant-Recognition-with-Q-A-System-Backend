@@ -1,0 +1,234 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Riềng nếp",
+      "ten_khac": "Riềng nếp, Hậu khá (Thái), Chi bộ (Hmông)",
+      "ten_khoa_hoc": "Alpinia galanga (L.) Stuntz",
+      "ma_taxon": "123732",
+      "ho": "Zingiberaceae (Gừng)",
+      "Mô tả": {
+        "cây": "Cây thảo, cao khoảng 2 m hoặc hơn.",
+        "thân": "Thân rễ to, đường kính 2 – 3 cm, màu hồng nhạt.",
+        "lá": "Lá mọc so le, xếp thành hai dãy đều, hình mũi mác, dài 35 – 40 cm, rộng 5-7 cm, gốc thót lại, đầu thuôn nhọn, mép có viền trắng, hai mặt nhẵn, mặt trên bóng; cuống lá hầu như không có, lưỡi bẹ tròn, nguyên.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành chùy phân rất nhiều nhánh; lá bắc hình mác dễ rụng, lá bắc con hình dải; hoa màu trắng có vạch hồng; dài hình ống, có 3 răng; tràng hình ống, có cánh lõm, cánh môi hình dải-trái xoan, có móng hẹp, chia 2 thùy ở đầu; nhị lép hình giùi; bầu có lông.",
+        "quả": "Quả mọng, hình cầu, khi chín màu đỏ nâu, chứa 3-5 hạt bóng.",
+        "mùa hoa": "tháng 5-7",
+        "mùa quả": "tháng 5-7"
+      },
+      "Phân bố": {
+        "phân_bố": "Riềng nếp phân bố rải rác ở một số vùng thuộc Ấn Độ, Trung Quốc và Lào. Ở Việt Nam, cây vừa mọc tự nhiên, vừa được trồng.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hòa Bình"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Riềng nếp là cây đặc biệt ưa ẩm, có thể hơi chịu bóng; thường mọc rải rác ở kiểu rừng kín thường xanh ẩm, nhất là dọc theo các bờ suối, ven rừng hoặc rừng thưa trong thung lũng. Độ cao phổ biến từ 300 đến 600 m hoặc hơn.",
+        "Đặc điểm sinh trưởng": "Cây sinh trưởng phát triển mạnh trong mùa hè – thu; cuối mùa thu bắt đầu có hoa quả; gieo giống tự nhiên bằng hạt. Riềng nếp có khả năng đẻ nhánh nhiều từ thân rễ. Số nhánh mọc ra hàng năm thường tăng theo cấp số nhân. Hoa quả chỉ xuất hiện trên các nhánh đã được khoảng một năm tuổi; những nhánh thân đã ra hoa quả sẽ dần tàn lụi trong vòng một năm. Nguồn riềng nếp mọc tự nhiên ở Việt nam tương đối phong phú. Vào khoảng từ 1996 – 1998, cây bị khai thác nhiều. Chỉ tính riêng ở huyện Tuần Giáo tỉnh Lai Châu, trong năm 1997 đã xuất khẩu qua biên giới vài chục tấn riềng tươi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ thu hái vào mùa xuân. Quả chín thu hái vào mùa thu, phơi khô"
+      },
+      "Thành phần": {
+        "thành phần": null
+      },
+      "Tính vị": {
+        "Có vị": "Riềng nếp có vị cay, tính ôn, vào hai kinh tỳ và vị, có tác dụng ôn trung, tán hàn, hết đau, tiêu thực."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Riềng nếp được dùng như riềng ấm chữa đau bụng, tiêu chảy, nôn mửa, lỵ và phối hợp với than tóc rối uống chữa ngộ độc thịt cóc. Riềng nếp muối dùng một nhúm ngậm, cắn nhẹ và nuốt dần dần làm khỏi khát, đỡ mệt khi làm việc mệt nhọc hoặc đi nắng nhiều khát nước.  Thân rễ riềng nếp được ghi trong được điển nhiều nước châu Âu, và được dùng rộng rãi trong y học cổ truyền trị bệnh da, bệnh hô hấp, làm thuốc lợi tiêu hóa sau khi đẻ, khó tiêu, đầy hơi, cơn đau bụng, lỵ, ung thư miệng và dạ dày, nhiễm khuẩn toàn thân, bệnh dịch tả và làm thuốc long đờm. Ở Trung Quốc, Lào và Campuchia, thân rễ được uống chống co giật, gây trung tiện và long đờm, trị lỵ, trị viêm phế quản, và dùng ngoài trị thấp khớp, ở Thái lan, thân rễ được dùng trị nhiều bệnh, làm thuốc lọc máu, trị khó tiêu, dụng dập, tiêu chảy, nhiễm khuẩn uốn ván, sốt rét mạn tính, bệnh tê phù, ghẻ cóc, đau dạ dày, bệnh dịch tả, ngứa, nấm da, bệnh da, chốc lở, mày đay, đau răng, trị giun, chống co thắt, gây trung tiện, đầy hơi.  Ở Philippin, thân rễ được dùng gây trung tiện, kích thích, và nước sắc lá dùng làm nước tắm tậ thấp khớp, ở Indonesia, thân rễ nạo nhỏ trộn với ít muối uống lúc đói tri lách to, và nước ngâm thân rễ uống trị bệnh phong, ở Malaysia, hạt được dùng trị cơn đau bụng, tiêu chảy, nôn và bệnh herpes, nước hãm lá dùng cho phụ nữ uống sau khi đẻ. Trong y học dân gian Ấn Độ, thân rễ dùng tn đầy hơi, khó tiêu, thấp khớp và bệnh viêm xổ, đặc biệt trong viêm xổ phế quản, và cùng với hồ tiêu và gừng trị sốt. Cao lá dùng bôi trị ngứa và bệnh dị ứng da. Thân rễ riềng nếp là thuốc kích dục của người Ả Rập, chữa sỏi thận ở Ả Rập Xê Út, phối hợp với 3 dược liệu khác chữa viêm khớp dạng thấp ở Cô Oét."
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

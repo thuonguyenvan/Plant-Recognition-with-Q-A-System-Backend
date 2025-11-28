@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rết",
+      "ten_khac": "Ngô công, Thiên long, Bách túc trùng, Bách cước",
+      "ten_khoa_hoc": "Scolopendra morsitans L.",
+      "ma_taxon": "447908",
+      "ho": "Ngô công Scolopendridae",
+      "Thông tin khác": {
+        "thong_tin_khac": "Ta dùng con rết lớn, nhiều chân, thân dẹt, dài 7-13cm, thường gồm chừng 20 đốt, mỗi đốt có 1 đôi chân. Đốt cuối cùng 22 chân biến thành hai cái đuôi. Đầu rết có hai râu dài, răng nhọn sắc cắn đau và có chất độc, khi bắt cần chú ý. Vào các tháng 4-5 đẻ trứng, mỗi con đẻ chừng 20-30 trứng, ít lâu sau nở thành rết con, lúc đầu có màu trắng, sau lột xác thành rết lớn màu nâu. Con rết sống hoang ở dưới những khúc gỗ mục, các hòn đá, mái nhà mục nát. Hiện nay nhân dân ta chỉ bắt những con sống hoang. Tại Trung Quốc, do nhu cầu lớn, đã đặt vấn đề nuôi rết dùng trong nước và xuất khẩu rết, chọn những con to béo là tốt."
+      },
+      "Thành phần": {
+        "thành phần": "Theo các nhà nghiên cứu Nhật Bản, trong con rết có hai chất độc gần giống chất độc ởnọc ong, có tính chất phá huyết. Ngoài ra còn có các loại amin. Ở Trung quốc có người đã nghiên cứu, nhưng cũng chỉ nghiên cứu mới thấy có 4,45% tro và 70,20% protit. Như vậy hoạt chất hiện nay chưa rõ."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Tính theo vị đông y: vị cay, tính ôn, có độc vào kinh can. Tác dụng khử phong, trấn kinh giản, giải độc của rắn. dùng chữa hàn nhiệt tích tụ trong bụng, truỵ thai, trừ ác huyết, trị sàng nhọt, còn dùng ở phạm vi nhân dân. Tại một đơn vị quân y (1959) có báo cáo dùng rượu rết bôi lên các mụn nhọt đau nhức rất chóng khỏi (hội nghị dược chính quân y 1960). Theo các tài liệu cổ và thực tế sử dụng trong nhân dân, con rết dùng chữa các bệnh sau đây:  Chữa sàng trĩ đau nhức: ngô công bỏ đầu, chân sấy khô, tán nhỏ, hoà ít long não, thêm ít nước hay rượu bôi hàng ngày. Chữa mụn nhọt sưng đỏ, đau nhức: rượu rết (cả con cho vào rượu 90o) bôi lên mụn nhọt. Bắt 6 con rết cho vào lọ, đổ dầu vừng vào ngâm vài tháng. Lấy bông thấm thuốc này bôi lên các mụn nhọt, chỗ bị sâu, trùng độc cắn sẽ hết đau. Chữa liệt thần kinh mặt, đau nhức, tê thấp, kinh phong, co giật, cấm khẩu: Rết tán bột mịn, trộn với bột cam thảo (Lượng bằng nhau). Ngày uống 0,5 g chia làm 3 lần. Chú ý khi dùng phải theo đúng liều lượng quy định."
+      }
+    }
+  ]
+}

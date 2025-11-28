@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bọ mắm",
+      "ten_khac": "Bọ mắm, Thuốc giòi, Thuốc vòi",
+      "ten_khoa_hoc": "Pouzolzia zeylanica (L.) Benn.; Parietaria zeylanica L.",
+      "ma_taxon": "167403",
+      "ho": "Urticaceae (Gai)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Loại cỏ có cành mềm, thân có lông.",
+      "lá": "Lá mọc so le, có khi mọc đối có lá kèm, hình mác, hẹp, trên gân và 2 mặt đều có lông nhất là ở mặt dưới, lá dài 4-9cm, rộng 1,5-2,5cm. Có 3 gân xuất phát từ cuống.",
+      "cuống": "Cuống dài 5mm có lông trắng.",
+      "hoa": "Cụm hoa đơn tính mọc thành xim co, ở kẽ lá có các hoa không cuống.",
+      "quả": "Quả hình trứng nhọn, có bao hoa có lông."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bằng phương pháp phân tích quang phổ và các đặc tính hóa 14 hợp chất đã được sáng tỏ như: beta-sitosterol (1), daucosterol (2), axit oleanolic (3), epicatechin (4), alpha-amyrin (5), eugenyl-beta-rutinoside (6), 2alpha, 3alpha, 19 alpha -trihydroxyurs-12-en-28-oic (7), scopolin (8), scutellarein-7-O-alpha-L-rhamnoside (9), scopoletin (10), quercetin (11), quercetin-3-O- beta-D-glucoside (12), apigenin (13), axit 2alpha-hydroxyursolic (14)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng cây sắc hay nấu thành cao chữa bệnh ho lâu năm, ho lao, viêm họng. Dùng riêng hoặc phối hợp với các vị thuốc khác. Ngày dùng 10-20g dưới dạng thuốc sắc hay thuốc cao.",
+      "được_dùng": "Có nơi người ta dùng làm thuốc mát và thông tiểu, thông sữa.",
+      "giã nát": "Nhân dân thường dùng cây này giã cho vào mắm tôm để không có dòi bọ. Có nơi dùng lá giã nát nhét vào răng sâu chữa sâu răng.",
+      "chữa": "Chữa đinh nhọt, viêm sưng vú, vết bầm tụ máu: Lấy một nắm cây thuốc dòi đem giã nát rồi đắp lên nơi sưng đau.",
+      "chữa": "Chữa viêm mũi sưng đau: Lấy lá hay hoa cây thuốc dòi chừng 15-20 g, giã nát cùng vài hạt muối, gạn lấy nước, dùng bông y tế thấm bôi vào mũi nơi bị viêm, ngày 3-4 lần.",
+      "chữa": "Chữa ho, viêm đau họng: Cây thuốc dòi khô 10-20 g, sắc lấy nước uống hoặc lấy lá hay hoa cây thuốc dòi chừng 20-30 g, giã nát cùng vài hạt muối, gạn lấy nước chia ra ngậm nuốt dần, ngày 1 thang trong 7 ngày liền."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây bọ mắm mọc hoang khắp nơi ở Việt Nam, chưa ai trồng.",
+      "phơi khô": "Người ta hái toàn cây về dùng tươi hay phơi hoặc sấy khô.",
+      "mùa hái": "Mùa hái vào các tháng 4-6."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

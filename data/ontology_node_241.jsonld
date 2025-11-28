@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba đậu tây",
+      "ten_khac": "Ba đậu tây, Vông đồng, Mã đậu, Dầu bóng",
+      "ten_khoa_hoc": "Hura crepitans L.",
+      "ma_taxon": "163862",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to cao 10-20 m,  thân có gai.",
+      "lá": "Lá hình trứng hơi ba cạnh, mép có răng cưa, đầu nhọn, dài 20-30cm, rộng 15-20cm.",
+      "hoa": "Hoa đực mọc thành bông nhiều hoa, hoa cái mọc đơn độc.",
+      "quả": "Quả nang, to cứng, gồm chừng 12-20 mảnh hình múi nổi tròn, cao 5cm, rộng 10cm. Khi chín thì bật vỡ rất mạnh, phóng hạt đi khá xa. Hạt hình mắt chim, trên phủ lớp lông, vỏ cứng của hạt bao quanh hạt thành một gờ chừng 1cm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây và hạt"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt có 37,1% chất dầu béo; 25,63% chất protein. Ngoài ra người ta còn cho rằng trong hạt còn một chất toxin độc nhưng chưa được nghiên cứu sâu. Vỏ thân và nhựa mủ chứa một chất có tác dụng diệt trừ sâu bọ nhưng chưa thấy tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở nước ta thấy ít dùng dầu và nhựa cây này làm thuốc. Nhưng tại Côngô (châu Phi) người ta dùng hạt cây này làm thuốc tẩy với liều hai đến ba hạt trong một ngày, nhưng với liều cao hơn có thể gây ngộ độc có thể gây chết người. Nhựa cây ba đậu tây cũng độc, nếu vô tình để nhựa bắn vào mắt có thể gây sưng đỏ mắt. Tại Giava (Inđônêxya) người ta dùng nhựa cây làm thuốc trừ sâu. Tại Braxin người ta dùng nước sắc vỏ thân với liều 1 đến 5g chữa hủi, nước sắc này còn có tác dụng tẩy mạnh. Mặc dầu trong hạt có nhiều dầu nhưng cho đến nay còn ít khai thác vì bã sau khi ép chỉ dùng để làm phân bón do có chất gây tẩy và độc không thể dùng làm thức ăn cho gia súc, mặc dầu hàm lượng protein cao. Do cây dễ trồng, hàm lượng dầu và protein cao, cây có nhiều triển vọng trồng để làm nguồn phân hữu cơ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây ba đậu tây vốn nguồn gốc ở những nước nhiệt đới châu Mỹ nhưng hiện nay được trồng phổ biến ở hầu hết những nước nhiệt đới làm cây bóng mát ven đường và vườn hoa. Thường người ta dùng hạt để ép dầu và nhựa mủ dùng làm thuốc"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

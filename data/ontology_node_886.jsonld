@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Niễng",
+      "ten_khac": "Niễng, Giao hồ",
+      "ten_khoa_hoc": "Zizania caduciﬂora (Turz. ex Trin.) Hand.-Mazz.",
+      "ma_taxon": "407086",
+      "ho": "Poaceae (Hòa thảo)",
+      "Mô tả": {
+        "lá": "dài, hình mác dài từ 0,30-1m, rộng 2-3cm, cả hai mặt đều nhám, hai bên mép dày lên.",
+        "hoa": "Cụm hoa là chùy hẹp, dài 30-50cm, trục to nhiều nhánh mang hoa cái ở phía trên và hoa đực ở phía dưới.",
+        "cây": "Niễng là một loại cỏ sống lâu năm, trồng giống lau, sậy, mọc dưới nước hay dưới đất nhiều bùn, cao tới  1-2m, rễ nhiều, thân rễ và thân bò (đường kính 1-1,5cm) rất phát triển.",
+        "thân": "Thân rỗng có vách ngang. Thân đứng, nhẵn, phần dưới gốc rất phát triển, xốp, phía ngọn gầy hơn.",
+        "củ": "Chính bộ phận thân non bị nấm ký sinh được hái bán với tên củ niễng để xào nấu, vào những tháng 9, 10, 11 đến các tháng 1- 2 năm sau. Phần này có đường kính 2,5-3cm, dài 5-7,5cm. Do bị nấm ký sinh, củ niễng (đúng ra chỉ là mầm non) trở thành bùi và béo."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong lúa miêu (giao bạch tử) có 1,2% protit, 0,1% chất béo và 2,8% chất cacbon hydrat, chừng 0,5% tro .",
+        "gồm chất": "Trong củ niễng có 88,1% nước ,3,2%gluxit, 2,5%.chất protit, 1% muối khoáng, trong đó 0,015% CaO, 0,212% P2O5 và 0,002% Fe2O3"
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả niễng hay giao bạch tử được dùng trong đông y. Theo đông y, nó có tính lạnh (hàn), vị ngọt (cam), có tác dụng chữa khát, tiêu phiền, điều dạ dày và ruột.",
+        "chữa": "sốt, lỵ trẻ con và còn dùng làm thực phẩm.",
+        "sắc uống": "Mỗi ngày 4-6g quả niễng dưới dạng thuốc sắc.",
+        "được_dùng": "Củ niễng dùng xào nấu, có vị thơm béo. Tại một số nước như Nhật Bản, quả niễng được dùng làm thực phẩm ăn độn với cơm."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây niễng được một số làng vùng ngoại thành Hà Nội (Kim Mã, Vân Hồ, Hồ Tây) trồng lấy củ để bán làm rau ăn. Thường vào tháng 9, người ta trồng bằng cách tách gốc ra lấy mầm rồi trồng ở những nơi nhiều bùn, nước luôn luôn ngập. Trồng mỗi gốc cách nhau 50 – 60cm thành hàng hay lung tung. Có nơi trồng vào tháng 11-12 sau khi đã phơi nắng cây một thời gian. Sau một năm thì thu hoạch được. Tại nước ta thường người ta không để già để lấy quả. Tại Trung Quốc, người ta chờ cho có quả mới hái quả phơi khô và sử dụng với tên giao bạch tử hay giao cấu. Cây này nguồn gốc ở phía đông Xibêri và còn được trồng ở Ấn Độ, Trung Quốc, Nhật Bản và nhiều nước châu Á khác."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa bóng nước",
+      "ten_khac": "Bóng nước, Móng tay, Phượng tiên hoa, Chỉ giáp hoa, Cấp tinh tử, Móc tai",
+      "ten_khoa_hoc": "Impatiens balsamina L.",
+      "ma_taxon": "133350",
+      "ho": "Balsaminaceae",
+      "Mô tả": {
+        "lá": "Lá mọc so le, có cuống, hình mác, đầu nhọn, mép có răng cưa rất rõ, dài 7-8cm, rộng 2-2,5cm.",
+        "hoa": "Hoa mọc ở nách lá, lưỡng tính không đều, màu đỏ hay trắng, 5 lá dài cùng màu với tràng, không đều. Lá dài trước hình cựa, 5 cánh, 5 nhị, chỉ nhị ngắn, bao phấn dính sát nhau chung quanh nhụy, 5 lá noãn họp thành bầu thượng 5 ô, mỗi ô đựng nhiều noãn.",
+        "quả": "Quả nang nứt thành 5 mảnh xoắn lại tung hạt đi xa.",
+        "cây": "Cỏ mọc hàng năm, có thể cao 40cm."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong toàn thân cây bóng nước có axit p- hydroxybenzoic có tính chất kháng sinh, axit gentisic C7H6O4, axit ferulic C10H10O4, axit p- cumaric C9H8O3, axit sinapic C11H12O5, axit cafeic C9H8O4, ngoài ra còn scopoletin C10H8O4. Lá chứa axit xinnamic (nhục quế toan) kaempferol- 3 arabinozit và kaempferol)",
+        "Thân chứa": "kaempferol 3- glucozit, quexetin, pelargonidin, cyaniđin, và delphindin.",
+        "Hạt chứa": "17,9% chất béo. Trong chất béo có thành phần chủ yếu là axit parinaric hay axit A9, 10, 13, 15, -octadecatetraenoic C18H28O7 (khoảng 27%) balsaminasterol C27H20O. Ngoài ra còn có cx sipinaterol C29H44O (khoảng 0,015%), saponin, các đa đường (khi thủy phân cho glucoza và fructoza).",
+        "Hoa chứa": "lawsone C10H6O3, lawsonemetylele C11H8O3. Ngoài ra còn tùy theo màu sắc của hoa mà thành phần thay đổi: Hoa trắng chứa leucocyanìdin, leucodelphinidin, hoa tím chứa malvidin glucozit, hoa đỏ chứa pelargonidin, paeonidin và delphinidin dưới dạng clucozit. Dịch ép của hoa bóng nước có tác dụng kháng sinh mạnh."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cây bóng nước được ghi trong “Bản thảo cương mục” với tên phượng tiên, hạt bóng nước được ghi trong “Cứu hoang bản thảo” Với tên “ Cấp tính tử”.",
+        "có tác dụng": "khử phong thấp, hoạt huyết, chỉ thống, thường dùng chữa phong thấp, bị thương sưng đau, rắn rết cắn. Ngày uống từ 4 đến 12g dưới dạng thuốc sắc. Dùng ngoài không kể liều lượng. Sách cổ nói phụ nữ có thai không dùng được",
+        "Hạt có tác dụng": "giáng khí, hành ứ, thường dùng chữa kinh nguyệt bế tắc, đẻ khó, nấc nghẹn, hóc xương. Ngày dùng 3 lần,mỗi lần 4-6g dưới dạng thuốc bột hay viên.",
+        "Lá được nhân dân dùng": "nấu nước gội đầu làm cho tóc mọc tốt."
+      },
+      "Cách dùng": {
+        "Mọc hoang và được trồng": "làm cảnh tại nhiều vườn ở khắp nước ta. Còn thấy mọc và trồng ở miền nam Trung Quốc, Ấn Độ.",
+        "Người ta dùng": "thân và cành làm thuốc: Mùa hạ và thu, hái cây trừ bỏ rễ, lá và hoa quả, phơi hay sấy khô, hoặc nhúng vào nước đun sôi rồi phơi hay sấy khô. Có thể dùng tươi. Ngoài ra người ta còn dùng hạt bóng nước với tên cấp tính tử. Hái quả chín về phơi khô, đập lấy hạt, phơi lại cho khô. Còn dùng lá tươi làm thuốc."
+      },
+      "luu_y": {}
+    }
+  ]
+}

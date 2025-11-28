@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Qua lâu trắng",
+      "ten_khac": "Vương qua, dưa núi, bát bát trân",
+      "ten_khoa_hoc": "Trichosanthes cucumerina L.",
+      "ma_taxon": "346340",
+      "ho": "Bí (Cucurbitaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân mảnh có rãnh, phân cảnh nhiều, nhẵn hoặc hơi có lông.",
+      "lá": "Lá mọc so le, hình bầu dục rộng hoặc hình thận, dài 7 – 10 cm, rộng 8 – 12 cm, chia 5 thùy nhọn, mép khía răng, gốc hình tim, mặt trên có lông, nhiều hơn ở mặt dưới, gân lá mảnh; cuống lá có rãnh và ít lông, dài 2 -7 cm; tua cuốn chia 2-3 nhánh.",
+      "hoa": "Cụm hoa ở kẽ lá, đơn tính khác gốc, cụm hoa đực dài 6-16 cm, có 8-15 hoa màu trắng, đài hình ống, loe ở đầu, tràng có cánh hình bầu dục – tam giác, nhị tụ họp thành đầu hình trụ; cụm hoa cái có hoa đơn độc, cuống dài 3 – 12 mm, đại và tràng giống hoa đực; bầu hình elip, có lông mềm.",
+      "quả": "Quả thuôn ở hai đầu, dài 5 – 6 cm, rộng 3,5 – 4 cm, lúc đầu màu lục, có những vạch dọc màu trắng, sau màu đỏ; hạt 8 – 10, thuôn có mép uốn lượn, đầu tù, gốc thắt lại."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Về phân bố của loài ở Việt Nam, hiện có hai tài liệu nêu ra hai quan điểm khác nhau. Trong “Từ điển cây thuốc Việt Nam”, 1997 ghi qua lâu trắng phân bố từ Lào Cai, Hòa Bình vào đến Gia Lai và Lâm Đồng. Trong khi đó, Nguyễn Hữu Hiến (2003) trong “Danh lục các loài thực vật Việt Nam” tập II chỉ ghi cây phân bố từ Đồng Nai (Biên Hòa) đến An Giang. Như vậy, về vấn đề này cần có kế hoạch điều tra nghiên cứu thêm. Trên thế giới, loài này có phân bố ở các nước Ấn Độ, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Philippin và quần đảo Polynesie.",
+      "thường_mọc": "Qua lâu trắng là cây ưa ẩm, ưa sáng và khi còn nhỏ hơi chịu bóng. Cây thường mọc ở ven rừng, dọc theo các bờ khe suối ở cửa rừng, chân đồi cây bụi hoặc nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, hạt"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa 28% dầu béo.",
+      "gồm chất": "Dầu béo chứa acid béo, acid linoleic 19,8%, acid oleic 32,8%, acid béo no 11,9% trong đó có hàm lượng acid arachidic cao.",
+      "đã nghiên cứu": "[Sastri et al., The wealth of India, X, 291]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ củ cây qua lâu trắng tính hàn, hơi độc, có công năng thanh nhiệt giải độc, lợi thủy, tiêu thũng, tiêu sưng, tán ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng rễ củ và toàn cây để chữa viêm họng, viêm amidan cấp; viêm gan vàng da, thu dạ dày, đau do chấn thương, đại tiện bỉ, tiểu tiện không lợi, làm dị khát, bế kinh, kinh nguyệt đinh nhọt, lở loét, rắn cắn, bỏng nước sôi. Ngày dùng 6 – 10g sắc lấy nước uống.",
+      "chữa": "Để chữa đau sau khi mổ, đau do vết thương, chấn thương, đau dạ dày, dùng rễ củ, mỗi lần 0,3 – 0,6g nhai và nuốt. Dùng nhiều lần trong ngày.",
+      "giã nát": "Để chữa mụn nhọt, lở loét ngoài da, dùng rễ củ tươi, giã nát, thêm rượu, lấy dịch bôi ngoài. Nếu là củ khô, nghiền thành bột, chiếu với rượu, lấy dịch bôi.",
+      "sắc nước uống": "Để chữa rắn cắn, lấy rễ củ qua nhân trắng 18-30g, sắc lấy nước uống dần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

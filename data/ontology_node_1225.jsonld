@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lân tơ uyn",
+      "ten_khac": "Lân tơ uyn, Ráy rách lá, Chuối hương, Đuôi phượng",
+      "ten_khoa_hoc": "Rhaphidophora decursiva (Roxb.) Schott",
+      "ma_taxon": "431536",
+      "ho": "Araceae (Ráy)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây mọc leo có thể dài 4 đến 20m.",
+      "thân": "Cành hình trụ đường kính 2,5 đến 5cm.",
+      "rễ": "Rễ khi sinh mọc thong.",
+      "lá": "Lá dai, màu xanh lục, dài 40-70cm, rộng 30-50cm, toàn phiến hình thuôn dài, ngọn lá nhọn gốc hình tim. Ngọn cuống gập khúc làm phiến lá mọc quặp cuống. Phiếm lá non nguyên, phiến lá già xẻ lông chim. Trên lá già còn có nhiều lỗ thủng nhỏ dọc ở hài bên gần giữa.",
+      "hoa": "Cụm hoa bông mo dày, màu xanh nhạt, hình trụ ngọn tù, dài 15-20cm xung quanh bao bọc bởi 1 lá bắc to, hai mặt màu vàng. Hoa nhiều, lưỡng tính hình lăng trụ 6 góc rộng.",
+      "quả": "Quả mọng màu đỏ, nhiều hạt thuôn dài, từ ở hai đầu, có chấm trắng nhỏ ở mép."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Tất cả vết thương phần mềm có miệng rộng. Nếu vết thương chột, miệng nhỏ thì phải vạch rộng, cắt lọc tốt rồi mới dùng lân tơ uyn. Bỏng độ II, nhất là bỏng độ III.  Phản chỉ định: Vết thương chột, lỗ nhỏ, ở trong sâu còn dị vật, không nên dùng lân tơ uyn sẽ làm cho vết thương chóng liền miệng, làm ứ đọng mủ ở trong sâu."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá lân tơ uyn cho phản ứng của glucozit, saponozit, dịch chiết có pH axit (theo Đặng Hanh Khôi, Vũ Văn Chuyên và cộng sự 7-68)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Việc sử dụng lân tơ uyn mới được phổ biến rộng rãi mấy năm gần đây.",
+      "được_dùng": "Quân giải phóng miền Nam dựa vào kinh nghiệm đồng bào Kon Tum khi làm nương rẫy bị dao rựa cắt đứt da thịt thường dùng lân tơ uyn đắp vào vết thương. Nhân dân miền Bắc dùng nước sắc thân cây rửa vết thương (Cứu quốc, 27-8-1967).",
+      "làm thuốc": "Cách dùng như sau: Dùng 1kg dây lân tơ uyn bỏ lá, cạo hết rễ, rửa sạch, băm nhỏ, cho vào 3 lít nước đun sôi trong ba giờ. Lọc qua khăn vải và cô lại còn 700ml dung dịch. Nước lân tơ uyn ở độ đậm này khi đắp vào vết thương, thương binh chỉ có cảm giác xót thoảng qua như rửa nước muối ưu trương trong lần thay băng đầu. Những ngày sau thì hết xót, càng không nên dùng cao lân tơ uyn vì khi đắp lên vết thương rất xót và gây phản ứng xấu tại chỗ (xót, sưng, đỏ). Nước lân tơ uyn lên mốc, đổi màu, có vị chua.",
+      "chữa": "Khi dùng như sau: Rửa vết thương bằng nước muối (nếu có nhiều lân tơ uyn thì dùng nước lân tơ uyn rửa càng tốt). Dùng miếng gạc tẩm nước lân tơ uyn đắp lên vết thương xong băng lại và cách 2-3 ngày lại thay băng một lần, tùy mức độ mủ nhầy ở vết thương."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc bám trên thân cây cổ thụ mọc dọc suối nước ở vùng ẩm thấp (rừng già) hoặc dọc bờ rào (ở đồng bằng), có ở khắp nơi từ miền Bắc đến Nam.",
+      "làm thuốc": "Người ta dùng thân và lá tươi làm thuốc.",
+      "phơi khô": "Không có chế biến gì đặc biệt."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau đắng đất",
+      "ten_khac": "Rau đắng lá vòng, Rau đắng đất",
+      "ten_khoa_hoc": "Glinus oppositifolius (L.) A.DC.",
+      "ma_taxon": "369890",
+      "ho": "Aizoaceae (Rau đắng đất)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "thân": "Thân và cành mảnh, mọc tỏa sát mặt đất, dài  và nhẵn.",
+      "lá": "Lá mọc vòng 2 – 5 to nhỏ không đều, hình mác thuôn, dài 1 – 3 cm, rộng  3 – 10mm, gốc và đầu nhọn;  lá kèm rất nhỏ, sớm rụng.",
+      "hoa": "Hoa mọc tụ tập 2 – 5 cái ở kẽ lá, màu lục nhạt, có cuống dài, đài 5 răng hơn không bằng nhau, những lá phía ngoài ngắn, những lá bên trong rộng hơn, không có cành hoa, nhị 5, chỉ nhị  đều, bầu  thuôn, thắt  lại ở hai đầu.",
+      "quả": "Quả nang, mở ở cạnh bên theo chiều dọc, hạt hình thận.",
+      "mùa hoa": "tháng 4 – 7.",
+      "mùa quả": "tháng 4 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Glinus  L . gồm một số loài đều là thân cỏ, phân bố ở vùng nhiệt đới và cận nhiệt đới. Ở Việt Nam, có 3 loài. Rau đắng đất phân bố ở vùng nhiệt đới châu Á, từ Ấn Độ đến Malaysia, Campuchia, Việt Nam và đảo Hải Nam, Trung Quốc  Ở Việt Nam, rau đắng đất phân bố dọc theo các tỉnh ven biển, từ Nam Định đến vùng đồng bằng sông Cửu Long.",
+      "thường_mọc": "Cây ưa sáng, thường mọc  trên đất pha cát ở các ruộng hoang, các hố nông cạn nước về mùa khô, đôi khi thấy cả ở quanh làng, ven đường đi. Do khả năng phân nhánh khỏe, nên cây thường mọc thành đám dày đặc, lấn át các loại cỏ khác. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt.",
+      "Đặc điểm sinh trưởng": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau đắng đất chứa chủ yếu saponin và flavonoid.",
+      "Các hợp chất": "Từ lá các tác giả đã phân lập được spergulagenin A là một sapogenin triterpen."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây rau đắng đất có vị  đắng , tính mát , có tác dụng lợi tiêu hóa, khai vị, lợi  tiểu … nhuận gan, hạ nhiệt"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nhân dân, rau đắng  đất được dùng làm thuốc hạ sốt, chữa bệnh về gan, vàng da.",
+      "được_dùng": "mỗi ngày 20 – 30g, sắc nước uống. Ở Ấn Độ, toàn cây rau đắng đất được dùng làm thuốc kích thích tiêu hóa, nhuận tràng, và điều trị ứ sản dịch.",
+      "giã nát": "Cây giã nát trộn với dầu castor đắp  nóng  chữa đau tau, dịch chiết từ rau đắng đất trị ngứa và bênh ngoài da."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Thuốc thanh gan, giải độc: Rau đắng 6g, nhân trần (hoặc bồ bồ  ) 5g, dành dành 5g, cỏ xước 6g, rau má 6g, ké đầu ngưa 6g, dây khổ qua 6g, cỏ mực 8 g, muỗng trâu 6g, rẻ tranh 6g. sài đất  6g, cam thảo 3g. Sắc nước uống hoặc tán bột, luyện thành viên uống (kinh nghiệm của lương y  Đỗ Vân Tranh, An Giang),  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam ."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

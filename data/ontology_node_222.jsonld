@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạc hà cay",
+      "ten_khac": "Bạc hà cay, Bạc hà tiêu",
+      "ten_khoa_hoc": "Mentha piperita L.",
+      "ma_taxon": "181525",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm.",
+      "thân": "Thân ngầm, mọc bò lan, bén rễ ở những mấu. Thân hình vuông, phân nhánh nhiều, thường có màu tím.",
+      "lá": "Lá mọc đối, hình bầu dục hoặc hình mác, gốc tròn, đầu nhọn, mép khía răng đều, vò ra có mùi thơm mát.",
+      "hoa": "Cụm hoa mọc thành chùy bông ở ngọn gồm nhiều vòng hoa xếp rất sít nhau; hoa màu trắng hồng; đài hình ống có 5 răng đều, có lông ở đầu; tràng hình phễu, có cánh rộng; nhị 4 không bằng nhau.",
+      "quả": "Quả hiếm gặp.",
+      "mùa hoa": "tháng 6-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Mentha L. có khoảng 30 loài và một số dạng cây lai; phân bố chủ yếu ở vùng ôn đới ấm Bắc bán cầu, thuộc châu Âu và vùng cận nhiệt đới ở Trung Á. Ở Việt Nam, chi này có 5 loài, trong đó phần lớn là cây trồng. Bạc hà cay được nhập vào Việt Nam từ Hunggari, Cộng hòa dân chủ Đức và Liên Xô (trước đây) và từ Pháp,vào những năm 1956, 1962, 1967, 1981. Cây ưa khí hậu ẩm mát của vùng ôn đới ấm hoặc vùng cận nhiệt đới. Do đó cây chỉ trồng được ở một số tỉnh phía bắc và ở Đà Lạt – tỉnh Lâm Đồng. Cây sinh trưởng mạnh từ giữa mùa xuân đến giữa mùa hè; ra hoa nhiều nhưng không kết quả. Cây trồng ở Việt Nam cho năng suất chất xanh và tinh dầu thấp, vì vậy không được phát triển rộng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá khi cây ra hoa. Tinh dầu cất từ phần trên mặt đất được tinh chế bằng cách cất lại theo cách cất kéo hơi nước."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bạc hà cay chứa các flavonoid (menthosid, isorhoifolin, hesperetin, eriodictyol -1-O- rutinosid, luteolin – 7 – O – rutinosid và rutin), phytol, các tocopherol (α và y), carotenoid (α – và ß – caroten), betain, cholin, azulen, acid rosmarinic và tanin. Các flavonoid có tác đụng lợi mật trên chó. Bạc hà cay còn chứa 0,1 – 1,0% (thông thưòng 0,3 – 0,4%) tinh dầu trong đó có menthol 29 – 48%, menthon 20 – 31%, menthyl acetat 3 – 10%, menthofuran 1 – 7%, limonen. Các thành phần khác trong tinh dầu bạc hà cay là viridiflorol, pulegon 1 – 11%, 1,8 – cineol 6 – 7,5%, piperiton, caryophylen, bisabolen, isomenthon, isomenthol α – và ß – pinen, neomenthol, ledol, d – trans – Sabinen hydrat, bicycloelemen… Menthol thiên nhiên tả tuyền, còn menthol tổng hợp có thể hữu tuyền hay racemic. Dược điển Việt Nam II quy định tinh dầu phải chứa 60% menthol toàn phần và 9% menthol ở dạng ester (biểu thị bằng menthylacetat). Khi cất tinh dầu, người ta để héo cây bạc hà trong 24 giờ, rồi mới cất để chuyển hóa menthon thành menthol. Lá non có nhiều menthon hơn. Ở nụ hoa, có nhiều menthofuran. Menthofuran có mùi thơm dễ chịu, cần có trong tinh dầu với một lượng nhỏ. Nhưng có nhiều lại dễ bị oxy hóa, tinh dầu dễ hóa nhựa. Một số nhà khoa học trên thế giới đã lai tạo được nhiều chủng loại M. piperita mới, mỗi chủng lại giàu riêng từng chất như menthol, menthofuran, piperiton oxyd, linalol và carvon. Một số chủng giàu menthol đã được đưa vào sản xuất đại trà. Bạc hà M 183 có hàm lượng tinh dầu 3,2 – 3,5%. Tinh dầu chứa 77,6% menthol, 3,5% menthol ester. Bạc hà MC 41 có hàm lượng tinh dầu 4,46%, tinh đầu chứa 85,4% menthol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở các nước châu Âu, dùng các ngọn mang hoa phơi khô của bạc hà cay để chế các đồ uống, và chè bạc hà dùng dưới dạng nước hãm. Cũng được dùng trong công thức chế các rượu mùi và rượu bia đắng. Nước hãm lá bạc hà cay dùng uống làm dễ tiêu, chống lên men thối rữa, và để an thần, bôi ngoài làm dịu ngứa, và hít để gây long đờm, rượu ngâm lá bạc hà cay uống trị đau bụng, nhức đầu, buồn nôn. Dịch ép từ lá tươi trộn với ít muối, uống trị tiêu chảy."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

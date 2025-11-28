@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Độc hoạt",
+      "ten_khac": "Độc hoạt, Đương quy lông",
+      "ten_khoa_hoc": "Angelica pubescens Ait.",
+      "ma_taxon": "482445",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo sống lâu năm, cao 1-2m, có khi hơn.",
+      "thân": "Thân nhẵn, hình trụ có rãnh dọc, màu lục hoặc tím nhạt.",
+      "lá": "Lá phía gốc kép 2-3 lần lông chim, dài 15-40cm, lá chét nguyên hình bầu dục hoặc hình trứng hoặc xẻ thùy không đều, mép khía răng, gân lá có lông thưa và mịn; cuống lá to, có bẹ; lá phía trên ít xẻ hơn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành tán kép, có lông mịn màu vàng nâu, lá bắc 1-2 cái, lá bắc nhỏ hình kim; hoa nhỏ, 15-30 cái ở mỗi tán, màu trắng.",
+      "quả": "Quả bế, hình trụ, hình trứng hoặc bầu dục tròn, dẹt, có sống dọc, có dìa ở 2 bên.",
+      "mùa hoa": "tháng 6-9",
+      "mùa quả": "tháng 10-12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Độc hoạt xuất xứ từ Trung Quốc, cây được nhập trồng vào Việt Nam ở Sa Pa."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ đã được phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ độc hoạt chứa nhiều chất coumarin: osthol, bergapten, glabralacton, angelol, psoralen, xanthotoxin,…"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Độc hoạt có vị cay, ngọt, hơi đắng, tính bình và kinh can và thận, có tác dụng khu phong hàn, khử thấp, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Độc hoạt chỉ mới thấy dùng trong phạm vi nhân dân.",
+      "được_dùng": "Độc hoạt dùng trong những trường hợp phong hàn, các khớp xương và lưng gối đau nhức bất kể đau lâu hay mới đau, đau đầu, đau răng. Liều dùng hàng ngày từ 3-6g dưới dạng thuốc sắc hay ngâm rượu, thường dùng phối hợp với những vị thuốc khác.",
+      "chữa": "Độc hoạt thang chữa các khớp xương đau nhức:\nĐộc hoạt 5g, đương quy 3g, phòng phong 3g, phục linh 3g, thược dược 3g, hoàng kỳ 3g, cát căn 3g, nhân sâm 2g, cam thảo 1g, can khương 1g, phụ tử 1g, đậu đen 5g, nước 600ml, sắc còn 200ml chia 3 lần uống trong ngày."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

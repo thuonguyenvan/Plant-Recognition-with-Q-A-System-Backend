@@ -1,0 +1,198 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Sa Kê",
+            "ten_khac": "Sa kê, Bánh mỳ, Arbre à painvrai",
+            "ten_khoa_hoc": "Artocarpus incisa L.",
+            "ho": "Moraceae (Dâu tằm)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thân gỗ, cao 10-12m có thể tới 15-20m nhưng thường giữ ở độ cao 10-12m cho dễ thu hoạch.",
+            "thân": "Thân cây có đường kính 90cm.",
+            "lá": "Tán lá rất đẹp, phiến lá rất to dài 30-50cm, rộng 10- 12cm, chia thùy lông chim nhưng cũng có những lá nguyên hoặc chỉ chia thùy ít nhiều màu xanh lục thẫm bóng, mặt dưới lá nháp.",
+            "hoa": "Cụm hoa đực có hình chùy và chỉ có 1 nhị. Cũng có khi hoa đực tụ họp nom như đuôi con sóc dài tới 20cm.",
+            "quả": "Cụm hoa cái hình cầu, có khi hình ống. Quả sa kê là một quả kép rất to, gần như tròn hoặc hơi hình trứng, có đường kính 12- 20cm, vỏ màu xanh lục nhạt hay vàng nhạt, thịt quả rất nạc và trắng chứa nhiều bột. Quả sa kê mọc thành từng chùm vài ba quả không có hạt, nhưng cũng có những quả có hạt chìm ngập trong thịt quả."
+        },
+        {
+            "@type": "Phân bố"
+        },
+        {
+            "@type": "Thông tin khác"
+        },
+        {
+            "@type": "Bộ phận dùng"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Trong bột quả sa kê có 2-3 hoặc 6% nước, 3,2% muối vô cơ, 0,2 đến 1,17% chất béo, 1,1 đến 4,09% chất đạm, 64 đến 85% tinh bột, đường, dextrin, 2-3% độ tro."
+        },
+        {
+            "@type": "Tính vị"
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Từ lâu nhân dân ở Pôlynezia và quần đảo Tahiti người ta đã thu hái quả sa kê về lùi trong tro nóng hoặc nướng trên than hồng để ăn.  Ở Ấn Độ quả sa kê được coi như một món ăn cao cấp: Người ta thái quả thành từng lát mỏng, rán với mỡ hay với bơ, hương vị giống như những miếng bánh mì rán. Ngoài ra người ta còn dùng quả sa kê nấu món cari, rang, xay thành bột để chế ra nhiều món ăn hằng ngày.  Một số nước dùng quả sa kê còn xanh cho lên men (do một loài mốc biến đổi một phần thịt quả xa kê ra các sản phẩm phụ có hương vị đặc biệt) rồi chế thành món “po poi” giống như pho mát. Po poi là một món ăn có giá trị dinh dưỡng cao, phối hợp với bánh bột quả sa kê để làm các loại bánh ngọt, ngon và bổ.  Có nơi dùng quả sa kê xanh nấu với cá và tôm. Hoặc luộc, thái lát phơi khô nấu với gạo. Do đó thế giới thường biết cây này với tên “cây bánh mì”."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "Nguồn gốc ở các đảo phía nam Thái Bình Dương, châu Đại Dương (châu Úc). Hiện được di thực vào các đảo Giava, Sumatra (Indônêxia), Malaysia, các vùng Đông Nam châu Á. Tại miền Nam nước ta nhiều tỉnh có trồng để lấy quả ăn, và lấy gỗ đóng đồ dùng. Cũng đã được đưa trồng ở một số nước nhiệt đới châu Phi.",
+            "phơi khô": "Dùng quả chưa chín, thái thành lát phơi hay sấy khô."
+        },
+        {
+            "@type": "luu_y"
+        }
+    ]
+}

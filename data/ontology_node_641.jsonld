@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tiểu hồi",
+      "ten_khac": "Tiểu hồi, Tiểu hồi hương, Rau xứ nhì",
+      "ten_khoa_hoc": "Foeniculum vulgare Mill.",
+      "ma_taxon": "53052",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, có bẹ phát triển; phiến lá xẻ lông chim 3-4 lần thành dải hình sợi.",
+      "hoa": "Cụm hoa hình tán kép mọc ở nách lá và ngọn cành; các tán hoa mang nhiều hoa nhỏ màu vàng lục. Hoa tháng 6-7",
+      "quả": "Quả nhỏ hình trứng thuôn, lúc đầu màu xanh lam, sau màu xanh nâu. quả tháng 10.",
+      "cây": "Cây thảo sống 2 năm hay nhiều năm cao 0,6-2m",
+      "thân": "thân nhẵn, màu lục lờ, hơi có khía.",
+      "rễ": "rễ cứng"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc hoang ở vùng Địa Trung Hải. Thứ Tiểu hồi dịu (var. dulce) được trồng nhiều ở Italia và Pháp. Thứ Tiểu hồi đắng (var. piperita) được trồng nhiều ở Trung và Đông Âu, Nhật Bản, Ấn Độ. Ta nhập trồng và cây mọc tốt. Thường trồng bằng gieo hạt, trên luống cách nhau 15cm. Đến năm sau nhổ ra trồng thành hàng cách nhau 60cm. Ta thu hoạch quả chín trên những tán hoa trung bình chín trước tiên; người ta cắt khi chúng ngả màu nâu và để cho chín dần trong một nơi thoáng khí. Khi các tán còn lại ngả màu nâu, người ta thu hái toàn bộ, cột lại thành bó. Sau đó mới đập ra để lấy quả."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả –\u00a0Frutus Foeniculi, ta hay gọi là Tiểu hồi hương. Rễ, lá cũng được dùng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tiểu hồi đã được sử dụng từ lâu đời. Người La mã đã dùng quả có tinh dầu thơm làm thuốc kích thích. Người Hy Lạp, người Ả Rập rồi nhiều nước khác đều có trồng. Có một thứ Tiểu hồi dịu có cuống lá rộng, dày và nạc tạo nên những phần lồi dạng u ở gốc cây mà người ta dùng ăn như rau. Người ta dùng hạt chữa đau bụng do lạnh, đầy bụng, nôn mửa, ăn uống không tiêu, đau bụng do thận suy, giảm niệu và sỏi niệu, thống phong, kinh nguyệt không đều, bế kinh, thống kinh, đau ngực, cảm cúm, ho gà, đầy hơi, thiếu sữa, ký sinh trùng đường ruột và sốt rét cơn. Ngày dùng 4-8g, dạng thuốc sắc hay bột. Rễ dùng làm thuốc thông tiểu tiện, chữa giảm niệu, sỏi niệu, viêm đường tiết niệu, thống phong, thống kinh. Ngày dùng 15-20g dạng thuốc chè hay sắc. Hạt dùng ngoài làm thuốc hãm để rửa mắt sưng; lá giã đắp chữa căng vú, bầm máu, u bướu. Người ta cũng thường dùng dầu tiểu hồi, mỗi lần 1-5 giọt, ngày 2-3 lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa đau bụng do thận suy:Bột Tiểu hồi 4g cho vào bầu dục lợn nướng chín, ăn ngày 1 cái, liên tục trong 7 ngày (Dược liệu Việt Nam). Chữa dịch sốt rét ác tính:hạt Tiểu hồi hương giã tươi vắt lấy nước cốt uống, hay tán bột hoặc sắc uống (Hành giản trân nhu). Chữa đau xóc dưới sườn:Tiểu hồi sao vàng 40g, Chỉ xác sao 20g tán bột uống mỗi lần 8g với rượu hoà thêm muối, ngày uống 2 lần (Nam dược thần hiệu)."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Ghi chú:Người âm hư hoả vượng không dùng được."
+    }
+  ]
+}

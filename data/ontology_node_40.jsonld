@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đước",
+      "ten_khac": "Đước, Trang, Vẹt, Đước bợp, Đước xanh, Sú",
+      "ten_khoa_hoc": "Rhizophora apiculata Blume",
+      "ma_taxon": "196660",
+      "ho": "Rhizophoraceae",
+      "Mô tả": {
+        "lá": "Lá mọc đối, hình mác, dài 7-13cm, rộng 4-6cm, gốc hình nêm, đầu gần tròn hoặc tù, gân chính lõm ở mặt trên, hằn rõ ở mặt dưới và có những chấm đen nhỏ, cuống lá mập.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành xim phân nhánh nhiều, lá bắc hình tam giác; hoa màu vàng kèm theo 2 lá bắc con, dài và tràng có 4 phiến dày, hình mác, có lông ở mép nhị 8, 4 cái trên đài, 4 cái trên tràng, bầu nửa hạ, 2 ô.",
+        "quả": "Quả dài, hình trứng, đầu kéo dài, đài tồn tại, màu nâu lục nhạt, chứa 1 hạt.",
+        "cây": "Cây to, cao 10 – 20m, có nhiều rễ chống dài, trên rẻ có lỗ bì, cành sần sùi vặn vẹo.",
+        "cuống": "dài 1 – 3cm, lá kèm sớm rụng.",
+        "mùa hoa": "tháng 10",
+        "mùa quả": "tháng 12"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Rhizophora L, có 3 loài ở Việt Nam đều là những cây gỗ quan trọng trong tổ thành thực vật rừng ngập mặn ven biến. Cây được phân bố ở vùng bờ biển những nước nhiệt đới như Trung Quốc (đảo Hải Nam), Đài Loan, Campuchia, Thái Lan, Malaysia, Pakistan, Ấn Độ, Philippin, Indonesia, ở biển Đông Phi, Bắc Australia, đảo Moris, Ceisel và Mangas. Ở Việt Nam,được phân bố ở hầu hết các tỉnh dọc bờ biển từ Quảng Ninh đến Kiên Giang và đảo Phú Quốc.",
+        "thường_mọc": "Cây thường mọc trên đất bùn nhão hoặc mới được định hình ở các cửa sông. Loại bùn nhão này chính là đất phù sa, do nước sông chuyển từ lục địa ra, sau được lắng đọng nhờ có hệ thực vật ven biển. Để trụ vững trên nền đất bùn nhão, thường xuyên bị ngập bởi thủy triều, đước (cũng như một vài loài thực vật khác ở đây) có hệ thống rễ chống đặc biệt phát triển.",
+        "Đặc điểm sinh trưởng": "Cây sinh trưởng mạnh trong mùa mưa ẩm, sau khoảng 2 năm tuổi, bắt đầu có hoa quả lứa đầu. Quả đước có dạng hình trụ dài, khi già tự rụng cắm thẳng xuống lớp bùn, nhanh chóng mọc rễ và nảy mầm. Đây cũng là hình thức thích nghi cao của đước, để tồn tại và phát triển trong điều kiện ở vùng triều. Đước cùng với một số loài thực vật khác ở ven biển đã tạo nên một hệ sinh thái đặc biệt gọi là hệ sinh thái rừng ngập mặn nhiệt đới (mangrove). Nhờ có sự phát triển của hệ thực vật ở đây, lớp bùn nhão ngày một được bồi đắp, nâng cao dần lên đồng thời cũng được mở rộng thêm ra phía biển. Quá trình này được coi là hình ảnh ban đầu sinh động của diễn thể nguyên sinh, nhằm tạo ra các thảm thực vật nhiệt đới bề vững khác trong tương lai. Ngoài ra, rừng ngập mặn còn là nơi cư trú của nhiều loại tôm… cua… cá, bò sát chim và thú (khỉ). Song, gần đây, một số rừng đước ở Nam Bộ đã bị tàn phá để tạo nên thủy vực nuôi trồng thủy sản. Việc bảo vệ và trồng thêm các khu rừng ngập mặn ở Việt Nam là một vấn đề cần được ưu tiên trước mắt cũng như lâu dài."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ, vỏ thân và lá."
+      },
+      "Thành phần": {
+        "thành phần": "Vỏ thân đước là nguồn cung cấp tanin ngưng tụ với hàm lượng cao hay thấp tùy theo từng nước như Ấn Độ 25 – 35%, Tanganica 36,5%, Malayxia 30 – 40%, Philippin 27,6%, Borneo 20%.",
+        "gồm chất": "Một tài liệu phân tích cao đặc vỏ thân và gỗ đước thấy tanin chứa theo thứ tự: 60 – 65% và 55 – 62% không tanin 34,5 – 39,5% và 37,7 – 44,7%,",
+        "chứa": "Quả ăn được, dùng để chế rượu vang. Lá, quả chưa chín và quả chín chứa tanin theo thứ tự 9, 1 – 12,0 và 4,2%.",
+        "triết xuất": "Hoa là nguồn cho ta mật ong. Có tài liệu cho biết mật ong này có độc tính (The Wealth of India IX. 1972)",
+        "đã nghiên cứu": "Theo Prosea 3, 1992, vỏ đước chứa tanin 8 – 40%. nhiều pentosan và furfurol. Tro chứa vôi 18%, Ca carbonat 70% có thể dùng làm phân bón.",
+        "tìm thấy": "Lá chứa 1 – hydroxy – 5 – oxo – bicyclo (6, 4, O) dodecan (CA 122: 27.749 a.",
+        "các hoạt chất": "Theo Sasaki Tsuyoshi và cs, 1993, lá chứa các alcol, acid béo, parafin. Rễ có các hợp chất phenol, các acid béo ở dang ester. Vỏ thân có các acid béo ở dạng ester (thành phần chính), hợp chất có oxy.",
+        "dấu hiệu đặc trưng": "Ngoài ra, đước còn có Spirostvà 1,2 dithiolan."
+      },
+      "Tính vị": {
+        "Có vị": "Đước có vị chát, có tác dụng hoạt huyết, thu liễm."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Đước mới được dùng trong phạm vi kinh nghiệm dân gian. Vỏ thân đước dùng chữa tiêu chảy, vết thương chảy máu, phụ nữ băng huyết, đái ra máu, viêm họng.",
+        "được_dùng": "Ở Ấn Độ, vỏ thân còn được dùng chữa bệnh tiểu đường, tuy gần đây thí nghiệm dược lý trên súc vật chứng minh vỏ thân đước không có tác dụng gây hạ đường huyết. Ở Malaysia, nước sắc vỏ thân và lá đước được dùng cho phụ nữ uống khi đẻ, đồng thời cho trẻ mới đẻ uống một ít nước sắc của rễ.",
+        "làm thuốc": "Ngoài công dụng chữa bệnh, vỏ thân đước còn được dùng trong kỹ nghệ thuộc da và nhuộm lưới đánh cá. Theo tài liệu Ấn Độ , quả đước có vị ngọt, ăn được, nước ép từ quả đước có thể dùng chế rượu vang nhẹ. Chồi non cây đước được dùng làm rau ăn. Gỗ là nguyên liệu trong xây dựng nhà cửa, làm trụ đỡ hầm mỏ.",
+        "chữa": "Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

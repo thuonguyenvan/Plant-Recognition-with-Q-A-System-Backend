@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quế quan",
+      "ten_khac": "Quế Quan, Quế Xrilanca",
+      "ten_khoa_hoc": "Cinnamomum zeylanicum Nees",
+      "ma_taxon": "122777",
+      "ho": "Lauraceae (Long não)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cao 20-25m, có cành non hình 4 cạnh, trên mặt cành có nhiều lông ngắn và thưa.",
+      "lá": "Lá mọc đối, dài cứng, hình trái xoan, hay thuôn dài, nhẵn bóng, về phía cuống hơi thon lại, tù ờ đầu. Phiến lá dài 11-20cm, rộng 4-6cm, có 3-5 gân rõ rệt nổi rõ cả ở mặt trên và dưới, cuống nhẵn, dài 2cm. Mặt trên có lông măng.",
+      "hoa": "Hoa màu trắng vàng nhạt, mọc thành chùy ở kẽ lá hay đầu cành, dài 10-12cm, cuống chính và cuống phụ nhiều lông.",
+      "quả": "Quả mọng hình trứng thuôn dài 8mm, phía cuống có đài tồn tại, vỏ quả mẫm, hơi dày, chứa 1 hạt ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong vỏ quế Xrilanca cũng có những chất như tinh bột, chất nhầy, tanin, chất màu, nhựa, canxi. Nhưng thành phần chủ yếu vẫn là tinh dầu 0,5 đến 2%. Tinh dầu có màu vàng nhạt lúc đầu, nhưng dần dần sẫm nâu lại do hiện tượng bị oxy hóa, nặng hơn nước.",
+      "gồm chất": "Thành phần chủ yếu trong tinh dầu là 65-75% andehyd cinamic, 4-12% các loại phenol trong đó chủ yếu là eugenol, kèm theo ít safrol, furfurol v.v…",
+      "chứa": "Trong vỏ quế còn một loại tinh dầu nhẹ hơn nước thường thu được khi mới cất.",
+      "triết xuất": "Khi tỉa cây quế thường người ta thu hoạch lá quế để cất tinh dầu, tinh dầu lá quế màu nâu, phản ứng axit, mùi đinh hương, chứa có khi tới 84% eugenola; thường eugenola này được dùng để tổng hợp vanilin. Tinh dầu lá quế tan trong 2,5 đến 2,8 thể tích cồn 70°.",
+      "tinh dầu chứa": "Trong vỏ rễ quế cũng có tinh dầu, nhưng tinh dầu chứa chủ yếu chất long não, một ít euhenol và safrola, rất ít andehyd cinamic.",
+      "dấu hiệu đặc trưng": "Hạt quế chứa tới 33% chất béo. Thường người ta dùng chất béo này để chế nến thắp."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Công dụng chủ yếu của quế Xrilanca trên thị trường quốc tế là dùng làm gia vị. Trong điều trị, quế và tinh dầu là những vị thuốc kích thích sự tiêu hóa, hô hấp và tuần hoàn.",
+      "có tác dụng": "Quế có tác dụng làm co mạch, tăng sự bài tiết, tăng co bóp tử cung, tăng nhu động ruột. Tinh dầu quế là một chất sát trùng mạnh.",
+      "được_dùng": "Người ta dùng quế dưới hình thức rượu quế, rượu cất quế hoặc sirô quế.  Công dụng của quế Xrilanca cũng gần như quế của ta, nhưng không quý như quế của ta.",
+      "làm thuốc": "Thường dùng với liều lượng như sau:  Bột quế: 0,05-5g một ngày. Rượu quế: 5-15g một ngày. Sirô quế: 30-69g một ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Tại nước ngoài, quế quan chủ yếu mọc ở nước Xrilanca. Quế Xrilanca nổi tiếng trên thị trường châu Âu. Ở nước ta chỉ có ít quế quan, mọc rải rác ở vùng Bái Thượng (Thanh Hóa), Cổ Bạ (Nghệ An). Tại miền Nam, cây này mọc ở dọc đường Nha Trang đi Ninh Hòa, các vùng ẩm ướt ở Côn Đảo, Bà Rịa, Tây Ninh.",
+      "làm thuốc": "Nước ta trồng quế quan cũng bằng hạt, chiết cành hoặc bằng đào những cây con mọc hoang trong rừng về. Phương pháp trồng chủ yếu vẫn là gieo hạt. Sau 4 năm có thể bắt đầu tiến hành thu hoạch.",
+      "phơi khô": "Quế hái về chỉ phơi khô trong mát, chứ không ủ cầu kỳ như quế Thanh Hóa.",
+      "xấy khô": "Mùa thu hoạch thường nên chọn vào sau vụ mưa vì khi ấy vỏ quế dễ bong hơn. Lá và cành cũng được thu hoạch để cất lấy tinh dầu.",
+      "có tác dụng": "Vỏ quế Xrilanca thu hoạch xong được cạo hết lớp biểu bì cho tới sát lớp cương mô. Vì đây là một đặc điểm của quế Xirilanca bán trên thị trường châu Âu cho nên hiện nay người ta cạo cả vỏ quế một số loại quế khác để bán giả loại quế Xrilanca."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

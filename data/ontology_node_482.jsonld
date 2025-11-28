@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đại bi lá lượn",
+      "ten_khac": "Hoàng đầu xẻ, bông tím",
+      "ten_khoa_hoc": "Blumea sinuata (Lour.) Merr.",
+      "ma_taxon": "1043196",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 0,3 – 1m.",
+      "thân": "Thân đứng, hình trụ, có rãnh, phân cành đến tận ngọn.",
+      "lá": "Lá mọc so le, lá gốc hình trứng, gốc thuôn dần thành cánh ở cuống, đầu hơi nhọn, chia 5 thuỳ, to dần về phía đầu lá, thuỳ cuối cùng lớn nhất, mép có răng cưa không đều, hai mặt có lông màu xám, lá ở gần ngọn nhỏ, nguyên và không cuống.",
+      "hoa": "Cụm hoa mọc ở ngọn thân hoặc kẽ lá thành chùm hình tháp rộng gồm nhiều đầu không cuống: lá bắc thuôn, hình chi; mào lông cứng màu trắng nhạt; hoa cái có tràng 3 cánh nhỏ, tràng hoa lưỡng tính 5 cánh; nhị 5, bao phấn có tại hình giùi; bầu hơi có lông.",
+      "quả": "Quả bế, hình trụ, có lông.",
+      "mùa hoa": "tháng 2",
+      "mùa quả": "tháng 7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Đại bi (Blumea DC.) ở Việt Nam hiện đã biết có 32 loài. Loài Đại bị lá xẻ trên đây có phạm vi phân bố tương đối rộng, rải rác từ các tỉnh miền núi xuống đến trung du và cả ở đồng bằng. Đã ghi nhận được về phân bố ở các tỉnh sau: Hà Giang (Bắc Quang), Tuyên Quang (Nà Hang; Chiêm Hoá); Bắc Cạn, Thái Nguyên (Đại Từ), Quảng Ninh (Hoành Bồ), Phú Thọ (Đoan Hùng), ngoại thành Hà Nội, Hà Tây (Ba Vì, Chương Mỹ), Ninh Bình (Cúc Phương, Hoa Lư), Thừa Thiên Huế (A Lưới), Khánh Hoà, Kom Tum (Ngọc Linh; Đắc Glei, Kon Plông), Gia Lai (Mang Yang), Đắc Lắc (Krông Pắc), Lâm Đồng (Đơn Dương, Lạc Dương)… Trên thế giới, loài này có ở Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia và Indonesia.",
+      "Đặc điểm sinh trưởng": "Đại bị lá xẻ là cây sống một năm, thường mọc từ hạt vào đầu mùa xuân. Cây sinh trưởng nhanh, sau khoảng 3 – 4 tháng bắt đầu có hoa quả, sau đó tàn lụi. Ở vùng núi có độ cao trên 1000 m, cây có thể tồn tại đến tận tháng 7 – 8."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cành lá."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa có tài liệu nghiên cứu về thành phần hóa học. Các nghiên cứu chủ yếu tập trung vào loài đại bi [Cây thuốc và Động vật làm thuốc ở Việt Nam, tập I, tr, 722].",
+      "Các hợp chất": "Từ loài B.eriantha DC., người ta đã phân lập được các hợp chất flavon và nghiên cứu thành phần chủ yếu của tinh dầu là d – carvotanaceton và crianthin (C20H2,0) [The wealth of raw material in India, 1948)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Đại bị lá lượn có vị cay, tính ấm, mùi thơm. Có tác dụng giải cảm sốt, tiêu sưng tấy, làm tan máu ứ, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đại bi lá lượn được dùng chữa cảm cúm, sốt, phong thấp, mẩn ngứa, mày đay, viêm tấy đau. Ngày dùng 20 – 40g, sắc uống.",
+      "được_dùng": "Dùng ngoài lá nấu nước xông rửa hay và xát.",
+      "chữa": "Chữa cảm cúm: Đại bị lá lượn, lá bạch đàn (hay lá tràm), cỏ sả, mỗi thứ một nắm, sắc uống và xông. Chữa phong thấp, đau xương hay bị thương sưng đau: Đại bị lá lượn, chân chim, cốt toái bổ, huyết giác, mỗi vị 12g. Sắc uống ngày một thang. Chữa mẩn ngứa, mày đay: Dùng lá đại bị lá lượn nấu nước xông rửa hay vò nát lá và xát."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

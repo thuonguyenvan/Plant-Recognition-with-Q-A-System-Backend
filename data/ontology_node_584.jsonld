@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vối rừng",
+      "ten_khac": "Vối rừng",
+      "ten_khoa_hoc": "Syzygium cumini (L.) Skells",
+      "ma_taxon": "169518",
+      "ho": "Myrtaceae (Sim)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to.",
+      "thân": "Thân có vỏ dày, cành dẹt sau hình trụ, màu trắng mốc.",
+      "lá": "Lá mọc đối, hình trái xoan hay hình trứng, dài 8 – 10 cm, rộng 3-9 cm, gốc tròn hơi thuôn, đầu tù có mũi nhọn ngắn, mặt trên màu lục sẫm bóng, mặt dưới nhạt; lá già mỏng, màu nâu nhạt, có tuyến mờ ở mặt dưới; cuống lá dài 1 – 2 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ những lá đã rụng thành chuỳ thưa; hoa màu trắng; đài có răng nhăn nheo; tràng có 4-5 cánh dính nhau thành một khối hình vuông; nhị rất nhiều; bầu ẩn sâu trong dài.",
+      "quả": "Quả thuôn, hơi cong, lõm ở đỉnh; hạt 1 hình tròn.",
+      "mùa hoa": "tháng 3-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Vối rừng có nguồn gốc ở vùng cận nhiệt đới Himalaya. Hiện nay, cây mọc tự nhiên và được trồng rộng rãi ở vùng nhiệt đới Nam Á và Đông Nam Á, như Ân Độ, Xrilanca, Malaysia, Thái Lan, Philippin, Campuchia, Australia và Việt Nam. Ở Việt Nam, cây phân bố chủ yếu ở các tỉnh phía nam, từ Quảng Nam, Tây Nguyên đến vùng đồng bằng sông Cửu Long. Vối rừng thuộc loại cây gỗ lớn, phân cành sớm và nhiều, ưa sáng, sống được trên mọi loại đất. Ở vùng núi thấp và trung du, cây mọc ở gần các bờ khe suối hoặc ven rừng thứ sinh gần nguồn nước. Tuy nhiên, cây có khả năng chịu hạn tốt khi đã trường thành. Ở một số nơi thuộc Ấn Độ hay Xrilanca, cây sống được cả ở những khu vực lượng mưa một năm chỉ vào khoảng 1000 mm. Vối rừng ra hoa quả nhiều. Mùa hoa quả của cây có thể thay đổi tuỳ theo vùng. Ví dụ ở Philippin, từ tháng 3 đến tháng 7; ở Java, tháng 7-11. Việt Nam: tháng 3-8. Hoa thụ phấn chủ yếu nhờ côn trùng. Cây mọc từ hạt, sau 7-8 năm mới bắt đầu có hoa quả, còn ở cây trồng từ cành chiết phải sau 2 – 3 năm. Vối rừng có hoa quả nhiều trong vòng 40 năm. Quần thể cây trồng có nhiều giống phân biệt với nhau bằng quả, khi chín màu tím đen, hay hơi trắng. Cây trồng ở Philippin và Indonesia chủ yếu để lấy quả chín ăn.",
+      "Đặc điểm sinh trưởng": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, vỏ thân, thu hái quanh năm. Còn dùng quả."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần ăn được của quả chứa 83,7% nước, 0,7% protein, 0,3% chất béo, 0,9% sợi, 14% carbonhydrat, 0,4% tro, các chất vô cơ.",
+      "gồm chất": "Các vitamin gồm vitamin A, thiamin, riboflavin, acid nicotinic, vitamin C, cholin, acid folic, glucose, fructose là 2 đường chủ yếu trong quả chín, không có sacctose, acid malic 0,59%, acid oxalic ít.",
+      "tinh dầu chứa": "Lá vối rừng chứa protein, tanin, tinh dầu có mùi dễ chịu. Tình dầu gồm terpen, dipenten…",
+      "chứa": "Hạt vối rừng chứa protein, tanin, acid ellagic, galic.",
+      "các hoạt chất": "Rễ vối rừng chó cahuwas các flavonoid như myricetin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ thân, vỏ cành to và lá vối rừng có vị cay, đắng, the, chát, tính ấm, vào kinh tỳ, vị, có tác dụng lợi tỳ vị, tiêu thực, khử ứ trệ, long đờm suyễn, táo thấp. Quả có vị chua, có tác dụng nhuận phế, chỉ khái, tinh suyễn, lợi tiêu hoá, lợi tiểu và thông trung tiện."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân, vỏ cành to vối rừng chữa đau bụng, đầy chướng, ăn không tiêu, táo bón, nôn mửa, lỵ, tiêu chảy.",
+      "được_dùng": "Vỏ vối rừng thường vẫn được đùng thay thế vị hậu phác (Magnolia officinalis Rehd. et Wils.) và gọi là hậu phác nam. Ngày 8 – 12 g, sắc uống, hoặc dùng tươi ép nước uống. Lá vối rừng cũng có thể nấu nước uống như lá vối, giúp tiêu hoá tốt. Dịch ép lá tươi có tác dụng làm săn se để chữa lỵ. Còn dùng chữa đái tháo đường. Ngày 4 – 10g sắc uống. Ở Campuchia, người ta cho quả vối rừng ngon hơn mận, gioi và được bán ở chợ. Hạt quả dược dùng chữa đái tháo đường. Ngày 4 – 8 g, phơi khô tán bột hoặc sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa đau bụng, đầy chướng, ăn không tiêu, táo bón:  Vỏ vối rừng 8 – 12 g sắc uống, thường phối hợp với các vị thuốc khác như bán hạ chế, chỉ thực hoặc chỉ xác, ô dược hoặc hương phụ, trần bì, cát sâm, lượng mỗi thứ 4 – 8 g, sắc uống. Vỏ vối rừng 12 g, bán hạ chế 8g, cát sâm sao 8g, cam thảo 4g, sắc uống. Vỏ vối rừng, hoàng cầm, mỗi vị 12g, sài hồ 16g, chỉ thực 8g, bán hạ chế 6g, đại hoàng sống 0,4g. sắc uống.  2. Chữa tiêu chảy, nôn mửa:  Vỏ vối rừng, hoắc hương, vỏ rụt, sa nhân, củ riềng già, mỗi vị 4 – 8g, sắc đặc uống. Vỏ vối rừng 12g, nhục đậu khấu, bán hạ chế, hoắc hương, trần bì, mỗi vị 8 g; kha tử 4g, sắc uống.  3. Chữa tiêu chảy, kiết lỵ:  Vỏ vối rừng tươi, cạo bỏ vỏ đen, dùng riêng, hoặc phối hợp với hạt quả vối rừng, lượng bằng nhau, giã nát, ép lấy nước. Người lớn mỗi lần 2 thìa cà phê, trẻ em 1/2 – 1 thìa, ngày 4-5 lần, cách nhau 3-4 giờ. Trẻ nhỏ dùng nửa thìa trộn với sữa cho dễ uống.  4. Chữa sốt rét:  Vỏ vối rừng, lá thường sơn, thảo quả, lá na, dây thần thông, mỗi vị 4 – 8g, sắc uống.  5. Chữa đái tháo đường:  Hạt quả vối rừng, phơi khô, tán thành bột mịn, ngày 4 – 8 g, dùng nhiều ngày. Có thể dùng cả quả có hạt, phơi khô, tán dập, nấu cao. Một phòng thí nghiệm ở Pháp đã sản xuất một loại thuốc làm hạ đường huyết chế từ cao nước của hạt quả vối rừng và giới thiệu là có tác dụng hạ đường huyết mạnh. Có thể dùng lá, hãm hoặc sắc uống thay chè, ngày 4 – 8g."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

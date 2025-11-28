@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cọ xẻ",
+      "ten_khac": "Lá nón xẻ, mật cật, ké tàu.",
+      "ten_khoa_hoc": "Livistona chinensis (Jacq.) R. Br.",
+      "ma_taxon": "199373",
+      "ho": "Cau (Arecaceae)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ, cao 8 – 10m.",
+      "thân": "Thân hình trụ, mọc thẳng do những sẹo của cuống lá để lại hình thành.",
+      "lá": "Lá mọc tập trung ở ngọn thân, hình quạt chia nhiều thuỳ hẹp đều, đầu nhọn, hai mặt nhẵn, màu lục bóng ở mặt trên; cuống lá to, dài, có gai dẹt và cong.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành chuỳ phân nhánh 2 – 3 lần, bên ngoài có mo lớn bao bọc; hoa hình cầu, có 3 lá đài xếp lợp, 3 cánh hoa xếp hình van; 6 nhị, chỉ nhị ngắn; bầu hình bầu dục, mỗi ô có 1 noãn.",
+      "quả": "Quả hình bầu dục thuôn, tròn ở hai đầu, dài 2 cm, rộng 1,5 cm, màu lục nhạt, có bao hoa tồn tại; hạt hình trái xoan, đầu tù.",
+      "mùa hoa": "tháng 2 – 4",
+      "mùa quả": "tháng 5 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Livistona R. Br. hiện đã biết ở Việt Nam 4 loài, trong đó có loài cọ xẻ kể trên. Cọ xẻ được trồng rải rác tại một số tỉnh miền núi thấp và trung du phía bắc như: Tuyên Quang, Phú Thọ, Thái Nguyên, Hà Giang, Thanh Hoá và Nghệ An. Tuy vậy hiện không biết rõ về nguồn gốc, bởi loài cây này cũng thấy mọc tự nhiên và được trồng lâu đời ở nước ta. Trên thế giới, cọ xẻ cũng có ở Trung Quốc và Ấn Độ.  Cọ xẻ là ây ưa sáng, có thể sống được trên nhiều loại đất. Tại các địa phương kể trên, thấy cây trồng ở vườn, nương rẫy và thậm chí ở các bờ ruộng nước cây vẫn sinh trưởng phát triển được."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt, rễ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt chứa các triglycerid [CA, 1970; Trung Dược đại từ điển, 1997].",
+      "Các hợp chất": "Đầu năm 2011, Giang Thị Kim Liên và cs đã phân lập được 4 hợp chất gồm Tricin, salicin, stigmasterol glucosid và sacharose.",
+      "triết xuất": "Maure. M. (Brasil) đã phân lập và xác định cầu trúc một betarylan (polysacharid) có nhiều nhóm chế từ nhựa quả.",
+      "đã nghiên cứu": "Tao Yuan và cs đã phân lập và xác định cấu trúc 14 hợp chất trong quả bao gồm bằng 2 depsidon, một benzopuran 3 stilben, 4 steroid, 3 flavan – 3 – ol và 1 alcaloid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cọ xẻ vị ngọt, chát, tính bình. Hạt còn có vị hơi béo, có công năng làm tiêu ung thư, rễ giảm đau. Sách của Trung Quốc (Chang, 1992: 255) và “Sổ tay thường dùng trung thảo dược” cũng đều ghi: cọ xẻ vị ngọt, chát, tính bình, hạt có công năng kháng nham (chống ung thư), rễ chí thống (giảm đau) [TDTH, 1997. III: 1107]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt cọ xẻ được dùng chữa ung thư mũi, họng, thực quản, bệnh đa bạch cầu (leukemia). Dùng cả hạt sắc kỹ 6 – 10g rồi uống hoặc 30 – 60g nung tồn tính rồi sắc uống.",
+      "được_dùng": "Rễ được dùng để trị hen suyễn và làm dịu đau.",
+      "làm thuốc": "Lá được dùng trị chảy máu tử cung, ngày dùng 15 – 30g cả lá, cả cuống lá, chặt nhỏ, sao đen tồn tính rồi sắc với nước uống.",
+      "có tác dụng": "Quả cọ xẻ nếu đun nước sôi thì thịt quả sần cứng, không ăn được. Để có thể ăn được, lấy nước nóng già (khoảng 70°C) cho quả cọ vào, đậy nắp, ngâm như vậy độ nửa giờ, rồi vớt ra ăn (như cách chân quả trám) ngon và bùi. Cũng có thể muối ăn dẫn như quả cà.",
+      "chữa": "Chữa ung thư họng, thanh quản, thực quản: Hạt cỏ xẻ 60g sắc kỹ (2 giờ) uống, ngày một thang chia làm nhiều lần uống trong ngày. Thường thêm 30 – 90g thịt lợn nạc, cũng nấu kỹ khoảng 2 giờ, rồi ăn như thực phẩm ngày 1 lần, uống cả nước. Có thể dùng cùi quả cọ xẻ 40g, nấu với 40g thịt lợn nạc rồi ăn.",
+      "sắc uống": "Chú ý là hoạt chất có nhiều nhất là ở vỏ hạt [Chang. 1992 733]"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

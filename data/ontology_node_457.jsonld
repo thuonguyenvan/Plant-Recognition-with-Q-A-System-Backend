@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trám hồng",
+      "ten_khac": "Trám hồng, Trám ba cạnh, Cà na Bengal",
+      "ten_khoa_hoc": "Canarium bengalense Roxb.",
+      "ma_taxon": "907503",
+      "ho": "Burseraceae ( Trám )",
+      "Mô tả": {
+        "lá": "dài 8-15cm, rộng 2,5-5cm, thon, không cân, gân phụ nhiều, không lông cuống phụ 2mm",
+        "hoa": "Chuỳ hoa dài bằng hay ngắn hơn lá, đài hình chén có 3 răng; cánh hoa 3, nhị có chỉ nhị dính nhau đến 1/2",
+        "quả": "hạch dài 3,5cm, không lông,nhân nhọn 2 đầu, có 3 cạnh, dày, cứng",
+        "cây": "Cây thân  gỗ cao tới 20m, nhánh non có lông sét.",
+        "thân": "Cây thân  gỗ cao tới 20m, nhánh non có lông sét.",
+        "mọc": "đối",
+        "mùa hoa": "tháng 6",
+        "mùa quả": "tháng 7-12"
+      },
+      "Phân bố": {
+        "phân_bố": "Trám hồng phân bố ở Ấn Độ, Mianma, Lào và Việt Nam.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thanh Hoá"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "An toàn rộng theo đường uống. Chống viêm; Bảo vệ gan; Chống oxy hóa in vivo; Chống oxy hóa in vitro của các hợp chất tinh khiết; Hoạt tính gây độc tế bào ung thư in vitro của một số cao chiết và chất tinh khiết phân lập từ Trám hồng."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Lá và vỏ."
+      },
+      "Thành phần": {
+        "thành phần": "Trong vỏ và thân của Trám hồng có: flavonoid, tanin, tinh dầu, đường khử.",
+        "Các hợp chất": "Flavonoid là nhóm chất chính. Đã phân lập và xác định cấu trúc hóa học của 12 hợp chất lần đầu tiên được tìm thấy ở loài Trám hồng."
+      },
+      "Tính vị": {
+        "Có vị": "Vị chua, ngọt, hơi chát."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả trám dùng để giải khát, chữa ho, chữa viêm họng. Ngoài ra còn có tác dụng giải độc với các trường hợp ngộ độc cá"
+      },
+      "Cách dùng": {},
+      "luu_y": {}
+    }
+  ]
+}

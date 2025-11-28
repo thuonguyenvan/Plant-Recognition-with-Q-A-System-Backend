@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngải diệp",
+      "ten_khac": "Ngải cứu, Cây thuốc cứu, Ngải diệp, Quả sú (Hmông ), Nhả ngải (Tày), Ngỏi (Dao)",
+      "ten_khoa_hoc": "Artemisia vulgaris L.",
+      "ma_taxon": "52856",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 0,4-1m.",
+      "thân": "Thân cành mọc sum sê, có rãnh và lông nhỏ.",
+      "lá": "Lá mọc so le, chẻ lông chim, phiến men theo cuống đến tận gốc, dính vào thân như có bẹ, các thùy hình mác hẹp, đầu nhọn, mặt trên màu lục sẫm, mặt dưới phủ đầy lông trắng.",
+      "hoa": "Hoa mọc ở ngọn thân và đầu cành thành chùm kép, mang nhiều đầu nhỏ, màu vàng lục nhạt; tổng bao gồm những lá bắc nguyên giống như những vảy có lông; đầu mọc chúc xuống cùng phía, hình trứng cụt, mang hoa cái hoặc hoa lưỡng tính trên cùng 1 cụm hoặc những cụm khác nhau; thường hoa cái chiếm nhiều hơn; hoa không có mào lông, tràng hoa cái có ống mảnh, cụt hoặc có hai răng ở đầu, tràng hoa lưỡng tính hình phễu, có 5 thùy uốn cong ra phía ngoài; nhị 5.",
+      "quả": "Quả bế, thuôn nhỏ, không có túm lông.",
+      "mọc": "Toàn cây có mùi thơm hắc.",
+      "mùa hoa": "tháng 10-12.",
+      "mùa quả": "tháng 10-12."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây ngải cứu chứa tinh dầu với hàm lượng 0,2-0,34%.",
+      "gồm chất": "Thành phần chủ yếu tinh dầu là các monoterpen và sesquiterpen.",
+      "Các hợp chất": "Gồm 1,8 cineol, camphor, terpinen 4 ol, pinen."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ngải cứu có vị đắng, mùi thơm, tính ấm và ba kinh can, tỳ, thận, có tác dụng điều hòa khí huyết, trừ hàn thấp, ôn kinh, an thai, giảm đau, cầm máu, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngải cứu được dùng làm thuốc điều kinh: Một tuần lễ trước dự kỳ có kinh, uống mỗi ngày từ 6-12g (tối đa 20g), sắc với nước hay hãm với nước sôi như hãm chè, chia làm 3 lần uống trong ngày. Có thể uống dưới dạng thuốc bột (5-10g) hay dưới dạng thuốc cao đặc 1-4g. Nếu có thai, thuốc không gây sẩy thai vì không có tác dụng kích thích đối với tử cung có thai.  Ngoài công dụng điều kinh, ngải cứu còn được dùng làm thuốc, giúp sự tiêu hóa, chữa đau bụng, nôn mửa, thuốc giun, sốt rét.",
+      "làm thuốc": "Thuốc chữa kinh nguyệt kéo dài, máu ra nhiều, người mệt mỏi, đi đứng mệt yếu: Hàng tháng đến ngày bắt đầu hành kinh và cả những ngày đang có kinh, uống sáng một lần, chiều một lần theo đơn thuốc sau đây: Lá ngải cứu khô 10g, thêm 200ml nước, cô còn 100ml, thêm ít đường cho dễ uống.",
+      "chữa": "Thuốc an thai (chữa đang có thai, đau bụng, chảy máu): Lá ngải cứu 16g, tía tô 16g, nước 600ml, sắc đặc còn 100ml. Thêm ít đường vào cho dễ uống. Chia làm 3-4 lần uống trong ngày.",
+      "sắc uống": "Chữa ho: Lá ngải cứu, lá nguyệt bạch, cây bọ mắm, mỗi thứ một nắm; trà ngon, đủ pha một ấm, gừng 3 lát. Sắc uống ngày một thang.",
+      "giã nát": "Chữa đau lưng cấp: Lá ngải cứu sam rượu đắp ấm tại chỗ",
+      "có tác dụng": "Thuốc xoa bóp chỗ phong thấp: Ngải cứu và phèn chua 2 vị cùng sao lẫn rồi đắp vào chỗ đau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ngải cứu mọc hoang nhiều nơi ở nước ta, còn thấy mọc ở nhiều nước khác ở Châu Á, cả Châu Âu nữa. Ở nước ta một số gia đình trồng ngải cứu có tính chất quy mô nhỏ quanh nhà, chưa thấy trồng đại trà.",
+      "phơi khô": "thường hái cành và lá vào tháng 6 (gần tương ứng với tết mồng 5 tháng 5 âm lịch), phơi khô trong dâm mát.",
+      "làm thuốc": "Phần trên mặt đất thu hái khi cây có hoa, dùng tươi hay phơi khô trong râm.",
+      "có tác dụng": "Ngải diệp sao: Dùng lửa nhỏ, sao lá ngải cho khô, hơi vàng",
+      "sắc uống": "Ngải diệp sao cháy: Lấy lá ngải cho vào nồi, sao đến khi có màu đen, vảy ít nước để trừ hỏa độc",
+      "giã nát": "Ngải diệp chích mật: Lá ngải 10kg, Mật ong 2kg. Đem mật ong pha loãng, đun sôi, cho lá ngải vào đảo đều cho đến khi khô vàng, sờ khôn dính tay là được.",
+      "sắc nước uống": "Ngải diệp chưng với rượu, giấm, gừng, muối. Lá ngải 10kg, Rượu 1kg, Giấm 1kg, Gừng tươi 20kg, Muối ăn 80g. Đem gừng rửa sạch thái lát rồi giã, vắt lấy nước cốt, làm vài lần như vậy. Hòa muối vào nước gừng rồi trộn với rượu và giấm. Đem hỗn hợp dịch này trộn với lá ngải, ủ 1 giờ cho mềm rồi chưng 1 giờ. Phơi khô."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

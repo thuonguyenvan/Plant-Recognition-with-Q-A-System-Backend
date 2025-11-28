@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cơm cháy",
+      "ten_khac": "Cơm cháy, Thiết đả, Sóc dịch, Thuốc mọi",
+      "ten_khoa_hoc": "Sambucus javanica Reinw. ex Blume",
+      "ma_taxon": "474166",
+      "ho": "Caprifoliaceae (Kim ngân)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 1,5-7m.",
+      "thân": "Cành nhẵn, màu lục nhạt.",
+      "lá": "Lá mọc đối, mềm, thường có lá kèm.  Kép lông chim lẻ với 1-4 đôi lá chét không cuống hay cuống nhỏ, hình mác, phía cuống lệch, mép có răng cưa nhỏ, dài đến 4-7cm, rộng 2,5cm, nhẵn, cuống hơi có bẹ.",
+      "hoa": "Hoa nhỏ màu trắng mọc thành xim kép nom giống một lần đường kính 10-30cm, với 2-6 gọng chính, những gọng này chia đôi nhiều lần, mang hoa không cuống. Hoa mẫu 5, tràng hình bánh xe, bao phấn hướng ngoài.",
+      "quả": "Quả mọng hình cầu đường kính 2-3mm chứa hai ba hạt dẹt"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy tài liệu nghiên cứu về cây cơm cháy. Nhưng người ta đã nghiên cứu thấy trong hoa cây Sambucus nigra L. (Sureau noir, sureau commun) có 0,32% tinh dầu mùi hắc của hoa, chất nhầy, nhựa và tanin.",
+      "quả": "Trong quả Sambucus nigra có đường, axit malic, chất màu đỏ tím,",
+      "vỏ": "trong vỏ Sambucus nigra có một ancaloit gọi là sambuxin, cholin, một saponin, một ít chất gần giống xicutin, một heterozit gọi là sambunigrin và một lượng rất cao kali nitrat",
+      "Các hợp chất": "Sambunigrin là một heterozit xyanogenetic do Guignard phát hiện vào năm 1905 và được Bourquelot và Danjou chiết ra cũng vào năm 1905. Đây là chất đồng phân với prulaurazin, tương ứng với axit phenyglycolic phải. Có trong vỏ, trong lá, trong hoa và quả xanh"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tại một số vùng người ta dùng cành và lá cây cơm cháy tắm cho phụ nữ mới sinh.",
+      "quả": "Quả làm thuốc lọc máu, thông tiểu và nhuận tràng",
+      "hoa": "Hoa được dùng làm thuốc lợi tiểu, làm ra mồ hôi. Dùng dưới dạng thuốc sắc, thuốc pha hay xông",
+      "quả": "Quả dùng ngâm rượu, uống làm thuốc nhuận tẩy độc cơ thể, chữa lỵ và thấp khớp",
+      "vỏ": "Vỏ dùng làm thuốc nhuận và thông tiểu",
+      "được_dùng": "Ngày dùng với liều 10-12g hoa, quả hoặc vỏ dưới dạng thuốc sắc. Nếu dùng với liều 3g/1kg thể trọng có thể đái nhiều quá, ỉa lỏng và nôn mửa"
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Cây mọc hoang dại và được trồng ở khắp nước ta, mọc cả ở Lào, Campuchia, những nước khác vùng nhiệt đới và á nhiệt đới, châu Á",
+      "được_dùng": "Người ta dùng lá, vỏ hoa và quả. Có thể thu hái quanh năm lá và vỏ nhưng hoa và quả phải thu hái vào mùa hè và thu",
+      "phơi khô": "Dùng tươi hay phơi hoặc sấy khô, không phải chế biến gì khác"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

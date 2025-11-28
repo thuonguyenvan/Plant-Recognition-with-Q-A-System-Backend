@@ -1,0 +1,207 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Trang nước",
+            "ten_khac": "Trang nước, Thủy nữ",
+            "ten_khoa_hoc": "Nymphoides indicum (L.) Kuntze",
+            "ma_taxon": "165759",
+            "ho": "Trang (Menyanthaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thảo, mọc nổi trên mặt nước.",
+            "thân": "Thân dài khoảng 0,3m, không phân nhánh, bén rễ ở những mấu.",
+            "lá": "Lá mọc so le, dài 10 cm, rộng 10 – 25 cm, hình tim tròn, đầu tù, gân toả hình chân vịt không rõ, mép nguyên, có cuống.",
+            "hoa": "Cụm hoa nhỏ mọc ở nhọn thân; hoa màu trắng, có cuống dài, đài có 5 răng nhỏ, tràng hình bánh xe, có ống ngắn, 5 cánh có viền tua ở mép mặt trong.; nhị 5, đính ở ống tràng; bầu 1 ô, đầu nhụy chia 2 thùy rộng.",
+            "quả": "Quả nang, dài khoảng 1,2 cm, hạt nhiều, dày, hình thấu kính.",
+            "mùa hoa": "tháng 9 – 10",
+            "mùa quả": "tháng 11-12."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Họ Menyanthaceae chỉ có 2 chi là Nymphoides Hill (6 loài) và Villarsia Vent. (1 loài) ở Việt Nam. Trang là loại cây nhiệt đới, phân bố rộng khắp ở Ấn Độ, các nước Đông – Nam Á, Australia và cả phía nam Trung Quốc.  Ở Việt Nam, trang cũng phân bố khắp các địa phương, từ vùng núi thấp, đến trung du và đồng bằng. Trang thuộc cây thuỷ sinh, thường sống ở mỗi trường nước nóng và lặng, trong các đầm phả, ao hồ, ruộng nước hoặc kênh mương. Khi nước cạn, cây có thể tồn tại một thời gian trên lớp bùn nhão.",
+            "Bộ phận dùng": "Toàn cây."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": null
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Cây có chứa nhóm ceton như rutin, Isoquercitrin, L-arabinopyranosa (1 – 6) D – glucopyranosa – 3 – quercetin. Ngoài ra còn có các triterpen như các acid ursolic, betulinic, oleanolic, β – amyrenol và β – sitosterol."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Cây trang nước có vị ngọt, tính lạnh, không độc, có tác dụng thanh nhiệt, lợi tiểu tiện."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Cây trang nước được dùng chữa sốt nóng rét, giã cây tươi vắt lấy nước cốt uống.",
+            "chữa": "Để trị đơn độc sưng tấy, dùng lá tươi giã lấy nước uống, bã đắp chỗ sưng."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/thach-hoc.html",
+            "ten": "Thạch hộc",
+            "ten_khac": "Thạch hộc, Cỏ vàng, Kẹp thảo, Hoàng thảo cẳng gà",
+            "ten_khoa_hoc": "Dendrobium nobile Lindl.",
+            "ma_taxon": "67756",
+            "ho": "Orchidaceae",
+            "Mô tả": {
+                "@type": "Mô tả",
+                "cây": "Cây thảo phụ sinh.",
+                "thân": "Thân mọc đứng, cao 30 – 60cm, hơi dẹt, có rãnh dọc, chia nhiều đốt gần sít nhau, phía ngọn dày hơn.",
+                "lá": "Lá không cuống, mọc thành hai dãy, thuôn hẹp, dài 8-12 cm, rộng 2 – 2,5 cm, gốc thót lại, đầu tù tròn, gân chính 9 – 11, hai mặt nhẵn.",
+                "hoa": "Cụm hoa mọc ở kẽ những lá đã rụng thành chùm thưa; hoa to, 2 – 4 cái, màu hồng; lá đài 3, thuôn hẹp; cánh hoa 3, mọc xen kẽ, rộng hơn lá đài, cánh môi cuộn hình phễu, đầu nhọn, mép uốn lượn, họng có đốm màu tím sẫm; lá dài và cánh hoa dài bằng nhau, cột thấp, phần phụ vòi vượt hơn phần phụ lưng, bao phấn có nắp."
+            },
+            "Phân bố": {
+                "@type": "Phân bố",
+                "phân_bố": "Dendrobium Sw. là một chi lớn, gồm nhiều loài phân bố rải rác khắp các vùng nhiệt đới và cận nhiệt đới, đặc biệt tập trung từ Đông Á đến Đông Nam Á và Nam Á. Ở Việt Nam, chi này có khoảng 100 loài, nhiều loài có hoa đẹp và được dùng làm thuốc, trong đó có thạch hộc. Trên thế giới, thạch hộc có vùng phân bố tương đối rộng rãi ở nhiều nước thuộc châu Á như Trung Quốc, Việt Nam, Lào, Thái Lan, Ấn Độ, Mianma, Butan, Nepal… Ở Việt Nam, thạch hộc có ở các tỉnh miền núi phía bắc, từ Nghệ An trở ra. Ở miền Nam, cây thường mọc ở một số vùng núi cao từ 1000 m trở lên như Ngọc Linh, Bi Đúp, Langbian… Thạch hộc thường mọc bám (phụ sinh) trên thân các cây gỗ hoặc trên đá ở các loại hình rừng kín thường xanh và rừng cây lá rộng ẩm trên núi đá vôi. Cây đặc biệt ưa ẩm và chịu bóng, sinh trưởng phát triển tốt ở những vùng núi có nhiệt độ trung bình năm từ 15 đến 22°c. về mùa đông, cây có thể chịu được ở nhiệt độ dưới 0°c. Tuy nhiên, khi đưa thạch hộc về trồng ở những tỉnh xung quanh Hà Nội, có nền nhiệt độ 22°c, cây vẫn mọc tốt và ra hoa nhiều. Trong tự nhiên, hàng năm sau khi có hoa, vào khoảng tháng 4-5, cây thường mọc lên nhiều chồi thân. Loại chồi này sinh trưởng, phát triển nhanh trong mùa xuân – hè, đến mùa xuân năm sau thường có hoa. Cá biệt có một số chồi ra muộn vào mùa hè – thu, đầu năm sau vẫn chưa thấy ra hoa. Đăc biệt, khi cây có hoa vẫn còn lá xanh. Sự rụng lá hàng loạt chỉ xảy ra trên những nhánh đã ra hoa. Những nhánh này trở nên già cỗi và tàn lụi không còn khả năng ra hoa tiếp lần thứ hai. Việt Nam vốn là nơi có nguồn thạch hộc khá phong phú. Những tỉnh có nhiều loại cây này, như Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên, Tuyên Quang, Yên Bái, Lào Cai, Lai Châu, Sơn La, Hoà Bình… Hiện nay, việc khai thác bừa bãi và nạn phá rừng đã làm cho trữ lượng của cây bị giảm sút và hiếm dần. Thạch hộc đã được đưa vào Sách Đỏ Việt Nam (1996).",
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Cao Bằng"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Lạng Sơn"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Bắc Cạn"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Thái Nguyên"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Tuyên Quang"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Yên Bái"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Lào Cai"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Lai Châu"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Sơn La"
+                            }
+                        },
+                        {
+                            "@type": "schema:Place",
+                            "tỉnh": {
+                                "tên": "Hoà Bình"
+                            }
+                        }
+                    ]
+                }
+            },
+            "Thông tin khác": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": ""
+            },
+            "Bộ phận dùng": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Thân một số loài trong chi Dendrobium thu hái vào tháng 6-10, loại bỏ gốc rễ, lá, rửa sạch đất cát, đem đồ qua hơi nước rồi phơi hay sấy khô. Thạch hộc thu mua ở Việt Nam thuộc 2 loài:  Thạch hộc dẹt (Dendrobium nobile Lindl.) hình thoi dài, to bản, mập, màu vàng tươi. – Kim thoa hoàng thảo (D. sp.) hình sợi tròn nhỏ, màu vàng kim loại, mềm. (Thực hành dược khoa, 1972). Dược điển Trung Quốc 1997 (bản in tiếng Anh) dùng nhiều loài làm thạch hộc như D. loddigesii Rolfe, D. fimbriatum Hook. var. oculatum Hook., D. chrysanthum Wall., D. candidum Wall. ex Lindl., D. nobile Lindl."
+            },
+            "Thành phần": {
+                "@type": "Thành phần",
+                "thành phần": "Thạch hộc chứa alcaloid sesquiterpen, dendrobin (alcaloid chính), nobilin, dendro xin. dendramin. dendrin, 8-hydroxydendroxin,  3-hydroxy – 2 – oxodendrobin, 6-hydroxydendroxin.  Hàm lương dendrobin ở cây trồng là 0,58% (ở thân) và 0,6% (lá) và ở cây hoang dại là 3.2% (ở thân), 0.8% (lá) và 0,08% (rễ).  Thạch hộc còn có một số alcaloid bậc 4 như N-methyldendrobinium, N-isopentenyl dendrobinium bromid, dendrobin N-oxyd. N-isopentenyl dendroxinium clorid và N-isopentenyl – 6 – hydroxydendroxinium clorid."
+            },
+            "Tính vị": {
+                "@type": "Tính vị",
+                "Có vị": "Thạch hộc có vị hơi ngọt, mặn, tính hơi lạnh, vào ba kinh: phế, vị, thận, có tác dụng bổ âm, thanh nhiệt, ích vị, sinh tân dịch, chỉ khát, giúp tiêu hóa."
+            },
+            "Công dụng": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Thạch hộc được dùng chữa bệnh sốt nóng, khô cổ, ho, đau họng, khát nước thuộc chứng âm hư, nóng trong, chữa đau lưng và chân tay nhức mỏi, làm thuốc bổ ngũ tạng, chữa hư lao, ra mồ hôi trộm, nam giới thiểu năng sinh dục, di tinh, đau dạ dày ợ chua, sau khỏi bệnh bị hư nhược, gầy yếu, kém ăn. Ngày dùng 8 – 16g dạng thuốc sắc hoặc hoàn tán. Thường phối hợp với các vị thuốc khác. Thạch hộc phối hợp với trần bì, thiên môn, tỳ bà diệp sắc uống chữa ho; với đẳng sâm, sa sâm, câu kỳ, ngưu tất để chữa gầy yếu, đau nhức xương.  Trong y học cổ truyền Trung Quốc, thạch hộc (lược coi là có tác dụng giúp ích cho dạ dày, làm tăng tiết dịch, dưỡng âm, trừ nhiệt, thuốc bổ và tăng sức lực toàn thân, chữa liệt dương, khát nước do âm hư hoặc suy giảm dịch cơ thể, ăn không ngon, buồn nôn, suy nhược cơ thể sau khi bị bệnh nặng, thị lực giảm. Liều dùng : 6 – 12g cây khô, hoặc 15 – 30g cây tươi."
+            },
+            "Cách dùng": {
+                "@type": "Cách dùng",
+                "được_dùng": "Chữa lao lực, gầy yếu, ho, sôi nóng: Thạch hộc 40g; thục địa 50g; khiếm thực 40g; hoài sơn 30g; quả dâu chín, tỳ giải, mỗi vị 20g. Thục địa chưng cách thủy rồi giã nhuyễn. Các dược liệu khác sấy khô, sao vàng, tán bột mịn, trộn chung với thục địa và mật ong làm thành viên. Ngày uống hai lần, mỗi lần 12g.  Chữa hư lao, người gầy mòn: Thạch hộc, đảng sâm, mỗi vị 6g; mạch môn, ngũ vị tử, chích cam thảo, kỷ tử, ngưu tất, đỗ trọng, mỗi vị 4g. Sắc uống ngày một thang.  Chữa bệnh ôn nhiệt, nóng ẩm khô khát, gầy róc: Thạch hộc, mạch môn, huyền sâm, sa sâm nam, mỗi vị 20g. Sắc uống ngày một thang.  Chữa bệnh âm hư hòa bốc, người gầy sạm đen, khô khát, thổ huyết, ra máu mũi: Thạch hộc, sinh địa, thục địa, đan sâm, sa sâm, thiên môn, ngưu tất, mỗi vị 16g; ngũ vị tử 3g. sắc uống ngày một thang.  Chữa suy nhược cơ thể sau khi mắc bệnh nhiễm khuẩn có sốt cao: Thạch hộc, mạch môn, tang diệp, sa sâm, mỗi vị 12g; bạch truật 10g, ngọc trúc 8g, ô mai 6g, ma hoàng 4g. Sắc uống ngày một thang  Chữa suy nhược cơ thể ở người suy nhược thần kinh, tăng huyêí áp, then kỳ hồi phục sau bệnh truyền nhiễm: Thạch hộc, mạch môn, quy bản, kỷ tử, hoài sơn, ngưu tất, thục địa, mỗi vị 12g; thiên môn, quả dâu, mỗi vị 8g. Sắc uống ngày một thang.  Chữa chứng ho, đầy hơi: Thạch hộc 6g; mạch môn, tỳ bà diệp, trần bì, mỗi vị 4g. Sắc uống ngày một thang.  Chữa trẻ em khó thở: Cả cây thạch hộc giã nhỏ, trộn với mật ong, cho uống.  Chữa viêm họng khản tiếng, đau lưng gối, ù tai, hoa mắt, chóng mặt: Thạch hộc, mạch môn, thiên môn, thục dịa, kỷ tử, mỗi vị 12g; a giao, hạt tía tô, bạc hà, ngưu bàng tử, mỗi vị 8g. Sắc uống ngày một thang.  Chữa suy nhược thần kinh, hoa mắt, chóng mặt, nhức đầu, khó ngủ, ù tai, hay quên:  Thạch hộc 12g; câu đằng, long cốt, mỗi vị 16g; kỷ tử, sa sâm, mạch môn, hạ khô thảo, mẫu lệ, mỗi vị 12g; trạch tả, địa cốt bì, cúc hoa, táo nhân, mỗi vị 8g. Sắc uống ngày một thang. Thạch hộc, thục địa, quy bản, kỷ tử, hà thủ ô đương quy, táo nhân, bá tử nhân, khiếm thực kim anh, liên nhục, mỗi vị 12g. Sắc uống ngày một thang. Thạch hộc, thục địa, quy bản, hoài sơn địa cốt bì, hà thủ ô,  đương quy, táo nhân, kim anh, liên nhuc mỗi vị 12g. Sắc uống ngày một thang.  Chữa di mộng tinh:  Thạch hộc, mạch môn, sa sâm, kim anh khiếm thực, liên nhục, mỗi vị 12g; quy bản 8g. Sắc uống ngày một thang. Thạch hộc, kim anh tử, mỗi vị 16g, sắc uống với bột hoài sơn, củ súng, mỗi vị 12g. Chia làm 3 lần trong ngày.  Chữa viêm gan virus cấp tính: Thạch hộc 12g, nhân trần 40g, sinh địa 24g; sừng trâu, chi tử, đan bì, mỗi vị 16g; hoảng liên, đan sâm, huyền sâm, thăng ma, mỗi vị 12g. Sắc uống ngày một thang  Chữa xơ gan cổ trướng: Thạch hộc, nhân trần, mỗi vị 20g; bạch mao căn, sa sâm, sinh địa, mã đề, trạch tả, mỗi vị 12g; chi tỏ 8g; hậu phác, trần bì, bán hạ chế, mỗi vị 6g. Sắc uống ngày, một thang.  Chữa viêm bàng quang mạn tính: Thạch hộc 12g, tóm ngân hoa 20g; tỳ giải, mã đề, mỗi vị 16g; thục địa, sa sâm, ngưu tất, vỏ núc nác, mỗi vị 12g. Sắc uống ngày một thang."
+            },
+            "Lưu ý": {
+                "@type": "luu_y",
+                "luu_y": ""
+            }
+        }
+    ]
+}

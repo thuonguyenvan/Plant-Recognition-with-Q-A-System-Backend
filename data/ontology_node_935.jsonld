@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mã tiền",
+      "ten_khac": "Mã tiền, Củ chi, Mác chèn (Tày), Co bên kho (Thái), Phiên mộc miết",
+      "ten_khoa_hoc": "Strychnos nuxvomica L.",
+      "ma_taxon": "498755",
+      "ho": "Loganiaceae (Mã tiền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Ở nước ta hiện đang khai thác ít nhất hai loài mã tiền:  Cây mã tiền – Strychnos nuxvomica L. là một cây nhỡ, mọc thẳng đứng có vỏ xám, cây non có gai.",
+      "lá": "Lá mọc đối, có lá kèm, cuống ngắn, phiến lá hình bầu dục, hai đầu hơi nhọn, gân lá hình lông chim, nhưng mỗi bên gân chính có một đôi gân phụ chạy dọc theo lá và nổi ở mặt dưới.",
+      "hoa": "Hoa nhỏ, màu hồng, hợp thành xim hình tán đều, lưỡng tính, tràng và đài có 5 cánh, đài hình phễu với 5 răng hình ba cạnh, tiền khai hoa hợp, tràng hình ống, hơi phình ở phía dưới, mặt trong có lông, trên đỉnh chia 5 thùy, so le với lá đài, trong nụ tiền khai hoa van.",
+      "quả": "quả mọng hình cầu, to bằng quả cam, có chứa cơm màu trắng, nhiều hạt hình khuy áo, phôi thẳng đứng, xung quanh có nội nhũ sừng.",
+      "thân": "Các loại mã tiền hiện đang được khai thác ở miền Bắc nước ta hầu hết đều là dây leo, tên khoa học chưa được xác định chắc chắc, chỉ dựa vào hàm lượng ancaloit trong hạt mà khai thác và chỉ mới biết đây là một loài Strychnos sp. Vỏ một loài dây leo này được khai thác với tên hoàng nàn (xem vị này). Mã tiền dây leo có đường kính thân tới 10-15cm, chiều dài thân có thể tới 30-40m."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt mã tiền có 15% manan, 85% ga-lactan. 4-5% chất béo, một heterozìt gọi là loganozit hay loganin (1,5%), rất nhiều ancaloit trong đó chủ yếu là strychnin, bruxin, kết hợp với axit igasuric (axit clorogenic).",
+      "Các hợp chất": "Những ancaloit khác thường gặp là vomixin, struxin, colubrin α và β.",
+      "dấu hiệu đặc trưng": "Tỷ lệ ancaloit toàn phần trong mã tiền thay đổi từ 2,5 đến 5.5%, trong đó strychnin chiếm 43-45%. Mã tiền dùng làm thuốc phải chứa ít nhất 2 đến 3% ancaloit toàn phần, trong đó ít nhất 45% phải là strychnin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mã tiền được dùng cả trong đông y và tây y.",
+      "có tác dụng": "Tây y dùng làm thuốc kích thích thần kinh trung ương, tăng phản xạ của tủy, tăng cường kiện và dinh dưỡng của cơ, dùng chữa tê liệt, tim bị dãn, cơ tim mệt, giảm cường kiện của ruột, đái dầm (vì cơ tròn bọng đái yếu không khép được) và yếu bộ phận sinh dục (strychnin làm tinh trùng được tống ra mạnh). Làm nguyên liệu chiết strychnin.",
+      "được_dùng": "Cồn mã tiền: Mỗi lần uống 8 đến 10 giọt, tối đa 30 giọt. Cao mã tiền: Mỗi lần uống 10 đến 15mg, tối đa 50mg. Nitrat strychnin uống mỗi lần nửa đến một miligam (0,0005-0,001 g), hoặc tiêm 1ml dung dịch 0,1%.",
+      "chữa": "Trong đông y mã tiền được dùng chữa ghẻ và những bệnh ngoài da khó chữa: Tán bột (sao vàng tán nhỏ), trộn với dầu vừng mà bôi lên nơi ghẻ, nơi lở loét, hủi. Dùng trong, mã tiền được xem như một vị thuốc chữa tê thấp, bại liệt, bán thân bất toại, chó dại cắn. Mã tiền dùng trong đông y phải chế biến như phần phân bố thu hái và chế biến đã giới thiệu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mã tiền Strychnos nuxvomica cho tới nay chỉ mới thấy ở miền Nam nước ta. Trước kháng chiến chống Pháp 1946, hầu hết mã tiền ờ miền Bắc đều từ miền Nam đưa ra. Trong kháng chiến, lần đầu tiên, chúng ta khai thác hạt những dây mã tiền ở miền Bắc để chiết lấy strychnin. Hiện nay không những để dùng trong nước mà còn để xuất khẩu nữa.",
+      "phơi khô": "Mã tiền dây leo mọc hoang ở hầu hết các tỉnh miền núi nước ta: Cao Bằng, Lạng Sơn, Hà Tây, Hoà Bình, Hà Giang, Tuyên Quang, Vĩnh Phúc, Phú Thọ, Bắc Giang, Bắc Ninh, Lào Cai, Yên Bái đều có. Tuy nhiên chưa ai đặt vấn đề nghiên cứu trồng cây mã tiền, cho nên chưa rõ điều kiện sống và chăm sóc như thế nào để cho nhiều hoạt chất nhất. Ngoài Việt nam ra, mã tiền còn mọc ở các nước nhiệt đới châu Á, châu Phi, châu Úc. Trước đây (1925, 1926), môi năm ta xuất đi tới hơn 1.000 tấn hạt. Thường quả chín rơi xuống đất, hạt tung ra ngoài ta nhặt về phơi khô. Khi dùng thái mỏng, sấy lại lần nữa rồi tán nhỏ.",
+      "sấy khô": "Trong nhân dân Việt Nam, mã tiền chỉ được sử dụng sau khi chế biến theo một trong mấy cách sau đây:  Ngâm hạt trong nước vo gạo một ngày đêm cho tới khi mềm, lấy ra bóc vỏ, thái mỏng, sấy khô tán nhỏ.",
+      "có tác dụng": "Cho hạt mã tiền vào dầu vừng đun sôi cho tới khi hạt mã tiền nổi lên thì vớt ra ngay (nếu chậm, hạt bị cháy đen, mất tác dụng). Thái nhỏ sấy khô mà dùng.",
+      "giã nát": "Ngâm hạt mã tiền trong nước thường hay nước vo gạo cho tới mềm. Lấy ra bóc vỏ và lông để riêng, nhân đế riêng. Sao vỏ và lông riêng, nhân riêng, rồi tán nhỏ riêng từng thứ. Phương pháp này thường dùng chữa bệnh chó dại."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

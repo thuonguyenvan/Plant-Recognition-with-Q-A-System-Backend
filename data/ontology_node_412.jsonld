@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sương sáo",
+      "ten_khac": "Sương sáo, sương xáo, cây thạch đen, lương phấn thảo",
+      "ten_khoa_hoc": "Mesona chinensis Benth.",
+      "ma_taxon": "344265",
+      "ho": "Hoa môi - Lamiaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây có dạng thân thảo, sống hàng năm, cao từ 40-60cm, ít phân nhánh, cành và thân cây có lông.",
+      "lá": "Lá mọc đối, nguyên, dày, hình trứng hoặc hình thuôn dài dạng trứng, thon hẹp ở gốc, nhọn ở chóp, dài 2-4 (6)cm, rộng 1-1,5cm, mép có răng; cuống dài 0,8-2cm.",
+      "hoa": "Cụm hoa xim ở ngọn cành, dài tới 10 (13)cm, có lá bắc màu hồng ở gốc, hoa có cuống dài, có lông. Đài có lông, 3 răng ở môi trên, tràng có màu trắng hay hồng nhạt, môi trên 3 thuỳ, môi dưới to; bộ nhị thò, chỉ nhị màu tím.",
+      "quả": "Quả bế nhẵn, thuôn, dài 0,7mm.",
+      "mùa hoa": "tháng 7-9",
+      "mùa quả": "tháng 10-12"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Nam Trung Quốc. Ta có trồng ở một số nơi, như Bảo Lộc (Lâm Đồng), Sa Đéc (Đồng Tháp), Châu Đốc (An Giang)… Thu hái cây toàn năm nhưng chủ yếu vào mùa xuân hè, rửa sạch, cắt đoạn, phơi khô để dùng dần."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần cây trên mặt đất – Herba Mesonae Chinenesis. Ở Trung Quốc thường gọi là Lương phấn thảo."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá vò cho ra chất pectrin đen đen."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, nhạt, tính mát; có tác dụng thanh nhiệt giải thử."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở những nơi trồng, người ta dùng thân và lá Sương sán nấu thạch đen ăn cho mát.  Xay cây lá thành bột, thêm nước vào nấu kỹ, lọc lấy nước, thêm ít bột sắn hay bột gạo vào nấu cho sôi lại, để nguội làm thạch mềm màu đen, để cho mau đông, người ta thêm nước tro hoặc hàn the. Khi ăn thạch, thái miếng nhỏ cho vào chén, thêm nước đường, tinh dầu thơm, dùng ăn như các loại thạch khác.  Còn được dùng làm thuốc chữa: 1. Cảm mạo do nắng; 2. Huyết áp cao; 3. Đau cơ và các khớp xương; 4. Đái đường; 5. Viêm gan cấp. Liều dùng 30-60g, dạng thuốc sắc.  Đơn thuốc:  Đái đường: Sương sáo 30g, Biển súc (Rau đắng) 30g, Rung rúc 45g. Đun sôi lấy nước uống ngày một lần.  Nguồn: Từ điển cây thuốc Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

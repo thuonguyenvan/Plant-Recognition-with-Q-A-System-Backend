@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vạn tuế",
+      "ten_khac": "Vạn tuế",
+      "ten_khoa_hoc": "Cycas revoluta Thunb.",
+      "ma_taxon": "129783",
+      "ho": "Cycadaceae (Thiên tuế)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân hình trụ cao 2-3m",
+      "lá": "lá mọc thành vòng, dài tới 2m, hình lông chim, cuống lá có gai, lá chét dài 15-18cm, rộng 6mm, nhỏ hơn về phía gốc và phía ngọn, gần mọc đối, nguyên, nhẵn, hình sợi chỉ, mũi có gai đơn, mép cuốn lại, có gân lồi.",
+      "hoa": "Nón đực hẹp, dài 218cm, rộng 4cm, nhị thưa, hơi lợp, hình mũi mác hẹp, dài 30cm, rộng 6-8mm, gần hình long thuyền, ở phía trên mang bao phấn dọc theo mép. Nón cái gồm những lá noãn dài 20cm có lông màu trắng hơi vàng có phần không sinh sản rộng chia thành nhiều đài hẹp có ngọn cong và mũi nhọn cứng; noãn có lông.",
+      "quả": "Hạt hình trái xoan dẹt, thoạt tiên có lông rồi nhẵn, màu da cam dài 3cm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có sosetsuflavon C31H20O10(H2O) độ chảy 263-264oC, hinokiflavon C30H20O10, 2-3 dihydrohinokiflavon C30H20O10, amentoflavon C30H18O10, 2-3 dihydroamentoflavon C30H20O10(Geiger H-Phytochemistry, 1971, 10, 1936, Anil K và cộng sự Indian J. Chem 1973, 12, 1209) Trong hạt có cycasin, neocycasin A, B, C, D, E, F, G (Nhật hoa tổng lãm 1964, 38, 9813988), một lượng nhỏ macrozamin. Tất cảnhững chất trên đều có nhân cơ bản là hydroxyazoxymetan. Ngoài ra còn có cholin, trigonellin (C.A 1961, 55, 703h và 703f, C.A 1970, 73, 127758r)"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ lá có vị ngọt, tính ôn, có tác dụng thu liễm, cầm máu, giảm đau. Hạt có độc, có tác dụng cố tinh, sáp đới (làm cho tinh khí lâu xuất sạch khí hư) Hiện nay thường dùng lá chữa mọi chứng chảy máu, máu cam, chữa lỵ, chữa những trường hợp đau nhức như đau dạ dày, đau lưng, đau nhức ở khớp xương. Hạt dùng trong những trường hợp hoạt tinh, khí hư, bị thương đau đớn. Ngày dùng 12-40g lá đốt thành than cho uống hay sắc với nước mà uống. Ngày dùng 1-2 hạt sắc nước uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Thường trồng làm cảnh ở các đình chừa nước ta. Còn mọc và được trồng ở nhiều nước nhiệt đới Vạn tuế có ghi dùng làm thuốc trong “Bản thảo cương mục thập di” với tên “thiết thụ” trong “Thực vật danh thực đồ khảo” với tên “Phong mao tiêu”. Người ta dùng làm thuốc lá tươi hay phơi khô, thu hái gần như quanh năm. Hạt cũng dùng làm thuốc, thu hái vào hạ và thu."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Con rươi",
+      "ten_khac": "Con rươi còn gọi là Paloto, Rồng đất",
+      "ten_khoa_hoc": "Eunice viridis",
+      "ma_taxon": "944303",
+      "ho": "Rươi - Nereidae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Rươi được biết đến không chỉ là một thực phẩm ngon, bổ dưỡng mà còn là một vị thuốc quý.  Rươi là một loại giun sống dưới nước bơi dễ dàng trong nước.",
+      "thân": "Rươi trưởng thành dài 60-70mm, bề ngang chừng 5-6mm. Thân hình dẹp với hơn 50 đốt màu hồng, xanh nhạt, nâu nhạt hay màu trắng.",
+      "đầu": "Đầu rươi tương đối nhỏ, nhưng mắt lại to.",
+      "mặt": "Phần trước của rươi to hơn phần sau trong khi các dốt lại ngắn hơn. Cơ thể rươi rất đối xứng, lưng và bụng phân biệt rõ ràng.",
+      "mọc": "Rươi sống quanh năm dưới đất, trong lớp bùn đáy sông hay trong các ruộng nước. Môi trường sống thích hợp cho rươi là nước phải thật nhạt. Khi đến thời kỳ sinh sản rươi chui ra khỏi hang, phần sau chứa đầy tế bào sinh dục đứt lìa khỏi phần trước và trôi nhanh lên mặt nước. Chúng bơi tung tăng đây đó, phóng ra vô số trứng hay tinh trùng làm cho mặt nước có màu trắng đục như sữa. Trứng tinh trùng kết hợp với nhau thành một thế hệ mới. Trong khi đó phần đầu của rươi vẫn sống dưới hang đào sâu đến 30-40cm để tái tạo phần đuôi. Phải đến 1 năm rươi mơi trở lại tình trạng cũ. Lúc đó phần sau của vô vàn con rươi, đứt ra, trôi lên mặt nước khoảng tử 10 giờ đêm đến 4 giờ sáng để hoàn thành chức năng sinh sản gọi là “hiện tượng Swarming”. Đó chính là lúc vớt rươi vì chúng nhiều vô kể nếu không rươi sẽ chết và chìm xuống đáy sông.  Có khoảng 500 loài rươi, được chia thành 42 chi, chủ yếu là các loài sống ở biển và nước lợ. Tên gọi phổ biến của nó theo tiếng Việt là Rươi, hay theo dân gian thì người ta còn gọi nó là rồng đất."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ở nước ta rươi thường sống ở các vùng ven sông hoặc các cánh đồng ngập nước do nước sông tràn vào thuộc các tỉnh đồng bằng Bắc Bộ như Hải Dương, Hải Phòng, Thái Bình.  Rươi thích hợp ở nhiệt độ khá lạnh, khoảng tháng 9 tháng 10 âm lịch, cho nên khi vớt rươi đem bán người ta phải bảo quản rươi trong nước đá để tan."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo phân tích của các nhà khoa học, cứ 100g rươi có chứa 81,9g nước, 12,4g protit, 4,4g lipit, 1,3g tro, cung cấp cho cơ thể 92 calo. Để dễ hiểu hơn có thể so sánh thành phần dinh dưỡng của rươi với thịt bê. Trong thịt bê nạc với khối lượng tương tự có chứa 78,2g nước, 20g protit, 0,5g lipit, 1,3g tro cung cấp được 87calo. Như vậy, thậm chí rươi còn chứa nhiều chất dinh dưỡng hơn thịt bê nếu tính theo lượng bằng nhau. Ngoài ra, trong rươi còn có chứa nhiều loại chất khoáng khác như canxi (66mg%), photpho (57mg%), sắt (1,8mg%)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": null
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Dược tính của món rươi phần nhiều đến từ vỏ quýt. Vỏ quýt được dùng rất phổ biến trong Đông y với tên gọi Trần bì. Cũng theo Đông y, vỏ quýt có vị cay, đắng, the, mùi thơm, tính ấm. Tác dụng điều khí, hóa đờm, tiêu chảy, kém ăn, khó tiêu…"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Kiêng kỵ  Người có bệnh hen tránh ăn rươi có thể vì rươu có chất gây nên cơn hen. Đạm trong rươi rất dễ gây dị ứng, bởi vậy những người có cơ địa dị ứng hoặc đã từng dị ứng khi ăn hải sản không nên ăn rươi. Những người đã từng một lần bị ngộ độc rươi, không bao giờ nên ăn tiếp món này lần hai. Vì ngộ độc lần sau bao giờ cũng nặng và nguy hiểm hơn lần trước, rất nguy hiểm. Bà bầu không nên đụng tới món này vì có thể gây khó tiêu, sình bụng, không có lợi cho tiêu hóa. Ảnh hưởng không tốt đến em bé.  Tham khảo:  Cách chọn rươi ngon?  Rươi còn tươi ngon là những con lớn, thân mập mạp, màu đỏ, còn ngọ nguậy. Kinh nghiệm mua rươi tươi, mới là chỉ lấy những con còn khỏe ở phía trên, vì đa số rươi phía dưới thường bị đè vỡ bụng, có mùi tanh. Rươi sắp chết là những con nhỏ, gầy, có màu xanh, bò yếu hoặc lâu lâu mới ngọ nguậy. Chú ý, khi rửa rươi chỉ cần thả rươi vào chậu nước, dùng tay đẩy nhẹ để rươi khỏi bị vỡ bụng. Rửa chừng ba lần cho sạch bớt bùn, rác.  Rươi sạch vớt ra để ráo nước, chuẩn bị “làm lông” để khi ăn không bị ngứa rát cổ. Dùng nước nóng chừng 40 độ C, thả rươi vào, dùng đũa khuấy nhẹ. Khi thấy bùn, chân và lông rươi rụng, nổi lên thì vớt rươi ra và chế biến món ăn."
+    }
+  ]
+}

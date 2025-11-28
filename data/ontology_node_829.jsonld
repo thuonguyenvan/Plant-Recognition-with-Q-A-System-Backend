@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phượng nhỡn thảo",
+      "ten_khac": "Phượng nhỡn thảo",
+      "ten_khoa_hoc": "Ailantus glandulosa Desf",
+      "ma_taxon": "57278",
+      "ho": "Simaroubaceae (Thanh thất )"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cao 20-30m, cành rất tỏa rộng.",
+      "lá": "lá kép lông chim lẻ, có cuống, toàn bộ lá dài 40-50cm, bao gồm 12-15 đôi lá chét dài 4cm, rộng 3,5cm, mép có răng cưa.",
+      "hoa": "Hoa tạp tính hay khác gốc, nhỏ, xanh lục nhạt, mọc thành chuỳ tận cùng ở ngọn cành, dài 10-20cm.",
+      "quả": "quả có cánh lúc đầu xanh lục nhạt sau vàng và cuối cùng đỏ, dài 3-5cm, rộng 1cm, giữa có hạt, quanh có dìa mỏng trông như mắt con phượng, cho nên có tên (phượng nhỡn là mắt phượng)."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong vỏ cây có chất nhựa dầu, một tinh dầu hắc và một tinh dầu thơm, chất nhựa resin và chất nhầy. chất nhầy nhiều đến mức nước sắc nhầy đặc lại gần như thạch.",
+      "gồm chất": "Ngoài ra năm 1933, Wazicky còn thấy trong vỏ một glucozit và một saponozit.",
+      "chứa": "Trong lá có chất độc, có lẽ là chất nhựa gây viêm ống tiêu hoá có thể làm chết súc vật ăn phải lá cây này. Những người ngả (đẵn) cây thường bị viêm tấy và nổi phồng lên da. Mùi khó chịu của cây còn gây ngủ cho người."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ cây được dùng chữa ỉa chảy và chữa lỵ, dưới dạng thuốc sắc hoặc thuốc hãm: ngày dùng 50g vỏ cây khô, thêm 100g nước nóng, đun sôi rồi để nguội từ từ cho đến khi còn vừa nóng uống được. Người uống có thể buồn nôn hay nôn thì giảm liều xuống. Sau 2-3 ngày thấy kết quả.",
+      "trị sán": "Còn dùng trị sán: vỏ khô tán bột, ngày uống 1g bột, liên tục trong 7-8 ngày. Ngày cuối cùng uống một liều dầu tẩy để tống sán.",
+      "chữa ho": "Quả dùng chữa ho, điều kinh. Ngày dùng 5-10g dưới dạng thuốc sắc.",
+      "lá cây": "Lá cây dùng nấu tắm ghẻ hay rửa chốc đầu."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Cây mọc hoang dại phổ biến ở những vùng núi cao tỉnh Lào cai, đặc biệt quanh vùng Sapa. Còn mọc ở Trung Quốc.",
+      "được_trồng": "người ta còn di thực cây này sang một số nước châu Âu dùng làm cây bóng mát đường phố vì cây mọc nhanh, đòi hỏi ít đất.",
+      "gỗ": "Thường người ta dùng gỗ làm đồ dùng vì gỗ đẹp, ít bị mọt do mùi gỗ và hoa.",
+      "dùng": "Làm thuốc người ta dùng vỏ cây, quả và chất nhựa của vỏ."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

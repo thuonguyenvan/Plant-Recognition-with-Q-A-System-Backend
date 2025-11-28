@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lựu",
+      "ten_khac": "Lựu, An thạch lựu, Mác lìu (Tày)",
+      "ten_khoa_hoc": "Punica granatum L.",
+      "ma_taxon": "58300",
+      "ho": "Punicaceae (Lựu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay cây nhỡ, cao 2 – 3 m.",
+      "thân": "Thân màu xám, có vỏ mỏng. Cành mảnh đôi khi có gai.",
+      "lá": "Lá mọc đối, nhưng thường tụ họp thành cụm nhiều lá, cuống ngắn, hình mác thuôn, dài 5 – 6 cm, rộng 1-2 cm, gốc thuôn, đầu tù hoặc hơi nhọn, hai mặt nhẵn, mặt trên sẫm bóng; lá kèm rất nhỏ, hình chỉ.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, màu đỏ hoặc màu vàng, loại màu trắng là bạch lựu; đài 6 phiến dày, màu đỏ nhạt, hàn liền thành ống ngắn ở phần dưới; tràng 6 cảnh mỏng, nhăn nheo, nhị rất nhiều; bầu có 2 tầng, tầng trên 6 – 7 ô, tầng dưới 3 – 4 ô; noãn rất nhiều.",
+      "quả": "Quả mọng, to bằng nắm tay, có đài tồn tại ở đỉnh, khi chín màu vàng đốm đỏ nâu; hạt màu hồng, có vỏ ngoài mọng nước thành một lớp cơm trong, ăn được."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Punica L. được biết đến trước hết là loài lựu cho quả ăn được. Ngoài ra, còn một loài khác là p.protopunica Balf.f mọc hoang dại ở vùng Nam Á hay Trung Á, nhưng ít được nhắc tới. Gần đây, ở Việt Nam cây p.granatum L. var. nana Person được nhập trồng, vì có hoa đẹp, không kết quả, để làm cảnh.  Lựu có nguồn gốc ở Iran và Afganistan, hiện nay được trồng rộng rãi khắp các vùng nhiệt đới và á nhiệt đới, đặc biệt ờ các nước vùng Nam Á, Đông Nam Á, Trung Quốc và Nhật Bản. Ở Việt Nam, lựu cũng là cây ăn quả quen thuộc trong nhân dân. Cây được trồng nhiểu ở các tỉnh phía nam và một số tỉnh ở đồng bằng trung du Bắc Bộ. Cây có biên độ sinh thái rộng, về mùa đông có thể chịu được nhiệt độ -10°C (vùng Trung Á và Trung Quốc) và ở nhiệt độ cao đến 40°C về mùa hè. Tuy nhiên, nhìn chung, cây thích nghi nhất ở khí hậu nóng và ẩm ở vùng nhiệt đới với nhiệt độ trung bình nhất là 24 – 26°C, sống được trên nhiều loại đất, nhất là đất giàu kali (PROSEA, No2, Edible fruits and nuts, 1992; 270 – 271). Lựu là cây ưa sáng, nếu bị che bóng có thể ra nhiều hoa nhưng không đậu quả. Cây rụng lá về mùa đông, tái sinh chủ yếu bằng hạt. Cây chồi rễ cũng là nguồn giống để trồng. Lựu trồng hiện nay gồm nhiều giống. Người ta căn cứ vào màu hoa và quả để phân biệt giữa các giống khác nhau."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Lựu được trồng làm cảnh, lấy quả ăn và làm thuốc. Cây được nhân giống đẻ đàng bằng cành giâm. Cành hóa gỗ 1 năm tuổi, không sâu bệnh, được cắt thành từng đoạn dài 20 – 25 cm và giâm vào đầu xuân. Đến mùa xuân năm sau, đánh đi trồng. Cành non, giâm vào mùa hè cũng có thể ra rễ nếu ươm trong điều kiện độ ẩm cao. Từ rễ lựu, mọc ra những chồi con. Có thể tách những chồi này cùng với một đoạn rễ vào mùa song đem trồng.  Lựu trồng được trên nhiều loại đất; đất màu mỡ, không bị úng ngập là tốt. Khi trồng, đào hố 50x50x50 cm, khoảng cách 2 – 4 m, bón lót 10 – 15 kg phân chuồng và đặt cây. Thời gian đầu, cần làm cỏ, tưới nước, bón thêm phân để cây mau lớn. Sau mỗi vụ thu hoạch quả, cần đốn tỉa và bón thúc. Phân bón chủ yếu là phản hữu cơ các loại. Ngoài ra, có thể bón thêm NPK và vôi bột.  Cây có khả năng chịu hạn, ít bị sâu bệnh, không chịu được úng."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ quả, thường là thạch lựu bì. vỏ cây, vỏ rễ, thịt quả cũng được sử dụng.  Vỏ thân, vỏ rễ, thu hái quanh năm. Đào rễ bóc lấy vỏ, bỏ lõi, phơi hoặc sấy khô. Quả hái vào tháng 7, bóc lấy vỏ quả, bỏ màng trong, sấy khô. Khi dùng đem vỏ khô đồ cho mềm, thái mỏng, sao qua. Còn dùng hoa. Bảo quản nơi khô ráo, không để lâu quá hai năm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ thân, vỏ cành, vỏ rễ có độ 22% chất tanin. Ngoài ra còn có 0,5-0,7% alcaloid toàn phần là pelletierin, isopelletierin, methylpelletierin và pseudopelletierin. Isopelletierin là alcaloid có hoạt tính trị giun cao. Đây là thuốc độc bảng A. Vỏ thân cũng chứa pelletierin và các alcaloid khác nhưng hàm lượng thấp hơn.  Vỏ quả có 28% chất tanin và granatin, acid betulic, acid ursolic và isoquercetin. Dịch quả chứa axit citric, axit malic và các chất đường glucose, fructose, maltose."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và vỏ rễ lựu có vị đắng, chát; tính ôn, có độc, có tác dụng sát trùng, trừ sán, sáp trường, chỉ đới.  Vỏ quả lựu có vị chua, chát, tính ôn, có độc, có tác dụng sáp trường, chỉ huyết, khu trùng. Hoa lựu có vị chua, chát, tính bình, có tác dụng chỉ huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Pelletierin, vỏ rễ và vỏ thân cây lựu đều được dùng làm thuốc diệt sán, nhưng hiện nay pelletierin ít được dùng vì quá độc. Thường vùng vỏ rễ, vỏ thân vì trong vỏ pelletierin ở dạng muối tannat ít độc đối với cơ thể người, lại có hiệu lực diệt sán cao. Dùng vỏ tươi mới thu hoạch vì chứa nhiều hoạt chất có hiệu lực diệt sán, còn đối với vỏ khô, cần ngâm nước vài giờ trước khi pha chế vẫn có hiệu lực diệt sán.  Liều lượng của pelletierin là 0,03 – 0,12g, cho vào nang uống lúc đói. Sau khi uống thuốc nửa giờ, uống thuốc xổ. Không dùng dầu thầu dầu để tránh bị nhiễm độc do hấp thụ vào đường ruột.  Liều dùng của vỏ rễ hoặc vỏ thân, 30 – 40g, dưới dạng nước sắc. Vỏ rễ hoặc vỏ thân chặt nhỏ ngâm vào 750 ml nước trong 6 giờ, sắc lấy 500 ml. Lọc bỏ bã. Uống vào buổi sáng lúc đói, chia làm 2-3 lần, cách nhau nửa giờ. Hai giờ sau khi uống thuốc, dùng một liều thuốc tẩy magie sulfat (không dùng dầu thầu dầu). Nằm nghỉ. Đợi lúc buồn đi ngoài, nhúng hẳn mông vào chậu nước ấm để sán ra hết. Phụ nữ có thai và trẻ em không được dùng.  Ngoài công dụng trị sán, vỏ rễ và vỏ thân còn được dùng làm thuốc ngậm chữa đau răng.  Vỏ quả lựu chữa tiêu chảy lâu ngày không khỏi. Ngày dùng 15 – 20g sắc với 400 ml nước còn 100 ml thêm đường và tinh dầu thơm cho dễ uống, uống một lần trong ngày. Dùng 7-10 ngày liên tiếp. Có thể pha chế thành dung dịch để bảo quản được lâu theo cách làm sau: vỏ quả lựu 2000g, rửa sạch, cạo bỏ màng trong, cắt nhỏ, cho vào nồi đất hoặc nồi nhôm không dùng nồi sắt hoặc gang vì chất sắt sẽ kết hợp với tanin của vỏ lựu thành tannat sắt có màu đen bẩn. Thêm 10 lít nước, đun sôi, trong vòng nửa giờ, gạn lấy nước thứ nhất. Cho thêm 5 lít nước nữa và đun sôi trong nửa giờ. Lọc bỏ bã, lấy nước thứ hai, hợp 2 nước sắc lại, cô đặc còn 4 lít. Thêm đường cho đủ ngọt và ít tinh dầu thơm. Người lớn uống ngày 4 lần, mỗi lần 2-3 thìa cà phê, uống liền 7-10 ngày.  Ngoài ra, vỏ quả lựu 20g, thái nhỏ, sao vàng, sắc uống với rễ cây phèn đen sao vàng, hạ thổ, chữa kiết lỵ.  Hoa lựu, chữa kiết lỵ, đi ngoài ra máu. Ngày 10 – 20g, dưới dạng nước sắc.  Ở Trung Quốc, hoa lựu nghiền thành bột hòa với dầu vừng, bôi ngoài, chữa bỏng. Bột hoa lựu thổi vào mũi, mỗi lần 0,3g. chữa chảy máu cam.  Ngoài ra, hoa và quả lựu có chất pelargonidin 3,5 diglucosid cho màu đỏ tươi, được dùng làm thuốc nhuộm vải lụa. Ở Ấn Độ, người dân ở đây đã chế một dạng nước từ quả lựu chín giàu vitamin đường và pectin uống khá ngon.  Bài thuốc có lựu  Thuốc diệt sán: Vỏ rễ lựu 40g, đại hoàng 4g, hạt cau 4g, nước 750ml. Sắc đặc còn 300 ml, uống vào sáng sớm lúc đói, chia 2-3 lần. Chữa lỵ tiêu chảy lâu ngày không khỏi: Vỏ quả lựu, đẳng sâm, bạch truật, cam thảo mỗi thứ 5g; bào khương (gừng đã chế) 3g. Sắc nước uống. Chữa kiết lỵ, đi ngoài ra máu: Hoa lựu 50g, rau sam 50g, nhọ nồi 30g, rau má 30g, kim ngân hoa 30g, rễ cúc áo hoa vàng 10g. Tất cả dùng tươi, rửa sạch, cắt nhỏ, nấu với nước 2-3 lần, rồi cô thành cao lỏng, hòa với sirô với tỷ lệ 1:1. Trẻ em 5 tuổi, mỗi lần uống 1-2 thìa cà phê; trên 10 tuổi 2 – 3 thìa, người lớn mỗi lần 4 – 6 thìa cà phê. Ngày dùng 2 lần. Chữa đái sót, đái rắt: Vỏ thân lựu 20g, vỏ rễ dâu 20g, sắc uống.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

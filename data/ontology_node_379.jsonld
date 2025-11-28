@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sài hồ",
+      "ten_khac": "Bắc sài hồ, sài hồ, sà diệp sài hồ, trúc diệp sài hồ.",
+      "ten_khoa_hoc": "Bupleurum chinense DC.",
+      "ma_taxon": "601649",
+      "ho": "Apiaceae ( Hoa tán )",
+      "Mô tả": {
+        "cây": "Sài hồ là cây sống lâu năm, cao 45-70 cm, rễ nhỏ, hình trụ, phân nhánh hoặc không phân nhánh.",
+        "thân": "Thân mọc thẳng, phân nhánh.",
+        "lá": "Lá mọc cách, mép nguyên, hình mác, dài 3-6cm, rộng 6-13cm, đầu lá nhọn, có 7-9 đường gân song song. Lá phía dưới có cuống ngắn, phía trên không có cuống.",
+        "hoa": "Cụm hoa hình tán kép, mọc ở kẽ lá và đầu cành, gồm 3-8 tán đơn không bằng nhau, lá bắc hình mác. Hoa nhỏ màu vàng.",
+        "quả": "Quả hình bầu dục, dài độ 5mm, nhưng góc quả rất rõ, có 3 ống tinh dầu nằm ở mặt tiếp giáp.",
+        "mùa hoa": "tháng 7-10."
+      },
+      "Phân bố": {
+        "phân_bố": "Sài hồ có nguồn gốc ở Nhật Bản và Trung Quốc. Hiện nay, hai đất nước này cũng là nơi trồng nhiều sài hồ nhất. Vào năm 1994, Viện Dược liệu nhập hạt từ hạt giống sài hồ Nhật Bản đã trồng thử ở Trại thuốc Sapa và Tam Đảo. Cây sinh trưởng và phát triển tốt. Tuy nhiên, về chiều cao, cây trồng ở Tam Đảo thấp hơn ở Sapa. Cây trồng ở Sapa đã cho thu hoạch hạt giống và dược liệu."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ đã được phơi khô hoặc sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": "Sài hồ chứa các hợp chất thuốc nhiều nhóm thành phần hóa học, có chừng 0,5% chất saponin, tinh dầu và flavonoid. Trong rễ chứa khoảng 1.69% hàm lượng saponin, hàm lượng cao hay thấp này phụ thuộc vào kích thước của rễ, chứa chủ yếu ở phần vỏ rễ.  Thành phần tinh dầu sài hồ gồm acid pentanoic, acid hexanoic, acid 2-heptenoic, acid octanoic, acid octenoic, acid nonanoic,.. và nhiều thành phần hóa học khác. Hàm lượng tinh dầu là 0.16% trong rễ và 0.05% trong thân.  Lá có nhiều flavoid: kaempferitrin ( kaempferol-3,7-dirhamnosid) và kaempfreol-7-rhamnosid.  Theo như quy định của Dược điển Trung Quốc( bản in Tiếng Anh) 1997 hàm lượng chiết suất trong sài hồ tan trong cồn( chiết nóng ) là 11%."
+      },
+      "Tính vị": {
+        "Có vị": "Sài hồ có vị đắng, mùi thơm, tính mát."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Sài hồ được dùng chữa sốt, nhức đầu, chóng mặt, sốt do thương hàn, sốt rét, ngực bụng đầy trướng, kinh nguyệt không đều.  Trong y học cổ truyền của các nước phương Đông, sài hồ được dùng điều trị sốt, đau và viêm kết hợp với cúm và cảm lạnh, giảm đau trong suốt quá trình điều trị đau tức ngực và vùng hạ sườn, điều trị vô kinh, viêm gan mạn tính, hội chứng hư thận và bệnh tự nhiên miễn dịch. Trong y học dân gian của một số nước, sài hồ chữa điếc, chóng mặt, đái tháo đường, vết thương và nôn mửa."
+      },
+      "Cách dùng": {
+        "được_dùng": "1. Chữa sốt, sốt do hư lao, cảm mạo:  Sài hồ 15g, bán hạ 7g, nhân sâm, sinh khương, cam thảo, đại táo mỗi vị 4g; hoàng cầm 2.5g . Sắc uống mỗi ngày 1 thang Sài hồ 100g, cam thảo 25g. Tán nhỏ, rây bột mịn. Ngày dùng 8g, với 1 bát nước  2. Chữa suy nhược cơ thể ở người có bệnh mạn tính ở phổi và đường tiêu hóa  Sài hồ 10g, đảng sâm 16g, hoài sơn, bạch truật, đại táo mỗi vị 12g, phục linh địa hoàng, bạch thược, đương quy, thàn khúc, bạch chỉ, mạch môn mỗi vị 10g, phòng phong 9g, biển đậu, cát cánh mỗi vị 8g, cam thảo 6g, can khương, quế chi mỗi vị 4g. Tán nhỏ, uống mỗi ngày 20g.  3. Chữa tăng huyết áp ở người trẻ, hoặc trong rối loạn tiền mãn kinh  Sài hồ 8g, xa tiền 16g, sinh địa 14g hoàng cầm, chi tử, trạch tả mỗi vị 12g, long đởm thảo, đương quy, mộc thông mỗi vị 8g, cam thảo 4g. Sắc uống trong một tháng.  4. Chữa suy nhược thần kinh, nhức đầu, chóng mặt, hoa mắt, khó ngủ  Sài hồ 12-16g, chỉ tử, mạn kinh, cúc hoa, táo nhân, bá tử nhân mỗi vị 8-12g.Sắc uống ngày một thang. Sài hồ 12g, đương quy, bạch thược, bạch truật, phục linh,bạc hà mỗi vị 8g, cam thảo 6g, sinh khương 4g. Sắc uống mỗi ngày một thang. Sài bắc,hoàng cầm, bạch truật, phục linh, bạch thược, đại táo, mỗi vị 12g, thanh bì, bạc hà, uất kim, hương phụ, chỉ xác, táo nhân mỗi vị 8g, cảm thảo 6g. Sắc uống ngày một thang.  5. Chữa viêm gan virut mạn tính  Sài hồ, bạch truật, đảng sâm, bạch thược mỗi vị 12g; phục linh, bán hạ chế, mỗi vị 8g; cam thả, trần bì mỗi vị 6g. Sắc ngày uống 1 thang. Sài hood 12g; bạch thược, xuyên khung, đương quy, đại táo mỗi vị 8g; chỉ thực. hậu phác, cam thảo mỗi vị 6g. Sắc uống này một thang. Sài hồ, bạch thược, đương quy, bạch truật, bạch linh mỗi vị 12g; uất kim 8g; cảm thảo 4g, gừng sống 2g. Sắc uống ngày một thang hoặc tán bột uống 20g mỗi ngày."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

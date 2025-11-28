@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch chỉ nam",
+      "ten_khac": "Mát rừng, Bạch chỉ nam",
+      "ten_khoa_hoc": "Millettia pulchra (Colebr. ex Benth.) Kurz",
+      "ma_taxon": "138812",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân bụi , cao 5-7m.",
+      "thân": "Cành có hình trụ khía dọc, lông thô.",
+      "lá": "Lá kép lông chim lẻ, mọc so le gồm 11-17 lá chét hình mác, to dần về phía ngọn, dài 3-9ccm ,mặt trên có lông thưa, mặt dưới lông dày và mượt.",
+      "hoa": "Cụm hoa mọc thành chùm ở kẽ lá gần ngọn, màu tím hồng, đài hình chuông có lông mịn, tràng hoa ít lông hơn , nhị 1 bó , bầu có lông 5- 8 noãn.",
+      "quả": "Quả đậu, hình lưỡi dao dài 4-8cm  màu lục vàng có lông nhỏ. Hạt hình trứng dẹp, có mép dày, màu vàng nhạt.",
+      "mùa hoa": "tháng 5-6",
+      "mùa quả": "tháng 9-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của miền Ðông Dương, mọc hoang và cũng được trồng ở các tỉnh miền núi và trung du. Có thể thu hái rễ quanh năm, thường lấy ở những cây nhỏ. Rửa sạch thái phiến phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bạch chỉ nam chứa (-) maackiain, pterocarpin,(-) sophoranon, và các hợp chất flavonoid(2S)-5,7,4’- trihydroxy -8,3’,5’–triprenylfavanon, 5,7,2’,4’- terahydroxy-6,3’-diprenylisoflavon."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường được chỉ định dùng trị cảm mạo, sốt nóng, bí mồ hôi, ngạt mũi, nhức đầu, sợ gió, chân tay nhức mỏi, phong thấp đau xương, viêm da do dị ứng sơn (sơn ăn) ban trái, đậu mùa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Phong nhiệt mẩn ngứa: Rễ bạch chỉ nam, Đơn kim, Đơn đỏ, mỗi vị 30g, sắc uống. Chữa mụn nhọt, mưng mủ: Bạch chỉ nam 12g, Kim ngân hoa 20g, Hạ khô thảo 12g, Xương bồ 12g, Gai bồ kết 12g, Kinh giới 8g, Hà thủ ô 12g, Vảy tê tê 12g. Các vị thuốc cho vào ấm, đổ 1 lít nước, sắc còn 400ml, người lớn chia 3 lần uống trong ngày, trẻ em tùy theo tuổi, mỗi lần uống 50-100ml ngày uống 2 lần. Đau bụng, kém tiêu, tiêu chảy: Bạch chỉ nam 20g, Trần bì 12g, Hậu phác nam 8g. Sắc uống. Chữa mẩn ngứa dị ứng: Bạch chỉ nam 12g, Kim ngân hoa 12g, Hoa khế tươi 30g, Lá cối xay 12g. Sắc uống ngày 1 thang. Chữa cảm mạo, sốt nóng: Bạch chỉ nam 12g, Bạc hà 8g, Cam thảo đất 12g, Kinh giới 8g, Sài đất 16g, Cát căn 16g. Sắc uống mỗi ngày 1 thang."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

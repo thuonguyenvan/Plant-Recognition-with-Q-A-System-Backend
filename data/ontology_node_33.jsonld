@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Găng trâu",
+      "ten_khac": "Găng trâu, Găng bọt, Găng gáo, Găng ổi, Thanh dương tử, Mạy nghiên pa (Tày), Giằng ghim pẹ (Dao)",
+      "ten_khoa_hoc": "Randia spinosa (Thunb.) Poir.",
+      "ma_taxon": "581804",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, mọc thành bụi, cao 2-8m, phần nhiều cành.",
+      "thân": "Cành non dẹt, màu nâu, cành già tròn, màu nâu xám, có gai dài mọc ngang.",
+      "lá": "Lá mọc đối, nhưng thường mọc tập trung rất sít nhau, phiến hình bầu dục, gốc thuôn, đầu tù hoặc hơi nhọn, dài 2,5-7cm, rộng 1,5-3cm, mép nguyên nhăn nheo, hai mặt nhẵn hoặc hơi có lông ở mặt dưới, mặt trên bóng, lá kèm sớm rụng, cuống lá ngắn.",
+      "hoa": "Hoa mọc riêng lẻ ở kẽ lá, màu vàng; đài 5, nhẵn hơi có lông; tràng 5 cánh rộng, ống tràng rất ngắn; nhị 5 đính ở họng tràng; bầu 2 ô.",
+      "quả": "Quả mọng, hình cầu nhẵn hoặc có múi, có đài tồn tại, nom giống quả ổi, khi chín màu vàng, hạt nhỏ và nhiều.",
+      "mùa hoa": "tháng 4-8.",
+      "mùa quả": "tháng 4-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mọc ở khắp vùng Viễn đông nhiệt đới và Ðông Phi châu nhiệt đới. Phổ biến khắp nước ta, thường trồng làm hàng rào vì cây có nhiều gai. Găng trâu là loại cây bụi gai ưa sáng và chịu hạn tốt, thường mọc trong các trảng cây bụi ở đồi, đất sau nương rẫy. Cây có thể phát triển được trên nhiều loại đất, kể cả nơi đã bị bào mòn nhiều, trơ tầng đá ong cằn cỗi. Bộ rễ khoẻ của cây có thể dài hơn 1m. Cây rụng lá vào mùa đông. Ra hoa quả nhiều hàng năm; tái sinh tự nhiên chủ yếu từ hạt. Ở vùng núi, người ta thường trồng găng trâu vào bờ rào để bảo vệ nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, rễ và vỏ cây. Quả thu hái vào mùa thu, đông, dùng tươi. Rễ và vỏ thu hái quanh năm, dùng tươi hay phơi khô dùng dần."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả găng trâu còn xanh chứa nước 74,1%, protein, đường, carbonhydrat, sợi, các acid (acid citric), tanin.",
+      "Các hợp chất": "Các saponin triterpen trong quả tươi với hàm lượng 2-3%, và quả khô 10%.",
+      "triết xuất": "Từ bột rễ, đã chiết được scopoletin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Găng trâu có tác dụng thông lợi tiêu hoá, hoạt tràng và sát trùng, tiêu tích, chữa tích trệ sinh đau bụng, kiết lỵ, với liều 10 – 16g quả, hay 15 – 30g vỏ cây, sắc uống. Dùng ngoài, quả đem đốt, tán bột, rác vết thương, mụn nhọt, lở loét. Trong y học dân gian của một số nước, quả găng trâu được dùng chống co thắt, trị lỵ và hạn chế sản, làm thuốc độc cho cá và thuốc tẩy rửa. Ở Trung Quốc, nhân dân dùng vỏ cây, rễ và quả găng trâu sắc uống chữa phong thấp và bị thương ứ máu. Ở Ấn Độ, quả găng trâu có một số tác dụng trị bệnh. Vỏ quả phơi khô, tán bột, có tác dụng gây nên và được dùng thay thế ipeca; với liều nhỏ hơn có tác dụng gây buồn nôn, long đờm, làm ra mồ hôi, trị giun sán và gây sẩy thai. Quả có tác dụng làm dịu và chống co thắt, được coi là vị thuốc gia đình tại bệnh khi trẻ con mọc răng. Quả non và rễ tán nhỏ dùng làm bả cá, khi quả chín, tính chất độc giảm đi. Vỏ cây có tác dụng làm săn, trị tiêu chảy và lỵ. Vỏ cây dùng uống và tấn ngoài dạng bột nhão trị thấp khớp, làm giảm đau do vết bầm tím và đau nhức xương khi bị sốt. Rễ có tác dụng diệt và đuổi sâu bọ. Găng trâu có trong thành phần một bài thuốc gồm nhiều dược liệu dùng trị bệnh vê tim nhanh bởi gan. Bài thuốc có găng trâu Chữa mụn nhọt, lở loét: Quả găng trâu bổ đôi, bỏ hột, cho vôi vào, lấy đất sét bọc ngoài, đốt tồn tính. Bỏ đất, tán quả thành bởi rắc quanh nơi loét (kinh nghiệm nhân dân). Chữa đái buốt, đái nhắt, đái đỏ: Lá găng trâu tươi 20 – 30g, vỏ hay giã, vắt lấy nước cốt uống, hoặc sắc uống (Nam dược thần hiệu) Thuốc giải độc: Lá găng trâu, phối hợp với rễ cỏ lá tre, lá thường sơn, lá đơn răng cưa, giã nhỏ, thêm nước, gạn uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

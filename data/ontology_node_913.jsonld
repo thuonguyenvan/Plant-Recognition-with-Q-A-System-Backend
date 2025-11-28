@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Măng cụt",
+      "ten_khac": "Măng cụt, Sơn trúc tử",
+      "ten_khoa_hoc": "Garcinia mangostana L.",
+      "ma_taxon": "123001",
+      "ho": "Clusiaceae (Bứa)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá dày, dai, màu lục sẫm, hình thuôn dài 15-20cm, rộng 7-10cm.",
+      "cây": "Măng cụt là một loại cây to, có thể cao tới 20m.",
+      "quả": "Quả hình cầu, to bằng quả cam trung bình, vỏ ngoài màu đỏ sẫm, dầy cứng, phía dưới có lá đài, phía đỉnh có đầu nhụy. Trong quả có từ 6 đến 18 hạt, quanh hạt có áo hạt ăn được.",
+      "mặt": "Đặc điểm của cây này là người ta mới chỉ thấy cây cái.",
+      "đầu": "Người ta cho rằng trong số những nhị lép (staminode) bao quanh bầu có thể có bao phấn chứa phấn hoa."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Áo của hạt có vị ngọt, thơm ngon. Khi mới chín có màu trắng trong, nhưng sau ít ngày thì ngả màu vàng, kém thơm và có vị chát do đó khó chuyên chở đi xa.",
+      "gồm chất": "Thành phần hóa học chưa thấy có tài liệu nghiên cứu.",
+      "Các hợp chất": "Vỏ quả được nhiều người nghiên cứu hơn vì người ta hy vọng dùng nó để thuộc da. Trong vỏ quả có chứa từ 7-13% tanin. Tuy nhiên không được dùng thuộc da vì theo yêu cầu của những nhà thuộc da, nguyên liệu dùng để thuộc không được chứa quá một phần không phải tanin (tối đa) so với 2 phần tanin. Trong khi đó vỏ măng cụt chứa trong phần tan trong nước khoảng 13,61% tanin và 14,59% không phải tanin (theo Bull. Office Colonial, số 136, tháng 4-1919).",
+      "chứa": "Ngoài tanin ra, trong vỏ quả măng cụt, theo W.Schmidt còn có chất nhựa và chất mangostin (C20H22O5), có tinh thể hình phiến nhỏ, màu vàng tươi, không vị, tan trong rượu, ête và chất kiềm, không tan trong nước. Độ chảy 175°C.",
+      "triết xuất": "Chất mangostin có thể chiết xuất như sau: Lấy kiệt vỏ măng cụt bằng nước lạnh, sau bằng nước sôi. Hợp cả hai nước đó lại. Cô đặc và bốc hơi cho khô. Rửa cặn bằng nước rồi hòa tan bằng rượu. Thêm nước và axit axetic vào dung dịch. Để một thời gian sẽ xuất hiện một đám tinh thể. Gạn và ép.",
+      "dấu hiệu đặc trưng": "Khi thêm vào chất mangostin dung dịch clorua feric, sẽ có màu lục đen nhạt. Nếu thêm axit sunfuaric sẽ có màu đỏ."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tại nhiều nước Malaixia, Campuchia, Philipin, người ta dùng nước sắc vỏ măng cụt để làm thuốc chữa đau bụng đi ỉa lỏng, chữa lỵ, có khi còn dùng chữa bệnh hoàng đản (vàng da).",
+      "được_dùng": "Cách dùng như sau:  Cho chừng 10 vỏ quả măng cụt vào một nồi đất hay nồi đồng (tránh nồi sắt hay nồi tôn) thêm nước vào cho ngập rồi đun sôi kỹ trong vòng 15 phút. Ngày uống 3 đến 4 chén to nước này.",
+      "làm thuốc": "Có thể dùng theo đơn sau đây: vỏ quả măng cụt khô 60g, hạt mùi 5g, hạt thìa là 5g, nước 1200ml. Đun sôi, sắc kỹ cho cạn còn chừng một nửa (600ml). Mỗi lần uống 120ml. Uống mỗi ngày 2 lần.",
+      "chữa": "Nếu đau bụng có thể thêm ít thuốc phiện. Trong trường hợp này không dùng cho trẻ con được."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Người ta cho rằng cây măng cụt nguồn gốc ở các đảo LaSôngđơ và Môluyc (Malayxia, Indonexya) sau được các nhà truyền giáo đạo gia tô di thực vào miền Nam Việt Nam. Hiện nay được trồng rộng rãi ở Nam Bộ. Còn thấy ở Philipin, Inđônêxya, Malaixia.",
+      "làm thuốc": "Người ta trồng chủ yếu để lấy áo hạt ăn; vỏ quả phơi khô dùng chữa đi ỉa lỏng hay đi lỵ."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

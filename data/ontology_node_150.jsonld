@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bọ cạp nước",
+      "ten_khac": "Bọ cạp nước, Muồng bọ cạp, Muồng hoàng yến",
+      "ten_khoa_hoc": "Cassia fistula L.",
+      "ma_taxon": "68679",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 6 – 12 m. Cành lá sum sê, tỏa rộng. nhẵn.",
+      "lá": "Lá kép lông chim nhẵn, mọc so le, 5 – 6 đôi lá chét hình lục lăng, dài 7 – 12 cm, rộng 4 – 8 cm, mặt trên nhẵn, mặt dưới có lông trắng nhạt, sau nhẵn; lá kèm sớm rụng, cuống lá dài 15-30 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm, dài 15 – 30 cm; lá bắc nhỏ, sớm rụng; hoa màu vàng; đài 5 răng có lông ở mặt ngoài, tràng 5 cánh, có móng ngắn và hẹp, nhị 10, có 3 cái rất dài, 4 cái trung bình và 3 cái rất nhỏ.",
+      "quả": "Quả hình trụ, dài 40-50 cm; hạt rất nhiều có cơm bao bọc chứa trong những vách hóa gỗ, mỏng.",
+      "mùa hoa": "tháng 5",
+      "mùa quả": "10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bọ cạp nước phân bố rộng rãi ở Ấn Độ, Xrilanca, Malaysia, Indonesia, Philippin, New Guinea, Thái Lan, Campuchia, Lào… Cây còn được trồng ở Ai Cập và Trung Quốc. Ở Việt Nam, bọ cạp nước phân bố chủ yếu ở các tỉnh Tây Ninh, Bình Phước, Đồng Nai, các tỉnh Nam Trung Bộ và Tây Nguyên. Cây còn được trồng ở một số thành phố lớn như Hà Nội, Tp. Hồ Chí Minh, Bình Dương.  Bọ cạp nước thuộc loại cây gỗ nhỡ, mọc rải rác trong các kiểu rừng thưa nửa rụng lá hoặc rừng thứ Sinh. Cây ưa sáng, lúc còn nhỏ có thể hơi chịu bóng. Thích nghi cao với khí hậu nhiệt đới điển hình, nhiệt độ trung bình năm vào khoảng 25°C, nhiệt độ tối thấp trung bình 20°C, tối cao trung bình 28 – 29°C. Lượng mưa trung bình hàng năm là 1500-2500 mm. Cây có thể chịu được khô hạn. Những cây trồng ở đường phố và công viên ở Hà Nội đã tỏ ra thích nghi được với nền nhiệt độ thấp hơn, có mùa đông lạnh kéo dài. Cây trồng từ hạt sau 4 – 6 năm bắt đầu có hoa; hoa ra hàng năm; tái sinh từ hạt tốt. Cây trồng ở thành phố vừa để làm cảnh vừa lấy bóng mát. Gỗ dùng để làm đồ gia dụng. Vỏ là nguồn nguyên liệu chiết tanin.",
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, lúc còn nhỏ có thể hơi chịu bóng. Thích nghi cao với khí hậu nhiệt đới điển hình, nhiệt độ trung bình năm vào khoảng 25°C, nhiệt độ tối thấp trung bình 20°C, tối cao trung bình 28 – 29°C. Lượng mưa trung bình hàng năm là 1500-2500 mm. Cây có thể chịu được khô hạn. Những cây trồng ở đường phố và công viên ở Hà Nội đã tỏ ra thích nghi được với nền nhiệt độ thấp hơn, có mùa đông lạnh kéo dài. Cây trồng từ hạt sau 4 – 6 năm bắt đầu có hoa; hoa ra hàng năm; tái sinh từ hạt tốt. Cây trồng ở thành phố vừa để làm cảnh vừa lấy bóng mát. Gỗ dùng để làm đồ gia dụng. Vỏ là nguồn nguyên liệu chiết tanin."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, hạt, rễ và vỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt bọ cạp nước chứa một lượng calci hữu cơ khá cao (827 mg/ 100g hạt). Trong khi đó, hàm lượng natri trong thịt quả và hạt lại tương đối thấp. Thịt quả chứa các acid amin như aspartic (15,3%), glutamic (13%) và lysin (6,6%). So với acid amin toàn phần rhein, anthraquinon và fistulacidin. Trong hạt, các con số này tương ứng là 16,6%, 19,5% và 6,6%. Thành phần quan trọng trong vỏ hạt là acid fistulic. Lá bọ cạp nước chứa anthraquinon, tanin, các Sennosid A và B. Vỏ rễ chứa tanin, phlobaphen, oxo – anthraquinon."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả bọ cạp nước dùng sống chữa táo bón với liều 4 – 6 g (nhuận tràng), hoặc 10- 20g (tẩy); ngâm rượu uống làm thuốc tiêu, bổ, giúp ăn ngon cơm, đỡ đau lưng, đau người. Cơm quả và hạt (1 kg) sắc với một lít nước, lọc và cô cách thủy thành cao, làm thuốc chữa đau lưng, đau mình, lỵ, tiêu chảy với liều 5 – 15g. Lá tươi giã nát vắt lấy nước bôi chữa hắc lào, và sắc uống chữa đau lưng và để nhuận tràng, với liều 15 -20 lá.  Ở một số nước Đông Nam Á, vỏ quả chín và hạt bọ cạp nước được dùng để nhuận tràng. Vỏ rễ, lá và hoa có tác dụng nhuận tràng yếu hơn. Nước sắc rễ để sát trùng vết thương, Vết loét. Vỏ thân dược dùng ở Java trị bệnh ngoài da, và dùng đắp lên nơi bị rắn và bọ cạp cắn ở Campuchia.  Ở Philippin, lá đắp trị bệnh nấm da, ở Thái Lan, lõi gỗ trị giun. Trong y học hiện đại, cơm quả bọ cạp nước đôi khi được dùng làm thuốc nhuận tràng cho trẻ em. Tuy vậy cần thận trọng vì nếu dùng hàng ngày và kéo dài có thể dẫn đến quen thuốc.  Ở Ấn Độ, nhân dân dùng cao từ cơm quả bọ cạp nước để nhuận tràng nhưng ít khi dùng riêng. Cao Vỏ rễ được thử nghiệm và thấy có tác dụng tốt trong điều trị sốt tiểu đen. Vỏ thân trị bệnh ngoài da. Quả bọ cạp nước trị đái tháo đường, với liều uống mỗi lần 5 g, cứ 8 giờ một lần, dưới dạng thuốc bột hoặc thuốc sắc. Quả bọ cạp nước có trong thành phần một số bài thuốc cổ truyền Ân Độ trị bệnh gan và sỏi niệu. Ở Nepal, nhân dân dùng cơm quả bọ cạp nước, với liều uống mỗi lần 5g, để làm phân mềm dễ đi ngoài và trị tiểu tiện có lẫn máu, uống mỗi lần 4 thìa cà phê ngày 3 lần. Nước sắc vỏ thân được dùng Súc miệng trị Viêm họng. Ở Haiti, nhân dân uống nước sắc lá hoặc quả bò cạp nước để trị bệnh ký sinh trùng đường ruột. Nước ngâm lá được dùng tắm và bôi xoa để chữa bệnh ngoài da. Nước sắc lá uống chữa khó tiêu. Ở Guatemala, vỏ cây bọ cạp nước được dùng để chữa bệnh đường tiết niệu. Ở Panama, nhân dân dùng bọ nước trị đái tháo đường."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

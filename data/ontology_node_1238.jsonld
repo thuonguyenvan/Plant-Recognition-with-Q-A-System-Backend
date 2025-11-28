@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng tinh",
+      "ten_khac": "Hoàng tinh hoa đỏ, Hoàng tinh lá mọc vòng, Củ cơm nếp",
+      "ten_khoa_hoc": "Polygonatum kingianum Coll. et Hemsl.",
+      "ma_taxon": "862584",
+      "ho": "Convallariaceae ( Tóc tiên )",
+      "Mô tả": {
+        "cây": "Cây cỏ sống lâu năm.",
+        "thân": "Thân rễ mọc ngang, có khi phân nhánh, mẫm lên thành củ màu vàng trắng, hơi dẹt nên có sẹo lõm là vết thân còn sót lại, đường kính vết thân có thể đạt tới 2cm. Chiều dài củ có thể tới 30-35cm, rộng tới 6-7cm và dày tới 2-3cm. Thân mọc đứng nhẵn bóng, cao 50-80cm.",
+        "lá": "Lá không cuống mọc vòng trong 4-5 lá một. Phiến lá hình mác dài 7-12mm, rộng 5-12mm, đầu lá nhọn và quăn.",
+        "hoa": "Hoa mọc ở kẽ lá rũ xuống; cuống hoa dài 1,5-2cm, mỗi cuống mang hai hoa hình ống dài 8-15mm màu tím đỏ.",
+        "mùa hoa": "tháng 3-4",
+        "quả": "Quả mọng, hình cầu đường kính 710g, khi chín có màu tím đen."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Thân rễ hoàng tinh đỏ có manose, polysacharid, các saponin."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hoàng tinh là một vị thuốc mới được dùng trong phạm vi nhân dân. Theo sách cổ: “Hoàng tinh nhuận phổi sinh tân dịch, đầy tinh tủy, trị lao thương, làm thuốc bổ ngũ lao. mạnh gân cốt, ích tỳ vị”. Trương Sơn Lôi (một thầy thuốc thời cổ) nói thêm “Công dụng của hoàng tinh cũng như thục địa chuyên bổ huyết, bổ âm, nuôi tì vị, những người nào đờm thấp, yếu dạ không nên ăn.” Ngày dùng 12-20g dưới dạng thuốc sắc hoặc thuốc bột, dùng riêng hoặc phối hợp với các vị khác. Theo tài liệu cổ hoàng tinh có vị ngọt, tính bình vào 3 kinh tỳ, phế và vị. Có tác dụng bổ tì, nhuận phế, sinh tân. Dùng chữa tì vị hư nhược, phế hư sinh ho, tiêu khát. Người tì hư thấp thịnh, ăn không tiêu không dùng được."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang ở những nơi rừng ẩm, đất nhiều mùa trên các núi có lẫn đá xanh, ở các tỉnh miền Bắc. Quanh thị trấn Sapa có nhiều.  Thu hái:  Thường sau 5 năm mới thu hoạch. Hái thân rễ vào mùa thu hoặc mùa xuân, tốt nhất vào mùa thu vì thân rễ chứa ít nước, có những nơi thu hái gần quanh năm từ tháng 4 đến tháng 10.  Có nhiều cách chế biến:  Hoàng tinh: Lấy hoàng tinh sạch, ủ mềm, thái phiến dày, phơi hoặc sấy khô. Tửu Hoàng tinh (chế rượu): Lấy Hoàng tinh sạch, trộn với rượu, cho vào thùng đậy nắp, đun trong cách thủy để dược liệu hút hết rượu, lấy ra cắt lát dày, phơi khô. Cứ 100 kg Hoàng tinh dùng 20 lít rượu"
+      },
+      "luu_y": {}
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ ngọt",
+      "ten_khac": "Cỏ ngọt",
+      "ten_khoa_hoc": "Stevia rebaudiana (Bert.) Hemsl.",
+      "ma_taxon": "320730",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, sống nhiều năm, cao 0,5 – 0,6 m và có khi cao tới 1 m.",
+      "thân": "Thân cứng mọc thẳng, có rãnh dọc và nhiều lông mịn, ít phân nhánh.",
+      "lá": "Lá mọc đối, hình mác hoặc bầu dục, gốc thuôn, đầu tù hoặc hơi nhọn dài 5 -7 cm, rộng 1 – 1,5 cm, có 3 gân, 4 – 6 đôi răng nhọn ở phần nửa về phía đầu lá, hai mặt có lông trắng mịn, nhấm lá thấy có vị ngọt rất đậm, cuống lá rất ngắn.",
+      "hoa": "Hoa lưỡng tính, tụ họp thành đầu màu trắng ở ngọn.",
+      "quả": "Quả bế, không có mào lông, hạt không có nội nhũ.",
+      "mùa hoa": "tháng 5 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Paraguay, được nhập vào nước ta từ năm 1988 trồng thử nghiệm. Hiện nay Cỏ ngọt đã thích ứng với những vùng khí hậu khác nhau của nước ta, sinh trưởng tốt tại Sông Bé, Lâm Ðồng, Ðắc Lắc, Hà Nội, Hà Tây, Hòa Bình, Vĩnh Phú, Yên Bái. Trồng bằng hạt, tách bụi hay giâm cành. Trong một lần có thể thu hoạch trong 5-10 năm. Năng suất hàng năm khoảng 2-4 tấn lá khô trên mỗi hécta (thu hoạch 3-4 đợt)."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá – Folium Steviae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa các heterosid diterpenic dẫn xuất của phyllocaladen: steviosid (7%), rebaudiosid và dulcosid.",
+      "gồm chất": "Steviosid có độ ngọt gấp 150-280 lần cao hơn saccharose (con số này thay đổi theo từng nơi nghiên cứu)",
+      "thủy phân": "Steviosid khi thủy phân sẽ cho 3 phân tử steviol va isosteviol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa đái tháo đường: Cỏ ngọt và steviosid có vị ngọt sẽ làm giảm nhu cầu chất đường và chất bột của người bệnh, vì thế sẽ làm giảm đường huyết. Liều dùng theo thử nghiệm ở Braxin là mỗi lần 0,25g steviosid (hoặc 2,5g lá cỏ ngọt), ngày 4 lần. Uống nhiều ngày.  Chữa béo phì: Cỏ ngọt và steviosid có vị ngọt sẽ làm giảm nhu cầu chất đường và chất bột của cơ thể, nên cũng có tác dụng chữa béo phì. Liều dùng 0,5 – 1g steviosid chia ra 3 – 4 lần trong ngày. Uống nhiều ngày.  Một số chế phẩm từ Cỏ ngọt như Trà actiso stevia, Trà sâm quy stevia (Sâm khu 5, Tam thất, Ðương quy, Thục địa, Táo, Long nhân, Ngũ gia bì và Cỏ ngọt). Chất steviosid có tiềm năng làm chất dịu vị, trong đó có steviol là chất chống nội tiết tố yếu (điều mà không lấy làm ngạc nhiên khi tính đến chuỗi tricyclic của steviol và liên hệ tới việc các phụ nữ Mỹ dùng cỏ này như thuốc tránh thai).  Cỏ ngọt đã được người dân Paraguay dùng để thay thế đường từ lâu. Từ khi xác định được steviosid. Cỏ ngọt được trồng rộng rãi để lấy chất thay thế đường trong công nghiệp thực phẩm (làm chất điều vị cho bánh mứt kẹo, nước giải khát…) trong công nghiệp dược phẩm (thuốc thay thế đường trong bệnh đái đường và mập phì). Người ta sử dụng bột lá cỏ ngọt khô để làm chất điều vị ngọt cho trà túi lọc, trà thuốc, hoặc chiết xuất tinh thể steviosid dùng cho các nhu cầu trong đời sống.  Bài thuốc có vị cỏ ngọt  Bài thuốc hỗ trợ điều trị bệnh tiểu đường  Chuẩn bị: Lá cỏ ngọt phơi khô 2.5g. Thực hiện: Sắc với 200ml nước còn lại 50ml, thực hiện 2 lần/ ngày trong thời gian dài.  Bài thuốc chữa tăng huyết áp  Chuẩn bị: Lá cỏ ngọt 6g, hoa hòe (sao vàng) 10g, hoa cúc 4g và quyết minh tử (sao cháy) 12g. Thực hiện: Rửa sạch và sắc uống hằng ngày."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

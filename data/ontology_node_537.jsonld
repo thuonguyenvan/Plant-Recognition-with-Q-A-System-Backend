@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rùa núi",
+      "ten_khac": "Rùa vàng, Sơn quy",
+      "ten_khoa_hoc": "Testudo elongata Blyth",
+      "ma_taxon": "40080",
+      "ho": "Rùa vàng (Testudinidae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Loài rùa nhỏ.",
+      "thân": "Thân ngắn bọc trong một vỏ đỏ nhiều phiến sừng hay vảy cứng ghép lại, gồm tấm giáp lưng dày và lồi gọi là mu hay mai và tấm giáp bụng phẳng là yếm.",
+      "đầu": "Đầu tròn, trơn nhẵn, cổ dài linh động, có thể rụt hẳn vào trong mai.",
+      "chân": "Bốn chân to, hình trụ, có móng, chân trước ngắn hơn chân sau.",
+      "đuôi": "Đuôi ngắn.",
+      "mai": "Mai màu vàng nâu, đen sẫm hơn ở giữa mỗi phiến sừng.",
+      "khác": "Rùa đực thường nhỏ hơn rùa cái. Loài rùa nước (thuỷ quy – Clemmys mutica Cantor) cũng được sử dụng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Rùa núi phân bố ở các nước Châu Á.",
+      "ở_vùng": [],
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "Ở Việt Nam, rùa núi sống hoang ở vùng núi, chỗ ẩm thấp trong rừng, bờ sông rạch. Ở miền Nam, về mùa khô, rùa núi ẩn nấp trong bụi và chỉ hoạt động kiếm ăn vào mùa mưa. Thức ăn của rùa núi là động vật không xương sống, cá, sâu bọ, cỏ và quả rừng. Đẻ trứng trên cạn, vùi vào cát. Rùa núi được thu bắt quanh năm nhưng nhiều nhất vào tháng 8-12."
+      },
+      "được_trồng": [],
+      "Đặc điểm sinh trưởng": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Yếm rùa có tên thuốc trong y học cổ truyền là quy bản hay quy giáp. Máu (quy huyết) và tinh trùng của rùa cũng được sử dụng. Cách thu hoạch và chế biển yểm rùa núi Rùa bắt về, đập chết, bóc lấy yếm, cạo hết thịt, rửa sạch, phơi hoặc sấy khô, được huyết bàn. Nếu cho rùa vào nước sôi để chết rồi mới bóc yếm thì được thang bản. Dược liệu là dạng phiến do nhiều mảnh nhỏ ghép lại, hình bầu dục, mép hơi cong lên, một đầu thuôn hẹp có khuyết lõm vào. Mặt ngoài có màu nâu xám sẫm, mặt trong màu vàng nhạt, chất cứng chắc, dễ gãy ở những đường nối ghép. Huyết bản trơn bóng, không có vết da bị lóc là loại tốt. Thang bản màu sẫm hơn, có vết da bị lóc là loại vừa. Khi dùng, đem yếm đập vỡ thành những mảnh nhỏ, rổi tẩm giấm, nướng vàng (hoặc rang với cát nóng cho vàng rồi tẩm giấm), tán bột. Yếm rùa được chế biến thành cao, dùng tốt hơn, theo cách làm sau: Ngâm yếm rùa vào nước, đun sôi trong vài giờ (có nơi ngâm vào nước phèn 5 % hoặc nưốc tro bếp). Lấy ra, cạo sạch gân, thịt còn sót lại. Tẩy bằng rượu. Đập thành mảnh nhỏ, nấu với nước 3 lần, mỗi lần một ngày, một đêm. Lọc bỏ bã. Nước lọc đem cô thành cao đặc rồi đổ khuôn. Có khi người ta cốn nấu yếm rùa với gạc hươu nai để được quy lộc nhị tiên cao hoặc với mai ba ba để được nhị giáp cao. Có thể còn phối hợp với nhiều vị thuốc có nguồn gốc thực vật."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong yếm rùa có chất béo, chất keo, muối Ca.",
+      "Các hợp chất": "Mai rùa có nhiều acid amin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo các tài liệu cổ, yếm rùa có vị ngọt, mặn, tính bình, vào 4 kinh thận, tâm, can và tỳ, có tác dụng bồi dưỡng cơ thể, ích khí, mạnh gân xương, giảm đau. Máu rùa (tiết) có vị mặn, tính hàn, không độc, có tác dụng bổ, tăng sức."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Từ ngàn xưa, con người đã lấy rùa làm biểu tượng cho tuổi thọ, trí tuệ và sự may mắn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

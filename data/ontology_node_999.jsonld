@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Liên kiều",
+      "ten_khac": "Trúc can, hoàng thọ đan, hạn liên tử, liên kiều",
+      "ten_khoa_hoc": "Forsythia suspensa Vahl",
+      "ma_taxon": "163058",
+      "ho": "Oleaceae (Nhài)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây liên kiều là một cây cao 2-4m.",
+      "thân": "Cành non gần như 4 cạnh có nhiều đốt; giữa các đốt thân rỗng bì không rõ.",
+      "lá": "Lá đơn mọc đối hoặc có khi mọc thành vòng 3 lá, cuống dài 0,08-2cm. Phiến lá hình trứng, dài 3-7cm, rộng 2-4cm, mép có răng cưa không đều, chất lá hơi dài.",
+      "hoa": "Hoa màu vàng tươi. Đài và tràng hình ống, trên xẻ thành 4 thùy. 2 nhị thấp hơn tràng. Nhụy có 2 núm.",
+      "quả": "Quả khô, hình trứng dẹt, dài 1,5-2cm, rộng 0,5-1cm, phía bên có cạnh lồi, đầu nhọn, khi chín mở ra như mỏ chim, phía dưới có cuống hay chỉ còn sẹo. Vỏ ngoài màu nâu nhạt. Trong quả có nhiều hạt, nhưng phần lớn rơi vãi đi, chỉ còn sót lại một ít.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo nghiên cứu sơ bộ của hệ dược học, Viện nghiên cứu y học Bắc Kinh thì trong thanh liên kiều có chừng 4,89% saponin và 0,2% ancaloit (Trung dược chí -Bắc Kinh 1959).",
+      "gồm chất": "Theo Tăng Quảng Phương (1936, Trung hoa y học tạp chí) trong liên kiều có một glucozit gọi là phylirin C, saponin, vitamin P và tinh dầu."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính vị liên kiều theo đông y: vị đắng, hơi hàn, không độc, vào 4 kinh tâm, đởm, tan tiêu và đại trường có tác dụng tán khách nhiệt ở các kinh, chữa sang thũng.",
+      "có tác dụng": "Hoặc giả còn nói liên kiều tán chư kinh huyết ngưng, khí tụ, lợi thủy đạo, sát trùng, chỉ thống, tiêu thũng, bài nùng (tiêu mủ).",
+      "được_dùng": "Tính chất theo nhân dân thường dùng: dùng trong những trường hợp vi huyết quản dễ vỡ đứt, chữa mụn nhọt, ghẻ lở, giải độc, tràng nhạc. Còn dùng làm thuốc thông tiểu tiện, chữa nôn mửa, thông kinh nguyệt.",
+      "sắc uống": "Ngày dùng 6-12g (nếu dùng phối hợp với các vị thuốc khác) hoặc với liều 10-30g (nếu dùng một vị này thôi). Dùng dưới hình thức thuốc sắc để uống hay để rửa ngoài."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây liên kiều chưa thấy ở Việt Nam. Hiện nay vị liên kiều ta vẫn phải nhập từ Trung Quốc. Cây này chủ yếu mọc ở Trung Quốc (Sơn Tây, Hà Nam, Hà Bắc, Hồ Bắc, Cam Túc). Còn mọc ở Nhật Bản. Tại nhiều nơi đó người ta còn trồng dùng làm cảnh.",
+      "làm thuốc": "Dùng làm thuốc có khi người ta chia làm thanh kiều và lão kiều. Thanh kiều hái vào các tháng 8-9 khi quả chưa chín, nhúng vào nước sôi, rồi lấy ra phơi hay sấy khô. Lão Kiều hái vào tháng 10 khi quả đã chín vàng.",
+      "có tác dụng": "Thanh kiều và lão kiều cũng giống nhau, nhưng thanh kiều phần nhiều đầu quả chưa tách ra như mỏ chim mở, hạt còn nguyên không rơi rụng Lão Kiều không có mùi đặc biệt, vị đắng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

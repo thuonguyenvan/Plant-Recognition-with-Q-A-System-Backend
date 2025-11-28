@@ -1,0 +1,227 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa mộc",
+      "ten_khac": "Hoa mộc",
+      "ten_khoa_hoc": "Osmanthus fragrans (Thunb.) Lour.",
+      "ma_taxon": "371103",
+      "ho": "Oleaceae (Nhài)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1 – 1,5m.",
+      "thân": "Cành hơi dẹt và phồng ở các mấu.",
+      "lá": "Lá mọc đối, hình bầu dục – mũi mác, dài 5 – 12cm, rộng 7 – 4cm, gốc hơi tù, đầu thuôn nhọn, mép nguyên hoặc khía răng rất nhỏ, hai mặt nhẵn, mặt trên sẫm bóng, mặt dưới rất nhạt có gân lồi rõ, gân phụ hình mạng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn thành chùm ngắn, hoa màu vàng thơm, đài 4 răng dính nhau ở nửa dưới, tràng 4 cánh dày hơi liền nhau ở gốc, nhị 2 đối nhau, bầu có 2 lá noãn dính nhau ở gốc.",
+      "quả": "Quả hạch, hình bầu dục, màu lục, chứa một hạt.",
+      "mùa hoa": "tháng 7 – 10",
+      "mùa quả": "tháng 7 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Osmanthus Lour có 3 loài ở Việt Nam, trong đó hoa mộc là cây trồng, hiện chưa rõ về nguồn gốc. Cây cũng phân bố ở Trung Quốc, Nhật Bản và Ấn Độ.",
+      "được_trồng": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "các tỉnh phía bắc",
+              "ghi_chú": "để làm cảnh, ưa ẩm, hơi chịu bóng, thường trồng ở quanh nhà, vườn đình chùa."
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "nơi": {
+              "@type": "schema:Place",
+              "tên": "thành phố",
+              "ghi_chú": "người ta trồng hoa mộc vào các chậu nhỏ để ở ban công cho tiện việc chăm sóc."
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Hoa mộc sinh trưởng mạnh trong mùa mưa ẩm, hoa ra rải rác quanh năm, nhưng tập trung nhiều nhất vào mùa thu, hoa nhiều song hiếm khi thấy quả. Hoa mộc là loại cây cảnh quý, hoa còn dùng để ướp trà."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa, quả, rễ và vỏ cây. Rễ thu hái quanh năm. Hoa thu hái vào mùa thu."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "– Hoa mộc đem chiết với ether dầu, sau đó xử lý với ethanol thu được một dầu thơm (0,16%), một chất thơm osman (1 – 2 – dimethyl – 3 isopropyl cyclopentan β (4 oxyphenyl ethyl alcoho) và các acid acetic, succinic, stearic và palmitic. Hoa còn chứa acid oleanolic, acid ursolic, β sitosterol glycosid và sáp (0.04%) gồm chủ yếu là triacontan (The Wealth of India vol VII 1666, 193). Trong hoa tươi có  damascenon, dihydro  ionol và 4 β ceto ionon – (CA. 110, 1989, 236952 c).  – Khoảng 80 thành phần có trong hoa, trong đó các đồng phân α và β của ionol, các megastigan, theaspiran, damascon, và các alcol terpenoic đóng vai trò quan trọng tạo thành mùi thơm của hoa (CA. 117. 1992, 167672 s. J essent oil res 1989, 1 (6) 295 (7)).  Phân tích chất thơm một loại trà osmanthus thấy có β ionon 14%. . β dihydro ionon 8%. β dihydroinol 3%: và 4 decanolid 3% (CA 109, 1988. 2099880 a).  Quả chứa 2 glycosid iridoid 10 – acetoxyligustrosid và 10 acetoxy oleuropein cùng với acetosid và phillyrin (Phytochemistry 1975, 14, 2029).  2. (4 hydroxy phenyl) ethanol, acid succinic, 1 – O – β. D. glucosyl – 2 (4 hydroxy phenyl) ethanol và acid cafeic ester có trong quả xanh (CA, 1978, 09, 17636Ou)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "– Hoa mộc có vị cay, tính ấm, có tác dụng tán hàn, phá ứ kết, hoá đàm, sinh tân. Quả có vị cay, ngọt, tính ẩm, có tác dụng tán hàn, bình can, ích thận. Rễ có vị ngọt, hơi chát, tính bình, có tác dụng khu phong, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa mộc được dùng chữa hôi miệng, viêm họng, ho nhiều đờm, đau răng. Ngày 1,5 – 3g hãm uống, ngâm rượu uống hoặc sắc ngậm. Có thể dùng nước cất từ hoa, mỗi lần 20 – 30 ml ngậm rồi nuốt, ngày 2 – 3 lần. Khi bị loét trong miệng, lấy 3 – 5 hoa, phơi âm can, tán thành bột mịn rắc vào chỗ loét. Ngoài ra, hoa còn chữa kinh bế sinh đau bụng, dưỡng và làm thơm tóc. Trong nhân dân, hoa mộc thường dược dùng ướp chè. Quả dược dùng trị hư hàn, đau dạ dầy, đau gan, thận do lạnh. Ngày 10 – 12g, sắc uống. Vỏ cây nấu với nước uống làm sáng mắt và tăng sắc đẹp. Rễ được dùng chữa phong thấp, nhức mỏi, giãn xương, thận hư, đau răng. Ngày 9 – 15g cây khô hoặc 30 – 90 g cây tươi, sắc hoặc ngâm rượu uống.  Bài thuốc có hoa mộc  Chữa đau dạ dày, gan, thận lạnh sinh đau: Quả hoa mộc 6g, hương phụ 9g, sa nhân 6g, cao lượng khương 9g, hoặc hoa mộc 5g, cao lương khương 5g, tiểu hồi 3g, sắc uống. Chữa đau răng : Rễ hoa mộc 9g, tế tân 3g, cúc hoa 15g, địa cốt bì 15g, sắс ngậm rồi nuốt, Thuốc dưỡng tóc, làm thơm tóc:  Hoa mộc nấu với dầu vừng rối chải lên tóc.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

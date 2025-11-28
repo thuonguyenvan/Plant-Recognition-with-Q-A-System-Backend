@@ -1,0 +1,205 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cây rau mát",
+            "ten_khac": "Cây cùi dừa, rau mác bao",
+            "ten_khoa_hoc": "Monochoria vaginalis (Burm.f.) Presl",
+            "ma_taxon": "962662",
+            "ho": "Bèo tây (Pontederiaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "lá": "Rau mát mọc so le, hình trứng rộng, dài đến 7 cm, rộng 4 cm, gốc hình tim, đầu nhọn, hai mặt nhẵn, mặt trên sẫm bóng, gân nhiều hình cung, nổi rõ ở mặt dưới; cuống lá rất dài, phình to gốc và có tai ngắn.",
+            "hoa": "Cụm hoa mọc thành chùm ngắn hơn lá, 2.5 hoa, nom như mọc ở lưng chừng cuống lá, hoa màu xanh lơ; đài 3 răng; tràng 5 cánh rộng hơn là đài; nhị 6, có khi 3 hoặc 4, thường là 5.",
+            "quả": "Quả nang, dài 5 – 9 mm, rộng 4 – 8 mm.",
+            "cây": "Rau mát là cây thảo thuỷ sinh, cao 25 – 30 cm.",
+            "thân": "Thân mảnh, hình trụ, mọc bỏ ngang trong bùn, bén rễ ở những mấu.",
+            "mùa hoa": "tháng 10 – 12."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Monochia Presl ở Việt Nam có 6 loài. Loài rau mát trên là cây quen thuộc, bởi sự phát bố rộng rãi khắp các địa phương, từ đồng bằng đến vùng núi, có độ cao dưới 1.000m. Loài này cũng phân bổ phổ biến ở các quốc gia như Ấn Độ, Trung Quốc, Nhật Bản, Malaysia, Indonexia, Châu Phi.  Ở những nơi khác, cây rau mát thường được xem là loài xâm lấn và nguy hại. Đặc biệt, nó có mặt trong danh sách các loài cỏ dại nguy hiểm ở Mỹ.  Rau mát là cây thuỷ sinh nước ngọt. Cây thường mọc rải rác hoặc tập trung thành đám trên đất bùn, ngập nước (nông) ở ao hồ, kênh mương, đồng chiêm trũng… Cây tái sinh tự nhiên chủ yếu bằng hạt và đẻ nhánh con từ gốc và thân rễ."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": ""
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Toàn cây."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Trừ rễ, các bộ phận khác của cây đều ăn được như rau.",
+            "gồm chất": "Cây rau mát chứa 3,1% protid, 8,2% glucid, 1,7% chất xơ, 2,6 mg% caroten và 26,2 mg% vitamin C."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Rau mát có vị hơi đắng, tính bình, có công năng thanh nhiệt, giải độc, tiêu thũng, bài năng, lợi tiểu.  Theo tài liệu Trung Quốc, sách “Nam ninh thị dược vật chí” ghi: rau mát vị ngọt, tính mát; còn sách “Thiểm Tây trung được chí” ghi: vị đắng, tỉnh bình. Về công năng, rau mát có tác dụng thanh nhiệt, giải độc, chỉ lỵ [TDTH, 1996: 2058]."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Toàn cây rau mát được dùng để giải nhiệt chữa cảm nắng, đau dạ dày, lỵ. Ngày 15 – 20g (tươi dùng 30 – 60g) sắc lấy nước uống. Để chữa lợi răng bị sưng viêm, mưng mủ, lấy rễ (hoặc toàn cây cũng được) sắc đặc, ngậm nước, cố để dịch nước tiếp xúc nhiều với chỗ bị bệnh.  Thân và lá rau mát được dùng làm thức ăn nuôi lợn. Ngọn và lá non có thể được dùng thay rau xào, nấu canh hoặc muối dưa để ăn. Hoa cũng ăn được, có tác dụng làm mát.  Rau mác thường được người dân các tỉnh miền Tây, đặc biệt ở vùng ngọt hóa huyện Trần Văn Thời, tỉnh Cà Mau, dùng làm thức ăn. Loại rau này có thể chế biến thành nhiều món như xào tôm, chấm mắm kho, nấu canh chua hoặc nhúng lẩu mắm. Rau mác có vị ngọt, dai mềm, và cọng trắng phau, mập tròn, rất được ưa chuộng, đặc biệt là vào mùa nước nổi.  Ở Campuchia, hoa và cây được bán ở chợ, được dùng ăn với lẩu mắm. Cả cây được sắc uống để giải nhiệt, chữa cảm nắng. Ở Mianma, toàn cây rau mát được dùng để điều trị các bệnh rối loạn đường tiêu hoá, hen suyễn, đau răng [Perry et al., 1980: 329]. Ở Indonesia, dịch sắc rễ được dùng chữa đau dạ dày, các bệnh về gan, đau răng, hen. Ở Ấn Độ, người ta dùng rễ nhai chữa đau răng, vỏ cây ăn với đường trị hen. Ở Trung Quốc, cây được dùng trị lỵ, viêm ruột, lợi răng mưng mủ, sưng amygdal cấp tính, viêm họng, ghẻ lở, rắn cắn."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": "1. Chữa rối loạn tiêu hóa do thức ăn  Nguyên liệu:  Rễ củ rau mác: 100g.  Cách làm:  Cạo sạch vỏ ngoài, rửa sạch, giã nát, vắt lấy nước uống. Chia thành 2-3 lần uống trong ngày, dùng liên tục 2-3 ngày.  Lưu ý: Kết hợp ăn cháo đỗ xanh để giải độc. Nếu không thuyên giảm, cần đến cơ sở y tế.  2. Chữa khí hư  Nguyên liệu:  Rễ củ rau mác: 30g. Mật ong: Một ít.  Cách làm:  Rễ rau mác giã nhuyễn, trộn mật ong, cho vào bát nhỏ hấp cách thủy đến chín. Ăn lúc nóng, sử dụng liên tục trong 1 tuần.  3. Chữa phù thũng  Nguyên liệu:  Cả cây rau mác phơi khô: 20g. Rễ thủy xương bồ thái nhỏ: 12g.  Cách làm:  Cho nguyên liệu vào ấm, sắc với 500ml nước, đun nhỏ lửa đến khi còn 150ml. Chia làm 2 lần uống trong ngày, dùng liên tục 9 ngày để hoàn thành một liệu trình.  4. Trị hôi nách  Nguyên liệu:  Lá non rau mác: Một nắm. Nước cốt chanh: Một ít.  Cách làm:  Lá rau mác rửa sạch, giã nhỏ, lấy nước bôi vào nách trước khi đi ngủ. Sáng dậy rửa sạch, xát nước cốt chanh vào nách.  5. Chữa mụn nhọt sưng đau  Nguyên liệu:  Lá non rau mác: Một ít.  Cách làm:  Rửa sạch lá, giã nhỏ, đắp trực tiếp lên vết sưng đau. Băng lại bằng vải sạch, thay băng 2 giờ/lần, ngày thực hiện 3 lần.  6. Chữa mẩn ngứa  Nguyên liệu:  Rễ củ rau mác: Lượng tùy ý. Củ mài: Lượng bằng rễ rau mác.  Cách làm:  Cạo bỏ vỏ, rửa sạch, phơi hoặc sấy khô. Tán thành bột mịn, dùng xoa lên vùng mẩn ngứa hàng ngày.  7. Công dụng khác  Củ rau mác được sử dụng ở nhiều nơi để:  Làm thuốc bổ dương, tăng cường sức khỏe. Cầm máu hiệu quả trong các trường hợp tai nạn lao động.  Lưu ý khi sử dụng  Các bài thuốc trên mang tính tham khảo, nên tham vấn bác sĩ hoặc chuyên gia y học trước khi áp dụng.  (Nguồn: Từ điển cây thuốc Việt Nam, tổng hợp)"
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

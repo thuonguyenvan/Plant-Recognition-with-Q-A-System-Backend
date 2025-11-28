@@ -1,0 +1,218 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mè đất",
+      "ten_khac": "Mè đất hoang, Bạch thiệt, Phong sào thảo",
+      "ten_khoa_hoc": "Leucas zeylanica (L.) R. Br.",
+      "ma_taxon": "369990",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hàng năm, cao 20 – 40cm, thân vuông, hoá gỗ ở gốc, mọc thẳng, phân nhiều cành, có lông.",
+      "lá": "Lá mọc đối, hình mác hẹp, dài 2 ~ 5cm, gần như không cuống, gốc thuôn, đầu nhọn, mép có răng cưa thưa, hai mặt có lông.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành đầu hình cầu, đường kính 1,5 – 2cm gồm nhiều hoa màu trắng; lá bắc dài bằng hoặc vượt hơn đài hoa; đài hình ống có 10 răng; tràng có ống thẳng, bên trong có một vòng lông, chia 2 môi, môi trên có lông, môi dưới dài hơn, chia 3 thùy; 4 nhị.",
+      "quả": "quả bế, hình trứng nhẵn, có cạnh màu nâu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Leucas R.Br gồm các loài thân cỏ, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam có 5 loài, phần lớn được dùng làm thuốc. Mè đất có thể xuất xứ từ Ấn Độ, và phân bố rộng rãi ờ vùng Ấn Độ – Malaysia, các nước ở Đông Nam Á, Tây Á, Đông Dương và phần phía nam lãnh thổ Trung Quốc.  Ở Việt Nam, cây phân bố ở hầu hết các tỉnh vùng núi và trung du, nhất là ở miền Bắc. Cây ưa sáng, mọc nhanh, thường tạo thành quần thể trên các nương rẫy, ven rừng và ở đồi. Phần thân phân nhánh khỏe theo kiểu lưỡng phân, hầu như nhánh nào cũng có hoa ờ đầu cành. Khi quả già tự mở, hạt rơi xuống đất và mọc thành cây con vào tháng 3 – 4 hàng năm. Cây tàn lụi vào mùa đông. Mè đất là loài cỏ dại ảnh hưởng đến cây trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái vào mùa hè, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mè đất có vị đắng, cay, tính ẩm, mùi thơm, có tác dụng giải cảm, hoá đàm, chỉ khái, tiêu viêm, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mè đất được dùng chữa cảm sốt, ho, viêm đường hô hấp; dùng phối hợp với các vị thuốc khác chữa ho gà cho trẻ nhỏ rất tốt. Ngày 15 – 30g, uống dưới dạng nước sắc. Theo tài liệu nước ngoài, dịch ép từ cây mè đất chữa một số bệnh ngoài da như ghẻ lở, vẩy nến, vết thương sưng đau. Ở Ấn Độ, hoa mè đất chữa cảm sốt, lá chữa thấp khớp mạn tính.",
+      "chữa": "Mè đất được dùng chữa cảm sốt, ho, viêm đường hô hấp; dùng phối hợp với các vị thuốc khác chữa ho gà cho trẻ nhỏ rất tốt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bài thuốc có mè đất Chữa ho gà trẻ em:  Mè đất 12g, hẹ 8g, vỏ rễ chanh 8g, cam thảo đất 8g, vỏ trứng gà đã ấp 2 cái sao giấm. Tất cả giã nhỏ, sắc nước pha thêm ít đường uống. Trẻ em 1 – 3 tuổi mỗi lần 3 thìa cà phê, 4-5 tuổi mỗi lần 4 thìa cà phê, 6-9 tuổi mỗi lần 5 – 6 thìa cà phê. Ngày uống 3 lần.",
+      "chữa": "Bài thuốc có mè đất Chữa ho gà trẻ em:  Mè đất 12g, hẹ 8g, vỏ rễ chanh 8g, cam thảo đất 8g, vỏ trứng gà đã ấp 2 cái sao giấm. Tất cả giã nhỏ, sắc nước pha thêm ít đường uống. Trẻ em 1 – 3 tuổi mỗi lần 3 thìa cà phê, 4-5 tuổi mỗi lần 4 thìa cà phê, 6-9 tuổi mỗi lần 5 – 6 thìa cà phê. Ngày uống 3 lần."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mè đất 30g (sao vàng, hạ thổ), hoa cây guốc nước mặn 20g (sao vàng), đọt cây dâu 16g, đọt cây chanh 12g. Tất cả thái nhỏ, sắc nước rồi hòa với đường uống. Trẻ em 1-3 tuổi uống mỗi lần 1 thìa cà phê; 4-6 tuổi, 1,5 thìa; 7-9 tuổi, 2 thìa cà phê; 10-12 tuổi, 2,5 thìa; 13-15 tuổi, 3 thìa. Ngày uống 2 lần, kiêng ăn chất tanh.",
+      "chữa": "Mè đất 30g (sao vàng, hạ thổ), hoa cây guốc nước mặn 20g (sao vàng), đọt cây dâu 16g, đọt cây chanh 12g. Tất cả thái nhỏ, sắc nước rồi hòa với đường uống. Trẻ em 1-3 tuổi uống mỗi lần 1 thìa cà phê; 4-6 tuổi, 1,5 thìa; 7-9 tuổi, 2 thìa cà phê; 10-12 tuổi, 2,5 thìa; 13-15 tuổi, 3 thìa. Ngày uống 2 lần, kiêng ăn chất tanh."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mè đất 30g (sao vàng), kim ngân 20g. Thái nhỏ, sắc với 400ml nước còn 100ml, chia nhiều lần uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam",
+      "chữa": "Mè đất 30g (sao vàng), kim ngân 20g. Thái nhỏ, sắc với 400ml nước còn 100ml, chia nhiều lần uống trong ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

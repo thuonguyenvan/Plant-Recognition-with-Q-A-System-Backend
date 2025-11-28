@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Địa nhĩ thảo",
+      "ten_khac": "Cỏ ban, nọc sởi, châm hương, địa nhĩ thảo",
+      "ten_khoa_hoc": "Hypericum japonicum Thunb.",
+      "ma_taxon": "323157",
+      "ho": "Hypericaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây Địa nhĩ thảo hay còn được gọi là cây Ban  Ban là một loại cỏ nhỏ, thân nhỏ mang nhiều cành, cao chừng 10-20cm, thân nhẵn.",
+      "lá": "Lá mọc đối, hình bầu dục, không cuống, trên phiến có những điểm chấm nhỏ, soi lên sáng lại càng rõ. Phiến lá dài 7-10mm, rộng 3-5mm.",
+      "hoa": "Hoa nhỏ mọc màu vàng, mọc đơn độc ở kẽ lá, có cuống dài 4- 5mm. Lá bắc và lá đài nhẵn (do đó khác loài Hypericum nepalense).",
+      "quả": "Quả nang hình trứng, dài 4mm, mở bằng 3 van dọc, thai tòa trắc mô ở cạnh các van. Hạt hình trụ, hơi thon có vạch dọc, chiều dài chừng 1mm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn thân",
+      "gồm chất": "sarotranol, isojacareubin"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị đắng, ngọt, tính mát có tác dụng nhanh nhiệt, giải độc, lợi tiểu, tiêu sưng, giảm đau"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm dân gian, cây ban có tác dụng thanh thấp nhiệt, tiêu thũng trướng, khứ tích tiêu thực (chữa tiêu hóa kém, đầy),dùng chữa cam tích, thấp nhiệt hoàng đản, dùng ngoài chữa rắn cắn, bị thương, sưng đau.",
+      "chữa": "viêm gan cấp, viêm ruột thừa, viêm amidan, cam tích ở trẻ em",
+      "được_dùng": "vò nát đắp ngoài vết thương, cây giã nát với gừng chữa sốt rét."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "rắn độc cắn: Giã nát cây ban, thêm ít băng phiến đắp lên vết rắn cắn đã được chích rộng ra.",
+      "sắc uống": "Cây ban 40 hoặc 60g khổ sắc uống.",
+      "sắc nước uống": "Cây ban tươi 40g, sắc nước uống",
+      "được_dùng": "Cây ban tươi một nắm sắc uống hàng ngày để giải độc, hoặc phối hợp với kim ngân hoa hay lá diếp cá sắc nước uống",
+      "giã nát": "Cây ban tươi 70g giã nát ép lấy nước, tẩm vào vải gạc rồi lau rửa miệng ngày 1-2 lầnn; người lớn có thể ngậm"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

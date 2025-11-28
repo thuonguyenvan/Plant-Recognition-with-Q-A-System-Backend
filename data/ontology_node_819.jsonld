@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ớt",
+      "ten_khac": "Ớt, Lạc tiêu, Phiên tiêu, Mạy phết (Tày), Mác phết, Tàm phân chiu (Dao), Mré (Kho)",
+      "ten_khoa_hoc": "Capsicum frutescens L.",
+      "ma_taxon": "122796",
+      "ho": "Solanaceae (Cà)",
+      "Mô tả": {
+        "cây": "Cây loại cỏ mọc hoang quanh năm tại những nước ôn đới, sống lâu năm và thân phía dưới hoá gỗ ở những nước nhiệt đới. cây có rất nhiều cành, nhẵn.",
+        "lá": "lá mọc so le, hình thuôn dài, đầu nhọn, phía cuống cũng thuôn hẹp, có cuống, phiến lá dài 2-4cm, rộng 1,5-2cm.",
+        "hoa": "Hoa mọc đơn độc ở kẽ lá.",
+        "quả": "Qủa mọc rủ xuống hay quay lên trời (chỉ thiên), hình dáng thay đổi, khi thì tròn, khi thì dài, đầu nhọn, màu vàng hay đỏ. Có loại rất cay, có loại ít cay, tuỳ theo nhiều điều kiện."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong ớt có những chất chủ yếu sau  Capsicain C18H27NO3 là một ancaloit chừng 0,05-2% phần lớn tập trung ở biểu bì của giá noãn (placenta), khi tán bột giá noãn, nhỏ nước lên rồi soi kính sẽ thấy các tin hthể hình vuông của capsicain. Độ chảy của capsicain là 65°C, khi nhiệt độ hơi cao thì bốc hơi và kích ứng rất mạnh gây hắt hơi rất khó chịu. cấu tạo hoá học của nó đã được xác định là axit isodexenic vanilylamit. Tính chất cay này gặp kềim không bị mất đi như chất cay của hồ tiêu. Nhưng nếu bị oxy hoá bởi kali bicromat, hoặc kali pecmanganat thì tính chất cay sẽ bị mất đi Trong đó tính chất cay do gốc –CO-NH-CH-CH2.  Chất này với nồng độ 1/100.000 vẫn còn cay.",
+        "gồm chất": "Một ancaloit nữa không có vị cay ở dạng lỏng",
+        "Các hợp chất": "Chất capsixin là hoạt chất gây đỏ nóng, trạng thái dầu lỏng, xuất hiện khi quả chin. Cấu tạo hoá học chưa xác định được. tỷ lệ từ 0,01% ở những ớt thường đến 0,1% ở những ớt paprika",
+        "chứa": "Vitamin C tỷ lệ khoảng chừng 0,8-1% trong ớt của ta (Viêt nam môn dược liệu 1957). Có những tác giả nghêin cứu ớt ở Châu phi, Hungari, thấy lượng vitamin C lên tới 1,17%; 2,66%; 4,98%",
+        "triết xuất": "Ngoài ra trong ớt còn có chất khác như capsanthin chất màu có tinh thể thuộc loại carotene, vitamin B1, B2, axit malic, axit xitric"
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ngoài công dụng làm gia vị, ớt có thể là một vị thuốc làm giúp sự tiêu hoá, làm ăn ngon chóng tiêu",
+        "được_dùng": "Dùng ngoài, ớt làm ột vị thuốc gây đỏ, kích thích tại chỗ, những trường hợp đau do phong thấp, đau lưng, khớp.",
+        "làm thuốc": "Ngày dùng 0,05g chia làm nhiều lần uống. dùng ngoài không có liều lượng."
+      },
+      "Cách dùng": {
+        "chữa": "Chữa rắn rết cắn: Giã nhỏ ớt, đắp vào nơi bị thương. Hết đau nhức thì bỏ đi. Ngày làm 1-2 lần cho đến khi hết đau.",
+        "có tác dụng": "Thường 15-30 phút hết đau, 2-3 giờ là khỏi hẳn."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

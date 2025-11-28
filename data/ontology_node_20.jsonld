@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cải cúc",
+      "ten_khac": "Cải cúc, Rau cúc, Xoòng hao (Tày)",
+      "ten_khoa_hoc": "Chrysanthemum coronarium L.",
+      "ma_taxon": "59904",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống hàng năm, mọc đứng, phân nhánh sum sê, cao 0,4-0,6m có thể đến 1m.",
+      "thân": "Cành non mềm. màu xanh lục, cành già cứng màu nâu nhạt.",
+      "lá": "Lá mọc so le, phiến lá men theo cuốոց, chẻ 2 lần lông chim hai mặt nhẵn, dài đến 20 cm. Lá vò ra có mùi thơm hắc.",
+      "hoa": "Cụm hoa là những đầu mọc riêng lẻ gồm những hoa ở phía ngoài hình lưỡi rộng màu trắng, hoa ở trong hình ống màu vàng, thơm, lá bắc của tổng bao không đều: khô xác ở mép, xếp thành 2 – 4 hàng.",
+      "quả": "Quả bế, dài 2-3 mm.",
+      "mùa hoa": "tháng 1 – 3",
+      "mùa quả": "tháng 1 – 3"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hầu hết là cây thảo, phân bố chủ yếu ở vùng ôn đới ấm. Một số loài được chọn lọc để trồng làm cảnh, lấy rau ăn hay làm thuốc trừ sâu. Cải cúc có nguồn gốc ở Vùng Địa Trung Hải. Sau du nhập sang các nước khác ở châu Âu, Bắc Phi và châu Á. Mục đích trồng cây này tuỳ từng nơi có khác nhau. Ở châu Âu, người ta chọn được giống cải cúc có hoa to và đẹp để trồng làm cảnh. Ở Trung Quốc và Nhật Bản, các giống lá có mùi thơm dễ chịu được trồng làm rau sống hay để nấu canh. Các nước vùng đông nam á vùng Đông Nam Á, trong đó có Việt Nam, lại trồng giống cải cúc có tên là ” tangho”, xuất xứ từ Trung Quốc. Cây chịu được khí hậu ấm áp hơn của vùng nhiệt đới, là loại rau xanh được nhiều người ưa chuộng. Cải cúc được nhập vào Việt Nam không biết từ bao giờ. Hiện nay cây được trồng rộng rãi ở hầu hết các địa phương ở miền Bắc. Ở miền Nam, có trồng tại Đà Lạt (Lâm Đồng). Cải cúc là loại cây ngắn ngày, ưa sáng và ưa ẩm, thích nghi được với nhiều loại đất. Giới hạn nhiệt độ cho cây sinh trưởng tốt rộng, có thể từ 5 đến 25°C. Cây trồng ở Việt Nam ra hoa kết quả tốt. Ngoài việc trồng để lấy rau ăn, có thể tạo từng vạt lớn ở nơi công cộng để làm cảnh, vì cây mọc rất đều, hoa đẹp."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cải cúc được trồng phổ biến ở trung du và đồng bằng nhất là các vùng xung quanh đô thị. Ở miền núi. cây sinh trưởng, phát triển tốt vào mùa hè nhưng ít được trồng. Cải cúc là cây ngắn ngày, sau 40 – 45 ngày đã có thể thu hoạch, nên có thể gieo trồng nhiều đợt trong vụ thu đông và sang đến đầu Xuân. Cây ưa đất thịt nhẹ, nhiều mùn và đủ ẩm, thường được trồng xen với các cây rau vụ đông khác như su hào, cải bắp, cải bẹ, xà lách, đậu vàng. Hạt cải cúc được gieo thẳng, không qua vườn ươm, rất dễ nảy mầm. Nếu trồng riêng thì sau khi làm đất, lên thành luống cao 15 – 20 cm, rộng 0,8-1m rồi gieo hạt. Có thể trộn hạt với cát hay đất bột để rắc cho đều. Dùng rơm rạ hoặc trấu phủ lên và tưới ẩm. Nếu phủ bằng rơm rạ thì sau khi cây mọc, cần dỡ bỏ rơm rạ. Cây cải cúc thường mọc dày, phủ kín mặt luống nên ít cỏ. Nếu trồng xen, chỉ cần chăm bón cây trồng chính. Nếu trồng riêng thì chỉ có thể dùng nước giải hoặc đạm pha loãng tưới cho cây 1 – 2 lần. Thu hoạch vào lúc cây chưa ra ngồng. Thường dùng đến đâu thu hoạch đến đó, bằng cách tỉa cả cây đem về loại bỏ gốc và lá già. Nếu thu hạt giống thì để hạt chín, cắt phần mang hoa về phơi khô, đập lấy hạt. Cải Cúc ít bị sâu bệnh."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân và lá cải cúc thu hái khi cần thiết, dùng tươi hoặc phơi khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cải cúc chứa tinh dầu, carbohydrat 5,57%, nhiều loại acid amin (prolin, alamin, asparagin acid glutamic, valin, leucin, prolin, acid aspartic, acid aminobutyric), gossipitrin, quercimetrin, herniarin. unbeliferon, scopoietin, acid clorogenic, acid 3.5 – dicafeoy – 4 – sucinyl quinic, acid 3,5 – di – cafeo.y quinic, một chất sulfoxid acetylenic, một thiophen. spiro acetaenoi ether"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cải cúc có vị ngọt, nhạt, hơi đắng, the, mùi thơm. Tính mát, được xem như loại rau, giúp khai vị, làm ăn ngon, giúp tiêu hoá, trừ đờm, tán phong nhiệt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cải cúc chữa ho lâu ngày, đau mắt, nhức đầu kinh niên, thổ huyết. Ở Ấn Độ, người ta phối hợp cải cúc với hồ tiêu để chữa bệnh lậu, hoa được dùng thay thế vị dương cam cúc như là một chất thơm đắng và lợi tiêu hoá. Ngày 30 – 50g dạng thuốc pha, thuốc sắc hoặc rửa sạch ăn sống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa ho trẻ em: Lá cải cúc thái nhỏ 6g, thêm ít đường hoặc mật ong, hấp cho tiết nước ra, chia làm nhiều lần uống trong ngày.",
+      "làm thuốc": "Chữa ăn uống kém tiêu, viêm họng, đau mắt: Dùng cải cúc ăn sống hoặc nấu canh ăn."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

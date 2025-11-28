@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ dòm",
+      "ten_khac": "Củ dòm, Củ gà ấp, Hán phòng kỷ, Phấn phòng kỷ, Phòng kỷ , Thạch thiềm thừ",
+      "ten_khoa_hoc": "Stephania dielsiana Y. C. Wu",
+      "ma_taxon": "1096220",
+      "ho": "Menispermaceae (Tiết dê)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Dây  leo, sống  nhiều năm, dài 2 – 3 m.",
+        "rễ": "Rễ củ to, đa dạng, nhưng thường thuôn dài, có vỏ ngoài nhăn nheo, thịt cứng rắn màu vàng nâu.",
+        "lá": "Lá mọc so le, hình tam giác gần tròn, dài 9 – 13 cm, rộng 8 – 12 cm, phiến mỏng nhẵn, gốc bằng hoặc hơi lõm, đầu nhọn, mép nguyên hoặc có ít răng rất nhỏ ở phía đầu lá, hơi lượn sóng, bấm lá thấy có nhựa màu tím hồng, cuống lá dài 4.5 – 8,5 cm, đính vào 2/3 phiến lá, gân lá xếp dạng chân vịt, nửa cuống lá phía trên và gân lá mặt sau có màu tím hoặc hồng.",
+        "hoa": "Hoa nhỏ, đơn tính khác gốc, hoa đực tụ hợp thành tán giả, có 6 lá đài màu tím xếp thành hai vòng, 3 cánh hoa màu vàng cam, nhị đính trên môi trụ ngắn, hoa cái thành dạng đầu, có 1 lá đài màu tím, 2 cánh hoa màu vàng cam có vân tím, đầu nhụy chia thùy.",
+        "quả": "Quả hình trứng dẹt, dài 0,8 – 0,9 cm, hạt có 4 hàng gai cong nhọn và có lỗ ở giữa.",
+        "mùa hoa": "tháng 4 – 5",
+        "mùa quả": "tháng 6 – 7",
+        "cây": "Cần phân biệt củ dòm với các loài bình vôi cũng có nơi gọi là củ gà ấp, nhưng khác ở chỗ bình vôi có củ hình tròn và ngắn, lá mặt sau chỉ một màu xanh lục nhạt."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Stephania Lour, gồm các loài là dây leo, rụng lá mùa đông, phân bố chủ yếu ở vùng nhiệt đới và á nhiệt đới châu Á. Ở Việt Nam, có 10 – 12 loài, trong đó chỉ có 2 – 3 loài không có rễ phình thành củ. Loài củ dòm được xếp vào diện tương đối hiếm, có điểm phân bố ở Ba Vì (Hà Tây), Kỳ Sơn (Hoà Bình), Bạch Thông (Bắc Cạn) và Trà My (Quảng Nam). Cây thường mọc trong các quần thể rừng ẩm, trên núi đất hoặc núi đá vôi với độ cao 300 – 800m.",
+        "thường_mọc": "Củ dòm là cây ưa ẩm và ưa sáng, thường mọc trùm lên các cây bụi khác.",
+        "Đặc điểm sinh trưởng": "Cây ra hoa quả hàng năm, tuy nhiên rất hiếm gặp cây cái trong tự nhiên, Hạt củ dòm được gieo thử có khả năng nảy mầm tốt. Sau 4 tháng, từ phần rễ mầm bắt đầu phình to thành củ. Củ dòm cũng được đưa vào Sách Đỏ Việt Nam để lưu ý bảo vệ."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Củ, rửa sạch, thái nhỏ, phơi khô."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Củ dòm chứa nhiều alcaloid cyclanolin, L – tetrahydropalmatin, crebanin, dehydrostephanin, magnoflorin, Stephanin, sinoaculin, xylopinin (CA 98. 212854c, CA 94: 127. 208v)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": null
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo nghiên cứu của y học hiện đại thì củ dòm có chứa các thành phần chính bao gồm:  Alcaloid Tetrandrine Cyclanoline Fenchinoline Menisine Fangchinoline Demethyltetradine Dimetyl Tetradrine Berbamine Cyclanoline Fanchinine Tetradine Menisidine  L. tetrahydropalmatin (gindarin) có tác dụng an thần, gây ngủ, hạ sốt, giảm đau, giải co thắt cơ trơn  Các nghiên cứu đã chỉ ra rằng các hợp chất có trong cây củ dòm, như tetrandrine và fangchinoline, có thể có đặc tính giảm đau. Những hợp chất này được cho là hoạt động bằng cách ngăn chặn hoạt động của một số enzym và kênh ion trong cơ thể."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "Củ dòm là một vị thuốc quý trong y học cổ truyền, nhưng việc sử dụng nó cần hết sức thận trọng. Dưới đây là những điều bạn cần đặc biệt lưu ý để đảm bảo an toàn và hiệu quả:  Tính chất dược liệu: Củ dòm có vị đắng, tính hàn và có thể gây ảnh hưởng không tốt đến tỳ vị (hệ tiêu hóa). Do đó, phụ nữ mang thai, những người có tỳ vị hư yếu, âm khí hư hoặc không có các chứng thấp nhiệt (nóng trong người) tuyệt đối không được dùng.  Tác dụng phụ: Việc sử dụng củ dòm không đúng cách có thể gây hại cho thận, gan và ảnh hưởng đến tuyến thượng thận. Vì vậy, cần phải hết sức thận trọng khi dùng các bài thuốc từ dược liệu này.  Kiêng kỵ thực phẩm: Trong quá trình sử dụng cây củ dòm, bạn nên tránh uống các loại đồ uống có tính kích thích như trà, cà phê, vì chúng có thể làm giảm tác dụng của dược liệu này.  Lời khuyên từ thầy thuốc: Theo y học cổ truyền, củ dòm có tác dụng trừ phong thấp, giảm đau và giảm sưng. Tuy nhiên, nó cũng chứa nhiều độc tố. Để đảm bảo an toàn, bạn cần trao đổi kỹ với thầy thuốc trước khi sử dụng để được tư vấn và hướng dẫn cụ thể."
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

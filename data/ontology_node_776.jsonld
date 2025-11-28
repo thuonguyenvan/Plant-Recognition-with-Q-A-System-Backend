@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mướp đắng",
+      "ten_khac": "Mướp đắng, Khổ qua, Mướp mủ, Lương qua, Chưa rao (Mường), Cẩm lệ chi, Mác khấy (Tày)",
+      "ten_khoa_hoc": "Momordica charantia L.",
+      "ma_taxon": "61369",
+      "ho": "Cucurbitaceae ( Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Mướp đắng là một loại dây leo, thân có góc cạnh, ở ngọn hơi có lông tơ.",
+      "lá": "Lá mọc so le, dài 5- 10cm, rộng 4-8cm, phiến lá chia 5-7 thuỳ hình trứng, mép có răng cưa đều, mặt dưới lá màu nhạt hơn mặt trên, trên gân lá có lông ngắn.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, đực cái cùng gốc, có cuống dài, cánh hoa màu vàng nhạt, đường kính của hoa chừng 2cm.",
+      "quả": "Quả hình thoi dài 8-15cm, trên mặt có nhiều u nổi lên, quả chưa chín có màu vàng xanh, khi chín có màu vàng hồng, trong quả có hạt dẹt dài 13-15mm, rộng 7-8mm, trông gần giống hạt bí ngô, quanh hạt có màng màu đỏ máu như màng gấc."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả có chứa một chất glucozit đắng gọi là momordicoside. Ngoài ra còn có vitamin B, C, betain, protein (0,6%). Hạt có chất dầu và một chất đắng chưa xác định.",
+      "đã nghiên cứu": "Năm 1950, Airan J. w. và N. D. Gatge (Ấn Độ) có nghiên cứu dầu và khô dầu hạt mướp đắng (Chemical examination of Korlaplants- Chrrent Sci. India, 10.1950)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả và lá mướp đắng có vị đắng, tính lạnh. Hạt có vị đắng hơi ngọt, tính ấm, có tác dụng thanh nhiệt, nhuận tràng, lợi tiểu"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở nước ta, ngoài công dụng làm thức ăn (nấu với thịt làm canh), mướp đắng còn được dùng làm một vị thuốc mát chữa ho, tắm cho trẻ trừ rôm sẩy, chữa sốt. Theo sách cổ đông y mướp đắng có vị đắng (khổ), tính hàn, không có độc.",
+      "được_dùng": "Ngày dùng chừng 2 quả bỏ hết hạt, nấu mà ăn. Hạt dùng với liều 3g hạt khô, dưới dạng thuốc sắc.",
+      "làm thuốc": "Tại nhiều nước khác cũng dùng mướp đắng làm thuốc. Ví dụ tại Poocto-Ricô (một nước gần Cuba, Châu Mỹ), mướp đắng được dùng chữa bệnh đái đường (Rivera c., 1941. Preliminary Chemical and pharmacological studies cundeamer Momordica charantia Linn-Amer, J. Tại Ấn Độ, nước ép của lá dùng làm thuốc gây nôn, thuốc tẩy trong những bệnh về đường mật, nó có tác dụng chữa giun.",
+      "chữa": "Đơn thuốc dùng mướp đắng dùng trong nhân dân"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước tắm cho trẻ con nhiều rôm sẩy: Mướp đắng 2-3 quả nấu với nước để tắm cho trẻ em. Ngày 1 lần."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa ho: Mướp đắng 1-2 quả, nấu với nước mà uống làm 1 hay 2 lần trong ngày."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa đái tháo đường không phụ thuộc insulin: Quả mướp đắng còn xanh, thái mỏng, phơi khô tán bột. Ngày uống 12-20g, chia làm 2-3 lần, uống sau bữa ăn với nước"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa chốc đầu trẻ em: Dùng lá đào nấu nước gội, rồi giã nát quả và hạt mướp đắng bôi"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa thấp khớp: Dây lá mướp đắng, dây đau xương (sao rượu), cây xấu hổ (sao), rễ nhàu, cỏ xước, vòi voi (sao), cối xay mỗi vị 8g, rễ ngũ trảo 5g, quế chi 4g, gừng sống 3g, dây thần thông 2g. Sắc uống ngày 1 thang"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mướp đắng được trồng ở khắp các tỉnh trong nước ta, ở miền Bắc cũng như ở miền Nam. Thường người ta trồng để lấy quả nấu ăn cho mát (giải nhiệt).",
+      "mọc": "Còn thấy mọc ở miền nam Trung Quốc (Phúc Kiến, Quảng Đông, Quảng Tây, Giang Tô, Triết Giang). Tại một số nước Đông Nam Châu Á như Ấn Độ, Malaixia, Philippin cũng thấy có.",
+      "làm thuốc": "Thường người ta dùng quả tươi. Hạt phơi khô và lá làm thuốc.",
+      "mùa quả": "Mùa quả ở miền Bắc các tháng 5-6-1."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

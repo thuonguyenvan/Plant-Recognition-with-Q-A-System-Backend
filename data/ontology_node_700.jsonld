@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sầu đâu rừng",
+      "ten_khac": "Xoan rừng, Sầu đâu cứt chuột, Nha đảm (tử), Sầu đâu rừng",
+      "ten_khoa_hoc": "Brucea javanica (L.) Merr.",
+      "ma_taxon": "184507",
+      "ho": "Simarubaceae (Thanh thất)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sầu đâu rừng cao khoảng 1,5-2,5m, thân yếu không thành gỗ và không to như cây xoan làm nhà.",
+      "lá": "Lá xẻ lông chim không đều, 4-6 đôi lá chét hình trứng-mũi mác không cân, có lông dày ở mặt dưới, có răng rộng và tù ở mép.",
+      "hoa": "Cụm hoa là những chùy dài 15 – 25cm, gồm nhiều hoa nhỏ đơn tính tạo thành xim; lá bắc nhỏ, có lông dễ rụng. Đài có 4 thùy, hình mác. Cánh hoa 4, thuôn, có lông tuyến ở đỉnh. Hoa đực có 4 nhị và nhụy tiêu giảm thành đầu nhụy 4 thùy. Hoa cái có 4 nhị rất ngắn, đĩa hoa chia 4 thùy, bầu có 4 lá noãn rời, cong ra phía ngoài, chứa mỗi ô 1 noãn treo.",
+      "quả": "Quả hạch, tròn dài, khi chín màu đen.",
+      "mùa hoa": "tháng 3-9",
+      "mùa quả": "tháng 3-9"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong quả nha đảm tử có 23% dầu (hoặc 50% nếu chỉ tính đối với nhân). Dầu lỏng, màu trắng. Ngoài ra còn một glucozit gọi là kosamin, chất tanin, chất men có thể là men thủy phân, amydalin, chất quassin và một chất saponin.",
+      "gồm chất": "Chất kosamin có tác dụng diệt trùng rất rõ rệt. Liều nhỏ gây nôn diệt giun sán, liều cao thì độc, làm tim đập chậm, nôn ra mật và máu, đi ỉa lỏng và có thể chết được. Máu người bị ngộ độc đen, không đông được, hồng cầu phồng lên, vón lại, ống tiêu hóa và màng não bị viêm.",
+      "đã nghiên cứu": "Năm 1967, Viện các hợp chất thiên nhiên ở Pháp (Judith Polansky-Zoia BaskevithExperientia 23(6) 1967-C. A. 1968 Nb5-21869), năm 1968 Trường đại học tổng hợp California Mỹ (Keng Y.Sim James J.Simes J.Org Chem 33(1) 1968-C.A.68,39849n) đã chiết và xác định công thức hóa học của một số chất đắng như bruxein A, B, C và brusatola.",
+      "dấu hiệu đặc trưng": "Brusatola có độ chảy 276-278o, công thức thô C27H32O11."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sầu đâu rừng có vị đắng, tính hàn, tác dụng vào đại tràng."
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng",
+      "có tác dụng": "Tác dụng trị táo thấp, sát trùng, chữa sốt rét, những người tỳ vị hư nhược nôn mửa cấm dùng.  Đây là một loài thuốc lỵ đã được dùng lâu đời ở nhiều nước nhiệt đới: tại Việt Nam vị thuốc được ghi với tên “xoan rừng” trong bộ “Nam dược thần hiệu” của Tuệ tĩnh (thế kỷ 17) tại Trung Quốc vị thuốc lần đầu tiên thấy được ghi với tên nha đảm tử trong “Bản thảo thập di” của Triệu học Mẫn (1765).",
+      "được_dùng": "Ngày dùng 10-14 quả, có thể tới 20 quả, tán nhỏ, làm thành viên 0,1g toàn quả hoặc 0,02g nhân đã khử dầu mà uống. Uống liền 3-4 ngày đến một tuần lễ. Thường chỉ 1-2 ngày là khỏi. Nhưng nên uống liền trong 5-7 ngày cho hết hẳn. Có thể bỏ vỏ, ép hết dầu vì dầu có tính chất kích thích, gây nôn và ỉa lỏng.",
+      "chữa": "Ngoài công dụng chữa lỵ, nha đảm tử còn có tác dụng chữa ỉa lỏng viêm ruột thường chữa sốt rét."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

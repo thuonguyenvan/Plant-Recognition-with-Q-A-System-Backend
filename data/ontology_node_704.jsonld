@@ -1,0 +1,229 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Seo gà",
+      "ten_khac": "Cỏ seo gà, Phượng vĩ thảo",
+      "ten_khoa_hoc": "Pteris multifida Poir.",
+      "ma_taxon": "82165",
+      "ho": "Pteridaceae (Seo gà)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": null,
+        "quả": null,
+        "cây": "Seo gà là một loại cây nhỏ, thân cỏ, cao trung bình 15-25cm, có cây cao hơn. Lá bất thụ có cuống mang dìa, dài 6-12cm, phiến lá dài 8-25cm chia thành nhiều phiến nhỏ dài, mép có răng cưa, phiến nhỏ ở đầu lá dài hơn cả, thoạt nhìn trông giống như những cành của cây. Lá hữu thụ có cuống dài 10-50cm, phiến lá dài 10-40cm, cũng chia thành nhiều phiến lá nhỏ. Giữa các phiến lá nổi rõ gân chính, từ gân này toả ra nhiều gân phụ hình lông chim, xếp song song với nhau. Hai bên mép phiến lá hữu thụ mang cơ quan sinh sản gọi là ổ tử nang xếp thành một đường thẳng liên tục.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Chưa thấy tài liệu nghiên cứu",
+        "gồm chất": null,
+        "Các hợp chất": null,
+        "chứa": null,
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Rễ và lá được dùng làm thuốc chữa đi ỉa chảy, ỉa ra máu, lỵ, dưới dạng thuốc sắc hay thuốc ngâm rượu, nước sắc đôi khi còn thấy ra giun Rễ, lá sao vàng, tán nhỏ đun với dầu vừng thành thuốc dầu bôi chữa một số bệnh ngoài da cho trẻ em. Ngày uống từ 12-24g rễ hoặc lá khô Dùng ngoài không kể liều lượng  Đơn thuốc có seo gà dùng trong nhân dân  Chữa kiết lỵ (trực trùng) rễ và lá seo gà so cho thơm 24g, nước 100ml, đun sôi giữ trong vòng 30 phút. Chia 2-3 lần uống trong ngày chữa lỵ trực trùng. Đơn thứ 2: chè tươi 100g, seo gà khô 24g, nước 150ml, đun sôi giữ trong 30 phút. Chia 2-3 lần uống trong ngày chữa lỵ trực trùng.",
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Seo gà mọc phổ biến ở miền Bắc và miền Trung nước ta, thường gặp nhất trên những vách đá, vách đất xung quanh thành giếng, ven đường đi, những nơi thoáng ẩm và mát. Còn thấy mọc cả ở Trung Quốc, Nhật Bản. Bộ phận dùng làm thuốc của cây là thân rễ và lá. Thân rễ nằm ngang dưới mặt đất, chừng 3-4cm, hình cong queo, sần sùi, nhiều mấu, hơi cứng, vị hơi ngọt, đắng và tê, mùi thơm hắc, đào về thái mỏng, phơi hoặc sấy khô.",
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

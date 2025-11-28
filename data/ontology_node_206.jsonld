@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dứa",
+      "ten_khac": "Thơm, Trái thơm (miền Nam), Dứa",
+      "ten_khoa_hoc": "Ananas sativa L.",
+      "ma_taxon": "122966",
+      "ho": "Bromeliaceae (Dứa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống dai.",
+      "lá": "Lá mọc thành hoa thị, cứng dài, có gai cứng ở mép.",
+      "thân": "Khi cây đã lớn thì từ chùm lá đó mọc ra một thân dài độ 10-40cm, mang một bông hoa tận cùng bằng một chùm lá nhỏ.",
+      "hoa": "Hoa đều, lưỡng tính. Mỗi hoa mọc ở kẽ một lá bắc màu tím. Ba lá đài nhỏ màu lục, ba cánh hoa màu tím lớn hơn, 6 nhị xếp thành 2 vòng. Bầu hạ 3 ô, mỗi ô chứa 2 dãy noãn đảo.",
+      "quả": "Quả mọng phần ăn được và thường gọi là “quả dứa” thực ra là gồm trục của bông hoa và các lá mọng nước tụ hợp lại mà thành, còn quả thật thì nằm trong các mắt dứa."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong quả dứa có 90% nước, 0,5-0,8% protit, 0,7-1% axit hữu cơ, 6,5-8,9% gluxit, 0,4-0,8% xenluloza, 0,4-0,5% tro, 15-32mg% canxi, 11-17mg% P, 0,3-0,5mg% Fe; 0,05-0,08mg% carotene; 0,08mg% vitamin B1, 0,02-0,03mg% vitamin B2, 0,2mg% vitamin PP và 24-26mg% vitamin C. Trong tất cả các bộ phận của cây dứa (thân lá qủa) đều chứa bromelin, nhiều nhất tập trung ở thân dứa (phần lõi trắng của chồi) cao gấp 8-20 lần so với ở quả, dứa tây chứa nhiều bromelin hơn dứa ta. Trong nước dứa bromelin có vào khoảng 3-5g phần 1.000, vỏ dứa chứa nhiều hơn dịch chiết quả.",
+      "gồm chất": "Bromelin là một men thuỷ phân protit. Trọng lượng phân tử bromelin khoảng 23.000. Bromelin là một men chịu được nhiệt, dịch chiết Bromelin ở PH 3,5 sau khi đun 60 phút vẫn còn hoạt tính",
+      "đã nghiên cứu": "Từ 1963 Bromelin được dùng chữa bệnh rối loạn tiêu hoá dã dày, ruột. Ở PH 3,3 Bromelin tác dụng như pepsin, ở PH 6 như trypsin. Trường hợp vô toan, Bromelin vẫn có tác dụng.",
+      "có hoạt chất": "Bromelin có tác dụng ức chế quá trình viêm, làm giả phù nề và tụ huyết. Bromelin bôi lên vết thương hoặc vết bỏng làm tiêu các tổ chức chết, mau thành sẹo. Phối hợp Bromelin với thuốc ngủ natri pentobacbital làm tăng thời gian gây ngủ của thuốc, phối hợp với theophyllin, ephedrine tăng tác dụng chống hen và viêm phế quản của những thuốc ấy. Nghành thực phẩm còn dùng Bromelin làm mềm thịt, tác dụng của Bromelin còn mạnh hơn tác dụng của papain của đu đủ. Ngoài ra Bromelin còn dược dùng thúc đẩy quá trình thuỷ phân đạm trong công nghiệp chế bíên nước chấm"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài quả dứa dùng để ăn, dứa gần đây đã trở thành nguyên liệu chiết Bromelin dùng trong nhiều nghành công nghiệp và làm thuốc chữa bệnh. Nhân dân còn dùng rễ cây dứa làm thuốc lợi tiểu, chữa tiểu tiện khó khăn, đái ra sỏi sạn. Dịch ép lá quả chưa chín là một thứ thuốc tẩy nhuận tràng (có thể gây sẩy thai) Nõn (lá non) dùng làm thuốc chữa sốt.",
+      "được_dùng": "Ngày dùng 20-30g nõn dứa ddưới dạng thuốc sắc hay giã nát lấy nước uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Dứa vốn nguồn gốc Trung Mỹ, hiện nay được trồng ở hầu hết những nước nhiệt đới. Sản lượng dứa trên thế giới vào khoảng 1.750.000 tấn. Ở nước ta việc trồng dứa cũng rất phát triển, chủ yếu để lấy quả ăn hoặc xuất khẩu. Gần đây dứa còn là nguồn nguyên liệu chiết men bromelin (xem phần thành phần hoá học). Nhân dân ta còn dùng nõn cây làm thuốc thu hái vào mùa xuân.",
+      "làm thuốc": "Thường chỉ dùng tươi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

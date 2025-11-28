@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hướng dương",
+      "ten_khac": "Hướng dương, Cây quỳ, Hoa mặt trời",
+      "ten_khoa_hoc": "Helianthus annuus L.",
+      "ma_taxon": "57983",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo lớn, sống hàng năm, có thân to thẳng, cao 1-3m, thân thường có đốm, có lông cứng.",
+      "lá": "Lá to, thường mọc so le, có cuống dài; phiến hình trứng; lá ở phía dưới hình tim, nhọn đầu, mép lá có răng, hai mặt lá đều có lông trắng.",
+      "hoa": "Cụm hoa đầu lớn, đường kính 7-20cm, quay về hướng mặt trời. Bao chung hình trứng. Hoa hình lưỡi ở ngoài màu vàng, các hoa lưỡng tính ở giữa màu tím hồng.",
+      "quả": "Quả bế dẹt, có vỏ cứng màu đen bóng, có viền xám hoặc trắng ở những sống dọc.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 8-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hướng dương có nguồn gốc từ loài H.lenticularis Douglas mọc tự nhiên ở Mehico. Song, hiện nay không còn có ở trạng thái hoang dại. Từ xa xưa hướng dương đã được trồng làm cảnh và qua quá trình chọn giống, lai tạo để lấy hạt, quần thể hướng dương đã gồm hàng chục giống, thích nghi với nhiều vùng trồng khác nhau. Hướng dương được trồng nhiều nhất ở Ucraina, các nước Cộng hòa thuộc Liên Xô trước đây, Pháp, Ý, Thổ Nhĩ Kỳ, Mỹ, Canada, Trung Quốc, Ấn Độ, Australia. Ở Việt Nam, hướng dương do người Pháp đưa vào, sau đến một số giống lấy từ Liên Xô, Đông Âu và hiện còn được trồng rải rác trong nhân dân, nhất là các tỉnh miền núi phía Bắc. Nhìn chung, hướng dương là cây có biên độ sinh thái rộng, thích nghi với vùng có khí hậu ôn đới ấm, cận nhiệt đới và vùng nhiệt đới núi cao. Cây cũng có thể sinh trưởng phát triển tốt cả ở vùng khô tại Trung Á, có sự chênh lệch về nhiệt độ giữa ngày và đêm cao, mùa đông có sương mù. Cây trồng ở Việt Nam có giới hạn nhiệt độ trung bình năm từ 15 đến 30 độ C; lượng mưa 1500-2800mm/năm; đất có pH trung bình và không chịu được ngập úng. Hoa thụ phấn nhờ côn trùng, tái sinh từ hạt tốt."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cả cây gồm rễ, thân, lá, hoa và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hàm lượng dầu béo trong hạt hướng dương khoảng 50%, trong đó linolenic acid chiếm  tới  70%. Còn  chứa  các phospholipid  như  lecithin, phosphatidylinositol, phosphatidylethanolamine. Hàm  lượng  protein khoảng  20-26%, trong  đó  các  acid  amin  thiết  yếu isoleucine, leucine, lysine, methionine, phenylamine, tryptophan, threonile, valine có tỷ lệ phần trăm gần giống tỷ lệ lý tưởng do WHO kiến nghị, do đó có giá trị dinh dưỡng tương đối cao. Ngoài  ra  còn  có  các  acid hữu cơ như citric acid, tartaric acid, chlorogenic acid, quinic acid, caffeic acid; beta caroten, nhiều loại vitamin và nguyên tố vi lượng. Ðặc biệt, vitamin E có hàm lượng rất cao trong hạt hướng dương (trong 15g có tới 31mg); Hàm lượng Ka-li (K) trong hạt hướng dương còn cao hơn trong chuối tiêu và quít."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hướng dương có vị hơi ngọt, tính bình, không độc, có tác dụng tùy theo bộ phận dùng: cụm hoa hạ huyết áp, giảm đau; rễ và lõi thân lợi tiểu, chống ho; lá tiêu viêm, giảm đau; hạt làm se, bổ cho dịch thể."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cụm hoa hướng dương trị huyết áp cao, đau đầu, choáng váng, ù tai, đau răng, đau gan, đau bụng, đau kinh, đau khớp, viêm vú. Ngày 30-90g sắc uống. Lõi cành cây hướng dương có tác dụng trị chứng tiểu ra máu, sỏi đường tiết niệu, tiểu tiện không thông… Trị ho gà dùng 15 – 30g lõi thân và cành cây hướng dương giã nát hãm nước sôi, thêm đường trắng uống trong ngày. Lá hướng dương trị sốt và sốt rét: dùng 20 – 40g lá hướng dương, sắc uống. Hạt hướng dương dùng khi chán ăn, người mệt mỏi, kiết lỵ ra máu, sởi phát ban không đều, ngày 20-30g, rang rồi ăn nhân. Trong nhân dân, hạt hướng dương để rang ăn hoặc làm thức ăn cho người và gia súc. Dầu hướng dương để bôi trơn.  Bài thuốc có hướng dương:  Chữa cao huyết áp: Cụm hoa hướng dương 60g, râu ngô 30g, sắc thêm đường uống."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

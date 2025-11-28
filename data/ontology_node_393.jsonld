@@ -1,0 +1,306 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/du-du-rung.html",
+      "ten": "Đu đủ rừng",
+      "ten_khac": "Thông thảo gai, thầu dầu núi, nhật phiến, thôi hoang.",
+      "ten_khoa_hoc": "Trevesia palmata (Roxb. ex Lindl.) Visan.",
+      "ma_taxon": "431695",
+      "ho": "Nhân sâm (Araliaceae)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỏ, cao 6 – 8m hoặc hơn. Thân hình trụ, phân nhánh, ruột xốp, cành có gai ngắn.",
+        "lá": "Lá mọc so le, xẻ sâu thành 5 – 9 thùy chân vịt, các thùy lại chia thành những thuỳ nhỏ không đều, đầu tròn, có gân nổi rõ; cuống lá dài có gai. Lá non có lông mềm, lá già nhẵn.",
+        "hoa": "Cụm hoa mọc ở kẽ những lá gần ngọn thành tán, có cuống dài, tụ họp thành chùy; hoa màu trắng.",
+        "quả": "Quả có khía, đầu bằng, có núm tẩy và nhọn; hạt det.",
+        "mùa hoa": "tháng 5-6",
+        "mùa quả": "tháng 7-9"
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Trevesia Visan. phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam, chi này có 5 loài và 1 thứ (var), trong đó có tới 3 loài và 1 thứ (var.) mới đối với thế giới do các nhà khoa học Liên Xô công bố năm 1984.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Mộc Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thuận Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Điện Biên (Điện Biên Đông)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai (Bảo Thắng)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Giang (Đồng Văn, Phó Bàng, Yên Ninh Du Hà, Quản Bạ Cán Tị)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang Nà Hang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn (Hữu Lũng)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Nội (Ba Vì"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Trị"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Kom Tum (vùng núi Ngọc linh)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Gia Lai (Chư Pan, Mang Yang)"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đắk Nông"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lâm Đồng (Lang Bian, Tà Nùng)"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Đu đủ rừng là cây ưa ẩm, chịu bóng và cũng ưa sáng. Cây thường mọc dọc theo các bờ khen suối, ở cửa rừng ven rừng, trong rừng kín thường xanh ẩm trên núi đá vôi hoặc trên núi đất độ cao phân bố thường từ 400m trở lên."
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Đu đủ rừng hiện mới trồng làm mẫu tại các vườn thuốc và vườn thực vật.  Đất trồng ẩm, thoát nước và không bị ngập úng. Nơi trồng khi cây còn nhỏ cần có tán che, khi lớn cần điều tiết giảm tản che hoặc có thể bị che bóng một phần trong ngày. Mặc dù chưa có những nghiên cứu cụ thể, nhưng chắc chắn có thể nhân giống bằng hạt. Cây con ở vườn ươm sau 1 năm tuổi đánh ra trồng. Thời vụ trồng vào vụ đông hay vụ xuân. Cách trồng: đào hố vừa đủ để lấp kín toàn bộ gốc và bộ rẻ. Cự ly trồng 3 – 4m cây. Khi trồng cần bón lót phân chuồng mục. Thường xuyên tưới nước cho đất luôn ẩm. Đu đủ rừng là cây mọc nhanh, chưa thấy sâu bệnh."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lõi thân."
+      },
+      "Thành phần": {
+        "@type": "Thành phần"
+      },
+      "Tính vị": {
+        "@type": "Tính vị",
+        "Có vị": "Đu đủ rừng có vị hơi đắng, tính bình, có công năng hoá ứ, chỉ thống, bổ, cường tráng [TDTH, 1996, II: 717]; lõi thân có công năng thông tiêu, tiêu phù, lợi sữa."
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Lõi cây đu đủ rừng được dùng như vị thuốc thông thảo là lõi thân cây thông thảo (Tetrapanax papyrifera), chữa phù thũng, đái dắt, tê thấp, làm thuốc mát cơ thể, làm phổi bớt nóng. Liều dùng: hàng ngày 20-30g, sắc nước uống.  Lá được dùng nấu nước xông, chữa tê bì. Dùng ngoài rửa sạch, giã nát, bó xương.  Ở Trung Quốc, người ta dùng lá chữa đòn ngã tổn thương hay dao chém thương tích.  Nguồn: 3033 Cây thuốc Đông y Tuệ Tĩnh"
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng"
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

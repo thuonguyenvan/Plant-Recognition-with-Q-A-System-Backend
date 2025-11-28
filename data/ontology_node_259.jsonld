@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba gạc Ấn Độ",
+      "ten_khac": "Ba gạc Ấn Độ, Ba gạc hoa đỏ",
+      "ten_khoa_hoc": "Rauvolfia serpentina (L.) Benth. ex Kurz",
+      "ma_taxon": "431529",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 0,3-1m.",
+      "thân": "Thân có nốt sần, ít phần cành.",
+      "rễ": "Rễ to, vỏ rễ có nhiều vết nứt dọc.",
+      "lá": "Lá mọc vòng 3, đôi khi 4 cái hoặc mọc đối, cuống ngắn, gốc và đầu lá thuôn nhọn, mặt trên màu lục sẫm bóng, mặt dưới màu lục nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân hoặc kẽ lá hình xim tán hoặc chùy, dài 4-6cm; hoa và cuống là màu hồng hay đốm hồng; 5 lá đài không màu; tràng 5 cánh, có ống phình ở 1/3 phía trên; nhị 5 đính ở phần phình của ống tràng; bầu có hai lá noãn rời.",
+      "quả": "Quả đôi, nhỏ, hình trứng, đầu hơi nhọn, khi chín màu đỏ rồi màu tím đen.",
+      "mọc": "Cây có nhựa mủ.",
+      "mùa hoa": "tháng 6-8",
+      "mùa quả": "tháng 9-11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài có gặp mọc hoang ở Kontum và Ðắc Lắc nhưng trữ lượng không đáng kể; thuộc loài cây quý hiếm của nước ta. Thường được trồng thí nghiệm trong các vườn thuốc. Thu hái rễ vào mùa đông khi cây rụng lá hoặc đầu mùa xuân. Thông thường là chặt thân cành sát gốc, dùng cuốc đào rễ. Rửa sạch đất cát để ráo nước rồi bóc vỏ phơi khô. Ở Ấn Độ, người ta thu hoạch rễ ở cây 3-4 tuổi, vào mùa thu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, vỏ rễ đã phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hàm lượng alcaloid toàn phần là 0,8-1%",
+      "gồm chất": "Alcaloid có ít ở thân (0,3%) nhiều ở rễ (1-2%) tập trung ở vỏ rễ nhiều gấp 10 lần so với các bộ phận khác.",
+      "chứa": "Rễ chứa chất vô cơ 6-7% tinh bột, chất sterol và alcoloid (có đến 28 chất) thuộc 4 nhóm khác nhau (ỵohimbin, heteroyohimbin, serpagin và ajmalin).",
+      "Các hợp chất": "Cây mọc ở Ðắc Lắc có khả năng cho 10g vỏ rễ khô và chứa alcaloid toàn phần là 3,3% ở vỏ rễ. 0,275% ở lõi rễ, 0,975% ở thân lá.",
+      "triết xuất": "Từ vỏ rễ đã chiết tách được reserpin 0,04%, ajmalin 0,5%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ rễ có vị đắng tính hàn"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ba gạc Ấn Độ  tác dụng hạ huyết áp và an thần, thu nhỏ đồng tử, làm se mí mắt, làm chậm nhịp tim và kích thích hoạt động của ruột.",
+      "được_dùng": "Các chế phẩm từ ba gạc ấn độ  dùng điều trị bệnh tăng huyết áp và bệnh tâm thần gồm có:",
+      "làm thuốc": "Reserpin: viên nén 0,1mg, 0,25mg và 0,5mg. Liều dùng cho điều trị bệnh tăng huyết áp là 0,1-1,5mg/ngày. Liều dùng cho bệnh tâm thần thường cao hơn 5mg/ngày.",
+      "có tác dụng": "Alkaloid toàn phần của ba gạc hoa đỏ có viên Rauviloid chứa 2mg alkaloid toàn phần cho mỗi viên. Liều dùng cho bệnh tăng huyết áp 2-4mg/ ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

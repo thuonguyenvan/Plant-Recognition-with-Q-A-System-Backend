@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ tháp bút",
+      "ten_khac": "Mộc tặc, búa lọ phì nọi (Thái).",
+      "ten_khoa_hoc": "Equisetum debile Roxb .",
+      "ma_taxon": "504304",
+      "ho": "Cỏ tháp bút (Equisetaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống lâu năm, có thể cao đến 1 m.",
+        "rễ": "Thân rễ dài, chia đốt, mọc bò ở dưới đất.",
+        "thân": "Thân cây mọc đứng, hình trụ rỗng (trừ các mắt), có nhiều khía rãnh dọc, mang phần sinh sản (hữu thụ) và phần không sinh sản (bất thụ).",
+        "lá": "Phần không sinh sản có thể dài đến 20 cm, chia thành từng đốt, có rãnh dọc; ở mỗi mẫu có một vòng lá rất nhỏ dính liền nhau ở gốc thành bẹ hình ống, phía trên ống chia răng màu nâu, ứng với số rãnh của đốt.",
+        "hoa": "Phần sinh sản gồm túi bào tử mọc ở mặt dưới những lá biến đổi thành vảy. Các vảy này tụ hợp thành bông thuôn ở ngọn thân, nom như đầu nhọn của chiếc bút lông.",
+        "quả": "Bào tử hình cầu.",
+        "mùa hoa": "tháng 10–12."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Equisetum L. chỉ có một số ít loài, phân bố rải rác khắp thế giới. Ở Ấn Độ có 4 loài, Việt Nam 2 loài, đều được dùng làm thuốc.  Cỏ tháp bút thường gặp ở các tỉnh miền núi và trung du, mọc thành đám nhỏ ở đất ẩm, dọc theo bờ khe suối, bờ ruộng nước sát chân núi. Cây có hệ thống thân rễ phát triển, phân nhánh nhiều nên khó phân biệt thành từng cá thể. Bào tử có nhiều, hàng năm, phát tán nhờ gió hoặc dòng nước. Mặt khác, nhờ có hệ thống thân rễ nằm dưới mặt đất, nên phần trên mặt đất nếu bị chặt phá hoặc đốt cháy, vẫn tồn tại và tiếp tục tái sinh."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Cây cỏ tháp bút chứa các alcaloid như equisttin, nicotin, palustrin, 3-methoxypyridin. Ngoài ra, còn có thymin, dimethylsulfon.",
+        "Các hợp chất": "Các flavonoid đã được tìm thấy là isoquercitrin (C₂₁H₂₀O₁₂), galuteolin (luteolin 5-glucosid C₂₁H₂₀O₁₁), equisetirin (kaempferol-7-diglucosid C₂₇H₃₀O₁₆).",
+        "chứa": "Cây khô chứa 75–100 mg% vitamin C.",
+        "đã nghiên cứu": "Ngoài ra, đã phân lập được pachysapogenin A, pachysapogenin B và β-sitosterol. Đặc biệt đã phân lập được equisetonin là một chất vô định hình màu vàng với hàm lượng khá cao 1–5%, khi thuỷ phân cho equisetogenin (C₂₇H₄₈O₈) và fructose, arabinose.",
+        "triết xuất": "Từ hoa cây tháp bút, người ta còn chiết được arculatin (C₂₂H₃₂O₁₁) và một lượng nhỏ isoarculatin. Khi thuỷ phân arculatin thu được genin có công thức hóa học là C₁₅H₂₂O₆ và glucose; ngoài ra, còn có acid equisetolic."
+      },
+      "Tính vị": {
+        "Có vị": "Cỏ tháp bút có vị ngọt hơi đắng, tính bình, vào các kinh can, đởm, phế, thận, có tác dụng tán phong, giải cơ, lợi tiểu, làm ra mồ hôi và cầm máu."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cỏ tháp bút được dùng chữa đau mắt sưng đỏ có màng mộng, viêm gan vàng da, bí tiểu tiện, đại ra sỏi, cảm mạo, ho hen, trĩ, huyết lỵ, rong kinh.",
+        "được_dùng": "Ngày dùng 5–15g kết hợp với thuốc khác, dưới dạng thuốc sắc hoặc hoàn tán.",
+        "chữa": "Ở Nga, nhân dân đã dùng cỏ tháp bút từ lâu đời làm thuốc lợi tiểu. Ở Ấn Độ, cỏ tháp bút là thuốc làm mát và đôi khi trị bệnh lậu. Nhân dân Nepal dùng dịch ép rễ khoảng 1 thìa cà phê mỗi ngày trị sốt rét, đồng thời lấy cây dốt và dùng phần còn lại màu đen bôi để trị bỏng ở cơ thể và ghẻ. Trong y học dân gian miền nam nước Ý, cỏ tháp bút cũng được dùng làm thuốc lợi tiểu."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

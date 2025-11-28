@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lưu kí nô",
+      "ten_khac": "Lưu ký nô, Nguyên bảo thảo, Thanh thiên, Cỏ ban, Ban lá dính, Xuyên tâm thảo",
+      "ten_khoa_hoc": "Hypericum sampsonii Hance",
+      "ma_taxon": "736907",
+      "ho": "Hypericaceae (Nọc sởi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, sống một năm hoặc nhiều năm, cao 30 – 50 cm.",
+      "thân": "Thân cành hình trụ, cứng và nhẵn.",
+      "lá": "Lá mọc đối, không cuống, dài 4-5 cm, rộng 1-1,5 cm, gốc hình tim (ở lá già, hai lá đối diện đính liền gốc), đầu tù, mép uốn lượn, mặt dưới màu nhạt, có tuyến màu đen.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành xim ngù; hoa nhỏ màu vàng; đài 5 răng nhọn có tuyến; tràng 5 cánh ngắn hơn đài, có tuyến ở mép; nhị tập hợp thành 3 bó, mỗi bó có 12 -15 nhị; bầu 3 ô.",
+      "quả": "Quả nang, hình trứng, khi chín nứt thành 3 mảnh; hạt nhiều, hình trứng nhọn, có cạnh lồi.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong số 6 – 7 loài thuộc chi Hypericum L. hiện có ở Việt Nam, lưu ký nô có vùng phân bố chủ yếu ở các tỉnh miền núi phía bắc như Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên, Bắc Giang, Yên Bái, Tuyên Quang, Phú Thọ, Hòa Bình, Hà Tây, Sơn La và Lào Cai…",
+      "thường_mọc": "Lưu ký nô là cây ưa ẩm và ưa sáng, thường mọc ở ven rừng, bãi đất trống trong thung lũng, trên nương rẫy hay ruộng cao…",
+      "Đặc điểm sinh trưởng": "Độ cao phân bố : 400 – 800 m. Cây ra hoa quả nhiều hàng năm. Cây con mọc từ hạt thường thấy vào cuối mùa xuân đến giữa mùa hè. Cây trồng được bằng hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, thu hái vào mùa xuân và mùa hạ, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Một số loài trong chi Hypericum, trong đó lưu ký nô chứa hypericin và pseudohypericin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lưu ký nô có vị đắng, cay, the, tính lạnh, có tác dụng thanh nhiệt, giải độc, thông kinh, hoạt lạc, chỉ huyết, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lưu ký nô được dùng trong trường hợp bị chảy máu cam, thổ huyết, đái ra máu, ỉa ra máu, lỵ ra máu, kinh nguyệt không đều, chữa phong thấp, đau lưng nhức xương.  Còn dùng chữa ho, ra mồ hôi trộm, thiếu máu, thiếu sữa. Ngày 12 – 20g toàn cây hoặc 10 – 12g rễ sắc uống.  Dùng ngoài, cây tươi giã đắp, tán bột rắc hoặc nấu nước rửa, trị mụn nhọt, đinh độc, chốc đầu, bỏng, vết thương đụng dập, rắn cắn.  Bài thuốc có lưu ký nô  Chữa phong thấp, đau lưng, nhức xương: Lưu ký nô (20 – 50g thân cành hoặc 10 – 20g rễ), thân rễ cốt toái bổ 20g, thái nhỏ, sắc chia làm 2 lần uống trong ngày. Chữa tiêu chảy ra máu, kiết lỵ ra máu, chảy máu mũi, kinh nguyệt không đều: Cả cây lưu ký nô để tươi 50g; lá huyết dụ, lá trắc bá mỗi vị 20g, thái nhỏ, sắc uống trong ngày. Riêng tiểu tiện ra máu, có thể dùng hạt lưu ký nô 8 – 10g, sao vàng, tán nhỏ, uống với nước ấm (Nam dược thần diệu).  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

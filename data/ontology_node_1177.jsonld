@@ -1,0 +1,243 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/hoi-nuoc.html",
+            "ten": "Hồi nước",
+            "ten_khac": "Hồi nước, Hom hồm (Thái), Hồi đất",
+            "ten_khoa_hoc": "Limnophila rugosa (Roth) Merr.",
+            "ma_taxon": "343699",
+            "ho": "Scrophulariaceae (Hoa mõm chó)",
+            "Mô tả": {
+                "lá": "Cây thảo, mọc đứng, cao 30 – 60 cm. Thân ngầm mọc bò trong bùn. Thân khí sinh, hình trụ, nhẵn. Lá mọc đối, hình mác hoặc hình trứng, gốc thuôn, đầu nhọn hoặc hơi tù, dài 2,5 – 7,5 cm, rộng 1,5 – 3,5 cm, mép có răng cưa, nhẵn hoặc có lông ở gần mặt dưới. phiến lá soi lên có những chấm trong (túi tinh dầu); cuống lá dài 1,5 – 2 cm.",
+                "hoa": "Cụm hoa mọc ở kẽ lá thành đầu ngắn, hoa không cuống, màu hồng lam; đài có lông ở mặt ngoài, ống đài dài 2,5 mm, lá đài có lông dạng mi; tràng hoa hợp thành ống dài không dưới 1,3 cm, mặt ngoài có lông, họng màu vàng, chia 2 môi, môi dưới có lông.",
+                "quả": "Quả dài 6 mm, thuôn nhẵn; hạt có cạnh, đầu cụt.",
+                "cây": "Cây thảo, mọc đứng, cao 30 – 60 cm.",
+                "thân": "Thân ngầm mọc bò trong bùn. Thân khí sinh, hình trụ, nhẵn.",
+                "mùa hoa": "tháng 4 – 6",
+                "mùa quả": "tháng 4 – 6"
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Limnophila R. Br. gồm những loài cây thảo, phân bố rải rác khắp các vùng nhiệt đới và cận nhiệt đới của châu Á, châu Phi và châu Đại Dương.  Hồi nước có vùng phân bố rộng rãi từ Ấn Độ, Nepal, Mianma, Nam Trung Quốc đến Việt Nam, Lào, Thái Lan, Malaysia, Indonesia, Philippin, Tân Ghi Nê và Polynedi. Cây được dùng làm gia vị hay hương liệu.",
+                "các_tỉnh": {
+                    "mục": [
+                        {
+                            "tỉnh": {
+                                "tên": "Hoà Bình"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Lạng Sơn"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Cao Bằng"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Hà Giang"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Bình Định"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "An Giang"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Cần Thơ"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Vĩnh Long"
+                            }
+                        }
+                    ]
+                },
+                "thường_mọc": "Cây ưa sáng hoặc hơi chịu bóng, đặc biệt ưa ẩm, thường mọc trên đất ướt, đất lầy thụt dọc theo các bờ suối hoặc xung quanh các vũng lầy trong thung lũng.",
+                "Đặc điểm sinh trưởng": "Hồi nước có khả năng đẻ nhánh khỏe ở gốc và thân rễ, do đó tự nhiên cây thường mọc thành đám nhỏ. Cây ra hoa quả hàng năm; tái sinh tự nhiên chủ yếu từ hạt. Trồng được bằng các cây con hoặc bằng cành."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": ""
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Phần trên mặt đất, thu hái quanh năm, dùng tươi hoặc phơi khô."
+            },
+            "Thành phần": {
+                "thành phần": "Hồi nước chứa tinh dầu và nhiều chất 5 – hydroxy – 7,8,2,4 – tetramethoxyflavon, 7 – methoxy – 5,2,4 – trihydroxyflavon (artocarpetin), acid 1 ß – hydroxy – 3 – cetoolean – 12 – en – 28 – oic (CA. 123, 1995, 79.576g).  Theo Kumar Vijay và cs, 1983, hồi nước chứa 0,10% tinh dầu trước khi ra hoa và 0,16% tinh dầu sau khi ra hoa. Tinh dầu có 7 thành phần, trong đó có 2 thành phần chính là methylchavicol và anisaldehyd với hàm lượng theo thứ tự 81,6 và 76,5% trước khi ra hoa và 14,65 và 10,8% sau khi ra hoa (CA. 100. 1983, 91 120m).  Theo Cheng Biqiang và cs, 1986, tinh dầu cây hồi nước trồng chứa trans – anethol 76,39%, estragol 21,94%, aldehyd anisic, anisylaceton, cis – anethol, humulen và α – bulnesen (CA. 105, 1986, 48806).  Hồi nước mọc ở Sơn Động (Bắc Giang) chứa 3,27% tinh dầu (tính nguyên liệu khô tuyệt đối) trong đó có 96,40% anethol (Vũ Ngọc Lộ và cs, 1988)."
+            },
+            "Tính vị": {
+                "Có vị": ""
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Trong y học dân gian Việt Nam, ít thấy nói đến kịnh nghiệm dùng hồi nước làm thuốc chữa bệnh. Ở Ấn Độ, hồi nước có mùi vị giống húng giổi và được dùng làm gia vị, và chất thơm cho tóc. Nước hãm lá là thuốc thông tiểu, bổ dạ dày và lợi tiêu hóa."
+            },
+            "Cách dùng": {
+                "được_dùng": ""
+            },
+            "luu_y": {
+                "luu_y": ""
+            }
+        }
+    ]
+}

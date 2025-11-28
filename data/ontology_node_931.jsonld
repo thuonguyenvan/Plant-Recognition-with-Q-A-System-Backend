@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngô thù du",
+      "ten_khac": "Ngô thù du, Ngô thù, Xà lát (Tày)",
+      "ten_khoa_hoc": "Tetradium ruticarpum (A. Juss.) Hartl.",
+      "ma_taxon": "796058",
+      "ho": "Rutaceae (Cam)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Ngô thù du là một cây nhỏ cao chừng 2,5-5m.",
+      "thân": "Cành màu nâu hay tím nâu, khi còn non có mang lông mềm mại dài, khi già lông rụng đi, trên mặt cành có nhiều bì khổng.",
+      "lá": "Lá mọc đối kép lông chim, rìa lẻ, cả cuống và lá dài độ 15-35cm, 2-5 đôi lá chét, có cuống ngắn, trên lá và cuống lá chét có mang lông mềm, lá chét dài 5-15cm, rộng 2,5-5cm, đầu lá chét nhọn dài, mép nguyên, hai mặt đều có lông màu nâu mịn, mặt dưới nhiều hơn, soi lên ánh sáng sẽ thấy những điểm tinh dầu.",
+      "hoa": "Hoa đơn tính, đực cái khác gốc. Đa số những hoa nhỏ tụ thành tán hay đặc biệt thành chùm. Cuống hoa trông thô to, có nhiều lông màu nâu mềm. hoa màu vàng trắng. Hoa cái lớn hơn hoa đực.",
+      "quả": "Quả hình cầu dẹt dài 3mm, đường kính 6mm, thường gồm 5 lá noãn. Khi chưa chín có màu xanh, khi chín có màu đỏ tím, trên mặt có những điểm tinh dầu, mỗi ô quả có một hình trứng dài 5-6mm, đường kính 4mm màu đen bóng.",
+      "mùa hoa": "tháng 6-8.",
+      "mùa quả": "tháng 9-10."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong ngô thù du có trên 0,4% tinh dầu.",
+      "gồm chất": "trong tinh dầu có evoden C11H16, evodin hoặc obakulacton C26H30O8, oximen C10H10 và ba ancaloit: evodiamin C19H17N3O, rutaecacpin C18H18N3O và wuchuyin C13H13N3O (1933 J. Amer Pharm Ass 22:716)",
+      "thủy phân": "Chất rutaecacpin phân giải sẽ cho rutamin có cấu tạo hoá học là indol etylamin có nhân indoxyl"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong đông y coi ngô thù du là một vị thuốc cây, đắng, tính ôn, hơi có độc, vào 4 kinh can, thận, tỳ và vị, dùng trong những trường hợp ăn uống không tiêu, nôn mửa, đau bụng, đi ỉa, cước khí đau đầu.",
+      "được_dùng": "Còn dùng trong những trường hợp mình tê đau, lưng chân mềm yếu, cảm lạnh, đau răng, lở ngứa.",
+      "làm thuốc": "Ngày dùng 1-3g dưới dạng bột hoặc 4-6g dưới dạng thuốc sắc, chia 3-4 lần uống trong ngày",
+      "chữa": "Sách cổ nói: phàm không phải hàn thấp không dùng được"
+    },
+    {
+      "@type": "Cách dùng",
+      "làm thuốc": "Đơn thuốc chữa nôn mửa, không ỉa: Ngô thù du 5g, can khương 2g, nước 300ml sắc còn 100ml, chia 3 lần uống trong ngày",
+      "được_dùng": "Đơn thuốc giúp sự tiêu hoá: Ngô thù du 2g, một hương 2g, hoàng liên 1g. tất cả án thành bột, trộn đều. chia 3 lần uống trong ngày.",
+      "chữa": "Hạ bộ chảy nước ngứa ngáy: Ngô thù du không kể liều lượng, sắc nước mà rửa. Chữa nhức răng: ngô thù du ngâm rượu, ngậm vào một lúc lâu rồi nhổ đi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

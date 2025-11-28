@@ -1,0 +1,185 @@
+
+  {
+    "@context": {
+      "schema": "http://schema.org/",
+      "plant": "http://medicinal-plant.org/",
+      "Plant": {
+        "@id": "plant:Plant",
+        "@type": "schema:Thing",
+        "@context": {
+          "ten": "schema:name",
+          "ten_khac": "schema:alternateName",
+          "ten_khoa_hoc": "schema:scientificName",
+          "ma_taxon": "schema:identifier",
+          "ho": "schema:Text"
+        }
+      },
+      "Mô tả": {
+        "@id": "plant:Description",
+        "@type": "schema:Thing",
+        "@context": {
+          "lá": "schema:text",
+          "hoa": "schema:text",
+          "quả": "schema:text",
+          "cây": "schema:text",
+          "mặt": "schema:text",
+          "đầu": "schema:text",
+          "thân": "schema:text",
+          "cuống": "schema:text",
+          "gốc": "schema:text",
+          "cao": "schema:text",
+          "rễ": "schema:text",
+          "củ": "schema:text",
+          "mọc": "schema:text",
+          "mùa hoa": "schema:text",
+          "mùa quả": "schema:text"
+        }
+      },
+      "Phân bố": {
+        "@id": "plant:Distribution",
+        "@context": {
+          "phân_bố": "schema:description",
+          "ở_vùng": {
+            "@id": "schema:Place",
+            "@context": {
+              "tên": "schema:name"
+            },
+            "@container": "@set"
+          },
+          "các_tỉnh": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "tỉnh": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name"
+                }
+              }
+            }
+          },
+          "được_trồng": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "nơi": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name",
+                  "ghi_chú": "schema:description"
+                }
+              }
+            }
+          },
+          "chủ_yếu": "plant:PrimarilyNote",
+          "thường_mọc": "plant:HabitatNote",
+          "Đặc điểm sinh trưởng": "schema:text"
+        }
+      },
+      "Thông tin khác": {
+        "@id": "plant:AdditionalInformation",
+        "@type": "schema:Thing",
+        "@context": {
+          "thong_tin_khac": "schema:description"
+        }
+      },
+      "Bộ phận dùng": {
+        "@id": "plant:UsedParts",
+        "@type": "schema:Thing",
+        "@context": {
+          "bo_phan_dung": "schema:description"
+        }
+      },
+      "Thành phần": {
+        "@id": "plant:CompositionList",
+        "@type": "schema:Thing",
+        "@context": {
+          "thành phần": "schema:text",
+          "gồm chất": "schema:text",
+          "Các hợp chất": "schema:text",
+          "chứa": "schema:text",
+          "triết xuất": "schema:text",
+          "đã nghiên cứu": "schema:text",
+          "tìm thấy": "schema:text",
+          "thủy phân": "schema:text",
+          "các hoạt chất": "schema:text",
+          "tinh dầu chứa": "schema:text",
+          "có hoạt chất": "schema:text",
+          "dấu hiệu đặc trưng": "schema:text"
+        }
+      },
+      "Tính vị": {
+        "@id": "plant:TasteProperty",
+        "@type": "schema:Thing",
+        "@context": {
+          "Có vị": "schema:text"
+        }
+      },
+      "Công dụng": {
+        "@id": "plant:MedicalUseList",
+        "@type": "schema:Thing",
+        "@context": {
+          "cong_dung_y_hoc": "schema:text",
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "chữa": "schema:text"
+        }
+      },
+      "Cách dùng": {
+        "@id": "plant:Preparation",
+        "@type": "schema:Thing",
+        "@context": {
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "phơi khô": "schema:text",
+          "xấy khô": "schema:text"
+        }
+      },
+      "luu_y": {
+        "@id": "plant:Caution",
+        "@type": "schema:Thing",
+        "@context": {
+          "luu_y": "schema:description"
+        }
+      }
+    },
+    "@graph": [
+      {
+        "@type": "Plant",
+        "ten": "Bơ",
+        "ten_khac": "Bơ, Lê tàu",
+        "ten_khoa_hoc": "Persea americana Mill.",
+        "ma_taxon": "62831",
+        "ho": "Lauraceae (Long não)",
+        "Mô tả": {
+          "cây": "Cây gỗ cao tới 15m.",
+          "lá": "Lá xoan, thuôn hay bầu dục, dài 6-25 cm, rộng 3,5-15cm, nhọn góc ngắn ở gốc, có mũi nhọn hay tù ngắn ở chóp.",
+          "hoa": "Cụm hoa thành chuỳ dày đặc. Hoa nhỏ, màu xanh lục hay vàng vàng; đài hơi có lông mịn.",
+          "quả": "Quả mọng lớn, nạc, dạng quả lê, hình trứng hay hình cầu, màu lục hay màu mận tía khi chín; thịt mềm, màu vàng lục, có một hạt to với lá mầm nạc."
+        },
+        "Phân bố": {
+          "phân_bố": "Loài của miền nhiệt đới châu Mỹ, cũng được trồng ở các xứ nhiệt đới khác. Ở Antilles và California (Mỹ), bơ được trồng nhiều nhất và cho sản lượng cao. Phi châu và Israel là vùng sản xuất nhiều thứ hai và cung cấp sản phẩm cho châu Âu. Có các giống chính là Mêhicô, Guatemala và Antilles. Ở nước ta, cũng nhập trồng từ đầu thế kỷ 20. Hiện nay vùng sản xuất chính là Lâm Đồng và các tỉnh khác vùng Tây Nguyên."
+        },
+        "Thông tin khác": {
+          "thong_tin_khac": "Tên khoa học: Persea Americana Miller Tên đồng nghĩa : Laurus persea L.; Persea gratissima Gaertn.f. Tên gọi khác: Cây thầy kiện, lê dầu Họ Họ Long não (Lauraceae)"
+        },
+        "Bộ phận dùng": {
+          "bo_phan_dung": "Quả – Fructus Perseae."
+        },
+        "Thành phần": {
+          "thành phần": "Quả Bơ chứa: Nước 60%; protid 2,08%, lipid 20,10%, glucid 7,40%, tro 1,26%, nghèo về chất khoáng; các aminoaacid là: cystin, trytophan; có nhiều chất kháng sinh. Còn có vitamin A, B và C (19-20mg%)."
+        },
+        "Công dụng": {
+          "cong_dung_y_hoc": "Được sử dụng trong các trường hợp:  1. Mới ốm dậy; có thai  2. Làm việc quá sức, trạng thái thần kinh dễ kích thích  3. Thừa acid niệu  4. Đau dạ dày – ruột, gan – mật.  Có thể dùng quả chín để ăn, hoặc chế biến thành những món thức ăn khác nhau, như trộn với nước chanh, cho thêm đường sữa vào đánh đều thành kem để ăn. Lá cũng được dùng hãm uống để trừ ngộ độc do ăn uống."
+        }
+      }
+    ]
+  }

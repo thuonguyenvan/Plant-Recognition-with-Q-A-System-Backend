@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hương lâu",
+      "ten_khac": "Hương lâu, Huệ rừng, Cây bả chuột, Lâm nữ, Rẻ quạt",
+      "ten_khoa_hoc": "Vetiveria zizanioides (L.) Nash",
+      "ma_taxon": "142763",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cỏ sống lâu năm, thân rễ dày, dài, có mùi thơm.",
+      "thân": "Thân cao 1,5m-2m hay hơn, mọc thẳng đứng, dài 40-90cm, rộng 4-10mm nhẵn, mép nháp.",
+      "hoa": "Cụm hoa là chuỳ tận cùng, thẳng dài 20-30cm, cuống chung lớn, phân nhánh nhiều, bông nhỏ không cuống lưỡng tính, dẹt, bông nhỏ có cuống là bông đực, quả hơi dẹt."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong rễ hương bài có 2-3% tinh dầu, nhưng nếu cất kéo hơi nước bình thường chỉ thu được từ 0,34-dưới 1% do tinh dầu rất sánh, tỷ trọng xấp xỉ tỷ trọng của nước, độ sôi lại cao. Cho nên cần cắt nhỏ, ngâm rễ một đêm trước khi cất thì năng suất cao hơn.",
+      "tinh dầu chứa": "Tinh dầu hương bài rất thơm, bền mùi, sánh. Tuỳ theo từng vùng trồng và tổ chức cất, tinh dầu có tính chất hơi khác nhau. Thành phần tinh dầu gồm các xeton: vetiveron và vetiron hay vetivon, các rượu vetirol và vetiverol, một ít axit benzoic, các sesquitecpen, vetiven.",
+      "Các hợp chất": "Có hai dạng vetivon và kiến trúc cấu tạo của vetivon đã được Peau Naves và Perrotet xác định vào năm 1940-1941. Có tác giả nghiên cứu thấy trong tinh dầu hương bài có 2 vetiven (gồm 2 và 3 vòng), 2 vetivenol (gồm 2 và 3 vòng), ancol metylic, furfurol, các axit vetivenic và axit benzoic dưới dạng este của vetivenol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở nước ta rễ hương bài mới chỉ dùng nấu nước gội đầu cho thơm, cho vào quần áo để cho thơm và chống nhậy, làm hương thơm. Gần đây đã dùng làm nguyên liệu cất tinh dầu. tinh dầu hương bài rất đắt vì không những làm tăng mùi thơm còn làm cho mùi được bền lâu. Tại thị trường thế giới tinh dầu hương bài được tiêu thụ với tên essence de vetiver hay essence de chiendent odorant.",
+      "chữa": "Tại Ấn Độ nước sắc rễ hương bài dùng chữa sốt, bệnh gan. Tại Maliaxia bột rễ hương bài làm ẩm và đắp lên bụng phụ nữ sau khi đẻ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang dại trên các đồi hoang khô nơi nhiều nắng trơ đất đá, xen lẫn cây bụi thấp. Cây được trồng để khai thác tại nhiều nước như Ấn Độ, Indonixia. Tại Việt Nam chỉ mới thấy trồng từ lâu đời ở Tiền Hải, Tỉnh Thái Bình.",
+      "làm thuốc": "Trồng vào tháng 2, thu hái vào tháng 12 và rải rác trong năm, nhưng chủ yếu vào tháng 12. Mỗi hecta thu được khoảng 20-30 tấn rễ/ năm. Tại Thái Bình đất trồng là những vùng đất cát hay không trồng cây gì khác được. Loại đất này chiếm hang nghìn hecta dọc bờ biển nước ta.",
+      "sắc uống": "Trước đây, nhân dân mới chỉ thu hái rễ, cuộn thành từng bó nhỏ, 5-6 gói nhỏ buộc lại thành gói lớn hơn, mỗi gói nặng chừng 30g, đem về bán tại các chợ để nấu nước gội đầu cho thơm và để làm hương thơm. Gần đây đã dùng làm nguyên liệu cất tinh dầu hương bài."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

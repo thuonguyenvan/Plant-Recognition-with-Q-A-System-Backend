@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kinh giới",
+      "ten_khac": "Kinh giới, Khương giới, Giả tô, Nhả nát hom (Thái), Phjắc hom khao (Tày)",
+      "ten_khoa_hoc": "Elsholtzia ciliata ( Thunb.) Hyland.",
+      "ma_taxon": "162273",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Kinh giới là một loại cỏ sống hàng năm, mùi rất thơm, cao 0,6-0,8m, thân vuông, phía gốc màu hơi tía. toàn cây có lông ngắn.",
+      "lá": "Lá mọc đối, lá dưới gốc không có cuống hay gần như không có cuống, xẻ sâu thành 5 thuỳ, lá phía trên cũng không cuống, xẻ 3 đến 5 thuỳ.",
+      "hoa": "Cụm hoa mọc thành bông gồm những hoa mọc vòng ở mỗi đốt. Bông hoa dài 38cm, hoa nhỏ màu tím nhạt.",
+      "quả": "Quả hình trứng hay hình trái xoan, dài chừng 1mm, mặt bóng, màu nâu.",
+      "mọc": "Cây kinh giới nhân dân ta vẫn trồng để ăn làm gia vị và làm thuốc đã được xác định là Elshoitiia cristaia Willd. cùng họ. Cây cũng thuộc thảo, cao 0,30-0.45m, thân nhẵn, mọc thẳng đứng. Lá mọc đối, phiến lá thuôn nhọn, dài 5-8cm, rộng 3cm, mép có răng cưa, cuống gầy dài 2-3cm. Hoa nhỏ, không cuống, màu tím nhạt, mọc thành bông ở đầu cành, rất mau. Quả gồm 4 hạch nhỏ, nhẵn, dài 0,5cm. Một cây khác cũng được gọi là kinh giới và dùng làm thuốc là cây Origanum syriacum (Lour.) cùng họ."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong kinh giới Schizonepeta tenuifoiia có chừng 1,8% tinh dầu.",
+      "gồm chất": "Thành phần chủ yếu của tinh dầu này là d. menton, một ít d. limonen.",
+      "dấu hiệu đặc trưng": "Tuy nhiên ta cần chú ý đó chỉ là thành phần của kinh giới tươi; trên thực tế nhân dân nhiều khi sao đen gọi là kinh giới thán (rửa sạch, cho vào nồi rang cho cháy đen phun nước vào rồi lại sấy khô) hoặc kinh giới tuệ thán (tức là cụm hoa của cây kinh giới sao đen)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ kinh giới vị cay, tính ôn, vào 2 kinh phế và can. Có tác dụng phát biểu khứ phong, lợi yết hầu, thanh nhiệt tán ứ phá kết. Dùng chữa ngoại cảm phát sốt, đầu nhức mắt hoa yết hầu sưng đau, đẻ xong huyết vận. Sao đen chữa thổ huyết máu cam, đại tiểu tiện ra máu.",
+      "được_dùng": "Kinh giới được dùng trong nhân dân làm thuốc chữa cảm mạo, phát sốt, nhức đầu, cổ, họng sưng đau, nôn mửa, đổ máu cam, đi lỵ ra máu, băng huyết. Liều dùng hàng ngày là 6-12g dưới dạng thuốc sắc hay thuốc bột. Trong đông y còn nói thêm những trường hợp biểu hư tự hãn (tự ra mồ hôi) thì không nên dùng.",
+      "chữa": "Chữa cảm nóng, ngã ngất: Một nắm kinh giới tươi (thứ kinh giới Việt Nam) chừng 50g giã nhỏ, thêm vài miếng gừng tươi, vắt lấy nước cho uống, bã còn lại dùng đế đánh dọc sống lưng. Có thể dùng kinh giới phơi khô (20g) sao hơi vàng, thêm 200ml nước sắc còn 100ml uống lúc còn nóng. Đắp chăn cho ra mồ hôi. Phụ nữ băng huyết, trẻ con người lớn bị máu cam: Kinh giới tuệ sao đen 15g, nước 200ml sắc còn 100ml cho uống làm 2-3 lần Thuốc cảm: Hoa kinh giới, tía tô, hương nhu, ngải cứu, hoắc hương, các vị bằng nhau, dùng nước sắc nhiều lần, hợp các nước sắc lại, cô đặc thành cao viên bằng hạt ngô. Khi bị cảm uống chừng 7-8 viên thuốc này. Dùng nước lá tre mà chiêu thuốc. Trẻ con chỉ dùng 2 đến 4 viên. Viên thuốc trên có thể dùng chữa lỵ (dùng nước sắc cây mơ lông mà chiêu thuốc. Chữa cảm cúm: Kinh giới tuệ sao vàng tán nhỏ. Khi bị cảm dùng 6-8g bột này.  Tất cả những bài thuốc trên có thể dùng thứ kinh giới Việt Nam mà chế, không cần thiết dùng loại kinh giới Trung Quốc.",
+      "làm thuốc": "Đơn thuốc có kinh giới dùng trong nhân dân"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây kinh giới, (Schiionepeta tenuifolia) chưa thấy mọc ở Việt Nam. Ở nước ta chỉ mới thấy trồng loại kinh giới Elsholtzia cristata để ăn và làm thuốc.",
+      "phơi khô": "Vào mùa thu nhổ cả cây phơi hay sấy khô gọi là toàn kinh giới, nhưng có nơi chỉ cắt hoa và cành, nếu xát hoa phơi khô gọi là kinh giới tuệ, nếu hái toàn cây trừ bỏ phần rễ thì gọi là kinh giới."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Ngay tại Trung Quốc, một vài tỉnh dùng với tên kinh giới một số cây khác như Schiionepeta rnultifida Briq. (thứ kinh giới có lá xẻ nhiều), một loại hương nhu Eỉsholtiia parrini Garcke (cây này trông gần giống cây kinh giới của ta). Ngoài ra còn một cây nữa mang tên thổ kinh giới nhưng lại là một cây khác hẳn, với công dụng khác hẳn, đó là cây dầu giun Chenopo- dium ambrosioides L. Cần chú ý để tránh nhầm lẫn"
+    }
+  ]
+}

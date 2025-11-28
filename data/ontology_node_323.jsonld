@@ -1,0 +1,192 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đề",
+      "ten_khac": "Đa bồ đề",
+      "ten_khoa_hoc": "Ficus religiosa L.",
+      "ma_taxon": "127514",
+      "ho": "Dâu tằm (Moraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20m hoặc hơn, cành nhẵn.",
+      "lá": "Lá mọc so le, hình thoi – tam giác, dài 7 – 12 cm, rộng 7 – 10 cm, gốc vát hoặc hơi hình tim, đầu thuôn thành mũi nhọn, dài 2 – 3 cm, gân gốc 5; cuống mảnh dài 5 – 8 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành dạng sung, 1 – 2, không cuống, tổng bao gồm 3 lá bắc hình cầu nhằn, có lông mi ở mép, ít lông mềm ở lưng, hoa đực không cuống, 3 lá đài hình mác, nhị 1, chỉ nhị hơi rộng, hoa cái có 5 lá đài thuôn nhọn, bầu hình trứng.",
+      "quả": "Quả hình quả lê, đường kính 7- 8 mm, khichín màu đỏ sẫm.",
+      "mùa hoa": "tháng 1 – 4."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây đề có nguồn gốc ở vùng Nam Á – Ấn Độ, sau phát triển sang các vùng nhiệt đới khác.  Ở Việt Nam, đề mọc tự nhiên rải rác ở vùng núi thấp, trung du và đồng bằng, đồng thời cũng là cây trồng lấy bóng mát, dọc các đường đi, ở công viên hay trong khuôn viên các đình chùa, lăng tẩm.  Đề là loại cây gỗ ưa sáng, có khả năng chịu hạn tốt và có thể mọc được trên nhiều loại đất. Cây còn có khả năng sống như kiểu “phụ sinh” trên các vách đá hay bờ tường của các ngôi nhà cổ. Tận dụng đặc điểm này, người ta còn trồng để làm cây cảnh bonsai. Đề ra hoa quả nhiều hàng năm. Quả chín là thức ăn của chim và nhiều loài động vật khác; theo phân của chúng, hạt được phát tán đi khắp nơi."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ cây, quả, lá"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây đề chứa β – sitosterol – D – glucosid (Conpendium of Indian Medicinal Plants I (1960 – 1969), 1999).",
+      "gồm chất": "Theo Trung được từ hải I, 1993, cây để có nhựa mủ trong đó có 0,7 – 5,1% cao su.",
+      "chứa": "Vỏ cây chứa 4% tanin [The Wealth of India IV, 1956]. Quả khô chứa 9,9% nước, 7,9% albumin, 5,3% chất béo, 34,9% carbohydrat, 7,5% chất màu, 8,3% tro, 1,85% silice, 0,69% phospho. Lá và cành chứa 13,99% protein thô, 2,71% chất chiết được bằng ether, 22,36% chất xơ, 15,0% tro toàn phần, 4,64% cao, 0,32% phospho. Hàm lượng protein trong lá cao hơn cỏ gấp 2 – 3 lần (The Wealth of India IV, 1956)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong y học dân gian, tua rễ cây đề (rễ phụ) được dùng làm thuốc lợi tiểu trong các trường hợp xơ gan kèm cổ trướng với liều 100 – 150g tươi mỗi ngày dưới dạng thuốc sắc. Vỏ và cảnh, thân cây để được dùng thay vỏ khi ăn trầu.",
+      "được_dùng": "Trong y học cổ truyền Ấn Độ, vỏ và lá được dùng trị tiêu chảy và kiết lỵ, và lá trị táo bón.",
+      "giã nát": "Lá đôi khi được giã đắp cùng với bơ gạn lọc để trị nhọt và sưng tuyến nước bọt trong bệnh quai bị. Quả tán bột được uống trị hen, và nhựa mủ dùng trị hột cơm, mụn cóc. Vỏ có tác dụng làm sẵn, làm mát, cầm máu và nhuận tràng, được dùng trị đái tháo đường, tiêu chảy, khí hư, đa kinh, rối loạn thần kinh, bệnh về âm đạo và niệu – sinh dục khác, cải thiện thể chất, được dùng trị gãy xương, đau tai, bệnh về các tuyến (đặc biệt mưng mủ các tuyến ở cổ), ghẻ và các bệnh da khác, trị loét và mụn nhọt ở miệng rắn cắn và bọ cạp đốt.",
+      "sắc nước uống": "Ở Nepal, vỏ thân cây để được giã nát thành bột trộn với lượng bằng nhau mật ong, ngày 3 lần trị ho và cảm lạnh kèm theo sốt nhẹ. Quả đun sấy khô và tán bột, uống 5g bột này với sữa – trước bữa điểm tâm trong một tháng hoặc lâu hơn để làm giảm nhẹ bệnh hen. Để trị tiêu chảy, mỗi lần uống 2 thìa cà phê dịch ép vỏ thân, ngày 3 lần."
+    }
+  ]
+}

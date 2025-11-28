@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Guột găng",
+      "ten_khac": "Guột lá dừa, dương xỉ lá dừa, ráng dừa đông.",
+      "ten_khoa_hoc": "Blechnum orientale L.",
+      "ma_taxon": "345928",
+      "ho": "Guột lá dừa (Blechnaceae)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Loài khuyết thực vật (dương xỉ), cao 1 – 2m.",
+      "thân": "Thân rễ mọc đứng, phủ nhiều váy dạng sợi, màu nâu bóng.",
+      "lá": "Lá mọc so le, kép lông chim một lần, dài (0,5 – 1,5 m, rộng 20 – 40 cm gồm rất nhiều lá chét không cuống, dài 10 – 25 cm, rộng 1 cm, hẹp dần về phía đầu là thành mũi nhọn, mép nguyên, cuống lá kép dài, có vảy ở gốc.",
+      "quả": "Ổ túi bào tử kéo dài thành đường liên tục. Bào tử hình thận, màu vàng nhạt.",
+      "mùa quả": "Mùa sinh sản: tháng 4 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây phân bố từ vùng cận nhiệt đới xuống khắp vùng nhiệt đới, bao gồm Ấn Độ, Trung Quốc, Lào, Việt Nam và nhiều nước khác ở vùng Đông Nam Á. Ở Việt Nam, guột giang cũng phân bố rộng rãi khắp các tỉnh thuộc vùng núi, độ cao từ 1300m trở xuống đến cả vùng trung du.  Guột giang là loại dương xỉ ưa ẩm, hơi chịu bóng. Cây thường mọc thành đám dày, xen lẫn cây bụi, cây gỗ nhỏ và cỏ cao dọc theo các bờ khe suối, ven rừng hoặc các tà ly núi dọc theo đường đi, Guột giang tái sinh tự nhiên chủ yếu bằng bào tử. Ngoài ra, cây còn có khả năng đẻ nhánh khỏe từ gốc thân rễ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Chồi non tươi, thân rễ dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "4 chất lignan: Blechnic, 7 epiblechnic, epi blechnic và brainic acid đã được phân lập và xác định cấu trúc."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân rễ và lá guột giang vị đắng, tính mát, có công năng thanh nhiệt, giải độc, sát trùng, chỉ huyết, hoạt huyết, tán ứ, cũng có công năng bạt độc, sinh cơ. Tài liệu Trung Quốc cũng ghi: guột giang có công năng tiêu thũng, giải độc sinh cơ [TDTH, 1993, I: 1527]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chồi non của cây guột giang được dùng để hút mủ nhọt mụn; nếu mụn nhọt mới mưng đỏ, chưa làm mủ có thể bị tiêu đi, còn được dùng chữa vết thương sưng tấy, bầm tím. Lấy chồi tươi, rửa sạch, giã nát, đắp lên chỗ có tổn thương.  Có nơi dùng thân rễ để trị bệnh cảm cúm, viêm màng não, viêm tuyến nước bọt, ban chẩn, thương hàn, chảy máu cam, thổ huyết, băng huyết; còn được dùng trị giun như giun đũa, giun móc [Võ Văn Chi, 1999: 534]. Tuy nhiên vị thuốc có độc, ít khi được dùng uống mà chỉ dùng ngoài. Sách “Dã sinh dược dụng thực vật đồ giám” (Trung Quốc) ghi: guột giang được dùng ngoài, giã nát đắp để chữa ung thũng đau nhức, để chống độc và sinh co [TDTH, 1993, 1: 1527]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa rắn cắn:  Chồi cây guột giang tươi, lá vông vang tươi, hai vị bằng nhau, rửa sạch, giã nát, đắp lên chỗ rắn cắn để tiêu nọc độc."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

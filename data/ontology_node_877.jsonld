@@ -1,0 +1,290 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhân trần",
+      "ten_khac": "Nhân trần, Chè cát, Tuyến hương, Hoắc hương núi",
+      "ten_khoa_hoc": "Adenosma caeruleum R. Br.",
+      "ma_taxon": "504103",
+      "ho": "Scrophulariaceae (Hoa mõm chó)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhân trần Việt Nam-còn có tên nhân trần cái (ở miền Bắc) để phân biệt với cây nhân trần đực (tức bồ bồ)-tên khoa học Adenosma caeruleum R. Br. Cây này thường được nhân dân vùng Vĩnh Phúc, Phú Thọ, Bắc Giang, Bắc Ninh gọi là Nhân trần nhưng nhân dân Nghệ An, Hà Tĩnh gọi nhầm là hoắc hương núi. Đây là một loại cỏ mọc hoang, sống hằng năm cao 0,3-1 m, thân tròn, màu tím trên có lông trắng mịn, ít phân cành.",
+      "lá": "Lá mọc đối hình trứng, đầu lá dài và nhọn, mép có răng cưa to, mặt trên và mặt dưới đều nhiều lông mịn, phiến là dài 3-8cm, rộng 1- 3,5cm, gân nổi rõ ở mặt dưới, cuống 5-10mm. Toàn thân và lá vò có mùi thơm.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá hay thành chùm bông ở đầu cành. Đài hình chuông xẻ thành 5 thuỳ sâu. Tràng màu tím xanh dài 10-14mm, môi trên hình lưỡi, môi dưới xẻ thành 5 thuỳ đều nhau.",
+      "quả": "Quả nang hình trứng, dài bằng đài, nhiều hạt nhỏ."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bồ bồ (tên gọi ở vùng Vĩnh Phúc, Phú Thọ) một số nơi gọi là nhân trần (trong lần in trước, chúng tôi cũng gọi là nhân trần, ở miền Nam gọi là nhân trần đực để phân biệt với nhân trần cái của miền Nam hay nhân trần tía)- Adenosma capitatum (mới đây có tác giả xác định là Adenosma indianum (Lour.) Merr.- cần kiểm tra lại). Là một loại cỏ cao 15-70cm, mang nhiều cành ngay từ gốc, thân nhẵn hay hơi có lông.",
+      "lá": "Lá mọc đối có cuống. Phiến lá hình mác dài, đầu nhọn, phía cuống hẹp lại, mép hơi khía tai bèo hay có răng cưa.",
+      "hoa": "Cụm hoa hình cầu, rất nhiều hoa thường có 2 lá bắc. Hoa nhỏ không cuống, đài có lông với 2 môi, môi trên nguyên, môi dưới xẻ 4. Tràng cánh hợp với 2 môi, môi trên xẻ 4, môi dưới nguyên, 4 nhị 2 chiếc ."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhân trần tím (hay nhân trần cái của miền Nam) còn có tên nhân trần lá bắc (tên do một nhà thực vật Việt Nam tự đặt ra) – Adenosma bracteosum Bonnati cùng họ Hoa mõm chó. Thân và cành có màu tím đỏ, cụm hoa thành bông dài mang ở gốc những lá bắc tạo thành tổng bao, những lá bắc phía trên lợp lên nhau, dạng màng, trong suốt, hình tim có chóp nhọn. Mọc tốt ở các đất có phèn của miền Nam. Mọc vào tháng 5 (mùa mưa) ra hoa tháng 10-11. Tàn lụi tháng 1-2. Hạt từ các nang rụng xuống, đến mùa mưa lại mọc lên.",
+      "cao": "Cây nhân trần Trung Quốc-thường gọi nhân trần cao-Artemisia capillaris Thumnb., họ Cúc Asteraceae (Compositae) cao 0,4-1m.",
+      "lá": "Lá xẻ thành thuỳ rất nhỏ hình sợi trông gần giống cây thanh hao (chổi xuể-xem vị này). Hoàn toàn khác hẳn 3 vị nói ở trên."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Có khoảng 15 loài thuốc chi Adenosna R.B ở vùng nhiệt đới Động – Nam Á, Nam Á. Trung Quốc và Australia. Ở Việt Nam 7 loài. Loài nhân trần phân bố khắp vùng nhiệt đới từ Ấn Độ, Srilanca đến Malaysia, Thái Lan, Campuchia, Lào, Việt Nam, Nam Trung Quốc, và một số đảo lớn (Borneo, Java) của Indonesia.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "1",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Cao Bằng"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "2",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Lạng Sơn"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "3",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Bắc Cạn"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "4",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Thái Nguyên"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "5",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Bắc Giang"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "6",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Tuyên Quang"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "7",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Hà Giang"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "8",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Yên Bái"
+        }
+      },
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": "9",
+        "tỉnh": {
+          "@type": "schema:Place",
+          "tên": "Lào Cai"
+        }
+      },
+      "thường_mọc": "Nhân trần là cây ưa ẩm, ưa sáng và hơi chịu bóng, nhất là khi cây còn nhỏ, thường mọc lẫn với những loại cây bụi nhỏ, có thắp ở ven rừng, nương rẫy cũ hoặc ở đồi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất của cây nhân vẫn thu hái vào mùa hè lúc cây đang ra hoa, phơi hay sấy khô, bó thành từng bó, bảo quản nơi khô mát. Khi dùng rửa sạch, loại bỏ tạp bản chất ra từng đoạn 3 – 5cm, phơi và sao qua cho khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây nhân trần – Adenosma caeruleum – ít thấy tài liệu nghiên cứu. Sơ bộ chúng tôi thấy có tinh dầu có mùi cin- eol, hoạt chất của tinh dầu tràm, khuynh diệp. Năm 1975, Lê Tùng Châu và cộng sự phân tích trong nhân trần có saponin tritecpenic, flavonozit, axit nhân thơm, cumarin và tinh dầu. Cả cây có 1% tinh dầu, hoa có 1,86% tinh dầu tỷ trọng 0,8042 (25°) αD=l,4705 (20°) αD=+408. Thành phần tinh dầu nhân trần khác với thành phần tinh dầu bồ bồ.",
+      "thành phần": "Cây bồ bồ – Adenosma capitatum được F. Guichard và J. Clemensat phân tích năm 1939 dưới tên nhân trần và thấy 1,67% kali nitrat, một saponin có chỉ số bọt 2.600, một glucozit tan trong axeton, trong ête, không tan trong nước và chừng 0,7% tinh dầu. Tinh dầu bồ bồ lỏng, màu vàng, mùi hăng gần giống như mùi long não và bạc hà, vị nóng. Rất tan trong cồn metylic, etylic, clorofoc và các dung môi hữu cơ khác. Tỷ trọng ở 15°C là 0,914, chỉ số khúc xạ ở 20°C là 1,4733 và ở 30°C là 1,4717. Thành phần chủ yếu của tinh dầu gồm 20% hợp chất oxy tan trong dung dịch resorcin, 50%. Chỉ số axit 1,4. chỉ số xà phòng hoá 11,5; chỉ số axetyl hoá 38; chỉ số iốt 121,4. Năm 1950, p.V.Nair và cộng sự đã cất được từ cây bồ bồ 1% tinh dầu và đã phân tích thấy có 51.monoterpen và 2d.sesquiterpen trong đó có 38,5% cineol, ngoài ra còn thấy limonen. Năm 1974, Lê Tùng Châu đã phân tích thấy trong tinh dầu bồ bồ Việt Nam có 22,6% 1. limonen, 11,6% humulen, 33,5% 1. fenechon và 5,9% cineol. Ngoài ra còn thấy saponin, tritecpenic, flavonoit, axit nhân thơm và cumarin. Toàn cây có 0,8% tinh dầu, lá 2,15%, hoa 0,82%, tỷ trọng 0,912 (20°) αD =1,4768, D-44,92°.",
+      "thành phần": "Nguyễn Viết Tựu và cộng sự (PV dược liệu TP Hồ Chí Minh) phân tích thấy trong nhân trần tía có 0,25% tinh dầu, màu vàng sẫm, tỷ trọng 0,890, chỉ số khúc xạ 1,496, sắc ký khi thấy 19 pic trong đó có 5 pic lớn cineol khoảng 18%. Ngoài ra còn có flavonoit, hợp chất polyphenol và cumarin.",
+      "thành phần": "Cây nhân trần Trung Quốc-Artemisia capillaris chứa 0,23% tinh dầu, với thành phần chủ yếu là pinen, capilen C6H5 – C7H9 và một loại xeton."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo y học cổ truyền, nhân trần có vị đắng, cay, tính bình, vào các kinh tỳ, vị, can, đởm, có tác dụng thanh nhiệt, lợi thấp, hành khí, chỉ thống, lợi tiểu, làm ra mồ hôi."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân trần có tác dụng tăng tiết mật và tăng thải độc của gan. Nhưng so sánh tác dụng lên gan, mật của bồ bồ và nhân trần thì tác dụng của bồ bồ mạnh hơn. Nhân trần cũng có tác dụng chống viêm trên cả 3 mô hình. Nhân trần và bồ bồ có tác dụng tương đương ở mô hình phù caolin và teo tuyến ức nhưng đối với mô hình u hạt thì nhân trần chưa bằng 1/2 của bồ bồ. Trên phù caolin với liều 15g/kg thể trọng thì ức chế phù của nhân trần lại giảm. Tác dụng kháng khuẩn của nhân trần kém hơn bồ bồ nhất là với trực khuẩn lỵ. Nhưng nhân trần ức chế mạnh hơn với Staphylococcus và Streptococcus. Nhân trần tác dụng không rõ rệt lên tiết dịch vị: Không giảm loét dạ dày, không giảm tiết dịch vị, có làm giảm axit tự do và axit toàn phần tuy nhiên hai tác dụng này lại giảm khi dùng liều cao. Như bồ bồ, nhân trần không độc."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa sốt vàng da, ra mồ hôi ở đầu mà người không có mồ hôi, miệng khô, tiểu tiện khó khăn, bụng đầy: Nhân trần cao thang: Nhân trần Trung Quốc 24g, chi tử (dành dành) 12g, đại hoàng 4g, nước 800ml, sắc còn 250ml chia 3 lần uống trong ngày. Trong đơn này ở Việt Nam ta thường thay nhân trần Trung Quốc bằng nhân trần Việt Nam hay bồ bồ."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau má lông",
+      "ten_khac": "Rau má lông, Liên tiền thảo, Rau má thìa, Kim tiền thảo",
+      "ten_khoa_hoc": "Glechoma hederacea L.",
+      "ma_taxon": "55830",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, cao 10 – 30cm, mọc bò, bén rễ ở các mấu.",
+      "thân": "Thân vuông, mọc đứng, có lông.",
+      "lá": "Lá mọc đối, có cuống dài, hình tim gần tròn, đầu tù, mép khía răng tù, hai mặt có lông, gân lá hình chân vịt.",
+      "hoa": "Hoa mọc riêng lẻ ở hai bên kẽ lá, ít khi 2-3 hoa, màu tím nhạt, lưỡng tính, không đều; lá bắc rất nhỏ; dài 5 răng không bằng nhau, hàn liền ở phần nửa dưới, có lông, tràng hợp có ống, chia 2 môi, nhị 4 đính ở mặt trong của tràng, chỉ nhị cong; bầu có 4 phấn bằng nhau, mỗi phần chứa một noãn.",
+      "quả": "Quả cấu tạo bởi 4 quả bế cứng, màu nâu đen, nằm trong đài tồn tại.",
+      "mùa hoa": "tháng 3-5.",
+      "mùa quả": "tháng 3-5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Glechoma L. có 8 loài trên thế giới, phân bố chủ yếu ở vùng ôn đới ấm, cận nhiệt đới và vùng núi cao nhiệt đới. Ở Việt Nam, chỉ có một loài là rau má lông, phân bố ở một số vùng núi có độ cao từ 500 đến 1600m, thuộc các tỉnh Cao Bằng, Lạng Sơn, Yên Bái (Mù Cang Chải); Lào Cai (Sa Pa, Bát Xát, Mường\u00a0Khương, Than Uyên, Bắc Hà); Lai Châu (Phong Thổ, Sìn Hồ, Tuần Giáo); Hà Giang (Đồng Văn, Quản Bạ, Yên Minh); Sơn La; Hoà Bình (Pà Cò)… Cây còn phân bố ở Trung Quốc, đảo Đài Loan, Nhật Bản và một số vùng núi cao ở Bắc Lào.",
+      "thường_mọc": "Rau má lông thuộc loại cây thảo đặc biệt ưa ẩm, hơi chịu bóng, thường mọc thành đám ở gần bờ suối, ven rừng ẩm, nhất là loại hình rừng núi đá vôi, hoặc những nơi đất trũng trong thung lũng.",
+      "Đặc điểm sinh trưởng": "Rau má lông có khả năng đẻ nhánh và bò lan nhanh trên mặt đất. Cây ra hoa quả nhiều; khi quả già tự mở để hạt thoát ra ngoài. Cây trồng được bằng các đoạn thân, cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, nhưng tốt nhất vào mùa hạ, rửa sạch dùng tươi hay phơi, sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất của rau má lông chứa 0,03 – 0,06 % tinh dầu dễ bay hơi ( theo trọng lượng  khô ), với thành phần là pinocamphon, menthon, isomenthon, isopinocamphon; pulegon, 2,6% tanin : một chất đắng tương đồng với marrubiin, các chất nhựa , sáp , chất béo, 3% chất đường, stachyose, acid oleanolic; các aicd hữu cơ như acid ursolic , acid oleanolic. Ngoài ra , còn có phytol và phytosterol. Rau má lông là nguyên liệu giàu kali nitrat. (Trung dược từ hải II.248)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau má lông có vị đắng, hơi chua, tính mát, có tác dụng thanh nhiệt, giải độc, lợi tiểu, bài thạch, chì khái, hoạt huyết tán ứ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rau má lông được dùng chữa viêm gan, viêm túi mật, sỏi mật, sỏi đường tiết niệu, thủy thũng, ho, tho huyết, lâm trọc, đới hạ, phong thấp tý thống, cam tích ở trẻ em, sưng tấy, eczema.",
+      "được_dùng": "ngày 9 – 15g dược liệu khô hoặc 30 – 60g cây tươi dưới dạng nước sắc hoặc rượu ngâm.",
+      "chữa": "Thường dùng phối hợp với hải kim sa, tỳ giải, biểu súc, xa tiền thảo trong điều trị sỏi đường tiết niệu; với nhân trần, sài hồ chữa thấp nhiệt, hoàng đản; với rau sam, chỉ xác, chữa kiết lỵ."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa sỏi niệu quản: Rau má lông 30g, tỳ giải, kim sa mỗi thứ 15g; ho trượng 1,5g; thạch vĩ, đông quỳ tử, biển súc, cù mạch, xa tiền tử, hoạt thạch mỗi vị 9g; cam thảo 6g. Sắc nước uống. (Lợi thấp bài thạch thang). Chữa sỏi đường mật, sỏi ống dẫn mật có đường kính dưới 1cm và sỏi mật: Rau má lông 30g; nhân trần, uất kim mỗi thứ 15g; chỉ xác, mộc hương mỗi vị 9g; sinh đại hoàng 6 – 9g- Sắc nước uống (Đảm đạo bài thạch thang). Chữa viêm thận, phù thũng: Rau má lông, biển súc mỗi vị 30g; tề thái 15g. sắc nước uống. Chữa vàng da, cô trướng: Rau má lông 21 – 24g; bạch mao căn, xa tiền thảo mỗi vị 12 -15g. Sắc nước uống. Chữa bạch đới: Rau má lông 15g, đỗ trọng 9g, mộc thông 5g. sắc nước, thêm đường uống. Chữa kinh nguyệt không đều, đau tức bụng dưới: Rau má lông, đối diệp liên mỗi vị 9g; đại diệp ngải 6g, ngâm rượu uống.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

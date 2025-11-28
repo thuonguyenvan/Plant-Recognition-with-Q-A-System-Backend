@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dương cam cúc",
+      "ten_khac": "Dương cam cúc",
+      "ten_khoa_hoc": "Matricaria chamomilla L.",
+      "ma_taxon": 77965,
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "cây": "Cây thảo hàng năm, cao tới 60cm. Thân mọc đứng và phân nhánh, bề mặt nhẵn, cao từ 15 – 60cm.",
+        "lá": "Lá kép lông chim 2 lần với các đoạn hình dải nhọn như gai. Lá nói chung hoàn toàn nhẵn.",
+        "hoa": "Hoa mọc thành cụm, tạo thành các đầu hoa. Đường kính của đầu hoa là 1-1,5cm, với 1 vòng đơn các hoa hình lưỡi trắng và ở giữa rất nhiều hoa hình ống màu vàng xếp trên mặt đế hoa phồng lên thành dạng nón nhọn sau khi hoa nở. Đế hoa rỗng, phình to và không có vảy, giúp phân biệt cam cúc với một loài tương tự là Anthemis arvensis (cúc ngải)",
+        "quả": "Quả là những quả bế màu vàng trăng trắng dạng nón ngược, nhẵn ở mặt ngoài, khía 5 cạnh ở mặt trong.",
+        "mùa hoa": "tháng 5-9."
+      },
+      "Phân bố": {
+        "phân_bố": "Dương cam cúc là loài cây có nguồn gốc ở Châu Âu được nhập vào trồng ở Đà Lạt. Gieo trồng bằng hạt vào cuối mùa thu và đầu mùa xuân. Trồng cam cúc không yêu cầu loại đất đặc biệt, nhưng sẽ phát triển tốt nhất trên những loại đất cân bằng và có lớp đất mặt (topsoil) giàu dinh dưỡng. Cây ưa sáng, ưa ẩm và ưa khí hậu mát của những vùng có khí hậu á nhiệt đới núi cao như Đà Lạt, Sapa… Cây được gieo trồng từ hạt, sau 5-6 tháng bắt đầu có hoa. Từ năm thứ 2-3 số lượng hoa trên mỗi cây càng nhiều hơn. Cúc la mã có thể được trồng như cây hàng năm, gieo vào mùa thu hoặc mùa xuân. Ngoài ra, cây cũng có thể được xem như cây lâu năm nhờ khả năng tự gieo hạt. Trong quá trình trồng dương cam cúc, rệp là loài sâu bệnh phổ biến nhất gây hại. Tại châu Âu, các bệnh thường gặp ở cây gồm bệnh sương mai, bệnh phấn trắng, và bệnh gỉ sắt. Cam cúc thường nở hoa từ 2–3 lần mỗi năm, vì vậy người ta thường thu hoạch hoa nhiều lần trong năm. Thời gian nở hoa kéo dài khoảng 50–65 ngày, và mỗi bông hoa cần khoảng 20–25 ngày để phát triển hoàn thiện. Thu hái khi các đầu hoa đã nở hết hoàn toàn. Phơi trong râm ở nhiệt độ 35oC."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Nụ hoa phơi hoặc sấy khô, ít khi dùng toàn cây.  Đầu hoa cam cúc được ép chiết tinh dầu.\u00a0Tinh dầu từ hoa dương cam cúc\u00a0mang lại mùi thơm đặc trưng và nhiều đặc tính thú vị. Màu xanh đặc biệt của tinh dầu là nhờ hợp chất chamazulene."
+      },
+      "Thành phần": {
+        "thành phần": "Hoa cúc la mã chứa từ 0,3 đến 1,5% tinh dầu, được chiết xuất chủ yếu bằng phương pháp chưng cất, sử dụng hoa tươi và cuống hoa. Thành phần chính của tinh dầu là bisabolol, chiếm tới 33% tổng lượng tinh dầu.  Hoa cúc la mã có hơn 120 hợp chất hóa học đã được xác định, phần lớn nằm trong tinh dầu.",
+        "Các hợp chất": "Bisabolol",
+        "gồm chất": "Farnesene",
+        "chứa": "Chamazulene",
+        "triết xuất": "Apigenin",
+        "đã nghiên cứu": "Quercetin",
+        "tìm thấy": "Patuletin",
+        "thủy phân": "Luteolin",
+        "các hoạt chất": "Coumarin"
+      },
+      "Tính vị": {
+        "Có vị": "Dương cam cúc có mùi thơm dễ chịu và vị đắng, có tác dụng chống co thắt, long đờm, gây trung tiện, diệt giun sán, an thần, lợi tiểu, sát trùng, chống viêm."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Dương cam cúc có họ hàng với cây ragweed (một loại cỏ phấn hương), nên có thể gây ra các triệu chứng dị ứng ở những người nhạy cảm với phấn hoa của loài này. Sự có mặt của lacton ở những chế phẩm có nụ hoa dương cam cúc có thể gây phản ứng ở những ngày nhạy cảm và có báo cáo về viêm da tiếp xúc do dương cam cúc gây nên. Tuy vậy, có rất ít trường hợp dị ứng do dương cam cúc. Có báo cáo về vài trường hợp phản ứng phản vệ do uống nụ hoa dương cam cúc.  Ngoài ra, khi sử dụng trà cúc la mã, cần cẩn thận vì nó có thể tương tác với các loại thuốc chống đông máu."
+      },
+      "Cách dùng": {
+        "được_dùng": "Người lớn ngày dùng trung bình 2-8g nụ hoa chia làm 3 lần; cao lỏng 1:1 trong cồn 45% với liều 1-4ml, 3 lần một ngày. Trẻ em dùng 2g nụ hoa, 3 lần một ngày; cao lỏng (ethanol 45-60%) một liều 0,6-2ml. Không dùng cho trẻ em dưới 3 tuổi.  Dùng ngoài: Để đắp hoặc súc miệng, nước hãm 3-10% nụ hoa (30-100g/lít), cao lỏng 1% hoặc cồn thuốc 5%. Để tắm, nụ hoa 5g/lít nước. Đối với những chế phẩm bán lỏng: cao nước – cồn tương đương với 3-10% (dương cam cúc 30-100g/lít). Để hít hơi: 6g dương cam cúc, hoặc 0,8g cao cồn trong 1 lít nước nóng.  (Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam)"
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

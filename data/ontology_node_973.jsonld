@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc hoa trắng",
+      "ten_khac": "Cúc hoa trắng, Bạch cúc",
+      "ten_khoa_hoc": "Chrysanthemum morifolium Ramat.",
+      "ma_taxon": "53806",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống một năm hay lâu năm.",
+      "thân": "Thân đứng, có rãnh.",
+      "lá": "Lá mọc so le, hình trứng hoặc trái xoan, có 3-5 thùy, gốc thuôn, đấu tròn hoặc hơi nhọn, mép khía răng không đều, mặt trên xanh sẫm bóng, mặt dưới phủ lông màu trắng, cuống lá có tai ở gốc.",
+      "hoa": "Cụm hoa mọc ở ngọn thân hoặc đầu cành thành đầu to, tổng bao lá bắc gồm các lá phía ngoài hình chỉ, có lông trắng, các lá bên trong thuôn – trái xoan, hoa 1-2 vòng ở phía ngoài hình lưỡi màu trắng, hoa ở giữa hình ống màu vàng nhạt, tràng của hoa hình ống có 5 thùy nhỏ, có tuyến, không có mào lông, nhị 5, bầu nhẵn.",
+      "quả": "Quả bế gần hình trái xoan."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Chrysanthemum L., gồm cả một số loài của chi Pyrethrum (The Wealth of India, vol II, 1950) với tổng số trên 300 loài, phân bố chủ yếu ở vùng ôn đới ấm và cận nhiệt đới Bắc bán cầu. Nhiều loài được trồng làm cảnh, vì có hoa đẹp.  Ở Việt Nam, chi này có 5, 6 loài, đều là cây trồng, trong đó cúc hoa trắng được nhập từ lâu, hiện có nhiều giống. Đó là kết quả của sự chọn lọc, lai giống của các nhà trồng trọt thế giới và cả ở Việt Nam.  Cúc hoa trắng là cây ưa ẩm và ưa sáng. Cây ra hoa nhiều, nhưng không thấy kết hạt, tái sinh vô tính khỏe, nhân giống chủ yếu bằng cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa thu hái khi mới nở, đem phơi trong râm hoặc phơi nắng sau khi đồ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cúc hoa trắng chứa:",
+      "tinh dầu chứa": "Tinh dầu, trong đó có chrysanthemol, camphor, monobornylphtalat.",
+      "Các hợp chất": "Flavonoid: luteolin, quercetin, apigerun , glucosid. apligenin , galactopyranosid, acacetin, acacilin, baicallin, luteollin, methoхуlutcolіn.",
+      "chứa": "Acid phenol: acid clorogenic acid quinic, lafciat, acid quinic.",
+      "tìm thấy": "Sesquiterpen: chlorochrymorin, chrysandiol, chrysartemin A, chrysartemin B.",
+      "gồm chất": "Các thành phần khác: Hydroxy pseudotarasterol palmitat, ester của acid acetic, acid elagic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cúc hoa trắng có vị ngọt, đắng, tính hơi hàn, vào 3 kinh: phế, can và thận, có tác dụng tán phong thấp, giáng hỏa, giải độc, làm sáng mắt, đỡ nhức đầu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cúc hoa trắng được dùng làm thuốc chữa các chứng nhức đầu, đau mắt, chảy nước mắt, tăng huyết áp, sốt. Ngày dùng 9-15g dưới dạng thuốc sắc uống, dùng riêng hay phối hợp với các vị thuốc khác. Dùng ngoài rửa, đắp trị mụn nhọt.  Ở Trung Quốc, thuốc hãm hoa cúc trắng với nước nóng được nóng được dùng uống để trị đau dây thần kinh, đau đầu, chóng mặt và tăng huyết áp.  Dùng ngoài thuốc sắc nước hay thuốc bôi dẻo cúc hoa trắng chữa bệnh viên mủ da và những bệnh da khác. Liều dùng mỗi lần 2- 6g hoa cúc trắng khô. Dùng ngoài không kể liều lượng  Bài thuốc có hoa cúc trắng :  Chữa tăng huyết áp ở bệnh nhân có vữa xơ động mạch, chóng mặt, ù tai và những triệu chứng chủ quan khác: Cúc hoa trắng 10g, sinh địa 25g, vỏ trai ngọc 25g, sơn dược 15g, phục linh 12g, sơn thù du 12g, mẫu đơn 10g, lá dầu 10g, nước 800 ml. Sắc còn 300 ml chia 3 lần uống trong ngày. Chữa  tăng huyết áp ở bệnh nhân có bệnh than: Cúc hoa trắng 10g, phục linh, sinh địa, sơn dược, thạch hộc, mỗi vị 12g, kỷ tử, sơn thù du, trạch tả, mỗi vị 10g; mẫu đơn 6g, nước 800 ml. Sắc còn 300 ml, chia 3 lần uống trong ngày. Chữa tăng huyết áp ở bệnh nhân có giãn tim, chóng mặt, thở hổn hển, ra mồ hôi, có triệu chứng ứ trệ máu: Cúc hoa trắng 6g, mạch môn 15g, hà thủ ô đỏ 15g, sinh địa, đương quy, ngũ vị tử, táo ta, huyền sâm, mỗi vị 10g, phục linh, thạch xương bồ, cam thảo, đẳng sâm, mỗi vị 6g, chi tử 3g. Sắc uống. Chữa suy nhược tâm thần với các triệu chứng chóng mặt, mệt mỏi, kém trí nhớ, mất ngủ: Cúc hoa trắng 20g, toan táo nhân 25g, đương quy, phục linh, sinh địa, kỷ tử, mỗi vị 20g, viễn chí, tục tùy tử, mạch môn, bạch truật, mỗi vị 15g, xuyên khung. hoàng bá, nhân sâm, mỗi vị 10g, nước 800 ml. Sắc còn 300 ml, chia 2 lần uống trong ngày Chữa viêm não Nhật Bản B: Cúc hoa trắng 10g, thạch cao 31g, liên kiều 10g, kim ngân hoa 10g. cam thảo 6g, hoàng cầm 6g, thanh cao 6g, dành dành 5g, cát cánh 5g, bạc hà 2g. Sắc với 300ml nước, trong 20 phút, uống tất cả một lần. Thuốc tán phong nhiệt, giải độc, làm sáng mắt: Cúc hoa trắng, cam thảo, sinh khương, thạch cao, câu đằng, trần bì, nhân sâm, mạch môn, bán hạ, phục linh, phòng phong. Chữa ho: Cúc hoa trắng 20g, tang bạch bì, hạt tía tô 8g. Sắc uống. Chữa mụn nhọt: Lá cúc hoa trắng giã nát với muối, đắp vào mụn nhọt. Chữa suy nhược thần kinh: Cúc hoa trắng 12g, bạch thược 16 g, huyền sâm, đại táo, mạn kinh, mộc qua, mỗi vị 12g, bán hạ, thanh bì, hoàng cầm, sài hồ, mỗi vị 8g, cam thảo, hắc chi tử, sinh khương, chỉ xác, mỗi vì 6g. Sắc uống, ngày một thang.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

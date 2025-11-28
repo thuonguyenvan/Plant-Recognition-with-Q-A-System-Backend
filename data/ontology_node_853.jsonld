@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mọt",
+      "ten_khac": "Mọt, Kamala, Cánh kiến, Rùm nao, Thuốc sán, Dù mào reo điẳng (Dao)",
+      "ten_khoa_hoc": "Mallotus philippinensis (Lam.) Muell.-Arg.",
+      "ma_taxon": "165099",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ, cao 5-10m.",
+      "thân": "Cành non có lông và phấn màu gỉ sắt, cành già, màu xám đen.",
+      "lá": "Lá mọc so le, hình bầu dục hoặc hình trứng, gốc tròn, dài 5 – 10 cm, rộng 3 – 5 cm, đầu thuôn nhọn, mép nguyên, mặt trên nhẵn, mặt dưới có lông trắng nhỏ và lấm tấm những tuyến nhỏ, 3 gân tỏa từ gốc lá; cuống lá dài có lông màu gỉ sắt và hai tuyến ở chỗ tiếp giáp với phiến lá; lá non màu hồng tím; lá kèm sớm rụng.",
+      "hoa": "Hoa nhỏ, đơn tính khác gốc, mọc thành bông ở đầu cành có lá ở phía dưới; hoa đực có 3 lá dài không đều, bầu có lông hình sao.",
+      "quả": "Quả nang, hình cầu, phủ đầy lông và tuyến nhỏ màu; hạt hình trứng, màu đen.",
+      "mùa hoa": "tháng 3 -4",
+      "mùa quả": "tháng 3 -4",
+      "cao": "5-10m"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây có nguồn gốc ở  vùng Ấn Độ, Malaysia, phân bố phổ biến ở các nước nhiệt đới Nam Á, Đông – Nam Á, nam Trung Quốc và tới tận Australia. Ở Việt Nam, cây mọt phân bố ở hầu hết các tỉnh từ vùng núi đến đồng bằng và các đảo lớn. Cây ưa sáng, có khả năng chịu hạn, sống được trên nhiều loại đất, thường mọc ở rừng thứ sinh, đồi, trảng cây bụi sau nương rẫy. Ở vùng đồng bằng, đôi khi cây mọc lẫn trong các bụi quanh làng, ra hoa quả nhiều hàng năm, tái sinh tự nhiên từ hạt tốt. Sau khi bị chặt, phần còn lại vẫn tái sinh được."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lông tiết và lông che chở bao quanh quả. Đến mùa quả chín, người ta hái cả chùm, rồi cho vào một cái rây, xoa và rây nhẹ, sẽ được một thứ bột màu đỏ, không mùi không vị (Đỗ Huy Bích 1995) Rễ và vỏ thân cây cũng được dùng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lông bao quanh quả chứa rotlerin 10%, isorotelin.",
+      "Vỏ và lá chứa": "malotanin A và malotanin B.",
+      "Lá chứa": "15 tanin và các hợp chất có liên quan.",
+      "Hạt chứa": "dầu béo 50% trong đó có các acid kamlolenic.",
+      "Rễ chứa": "một số chất nhuộm đỏ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân ta mới chỉ dùng vỏ thân cây mọt, cạo vỏ ngoài, rửa sạch, thái nhỏ, phơi khô, sắc với 200ml, còn 50ml uống làm một lần trong ngày, chữa tiêu chảy. Liều dùng hàng ngày 6 – 12 g. Tác dụng này là do lượng tannin chứa trong vỏ. Vỏ thân cây mọt phối hợp với vỏ cây thanh mai (liều lượng gần bằng nhau) chữa đái vàng. Ở Ấn Độ, cây mọt được dùng làm thuốc tẩy sán cho người và cho cả thú y. Dùng lông tuyến bao quanh quả với liều mỗi ngày 2 – 6 g, trộn với mật hoặc sữa, uống làm 2 lần, mỗi lần cách nhau nửa giờ. Trẻ em dùng liều thấp hơn. Thuốc có độc, khi dùng phải rất thận trọng. Dùng ngoài, bột lông quả được trộn với dầu vừng để chữa ghẻ, bệnh hắc lào, nấm da và herpes. Để chữa đau dạ dày mạn tính, kém tiêu, lấy khoảng 50g vỏ cây giã nát và ngâm trong 100 nước trong 1 giờ, hớt phần nổi bên trên và uống ngày một lần trong một tuần. Bã đã dùng rồi có thể dùng lại lần thứ hai. Uống bột quả trộn với sữa bì làm thuốc trợ tim. Cây mọt cũng  được dùng làm thuốc ở Nepan. Quả bỏ hạt giã nát, uống 2 -3 g với bơ và mật, ngày 2 lần trong 2 -5 ngày để trị giun, đặc biệt là sán dây. Một phương thuốc uống khác để tẩy sán gồm 3 g bột đỏ từ quả cây mọt với 6 g bột hạt Rutea monosperma. Cũng có thể dùng khoảng 15 g rễ mọt, sắc với 200ml nước trong khoảng 20 phút, lọc và cô lại còn 40ml. Uống 4 thìa cà phê, ngày 2 lần, trong 2 ngày. Dịch ép vỏ cây trị tiêu chảy."
+    }
+  ]
+}

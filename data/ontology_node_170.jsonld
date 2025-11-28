@@ -1,0 +1,246 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Dưa hấu",
+            "ten_khac": "Dưa hấu, Tây qua, Lưa, Dưa đỏ, Pheng đeng (Tày)",
+            "ten_khoa_hoc": "Citrullus lanatus (Thunb.) Matsum. & Nakai",
+            "ma_taxon": "70054",
+            "ho": "Cucurbitaceae (Bầu bí)",
+            "Mô tả": {
+                "lá": null,
+                "hoa": null,
+                "quả": null,
+                "cây": "Là dạng cây Cỏ sống quanh\u00a0năm, mọc bò, thân có lông nhất là ở ngọn và các đốt. Lá xẻ thùy 3 đến 5, xẻ sâu, mỗi thùy cũng lại chia thùy nữa. Tua cuốn có 2-3 nhánh. Hoa đơn tính, cùng gốc, màu vàng, to. Hoa đực đơn độc, đài hình chuông, tràng 5, nhị 3. Hoa cái có đài, tràng giống hoa đực, 3 nhị lép dạng chi, bầu dưới, 3 ô, vòi nhụy ngắn, 3 đầu nhụy hình thận dày. Quả hình cầu hay hình trứng, vỏ nhẵn bóng, màu lục đen, nhiều khi có vân sẫm, đường kính tới 30-40cm, thịt quả đỏ hay vàng đỏ rất nhiều nước, ngọt. Hạt dẹt, bóng láng hay nhám mờ, màu đen nhạt hay đỏ. Mùa quả ở miền Bắc từ tháng 4 đến tháng 7, ở các tỉnh miền Nam từ tháng 1 đến 3-4 (trước và sau tết âm lịch).",
+                "mặt": null,
+                "đầu": null,
+                "thân": null,
+                "cuống": null,
+                "gốc": null,
+                "cao": null,
+                "rễ": null,
+                "củ": null,
+                "mọc": null,
+                "mùa hoa": null,
+                "mùa quả": null
+            },
+            "Phân bố": {
+                "phân_bố": null,
+                "ở_vùng": [],
+                "các_tỉnh": {
+                    "mục": null,
+                    "tỉnh": {
+                        "tên": null
+                    }
+                },
+                "được_trồng": {
+                    "mục": null,
+                    "nơi": {
+                        "tên": null,
+                        "ghi_chú": null
+                    }
+                },
+                "chủ_yếu": null,
+                "thường_mọc": null,
+                "Đặc điểm sinh trưởng": null
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": null
+            },
+            "Thành phần": {
+                "thành phần": "Trong dưa hấu có 49,7% nước, 0,6% protid, 1,3% gluxid, 0,3% xenlulose, 0,1% tro, 4,2mg% canxi, 6,8mg% P, 0,5mg% Fe, 0,10mg% caroten, 0,02mg% B1 0,02mg% vitamin B2, 0,10mg% vitamin PP và 4mg% vitamin C.",
+                "gồm chất": "Trong một loài dưa Citrullus colocynthis Schrađ dùng làm thuốc tẩy mạnh, Vauquelin và Braconnot đã chiết được mội glucosid có tinh thể gọi là colocynthine C56H84O23 màu vàng, rất đắng, tan trong nước (1/20), trong cồn, không tan trong ete, khi thủy phân cho glucose và colocynthin C44H64O13",
+                "Các hợp chất": "Ngoài ra còn colocynthilin và citrullin",
+                "chứa": null,
+                "triết xuất": null,
+                "đã nghiên cứu": null,
+                "tìm thấy": null,
+                "thủy phân": null,
+                "các hoạt chất": null,
+                "tinh dầu chứa": null,
+                "có hoạt chất": null,
+                "dấu hiệu đặc trưng": null
+            },
+            "Tính vị": {
+                "Có vị": null
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Quả dưa hấu được dùng chủ yếu trong nhân dân làm thức ăn bổ và mát vào mùa hè, hạt rang lên ăn hay dùng làm bánh mứt kẹo. Trong y học cổ truyền dân gian, người ta coi dưa hấu có vị ngọt, tính hơi hàn, có tác dụng thanh thủ, giải nhiệt, lợi tiểu, dùng trong những trường hợp huyết áp cao, nóng trong bàng quang, đái buốt, viêm thận, phù thũng, vàng da, đái đường, say rượu, cảm sốt, phiền khát.",
+                "được_dùng": null,
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "chữa": null
+            },
+            "Cách dùng": {
+                "được_dùng": "Dưa hấu được trồng khắp các tỉnh ở miền Bắc và miền Nam nước ta và ở nhiều nước nhiệt đới khác. Chủ yếu người ta trồng để lấy quả ăn. Hạt cũng được thu nhặt để làm thực phẩm. Việc sử dụng các bộ phận của dưa hấu làm thuốc ít được chú ý hơn. Thường chỉ có tính chất địa phương: Người ta dùng vỏ quả giữa của dưa hấu với tên tây qua thủy.",
+                "làm thuốc": null,
+                "có tác dụng": null,
+                "sắc uống": null,
+                "giã nát": null,
+                "sắc nước uống": null,
+                "phơi khô": null,
+                "xấy khô": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

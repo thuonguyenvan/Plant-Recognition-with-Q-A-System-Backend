@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu mèo",
+      "ten_khac": "Đậu mèo dại, đậu mèo",
+      "ten_khoa_hoc": "Mucuna pruriens (L.) DC.",
+      "ma_taxon": "165536",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Đậu mèo (Mucuna pruriens) là một loại cây họ đậu, có thể là cây hàng năm hoặc cây lâu năm ngắn ngày.",
+      "thân": "Là cây dây leo, có thể dài từ 6 – 18 mét. Thân mảnh, có lớp lông mịn nhẹ. Có rễ cọc và nhiều rễ phụ dài 7 – 10 mét.",
+      "lá": "Mọc so le, có 3 lá chét (trifoliolate). Hình trái xoan, kích thước khoảng 5 – 15 cm dài và 3 – 12 cm rộng. Có lớp lông mịn nhẹ.",
+      "hoa": "Mọc thành chùm rủ xuống (inflorescence raceme). Màu sắc từ trắng đến tím đậm.",
+      "quả": "Dài 10 – 12,5 cm, có hình dạng hơi cong. Mỗi quả chứa 2 – 6 hạt. Bên ngoài có lông mịn màu trắng xám hoặc cam, có thể gây ngứa khi chạm vào."
+    },
+    {
+      "@type": "Mô tả",
+      "hạt": "Hình bầu dục, kích thước khoảng 1,2 – 1,5 cm dài, 1 cm rộng và 0,5 cm dày. Màu sắc đa dạng: đen bóng, trắng hoặc nâu có đốm đen."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Nguồn gốc: Cây đậu mèo có nguồn gốc từ Nam Á và Malaysia. Về sau, nó được trồng rộng rãi ở vùng nhiệt đới. Vào cuối thế kỷ 19, cây được đưa vào miền nam nước Mỹ, sau đó lại được tái du nhập trở lại các vùng nhiệt đới vào đầu thế kỷ 20. Ở Việt Nam, đậu mèo có rải rác ở các tỉnh miền núi, đặc biệt từ Quảng Bình trở ra. Phân bố và điều kiện sinh trưởng: Cây có thể phát triển từ mực nước biển đến độ cao 2.100 mét. Thích hợp với khí hậu nóng, ẩm, lượng mưa hàng năm từ 650 – 2.500 mm. Cần mùa sinh trưởng không có sương giá và kéo dài trong những tháng mưa. Có thể mọc trên nhiều loại đất, từ đất cát đến đất sét, nhưng thích hợp nhất với đất nhẹ, thoát nước tốt và có độ chua cao. Cây thường leo lên các loại cây bụi hay cỏ cao ở các quần hệ thứ sinh ven rừng kín, ở đồi hay trảng cây bụi trên đất nương rẫy mới bỏ hoang. Đậu mèo là cây ưa sáng, ra hoa nhiều, tái sinh tự nhiên chủ yếu từ hạt. Vòng đời của cây từ khi mọc đến khi tàn lụi kéo dài khoảng 4-5 tháng. Đậu mèo là loại cây không được ưa chuộng, do lông của cây thường gây mẩn ngứa khi va chạm."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt lấy ở những quả chín, phơi khô. Rễ thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt đậu mèo chứa protein, calci, phosphor, sắt, Mg chất Dopa, glutathion, lecithin, acid gallic và glucosid. Hạt có chứa các alcaloid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lông ngứa của cây khi chạm vào người sẽ gây mẩn ngứa khó chịu, khi va vào mắt sẽ gây đau mắt nguy hiểm. Hạt có tính xổ và sát trùng, hút độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đậu mèo cho chuột cống trắng ăn có tác dụng gây hạ đường máu trên chuột bình thường, nhưng không gây hạ trên chuột được gây đái tháo đường thực nghiệm với aloxan."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Keo dậu",
+            "ten_khac": "Keo giậu, Bồ kết dại, Táo nhân, Bò chét, Bình linh, Phắc cănthin (Tày), Nằng dung điằng (Dao)",
+            "ten_khoa_hoc": "Leucaena leucocephala (Lam.) de Wit",
+            "ma_taxon": "47447",
+            "ho": "Mimosaceae (Trinh nữ)",
+            "Mô tả": {
+                "cây": "Cây keo hay bồ kết dại là một cây nhỡ không có gai, cao độ 2-4m, hoặc hơn",
+                "lá": "Lá 2 lần kép lông chim, có cuống chung dài 12-20cm, ở phía dưới phình lên và có một hạch ở dưới đuôi cuống phụ đầu tiên. Trên cuống có lông ngắn nằm rạp xuống. Lá chét từ 11-18 đôi, gần như không cuống.",
+                "quả": "Quả giáp dài 13-14cm, rộng 15mm, màu nâu, đầu có một mỏ nhọn cứng. Hạt có khoảng 15-20, hạt dẹt chỉ hơi phồng lên, sắp nghiêng trong quả, dài 7mm rộng 4mm phẳng nhẵn, màu nâu nhạt, hình bầu dục, hơi lẹm ở phía dưới."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Được nhiều người nghiên cứu, sau đây là một số kết quả chính:  Hạt không chứa tinh bột. Chứa 12-14% chất nhầy, chất đường, 4,45% tro, 21% protit, 5,5% chất béo và chất leuxenola (còn gọi là leuxenin hay mimono phenonlic (Mascre 937 và Roger-Johnson J.L., 1949) chất leuxenola còn gọi là Leuxenin C8H10O4N2 chứa trong lá và hạt với tỷ lw65 3% trong lá khô) và 5% (chứa trong cây xấu hổ Mimosa pudica) giống nhau và 2 chất như 1 (Vibau J.P 1946). Chất leuxenin tan trong nước,trong cồn etylic và metylic, gần như không tan trong các dung môi hữu cơ khác, có tính chất độc. Leuxenola hydrat có độ chảy 291°, dạng khô kiệt có độ chảy 227-228° cho mối clohydrat với độ chảy 179°5, muối iohydrat có độ chảy 183-183°5 năng suất quay cực D=-21°(H2O). Theo Tominaca (Nhật bản 1949) trong lá còn chứa một chất glucozit."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Nhân dân thường dùng hạt keo làm thuốc chữa giun với liều 10-15g cho trẻ con, có thể uống tới 25-50g đối với người lớn. Uống liền 3 sáng vào lúc đói"
+            },
+            "Cách dùng": {
+                "được_dùng": "Cây keo dâu mọc hoang và được trồng khắp nơi trong nước ta để làm hàng rào, làm phân xanh bóng mát. Trâu bò rất thích ăn lá cây này. Khi quả chín lấy về đập lấy hạt phơi hay sấy khô. Ngoài công dụng làm thuốc, hạt còn đang được nghiên cứu làm thức ăn cho súc vật."
+            },
+            "luu_y": {}
+        }
+    ]
+}

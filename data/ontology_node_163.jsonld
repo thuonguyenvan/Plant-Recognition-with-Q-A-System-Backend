@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dướng",
+      "ten_khac": "Dướng, Câu thụ, Chử đào thụ, Pắc sa (Tày), Sa lè (Thái), Ráu ráng, Cây rát, Điềng đủ (Dao)",
+      "ten_khoa_hoc": "Broussonetia papyrifera L'Her. ex Vent.",
+      "ma_taxon": "128032",
+      "ho": "Moraceae (Dâu tằm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Dướng là một cây to cao, có thể cao tới 16m.",
+      "thân": "Vỏ thân nhẵn, màu tro. Thân lá đều có nhũ dịch, cành non hơi có lông nhỏ, khi già sẽ rụng đi.",
+      "lá": "Lá mọc so le, cuống lá dài 3-10cm, có lông tơ, phiến lá hình trứng, dài 6-20cm, rộng 3-8cm, đầu lá hơi nhọn, phía cuống tròn hoặc hình tim, có khi không đối xứng, mép có răng cưa rõ, đôi khi xẻ 3 thuỳ, đặc biệt có khi xẻ 5 thuỳ, nhưng độ nông sâu của vết cắt không nhất định. Có khi phiến lá không chia thùy. Mặt trên lá có lông ngắn, mặt dưới có lông mềm màu xám trắng.",
+      "hoa": "Hoa đơn tính, đực cái khác gốc. Hoa đực mọc thành bông ở ngọn cành, hoa cái mọc thành cụm hoa.hình cầu.",
+      "mùa hoa": "Mùa hoa vào các tháng 5-6",
+      "quả": "Hoa đực có 4 lá đài, 4 nhị, hoa cái có đài hợp 3-4 răng, 1 vòi nhụỵ. Quả hạch, tụ thành hình cầu, màu vàng hay đỏ, đường kính chừng 2cm.",
+      "mùa quả": "mùa quả vào các tháng 8-11."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Diệp Quyết Tuyền, trong quả dướng có 4,75% lignin, canxi cacbonat, axit xerotic, các men lipaza, proteaza và zymaza.",
+      "chứa": "Mới đây, hệ dược của Viện y học Bắc Kinh nghiên cứu thấy trong quả của cây này có chứa một chất saponin chừng 0,51%."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây này mới được dùng trong phạm vi nhân dân. Trung Quốc và Việt Nam đều thấy dùng.",
+      "làm thuốc": "Nhân dân Việt Nam dùng lá làm thuốc nhuận tràng cho trẻ con hay có khi dùng nấu nước để xông khi bị cảm, quả được coi là một vị thuốc bổ có tác dụng chữa ho, vỏ thân cây dùng chữa lỵ, cầm máu, nhựa mủ của cây dùng đắp lên các vết rắn cắn, chó cắn hoặc ong đốt.",
+      "có tác dụng": "Tính chất quả dướng theo đông y như sau: Tính hàn, vị ngọt, nhập hai kinh tỳ và tâm. Có tác dụng làm sáng mắt, lợi tiểu tiện, bổ gân cốt, bổ thận.",
+      "chữa": "Đông y dùng chữa thuỷ thũng, mắt mờ, dùng riêng hay phối hợp với phục linh hoặc đại phúc bì.",
+      "sắc uống": "Liều dùng hằng ngày 6-12g, dưới dạng thuốc sắc.",
+      "luu_y": "Trong các sách đông y có nói những người có tỳ thận hư nhược thì không nên dùng.",
+      "được_dùng": "Ngoài công dụng làm thuốc, cây dướng còn là một cây công nghệ vì vỏ cây được dùng làm thừng và làm giấy, lá có thể dùng nuôi lợn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đơn thuốc có quả Dướng dùng trong nhân dân",
+      "chữa": "Dùng chữa những người già yếu suy nhược, tiểu tiện nhiều, chân phù (đơn thuốc của Diệp Quyết Tuyền): Quả dướng 12g, phục linh 10g, đỗ trọng 10g, câu kỷ tử 10g, ngưu tất 8g, tiểu hồi hương 3g, bạch truật 10g, nước 600ml, sắc còn 200ml, chia 3 lần uống trong ngày.",
+      "chữa": "Chữa hội chứng lỵ: Lá dướng tươi 50-100g, giã nát vắt lấy nước uống (kinh nghiệm nhân dân Lai Châu)."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Cây dướng mọc hoang và được trồng ở khắp nơi, nhiều nhất ở miền Bắc và miền Trung nước ta. Có thấy mọc ở Lào. Còn thấy ở Ấn Độ, Indônêxia, Trung Quốc, Nhật Bản.",
+      "phơi khô": "Hái lá và quả về phơi hay sấy khô dùng dần. Có khi dùng tươi."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

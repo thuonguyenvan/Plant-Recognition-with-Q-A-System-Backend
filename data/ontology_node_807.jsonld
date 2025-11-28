@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quế rừng",
+      "ten_khac": "Ô dước, De hương, Hậu phác nam",
+      "ten_khoa_hoc": "Cinnamomum iners Rein. ex Blume",
+      "ma_taxon": "344847",
+      "ho": "Long não (Lauraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, đôi khi so le, phiến dai, hình bầu dục hoặc mũi giáo, gốc tròn, dầu tù hoặc hơi nhọn, mặt trên màu lục sáng, nhẵn, bóng, mặt dưới xỉn và hơi bạc, có lông ngắn rải rác; 3 gân mờ chạy dọc đến gần đầu lá; cuống lá rất ngắn, phảng hoặc hơi có rãnh. Lá non màu hồng nhạt, vỏ và lá vò ra có mùi quế nhẹ.",
+      "hoa": "Hoa màu trắng, thơm, mọc thành chùm ở kẽ lá và đầu cành, mặt trong màu vàng; cuống hoa và bao hoa có lông.",
+      "quả": "Quả mọng, dài 1-1,5 cm, hình bầu dục, bẹt ở đầu, bao bọc bởi các lá đài rất ngắn tồn tại, dính nhau ở gốc.",
+      "cây": "Cây nhỡ hay cây to, cao 8 – 10 m, có khi hơn. Cành hình trụ nhẵn, màu nâu đen.",
+      "mùa hoa": "tháng 3-4",
+      "mùa quả": "tháng 5-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Quế rừng phân bố ở Nam Trung Quốc, Mianma, Ấn Độ, Indonesia, Campuchia, Lào và Việt Nam. Ở Việt Nam, cây phân bố khá rộng từ các tỉnh Tuyên Quang, Yên Bái, Thái Nguyên đến Bình Dương, Tây Ninh.",
+      "thường_mọc": "Quế rừng thuộc loại cây ưa sáng, lúc nhỏ chịu bóng, thường mọc rải rác ở quần hệ rừng kín thường xanh ẩm, hoặc rừng thứ sinh, ưa đất còn màu mỡ, tơi xốp và không chịu được hạn. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên từ hạt trong điều kiện rừng có độ tán che từ 0,2 đến 0,4. Những cây còn non, sau khi bị chặt, có khả năng tái sinh cây chồi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ thân, thu hái vào mùa hè, thu ở những cây to có vỏ dày, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ thân quế rừng có vị ngọt, cay, mùi thơm tính ấm, có tác dụng tán phong hàn, làm nóng, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân quế rừng được dùng chữa cảm sốt, đau bụng, ăn không tiêu, đầy bụng, nôn mửa, tiêu chảy. Trong trường hợp thiếu quế nhà, có thể dùng quế rừng để thay thế. Liều dùng hàng ngày: 10 – 20g dạng nước sắc. Phụ nữ có thai không được dùng.  Trong y học dân gian Indonesia, lá quế rừng là môt thành phần trong thuốc xức dùng bôi trên da trị vàng da."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa cảm sốt cao, ra mồ hôi nhiều, háo khát: Quế rừng hương nhu, đậu ván trắng, sâm Bố Chính mỗi vị 20g; quả dành dành 12g; mạch môn 10g- ngũ vị tử 4g. Sắc uống làm 2 lần trong ngày. Chữa đau bụng, đầy bụng, táo bón: Quế rừng, chỉ xác, đại hoàng hay chút chít, mỗi vị 12g. Sắc uống. Chữa phù thũng trong viêm thận mạn tính: Quế rừng, hoài sơn, đậu đen, mỗi vị 20g; hạt sen, mạch nha, ý dĩ, mỗi vị 12g; trần bì 8g; gừng nướng 4g. Các vị trừ quế rừng, sắc uống làm 2 lần trong ngày. Riêng quế rừng thái mỏng, hãm với nước sôi trong 10 phút, rồi mới đổ vào nước sắc các vị trên. Chữa sốt rét mạn tính: Quế rừng, trần bì, bán hạ chế, ngải máu, nghệ đen, chỉ xác, rẻ quạt, hạt cau, vỏ rụt, mỗi vị 12g; thảo quả 6g; sắc uống. Trường hợp bệnh đỡ thì tán bột, uống mỗi lần 10g, ngày 2-3 lần.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

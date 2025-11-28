@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lỗ địa cúc",
+      "ten_khac": "Sài gục, Lỗ địa cúc.",
+      "ten_khoa_hoc": "Wedelia prostrata (Hook. et Arn.) Hemsl.",
+      "ma_taxon": "1495922",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc bò, sống dai.",
+      "thân": "Thân cành mảnh có nhiều lông xù sì.",
+      "lá": "Lá mọc đối, hình mũi mác, cuống ngắn hoặc gần như không cuống, dài 1 – 1,5cm, gốc tròn, đầu thuôn nhọn, mép có 1- 3 răng to ở mỗi bên, hai mặt đều có lông nháp, gân không rõ.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và đầu cành thành đầu gần hình cầu; lá bắc xếp thành hai hàng, có lông nhám ở mặt ngoài; hoa màu vàng không có mào lông; tràng hoa cái có lưỡi xẻ 3 thùy, tràng hình ống mảnh, phình ra ở phía trên chia 5 thùy, có lông ở mặt ngoài, nhị 5, bao phấn có tai rất ngắn; bầu hình cầu có lông ở đỉnh.",
+      "quả": "Quả bế, gần hình bầu dục, có 3 cạnh, đầu cụt và có lông.",
+      "mùa hoa": "tháng 7-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Wedelia Jacq. có khoảng trên 50 loài trên thế giới. Ở vùng Đông Nam Á, có 15 loài, trong đó 2 loài thường được dùng làm thuốc là W. chinensis (Osbeck) Merr. (W. calendulacea Less.) và W. biflora (L.) DC. (Wollastonia biflora (L.) DC.); loài lỗ địa cúc (W. prostrata (Hook. et Arn.) Hemsl. ít được dùng hoặc có thể thay thế hai loài trên.  Lỗ địa cúc phân bố chủ yếu ở một số nước nhiệt đới vùng Đông Nam Á và Nam Trung Quốc. Ở Việt Nam, cây phân bố khá phổ biến ở các tỉnh ven biển, từ Thanh Hóa đến Kiên Giang. Lỗ địa cúc gặp nhiều nhất ở các tỉnh miền Trung, thường mọc trên các bãi cát hoang, hai bên đường đi hoặc ở chân đồi. Cây đặc biệt ưa sáng, có khả năng chịu hạn tốt, nhất là những cây mọc trên cát trong suốt mùa khô. Cây ra hoa quả nhiều, gieo trồng tự nhiên bằng hạt.  Ngoài ra, lỗ địa cúc còn có khả năng phân nhánh khỏe, dễ dàng phát triển tạo thành đám thuần loại bò lan trên mặt đất. Cây trồng được bằng hạt hoặc đoạn thân cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, dùng tươi hay khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lỗ địa cúc chứa 5 chất cis và trans – eudesmanolid sesquiterpen, trong đó có 2 chất I và II (CA 124: 312.249 k).",
+      "gồm chất": "Theo Ragasa Consolacion Y. và cs, 1993, lỗ địa cúc còn có 2 dẫn chất của acid ent – kaurenic I và II và 4 eudesmanolid sesquiterpen khác (CA 119: 24606d)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lỗ địa cúc có vị ngọt, hơi chua, tính bình, vào hai kinh can và tỳ, có tác dụng thanh nhiệt, giải độc, tiêu đờm, chỉ khái, hoạt huyết, tán ứ, tiêu thũng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lỗ địa cúc được dùng chữa amiđan, sưng đau họng, bạch hầu, ho gà, ho lâu ngày, ho ra máu, viêm phổi, viêm phế quản, cao huyết áp, chảy máu cam, nhức đầu, cảm sốt mùa hè. Ngày 30 – 60g cây tươi hoặc 5 – 30g cây khô, sắc uống.  Dùng ngoài, lấy ngọn cành, rửa sạch, giã nát, đắp, chữa sưng vú, mụn nhọt, áp xe.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

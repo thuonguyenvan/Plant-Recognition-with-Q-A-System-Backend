@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngô",
+      "ten_khac": "Ngô, Bắp, má khẩu lý (Thái), Khẩu tấy bắc",
+      "ten_khoa_hoc": "Zea mays L.",
+      "ma_taxon": "48448",
+      "ho": "Lúa (Poaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo lớn, cao 2 – 3m.",
+        "thân": "Thẳng, đặc, nhẵn, không phân nhánh, các đốt ở gốc mang rễ.",
+        "lá": "Hình dải, dài 30 – 40cm, thường gập xuống, gốc nhẵn sát thân, đầu thuôn nhọn, hai mặt nháp, mép có lông dạng mi, gân giữa nổi rõ; bẹ lá nhẵn, mép có lông mềm, lưỡi bẹ ngắn, có lông mi.",
+        "hoa": "Cụm hoa đực mọc ở ngọn thân thành chùy, cuống có lông; bông nhỏ hình bầu dục mang 2 hoa, hoa có 3 nhị, bao phấn thuôn, mày mềm hình mũi mác, có lông. Cụm hoa cái mọc ở kẽ lá thành bông dày hình trụ, không cuống; bông nhỏ rất ngắn mang 1 hoa, hoa ở dưới rỗng, các hoa ở trên có bầu và vòi nhụy dài, mày mềm, khá rộng.",
+        "quả": "Quả cứng, bóng, màu vàng, đôi khi đỏ hoặc nâu, tím, xếp thành nhiều dãy, bao bọc bởi mày, có vòi tồn tại rất dài và mảnh.",
+        "mùa hoa": "tháng 6-8.",
+        "mùa quả": "tháng 6-8."
+      },
+      "Phân bố": {
+        "phân_bố": "Ngô có nguồn gốc ở vùng nhiệt đới Mexico và Trung Mỹ. Từ thời cổ đại, thổ dân ở đây đã biết trồng. Ở Ấn Độ, ngô cũng đã được trồng cách đây 7000 năm; đến thế kỷ thứ 16, người Bồ Đào Nha đưa ngô từ châu Mỹ vào vùng Đông Nam Á. Ngày nay, ngô đã trở thành loại cây cho hạt được trồng rộng rãi nhất thế giới, từ 58° vĩ tuyến Bắc (Nga và Canada) đến 42° vĩ tuyến Nam (New Zealand và lục địa Nam Mỹ). Ở Việt Nam, ngô cũng được coi là cây trồng cổ và hiện trồng ở khắp các địa phương, đặc biệt là các tỉnh trung du và miền núi.  Trải qua lịch sử trồng trọt và chọn lọc, các giống ngô trên thế giới đã trở nên vô cùng phong phú và đa dạng. Căn cứ vào hình dạng và kích thước hạt ngô người ta đã chia ra thành những nhóm giống ngô chủ yếu sau:  Nhóm thứ nhất: Z. mays L. convar. dentiformis Koern. (Z. mays L. var. indentata (Sturt.) Bailey): được trồng chủ yếu ở Mỹ và Bắc Mexico. Nhóm thứ hai: Z. mays L. convar. microsperma Koern. (Z. mays L. var. everta (Sturt.) Bailey): Nhóm ngô quan trọng của Mỹ và Mexico hiện nay. Nhóm thứ ba: Z. mays L. convar. amylacea (Sturt.) Grebensc. (Z. mays L. var. amylacea (Sturt.) Bailey): Nhóm ngô cổ được trồng chủ yếu ở vùng khô của Mỹ, phía tây của vùng Nam Mỹ và Nam Phi. Nhóm thứ tư: z. mays L. convar. saccharata Koern. (Z. mays L. var. rugosa Bonaf): Nhóm này khi hạt còn non được dùng làm rau ăn, có nhiều ở Mỹ và các nước Đông Nam Á. Nhóm thứ năm: z. mays L. convar. ceratina Kuleshov (Z. mays L. subsp. ceratina (Kuleshov) Zhuk): Nhóm trồng nhiều ở vùng Đông Á.  Mỗi nhóm lại gồm rất nhiều dòng khác nhau .Tùy theo đặc điểm sinh học của mỗi loại, chúng được trồng ở các vùng địa lý có khí hậu khác nhau từ những vùng đất thấp hơn mực nước biển (đồng bằng Caspian) đến độ cao hơn 2000m (Himalaya) hay 3600m (Peru). Ngô trồng được cả ở vùng nhiệt đới nóng ẩm và vùng ôn đới ở phía bắc. Song nhìn chung tất cả các giống ngô đều ưa sáng, ưa ẩm (nhất là ở thơi kỳ cây còn non). Cây sinh trưởng mạnh trong điều kiện nhiệt độ từ 20°c trở lên. Sau khi đã ra hoa kết quả, ngô có thể chịu được thời tiết nắng nóng lên đến 40°C. Ngô là loại cây thụ phấn chéo điển hình, do hoa đực ở trên thường nở trước hoa cái ở dưới. Bên cạnh đó, do cấu tạo đặc biệt của hoa cái có vòi nhụy là những sợi dài (râu ngô), nên dễ dàng tiếp nhận các hạt phấn nhờ gió. Thời gian diễn ra sự thụ phấn từ 9 giờ sáng đến 2 giờ chiều. Kết thúc thời kỳ hoa quả và khi hạt đã già, cây bắt đầu tàn lụi.  Ngày nay, ngô đã trở thành nguồn ngũ cốc quan trọng của các Châu lục. Tổng diện tích trồng ngô trên thế giới năm 1993 là 127 triệu hécta với tổng sản lượng là 470 triệu tấn, trong đó Mỹ là nơi sản xuất nhiều nhất: 161 triệu tấn; sau đến Trung Quốc: 103 triệu tấn; Brazil: 30 triệu tấn; Mexico: 19 triệu tấn; Pháp: 15 triệu tấn. Ở khu vực Đông Nam Á, Indonesia có sản lượng ngô hàng năm vào khoảng 6,6 triệu tấn; Philippin 5,5 triệu tấn; Thái Lan 3,8 triệu tấn… Ngô cũng được sản xuất nhiều ở Việt Nam. Bên cạnh các giống ngô mới được nhập hay lai tạo mới, ở các vùng núi cao, như Đồng Văn, Mèo Vạc, Yên Minh (Hà Giang); Sìn Hồ, Tủa Chùa (Lai Châu); Sa Pa, Bát Xát (Lào Cai)… đồng bào các dân tộc ít người vẫn có những giống ngô địa phương, tuy năng suất chưa cao nhưng có khả năng thích nghi và phẩm chất của hạt cao. Ngô vẫn là nguồn lương thực chủ yếu của người H’Mông, Dao Đỏ, Hà Nhì… ở vùng Tây Bắc, cũng như cộng đồng các dân tộc khác ở Tây Nguyên hiện nay."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hạt và râu ngô."
+      },
+      "Thành phần": {
+        "thành phần": "Hạt ngô chứa 55 – 70% tinh bột, 10 – 15% protid, 5 – 10% lipid và một số chất khác.  Tinh bột ngô gồm 21 – 23% amylose và 77 – 79% amylopectin. Tinh bột ngô được dùng làm tá được trong chế phẩm thuốc, đồng thời là nguyên liệu chế dextrin, glucose. Nước ngâm hạt ngô dùng làm môi trường nuôi cấy thuốc kháng sinh và có ứng dụng làm môi trường nuôi cấy thuốc kháng sinh và có ứng dụng trong sản xuất meso – inositol và phytin.  Tinh bột ngô được ghi vào Dược điển Pháp IX.  Các acid amin chính trong hạt ngô là (g/16g N): arginin 4,64, histidin 2,56, lysin 3,20, tryptophan 0,64, phenylalanin 4,64, tyrosin 3,84, methionin 1,92, cystin 1,60, threonin 4,48, leucin 11,52, isoleucin 3,84 và valin 4,80. Hạt ngô có rất ít tryptophan. Trong cơ thể tryplophan chuyển hóa thành vitamin pp mà thiếu vitamin này, con người sẽ bị bệnh pellagra.  Zein thuộc nhóm prolamin chiếm 5 – 10% trong số protein của mầm ngô. Zein chứa nhiều acid glutamic, prolin, alanin và leucin, được dùng để bao viên nén.  Mầm ngô chứa 20% dầu béo gồm các glycerid của các acid myristic 0,1 – 1,7%, acid palmitic 8 – 12%, acid stearic 2,5 – 4,5%, acid hexadecenoic 0,2 – 1,6%, acid oleic 19 – 49%, acid linoleic 34 – 62%. Phần không xà phòng hóa chiếm 1 – 3% (y – tocopherol 0,1%. phần còn lại chủ yếu là các đồng phân của sitosterol và sáp như các alcol myricic và cerylic).  Dầu thô chứa 2% phospholipid (lecithin thảo mộc, inositol ester). Dầu ngô có các đặc điểm là màu vàng, mùi và vị nhạt, D25 0,916 – 0,921, điểm chảy -18 đến -10°, 1,470 – 1,474, lipo 1,464 – 1,468, chỉ số acid 2- 6, chỉ số xà phòng 127 – 196, chỉ số iod 109- 138. Dầu ngô là dầu nửa khô, được dùng để chế margarin. Dầu ngô được ghi vào Dược điển Pháp 1979, Dược điển Mỹ XXIV (2000).  Hạt ngô còn chứa nhiều vitamin (mg/100g): thiamin 0,42, riboflavin 0,10, acid pantothenic, acid folic, biotin, vitamin E, 19-30 p.p.m. carotenoid. Hàm lượng p – caroten là vết -7,3 (Ig/g.  Mầm ngô còn chứa 11(E) – 10 – 0X0 – 11 – octadecen – 13 – olid, chất này có hoạt tính độc với một số dòng tế bào u với IC50   0,9 – 9,2 1-ig/ml dịch chiết nước ngô (CA 125: 157.922 g). Ngô còn có một số enzym. Các chất khoáng trong ngô (mg/ 100g) là Ca 10.0, P 348, O, Fe 2.0, Mg 144, Na 15,9, K 286, O, Cu 0.19, S 114.0 và C1 33.0. Ngoài ra còn có Fe, I, Co. Lá ngô chứa 13 – 14% protein và feredoxin (protein có sắt).  Thân ngô chứa khá nhiều sucrose. Râu ngô có 2,5% chất béo, 0,12% tinh dầu, 3,8% chất gôm, 2,7% chất nhựa, 1,5% glucosid đắng, 3,18% saponin, cryptoxanthin, các vitamin c và K, sitosterol, stigmasterol, nhiều acid hữu cơ (acid malic, acid tartric…) anthocyan.  Vỏ hạt ngô có 6 glucurono – xylooligosaccharid với cấu trúc đã được xác định."
+      },
+      "Tính vị": {
+        "Có vị": "Râu ngô và ruột bấc trong thân cây ngô có vị ngọt, tính bình, vào hai kinh: thận, bàng quang, có tác dụng lợi tiểu, tiêu thũng, thông mật, cầm máu."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Râu ngô dược dùng làm thuốc lợi tiểu trong điều trị đái vàng, đái rắt buốt, viêm đường tiết niệu, sỏi niệu, phù thũng, huyết áp cao, thuốc thông mật trong điều tri viêm gan, viêm túi mật, vàng da, sỏi túi mật.  Ngày dùng 20 – 30g râu ngô, hoặc ruột bấc 100 – 200g dưới dạng thuốc sắc.  Ở Ấn Độ, dầu ngô từ mầm khô hạt ngô thu hồi trong quá trình xay và tinh chế được dùng trong công nghiệp dược để bào chế các dung dịch vitamin. Râu ngô là thuốc lợi tiểu. Theo kinh nghiệm dân gian, để chữa ho gà kèm theo nôn, cho bệnh nhân uống tro của bông không có hạt của cây ngô, bột lá vông nem và mật ong. Mỗi lần 2-3 thìa cà phê, ngày 4 lần.  Ở Nepal, nhân dân dùng hai phần bột ngô trộn với một phần bột quả bồ hòn để gội đầu chống gầu và diệt chấy. Ở Nigeria, hạt ngô khô rang thành bỏng là một thành phần trong một thuốc nước chế từ nhiều vị được dùng tưới lên người đứa trẻ bị sốt cao co giật, đồng thời cho uống 2 thìa cà phê để hạ sốt. Ở Pêru, người ta dùng rượu ngâm hạt ngô bôi ngoài trị thấp khớp và chứng rụng tóc. Nước sắc râu ngô dùng làm thuốc lợi tiểu, trị bệnh lậu, lảm thuốc bổ và an thần. Trong y học dân gian Haiti, hạt ngô giã đắp, bó chữa gãy xương. Nước sắc hoặc nước ngâm râu ngô dùng uống trị phù. Hạt ngô giã đắp nóng trị chấn thương. Ở Guatemala, nhân dân dùng râu ngô trong điều trị nhiễm khuẩn đường tiết niệu và bệnh thận. Ở Brasil, râu ngô có trong thành phần một bài thuốc cổ truyền trị tăng huyết áp."
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa viêm thận, viêm bàng quang:\u00a0Râu ngô (hoặc rễ, lá ngô) 100g; rau má, ý đĩ, mã đề, mỗi vị 50g; sài đất 40g. sắc uống ngày một thang. Chữa phù thũng, viêm thận cấp, đái đỏ, hoặc viêm gan tắc mật, đái vàng, vàng da:\u00a0Râu ngô 40g, hoặc ruột bấc cây ngô 150g, sắc uống. Chữa tăng huyết áp:\u00a0Uống nước luộc ngô hàng ngày, mỗi lần vài bát ngày 2-3 lần. Uống liền 2-3 tháng, đến khi huyết áp trở lại bình thường và ổn định. Chữa đái tháo đường:\u00a0Hạt ngô nhúng nước ủ cho mọc mầm. Dùng mầm ngô sấy khô tán bột, uống mỗi ngày 20 – 30g với nước sắc đọt khoai lang đỏ làm thang. Hoặc ăn chè ngô non nấu với củ mài, đồng thời ăn rau khoai lang đỏ nấu canh hàng ngày.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

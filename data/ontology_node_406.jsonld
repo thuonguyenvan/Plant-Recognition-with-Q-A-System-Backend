@@ -1,0 +1,218 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chút chít nhăn",
+      "ten_khac": "Chân dê, dương đề nhăn",
+      "ten_khoa_hoc": "Rumex crispus L.",
+      "ma_taxon": "53197",
+      "ho": "Rau răm (Polygonaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống dai, cao 0,4 – 1m.",
+      "rễ": "Rễ mập hình trụ, có khía dọc, ăn sâu xuống đất, màu nâu, đôi khi phân nhánh, rễ nhỏ rất nhiều, hình sợi.",
+      "thân": "Thân thẳng, cánh ngắn.",
+      "lá": "Lá mọc so le, có cuống dài, hình thuôn – mũi mác, gốc có bẹ, đầu nhọn hoặc tù, mép uốn lượn, những lá phía dưới có gốc bằng hoặc hình tim, những lá giữa thắt lại ở hai đầu, những lá phía trên nhỏ, hình dài hẹp, gân lá rộp lên thành mạng lưới.",
+      "hoa": "Cụm hoa mọc ở đầu cành và ngọn thân thánh chuỳ mang những là nhỏ suốt chiều dài của chùy, hoa màu vàng lục xếp thành nhiều vòng rất sít nhau, bao hoa có 6 mảnh xếp thành hai vòng, những mảnh ở vòng trong có 1 – 2 răng dài ở mỗi bên mép; nhị 6, đính ở gốc của bao hoa, bầu thượng có 3 cạnh.",
+      "quả": "Quả hình 3 cạnh nằm trong bao hoa tôn tại như những chiếc cánh mỏng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Remux L. trên thế giới có khoảng 200 loài, phân chủ yếu ở vùng ôn đới ẩm bắc bán cầu. Song cũng có nhiều loài phân bố xuống vùng cận nhiệt đới và nhiệt đới, có loài còn được trồng làm rau ăn. Ở Việt Nam, trong số 7 loài đã biết, có tới 6 loài dùng làm thuốc ở các mức độ khác nhau. Chúng phân bố rải rác từ vùng núi xuống đồng bằng, trong đó loài chút chút nhãn phân bổ chu yếu ở vùng đồng bằng Bắc Bộ, bao gồm ngoại thành Hà Nội, Hưng Yên, Hải Dương, Hà Nam, Ninh Bình.",
+      "chủ_yếu": "Chút chít nhăn là cây ưa ẩm, ưa sáng, sống 1 hoặc nhiều năm.",
+      "thường_mọc": "Cây thường mọc ở bờ mương nước, bãi sông, bờ ao hay là ở nơi đất ngập nước nhưng khô vào mùa đông và mùa xuân.",
+      "Đặc điểm sinh trưởng": "Cây mọc từ hạt xuất hiện vào gần cuối mùa đông, sinh trưởng mạnh trong mùa xuân, sau đó ra hoa quả và có thể tàn lụi vào đầu mùa hè."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ (củ)"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa 92,6 protein, 1,5 chất béo, 0,3 carbohydrat toàn phần, 4,1% chất xơ. Ngoài ra, còn có Ca 74, P 56, Fe 5 – 6, vitamin A 1,38, thiamin 0,06, riboflavin 0,08, acid nicotinic 0,4, acid ascorbic 30 mg%.",
+      "gồm chất": "Rễ chứa nepodin, chrysophanol, emodin, physcion, 1,8 -dihydro – 3-methyl – 9 – anthron, chrysophancin, acid chrysophanic.",
+      "Các hợp chất": "Có tài liệu cho biết rễ chứa 1,8 – dihydroxy – 3 – methyl – 9 – anthron, acid chrysophanic, emodin. Ngoài ra, rễ còn có β- sitosterol, vitamin C (nhiều), tanin.",
+      "chứa": "Toàn cây có 7-11% acid oxalic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ chút chít nhăn vị đắng tính hàn, có công năng thanh nhiệt, thông tiểu, nhuận tràng, sát trùng.",
+      "Ở Trung Quốc, sách “Thảo mộc tiện phương” và sách “Đông Bắc thường dụng Trung thảo dược thủ sách” đều ghi": "vị đắng, tính hàn.",
+      "Còn sách “Thiểm Cam Ninh Thanh Trung thảo dược tuyển” ghi": "chút chít nhăn vị đắng, chua, tính hàn, có độc ít.",
+      "Lá chút chít nhăn có công năng thanh nhiệt giải độc, thông lợi đại tiện được dùng trị táo bón [TDTH, 1993, tập 1: 1038], và rễ chút chít nhăn có công năng thông huyết mạch, phục hồi sức sống và sức mạnh [Chang Minyi, 1992: 71].": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ chút chít nhăn được dùng để điều trị thiếu máu, ho lao, viêm gan, vàng da, thấp khớp mạn, đái tháo đường. Ngày dùng 15 – 20g sắc lấy nước uống.",
+      "được_dùng": "Có thể nghiền rễ thành bột mịn, uống mỗi lần 1 – 2g, ngày 2 – 3 lần, nhưng đắng khó uống. Thường nghiền thành bột mịn, chiều với mật hoặc mật ong làm thành viên, mỗi viên 0,5g. phơi khô. Khi cần, uống mỗi lần 2 – 4 viên vào bữa ăn, ngày 2 – 3 lần. Dùng ngoài, để trị bệnh ung thư.",
+      "Ở một số nước Âu Mỹ, rễ chút chít nhăn được coi là thuốc bổ chống thiếu máu và để lọc máu, chữa bệnh gan, đau họng. Dùng ngoài chữa viêm da mạn tính, sưng hạch lympho, đau sưng khớp, thấp khớp. Rễ chút chít nhăn nói chung là gây nhuận tràng (do có anthraquinon), nhưng tuỳ theo thời gian thu hái, liều dùng và hàm lượng tanin, nếu tanin nhiều lại có tác dụng chống ỉa chảy [Foster và Duke, 2000: 243].": null,
+      "Ở Indonesia, toàn cây chút chít nhăn được dùng để nhuận tràng, chữa sốt và gây trung tiện [Med. herb index, 1995: 33]. Ở Đài Loan (Trung Quốc) rễ chút chít nhăn được dùng trong bình tắm hơi để chữa đau mắt, lở loét ngoài da. Dùng trong, sắc uống để hạ sốt, nhuận tràng và gây trung tiện.": null,
+      "Ở Ấn Độ, rễ chút chít nhăn được dùng làm thuốc bổ đắng, chữa khó tiêu và có tác dụng an thần như đại hoàng và thổ phục linh, được dùng khi bị sưng hạch lympho hoặc các hệ tuyến khác, để chữa giang mai, bệnh gan; có tác dụng nhuận tràng vừa phải, nhưng lại sẵn se. Hạt chút chít nhăn cũng được dùng làm thuốc bổ đắng, kích thích ăn uống, được dùng khi bị lỵ mạn tính, chống buồn nôn [Nadkarni, 1999: 1079].": null,
+      "Ở Trung Quốc, toàn cây chút chít nhăn được dùng làm thuốc hạ sốt, tẩy giun, loại bỏ được mủ và các chất độc, được dùng trị bệnh nấm da đầu, nhọt ở móng và nhọt độc. Rễ chút chít nhăn để hạ sốt, làm mát máu, giãn cơ trơn ruột, được chỉ định trong điều trị viêm gan cấp, vô kinh, đau căng bụng. Chống chỉ định trong điều trị ỉa chảy do suy tụy.": null
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

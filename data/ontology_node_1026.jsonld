@@ -1,0 +1,194 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cóc kèn",
+            "ten_khac": "Cóc kèn, Cóc kèn nước",
+            "ten_khoa_hoc": "Derris trifoliata Lour.",
+            "ma_taxon": "354252",
+            "ho": "Fabaceae (Đậu)",
+            "Mô tả": {
+                "lá": "Lá kép, thường có 3-5 (ít khi 7) lá chét xoan dài 5-10cm, rộng 2-4cm, chóp nhọn, gốc tròn, không lông.",
+                "hoa": "Hoa mọc thành chùm đứng ở nách lá. Hoa trắng, ửng hồng, dài 12mm, đài hoa trăng trắng.",
+                "quả": "Quả tròn 3-4cm, xám rồi vàng, chứa 1 hạt màu vàng hung.",
+                "cây": "Dây leo mọc cao.",
+                "mùa hoa": "tháng 8."
+            },
+            "Phân bố": {
+                "phân_bố": "Loài của miền Malaixia – Châu Ðại Dương, mọc hoang dọc theo các sông rạch ở các nơi có nước mặn. Thu hái dây lá, rễ, hạt quanh năm. Rễ đào về, rửa sạch thái mỏng, phơi khô xay thành bột."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Dây, lá, hạt, rễ – Caulis, Folium, Semen et Radix Derris Trifoliatae."
+            },
+            "Thành phần": {
+                "thành phần": "Rễ cây chứa alcaloid và glucosid. Trong rễ có tới 0,47% rotenon, từ 1,2 đến 1,9% một chất ether hoà tan."
+            },
+            "Tính vị": {
+                "Có vị": null
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Cây được dùng chữa sốt rét kinh niên, huyết ứ, đàm ngưng sinh ra thũng trướng, trị ho và kiết lỵ. Quả chữa đau răng, bạch đới hạ. Rễ dùng sát trùng vết thương và làm thuốc diệt ruồi."
+            },
+            "Cách dùng": {
+                "được_dùng": "Thường dùng dây sắc uống. Lá dùng ngoài giã đắp. Quả tán bột chữa đau răng, sắc uống thì chữa bạch đới hạ. Bột rễ rang nóng tẩm rượu bọc vùng đau nhức của vết thương trầy sứt không chảy máu. Bột rễ trộn với nước cơm dùng diệt ruồi muỗi. Nhân dân dùng lá phơi khô đặt trong các chum vại và mảng trữ thóc để trừ mọt."
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

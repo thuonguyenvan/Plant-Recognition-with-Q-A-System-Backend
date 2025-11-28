@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cò ke",
+      "ten_khac": "Cò ke, Đơn sài, Chu ca, Cây mé, Co é (Thái)",
+      "ten_khoa_hoc": "Microcos tomentosa Sm.",
+      "ma_taxon": "707879",
+      "ho": "Tiliaceae (Đay)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, hình bầu dục thuôc, có cuống ngắn, dài 15cm, rộng 6cm, gốc tròn không đều, đầu bằng hoặc hơi lõm, giữa có mũi nhọn ngắn, có răng cưa ở phái đầu lá, mặt dưới phủ lông tơ mềm, màu xám nhạt, 3 gân chính xuất phát từ gốc.",
+      "hoa": "hoa nhiều màu trắng ngà, đài 5 răng, có lông ở 2 mặt; tràng 5 cánh thuôn, hơi cụt ở đầu; nhị nhiều; bầu 3 ô, có lông.",
+      "quả": "Quả hình cầu, màu đen, có lông, chứa một hạt.",
+      "cây": "Cây nhỡ hay cây to, cao 6-12m, có khi hơn. Cành mọc vặn vẹo, non có màu hung, sau nhẵn và có khía.",
+      "mùa hoa": "tháng 4-8.",
+      "mùa quả": "tháng 4-8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Grewia L. có khoảng vài chục loài, phân bố chủ yếu ở vùng nhiệt đới châu Á. Ở Việt Nam có 24 loài phân bố rải rác khắp nơi.  Cò ke phân bố chủ yếu ở các tỉnh miền núi và trung du đặc biệt từ Nghệ An, Thanh Hóa trở vào đến Tây Nguyên."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, vỏ thân và lá"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Gỗ chữa nhiều aceton."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cò ke có vị hơi chua, chát, tính bình, có tác dụng thanh nhiệt, giải độc, tiêu thực, trừ chướng"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mới được dùng làm thuốc trong phạm vi kinh nghiệm dân gian. Rễ cò ke rửa sạch, thái mỏng, phơi khô, 8-10g với 200ml nước còn 50ml uống trong ngày chữa ho, đau bụng.  Vỏ thân, cạo sạch lớp vỏ ngoài, thái mỏng, phơi khô, 8g phối hợp với vỏ hậu phác nam (8g), vỏ cây cù đèn (8g), rễ cây găng trắng (6g). Sắc nước uống chữa cảm lạnh, sổ mũi. Ngoài ra, vỏ thân cò ke phơi khô, tán thành bột mịn, rắc vào vết thương để cầm máu.  Ở một số vùng người ta dùng lá cò ke nấu nước uống làm chè giải khát và ăn quả để tẩy giun.  Theo tài liệu nước ngoài:  Ở Malaysia, nước sắc rễ cò ke được dùng chữa sốt, nước hãm hoặc nước ép từ lá chữa chứng đau bụng. Lá giã đắp chữa ghẻ ngứa. Ở Indonesia, lá giã nát lấy nước bôi chữa tưa lưỡi ở trẻ em. Ở Ấn Độ, cò ke chữa tiêu hóa kém, mẩn ngứa, eczema, kiết lỵ. Ở Trung Quốc, lá cò ke chữa cảm mạo, bụng chứng đầy, hoàng đản, rết cắn. Liều dùng: 30-60g lá tươi, sắc nước uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

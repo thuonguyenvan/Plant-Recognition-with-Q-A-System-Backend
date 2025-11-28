@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau muối",
+      "ten_khac": "Kinh giới trắng",
+      "ten_khoa_hoc": "Chenopodium ficifolium Smith",
+      "ma_taxon": "160499",
+      "ho": "Rau muối (Chenopodiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây rau muối là một loại cây thân thảo sống một năm, có chiều cao từ 30 – 150 cm.",
+      "thân": "Rau muối có thân thẳng đứng, to khỏe, trên thân có các đường gân dọc màu xanh hoặc tím đỏ. Cây phân nhiều nhánh, các nhánh mọc xiên lên hoặc lan rộng.",
+      "lá": "Hình dáng lá hình thoi hoặc hình mũi mác, dài khoảng 3 – 6 cm, rộng 2,5 – 5 cm. Đầu lá hơi nhọn hoặc hơi tù, gốc lá thon dần. Mặt trên lá thường không có phấn trắng, nhưng lá non có thể có lớp phấn màu tím đỏ; mặt dưới có một ít phấn. Mép lá có răng cưa không đều. Cuống lá dài gần bằng lá hoặc bằng một nửa chiều dài lá.",
+      "hoa": "Hoa của rau muối thuộc dạng lưỡng tính, mọc thành từng chùm hình bông hoặc hình chùy ở phần ngọn của thân và cành. Hoa có 5 cánh nhỏ, hình trứng rộng hoặc bầu dục, mặt ngoài có đường gờ dọc và phủ một lớp phấn trắng. Đầu cánh hoa hơi lõm, mép có màng mỏng. Hoa có 5 nhị, bao phấn nhô ra ngoài, nhụy có 2 đầu nhụy.",
+      "quả": "Hạt rau muối bám sát vào vỏ quả, có dạng hình đĩa hai mặt lồi, đường kính 1,2 – 1,5 mm, mép hơi tù. Hạt có màu đen bóng, bề mặt có các đường rãnh nông. Phôi bên trong có hình vòng cung.",
+      "mọc": "Cây rau muối thường mọc hoang dại ở nhiều nơi và được dùng làm thực phẩm hoặc thảo dược trong dân gian."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Rau muối là một loại cây dại có phạm vi phân bố rộng khắp thế giới, xuất hiện phổ biến ở các vùng ôn đới và nhiệt đới. Ở khu vực nhiệt đới, loài cây này chủ yếu sinh trưởng tại các vùng cao nguyên và khu vực có khí hậu mát mẻ.  Rau muối được thuần hóa từ lâu đời ở vùng Himalaya, nơi nó được trồng như một loại cây lương thực quan trọng. Ở Ấn Độ, cây này được sử dụng như một loại rau xanh truyền thống, xuất hiện thường xuyên trong các bữa ăn của người dân. Các bằng chứng khảo cổ học cho thấy rau muối từng được trồng để lấy hạt làm lương thực từ thời tiền sử ở châu Âu, chứng minh tầm quan trọng của nó trong chế độ ăn uống của con người từ rất sớm.  Tại Trung Quốc, rau muối có mặt ở hầu hết các vùng trên cả nước, sinh trưởng tốt trong nhiều điều kiện môi trường khác nhau. Với khả năng thích nghi linh hoạt và sức sống mạnh mẽ, loài cây này có thể phát triển cả trong tự nhiên lẫn trong môi trường canh tác.  Chi Chenopodium L. có 6 loài Việt Nam trong đó có loài rau muối lá to (C. polyspermum L.) là cây nhập nội, 5 loài còn lại là cây mọc tự nhiên. Loài rau muối nêu trên có nguồn gốc từ vùng cận nhiệt đới. Ở Việt Nam, cây phân bố chủ yếu ở các tỉnh từ Nghệ An, Thanh Hóa trở ra, thường mọc ở nơi đất ẩm như bãi sông, ruộng trồng hoa màu hay nương rẫy."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây và quả già đã phơi khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau muối chứa saponin 8%. Hạt chứa cryptomeridiol và 8α – acetoxycryptomeridiol. Rễ Cao chiết methanol (50 microg/ml) các thành chứa N – trans – feruloyl – 4 – O – methyldopamin. Thân chứa 87,7% nước, 5,3% protein, 1,2% carbohydrate, 3,6% cellulose, 2,2% chất khoáng. Rau muối còn có Ca 32 mg%, P 2,8 mg% các vitamin. Rau muối chứa tinh dầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau muối có vị ngọt, tính bình, hơi độc, có tác dụng thanh nhiệt, lợi tiểu, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây Cao chiết ethanol 50% toàn cây rau muối có tác dụng ức chế yếu hệ thần kinh trung ương và hạ nhiệt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

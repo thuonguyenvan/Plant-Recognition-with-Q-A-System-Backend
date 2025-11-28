@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Móc",
+      "ten_khac": "Móc, Đùng đình ngứa, Móc đen",
+      "ten_khoa_hoc": "Caryota urens L.",
+      "ma_taxon": "141359",
+      "ho": "Arecaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Thân cột thẳng, thường đơn, cao 10-15m, đường kính 40-50cm.",
+      "lá": "Lá to dài 5-6m, hai lần lông chim, có thùy lông chim hơi dai, có hình tam giác với mép ngoài dài hơn, có răng không đều về phía trước.",
+      "hoa": "Cụm hoa ở nách lá, thành bông mo phân nhánh, dài 30-40cm, bao bởi 4 mo dài 30cm, lợp lên nhau, dài, các nhánh trải ngang, dài 30-40cm.",
+      "quả": "Quả hình cầu lõm, đường kính 12-15mm, màu đỏ khi chín, có vỏ quả ngoài hơi dày, vỏ quả trong có nạc ngọt, dễ chịu.",
+      "hạt": "Hạt 1-2, hình khối, có nội nhũ sừng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài phân bố từ Ấn Ðộ tới Inđônêxia.",
+      "thường_mọc": "Ở nước ta, cây mọc hoang khá phổ biến ở vùng đồi núi, nhất là ở miền Trung trong rừng thứ sinh vùng trung du, cũng được trồng ở vườn để lấy lá lợp nhà, chằm áo tơi, mũ lá. Bẹ móc có thể thu lượm quanh năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Bẹ móc, nhân quả hạch – Petiolus et Semen Caryotae Urentis."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Dịch ngọt của cây chứa 13,6% saccharose và vết của đường giảm; khi cho lên men, dịch hay rượu ngọt của cây chứa 1% đường giảm, 2-4,5% rượu và 0,3% acid acetic."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá có sợi rất dai dùng khâu nón, khâu tơi, làm bàn chải, làm chổi. Thân cây cắt ngang cho một lượng lớn dịch ngọt, mà khi cho bốc hơi một cách đơn giản, người ta được đường và khi thuỷ phân sẽ có rượu cọ, mô mềm của lõi thân chứa nhiều bột cũng tốt như bột cọ loại tốt. Nõn thân này thái nhỏ, luộc qua, bỏ nước hoặc chần qua nước sôi sau đó xào và nấu canh ăn. Quả Móc, nấu ăn không bóc vỏ sẽ gây cảm giác ngứa rát ở môi và lưỡi do có nhiều tinh thể hình kim trong vỏ quả giữa, nhưng tách phần này ra thì quả có vị ngọt, dễ chịu. Người ta thường tẩm giấm ngào với mật để ăn. Bẹ Móc được sử dụng làm thuốc chữa lỵ, ỉa ra máu, bạch đới, rong kinh băng huyết. Liều dùng: 20g đốt tồn tính, tán bột uống hay sắc uống. Nhân quả hạch được dùng ở Ấn Ðộ làm thuốc đắp vào đầu trong trường hợp bị đau nửa đầu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa đái ra máu hay tiểu tiện không thông: Dùng bẹ Móc tươi 20g sắc uống. Chữa ho ra máu: Dùng bẹ Móc đốt cháy 10g, hạt Dưa trời (Qua lâu nhân) 12g sắc uống.",
+      "ghi_chu": "Có một loài khác gọi là Móc mương – Caryota rumphiana Blume, mọc ở Thanh Hoá, có hạt dùng ăn với trầu."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa phấn",
+      "ten_khac": "Hoa phấn, Sâm ớt, Bông phấn",
+      "ten_khoa_hoc": "Mirabilis jalapa L.",
+      "ma_taxon": "50616",
+      "ho": "Nyctaginaceae (Hoa phấn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Hoa phấn là một loại cây nhỏ, cao chừng 70cm, thân mềm, chia nhiều cành, nhẵn hay hơi có lông; có rễ phình thành củ.",
+      "lá": "Lá đơn, nguyên, hình bầu dục, hơi thuôn hình mác,\u00a0phía gốc lá hơi hình tim, đầu nhọn, mọc đối. Phiến lá dàí 3- 9cm, cuống lá dài 1,5-3m.",
+      "hoa": "Hoa xếp chành 3-6 cái một ở kẽ những lá cuối cùng hay ở ngọn. Hoa to, đều, lưỡng tính, có 2 lá bắc bao quanh và hợp ở gốc như một đài hợp. Bao hoa hình cánh, màu đỏ, trắng hay vàng, hình phễu, 5 nhị, một lá noãn, một noãn.",
+      "quả": "Quả bế mang bao hoa tồn tại"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Có tác giả cho rằng trong rễ củ của cây hoa phấn có chứa chất nhựa tẩy giống như nhựa tẩy trong củ cây jalap (châu Mỹ). Nhưng cây jalap này có tên khoa học ipomea purga Hayne thuộc họ Bìm bìm (Convolvulaceae)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong nước ta hầu như cây này ít được sử dụng. Trừ một số nơi như trên đã nói dùng với tên sâm, nhưng rất hiếm. Tại Campuchia vùng Batambang lá giã nát xoa bóp chữa sốt. Trẻ con thường lấy hoa đỏ nghiền nát bôi vô má để hoá trang có má hồng, phấn trong quả rất trắng và mịn được dùng xoa mặt thay phấn. Tại các nước khác lá giã nát đắp lên vết thương, lá và rễ sắc uống chữa ngộ độc đường tiêu hoá, và làm thuốc tẩy. Vùng Thanh Miện, Hưng Yên dùng lẫn trong đơn thuốc gồm nhiều vị với tên sâm. Ngày dùng 4 đến 6g, nhưng ở nước ngoài người ta dùng với liều 1 đến 2g rễ khô làm thuốc tẩy mạnh cho người lớn, hoặc 0,1 đến 0,4g làm thuốc nhuận tràng cho trẻ con. Cần nghiên cứu kiểm tra lại."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây nguồn gốc ở Mêhicô (châu Mỹ) được đưa vào trồng và phát triển ở Việt Nam không rõ từ bao giờ. Thường được trồng làm cảnh vì hoa màu đẹp. Một số nơi ở nước ta (như vùng Thanh Miện, Hưng Yên) đào lấy củ thái mỏng phơi khô dùng với tên sâm. Rễ củ mẫm, ngoài có màu đen, trong màu trắng, khi thái mỏng, phơi khô thì trên mặt những lát thái thấy những vòng đồng tâm nổi lên. Mùi nhẹ, hơi buồn nôn, vị nhạt sau hơi gây ngứa cổ. Trong bột rễ có rất nhiều oxalat canxi hình tràm. Tại một số nước (châu Mỹ) người ta dùng rể củ của cây này bán giả một cây với công dụng làm thuốc tây (củ jalap)."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

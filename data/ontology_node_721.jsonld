@@ -1,0 +1,273 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sâm bòng bong",
+      "ten_khac": "Quản trọng, sâm rết, guôi sâm, sâm rừng.",
+      "ten_khoa_hoc": "Helminthostachys zeylanica (L.) Hook.",
+      "ma_taxon": "332970",
+      "ho": "Ophioglossaceae (Sâm chân rết)",
+      "Mô tả": {
+        "cây": "Cây thảo có thân gỗ mọc đứng cao 30-50cm, với những rễ to và nạc nom như chân rết.",
+        "cuống": "Cuống lá dài 20-30cm, dày, màu lục hay màu cánh gián.",
+        "lá": "Phiến không sinh sản hình bàn tay xoè ra của các đoạn thon, thót hẹp dần về phía gốc và về phía ngọn, nguyên hay hơi có răng cưa không đều; phần sinh sản là bông dài 10-15cm, rộng 0,5-1cm, ngoằn ngoèo như con giun, nằm ở đầu một cái cuống đi từ gốc của phần không sinh sản thành bông dài 5-10 cm, có cuống dài bằng bông.",
+        "túi": "Túi bao tử xếp dày đặc quanh trục bông, bào tử hình tròn, không màu hoặc màu vàng nhạt.",
+        "mùa hoa": "Mùa sinh sản tháng 5-7."
+      },
+      "Phân bố": {
+        "phân_bố": "Helminthostachys Kaulf. là chi của loài dương xỉ nhỏ, đơn loài. Sâm bòng bong chỉ thấy ở vùng nhiệt đới châu Á, bao gồm một số tỉnh phía nam Trung Quốc, Việt Nam, Lào, Ấn Độ, Malaysia, đảo Java, Molucca, Tân Caledoni.  Ở Việt Nam, sâm bòng bong phân bố rải rác ở các tỉnh miền núi phía bắc, miền Trung và Tây Nguyên: Cao Bằng, Lạng Sơn, Thái Nguyên, Yên Bái (Mù Cang Chải), Phú Thọ (Thanh Sơn), Hoà Bình, Hà Tĩnh, Kon Tum, Quảng Nam và Quảng Ngãi. Đôi khi cũng gặp cây ở vùng trung du (nhưng rất ít) như ở Bắc Giang, Vĩnh Phúc (Lập Thạch). Cây ưa sáng và có thể hơi chịu bóng, thường mọc rải rác hay tập trung thành đám nhỏ trên đất nương rãy mới bỏ hoang, hoặc mọc lẩn trong các đám cỏ thấp ở chân đồi. Cây sinh trưởng mạnh trong mùa mưa ẩm, phần trên mặt đất tàn lụi vào mùa đông, đến cuối mùa xuân năm sau, từ phần thân rễ dưới mặt đất lại mọc lên một chồi thân mới.  Sâm bòng bong cũng như một số loài cùng họ là dạng hình thái đặc biệt trong ngành dương xỉ, bởi các bảo tử của cây không mọc trên lá mà tập trung trên một cuống dài thành bông. Nếu xét về diện phân bố, có thể cho rằng bòng bong là cây có vùng phân bố rộng ở Việt Nam. Tuy nhiên, do kích thước nhỏ, lại mọc rải rác nên cũng có thể coi bòng bong là đối tượng cần bảo vệ, do đã góp phần tạo nên tính đa dạng của hệ thực vật ở Việt Nam.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Yên Bái (Mù Cang Chải)"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Phú Thọ (Thanh Sơn)"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tĩnh"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Kon Tum"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Nam"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Quảng Ngãi"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bắc Giang"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Vĩnh Phúc (Lập Thạch)"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Cây ưa sáng và có thể hơi chịu bóng, thường mọc rải rác hay tập trung thành đám nhỏ trên đất nương rãy mới bỏ hoang, hoặc mọc lẩn trong các đám cỏ thấp ở chân đồi.",
+        "Đặc điểm sinh trưởng": "Cây sinh trưởng mạnh trong mùa mưa ẩm, phần trên mặt đất tàn lụi vào mùa đông, đến cuối mùa xuân năm sau, từ phần thân rễ dưới mặt đất lại mọc lên một chồi thân mới."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ, thu hái quanh năm, phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Sâm bòng bong chứa stigmastérol, fucostérol, dulcitol (Trung dược từ hải I, 1993)."
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thân rễ sâm bòng bong được dùng trị ho có nhiều đờm xuất tiết, hen suyễn và ho lao. Ngày 12 – 20g sắc uống. Khi ăn trâu, thêm ít thân rễ sâm bòng bong để chống ho. Đồng bào dân tộc Tày, Mường dùng thân rễ phơi khô, thái nhỏ, ngâm rượu uống chữa đau thần kinh toạ, đau lưng, mỏi gối. Nhiều bài thuốc chữa nhức xương cũng có sâm bòng bong. Đồng bào H’Mông và Mán lại dùng thân rễ sâm bòng bong tươi hầm với gà ăn làm thuốc bổ, nhất là cho phụ nữ mới đẻ. Dùng ngoài, thân rễ tươi giã đắp vết thương và vết rắn rết cắn, kết hợp sắc uống. Nước sắc của cây chữa mụn nhọt, lở loét, phát ban.  Ở Indonesia, Malaysia, Philippin, người ta dùng chồi non sâm bông bông để ăn sống, hoặc nấu chín ăn như măng tây.  Ở Malaixia, người ta dùng ăn với trầu không để chặn ho; ở Java dùng để trị lỵ, xuất tiết và giai đoạn đầu của bệnh lao phổi.  Ở Ấn Ðộ, người ta dùng trị bệnh đau dây thần kinh tọa."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

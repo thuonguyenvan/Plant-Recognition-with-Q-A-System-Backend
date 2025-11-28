@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nắp ấm",
+      "ten_khac": "Nắp ấm, Nắp ấm hoa đôi",
+      "ten_khoa_hoc": "Nepenthes mirabilis (Lour.) Druce",
+      "ma_taxon": "348343",
+      "ho": "Nepenthaceae ( Nắp ấm)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây mọc leo, cao 1-2m, thân rất dai",
+      "lá": "lá có cuống dài, nửa ôm vào thân, phần lá hình bầu dục, dài khoảng 10cm, phía đầu lá tạo thành một cuống hình dây, uốn cong, dài chừng 15cm, với đầu biến thành cái bình, trông như cái hoa, nhưng không phải hoa nên có tên bình nước.",
+      "quả": "Quả nặng, hạt mảnh và dài.",
+      "hoa": "Cụm hoa là một chùm, thưa. Hoa đực hoặc cái. Lá đài hình bầu dục, mặt trong có nhiều phiến nhỏ, cột nhị dài bằng các lá đài, 16- 20 bao phấn cong, xếp thành hai dãy. Bầu hình trứng, phủ lông trắng, vòi ngắn, đầu nhị 4 thùy.",
+      "thân": "thân rất dai",
+      "cao": "cao 1-2m"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hiện nay chỉ mới biết rằng trong cây nắp ấm có một chất dịch gần giống mủ trong lá, thân cây đu đủ, nhưng tác dụng yếu hơn nhựa đu đủ. Chưa thấy tài liệu nghiên cứu sâu hơn."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Y học cổ truyền phương đông cho rằng cầy nắp ấm có tác dụng thanh nhiệt, lợi tiểu, tiêu viêm, chỉ khát (theo Trung Quốc cao đẳng thực vật đồ giám, Khoa học xuất bản xã, 1972, 11, 72).",
+      "có tác dụng": "Có tác dụng thanh nhiệt, lợi thấp, hóa đờm, chỉ thống (làm hết đau).",
+      "chữa": "nắp ấm có tác dụng chữa vàng da do viêm gan, đau do loét dạ dày, tá tràng, sỏi niệu quản, huyết áp cao, ho do cảm mạo, ho gà.",
+      "được_dùng": "dùng điều trị các chứng phù thũng toàn thân, trong hầu hết các trường hợp đều thu được kết quả cao.",
+      "sắc uống": "Nếu dùng khô ngày dùng 20-40g, nếu dùng tươi ngày dùng 40-80g dưới dạng thuốc sắc. Uống hàng ngày cho tới khi bệnh hết."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Nắp ấm là một cây chủ yếu mọc hoang dại ở các tỉnh miền Trung và Nam bộ. Còn thấy ở chân núi đá vôi các tỉnh nói trên. Tại miền Bắc chỉ mới gặp ở Vĩnh Linh. Mùa hoa thường gặp vào tháng giêng. Người ta thu hái toàn cây, quanh năm, rửa sạch, chặt thành từng đoạn 2-3cm, phơi nắng cho khô dùng dần.",
+      "phơi khô": "Người ta thu hái toàn cây, quanh năm, rửa sạch, chặt thành từng đoạn 2-3cm, phơi nắng cho khô dùng dần."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

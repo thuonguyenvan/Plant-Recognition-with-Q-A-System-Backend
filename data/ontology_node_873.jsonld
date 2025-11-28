@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mỏ quạ",
+      "ten_khac": "Mỏ quạ, Hoàng lồ, Cây bướm, Sọng vàng, Gai vàng lồ, Gai mang, Móc câu, Nam phịt (Tày)",
+      "ten_khoa_hoc": "Cudrania cochinchinensis L.",
+      "ma_taxon": "370175",
+      "ho": "Moraceae (Dâu tằm)",
+      "Mô tả": {
+        "cây": "Cây nhỏ hoặc cây bụi dạng leo, cao 2-3m, thân cây có nhiều gai nhọn.",
+        "lá": "Lá mọc so le hình bầu dục-thuôn, dài 6-9cm, rộng 2,5-3cm, gốc hẹp, đầu nhọn hoặc hơi tù, mặt trên sẫm bóng, mặt dưới nhạt, lá kèm hình tam giác, hơi tù có lông.",
+        "hoa": "Cụm hoa mọc ở kẽ lá gồm nhiều hoa nhỏ, đơn tính khác gốc, cụm hoa đực có cuống dài, mọc thành chùm ngắn; cụm hoa cái không cuống, tụ họp thành đầu, hoa 3-4 lá đài bằng nhau.",
+        "quả": "Quả kép gồm nhiều quả nhỏ, hình ô van, hơi cụt ở đầu, chẽ ba. Toàn cây có nhựa mủ trắng.",
+        "mùa hoa": "tháng 4-5",
+        "mùa quả": "tháng 10-11."
+      },
+      "Phân bố": {
+        "phân_bố": "Mỏ quạ là loài quen thuộc, phân bối tương đối phổ biến ở các tỉnh vùng núi thấp (dưới 1000m), trung du và đồng bằng.",
+        "Bộ phận dùng": "Rễ và lá, thu hái quanh năm. Lá dùng tươi, rễ phơi khô"
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Gỗ thân mỏ quạ có chất nhuộm gọi là morin hoặc maclurin. Lá có flavonoid"
+      },
+      "Tính vị": {
+        "Có vị": "vị đắng, tê, tính ấm"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá mỏ quạ tươi được dùng chữa vết thương phần mềm. Lá còn được dùng điều trị vết bỏng, vết loét tử cung và mụn nhọt. Rễ được dùng làm thuốc khứ phong, hoạt huyết, bị đánh gây thương tích,bế kinh. Rễ còn chữa phù thũng với liều 6-12g rễ khô, sắc uống. Thường phối hợp với rễ cà gai leo, rễ gai tầm xoong, lá cây đa lông, lá lốt, lá mã đề. Quả dùng ăn được hoặc để nấu rượu.",
+        "có tác dụng": "sát trùng, giảm đau"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

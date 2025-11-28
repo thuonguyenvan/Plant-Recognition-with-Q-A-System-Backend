@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đại phong tử",
+      "ten_khac": "Chùm bao lớn, Đại phong tử, Lọ nồi",
+      "ten_khoa_hoc": "Hydnocarpus anthelmintica Pierre",
+      "ma_taxon": "426900",
+      "ho": "Flacourtiaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, thân mọc thẳng đứng, có thể cao tới 25-30m, đường kính thân trung bình 0,4-1,3m, nếu mọc gần nước thường chỉ cao 10-12m, đường kính 0,8m phân rất nhiều cành to, cành lá xanh tốt quanh năm cho nên nhiều thành phố dùng làm cây cho bóng mát, vỏ thân rất nhiều xơ",
+      "lá": "lá dài hình mác hai đầu hơi nhọn, mép nguyên, dài 10-30cm, rộng 3-7cm, mặt trên mờ, mặt dưới hơi vàng nhạt, 8-10 đôi gân bên, cuống lá dài 12-15mm",
+      "hoa": "cụm hoa mọc ở nách lá gồm 2 -5 chùm mang ít hoa, mọc về một phía. Hoa màu hồng, cùng gốc hay tạp tính",
+      "quả": "Quả hình cầu giống như quả cam to màu nâu nhạt, trong chứa 30-40 hạt nhiều cạnh, dài 2cm, rộng 1cm, vỏ cứng, phôi nhũ nhiều.",
+      "mùa hoa": "tháng 11-12",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần chủ yếu của đại phong tử là dầu với hàm lượng chừng 40% (14% nếu tính cả vỏ hạt) đến 55% (nếu chiết tính bằng dung môi). Trong hạt tươi còn có một men thủy phân và một glucozit-Glucozit này chỉ có trong hạt tươi, hạt để lâu sẽ mất. khi thủy phân, glucozit cho glucoza và axit xyanhydric. Do chất glucozit này cho nên bã khô sau khi ép dầu không thể dùng cho súc vật ăn được.",
+      "gồm chất": "Dầu đại phong tử có màu vàng nâu, tỷ trọng 0,94-0,96 ở 150, năng suất quay cực (α) D 25:+48 đến 600, ở nhiệt độ 250 hay thấp hơn thường đặc lại và có những đám đặc thành khối màu trắng nhạt, mùi đặc bịêt.",
+      "Các hợp chất": "Thành phần chủ yếu của dầu đại phong tử là các glyxerit của một số axit béo đặc biệt và một số glyxirit thường gặp. Axit béo đặc biệt đầu tiên phát hiện được đặt tên là axit gynocacdic vì khi ấy người ta cho rằng dầu đại phong tử là dầu ép từ hạt của cây Gynocardia . Nhưng về sau, Pawer và Gocnan nghiên cứu thấy rằng axit gynocacdic chỉ là hỗn hợp của hai axit không no, có một nhân 5 cạnh và một dây chuyền ngang có 10-12 nhóm CH2 với một chức axit. Đó là axit chaulmoogric C18H32O2 và axit hydnocacpic C18H12O2 (đặt tên như vậy vì lần đầu tiên chiết từ dầu của cây Hydnocarpus anthelmintica còn gọi là dầu chaulmoogra) .Cả hai axit này cho axit gynocacdic và các este etylic của axit gynocacdic được dùng trong điều trị",
+      "đã nghiên cứu": "Người ta lấy các axit này khỏi axit béo khác bằng phép kết tinh, nhưng tách hai thứ axit này riêng ra rất khó. Năm 1920, A.L.Đin và R.Vorinsan đã lấy ra bằng cách cất trong áp suất giảm các este metylic hoặc cất trong chân không các axit đó.",
+      "dấu hiệu đặc trưng": "Axit chaulmoogric là đồng phân của axit linoleic, những axit linoleic có chuỗi thẳng, hai nối kép, đính 4 nguyên tử brom hay iốt còn axit chaulmoogric chỉ đính có 2 nguyên tử do đó phải có một nhân vòng và một nối kép. Công thức của axit chaulmoogric là: CH-(CH2)10-COOH. Barrowcliff và Pawer cho rằng axit chaulmoogric có một dạng phổ biến:C-(CH2)12-COOH Axit chaulmoogric có độ chảy +68o5, năng xuất quay cực (α) D+68o1. Axit hydnocacpic có công thức: CH-(CH2)12-COOH. Axit hydnocacpic chảy ở 69o5 và năng suất quay cực là (α) D+69o3. Theo André năng xuất quay cực của dầu đại phong tử không phải chỉ do hai axit trên mà thôi. Phần lỏng sau khi đã lấy 2 axit trên vẫn còn tính chất quay cực. Vậy có thể trong dầu vẫn còn các axit béo lỏng có tính chất quay phải và cũng có nhân 5 cạnh. Dầu đại phong tử có hai phần. Phần lỏng gồm các chất chưa rõ thành phần nhưng có năng xuất quay phải có tính chất gần như phần đặc. Phần đặc gồm phần lớn là glyxerit của axit chaulmoogric và axit hydnocacpic. Em.André và Đ.Gouatte còn chiết từ dầu goocli (dầu củ hạt cây Onchoba echinata châu Phi) một axit khác gọi là axit goclic, có cùng một kiến trúc nhưng có dây chuyền ngang không no. Theo Bửu Hội, Canhiăng và Đanicô thì công thức của axit goclic là : CH-(CH2)6-CH=CH-(CH2)4-COOH"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ đại phong tử có vị cay, tính nóng, có độc, có tác dụng làm khô ẩm ướt (táo thấp), sát trùng, chủ yếu dùng chữa hủi, mẩn ngứa, giang mai. Khi uống thường gây nôn mửa cho nên chủ yếu dùng ngoài. Những người âm hư huyết nhiệt không dùng được.",
+      "chữa": "Hiện nay đại phong tử được dùng chữa phong hủi, bệnh ngoài da có những triệu chứng bề ngoài như bệnh phong hủi. Thường dùng dưới dạng thuốc dầu 10% (trong dầu vazơlin) hay thuốc mỡ 20% để bôi tại chỗ. Uống dưới dạng những giọt dầu nhũ hoá trong một ít sữa hay cho vào nang. Bắt đầu mười (X) giọt sau tăng dần lên 100 (C) đến 200 (CC) có khi tới 300 (CC) mỗi ngày, nhưng không bao giờ vượt quá liều có thể gây những biến chứng trong dạ dày và ống tiêu hoá, nếu trộn với magiê nung thì thuốc ít gây khó chịu hơn. Có khi được chuyển thành dạng muối natri (hydnocacpat natri) để tiêm hoặc tốt hơn dưới dạng este etylic để uống (2 đến 4 viên nang mỗi viên 0,15g mỗi ngày) hoặc để tiêm bắp (0,5 đến 2g) hay tiêm dưới da (2ml mỗi ngày). Trong y học nhân dân đại phong tử được dùng phối hợp với một số vị thuốc khác chữa một số bệnh ngoài da",
+      "làm thuốc": "Đơn thuốc có vị đại phong tử  Chữa ghẻ lở, giang mai: Đại phong tử thiêu tồn tính 10g, khinh phấn 0,5g. Giã nhỏ đại phong tử, thêm khinh phấn, cuối cùng thêm dầu vừng vào làm thành thuốc mỡ bôi lên những vết ghẻ lở, lở loét đã rửa sạch. Chữa vết loét hủi: Dầu đại phong tử 40g, khổ sâm tán nhỏ 120g, thêm rượu viên bằng hạt ngô, mỗi ngày uống 50 viên vào lúc đói, dùng rượu hâm nóng để chiêu thuốc. Nơi lở loét thì dùng nước sắc khổ sâm để rửa. Chữa bệnh mũi đỏ: Đại phong tử 30 hạt, bóc bỏ vỏ giã nhỏ, hạt bồ đào 15 hạt giã nhỏ trộn đều với đại phong tử. Thêm 4g thủy ngân, trộn đều, cho tất cả vào miếng vải mịn, có chuôi cầm. Cầm chuôi vải xát mạnh vào mũi. Mỗi ngày xát ba lần, xát liền trong ba ngày lại nghỉ một ngày. Làm đều như vậy nhanh thì nửa tháng, lâu thì một tháng rưỡi sẽ thấy kết quả. Sau khi dùng liều ba ngày mũi hơi khó chịu. Nghỉ một ngày lại bình thường.  Chú thích  Ngoài cây cho vị đại phong tử nói trên đây, trên thế giới còn dùng một số cây khác như sau:  Chùm bao nhỏ Hydnocarpus saigonensis Pierre. Cây cao 10-12m, thấy mọc ở Tây Ninh nhưng chưa thấy nhân dân sử dụng. Đại phong tử Gynocardia odorata R. Br cho hạt không đều, màu xám nâu nhạt, mọc ở Quảng Nam và một số tỉnh miền Nam Trung Bộ. Hạt có độc thường chỉ dùng tán bột, trộn với dầu để dùng ngoài. Một số loài Taraktogenos như loài Taraktogenos microcarpa Pierre (krabao soua ở Cămpuchia), Taraktogenos serrata Pierre (Gia da trắng ở miền Nam và Cămpuchia), Taraktogenos subintegra Pierre (chùm bao nhỏ ở miền Nam).  Đại phong tử Ấn Độ  Hydnocarpus wightiama Blume được sử dụng ở Ấn Độ và Miến Điện.  Tuy nhiên loài Hydnocarpus anthelmintica được công nhận dùng phổ biến nhất."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang ở rừng rậm khá phổ biến ở nước ta, nhiều nhất ở miền Trung, Campuchia, Lào, ngay tại thành phố Hà nội cây này được trồng làm cây bóng mát ở quanh bờ hồ Hoàn Kiếm và Bách Thảo, còn mọc ở Thái Lan, Miến điện, Ấn độ, Trung quốc trước đây nhập đại phong tử của Thái lan, từ năm 1922 di thực vào đài loan sau đó vào Quảng tây và đảo Hải Nam. Khi quả chín (tháng 7-8) hái về, đập lấy hạt, loại bỏ các tạp chất, phơi hay sấy khô, không cần chế biến gì khác. Có khi dùng hạt để ép dầu, sử dụng với tên dầu đại phong tử-Oleum Chaulmoograe."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

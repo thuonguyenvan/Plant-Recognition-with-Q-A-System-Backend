@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mùi tây",
+      "ten_khac": "Mùi tây, Ngò, Rau mùi tây, Phiắc chì (Tày)",
+      "ten_khoa_hoc": "Petroselinum crispum (Mill.) Nym.",
+      "ma_taxon": "78465",
+      "ho": "Apiaceae (Hoa tán)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Cây thảo, sống hai năm, cao 30 – 80cm. Rễ phát triển thành củ hình trụ, mọc thẳng. Thân có rãnh dọc. Lá kép 2 – 3 lần lông chim, các lá chét khía răng không đều, mặt trên sẫm bóng, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành tán kép; hoa nhiều màu vàng lục nhạt; đài 5 răng nhỏ; tràng 5 cánh nguyên hoặc chẻ đôi.",
+      "quả": "Quả bế, hình cầu.",
+      "cây": "Toàn cây có mùi thơm dễ chịu."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Mùi tây có nguồn gốc ở vùng tây Địa Trung Hải. Từ xa xưa, người La Mã và Hy Lạp cổ đại đã sớm biết sử dụng và trồng loại cây gia vị này. Vào khoảng 1500 năm trước Công nguyên, mùi tây bắt đầu được trồng ở vùng Bắc Đức. Ngày nay, cây đã trở thành cây trồng phổ biến ở tất cả các nước xung quanh Địa Trung Hải, ở châu Âu, Bắc Mỹ, một số nước Đông Nam Á và Trung Quốc. Mùi tây cũng được trồng ở Việt Nam, nhưng chưa rõ nguồn gốc và thời gian nhập nội. Tuy nhiên, gần như toàn bộ khối lượng mùi tây được sử dụng ở các nhà hàng cao cấp và khách sạn, đều do nhập thẳng từ nước ngoài.  Mùi tây là cây ưa ẩm và sinh trưởng phát triển tốt ở vùng ôn đới ấm; nhiệt độ tối thích từ 7 đến 16°c hoặc có thể tới 24°c đối với những giống mùi tây trồng ở vùng cận nhiệt đới hay ở vùng núi cao nhiệt đới (khoảng 2000m ở Malaysia). Mùi tây thích nghi với các loại đất tơi xốp, dễ thoát nước và có giới hạn rộng về độ pH (4,9 – 8,2) (I. B. Ipor & L.P.A Oyen, 1999). Cây trồng từ hạt sau 75 – 80 ngày, cao trên 20cm và có thể cho thu hoạch lá. Mùi tây ra hoa quả nhiều, hạt rất nhỏ (1000 hạt nặng khoảng 1,5g); Vòng đời của cây kéo dài từ 3,5 – 4,0 tháng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, rễ và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt mùi tây chứa 2 – 7% tinh dầu; 13 – 22% dầu béo gồm acid petroselinic (= acid cis – 6 – octodecenoic) là chủ yếu, các acid palmitic, acid myrisũc, acid stearic, acid oleic, acid linoleic, acid myristolic, acid 7 – octadecenoic; các flavonoid apiin (= apigenin ‘ 7 – apiosylglucosid), luteolin – 7 – apiosyl glucosid và bergapten (vết), các apiosid (heterosid flavonoid).  Dầu hạt mùi tây còn chứa apiol, myristicin, tetramethoxyalylbenzen và a – pinen, acid petroselinic và acid béo bay hơi.  Lá mùi tây chứa 0,05- 0,30% tinh dầu; furocoumarin gồm chủ yếu bergapten 0,02%, xanthoioxin 0,003% và isopimpinellin; flavonoid (apiin, luteolin – 7 – apiosylglucosid, apigenin – 7 – glucosìd và luteolin – 7 – diglucosid; 2 – 22% protein; 4% chất béo: nhiều vitamin (chủ yếu là A và C); đường. Oxypeucedanin là furocoumatin chính. Tuy nhiên có tài liệu nói là không có.  Tinh dầu lá mùi tây chứa chủ yếu nyristicin (có thứ đạt 85%) ß – phelandren, 1, 3, 8 – p – menthatrien, myrcen, apiol, terpinolen và 1 – methyl – 4 – isopropenylbenzen. Ngoài ra, còn có a và ß – pinen, trans – ß – ocìmen, Y – terpinen, methyldisulfid, a – terpineol, a – copaen, caryophylen và carotol. Có tài liệu cho biết các thành phần chính là 1, 3, 8 – p – menthatrien 68%, myristicin 60%, ß – phelandren 33%, apiol 22%, myrcen 16%, terpinolen và 1 – methyl – 4 – iso – propenylbenzen 13%, thymol.  Mùi của cây là do chất 1, 3, 8 – p – menthatrien."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mùi tây có vị hơi đắng, chát, mùi thơm, có tác dụng kích thích chung, kích thích hệ thần kinh, giúp khai vị, dễ tiêu hóa, lợi tiểu, giải độc, lọc máu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mùi tây được dùng chữa thiếu máu, suy nhược thần kinh, rối loạn dinh dưỡng, ăn không ngon, khó tiêu, đầy hơi, bệnh gan mật, đau bụng kinh, rối loạn kinh nguyệt, mất kinh. Rễ có tác dụng tốt cho thận, chữa thấp khớp, thống phong. Hạt khô có tác dụng kích thích chung và lợi tiểu. Liều dùng hàng ngày của toàn cây hoặc lá: 25 – 50g, đun sôi 5 phút, hãm 15 phút, rồi uống; hạt hoặc rễ 4 – 6g, sắc uống.  Dùng ngoài, lá mùi tây rửa sạch, giã nát, đắp hoặc nấu lấy nước rửa chữa căng sữa, sưng vú, vết thương đụng giập, vết đốt sâu bọ. Để chống khô mắt lấy lá mùi tây tươi, rửa sạch, giã nát, đắp lên mắt.  Trong nhân dân, lá mùi tây được dùng làm gia vị và là nguồn Vitamin A."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa mất kinh kèm sốt và sốt rét:  Apiol (chiết từ mùi tây) 0,02g, quinin sulfat 0,12g, kali permanganat 0,015g làm thành viên tròn để uống – Ngày 1 lần (tài liệu Ấn Độ).  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

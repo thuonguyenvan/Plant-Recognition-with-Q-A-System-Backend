@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ráng lông",
+      "ten_khac": "Rau quyết, ráng đai dực",
+      "ten_khoa_hoc": "Pteridium aquilinum (L.) Kuhn",
+      "ma_taxon": "52681",
+      "ho": "Quyết (Pteridiaceae)",
+      "Mô tả": {
+        "lá": "Ráng lông có thân rễ mọc bò, có lông, không có vảy, nhiều rễ mảnh nhỏ. Lá mọc so le từ thân rễ, dài đến 1m, hình tam giác hoặc ngọn giáo, xẻ 2 – 3 lần lông chim, lá chét ở phía dưới mọc đối, có cuống dài, hình tam giác, dài đến 60 cm, rộng 25 cm, những lá chét này lại chia lông chim hai lần, lá chét ở phía trên hơi so le, hình lồng chim một lần hoặc có thể chở sâu, những đoạn phiến lá cuối cùng xiên, nguyên hoặc hơi khía tai bèo ở gốc. Ở túi bào tử hình dải sinh ra ở mép ngoài của lá chét, có hai lớp áo, lớp trên gập xuống nhiều hay ít; bảo tử hình bốn mặt, màu vàng nâu."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Pteridium Gled, ex. Scop. ở Việt Nam chi có 1 loại ráng lông kể trên. Theo Phan Kế Lộc (2001), loài này phân bố rộng rãi khắp trên thế giới, nhất là ở châu Á. Tại Việt Nam đã ghi nhận được về phân bố ở Lai Châu, Lào Cai (Sa Pa), Hà Giang, Quảng Ninh, Phú Thọ, Hoà Bình (Mai Châu: Pà Cò), Nam Định (Giao Thuỷ: Giao Thiện), Kon Tum (Ngọc Hồi), Gia Lai (Mang Yang: núi Chư Tờ Mốc), Đăk Lăk, Lâm Đồng (Bi Đáp) và Côn Đảo [Danh lục các loài thực vật Việt Nam, t.1, 2001].",
+        "thường_mọc": "Ráng lông là loại cây trung bình, thường mọc thành đám lẫn trong tràng cỏ, rừng thứ sinh, rừng non hay sau nương rẫy."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân, rễ."
+      },
+      "Thành phần": {
+        "thành phần": "Ráng lông chứa acid 3,4 – dilhydroxycinnamic, prumasin. Acid 3,4 – dihydroxycinnamic có tính kháng his – tanin. Ngoài ra, còn có aquilinan trong đó có các gốc của galactose, xylose, fucose và arabinose và các chất pterosin và pterosin F.",
+        "Các hợp chất": "Các lá non chứa nhiều chất nhầy, protein 1,0%; chất béo 0,1%; cao chứa N tự do 5,6%; chất xơ 1,4%; chất vô cơ 0,6%; B – caroten 0,98 mg/100g."
+      },
+      "Tính vị": {
+        "Có vị": "Cây ráng lông vị ngọt, tính lạnh có công năng khu phong thấp, lợi niệu, thanh nhiệt, an thần, giáng áp, thu liễm, cầm máu. Thân rễ và lá rất độc đối với cá, thỏ, trâu bò,…"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ráng lông được dùng để lợi tiểu, thanh nhiệt, an thần. Thân rễ còn dùng chữa phong thấp, trị sán, nhưng là vị thuốc độc nên khi dùng phải thận trọng. Liều dùng mỗi ngày 9 – 15g sắc uống.",
+        "làm thuốc": "Lá non có thể ăn sống như xà lách, hoặc ăn như măng tây, làm rau ăn thì dễ ngủ, nhưng không được ăn nhiều vì có thể gây đầy bụng, khó tiêu, mắt mờ. Trẻ con ăn thì chân yếu, chậm biết đi, ăn lâu, ăn nhiều thì giảm thọ.",
+        "chữa": "Trước đây vào mùa đói kém, nhân dân lấy thân rễ để ăn. Thường chế thành bột, nhưng đắng, phải lọc rửa nhiều lần cho hết đắng. Người và gia súc có thể ăn, nhưng không được ăn nhiều, có hại cho sức khỏe.",
+        "có tác dụng": "Ở Vân Nam (Trung Quốc) thân rễ ráng lông được dùng chữa viêm xương khớp, thấp khớp, lỵ, huyết áp cao, phế kết hạch, ho ra máu, thoát giang và để khử trùng (tẩy giun sán). Để chữa thấp khớp, lấy thân rễ và cuống lá ngâm rượu tronguống, ngoài xoa."
+      },
+      "luu_y": {
+        "luu_y": "Ráng lông là một cây độc. Ngộ độc thường xảy ra ở loài ăn cỏ."
+      }
+    }
+  ]
+}

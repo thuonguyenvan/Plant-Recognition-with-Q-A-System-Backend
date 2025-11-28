@@ -1,0 +1,185 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Thóc lép",
+            "ten_khac": "Cỏ cháy, Bài ngài.",
+            "ten_khoa_hoc": "Desmodium gangeticum DC.",
+            "ma_taxon": "1173369",
+            "ho": "Fabaceae (Đậu)",
+            "Mô tả": {
+                "cây": "Cây loại cỏ cao tới 1,30m.",
+                "thân": "Cành mọc vươn dài.",
+                "lá": "Lá chỉ gồm một lá chét, mặt trên nhẵn, mặt dưới có lông.",
+                "hoa": "Cụm hoa thưa dài 12-30cm, gồm nhiều hoa nhỏ.",
+                "quả": "Nhiều quả không cuống chia làm 7-8 đốt, mỗi đốt đựng một hạt, đốt có cạnh, một cạnh khum tròn, một cạnh thẳng. Khi ta đi qua quả dính vào quần do trên quả có những lông móc."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Chưa thấy tài liệu nghiên cứu."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Nhân dân dùng rễ thóc lép chữa những vết loét vết thương, rắn cắn, phù thũng, lợi tiểu. Ngày dùng 6 đến 16g dưới dạng thuốc sắc hay giã nát, (tươi) vắt lấy nước uống. Dùng ngoài không kể liều lượng.",
+                "chữa": "Chữa phù thũng: Rễ thóc lép 12g, lá cối xay 8g. Thêm 300ml nước. Đun sôi, giữ sôi 30 phút, chia làm 3 lần uống trong ngày. Chữa rắn cắn: Rễ thóc lép tươi 20g, giã nát vắt lấy nước uống. Bã đắp lên nơi rắn cắn. Ngày dùng 2 lần. Chữa vết loét: Rễ thóc lép 30g, nước 200ml. Đun sôi, giữ sôi 15 phút. Dùng rửa vết loét, vết thương."
+            },
+            "Cách dùng": {
+                "được_dùng": "Cây mọc hoang dại ở vùng rừng núi. Mùa hoa quả vào các tháng 2-5. Nhân dân dùng rễ tươi hay phơi hoặc sấy khô. Thu hái quanh năm, thái mỏng phơi hay sấy khô."
+            },
+            "luu_y": {}
+        }
+    ]
+}

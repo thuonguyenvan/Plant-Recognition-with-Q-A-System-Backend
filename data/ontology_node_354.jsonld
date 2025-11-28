@@ -1,0 +1,260 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây cứt ngựa",
+      "ten_khac": "Tía tô lại, mu béo (Tày), tiêu kỳ dính",
+      "ten_khoa_hoc": "Teucrium viscidum Blume",
+      "ma_taxon": "604295",
+      "ho": "Bạc hà (Lamiaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, mọc bò, sống lâu năm, gốc có khi hóa gỗ.",
+        "thân": "Thân vuông, cao 30 – 50 cm, phân nhánh nhiều hay ít.",
+        "lá": "Lá mọc đối, hình trứng, dài 3 – 10 cm, rộng 1,5 – 4,5 cm, gốc bằng hoặc hơi hình tim, đầu thuôn nhọn, mép khía răng, cuống lá ngắn.",
+        "hoa": "Cụm hoa mọc ở ngọn thân và kẽ lá thành chùm đơn, ở mỗi mấu có 2 hoa mọc đối diện; lá bắc hình mũi mác, hoa màu hồng đài 5 thùy, hình ống, có lông; tràng hợp thành một môi có 5 cánh, phía dưới có ống ngắn, 4 nhị, bao phấn hình thận, bầu có vòi xẻ đôi.",
+        "quả": "Quả bế tư, hình trái xoan, hơi có vân mạng.",
+        "mùa hoa": "Mùa hoa quả tháng 5-7."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Teucrium có 3 loài ở Việt Nam (Vũ Xuân Phương, 2001). Trong đó có 2 loài được dùng làm thuốc là loài trên và cây tiêu kỳ lông (T. quadrifarium Buch.-Ham.). Cây cứt ngựa phân bố chủ yếu ở các tỉnh miền núi phía Bắc, gồm Hà Giang, Tuyên Quang, Cao Bằng, Bắc Kạn, Lạng Sơn, Sơn La, Vĩnh Phúc (Tam Đảo), Hòa Bình, Hà Tây (Ba Vì), Ninh Bình, Nghệ An, Đà Nẵng (Bà Nà). Trên thế giới, cây ở Trung Quốc, Lào, Ấn Độ, Miam và Indonesia.",
+        "thường_mọc": "Cây cứt ngựa là cây ưa sáng, ưa ẩm và thường mọc riêng lẻ hoặc thành đám nhỏ trên nương rẫy hay ven rừng.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Hà Giang"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Bắc Kạn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Vĩnh Phúc"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hà Tây"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Nghệ An"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Đà Nẵng"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "đã nghiên cứu": "Đã nghiên cứu và thấy cây cứt ngựa chứa 5 hợp chất neolerodan là: teuflin, teucvin, teucvidin, teuspinin và 6-α-hydroxyteus-cordin."
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cây cứt ngựa được dùng chữa vết thương chảy máu, thổ huyết, chảy máu cam, đại tiện phân đen, đinh nhọt, sưng lở, đau thấp khớp, đau bụng kinh, rắn cắn. Ngày dùng 20-40g sắc uống.  Dùng ngoài lấy cây tươi, giã đắp trị mụn lở, vết thương và rắn cắn."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

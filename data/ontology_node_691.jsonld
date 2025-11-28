@@ -1,0 +1,193 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/thuoc-la.html",
+            "ten": "Thuốc Lá",
+            "ten_khac": "Thuốc lá, Lão bẩu (Tày), Yên thảo, Jờ rào (Kho)",
+            "ten_khoa_hoc": "Nicotiana tabacum L.",
+            "ma_taxon": "873768",
+            "ho": "Solanaceae (Cà)",
+            "Mô tả": {
+                "cây": "Cây thảo, sống hàng năm, phần gốc thân hoá gỗ ít nhiều.",
+                "thân": "Thân mọc đứng, có nhiều lông, phân cành ở ngọn, các lá ở phía trên bé hơn, hình lưỡi mác.",
+                "lá": "Phiến lá to có thể dài 60-75cm, rộng 30-50cm, không cuống, một mẩu lá phía dưới ôm vào thân.",
+                "hoa": "Hoa nhiều, tập hợp thành chùy ở ngọn. Đài có lông, tràng màu trắng hay hồng hoặc tím nhạt.",
+                "quả": "Quả nang có 2 ô, có đài tồn tại bọc ở ngoài, hạt bé, nhiều, màu đen: 1ml có thể chứa tới 6.000 hạt.",
+                "mọc": "Cùng loại với cây thuốc lá, ở nước ta còn trồng cây thuốc lào Nicotiana rustica L. thân thấp hơn, lá to và dày hơn."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Thuốc lá đã phơi hay sấy khô còn chứa tới 20% nước, hàm lượng chất vô cơ cũng rất cao: 15 đến 20% trong đó chủ yếu là kali, canxi, photphát, nitrat. Trong thuốc lá còn xanh, hàm lượng gluxit khá cao: Tới 40% bao gồm chủ yếu là tinh bột (8-12%), đường tan được (2-4%) rồi đến pectin, xenluloza. Trong quá trình khô, lá bắt đầu ngả vàng, hàm lượng tinh bột và đường giảm xuống rất nhanh. Các chất protein và lipit thường chỉ chiếm 12 và 5% trọng lượng khô. Hàm lượng các axit hữu cơ cũng rất cao: 15-20% trong đó chủ yếu là axit malic, kèm theo axit xitric, các axit-phenol như axit cafeic, clorogenic (2-4% trọng lượng khô), axit quinic, và một axit đặc biệt: axit nicotinic (β pyridine cacbonic).",
+                "Các hợp chất": "Trong thuốc lá còn có các hợp chất đa phenol: Ngoài axit clorogenic, còn có các flavonozit: rutozit chiếm 1%, izoquexitrozit, quexetol, vết cumarin, scopoletol. Các hợp chất đa phenol đóng vai trò quan trọng trong màu sắc và hương vị thuốc lá. Thuốc lá còn chứa một ít tinh dầu (linalola, bocneola), các hợp chất kiềm bay hơi (pyridine, N-metyl pyrrolidin), nhiều men (gluxidaza, oxydaza, catalaza).",
+                "chứa": "Người ta cho hoạt chất chủ yếu của thuốc lá, thuốc lào là chất nicotin. Hàm lượng nicotin thay đổi từ 2 đến 10%, thuốc lào có thể chứa tới 16% nicotin. Nicotin là một ancaloit được chiết từ thuốc lá từ năm 1828. Đây là một chất kiềm không chứa oxy, công thức thô là C10H14N2 với một nhân là pyridine và một nhân là Nmetyl-pyrolidin. Nicotin là một chất lỏng sánh, mùi hắc, vị nóng, cay. Khi tinh khiết, không có màu, nhưng ra ánh sáng và không khí ngả màu nâu. Nicotin tan trong nước, rất tan trong các dung môi hữu cơ. Nicotin là một ancaloit bay hơi mạnh, khi tiếp xúc với axit clohydric cho khói trắng. Bên cạnh nicotin người ta còn thấy nornicotin (có nhiều trong một số loài thuốc lá trồng), anabasin (vì lần đầu tiên được chiết từ cây thuộc chi Anabasis) họ Rau muối (Chenopodiaceae). Anabasin là đồng phân của nicotin. Ngoài ra người ta còn thấy một ít chất như nicotelin, nicotyrin, myosmin…",
+                "dấu hiệu đặc trưng": "Thành phần thuốc lá thay đổi nhiều trong quá trình phơi sấy và chế biến. Thường bao giờ trong thuốc lá phơi sấy hay chế biến, người ta nhận thấy:  Tinh bột và đường hầu như giảm hoàn toàn. Axit malic giảm. Các protit thoái hoá và xuất hiện các dạng hợp chất tan như axit amin, asparagin. Hàm lượng nicotin có thể bị giảm, ngược lại hàm lượng axit nicotinic có thể tăng lên, hàm lượng axit clorogenic cũng giảm xuống. Các hợp chất đa phenol bị ôxy hoá làm cho thuốc lá chuyển màu nâu. Xuất hiện các axit béo tự do, các ancol và este thơm."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Mặc dầu biết hút thuốc lá là một chất độc, nhưng việc tiêu thụ thuốc lá trên thế giới ngày càng tăng. Người ta đã ướ tính bình quân một đầu người, một năm ở Thụy Sĩ dùng tơi 5kg thuốc lá, tại Mỹ mỗi người mỗi năm tiêu thụ 4,8kg, tại Pháp 2,3kg. Hiện nay thuốc lá, thuốc lào ít dùng làm thuốc đối với người: Trong nhân dân, người ta dùng thuốc lào, thuốc lá để đắp vào những nơi đứt tay chân, chảy máu để cầm máu. Còn dùng chữa rắn, rết côn trùng cắn.",
+                "làm thuốc": "Thuốc lá hay được dùng chửa bệnh cho gia súc và phòng trừ sâu bệnh cho cây trồng (bảo vệt thực vật). Đối với cây trồng người ta dùng bột vụn thuốc lá (dư phẩm của công nghiệp thuốc lá), dịch chiết thuốc lá hay dư phẩm công nghiệp thuốc lá có chứa mỗi lít từ 10 đến 20g sunfat nicotin. Khi dùng người tap ha loãng thành dung dịch chứa 1% nicotin rồi phun lên cây có sâu bọ. Nicotin không độc với cây trồng, nhưng sâu bọ hoặc tiếp xúc, hoặc hút nước có nicotin hoặc hít thở hơi thuốc sẽ bị ngộ độc. Tuy nhiên vì đây là chất độc, cho nên việc sử dụng phải theo đúng những quy định để tránh ngộ độc cho người sử dụng.",
+                "chữa": "Đối với súc vật người ta dùng thuốc lá thuốc lào pha nước để chữa ghẻ, chấy rận, bọ chó: Dùng dung dịch chứa 1% nicotin. Tránh bôi lên những nơi da bị sây sát để tránh ngộ độc. Đôi khi người ta dùng trị giun sán của bò, dê với liều 5-6ml đối với bò, 1-2ml đối với dê, cao thuốc lá có chứa 40% nicotin."
+            },
+            "Cách dùng": {
+                "được_dùng": "Cây thuốc lá vốn nguồn gốc ở châu Mỹ, nhưng được đưa về trồng ở nhiều nước trên thế giới: Người ta uớc tính mỗi năm toàn thế giới sản xuất khoảng 4 triệu tấn thuốc lá khô, trong đó 3/4 sản xuất ở châu Mỹ và các nước châu Á. Những nước sản xuất nhiều thuốc lá trên thế giới có Mỹ (gần một triệu tấn/năm), Trung Quốc, Ấn Độ, Braxin, Nhật Bản.",
+                "làm thuốc": "Ở nước ta việc trồng thuốc lá chỉ mới được phát triển sau Cách mạng tháng tám, vì trước đây hồi thuộc Pháp, việc trồng thuốc lá, thuốc lào bị hạn chế, phải xin phép. Thuốc lào thường chỉ trồng tập trung ở một số tỉnh như Hải Dương, Hưng Yên (Vĩnh Bảo), Hải Phòng (Tiên Lãng)… Những năm gần đây thuốc lá được trồng ở các tỉnh Vĩnh Phúc, Cao Bằng, Lạng Sơn, Hà Tây (Ba Vì), Gia Lai, Kon Tum, Đắc Lắc…",
+                "phơi khô": "Trồng thuốc lá bằng hạt. Trước hết phải gieo hạt. Khi cây con cao chừng 10-15cm mới đánh đi trồng ở nơi cố định. Khoảng cách giữa mỗi cây chừng 65cm (tỉ lệ nicotin càng cao nếu các cây cách xa nhau vừa đủ). Thời vụ gieo trồng thay đổi theo giống và điều kiện khí hậu từng vùng. Ở Vĩnh Phúc người ta trồng vào tháng 12 (cho năng suất cao nhất), bắt đầu thu hái từ tháng 4, tháng 5: Thu hái lá từ phía dưới lên, trung bình mỗi hecta cho khoảng 1 tấn lá khô/năm. Trong thu hoạch thuốc lá, công việc phơi sấy đóng vai trò quyết định chất lượng của thuốc lá. Có thể phơi nắng nhưng để chủ động người ta thường sấy. Do đó cùng với việc trồng thuốc lá, nhất thiết phải thiết kế lò sấy. Mặc dầu thuốc lá là một chất độc, nhưng thế giới hiện nay vẫn trồng thuốc lá chủ yếu để hút, một số rất ít dùng làm thuốc trừ sâu bệnh cho cây trồng, một số ít nữa dùng làm thuốc chữa bệnh."
+            },
+            "luu_y": {}
+        }
+    ]
+}

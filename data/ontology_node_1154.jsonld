@@ -1,0 +1,289 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hy kiểm",
+      "ten_khac": "Hy kiểm, Nhị rối",
+      "ten_khoa_hoc": "Isodon ternifolius (D.Don) Kudo",
+      "ma_taxon": "1303230",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, mọc đứng, cao 0,5 – 1,2 m, gốc hóa gỗ.",
+      "thân": "Thân cành ít phân nhánh, hơi có cạnh, có lông rậm.",
+      "lá": "Lá mọc đối hoặc mọc vòng 3, gần như không cuống, hình mũi mác, dài 7 – 10 cm, rộng 2-5 cm, có lông, mép khía răng, gân lồi ở mặt dưói.",
+      "hoa": "Cụm hoa mọc ngọn thành  chùm gồm nhiều vòng hoa dày đặc xếp sít nhau về phía ngọn; lá bắc nhỏ; hoa nhỏ màu trắng có đốm đỏ; đài 5 răng đều, hình chuông, có lông ở mặt ngoài; tràng ngắn có lông, dài gấp 2 lần đài, có ống hơi cong xẻ thành 2 môi, môi trên chia 4 thuỳ nông, môi dưới tròn lõm; nhị 4 hơi thò ra ngoài tràng.",
+      "quả": "Quả bế tư, có 3 cạnh, hình trứng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Pìectranthus L’Hér. là một chi lớn gồm các loài phân bố ở vùng nhiệt đói, cận nhiệt đổi châu Á, châu Phi, châu Đại Dương, đảo Polynesia và nhiều đảo khác ở Thái Bình Dương. Ở Việt Nam, chi này có 7 loài, trong đó hy kiểm là cây phân bố ở các tỉnh vùng núi Hà Giang, Lào Cai, Lai châu, Yên Bái, Cao Bằng, Lạng sơn, Bắc Cạn, Thái Nguyên, Tuyên Quang, Hoà Bình và Sơn La.",
+      "thường_mọc": "Hy kiểm thường mọc ở đất ẩm, lẫn vói các loại cây cỏ thấp ở nương rẫy, sa van cây bụi – cỏ, đồi hoặc ven rừng.",
+      "Đặc điểm sinh trưởng": "Cây mọc từ hạt được thấy vào tháng 4-5; sinh trưởng nhanh trong mùa hè, sau mùa hoa quả, tàn lụi vào khoảng giữa mùa thu.  Hy kiểm ra hoa quả nhiều, tái sinh tự nhiên chủ yếu từ hạt. Có thể trồng dễ dàng bằng hạt.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây hy kiểm chứa ternifolin hoặc có thể là 6 -acetylsodoponin, sitosterrol. Lá chứa acid isodonoic, isodonal, loiigikaurin A, Iongikaurin E, effusanin B, effusanin E. Thân có effusanin B, effusanin E, longikaurin A. Theo Smith Roger M và cs, 1996, hy kiểm chứa tinh dầu, trong đó thành phần chính là thymol 85,3% (CA 125 : 137834U)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hy kiểm có vị đắng ngọt, tính mát, có tác dụng giảm đau, tiêu viêm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hy kiểm được dùng chữa phong thấp, tê bại, viêm gan, viêm túi mật. Ngày dùng 15 – 30g, thường phối với các dược liệu khác. Ở các nước Đông Nam Á, công dụng thông thường của hy kiểm là dùng ngoài trị vết thương, mụn nhọt lở loét, sưng tấy, bỏng, sâu bọ cắn, bệnh áp tơ (aphthosis) trĩ.  Dùng uống trị hen, viêm phế quản, ho, khó tiêu, tiêu chảy và làm thuốc giảm đau. Ớ vùng nhiệt đới châu Phi và Nam Mỹ, công dụng của hy kiểm trong y học dân gian cũng tương tự. Trong y học cổ truyền Ân Độ, lá hy kiểm trị hen, ho mạn tính, đái són đau, sỏi, lậu, trĩ, sốt, động kinh, bệnh tim, đau bụng, khó tiêu, rối loạn hệ thần kinh như mất ngủ, co giật."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa tê thấp: Hy kiểm, lá lốt, rễ cỏ xước, mỗi vị 200g. Rễ cỏ xước sắc, cô thành cao. Lá lốt và hy kiểm phơi khô hoặc sấy khô, tán nhỏ, rày bột, trộn bột vào cao. Ngày dùng 20g, hãm với nước sôi trong 30 phút. Để nguội, chắt lấy nước, thêm đường uống.",
+      "làm thuốc": "Chữa tê bại: Hy kiểm (tẩm rượu sao vàng), cỏ xước (tẩm giấm sao), canh châu (sao vàng), tang ký sinh, hà thủ ô (sao) mỗi vị 12g; tô ngạnh 8g, rễ lá lốt (sao) 4g. Tất cả thái nhỏ, sắc với 400 ml nước, còn 100 ml, chia uống 2 lần trong ngày. Kết hợp lấy lá chanh, lá dâu, lá xích đổng nam (mỗi vị 50g), tỏi (1 – 2 nhánh) giã nhỏ, thèm ít rượu hoặc giấm, rồi bọc thuốc vào vải mềm, xoa vào chỗ tê.",
+      "sắc uống": "Chữa viêm gan, viêm túi mật: Hy kiểm 30g, dành dành 20g, mộc thông 20g. Phơi khô, thái nhỏ, sắc uống."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

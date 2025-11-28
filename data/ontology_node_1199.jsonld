@@ -1,0 +1,189 @@
+{
+    "@context": {
+      "schema": "http://schema.org/",
+      "plant": "http://medicinal-plant.org/",
+      "Plant": {
+        "@id": "plant:Plant",
+        "@type": "schema:Thing",
+        "@context": {
+          "ten": "schema:name",
+          "ten_khac": "schema:alternateName",
+          "ten_khoa_hoc": "schema:scientificName",
+          "ma_taxon": "schema:identifier",
+          "ho": "schema:Text"
+        }
+      },
+      "Mô tả": {
+        "@id": "plant:Description",
+        "@type": "schema:Thing",
+        "@context": {
+          "lá": "schema:text",
+          "hoa": "schema:text",
+          "quả": "schema:text",
+          "cây": "schema:text",
+          "mặt": "schema:text",
+          "đầu": "schema:text",
+          "thân": "schema:text",
+          "cuống": "schema:text",
+          "gốc": "schema:text",
+          "cao": "schema:text",
+          "rễ": "schema:text",
+          "củ": "schema:text",
+          "mọc": "schema:text",
+          "mùa hoa": "schema:text",
+          "mùa quả": "schema:text"
+        }
+      },
+      "Phân bố": {
+        "@id": "plant:Distribution",
+        "@context": {
+          "phân_bố": "schema:description",
+          "ở_vùng": {
+            "@id": "schema:Place",
+            "@context": {
+              "tên": "schema:name"
+            },
+            "@container": "@set"
+          },
+          "các_tỉnh": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "tỉnh": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name"
+                }
+              }
+            }
+          },
+          "được_trồng": {
+            "@id": "schema:ItemList",
+            "@context": {
+              "mục": "schema:itemListElement",
+              "nơi": {
+                "@id": "schema:Place",
+                "@context": {
+                  "tên": "schema:name",
+                  "ghi_chú": "schema:description"
+                }
+              }
+            }
+          },
+          "chủ_yếu": "plant:PrimarilyNote",
+          "thường_mọc": "plant:HabitatNote",
+          "Đặc điểm sinh trưởng": "schema:text"
+        }
+      },
+      "Thông tin khác": {
+        "@id": "plant:AdditionalInformation",
+        "@type": "schema:Thing",
+        "@context": {
+          "thong_tin_khac": "schema:description"
+        }
+      },
+      "Bộ phận dùng": {
+        "@id": "plant:UsedParts",
+        "@type": "schema:Thing",
+        "@context": {
+          "bo_phan_dung": "schema:description"
+        }
+      },
+      "Thành phần": {
+        "@id": "plant:CompositionList",
+        "@type": "schema:Thing",
+        "@context": {
+          "thành phần": "schema:text",
+          "gồm chất": "schema:text",
+          "Các hợp chất": "schema:text",
+          "chứa": "schema:text",
+          "triết xuất": "schema:text",
+          "đã nghiên cứu": "schema:text",
+          "tìm thấy": "schema:text",
+          "thủy phân": "schema:text",
+          "các hoạt chất": "schema:text",
+          "tinh dầu chứa": "schema:text",
+          "có hoạt chất": "schema:text",
+          "dấu hiệu đặc trưng": "schema:text"
+        }
+      },
+      "Tính vị": {
+        "@id": "plant:TasteProperty",
+        "@type": "schema:Thing",
+        "@context": {
+          "Có vị": "schema:text"
+        }
+      },
+      "Công dụng": {
+        "@id": "plant:MedicalUseList",
+        "@type": "schema:Thing",
+        "@context": {
+          "cong_dung_y_hoc": "schema:text",
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "chữa": "schema:text"
+        }
+      },
+      "Cách dùng": {
+        "@id": "plant:Preparation",
+        "@type": "schema:Thing",
+        "@context": {
+          "được_dùng": "schema:text",
+          "làm thuốc": "schema:text",
+          "có tác dụng": "schema:text",
+          "sắc uống": "schema:text",
+          "giã nát": "schema:text",
+          "sắc nước uống": "schema:text",
+          "phơi khô": "schema:text",
+          "xấy khô": "schema:text"
+        }
+      },
+      "luu_y": {
+        "@id": "plant:Caution",
+        "@type": "schema:Thing",
+        "@context": {
+          "luu_y": "schema:description"
+        }
+      }
+    },
+    "@graph": [
+      {
+        "@type": "Plant",
+        "ten": "Hổ vĩ",
+        "ten_khac": [
+          "Hổ vĩ",
+          "Lưỡi cọp xanh",
+          "Hổ vĩ xám"
+        ],
+        "ten_khoa_hoc": "Sansevieria guineensis Willd.",
+        "ma_taxon": "168423",
+        "ho": "Dracaenaceae ( Thùa)",
+        "Mô tả": {
+          "lá": "hình lưỡi lê dài 30-50cm, rộng 3-4cm, dây cứng có vằn đen ngang trên mặt lá giống như vằn trên đuôi hổ (do đó có tên), mép lá có viền hai dải màu vàng.",
+          "hoa": "trắng, mọc thành chùm dài ở ngọn.",
+          "quả": "hình cầu, màu vàng da cam.",
+          "cây": "Cây nhỏ, cao 30-50cm, có thân rễ mọc bò ngang.",
+          "mùa hoa": "tháng 5",
+          "mùa quả": "tháng 9"
+        },
+        "Phân bố": {},
+        "Thông tin khác": {},
+        "Bộ phận dùng": {},
+        "Thành phần": {
+          "thành phần": "Chưa thấy tài liệu nghiên cứu."
+        },
+        "Tính vị": {},
+        "Công dụng": {
+          "cong_dung_y_hoc": "Nhân dân dùng lá tươi cây hổ vĩ làm thuốc chữa ho, viêm họng, ho, khản tiếng: Lá hổ vĩ giã nát, thêm vài hạt muối, ngậm trong miệng, nuốt nước dần dần. Ngày dùng 6 đến 12g lá tươi. Chữa viêm tai chảy mủ: Lá hổ vĩ giã nát, vắt lấy nước nhỏ vào tai. Ngày nhỏ nhiều lần.  Chú thích:  Ngoài cây hổ vĩ nói trên, còn có một cây nữa cũng mang tên hổ vĩ hay đuôi hổ, có tên khoa học Sanseviera trifasciata Prain thuộc cùng họ. Mặt lá có vằn đen ngang trông như đuôi hổ, lá gẫy rơi xuống đất có thể bén rễ và mọc thành cây mới. Cây này không thấy được dùng làm thuốc, chỉ được trồng làm cảnh, có thể là một nguồn cung cấp sợi."
+        },
+        "Cách dùng": {
+          "được_dùng": "Cây chủ yếu được trồng làm cảnh, vì xanh tốt quanh năm, màu lá xanh, vàng, đen xen kẽ trông rất đẹp. Đến mùa hoa màu trắng điểm thêm vào lại càng tăng thêm vẻ đẹp của cây. Người ta dùng lá tươi làm thuốc, thu hái quanh năm. Không có chế biến gì khác."
+        },
+        "luu_y": {}
+      }
+    ]
+  }

@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hòe biển",
+      "ten_khac": "Hòe lông, Hòe biển",
+      "ten_khoa_hoc": "Sophora tomentosa L.",
+      "ma_taxon": "127036",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2 – 4m.",
+      "thân": "Thân thẳng, cành tròn, khỏe.",
+      "lá": "Lá kép lông chim lẻ, mọc so le, có 17 – 23 lá chét mọc đối, hình trứng, dài 2,5 – 4,5cm, rộng 2 – 3,5cm, gốc và đầu tròn, mặt trên màu lục pha trăng nhạt bóng, mặt dưới có lông tơ mềm, màu trắng, cuống lá dài 12 – 18cm, không có lá kèm.",
+      "hoa": "Cụm hoa mọc thẳng đứng ở ngọn thành chùm dày, dài 10 – 20cm, cuống có lông, gồm rất nhiều hoa màu vàng xám, đài hình trụ, có lông ở mặt ngoài, răng rất nhỏ, tràng có cánh cờ hình bầu dục, gần tròn, cánh bên thuôn có tai tròn, cánh thìa thẳng; nhị 10, rời, bầu có lông.",
+      "quả": "Quả hình tràng hạt, dài 5 – 10cm, có lông mềm; hạt hình cầu, màu vàng bẩn.",
+      "mọc": "Tất cả các bộ phận của cây đều có màu trắng nhạt.",
+      "mùa hoa": "tháng 9 – 12.",
+      "mùa quả": "tháng 9 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hoè biển mọc tự nhiên ở vùng ven biển thuộc các nước vùng nhiệt đới Đông Nam Á. Giới hạn phân bố của cây về phía bắc đến Trung Quốc và quần đảo Ryukyu, phía nam đến đông Australia và phía đông đến tận Polynesia. Ở Việt Nam, hoè biển phân bố ở hầu hết các tỉnh dọc theo bờ biển từ Quảng Ninh đến Bà Rịa – Vũng Tàu và các đảo lớn như Cát Bà, Hòn Mê Côn Đảo, Phú Quốc. Những tỉnh có hai bên phân bố tương đối tập trung là Thanh Hóa, Nghệ An, Hà Tĩnh, Quảng Bình, Quảng Nam và Quảng Ngãi.  Hoè biển là cây ưa sáng, thường mọc rải rác trong các trảng cây bụi trên bãi cát hoặc đồi thấp ở vùng ven biển. Cây có khả năng chịu hạn, thích nghi cao với điều kiện nắng nóng và có gió nhiều. Cây trồng ở Hà Nội (vườn Trại thuốc Văn Điển – Viện Dược liệu) có hiện tượng rụng lá vào mùa đông. Cây ra hoa quả nhiều hàng năm, mùa hoa quả của cây rất khác nhau theo vùng. Ví dụ ở các tỉnh phía nam, hoè biển ra hoa vào tháng 12 – 1, quả tháng 2 – 4; ở Malaysia, từ tháng 10 năm trước đến tháng 6 năm sau… Cây tái sinh tự nhiên, chủ yếu từ hạt; hạt rơi xuống nước biển trong vòng 3 tháng vẫn có khả năng nảy mầm, tuy nhiên tỷ lệ nảy mầm sẽ bị giảm dần theo thời gian. Cây bị chặt phá nhiều lần vẫn có khả năng tái sinh trở lại."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá, và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhiều bộ phận ở dạng tươi của cây hoè biển chứa alcaloid: (+) – matrin, (+) – matrin – N – Oxyd, (+) – sophocarpin – N – oxyd, (-) – anagyrin, (-) – baptifolin, (-) – cytisin, (-) N-methyl – cytisin, (-) formylcytisin, (-) – N – acetylcytisin, (+) – amodendrin, (-) – epiamprolobin, (+) – epiamprolobin – N – oxyd và S – (3′- methoxycarbonyl butyroyl)aminomethyl – trans quinolizidin. Lysin có ở lá, thân, quả chưa chín, hạt chưa chín theo thứ tự 0,15%, 0,22%, 0,37% và 0,64% (tính theo nguyên liệu tươi). Ngoài ra, còn có (+) – epiamprolobin – N – oxyd, (+) – matrin – N – oxyd, (+) – matrin và (-) – cytisin. Phần trên mặt đất có các flavanoid; Sophoraisoflavanon A, sophoraflavanon B; sophoronol, isosophoranon và isobavachin. Hoè biển còn có các sophoracarpan A và B, wighteon (erythrinin B), (-) maackiain (Compendium of Indian medicinal plants. vol. 5 (1990 – 1994, 1998)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước sắc từ hạt và rễ hoè biển là thuốc đặc biệt cho các bệnh đường mật. Ở Indonesia, hạt và rễ được dùng chữa thổ tả, đau bụng, kiết lỵ. Ở Malaysia, hạt, lá và rễ là thuốc gây săn se, chữa tiêu chảy. Rễ hoè biển (liều nhỏ) phối hợp với rễ Caesalpinia được dùng giải độc trong các trường hợp ngộ độc do thức ăn, lá khô nghiền thành bột mịn hoặc hạt nhai kỹ dùng đắp vết thương do gai ngạnh cá độc đâm phải (theo Rumphius). Tên Thái của cây hoè biển là “saaraphat phit” có nghĩa là nhiều chất độc khác nhau, có lẽ do công dụng của cây dùng làm thuốc giải độc trong nhiều trường hợp. Ở Philippin, cây hoè biển được dùng chữa đau dạ dày, dầu từ hạt xoa ngoài chữa đau xương, và là thuốc lợi đờm. Ở New Caledonia, hạt và rễ hoè biển được dùng làm thuốc gây nôn – tẩy. Liều dùng: khoảng 3 hạt. Ngoài ra, ở Đông Phi, hoè biển được dùng để duốc cá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Uy linh tiên",
+            "ten_khac": "Uy linh tiên, Dây móc thông, Dây ruột gà",
+            "ten_khoa_hoc": "Clematis sinensis Osbeck",
+            "ma_taxon": "1539255",
+            "ho": "Mao lương (Ranunculaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thân leo, mọc thành bụi, dài hàng mét.",
+            "thân": "Thân nhẵn, có cạnh và khía dọc.",
+            "lá": "Lá kép mọc đối, có 5 lá chét hình bầu dục, gốc tròn hoặc hơi hình tim, đầu nhọn, hai mặt nhẵn hoặc có lông thưa; cuống lá dài xoắn vặn.",
+            "hoa": "Cụm hoa mọc ở kẽ lá thành xim; hoa màu trắng, đài có 5 răng có lông ở mép, nhị nhiều.",
+            "quả": "Quả bế, hình trứng dẹt, tận cùng bằng một vòi nhụy dài gấp 6 – 10 lần bầu, có lông màu vàng nhạt.",
+            "mùa hoa": "tháng 6 – 8",
+            "mùa quả": "tháng 9 – 11."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Cây mọc hoang ở các tỉnh miền núi, thường gặp ở ven rừng, bờ nương rẫy."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": "Trị phong tê, đau nhức, lợi tiểu, tích trệ."
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Rễ. Mỗi năm mọc nhiều rễ, lâu năm mọc thành một khóm rậm rạp, có hàng trăm sợi, dài đến 60cm. Dùng thứ rễ nhiều, rậm dài, đen sẫm, nhục trắng, chất chắc (tục gọi ‘Chiết ước Uy linh tiên’) là tốt nhất, còn thứ khác nữa nhưng không dùng làm thuốc được. Ở Việt Nam có hai cây thường dùng thay Uy linh tiên Trung Quốc là cây Kiến cò hay Bạch hạc (Rhinacanthus  communic Nees, họ Acanthaceae). Ở liên khu IV có loại Uy linh tiên dây leo Thunbergia (cùng họ), lá hình quả tim, hoa trắng, rễ từng chùm như dây Uy linh tiên Trung Quốc (cần sưu tầm, nghiên cứu thêm)."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Có Anemonin và Anemonon."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Vị cay, mặn, tính ôn."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Hành khí, trừ phong, thông kinh lạc."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": ""
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

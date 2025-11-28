@@ -1,0 +1,249 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kinh giới núi",
+      "ten_khac": "Kinh giới rừng, Kinh giới núi, Chùa dù, Tả hoàng đồ (Hmông), Dê sua tùa",
+      "ten_khoa_hoc": "Elsholtzia blanda (Benth.) Benth.",
+      "ma_taxon": "966952",
+      "ho": "Lamiaceae (Hoa môi)",
+      "Mô tả": {
+        "cây": "Cây thảo, cao 1 – 2m.",
+        "thân": "Thân hình vuông, có lông.",
+        "lá": "Lá mọc đối, có cuống ngắn, hình mác, gốc hình nêm, đầu nhọn, đài 3-8 cm, rộng 1,5-2 cm, mặt trên nhẵn, mặt dưới có lông mềm, mép khía răng không đều, gân nổi rõ.",
+        "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành thành bông dày, hơi lệch bên, dài 6-12cm; lá bắc ngắn hơn hoa, có lông dày; hoa nhỏ màu trắng; đài hình chuông, có răng ngắn đều, mặt ngoài có lông; tràng có 4 cánh gần đều, hơi có lông; nhị 4, đính ở họng tràng.",
+        "quả": "Quả bế, hình bầu dục dẹt, nhẵn bóng, khi chín màu nâu đen.",
+        "mọc": "Toàn cây có tinh dầu thơm như mùi khuynh diệp.",
+        "mùa hoa": "tháng 7-9",
+        "mùa quả": "tháng 10-11"
+      },
+      "Phân bố": {
+        "phân_bố": "Trên thế giới, kinh giới núi phân bố ở Trung Quốc, Lào và một số nơi khác thuộc khu vực cận nhiệt đới châu Á.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "1",
+          "tỉnh": {
+            "@type": "schema:Place",
+            "tên": "Việt Nam"
+          }
+        },
+        "ở_vùng": [
+          {
+            "@type": "schema:Place",
+            "tên": "vùng núi cao (1300 – 1600 m) thuộc biên giới phía Bắc"
+          }
+        ],
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "2",
+          "tỉnh": {
+            "@type": "schema:Place",
+            "tên": "Hà Giang"
+          }
+        },
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "3",
+          "tỉnh": {
+            "@type": "schema:Place",
+            "tên": "Cao Bằng"
+          }
+        },
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "4",
+          "tỉnh": {
+            "@type": "schema:Place",
+            "tên": "Lai Châu"
+          }
+        },
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": "5",
+          "tỉnh": {
+            "@type": "schema:Place",
+            "tên": "Lào Cai"
+          }
+        },
+        "thường_mọc": "Kinh giới núi là cây ưa sáng, ưa ẩm và thường chỉ mọc ở đất còn tương đối màu mỡ, như chân núi đá vôi hoặc mọc xen lẫn với ngô, đôi khi tạo thành những quần thể thuần loại trên diện tích lớn (xã Lao Và Chải, Du Già huyện Yên Minh – Hà Giang).",
+        "Đặc điểm sinh trưởng": "Cây con mọc từ hạt vào khoảng cuối tháng 3; sinh trưởng mạnh trong mùa hè – thu; cuối thu có hoa quả, sau đó tàn lụi vào tháng 12 hoặc tháng 1 năm sau. Hoa có tuyến mật, nên người nuôi ong ở miền xuôi thường chuyển ong lên vùng núi để tận dụng nguồn mật của loài cây này và một số cây thuộc họ Araliaceae."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Cả cây thu hái vào mùa hè – thu, phơi khô. Có thể cất lấy tinh dầu. Còn dùng rễ."
+      },
+      "Thành phần": {
+        "thành phần": "Kinh giới có thành phần chính là flavonoit.",
+        "tinh dầu chứa": "Trong tinh dầu Kinh giới chủ yếu là d-menthol, menthol racemic và một ít d-limonen."
+      },
+      "Tính vị": {
+        "Có vị": "Kinh giới núi có vị đắng, cay, mùi thơm, tính ấm, có tác dụng thanh nhiệt, giải cảm, lợi thấp, tiêu viêm, chỉ thống."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong nhân dân, kinh giới núi được dùng làm thuốc chữa cảm sốt, cúm, ho, dưới dạng thuốc sắc, thuốc hãm hoặc thuốc xông.",
+        "được_dùng": "Ngày dùng 10 – 16g.",
+        "giã nát": "Ở vùng Sìn Hồ – Lai Châu, người H’Mông và người Dao dã có kinh nghiệm lâu đời dùng toàn cây kinh giới núi tươi giã nát đắp vào ngực rồi day xoa để chữa ho và sốt ở trẻ em.",
+        "chữa": "Để chữa cảm sốt, cúm, người ta hái lá nấu nước xông cho ra mồ hôi. Nước hãm hoặc nước sắc cây kinh giới núi phơi khô (10 – 20g) dùng uống chữa tiểu tiện khó do nhiệt, tiểu tiện ra máu. Dùng riêng hoặc phối hợp với kim ngân hoa và lá tre với lượng bằng nhau. Rễ cây kinh giới núi được dùng chữa sốt rét, với liều 8 – 16g một ngày dưới dạng thuốc sắc. Ngoài ra, kinh giới núi còn là nguyên liệu cất tinh dầu để uống hoặc xoa bóp. Trạm nghiên cứu được liệu tỉnh Lai Châu đã bào chế một dạng dầu xoa gồm tinh dầu kinh giới núi và tinh đầu bạc hà lấy tên là “Dầu xoa Sìn Hồ”. Dầu này có tác dụng giải nhiệt, giảm đau và sát khuẩn rất tốt. Dùng bôi chống cảm cúm hoặc xoa bóp chữa tê thấp, đau mình mẩy. Cũng có thể dùng dạng tinh dầu kinh giới núi đã pha loãng. Ở Trung Quốc, kinh giới núi được dùng chữa viêm thận dưới dạng bột, uống với nước đun sôi để nguội, mỗi lần 3 – 6g, ngày 2 lần. Một đợt điều trị kéo dài 4 tuần. Để chữa kiết lỵ, lá kinh giới núi tươi, vò nát, vắt lấy nước uống."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

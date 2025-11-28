@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phù dung",
+      "ten_khac": "Phù dung, Mộc phù dung, Mộc liên, Boóc đao (Tày)",
+      "ten_khoa_hoc": "Hibiscus mutabilis L.",
+      "ma_taxon": "163770",
+      "ho": "Malvaceae (Bông)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, có 5 thuỳ nông, gốc hình tim, đầu nhọn, mép khía răng không đều, mặt dưới trắng nhạt có nhiều lông tơ, gân chính 7, hình chân vịt; cuống lá dài bằng lá hoặc hơn; lá kèm sớm rụng.",
+      "hoa": "Hoa to, đẹp, đơn hoặc kép, mọc ở ngọn thân và đầu cành, buổi sáng màu trắng, chuyển dần thành màu hồng nhạt rồi hồng sẫm vào buổi chiều; cuống hoa có đốt ở quá phần giữa; tiểu đài có 10 phiến rất hẹp, dài, có lông; đài hợp dài gấp đôi tiểu đài, phủ lông màu hung; tràng có cánh mỏng; nhị nhiều, dính vào nhau thành cột nhẵn; bầu có lông.",
+      "quả": "Quả hình cầu, có lông rậm màu vàng nhạt; hạt hình trứng, có lông dài.",
+      "cây": "Cây nhỏ hay cây nhỡ, cao vài mét. Thân, cành có lông hình sao, nhiều nhất ở cành non.",
+      "mùa hoa": "tháng 9-11.",
+      "mùa quả": "tháng 9-11.",
+      "thân": "Thân, cành có lông hình sao, nhiều nhất ở cành non."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Phù dung có nguồn gốc ở Trung Quốc và hiện nay được trồng nhiều ở nguyên quán, Nhật Bản và nhiều nước khác ở châu Á. Cây trồng ở Việt Nam được nhập từ Trung Quốc và đã có mặt rải rác khắp các địa phương ở miền Bắc, từ đồng bằng đến vùng núi cao 1500m. Phù dung là cây ưa sáng và ưa ẩm, trồng ở miền núi thường có hiện tượng rụng lá về mùa đông. Nhiệt độ thích hợp cho cây sinh trưởng, phát triển từ 15 đến 23 độ C. Cây ra hoa nhiều, nhưng hiếm khi thấy quả, tái sinh dinh dưỡng khoẻ. Hàng năm, người ta chặt bỏ bớt các cành già nhằm kích thích cho cây ra nhiều chồi và cành mới."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Phù dung được trồng ở các vườn hoa và vườn gia đình để làm cảnh. Cây được nhân giống dễ dàng bằng cành. Lấy cành bánh tẻ, cắm xuống đất, giữ đủ ẩm để cây ra rễ. Chú ý không tưới quá nhiều nước, vỏ sẽ thối. Thời gian cắm cành tốt nhất vào mùa xuân. Mùa thu cũng có thể giâm được, nhưng không giâm vào lúc mưa quá nhiều. Đào hố 40 x 40 x 40cm, trộn ít phân chuồng hoại với đất, lấp đầy hố, đặt hom giống rồi giận chặt, tưới ẩm. Cây phát triển nhanh, không cần chăm sóc đặc biệt, không có sâu bệnh gì đáng kể."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá thu hái quanh năm. Hoa hái khi mới nở, dùng tươi. (Husain S; Rafat Ahmad M, CA. 111,1989,41743y)."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá và hoa phù dung có vị cay, tính bình, có tác dụng thanh nhiệt, giải độc, lương huyết, tiêu thũng, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liêu cổ và kinh nghiệm dân gian, lá và hoa phù dung được dùng chữa mụn nhọt, sưng tấy, kinh nguyệt ra nhiều, rong huyết. Ở Trung Quốc, lá và hoa phù dung còn được dùng làm thuốc lợi đờm, chữa ho lâu ngày, thuốc giảm đau chữa vết thương, vết bỏng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa nhọt mủ: Khi nhọt mới nhú, lấy 30g rễ vông vang hoặc rễ gai rửa sạch, giã đắp cho nhọt chóng mưng mủ. Tiếp đó lấy lá phù dung tươi (30-40g) giã nhỏ hoặc lá và hoa phơi khô, tán bột mịn, thêm nước chè đặc, nhào thành bột nhão, đắp cho nhọt vỡ mủ và đỡ đau nhức. Nặn cho hết mủ, rửa vết thương bằng nước sắc đặc lá sòi tía hoặc nõn cây bàng để chống nhiễm khuẩn. Cuối cùng lấy 50g lá dạ cẩm giã nát với ít muối đắp làm chóng lành vết thương. Chữa sưng vú: Lá phù dung 50g, mầm húng dũi 50g. Hai vị dùng tươi rửa sạch, giã đắp. Làm vài lần. Chữa kinh nguyệt ra nhiều, băng huyết, rong huyết: Hoa phù dung (loại mới nở) phơi hoặc sấy khô tán bột. Gương sen (loại lâu năm càng tốt) đốt tồn tính tán nhỏ. Trộn đều 2 thứ với lượng bằng nhau. Ngày uống 2 lần, mỗi lần 8g với nước cơm (Nam dược thần hiệu) Chữa bỏng : Lá phù dung nghiền thành bột, chế với dầu vừng đắp tại chỗ.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

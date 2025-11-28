@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mảnh cộng",
+      "ten_khac": "Lá cẩm, bìm bịp, cây xương khỉ",
+      "ten_khoa_hoc": "Clinacanthus nutans (Burm.f.)",
+      "ma_taxon": "347718",
+      "ho": "Ô rô (Acanthceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, có cuống ngắn, hình mác thuôn, mép nguyên, hai mặt nhẵn, mặt trên màu sẫm bóng, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thành bông rủ xuống; lá bắc hình chi, có lông; hoa màu đỏ hay hồng; đài có ba răng nhỏ hình chỉ, có lông tuyến; tràng có ống dài chia 2 môi; nhị 2, bao phấn tù có một ô; bầu 2 ô, mỗi ô chứa hai noãn.",
+      "quả": "Quả nang dài, có cuống ngắn; hạt 4.",
+      "cây": "Cây nhỡ, hơi mọc trườn.",
+      "mùa hoa": "tháng 2 – 3."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Clinacanthus Nees ở Việt Nam – loài mảnh cộng kể trên. Theo một số tài liệu hiện có (Từ điển cây thuốc Việt Nam, 1997; Danh lục các loài thực vật Việt Nam, T.III, 2005) cho biết loài này phân bố rải rác ở nhiều địa phương trong cả nước và còn được trồng ở bờ rào.  Tuy nhiên qua thực tế điều tra mới chỉ thấy chủ yếu ở các tỉnh phía Nam. Cây mọc tự nhiên ở rừng rụng là hoặc nửa rụng lá ở Đắc Lắc (Yok Đôn, Krông Bông), Gia Lai (Chư Prông: La Lâu), Phú Yên (Sông Hinh)… Cây còn được trồng để làm cảnh vì có hoa màu đỏ, đẹp và khi có hoa cây thường rụng lá (hoa nở vào giữa mùa khô ở Tây Nguyên.  Mảnh cộng là cây ưa sáng, ưa ẩm và có khả năng chịu hạn tốt. Cây tái sinh tự nhiên chủ yếu từ hạt, đồng thời cũng có khả năng tái sinh vô tình khỏe. Ứng dụng đặc điểm này, người ta thường trồng mảnh cộng bằng cành. Cây trồng vào mùa xuân hoặc đầu mùa mưa.",
+      "Đặc điểm sinh trưởng": "Mảnh cộng là cây ưa sáng, ưa ẩm và có khả năng chịu hạn tốt. Cây tái sinh tự nhiên chủ yếu từ hạt, đồng thời cũng có khả năng tái sinh vô tình khỏe. Ứng dụng đặc điểm này, người ta thường trồng mảnh cộng bằng cành. Cây trồng vào mùa xuân hoặc đầu mùa mưa."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn bộ phần trên mặt đất."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cành, rễ chứa β – sitosterol, lupeol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá khô mảnh cộng có mùi thơm. Cây có tác dụng điều kinh, tiêu thũng, khử ứ, giảm đau và làm liền xương [Võ Văn Chi, 1997: 717]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây mảnh cộng được Lãn Ông dùng chữa vết thương do trâu bò húc. Ở một số địa phương, nhân dân dùng chữa dị ứng (mày đay), uống trong và bôi ngoài [Lê Trần Đức, 1997: 1038].  Lá non có thể dùng nấu canh ăn. Lá khô thường dùng để ướp bánh (bánh mảnh cộng). Lá tươi giã đắp chữa đau sưng mắt và đem xào nóng dùng bó trị bong gân, sưng khớp, gẫy xương. Thường dùng phối hợp với mò hoa trắng giã và lọc lấy nước uống để chữa bệnh lưỡi tưa trắng của trẻ em. Cành lá đắp chữa vết thương trâu bò húc.  Nhân dân ở đảo Hải Nam (Trung Quốc) dùng cây mảnh cộng làm thuốc chữa vết thương do dao chém và chữa thiếu máu, vàng da, phong thấp. Thường dùng cành lá khô sắc uống. Dùng ngoài, lấy lá tươi giã đắp. Ở Thái Lan, lá tươi được dùng trị bỏng, sâu bọ đốt, eczema và mụn rộp [Võ Văn Chi, 1997: 717]. Ở Lào và Campuchia, lá mảnh cộng được dùng đắp vào mí mắt để chữa viêm mắt. Ở Indonesia, lá được dùng trị lỵ [Perry L.M et al., 1980: 6]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

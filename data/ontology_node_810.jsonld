@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quả mắc nưa",
+      "ten_khac": "Quả mắc nưa, Mặc nưa, Mac leua (campuchia)",
+      "ten_khoa_hoc": "Diospyros mollis Griff",
+      "ma_taxon": "1359587",
+      "ho": "Ebenaceae (Thị)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Mắc nưa là một cây cao 10-20m có cành và những bộ phận khác của cây, lá đầu có lông, sau không có lông.",
+        "lá": "Lá mọc so le, hình trứng dài, nguyên, mặt dưới mờ, mặt trên nhẵn, phiến lá dài 5,5-13cm, rộng 5,5-7cm cuống có lông dài 3-6mm.",
+        "hoa": "Hoa đơn tính, nhỏ, màu vàng nhạt, hoa đực mọc thành xim ngắn, có lông, mang ít hoa: từ 1-3 hoa, hoa cái mọc đơn độc ở nách lá.",
+        "quả": "Qủa hình cầu, đường kính 20-30mm, nặng khoảng 8-12g, mỗi quả chứa 3-6 hạt, vỏ lúc còn nhỏ màu xanh tươi, sau ngã vàng xanh hay vàng hồng.",
+        "mọc": "Một cây mắc nưa cho khoảng 100-500kg quả mỗi năm"
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Trong quả mắc nưa có hợp chất hydroquinon, tanin (khoảng 10% tanin catechic), hợp chất sterolic, axit hữu cơ, men oxydaza, cũng không có ancaloit và flavon",
+        "đã nghiên cứu": "Trong môi trường axit, Nguyễn Bá Tước đã dùng ete chiết được từ quả mắc nưa một chất hydroquinon, kết tinh hình kim trắng nhạt trong cồn 30o , độ chảy 250-251oC, không tan trong nước, tan trong các dung môi hữu cơ (trừ trong ete dầu hỏa). Dưới tia ngoại tím cho huỳnh quang màu xanh tím. Công thức thô được xác định là C12H12O2",
+        "Các hợp chất": "Nguyễn Bá Tước đã đề nghị gọi chất này là diospyroquinon có những hằng số và tính chất khác với những dẫn xuất dimetyl paranaphtoquinon đã biết. dẫn xuất axetyl của diospyron kết tinh trong cồn 80o dưới dạng khối trắng nhạt, độ chảy 218oC"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Mắc nưa cũng như cây mun chủ yếu cho gỗ màu đen cứng và bền dùng làm đồ mỹ nghệ và đóng các đồ gỗ quý",
+        "được_dùng": "Quả dùng để nhuộm đen. Trước đây nhân dân thường chỉ dùng nhuộm tơ lụa và lĩnh nhưng từ khi có hàng nylon, mắc nưa còn dùng nhuộm cả hàng nylon, nhuộm mắc nưa mặc mát như hàng bông, và sợi nylon từ không cháy trở thánh cháy được."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Mắc nưa được trồng chủ yếu ở miền Nam nước ta, nhiều nhất vùng Tân Châu, còn thấy trồng ở Campuchia, Lào, Thái Lan, Miến Điện.",
+        "làm thuốc": "Từ Quảng Bình trở vào có một cây rất gần mang tên cây mun-Diospyros mun H. Lec cùng họ cũng được khai thác như mắc nưa với cùng một công dụng."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

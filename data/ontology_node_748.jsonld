@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tầm bóp",
+      "ten_khac": "Tầm bóp, Thù lu cái, Lu lu cái, Toan tương, Lồng đèn, Phiắc tèng (Tày)",
+      "ten_khoa_hoc": "Physalis angulata L.",
+      "ma_taxon": "61374",
+      "ho": "Solanaceae (Cà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mọc hằng năm, cao 50-90cm, phân nhiều cành.",
+      "thân": "Thân cây có góc, thường rũ xuống.",
+      "lá": "Lá mọc so le, hình bầu dục, chia thùy hay không, dài 30-35mm, rộng 20-40mm; cuống lá dài 15-30mm.",
+      "hoa": "Hoa mọc đơn độc, có cuống mảnh, dài khoảng 1cm. Ðài hình chuông, có lông, chia ra từ phía giữa thành năm thùy. Tràng hoa màu vàng tươi hay màu trắng nhạt, có khi điểm những chấm màu tím ở gốc, hơi chia 5 thùy.",
+      "quả": "Quả mọng tròn, nhẵn, lúc non màu xanh, khi chín màu đỏ, có đài cùng lớn với quả, dài 3-4cm, rộng 2cm, bao trùm lên ở ngoài như cái túi. Hạt nhiều, hình thận.",
+      "mùa hoa": "Ra hoa kết quả quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Mỹ châu nhiệt đới, trở thành liên nhiệt đới, mọc hoang ở khắp nơi trên các bờ ruộng, bãi cỏ, đường làng, đất hoang, ven rừng từ vùng thấp đến độ cao 1500m. Thu hái cây quanh năm, dùng tươi hay phơi khô dùng dần."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Herba Physalis Angulatae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thường dùng trị cảm sốt, yết hầu sưng đau, ho nhiều đờm, phiền nhiệt nôn nấc. Dùng 20-40g khô sắc uống. Dùng ngoài trị nhọt vú, đinh độc, đau bìu dái. Dùng 40-80g cây tươi giã vắt lấy nước cốt uống, bã thì dùng đắp; hoặc nấu nước rửa. Quả Tầm bóp ăn được và dùng chữa đờm nhiệt sinh ho, thủy thũng và đắp ngoài chữa đinh sang, rễ tươi nấu với tim lợn, chu sa dùng ăn chữa được chứng đái đường. Ở Ấn Độ, toàn cây được sử dụng làm thuốc lợi tiểu; lá được dùng trị các rối loạn của dạ dày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

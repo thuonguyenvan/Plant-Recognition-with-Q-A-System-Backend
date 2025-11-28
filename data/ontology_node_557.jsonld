@@ -1,0 +1,252 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nọc xoài",
+      "ten_khac": "Cây sọ khỉ, thuốc nọc, cỏ cứt heo, tam nhân đả, cỏ lá xoài, cốc đồng.",
+      "ten_khoa_hoc": "Struchium sparganophorum (L.) Kuntze",
+      "ma_taxon": "426724",
+      "ho": "Cúc (Asteraceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, sống hằng năm, cao 10 – 30 cm.",
+        "thân": "Thân hình trụ nhẵn, mọc bò lan sau đứng thẳng.",
+        "lá": "Lá mọc so le, hình mác thuôn, gốc có phiến men theo cuống, đầu nhọn, mép khía răng.",
+        "hoa": "Cụm hoa mọc đơn độc thành đầu tròn ở kẽ lá, rộng 6 – 8 mm; hoa toàn hình ống, màu trắng, vòi nhụy màu tím.",
+        "quả": "Quả bế, hình trụ hơi cong, màu trắng, bầu có 5 răng dính liền nhau thành hình chén.",
+        "mùa hoa": "tháng 4 – 10.",
+        "mùa quả": "tháng 4 – 10."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Struchium P. Browne, chỉ có một loài là nọc xoài ở Việt Nam. Cây có nguồn gốc ở Trung Mỹ, sau phát tán đi khắp nơi. Ở châu Á, cây phân bố ở Malaysia, Singapore, Thái Lan, Indonesia và Việt Nam. Ở Việt Nam, mới chỉ thấy có nọc xoài một số tỉnh thuộc đồng bằng sông Cửu Long gồm: Long An, Tiền Giang, Đồng Tháp, An Giang, Vĩnh Long, Cần Thơ,..  Nọc xoài là dạng cây thảo, sống một năm, ưa sáng và ưa ẩm, thường mọc trên đất ẩm ở ruộng cao, vườn hoặc bãi sông…",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Long An"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tiền Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đồng Tháp"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "An Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Vĩnh Long"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cần Thơ"
+              }
+            }
+          ]
+        }
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Toàn cây."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Loài nọc xoài chưa được nghiên cứu về thành phần hoá học."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Nọc xoài có tác dụng cầm máu, sát trùng, hạ sốt, tiêu độc, tán ứ."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Nọc xoài chỉ mới được dùng theo kinh nghiệm dân gian Việt Nam.  Ở Cần Thơ, nhân dân dùng lá tươi, giã nát đắp lên vết thương để sát trùng và làm vết thương mau lành, hoặc xát lên vết thiến heo cho mau lành.  Ở Tiền Giang, toàn cây nọc xoài sắc uống, kết hợp lấy lá tươi giã nát, đắp để chữa sưng tấy.  Ở Minh Hải, toàn cây sắc uống lại chữa băng huyết. Ngày 30 – 50g dưới dạng nước sắc. Dùng ngoài không kể liều lượng.  Nguồn: 3033 Cây thuốc Đông y Tuệ Tĩnh"
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

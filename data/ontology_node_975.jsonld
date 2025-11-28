@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc vạn thọ",
+      "ten_khac": "Cúc vạn thọ, Hoàng cúc hoa, Khổng tước thảo",
+      "ten_khoa_hoc": "Tagetes erecta L.",
+      "ma_taxon": "79312",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mọc đứng, cao 0,6-1m, phân nhánh thành bụi có cành nằm trải ra.",
+      "lá": "Lá xẻ sâu hình lông chim, các thuỳ hẹp, dài, nhọn, khía răng cưa.",
+      "hoa": "Đầu hoa toả tròn, rộng 3-4cm hay hơn, mọc đơn độc hay tụ họp thành ngù; lá bắc của bao chung hàn liền với nhau; hoa màu vàng hay vàng cam, mào lông gồm 6-7 vẩy rời nhau hoặc hàn liền nhau. Hoa ở phía ngoài hình lưỡi nhỏ xoè ra, hoa ở phía trong hình ống và nhỏ.",
+      "quả": "Quả bế có 1-2 vẩy ngắn.",
+      "mùa hoa": "Cây ra hoa vào mùa đông cho tới mùa hạ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây của Mỹ châu nhiệt đới (Mêhicô), được trồng làm cảnh nhưng cũng thuần hoá ở chỗ nóng, ẩm và sáng. Trồng bằng ngọn hay mầm nách; cũng có khi gieo hạt. Thu hái hoa vào mùa xuân, hè, phơi khô ngoài nắng. Thu hái lá quanh năm, thường dùng tươi."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa, lá và rễ – Flos, Folium et Radix Tagetis Erectae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây chứa 0,01% tinh dầu (ở mẫu khô lên đến 0,06%) có mùi thơm, mà thành phần gồm có d-limonen, ocimen, l-linalyl acetat, l-linalool, tagetone và nonanal. Hoa chứa chất màu là quercetagetin, từ các cánh hoa khô, người ta đã chiết được quercetagitrin và một glucosid của quercetagetin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bệnh đường hô hấp, đau mắt (viêm kết mạc); Ho gà, viêm khí quản; Viêm miệng, viêm hầu, đau răng. Dùng ngoài chữa viêm tuyến mang tai, viêm vú, viêm mủ da. Liều dùng 10-15g, dạng thuốc sắc. Dùng ngoài, nghiền hoa với ít giấm để đắp, nghiền rễ tươi và lá chữa viêm mủ da. Ở Campuchia, người ta dùng lá non làm rau ăn sống hay nấu canh. Ở Ấn Độ, hoa được dùng trị đau mắt, mụn nhọt độc; dùng trong uống lọc máu; dịch hoa tươi dùng trong bệnh trĩ chảy máu; lá được dùng đắp mụn nhọt, dịch lá được dùng trị đau tai",
+      "chữa": "Ho gà: dùng 15 hoa, sắc nước và thêm đường cát để uống. Đau răng, đau mắt: dùng 15 hoa Cúc vạn thọ sắc nước uống. Viêm tuyến mang tai, viêm vú: dùng Cúc vạn thọ, Thất diệp nhất chi hoa, Kim ngân hoa với lượng bằng nhau, nghiền ra và thêm giấm để đắp chỗ đau."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

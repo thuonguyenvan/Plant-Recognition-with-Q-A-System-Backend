@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kế sữa (cúc gai)",
+      "ten_khac": "Kế sữa, Cúc gai, Nhũ kế",
+      "ten_khoa_hoc": "Silybum marianum (L.) Gaertn.",
+      "ma_taxon": "52586",
+      "ho": "Cúc (Asteraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo hai năm cao 30-150cm, có thân thẳng và phân nhánh, có rễ trụ, to, dài.",
+      "lá": "Lá xanh, ôm thân màu xanh bóng loáng, thường có nhiều đốm trắng dọc theo các gân, mép có răng dạng gai mà gai lại có màu vàng và rất nhọn; các lá phía trên và ở giữa ôm lấy thân; các lá ở dưới rất to, có phiến chia thuỳ và có cuống.",
+      "hoa": "Cụm hoa đầu đơn độc rộng 3-8cm. Lá bắc ngoài và giữa có một phần phụ hình tam giác màu lục thu lại thành một gai to, ở gốc có 4-6 gai nhỏ ngắn hơn ở mỗi bên. Hoa tía hơi giống nhau đều có 5 cánh hoa, 5 nhị và bầu một ô với 2 lá noãn và 2 vòi nhuỵ phình ở gốc.",
+      "quả": "Quả bế màu đen bóng có viền vàng nhiều hay ít.",
+      "mùa hoa": "tháng 5-8 của năm thứ hai."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của vùng Địa trung hải, mọc hoang ở vùng Nam nước Pháp và gần như hoang dại ở phần Nam và Trung châu Âu, Bắc Phi châu, Trung và Đông Á châu đến Bắc và Nam Mỹ. Ta có nhập trồng, cây ưa đất tốt và mát. Thu hái cây và các cụm hoa rồi phơi khô, khi cần đập lấy quả."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây hoặc quả (Herba seu Fructus Silybi)."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong vòng hơn 50 năm qua, các nhà khoa học đã thành công trong việc xác định các hoạt chất có trong cây kế sữa. Quả chứa glucid mà thành phần là glucose và pentose; có các vết của một tanin catechic, một chất màu, một chất đắng, một chất cay. Có tinh dầu, các chất histamin và tyramin; còn có một phytomelan. Đáng chú ý nhất là nhóm ba chất liên quan có tên chung là silymarin. Chất này gồm một nhóm hỗn hợp gọi là flavonolignands (silybinin, silychristin và silydianin) mà tên gọi thông thường là silymarin. Phần lớn những sản phẩm của cây kế sữa được bào chế đúng tiêu chuẩn và tinh chất của nó được trích ra từ hạt và trái chứa vào khoảng 70 đến 80 phần trăm chất flavonolignands."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị đắng, tính hàn; toàn cây có tác dụng hạ nhiệt, cầm máu, trừ lỵ; quả làm tăng áp huyết, làm giảm các cơn đau suyễn và ho, đau gan."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Kế sữa là một loại cây bản địa, phổ biến ở các vùng như Địa Trung Hải, Nam Âu, Trung Đông, Bắc Phi. Từ xa xưa, Kế sữa đã được sử dụng rất rộng rãi trong đời sống hàng ngày, đặc biệt là để chữa bệnh và chăm sóc sức khỏe.  Kế sữa được người dân bản xứ ở đây coi như một loại thực phẩm, họ sử dụng hầu hết các bộ phận của cây để làm rau ăn hàng ngày. Người châu Âu từ xưa đã có thói quen dùng lá non Kế sữa cho món salad, thân cây có thể ăn như măng tây, rễ được dùng như cây diếp củ, ngọn hoa thì được sử dụng tương tự như actiso, và đặc biệt hạt của cây sau khi nướng thì có thể chế biến thành một loại đồ uống giống như café. Từ 2000 năm trước, Người Hy Lạp cổ đại thường dùng Kế sữa để chữa trị các bệnh về gan, mật và để bảo vệ gan khỏi các chất độc. Họ dùng hầu hết các bộ phận của cây như lá, hạt, quả để làm cồn thuốc chữa bệnh và thuốc bổ. Theo các tài liệu ghi chép lại, Kế sữa được dùng điều trị các bệnh vàng da, viêm  nhiễm (như viêm da, viêm phổi), hen suyễn, bệnh dại và một số bệnh về lá lách. Nicholas Culpeper, một dược sĩ nổi tiếng thế kỷ 17 ở châu Âu đã ghi chép lại việc sử dụng Kế sữa rất phổ biến ở đây, cho các trường hợp nhiễm độc gan, lá lách, bệnh vàng da, bệnh gan mật. Ngoài ra, các thầy thuốc còn dùng Kế sữa cho phụ nữ sau khi sinh với tác dụng kích thích bài tiết sữa mẹ. Đặc biệt, Kế sữa có tác dụng giải độc cho gan rất mạnh và nhanh chóng. Vào cuối thế kỷ thứ 19 và đầu thế kỷ thứ 20, các bác sĩ ở Hoa Kỳ đã dùng hạt của milk thistle để làm giảm chứng sung máu trong gan, tỳ tạng (spleen) và thận. Nhiều chuyên gia dược thảo tin rằng chiết xuất (extract) của milk thistle có thể phòng ngừa hoặc chữa trị sự rối loạn chức năng của gan kể cả gan bị nhiễm trùng, gan có mỡ do uống rượu lâu ngày, gan bị hư hại do dùng thuốc và chất độc công nghiệp như carbon tetrachloride.  Hiện nay, nhiều nghiên cứu khoa học cho thấy một trong những hợp chất của milk thistle (silymarin) có công hiệu mạnh để bảo vệ gan chống lại sự hủy hoại gây ra bởi vi khuẩn, độc tố, rượu và một vài loại thuốc chữa bệnh đau nhức thông thường (như là thuốc acetaminophen, cũng gọi là Paracetamol, Panadol, Panamax, Panadein…). Chất này gồm một nhóm hỗn hợp gọi là flavonolignands giúp gan sửa chữa lại các tế bào bị hư hoại vì rượu và các độc tố khác. Silymarin cũng giúp tế bào gan tránh khỏi bị tiêu diệt bởi bệnh viêm gan và chất antioxidant trong milk thistle có công hiệu chữa bệnh rất mạnh mẽ.  Theo một báo cáo của ABC (Ủy ban quốc gia Mỹ về thực vật học) cho biết vào tháng 1 năm 2007, bệnh viện Dominican (ở Santa Cruz, California) đã thành công trong điều trị cho trường hợp một gia đình 6 thành viên phải nhập viện do ngộ độc nấm Amanita Phalloides. Sau khi nhập viện, các bệnh nhân này đã được bác sĩ bệnh viện chẩn đoán bị ngộ độc nấm Amanita Phalloides (do ăn món bánh thịt chiên được làm với nấm dại), hậu quả sẽ làm huỷ hoại và suy kiệt chức năng gan chỉ trong vài ngày, dẫn đến tử vong nhanh chóng. Bác sĩ Todd Mitchell ở bệnh viện Dominican đã tiến hành thu thập các tài liệu về cách giải độc loại nấm Amanita Phalloides và ông đã tìm được thông tin về một loại thuốc tiêm truyền với hoạt chất chiết xuất từ cây Kế sữa có khả năng giải độc trong trường hợp này. Tuy nhiên, đây là sản phẩm của hãng dược phẩm Madaus, Bỉ sản xuất và lúc đó vẫn chưa lưu hành ở Mỹ do chưa được FDA (Cục quản lý dược phẩm và thực phẩm của Mỹ) cấp số đăng ký. Do vậy, các bác sĩ bệnh viện Dominican phải rất vất vả liên hệ với đại diện của hãng Madaus ở Đức để có thể xin viện trợ thuốc khẩn cấp và đã nhận được sự đồng ý. Tuy vậy vẫn cần có thời gian để thuốc được chuyển đến, và trong thời gian này, các bác sĩ phải đối mặt với tình trạng hết sức nguy kịch của các bệnh nhân. Không thể để tình trạng xấu đi, họ quyết định sử dụng dược phẩm có hoạt chất tương tự chiết xuất từ Kế sữa nhưng bằng đường uống cho các bệnh nhân này. Và rất may mắn là không lâu sau đó, thuốc của Madaus đã đến được bệnh viện Dominican. Thật kỳ diệu, 5 trong số 6 bệnh nhân đã hồi phục và được xuất viện, chỉ có duy nhất một bệnh nhân lớn tuổi nhất, 83 tuổi không qua khỏi do bị suy thận và tuổi quá cao. Nhưng ở bệnh nhân này cũng cho thấy các dấu hiệu hồi phục ở gan khi được điều trị bằng dược phẩm có nguồn gốc từ Kế sữa. Kết quả này một lần nữa chứng minh tác dụng tuyệt vời của Kế sữa đối với gan, một cơ quan quan trọng của cơ thể con người. Trong một thí nghiệm của Tiến sỹ G.Vogel, tại Đức với 60 trường hợp bệnh nhân bị ngộ độc nấm. Dù cho tỷ lệ tử vong trong trường hợp này lên đến 30 – 40%, nhưng tất cả các trường hợp bệnh nhân được uống nước chiết của cây milk thistle đều sống sót. Một nghiên cứu khác trên 2000 bệnh nhân bị rối loạn chức năng gan cho sử dụng nước cây milk thistle, tình trạng của gan đều được cải thiện rõ rệt. Theo nghiên cứu của Kostek H và cs thì Silibinin là thành phần chứa trong cây kế sữa  (Sylibum marianum). Cơ chế hoạt động của nó rất phức tạp và rất có lợi trong việc bảo vệ tế bào gan. Một mặt hợp chất này ngăn chặn sự xâm nhập của các độc tố khác nhau (ví dụ amanitin) vào các tế bào gan không cho phép theo cách này để làm chết tế bào và mặt khác, nó ngăn cản quá trình apoptosis qua nội bào. Nó bảo vệ gan khỏi oxy hóa của các gốc tự do trong tế bào bằng cách tăng cường các hoạt động của enzyme superoxide dismutase và peroxidase, cũng như bằng cách tăng nồng độ glutathione và các hoạt động của peroxidase. Silibinin củng cố và ổn định màng tế bào, ức chế sự tổng hợp prostaglandin có liên quan với sự peroxy hóa lipid và thúc đẩy sự tái sinh của gan thông qua việc kích thích sự tổng hợp protein và ảnh hưởng đến việc sản xuất các tế bào gan mới Các silymarin (80%) đặc biệt là Silybin (30%), silychristin và silydianin của Silybum marianum (Milk Thistle) tham gia giải độc và tác động lên các lớp chất béo lắng đọng bởi đặc tính bảo vệ và chữa tổn thương gan bằng cách ổn định màng tế bào của gan và kích thích sự tổng hợp các protein gan dẫn đến việc sản xuất các tế bào gan mới, tái tạo các mô gan. Tạo điều kiện cho nhũ hóa chất béo và tiêu hủy TG và cholesterol. Giảm hoại tử tế bào gan, và giảm sự hình thành mô xơ cũng như mức transaminase huyết thanh. Rất hiệu quả trong điều trị viêm ống mật. Tác dụng bảo vệ gan khỏi các chất độc khác nhau (rượu, paracetamol …), giảm mức SGOT, SGPT và bilirubin. Ủy ban EU và WHO công nhận việc sử dụng nó trong “điều trị các rối loạn tiêu hóa, một tập hợp các triệu chứng tiêu hóa nhiều hoặc ít liên quan trực tiếp đến các rối loạn không chức năng của hệ thống gan mật, và trong trường hợp ngộ độc gan (viêm gan và xơ gan)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Người hay uống rượu bia, suy giảm chức năng gan do gan yếu, điều trị thuốc tây dài ngày, nhiễm độc, tiếp xúc với hóa chất độc hại…có thể dùng cây Kế sữa sắc uống như sau:  Cách 1: Rễ dùng sống hoặc nấu chín: Rể cây Kế sữa có chất nhờn, mùi thơm dịu. Cách 2: Lá dùng sống hay chín: Lá Kế sữa có nhiều gai cứng. Trước khi dùng nên dùng dao cạo sạch gai. Lá kế sữa hơi dày, lá non có vị hơi ngọt. Thời tiết nóng và khô khiến lá có vị đắng.-  Nụ hoa nấu chín . Cách 3: Thân cây dùng chín hoặc sống  Lưu ý: Nên bóc vỏ và ngâm trước khi dùng để giảm vị đắng. Cây Kế sữa được sử dụng tốt nhất vào mùa xuân khi chúng còn non nhỏ.  Sản phẩm chứa dược liệu Kế sữa hiện nay  GIẢI ĐỘC GAN TUỆ LINH PLUS  Thành phần:  Cao khô cà gai leo: 500mg Cao khô mật nhân: 150mg Cao khô kế sữa: 100mg Cao khô actiso: 50mg Cao khô khúng khéng: 50mg  Công dụng:  Hỗ trợ giải độc gan, hỗ trợ tăng cường chức năng gan trong viêm gan virus, xơ gan, người uống nhiều rượu bia, thuốc có hại cho gan. Hỗ trợ giảm triệu chứng: men gan cao, vàng da, mệt mỏi, chán ăn, mẩn ngứa do chức năng gan kém.  Giải độc gan Tuệ Linh plus – Sản phẩm chuyên biệt cho người viêm gan virus, xơ gan, người uống nhiều bia rượu"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

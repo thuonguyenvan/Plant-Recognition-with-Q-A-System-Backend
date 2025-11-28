@@ -1,0 +1,193 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hương nhu trắng",
+      "ten_khac": "Hương nhu trắng, É lá lớn",
+      "ten_khoa_hoc": "Ocimum gratissimum L.",
+      "ma_taxon": "165769",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, sống lâu năm, phân cành nhiều thành bụi sum suê, cao 1 – 1,5 m.",
+      "thân": "Thân vuông, hóa gỗ ở gốc, màu lục hoặc tím tía, có lông ở phần non.",
+      "lá": "Lá mọc đối, hình trứng thuôn, dài 5 – 10 cm, rộng 3-6 cm, gốc thuôn hẹp, đầu nhọn dài, mép khía răng thô, có lông ở hai mặt; cuống lá dài 2,5 – 5 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc dầu cành thành chùm xim, đôi khi phân nhánh ở gốc; lá bắc không cuống, sớm rụng; hoa màu trắng xếp thành những vòng sít nhau trên cụm hoa, mỗi vòng có 5 – 6 hoa, cuống hoa phủ đầy lông; đài hoa dài 5 mm, có lông, thùy trên hình tròn, dài hơn các thùy dưới và thùy bên; tràng hoa có cánh khía răng tròn ở mép; nhị 4, vượt ra ngoài tràng, chỉ nhị có lông ở gốc.",
+      "quả": "Quả bế tư, hình cầu, màu nâu, mặt ngoài sần sùi.",
+      "mùa hoa": "tháng 5-7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hương nhu trắng có lẽ có nguồn gốc ỏ vùng nhiệt đới châu Phi hoặc Ấn Độ, vì ở 2 nơi này hiện có hai quần thể hương nhu trắng mọc hoang và trồng cùng tổn tại với sự đa dạng cao. Ngày nay, cây được trồng ở một số nước khác như ở vùng Trung, Nam Phi và Đông Nam Á. Trong đó, duy nhất có Việt Nam đã trồng hương nhu trắng trên phạm vi rộng ở nhiều địa phương từ các năm 1978 – 1989.  Hương nhu trắng là cây bụi ưa sáng, có biên độ sinh thái khá rộng, có thể thích nghi với vùng có khí hậu nhiệt đới nóng và ẩm cũng như vùng cận nhiệt đới; với nhiệt độ trung bình 23 – 30°C; về mùa đông nhiệt độ có thể xuống dưới 10°c. Ở Ấn Độ, cây mọc tự nhiên ở khắp các độ cao, từ vài chục đến 1500 m.  Ở Việt Nam, hương nhu trắng sinh trưởng, phát triển mạnh ở vùng đồng bằng, trung du và núi thấp. Ở độ cao trên 1000 m, cây mọc chậm. Cây ra hoa quả nhiều hàng năm. Khả năng tái sinh chồi của cây khá mạnh. Tổng sản lượng tinh dầu hương nhu trắng trên thế giới mỗi năm khoảng 50 tấn (tương đương với 0,8 triệu USD). Nơi sản xuất nhiều là Ấn Độ và Phi châu. Việt Nam cũng đã từng sản xuất tinh dầu hương nhu trắng để xuất khẩu.",
+      "Đặc điểm sinh trưởng": "Ở Việt Nam, hương nhu trắng sinh trưởng, phát triển mạnh ở vùng đồng bằng, trung du và núi thấp. Ở độ cao trên 1000 m, cây mọc chậm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Hương nhu trắng được trồng nhiều hơn hương nhu tía vì năng suất thân lá và tỷ lệ tinh dầu đều cao hơn. Cây được nhân giống bằng hạt. Hạt thu xong không nên gieo ngay vì tỷ lệ nảy mầm kém mà phơi khô, bảo quản đến đầu mùa xuân sang năm (tháng 1 – 2). Lúc này hạt đã qua thời gian ngủ nghỉ và nhiệt độ không khí phù hợp cho việc nảy mầm.  Hạt hương nhu thường được gieo trong vườn ươm, khi cây con cao 20 – 30 cm thì đánh đi trồng (tháng 4-5). Hương nhu trắng không kén đất, nhưng nếu trồng trên đất quá xấu, nhiều sỏi đá, quá khô hạn, cây sẽ sinh trưởng phát triển kém. Trong thực tế, hương nhu trắng được trồng ở những ruộng cao, bờ kênh, bờ vùng, bờ thửa, ven đường đi hoặc chỗ đất bạc màu, đất đồi không quá nhiều sỏi đá. Trồng trên đất tận dụng không cần phải làm đất mà chỉ cuốc hốc.  Nếu là đất ruộng, đất bằng, cần cày bừa kỹ, để ải. Nếu đất thấp, cần lên luống để tiện thoát nước, sau đó bổ hốc. Tán cây lúc trưởng thành có thể đạt tới 1 m hoặc hơn nên khoảng cách trồng giữa các cây ít nhất phải 50 cm. Tuy có thể trồng trên đất tận dụng, nhưng muốn có năng suất cao và ổn định, vẫn phải bón phân và chăm sóc chu đáo.  Khi trồng, cần bón lót cho mỗi hecta 10 – 15 tấn phân chuồng, 100 kg supe lân và 50 kg kali. Đối với đất quá chua, có thể bón thêm vôi bột. Phân được trộn đều với đất theo hốc rồi trồng cây con. Trồng xong, tưới ngay và duy trì đủ độ ẩm cho tới khi cây bén rễ. Hàng tháng, cần làm cỏ, xới xáo, vun gốc và dùng phân nước, nước giải hoặc đạm pha loãng (2%) để tưới thúc.  Đến mùa xuân năm sau, đốn gốc cách mặt đất 20 – 30 cm để kích thích cây ra chồi. Ở năm thứ ba, cũng có thể đốn như vậy, nhưng cao hơn một chút. Các năm sau, khi thu hái, kết hợp tỉa bớt cành già để tập trung đinh dưỡng cho cành non phát triển. Tùy tình hình sinh trưởng của cây, có thể bón thêm phân chuồng, còn phân đạm, trung bình mỗi năm nên bón 100 – 150 kg/ha. Tập trung bón vào trước khi cây ra hoa và sau khi thu hoạch dược liệu. Các nguồn phân hữu cơ khác có thể bón không hạn chế.  Hương nhu trắng có khả năng chống chịu nắng hạn và sâu bệnh rất tốt, nhưng chịu úng kém. Vì vậy, cần chú ý thoát nước nhanh sau mưa lớn. Hương nhu trắng sau 3-4 tháng trồng đã có thể thu hái. Cắt cả cành lá khi ra hoa để cất lấy tinh dầu hoặc phơi trong râm mát đến khô để dùng dần."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất, thu hái khi cây ra hoa, phơi khô. Có thể cất tinh dầu."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất của hương nhu trắng chứa tinh dầu. Theo quy định của Dược điển Việt Nam II, tập 3, dược liệu phải chứa ít nhất 1% tinh dầu (đã trừ độ ẩm). Hàm lượng tinh dầu (so với dược liệu khô) cao nhất ở hoa 2,77%, sau đến lá 1,38% và bộ phận trên mặt đất 1,14%.  Sau khi thu hái, hương nhu trắng cần được cất sớm. Hàm lượng tinh dầu sẽ giảm theo thời gian bảo quản (giảm 5% sau 15 giờ, 14% sau 24 giờ, 25% sau 48 giờ và 51,5% sau 72 giờ, trong điều kiện nhiệt độ ngoài khí quyển là 29 – 31°C).  Hàm lượng tinh dầu cũng giảm nhanh nếu nhiệt độ khí quyển tăng lên (giảm 5% ở 0°, 11,7% ở 15°, 16% ở 31°, 39,6% ở 37°c và 56,4% sau 24 giờ bảo quản). Hàm lượng tinh dầu giảm có thể do sự có mặt của enzym có khả năng phân hủy tinh dầu trong cây sau khi thu hái.  Trên thế giới, người ta phân loại hương nhu trắng thành nhiều nhóm hóa học :  Nhóm giàu eugenol. Nhóm giàu p – caryophyllen (39,5%) và germacren (29,9%). Nhóm giàu thymol. Hàm lượng eugenol, có thể đạt 75 – 80%, từ nhiều mẫu tinh dầu thu thập được ở nhiều địa phương ở Việt Nam.  Tinh dầu hương nhu trắng chứa: a -thuyen 0,05% a – copaen 0,50% a – pinen 0,07% p – bourbonen 0,50% sabinen 0,04% p ^ ylangen 0,20% myrcen 0,03% p – elemen 0,20% a – terpinen 0,04% p – caryophylen 4,5% p – myrcen 0,10% citronelyl acetat 0,10% límonen 0,02% methylchavicol 0,02% 1-8 cineol vết a – humulen 0,25% cis-P-ocimen 7% a – terpineol 0,30% trans P-ocimen 0,30% D – germacren 8,80%terpinolen 0,03% p-cubeben 0,20% lìnalol 0,10% Y- maurolen 0,02% alocimen 0,04% V – cadinen 0,80% terpinen-4-ol 0,90% myrtenol 0,04% eugenol 74% caryophylen oxyd 0,03% cubeben 0,60% calamen 0,02%.Đáng chú ý là tinh dầu chứa nhiều eugenol (74%); D-germacren (8,80%), cis p – ocimen (7%).  Theo quy định của Dược điển Việt Nam II, tập 3 hàm lượng eugenol toàn phần phải đạt tối thiểu 60% còn Liên Xô trước đây quy định tiêu chuẩn cho 2 loại tinh dầu hương nhu: tinh dầu hương nhu nhẹ (D = 0,9588-0,9852) và tinh dầu hương nhu nặng (D = 1,030 – 1,056). Hàm lượng phenol toàn phần phải đạt 52% với tinh dầu hương nhu nhẹ và 82% với tinh dầu hương nhu nặng. Tinh dầu hương nhu trắng là nguồn nguyên liệu dùng để chiết xuất eugenol. Theo tài liệu nước ngoài, từ phần tinh dầu không eugenol, có thể tổng hợp chất thơm"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hương nhu trắng có cùng công dụng với hương nhu tía."
+    }
+  ]
+}

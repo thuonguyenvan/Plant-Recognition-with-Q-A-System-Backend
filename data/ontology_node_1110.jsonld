@@ -1,0 +1,273 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chua me hoa đỏ",
+      "ten_khac": "Chua me hoa đỏ, Chua me đất hoa hồng",
+      "ten_khoa_hoc": "Oxalis corymbosa DC.",
+      "ma_taxon": "61963",
+      "ho": "Chua Me Đất (Oxalidaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, cao 20 – 30 cm.",
+      "gốc": "Phần dưới đất có nhiều vảy xếp sít nhau.",
+      "lá": "Lá mọc thành hình hoa thị, có 3 lá chét hình tim rộng, lõm ở đầu, có lông, mặt dưới có tuyến hơi đen; cuống lá mảnh, dài, có lông.",
+      "hoa": "Cụm hoa mọc thẳng từ phần dưới đất, cao hơn lá, thành ngù hay tán; hoa màu hồng; lá đài hình mác, có 2 tuyến kéo dài ở ngọn, nhẵn ở phía dưới, có lông cứng ở phía ngoài, cánh hoa nhẵn, nhị 10, chỉ nhị xù xì, bầu dài có lông.",
+      "quả": "Quả nang, dài, có đài tồn tại",
+      "mùa hoa": "tháng 3-4"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chua me hoa đỏ có nguồn gốc ở vùng nhiệt đới Mexico, phân bố rải rác khắp các vùng nhiệt đới và cận nhiệt đới Bắc bán cầu. Ở Việt Nam, chua me hoa đỏ thường gặp ở các tỉnh vùng núi hoặc trung du, đôi khi thấy cả ở đồng bằng; độ cao phân bố đến 1500 m.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hòa Bình"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Chua me hoa đỏ thuộc loại cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc rải rác hoặc tập trung thành đám, lẫn với các loài cỏ thấp khác trên đất ẩm, nhiều mùn ở ruộng trồng hoa màu, trên nương rẫy hay các bãi hoang ở chân núi, ven đường đi và trong rừng lũng. Cây ra hoa quả nhiều hằng năm; cây mọc từ hạt thường thấy vào cuối mùa xuân; phần gốc còn lại sau khi bị cắt có khả năng tái sinh học.",
+      "Đặc điểm sinh trưởng": "Chua me hoa đỏ được coi là loài cỏ dại ảnh hưởng tới cây trồng. Muốn diệt trừ triệt để phải nhổ bỏ cả gốc; hạt có thể tồn tại trong đất khoảng 6 – 7 tháng vẫn có khả năng nảy mầm tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá hoặc toàn cây, thu hái quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chua me hoa đỏ chứa nước 74,4%, N 0,7%, Ca(CaCO₃) 0,41%, K (K₂O) 0,98%, phosphoric (P₂O₅) 0,18%."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chua me hoa đỏ ít được dùng hơn chua me đất hoa vàng, đôi khi là thuốc mát, chữa đại tiểu tiện không thông. Dùng ngoài, lá giã nhỏ hơ nóng, đắp chữa sưng tấy, mụn nhọt. Cần thận trọng khi uống vì chua me hoa đỏ chứa hàm lượng cao kali oxalat, nếu dùng luôn hằng ngày có thể gây hình sỏi oxalat trong đường tiết niệu.",
+      "chữa": "Chữa đại tiểu tiện không thông: Chua me hoa đỏ, mã đề, mỗi thứ một nắm, dùng tươi, giã nát, vắt lấy nước cốt, thêm đường uống.",
+      "chữa": "Chữa trĩ: Chua me hoa đỏ, rau sam, mỗi thứ một nắm dùng tươi, bổ kết 1 quả giã nhỏ, nấu nước ngâm rửa, ngày 3 lần."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

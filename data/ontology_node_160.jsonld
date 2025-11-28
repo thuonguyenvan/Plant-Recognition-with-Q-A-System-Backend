@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bìm bìm biếc",
+      "ten_khac": "Hắc sửu, Bìm bìm lam, Bìm bìm biếc",
+      "ten_khoa_hoc": "Pharbitis nil (L.) Choisy",
+      "ma_taxon": "164091",
+      "ho": "Convolvulaceae (Bìm bìm)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Cây dây leo bằng thân cuốn, thân và cành mảnh, có lông rải rác.",
+      "lá": "Lá mọc so le, có cuống dài từ 5-9 cm, chia 3 thùy, gốc hình tim, đầu nhọn. Lá dài khoảng 14 cm và rộng 12 cm, mặt trên nhẵn màu lục, mặt dưới nhạt hơn và có lông ở gân. Gân lá có từ 5-7 gân gốc.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, thành xim từ 1-3 hoa. Hoa to màu hồng tím hoặc lam nhạt, cuống hoa ngắn có lông và mang 2 lá bắc mọc đối. Đài hoa hình chuông, có 5 răng đều, hẹp nhọn, mặt ngoài có lông. Tràng hoa hình phễu, ống dài khoảng 3-5 cm, 5 cánh hoa hàn liền. Nhị hoa có 5 nhị không đều, chỉ nhị phồng và có lông ở gốc, bao phấn hình mũi tên. Bầu hoa có 3 ô, mỗi ô chứa 2 noãn.",
+      "quả": "Quả nang hình cầu, nhẵn, đường kính khoảng 8 mm, bao bọc trong đài đồng trưởng. Hạt có 2-4 hạt, có 3 cạnh, màu đen, mặt ngoài có lông mềm.",
+      "mùa hoa": "Cây ra hoa và quả vào khoảng tháng 9 đến tháng 11.",
+      "mùa quả": "Cây ra hoa và quả vào khoảng tháng 9 đến tháng 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hiện nay bìm bìm biếc mọc trong trạng thái hoang dại ở các bờ rào vườn, ven đường đi tam đảo, thị xã lào cai, yên bái, thái nguyên và một số nơi khác. Cây ưa ẩm, thường có hiện tượng tàn lụi vào mùa đông, ra hoa quả nhiều hàng  năm. Số cây con mọc từ hạt xung quanh cây mẹ thấy cũng nhiều. khi cây bị chặt phá nhiều lần trong năm, phần còn lại vẫn có khả năng tái sinh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt đã phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt bìm bìm biếc chứa 2% pharbitin, 11% chất béo, acid nilic, tysergol, chanoclavin, isopeniciavin, elymoclavin.",
+      "Các hợp chất": "Mười hợp chất được phân lập từ chiết xuất EtOAc của Bìm bịp biếc . Dựa trên dữ liệu hóa lý và quang phổ, chúng được xác định là N-cis-Feruloyltyramine (1), Np-hydroxy-trans-coumaroyhyramine (2), N-trans-Feruloyhyramine (3), Np-hydroxy-cis-coumaroyltyramine (4 ), cinnamoyl-tyramine (5), tyramine (6), 7-hydroxycoumarin (7), 6-methoxy-7-hydroxycoumarin (8), uricil (9) và β-sitosterol-3-O-β-D- glucozit (10)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chủ trị:  Các vấn đề về tiết niệu: Bí tiểu, tiểu không thông, tiểu rắt, tiểu buốt, tiểu ít, tiểu ra máu. Phù thũng (sưng phù). Cước khí (đau nhức bên trong gót chân do phong hàn thấp). Tẩy giun sán. Ho suyễn do đờm ở phổi.  Các nghiên cứu hiện đại đã phân lập và nghiên cứu các hợp chất trong bìm bìm biếc, đặc biệt là trong hạt (Khiên ngưu tử), và ghi nhận một số tác dụng sau:  Tăng độ lọc Inulin của thận: Inulin là một chất được sử dụng để đo chức năng thận. Việc tăng độ lọc Inulin cho thấy bìm bìm có thể hỗ trợ chức năng thận. Tác dụng ức chế giun đũa (in vitro): Các thí nghiệm trong ống nghiệm cho thấy bìm bìm có khả năng ức chế sự phát triển của giun đũa. Chất Pharbitin: Đây là một hoạt chất có trong hạt bìm bìm, có tác dụng tẩy mạnh, tương tự như Jalapin, giúp diệt các loại giun, sán và ấu trùng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

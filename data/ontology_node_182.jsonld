@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bánh hỏi",
+      "ten_khac": "Bánh hỏi, Lài trâu, Hoa ngọc bút",
+      "ten_khoa_hoc": "Ervatamia divaricate (L.) Burk.",
+      "ma_taxon": "169521",
+      "ho": "Apocynaceae (Trúc đào)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1-2 m.",
+      "lá": "Lá mọc đối, hình bầu dục thuôn, gốc tròn, đầu thuôn thành mũi nhọn, mép nguyên lương song, hai mặt nhẵn, mặt trên sẫm bóng, mặt dưới rất nhạt gân nổi rõ.",
+      "hoa": "Hoa màu trắng, thơm, mọc đơn độc hoặc thành đôi ở kẽ lá, dào có 5 răng, xẻ đến nửa chiều dài, tràng 5 cánh, có ống dài, hơi phình ở họng, nhị 5 đính ở chỗ phình của ống tràng, bầu có 2 lá nhẵn.",
+      "quả": "Quả đại, hạt có áo, màu đỏ.",
+      "mùa hoa": "tháng 5 – 9",
+      "mùa quả": "tháng 5 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây bánh hỏi có nguồn gốc ở vùng đông và bắc ấn độ. Ở Việt nam, bánh hỏi được trồng rải rác khắp địa phương, đặc biệt là hà nội và các tỉnh phụ cận. Cây ưa ẩm , sáng và có thể chịu bóng, thường được trồng ở đình chùa, công viên hay vườn các gia đình. Cây ra hoa nhiều hàng năm, những cây trồng ở miền bắc thường ít thấy quả."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá ,hoa và quả"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ và thân rễ cây bánh hỏi chứa alkaloid, vỏ chứa triterpen. Trong bánh hỏi còn các chất các tác dụng dinh học khác \u00a0như aparicin, ibogain, voacamin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ, vỏ và lá bánh hỏi có vị cay, tính mát, có độc, có tác dụng thanh nhiệt , giải độc, tán kết, \u00a0hạ huyết áp tiêu thũng, chỉ thống. Nhựa mủ làm giảm sưng tấy."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước sắc hoặc rượu ngâm với liều 6 – 9g rễ, vỏ thân bánh hỏi được dùng chữa cao huyết áp, sốt rét rừng, giun, tiêu chảy, kiết lỵ, đau bụng, ngộ độc, đau tại chỗ, đau mắt, đau răng. Lá và \u00a0hoa chữa ho và cao huyết áp. Nhựa cây để tẩy giun và tẩm tên độc.  Ghi chú: các bộ phận của cây bánh hỏi đều có độc, dùng phải thận trọng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

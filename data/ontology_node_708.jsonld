@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sam",
+      "ten_khac": "Sam",
+      "ten_khoa_hoc": "Tachypleus tridentatus Leach",
+      "ma_taxon": "361710",
+      "ho": "Thuộc ngành Chân khớp (Arthropoda), lớp Giáp cổ (Nerostoma)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Sam là một động vật sống ở vùng biển, ven bờ, trong các vịnh, đầm nước mặn, đặc biệt ở các cửa sông trên đất bùn lầy thoai thoải. Con lớn nhất dài tới 0,90m. Chúng bơi rất chậm và bò như cua. Hai loài sam phổ biến ở bờ biển nước ta là Tachypleus trídentatus và Carcinos corpius rotundicauda. Sam thường sống ở độ sâu 4-10m. Môi trường sống của sam là nhiệt độ 20-32°C. Độ mặn khoảng từ 18 đến 33%. Bắt đầu từ tháng 4, sam bơi vào bờ đẻ trứng, đến cuối tháng 7 sam quay xuống biển. Sam đực dùng hai đôi chân đầu tiên bám chặt vào lưng con cái, sam cái dùng đôi chân sau đào một lỗ sâu khoảng 15cm trên bãi cát và vùi vào đất khoảng 200-1.000 trứng tùy theo từng loài. Ở loài sam còn duy trì khả năng thụ tinh bên ngoài, nghĩa là sam đực phóng tinh vào trứng trong các lỗ ở trên bài cát để thụ tinh. Trứng sam có kích thước 1,5- 3mm và chứa nhiều lòng đỏ. Trứng phát triển trong cát và được nước biển vỗ hàng ngày. Sau 6 tuần, trứng nở thành ấu trùng có kích thước khoảng 5 mm và không có đuôi. Trải qua 3 giai đoạn phát triển, ấu trùng lớn thành sam con có đuôi ngắn, rồi đuôi dài và lúc này giống hệt như sam trưởng thành nhưng có kích thước bé hơn rất nhiều. Sau 16 lần lột xác, sam con phát triển thành sam trưởng thành và có khả năng cho 1/3 lượng máu cơ thể. Thức ăn của sam là những loài giun nhiều tơ, các loài tôm cua thuộc lớp giáp xác có nhiều ở các cửa sông, và đầm lầy ven biển.  Trong Y học cổ truyền, Tuệ Tĩnh (thế kỷ 17) đã dùng vỏ sam chữa:  Gà lên đậu, sởi: Mai con sam 1 cái. Đốt tán bột, rau mùi một nắm. Hòa với nước sức vào da, lấy nước trộn đều cho uống, bả đắp vào chỗ đau (Nam dược thần hiệu). Chữa rong huyết khi có thai: Mai sam nướng vàng, bè nhỏ tán bột uống hoặc bẻ nhỏ sắc uống. Ngày dùng 4-6g mai sam."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kê",
+      "ten_khac": "Kẻ đỏ, kê vàng",
+      "ten_khoa_hoc": "Setaria italica (L.) P. Beauv.",
+      "ma_taxon": "168879",
+      "ho": "Lúa (Poaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống hằng năm, cao 0,5 – 1,5m.",
+        "thân": "Thân thẳng, hình trụ, đôi khi phân nhánh.",
+        "lá": "Lá xếp thành hai dãy đều, hình dải, dài 15 – 20 cm, gốc tròn có bẹ to, đầu thuôn nhọn, mép có lông mi, hai mặt nháp; lưỡi bẹ tiêu giảm, có lông dày.",
+        "hoa": "Cụm hoa mọc ở đầu ngọn thành bông kép to, hình trụ, dài 10 – 30 cm, dày đặc, đầu hơi thuôn nhọn, màu vàng nhạt; cuống cụm hoa có lông mềm. Các bông nhỏ hình cầu hay thuôn, có vòng lông dài ở gốc, màu lục sau màu vàng, mày mỏng, rộng, hình bầu dục.",
+        "quả": "Quả hình trái xoan hay gần tròn, màu trắng."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Setaria Beauv. ở Việt Nam có tới 13 loài, phần lớn là các loài cỏ dại, chỉ có 2 loại là cây trồng, trong đó có loài kê kể trên.  Kê có nguồn gốc ở Ấn Độ và đã trở thành cây trồng từ lâu đời ở hầu hết các quốc gia ở vùng Nam Á, Trung Á và Đông Nam Á. Ở Việt Nam, kê là cây trồng quen thuộc, với lịch sử cũng khá lâu dài tại nhiều tỉnh ở đồng bằng, trung du Bắc Bộ, Trung Bộ, Đông Nam Bộ và Tây Nguyên. Ở đồng bằng Bắc Bộ, người ta thường gieo trồng kê trên các bãi bồi của sông Hồng.",
+        "chủ_yếu": "Kê là loại cây đặc biệt ưa sáng"
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Kế gieo trồng bằng hạt. Thời vụ gieo hạt vào đầu mùa xuân.  Đất trồng kê cần tơi xốp, thoát nước. Vì thế trong nhân dân thường trồng kể ở các ruộng cao, trên nương rẫy và bãi bồi sông. Trước khi trồng, đất được cày bừa kỹ, lên luống cao khoảng 20 cm, rộng 0,9 – 1,0m; bón lót bằng phân chuồng mục.  Gieo hạt bằng cách gieo theo hàng hoặc gieo vãi, sau đó xoa nhẹ mặt luống để phủ hạt. Hạt gieo sau 5 – 10 ngày nảy mầm. Khi cây cao 10 – 15 cm, tiến hành tỉa thưa để 2 – 3 cây/khóm, cự ly giữa các khỏim 35 – 40 cm.  Chăm sóc chủ yếu là làm cỏ, xới đất, bón thúc bằng phân chuồng và lân. Cây trồng sau khoảng 5 tháng cho thu hoạch."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hạt và mầm hạt (Cốc nha hay Túc nha) – Semen Setariae et Fructus Setariae Germinatus"
+      },
+      "Thành phần": {
+        "thành phần": "Theo Võ Văn Chi (1997), hạt kê chứa 73% hydrocarbon; 10,8% protein; 2,9% lipid.",
+        "gồm chất": "Khi lên men protein, các acid amin giải phóng ra thấp hơn so với khi lên men protein của sữa và lúa mì. Ngoài ra, kể còn chứa D – alanyl, D – alanin, trypsin và c – amylasa tự do (Phytochem, 1990).",
+        "Các hợp chất": "Người ta còn phân lập được rất nhiều chất thuộc nhóm flavonoid và glycosid như: seraricin, vitexin, vitexin – 2″ – O – xylosid, vitexin – 2″-O- glucosid, apigenin, 7-p-coumaryl rutinosid, orientin, isoorientin, orientin – 2″ – O – xylosid, orientin – 2″ – glucosid, luteolin – 7 – rutinosid, scoparin, scoparin -2- O – xylosid, scoparin-2″ – O – glucosid, chrysoeriol – 7 – O – rutinosid."
+      },
+      "Tính vị": {
+        "Có vị": "Kê có vị ngọt, tính bình, có tác dụng bổ thận. Mầm hạt kê (cốc nha) có vị ngọt, tính ấm, có tác dụng tiêu thực, hoà trung, kiện tỳ, khai vị. Cốc nha sao có tác dụng tiêu thực, cốc nha tiêu (sao cháy) có tác dụng làm tiêu tích trệ."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Kê là một loại thực phẩm thường dùng trong nhân dân. Kể cũng được dùng làm thuốc lợi tiểu trị ho [Võ Văn Chi, 1997: 609 – 610].",
+        "được_dùng": "Ở Ấn độ, người ta dùng ngoài trị thấp khớp và là vị thuốc gia dụng làm dịu các cơn đau do sinh đẻ.",
+        "làm thuốc": "Ở Trung Quốc, kê được coi là có tác dụng bổ lợi tiểu, làm mát, làm dịu da và làm săn. Kê được dùng trong y học cổ truyền Trung Quốc để trị nôn, tiêu chảy, chảy máu cam, đái tháo đường và thấp khớp.",
+        "chữa": "Ở Việt Nam, Lào, Campuchia, bột hạt kể trộn với mật mía được bôi trị nhọt ở trẻ em theo kinh nghiệm dân gian.",
+        "sắc uống": "Chữa âm hư hảo khát, mỏi mệt do mất ngủ hay lao động quá sức: Dùng hạt kê nấu chè đường ăn thì mát khoẻ, lại sức.",
+        "giã nát": "Chữa trẻ nhỏ sài kê, khắp mình nổi mụn đỏ như hạt kê: Dùng hạt kê nấu nước tắm."
+      },
+      "Cách dùng": {},
+      "luu_y": {}
+    }
+  ]
+}

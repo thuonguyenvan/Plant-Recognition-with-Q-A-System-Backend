@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lão quan thảo",
+      "ten_khac": "Lão quan thảo, Thạch nam",
+      "ten_khoa_hoc": "Geranium nepalense Sweet",
+      "ma_taxon": "359157",
+      "ho": "Geraniaceae (Mỏ hạc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống nhiều năm, cao 30 – 40 cm.",
+      "thân": "Thân hơi hình vuông, lúc đầu mọc bò sau đứng thẳng, phân cành nhiều, phủ lông trắng bạc.",
+      "lá": "Lá mọc đối, chia 5 thùy nông hình mác, mép có lông thô, gốc hình tim, đầu nhọn, hai mặt có ít lông ngắn mềm, màu trên màu lục sẫm, mặt dưới nhạt, lông không rõ, là kèm màu nâu sẫm; cuống lá dài 6 – 11 cm; lá gần ngọn có cuống ngắn hoặc không cuống.",
+      "hoa": "Cụm hoa mọc ở kẽ lá, thường có 2 hoa, có tiểu bao ở gốc; hoa màu hồng nhạt; là đài 5, mặt ngoài có lông; cánh hoa 5, đầu bằng hơi lõm; nhị 10, xếp thành hai hàng; bầu thượng, 5 ô.",
+      "quả": "Quả nang, hình cầu, ó mỏ dài và có lông, khi chín nứt thành 5 mảnh rời nhau, phần dưới cong lên, hạt thuôn tròn, nhẵn bóng, màu nâu sẫm.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Geranium L. Là một chi lớn gồm khoảng 400 loài phân bố chủ yếu ở vùng nhiệt đới, cận nhiệt đới và ôn đớn ấm. Ở việt nam, hiện có 3 loài dưới đây: Geranium nepalense Sweet Geranium thunbergii Sieb. et Zucc Geranium sibiricum var glabrius (Hara) Ohwi Về đặc điểm sinh học, các loài lão quan thảo có nhiều điểm tương đối giống nhau. Là cây thảo ưa ẩm, ưa sáng hoặc có thể hơi chịu bóng, cây thích hợp với vùng có khí hậu mát quanh năm. Cây thường mọc thành đám ở chân núi đá vôi, gần bờ suối hoặc trên các nương rẫy mới bỏ hoang. Độ cao phân bố từ 1300m (yên minh – hà giang) đến 1600m (Phó Bảng – Hà Giang). Lão quan thảo ra hoa quả hàng năm. Khi chín, quả tách thành 2 mảnh để hạt thoát ra ngoài. Cây con mọc từ hạt xuất hiện từ giữa tháng 3 đến đầu tháng 5. Lão quan thảo có hiện tượng hơi tàn lụi trong mùa đông rồi mọc lại vào giữa mùa xuân năm sau. Thân và cành có khả năng phân nhánh khỏe, bò lan trên mặt đất tạo nên các đám gần như \u00a0thuần loại."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất thu hái vào tháng 6-7, rửa sạch, buộc thành từng bó và sấy khô. Dược liệu sấy vẫn giữ được màu xanh."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lão quan thảo chứa các acid amin, amino – alcol, terpen, các nhóm chất phytosterol, carotenoid, flavonoid, tannin và đường tự do."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lão quan thảo có vị đắng, cay, tính bình, có tác dụng khử phong, hoạt huyết, thanh nhiệt, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lão quan thảo được dùng chữa đau phong thấp, chân tay tê dại, viêm ruột, kiết lỵ, ung nhọt với liều dùng hàng ngày là 6-15g, dưới dạng nước sắc, rượu ngâm hoặc cao lỏng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

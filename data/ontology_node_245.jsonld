@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây bông xanh",
+      "ten_khac": "Dây bông xanh, Bông báo (Mường), Ma dia (Hmông)",
+      "ten_khoa_hoc": "Thunbergia grandiflora (Roxb. ex Rottl.) Roxb.",
+      "ma_taxon": "129036",
+      "ho": "Acanthaceae (Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, có cuống dài, mép chia thuỳ không đều, gốc hình tim.",
+      "hoa": "Hoa to màu xanh tím mọc thành chùm ở nách lá đầu cành.",
+      "quả": "Quả nang nhẵn, có mũi nhọn dài; hạt ráp.",
+      "cây": "Dây leo bằng thân quấn. Thân có lông.",
+      "mùa hoa": "tháng 6-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của vùng Đông Dương, mọc hoang ở đồng bằng và vùng núi nhiều nơi khắp nước ta. Cũng được trồng làm cây cảnh.",
+      "thường_mọc": "Dây bông xanh thuộc loại cây ưa ẩm, ưa sáng, thường mọc trùm lên các loại cây bụi, cây gỗ nhỏ ở ven rừng, hoặc các vách đá ở vùng rừng núi ẩm đá vôi. Cây sinh trường phát triển gần như quanh năm, mùa đông lá vẫn xanh, ra hoa quả nhiều, tái sinh tự nhiên chủ yếu từ hạt. Trồng được bằng dây, phần thân và gốc còn lại sau khi chặt có khả năng tái sinh chồi khoẻ. Thu hái rễ vào mùa hè thu, tách lấy vỏ và bỏ lõi gỗ. Thu hái dây và lá quanh năm, dùng tươi hay phơi khô trong râm để dùng dần."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ rễ, dây và lá, dùng tươi, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá dây bông xanh chứa nhiều kali. Hoa chứa một lượng glucose và frutose, các acid amin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây bông xanh có vị cay, tính bình; có tác dụng khử phong."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Để chữa rắn cắn, dùng 30-50 lá tươi, giã lấy nước xoa bóp quanh vết cắn, và lấy bã đắp vào vết thương. Dùng riêng hoặc phối hợp với lá Vông vang và hạt Quất hồng bì. Nếu dùng lá khô thì tán bột mịn; khi cần, tẩm thêm nước xâm xấp mà đắp. Vỏ rễ dùng chữa đòn ngã tổn thương, đụng giập. Liều dùng 10-15g, dạng thuốc sắc. Ở Malaysia, nước lá sắc uống dùng trị đau dạ dày. Ở Trung Quốc lá cũng được dùng chữa đau dạ dày, rễ chữa phong thấp, giúp xương gãy chóng liền, dùng với liều 9-20g rễ mỗi ngày, sắc nước uống. Rễ dây bông xanh 20g phối hợp với rễ sử quân 20g, rễ cỏ tranh 20g thái nhỏ, phơi khô, sắc với 400ml nước còn 100ml uống làm thuốc tẩy giun. Ở Ấn Độ, một số vùng đã dugn lá dây bông xanh làm rau ăn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

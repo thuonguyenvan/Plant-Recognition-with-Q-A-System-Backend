@@ -1,0 +1,237 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc trừ sâu",
+      "ten_khac": "Cúc trừ trùng, Cúc trừ sâu",
+      "ten_khoa_hoc": "Pyrethrum cinerariifolium",
+      "ma_taxon": "444224",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cúc trừ sâu là một loại cỏ sống dai, cao 50-60cm, toàn thân cành và lá được phủ lông mềm trông như bông, mặt trên lông ngắn hơn ở mặt dưới làm cho toàn cây trông như mốc trắng gần như cây cúc mốc.",
+      "lá": "Lá cây cúc trừ sâu mọc thành túm khá nhiều lá, giữa túm lá mọc lên nhiều cành mang hoa. Lá phía dưới to dài 20cm, rộng chừng 6cm, cuống dài, phía dưới rộng ra và ôm vào thân, phiến lá xẻ lông chim cắt sâu, 7-9 thuỳ so le, hẹp về phía cuống, nở phía đỉnh, bên cạnh xẻ thuỳ sâu và không đều nhau, thuỳ phía mép giống như những răng cưa to thô. Tuy nhiên trong quá trình phát triển cành xẻ của lá có thay đổi và xẻ đều nhau hơn.",
+      "hoa": "Những thân mọc từ cụm lá phía gốc chỉ mang mỗi một cụm hoa hình đầu gồm 2 loại hoa: những hoa phía ngoài hình thìa lìa họng hẹp lại và kéo dài thành hình lưỡi nhỏ màu trắng, với 2 đường rãnh dọc và 3 răng tù, số hoa này không thụ và có từ 12-15 hoa, những hoa phía trong hoàn toàn hình ống màu vàng, với 5 răng lớn, hoa này lưỡng tính.",
+      "quả": "Quả bế với 1 tiểu noãn, đỉnh quả có một bộ phận hình cốc chứ không mang chùm lông như nhiều quả khác của họ Cúc.",
+      "thân": "...",
+      "cuống": "...",
+      "gốc": "...",
+      "cao": "...",
+      "rễ": "...",
+      "củ": "...",
+      "mọc": "...",
+      "mùa hoa": "...",
+      "mùa quả": "..."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "...",
+      "Đặc điểm sinh trưởng": "..."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "..."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa hoặc rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Từ cúc trừ sâu người ta đã chiết được những chất sau đây:  Những chất trơ như sáp, paraffin, phlorogluxin, pyrethrosin C33H44C10 (chảy ở 188-189oC), cholin, phytosterin, một ancaloit được Marinozucco (1889) gọi là chrysanthemin có cấu tạo một betain piperidimic tuy nhiên chất này không có tác dụng trừ sâu.  Tinh dầu (0,5% trong hoa chưa nở, ít hơn trong hoa đã nở) theo R. Merritt và T.West (1938) thành phần tinh dầu thay đổi tuỳ theo cách chế và dung môi cũng như nguồn gốc hoa. Lúc đầu có một số tác giả ho tinh dầu là một hoạt chất trừ sâu của cúc trừ sâu nhưng hiện nay người ta cho rằng tinh dầu không có tác dụng trừ sâu.  Hoạt chất thực sự (từ 0,3-1,6% nhiều nhất có thể đạt 2% gồm axit pyrethrotoxic (theo Reeb và Schlagdenhauffen 1876), pyrethrol là một ete (theo Sato 1905) hay pyrethrol (theo Fujitani 1090) đừng nhầm với pyrethrol ancol của Fujitani không phải là hoạt chất cuối cùng là pyrethrin I và II, xinerin I và II, pyrethrin I và II là những chất có chứa axit và đều là những ete nuối bền vững trong môi trường kiềm ờ nhiệt độ thường và đặc biệt bền vững trong môi trường xà phòng kiềm, đun sôi thì bị xà phòng hoá Pyrethrin I C21H28O3 là ete của pyrethrolon và axit chrysantheme monocacbonic C10H16O2 là một chất lỏng, độ chảy 135oC .  Pyrethrin II C22H28O5 là ete của pyrethrolon và axit chrysantheme Dicacbonic C10H14O4 là một chất có tinh thể. Nhưng axit này có một chức được ete hoá bởi ancol metylic; vậy trong pyrethrin II nó ở dạngete monoetylic, còn chứa axit thứ 2 được ete hoá bởi pyrethrolon. Pyrethrin II rất dễ bị phá huỷ, không bền vững bằng pyrethrin I. độ chảy 150oC. Pyrethrolon có một nhân xyclopentan và 1 dây truyền ngang C5 vào hai mối kép, 1 chức xeton, 1 chức ancol Những pyrethrin không tan trong nước, tan trong những dung môi hữu cơ dễ bị thuỷ phân và dễ bị oxy hoá Xinerin I C20H28O3 sền sệt, ete của xinerolon C10H14O2 và axit chrysantheme monocacboxylic Xinerin I C21H31O3 sền sệt, ete của xinerolon và axit dicacboxylic, lỏng sền sệt  Trong 4 hoạt chất trừ sâu nói trên thì pyrethrin I được coi là hoạt chất chủ yếu, tác dụng mạnh gấp 10 lần pyrethirn II, nhưng hàm lượng lại ít, tỷ lệ 2 hoạt chất đó là: 2:3 Tác dụng của xinerin I gần như pyrethirn I và tác dụng của xinerin II gần như pyrethirn II  Dược thư Liên xô cũ quy định tỷ lệ pyrethirn I tối thiểu trong hoa phải là 0,3-,5%;",
+      "gồm chất": "...",
+      "Các hợp chất": "...",
+      "chứa": "...",
+      "triết xuất": "...",
+      "đã nghiên cứu": "...",
+      "tìm thấy": "...",
+      "thủy phân": "...",
+      "các hoạt chất": "...",
+      "tinh dầu chứa": "...",
+      "có hoạt chất": "...",
+      "dấu hiệu đặc trưng": "..."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "..."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bột cúc trừ sâu càng mới bảo quản nơi khô kín càng có tác dụng mạnh. Đựng trong bao tải, hộp giấy bột cúc trừ sâu chóng mất tác dụng.  Cúc trừ sâu được dùng để trừ sâu nho (Eudemis, Cochylis), sâu rau, sâu của cây ăn quả Aphis brassicae, Alphis piri, Alphis persicae), rệp (Euridema ornate, Tingis piri)  Còn dùng trừ muỗi, chấy rận, nhậy.  Thường dùng dưới dạng nhũ dịch: một phần bột hoa hay 2 phần bột thân và hoa hoà vào 8 phần nước xà phòng đen xấu, thêm một ít dầu vừng tác dụng mạnh hơn. Phun lên những cây bị bọ sâu phá hoại Có thể dùng dưới dạng hương trừ muỗi: với tỷ lệ 20 phần bột hoa cúc trừ sâu, 30 phần bột thân và lá, 50 phần bột và nhựa làm hương. Phối hợp 0,1-0,4% bột cúc trừ sâu Đơn giản nhất ta có thể pha 20g bột hoa cúc trừ sâu vào 3 lít nước, đun cho hơi nóng rồi phun lên nơi có sâu.",
+      "được_dùng": "...",
+      "làm thuốc": "...",
+      "có tác dụng": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "chữa": "..."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây cúc trừ sâu Pyrethrum cinerariaefolium Trev mọc hoang ở những núi Anpo (Ý) và dãy núi Bancang (Đông Âu) những loài P.roseum và P. carneum mọc hoang ở vùng Capcazo như Acmenia, Iran. Về sau được nhiều nước tổ chức trồng để khai thác như Pháp, Liên Xô cũ, Mỹ, Đức. mặc dầu chỉ mới được di thực vào Nhật phát triển rất nhanh chóng. Tới năm 1939, ¾ cúc trừ sâu dùng trên thế giới là do Nhật cung cấp. Năm 1911, Nhật chỉ sản xuất 211 tấn hoa khô, đến năm 1928 đã tới 5.230 tấn và năm 1933 tới 6.400 tấn nghĩa là tăng hơn 30 lần trong vòng 20 năm và đứng đầu thế giới về mặt sản xuất hoa cúc trừ sâu.  Loài Pyrethrum cinerariifolium được Viện Dược liệu nhập trồng từ Hungari, Đức vào những năm 70. Trong điều kiện trồng trọt ở Việt Nam, cây tỏ ra thích nghi với vùng núi, có nhiệt độ thấp, ôn hòa như Đà Lạt, Sa Pa, Lào Cai. Cây có khả năng chịu được băng tuyết qua mùa đông nhưng không chịu được sương muối kéo dài.  Cách trồng:  Gieo hạt vào tháng 3-4 hoặc tháng 8 ở nơi mát, tưới nhẹ, phủ đất lên chừng 1cm. Muốn cho cây khỏi mọc mau quá có thể trộn hạt với đất mịn hay cát rồi mới gieo. Vào mùa xuân (nếu hạt gieo tháng 8-9) hoặc vào tháng 8-9 (nếu hạt gieo tháng 3-4), người ta trồng chính thức trên các luống chuẩn bị ở những sườn đồi nhiều cát có sỏi, nhiều chất vôi, mỗi cây cách nhau 30-40cm (chừng 80.000-90.000 gốc /ha) hoặc thành luống cách nhau 30cm (chừng 60.000 cây/ha). Cây trồng đến mùa thu năm sau đã ra hoa nhưng người ta thường chờ tới năm thứ 3 mới thu hái hoa. Tuỳ theo đất, trồng mỗi lần có thể thu hoạch trong 10 năm, nếu điều kiện tốt có thể thu hoạch trong 20 năm. Có tác giả nói là thờ gian và hoạt chất trong cây cũng vậy .  Người ta hái hoa làm thuốc, có nơi phân biệt ra hoa chưa nở, hoa đang nở và hoa đã nở hoàn toàn và người ta cho rằng hoa chưa nở nhiều hoạt chất hơn. Thực tế những hoa đó đều tác dụng như nhau. Người ta hái hoa riêng, hay hái cả hoa và cành rồi về nhà cắt hoa riêng, có nơi hái cả cây về để chiết hoạt chất, nhưng chủ yếu dùng hoa.  Tại vùng Languedoc (Pháp) với số 35.000 gốc trong 1 ha thu hoạch được chừng 300-400kg hoa khô và 1.000-1.300kg thân và lá .",
+      "làm thuốc": "...",
+      "có tác dụng": "...",
+      "sắc uống": "...",
+      "giã nát": "...",
+      "sắc nước uống": "...",
+      "phơi khô": "...",
+      "xấy khô": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "..."
+    }
+  ]
+}

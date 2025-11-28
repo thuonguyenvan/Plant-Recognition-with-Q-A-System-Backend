@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Râu mèo",
+      "ten_khac": "Râu mèo, Bông bạc",
+      "ten_khoa_hoc": "Orthosiphon spiralis (Lour.) Merr.",
+      "ma_taxon": "185264",
+      "ho": "Lamiaceae (Bạc hà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống lâu năm, cao 0,3-0,5m, có khi hơn.",
+      "thân": "Thân mảnh cứng, hình vuông, mọc đứng, thường có màu nâu tím, nhẵn hoặc có ít lông, ít phân cành.",
+      "lá": "Lá mọc đối, hình trứng, dài 4-6cm, rộng 2,5-4cm, gốc tròn đầu nhọn, mép khía răng to, gân lá hơi nổi rõ ở mặt dưới, cuống lá dài 3-4cm.",
+      "hoa": "Cụm hoa mọc thẳng ở ngọn thân và đầu cành, dài 8-10cm, gồm 6-10 vòng, mỗi vòng có 6 hoa màu trắng hoặc hơi tím; lá bắc nhỏ rụng sớm; đài hình chuông có 5 răng, răng trên rộng, tõe ra ngoài, tràng hình ống hẹp, thẳng hoặc hơi cong, dài 2cm, môi trên chia 3 thùy, môi dưới nguyên; nhị mọc thò ra ngoài hoa, dài gấp 2-3 lần tràng, chỉ nhị mảnh; vòi nhụy dài hơn nhị.",
+      "quả": "Quả bế tư, nhỏ, nhẵn.",
+      "mùa hoa": "tháng 4-7",
+      "mùa quả": "tháng 4-7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ở Việt Nam, râu mèo phân bố rải rác ở một số tỉnh miền núi như: Cao Bằng, Thanh Hóa, Lâm Đồng, Phú Yên,… Cây ưa ẩm, ưa sáng có thể hơi chịu bóng, thường mọc trên đất giàu chất mùn ở ven rừng, gần bờ nước hoặc trong thung lũng.",
+      "Bộ phận dùng": "Phần trên mặt đất, thu hái khi cây chưa ra hoa, phơi khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá râu mèo có chứa saponin, alcaloid, tinh dầu 0,2-0,6%, tanin, acid hữu cơ và dầu béo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm dân gian, râu mèo được dùng làm thuốc lợi tiểu trong điều trị bệnh viêm thận, sỏi thận, sỏi mật, tê thấp, phù thũng, viêm gan. Liều dùng 5-12g lá hãm nước sôi, chia làm 2 lần uống trước khi ăn cơm 15-30 phút. Nên uống lúc còn nóng. Thường dùng liên tục 8 ngày, nghỉ 2-4 ngày lại tiếp tục nếu cần thiết. Có thể nấu cao lỏng, mỗi ngày dùng 2-5g cao. Cao râu mèo được dùng làm thuốc hạ đường huyết trong bệnh tiểu đường. Nếu dùng cả cây râu mèo thì liều lượng hằng ngày là 30-40g, dùng riêng hoặc phối hợp với các vị thuốc khác. Bài thuốc có râu mèo Chữa viêm thận mạn tính, viêm bàng quang, viêm khớp, phong thấp: Râu mèo 40g, tỳ giải và rễ ý dĩ mỗi vị 30g. Sắc nước uống. Chữa đái ra sỏi, đái ra máu, đái buốt: Râu mèo 40g, thài lài trắng 30g. Sắc lấy nước, mỗi lần hòa thêm 6g bột hoạt thạch uống trong ngày, chia 3 lần. Uống liền 5-7 ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

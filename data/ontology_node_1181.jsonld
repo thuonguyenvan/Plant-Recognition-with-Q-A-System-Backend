@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chanh",
+      "ten_khac": null,
+      "ten_khoa_hoc": "Citrus aurantifolia",
+      "ma_taxon": "331121",
+      "ho": null
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ nhẵn hay có gai, gai dài 35mm, búp non có màu đỏ.",
+      "lá": "Lá hình trứng hay hình trứng dài, dài 5,5-11cm, rộng 3,5-6cm, mép có răng cưa.",
+      "hoa": "Hoa trắng, nhuốm tím nhạt hay đỏ tím, mọc đơn độc hay từng chùm 2-3 hoa. Lá bắc hình mũi mác, nhẵn hay hơi có lông.",
+      "quả": "Quả nhỏ, vỏ mỏng nhẵn, chia thành 10-12 múi, mỗi múi chứa 3 hạt. Cơm quả rất chua ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ quá chanh.",
+      "gồm chất": "Lớp vỏ xanh ngoài chứa tinh dầu, thường 3.000 quả đến 6.000 quả cho 1 lít tinh dầu chanh (theo kiểu vắt tươi) mỗi quả cho khoảng 0,5ml tinh dầu. vỏ trắng chứa pectin.",
+      "Các hợp chất": "Tinh dầu chanh là một chất lỏng màu vàng nhạt, mùi thơm chanh, tỷ trọng ở 15° từ 0,857 đến 0,862. Dưới tác dụng của khí trời và ánh sáng, tinh dầu chanh sẽ để lắng một chất đặc và nhầy, tỷ trọng cũng tăng lên, 90-95% tinh dầu chanh là những hợp chất tecpen trong đó có d. limonen, một ít α pinen, β phelandren, camphen và γ tecpinen.",
+      "chứa": "Mùi thơm của tinh dầu chanh là do các hợp chất oxy và chiếm từ 3-5% gồm xitrala và một ít xitronelala. Ngoài ra người ta còn thấy trong tinh dầu chanh axetat geranyl và axetat linalyla.",
+      "triết xuất": "Dịch quả chanh: Trung bình 50 quả chanh cho 1 lít dịch quả chanh. Trong dịch quả chanh có 80-82% nước, 5-7% axit xitric, có khi tới 10% (mùa thu tỷ lệ axit cao hơn mùa hạ), chừng 1- 2% xitrat axit canxi và kali, một ít xitrat etyl và chừng 0,4-0,5% axit malic. Ngoài ra còn 0,4-0,75% đường interverti, 0,5% sacaroza, 0,75-1% protit. Độ tro 0,5%, vitamin C 65mg trong 100g dịch tươi, vitamin B1 và riboflavin.",
+      "tìm thấy": "Lá chanh chứa tinh dầu mùi thơm dễ chịu. Hàm lượng tinh dầu trong lá thay đổi từ 0,33-0,5%. Ngoài ra còn chất stachydrin, một dẫn xuất của prolin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dịch quả chanh: Là một thứ nước uống mát, thông tiểu tiện, có tác dụng chữa bệnh tê thấp, liều dùng 30-120g một ngày pha thành nước ngọt. Hay dùng chữa bệnh scocbut của trẻ em mới đẻ, ở cả người lớn. Còn làm nguyên liệu chế axit xitric thiên nhiên.",
+      "được_dùng": "Múi chanh phối hợp với muối ăn dùng ngậm chữa ho viêm họng. Sau khi gội đầu, vắt một ít nước chanh quả lên có tác dụng làm trơn tóc.",
+      "làm thuốc": "Lá thường dùng làm gia vị ăn với thịt gà, với ốc, nấu nước để xông chữa cảm cúm; lá và búp non chanh giã nát đắp lên rốn trẻ em chữa bí đái, đầy chướng bụng.",
+      "chữa": "Rễ chanh: Được dùng chữa ho dưới dạng thuốc sắc, dùng riêng hay phối hợp với rễ dâu tầm. Ngày dùng 6-12g.",
+      "có tác dụng": "Tinh dầu chanh và tinh dầu lá chanh: Pha thuốc gội đầu, làm thơm các thuốc phiến, thuốc bột hay thuốc ngậm.",
+      "sắc uống": "Vỏ thân cây chanh: Được dùng là thuốc bi đắng giúp sự tiêu hoá. Ngày uống 4-10g dưới dạng thuốc sắc.",
+      "giã nát": "Hạt quả chanh: Có người dùng làm thuốc tẩy giun.",
+      "sắc nước uống": "Bài thuốc về chanh  Chữa ho, nôn ọe: Quả chanh cắt thành miếng, cho thêm vài hạt muối, ngậm nuốt nước Chữa ho khan, mất tiếng: Vỏ rễ chanh (bỏ lớp ngoài), vỏ rễ dâu (lấy lớp trắng), rễ bươm bướm; mỗi thứ 15g, sắc nước uống Chữa ho gà: Lá chanh 4g, lá táo 4g, rễ cỏ gà 4g, vỏ quýt 1g, vỏ quả trứng gà (1 quả). Sắc nước uống Chữa cảm cúm: Lá chanh 60-80g, thên nước đun sôi xông cho ra mồ hôi Chữa ho trẻ em: Hạt chanh 20 hạt, hoa đu đủ đực 15g, lá hẹ 15g, nước 20ml. Giã nhỏ, thêm mật ong, hấp cơm uống 3 lần trong ngày"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây trồng khắp nơi ở nước ta. Từ 1956, nước ta mới bắt đầu thu mua chanh để xuất khẩu. Chỉ riêng thu mua ở hai tỉnh mà đã được 100-300 tấn/năm. Mỗi tấn chừng 15.000 – 20.000 quả.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "6-9, nhưng còn một vụ chanh chiêm nữa vào các tháng 1-2.",
+      "làm thuốc": "Nhân dân trồng chanh chủ yếu để lấy quả ăn, lá làm gia vị. Làm thuốc người ta dùng quả, lá và rễ, thu hái gần như quanh năm. Dùng tươi hay khô."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

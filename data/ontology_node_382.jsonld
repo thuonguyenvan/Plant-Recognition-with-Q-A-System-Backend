@@ -1,0 +1,288 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đơn buốt lá xẻ",
+      "ten_khac": "Cúc áo hoa trắng nhị vàng, vạn thọ tây, song nha kép, đơn buốt 5 lá.",
+      "ten_khoa_hoc": "Bidens bipinnata L.",
+      "ma_taxon": "50202",
+      "ho": "Cúc (Asteraceae)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo, sống hằng năm, cao 0,5 – 0,8m.",
+        "thân": "Thân cành cứng, nhẵn, có rãnh dọc.",
+        "lá": "Lá mọc đối, có cuống dài, kép lông chim, gồm 5 lá chét, hình bầu dục, mép có răng cưa không đều; lá kép ở dưới lại xẻ tiếp.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành đầu trên cuống dài mảnh, đường kính 5 – 10 mm; lá bắc ngoài dài và hẹp, có lông, hoa nhỏ, màu vàng hoặc trắng ngà, tràng hình lưỡi nhỏ, thuôn, có ống mảnh.",
+        "quả": "Quả bế, cao 10 – 12 mm, có hai gai nhỏ ở đỉnh.",
+        "mùa hoa": "tháng 8 – 9",
+        "mùa quả": "tháng 10 – 11."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Bidens L. ở Việt Nam đã biết có 5 loài, 3 hay 4 loài trong số đó có công dụng làm thuốc.  Loài Bidens bipinnata L. trên đây có nhiều tên gọi như “Đơn kim xẻ”, “Đơn kim kép”, “Long nha kép” hoặc “Cúc áo hoa trắng”… Loài này phân bố vùng nhiệt đới và cận nhiệt đới châu Á, bao gồm từ Ấn Độ qua Mianma, Trung Quốc, Lào, Thái Lan, Philippin và Việt Nam. Ở Việt Nam, cây thường gặp ở vùng núi thuộc các tỉnh Cao Bằng, Lạng Sơn, Lai Châu, Lào Cai, Hà Giang, Sơn La, Hoà Bình, Kom Tum (vùng núi Ngọc Linh), Đắk Lắk, Lâm Đồng (Lang Bian)… Độ cao phân bố từ 200m (Cao Bằng) đến khoảng 1.500 (Ngọc Linh). Như vậy, về phân bố của loài này thường chỉ thấy ở miền núi, trong khi đó loài Đơn kim (B.pilosa L.) phân bố rộng rãi khắp nơi, kể cả vùng đồng bằng và hải đảo.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Kom Tum"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đắk Lắk"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lâm Đồng"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Cây ưa sáng, ưa ẩm. Hàng năm cây con mọc từ hạt vào tháng 3 – 6, sinh trưởng nhanh trong mùa xuân – hè, đến cuối mùa thu – sau khi quả già, toàn cây tàn lụi."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Toàn cây."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Theo Phạm Hoàng Hộ (2006), cúc áo hoa trắng chứa alcaloid, tanin, saponin và flavonoid. Còn trong loài Bidens tripartita L. chứa tinh dầu, tanin, luteolin. Lá chứa vitamin C, quả chứa tới 23,78% dầu (Võ Văn Chi, 1997)."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Toàn cây đơn buốt lá xẻ vị đắng nhạt, tính bình, hơi mát, vào hai kinh can và thận; có công năng thanh nhiệt, giải độc, sát trùng, lương huyết, tán ứ, tiêu thũng. Sách “Tuyền châu bản thảo” ghi: đơn buốt vị đắng, tính ấm, có công năng thanh nhiệt, giải độc, tán ứ, tiêu thũng [TDTH. 1996, II: 1673)."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Toàn cây đơn buốt lá xẻ bỏ rễ được dùng chữa thấp khớp, viêm khớp, viêm khí quản, viêm họng. Còn được dùng chữa sốt rét, viêm gan, viêm thận cấp, viêm loét dạ dày, viêm ruột, ta chảy, lỵ. Liều dùng 15 – 30g (hoặc 30 – 60g nếu dùng, tươi), sắc với nước hoặc tán thành bột chia làm 2 3 lần uống trong ngày.  Dùng 1 ngoài, lấy cây tươi giã nát, đắp và nấu nước rửa chữa mày đay, mẩn ngứa ngoài da, đòn ngã tổn thương, rắn cắn, côn trùng đốt.  Ở Mỹ, dân bản xứ dùng lá sắc uống để trí giun, nhai lá ngậm và nuốt dần để chữa đau họng. Dịch cây được dùng nhỏ vào tai khi bị đau tai và làm săn sẽ da, nhưng có thể gây kích ứng [Foster et al., 2000: 135). Ở Trung Quốc, đơn buốt lá xẻ cũng được dùng để chữa sốt rét, viêm gan thận, chống tia chảy, ly. Dùng ngoài, đơn buốt điều trị đòn ngã tổn thương, rắn cắn, côn trùng đốt và làm vết thương nhanh tạo hạt nên chóng khỏi [TDTH, 1996, II: 1674; De Padua et al., 1999: 153)."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": "",
+        "làm thuốc": "",
+        "có tác dụng": "",
+        "sắc uống": "",
+        "giã nát": "",
+        "sắc nước uống": "",
+        "phơi khô": "",
+        "xấy khô": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

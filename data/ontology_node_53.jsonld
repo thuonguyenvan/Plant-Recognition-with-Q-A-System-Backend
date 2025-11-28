@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cà dại hoa tím",
+      "ten_khac": "Cà dại hoa tím, Cà hoang gai, Cà ấn, Plờn plên (Kho), Mác rịa phạ đeng (Tày)",
+      "ten_khoa_hoc": "Solanum violaceum Ortega",
+      "ma_taxon": "343775",
+      "ho": "Solanaceae (Cà)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ có cành mọc đứng, cao 0,6-1,3m, thân và cành có gai và có lông hình sao.",
+      "lá": "Lá mọc so le mặt trên xanh sẫm, mặt dưới trắng nhạt, phủ nhiều lông. Phiến lá dài 5-7cm, rộng 2,5-5cm, chia thành 3-4 thuỳ, cắt không sâu, cuống lá cũng phủ lông, dài 1,5-3cm. Cả hai mặt lá đều có gai, rải rác ở gân.",
+      "hoa": "Hoa tím xanh, phủ lông bên ngoài, mọc thành chùm ở kẽ lá.",
+      "quả": "Quả tròn hình cầu màu vàng hay đỏ nhạt, nhẵn, đường kính 1cm. Hạt màu vàng, hình dĩa, nhẵn, đường kính 2mm.",
+      "mùa hoa": "tháng 1-6",
+      "mùa quả": "tháng 1-6."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy tài liệu nghiên cứu.",
+      "triết xuất": "Puntambekar S.V. và Krishana s. đã chiết từ hạt cà dại này một chất dầu béo (Fatty oil from the seed of Solatium indicum L. J. Ind. Chem. Soc. 18, 1941: 329-334)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ cây cà dại hoa tím được nhân dân dùng là thuốc chữa ho, hen, sốt, lợi tiểu. Có khi dùng chống nôn và tẩy nhẹ. Ngày uống 6-12g dưới dạng thuốc sắc.",
+      "chữa": "Đau răng",
+      "làm thuốc": "Hạt rang cháy cho lên khói, hứng khói này vào miệng chữa đau răng và sâu răng, than hạt còn lại giã nhỏ xát lên lợi nơi đau răng.",
+      "được_dùng": "Tẩy, chống nôn: dùng rễ Cà dại hoa tím 6-12g, sắc uống.",
+      "sắc uống": "dùng 6-12g sắc đặc, ngậm."
+    },
+    {
+      "@type": "Cách dùng",
+      "cây": "Cây mọc hoang dại ở khắp nơi, thường ở ven đường, bãi trống.",
+      "được_dùng": "Người ta đào rễ gần như quanh năm, rửa sạch, thái mỏng phơi hay sấy khô. Ngoài ra người ta còn dùng hạt thu hái ở những quả đã chín đỏ.",
+      "làm thuốc": "Tại Ấn Độ và Malaysia người ta còn dùng quả chưa chín hẳn để chế bột cary."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

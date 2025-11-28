@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dầu nóng",
+      "ten_khac": "Dầu nóng",
+      "ten_khoa_hoc": "Ostryopsis davidiana Decne.",
+      "ma_taxon": "982868",
+      "ho": "Betulaceae ( Cáng lò)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ to cao 30-35m.",
+      "lá": "Lá hình trái xoan, dài 2-5,5cm , đầu nhọn tù, gốc hình tim, mép có răng cưa, lúc còn non gấp nếp theo các gân bên; gân bên 7-9 đôi.",
+      "hoa": "Hoa đơn tính; hoa đực không có bao hoa; nhị thường 3-5, bao phấn có lông ở đỉnh; hoa cái có lá bắc mỏng, dạng màng, bao hoa mảnh, dính với bầu.",
+      "quả": "Quả xếp thành đầu, tổng bao có tai, chia ba ở đầu, có gốc với mép gần dính nhau, khi chín nứt bên.",
+      "mùa hoa": "tháng 12-3.",
+      "mùa quả": "tháng 12-3."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Dầu nóng phân bố chủ yếu ở vùng cận nhiệt đới. Ở Việt Nam, chúng chỉ có ở vùng núi. Loài dầu nóng mới được phát hiện ở vùng núi Ngọc Linh, Bidup và Langbian với độ cao trên 1500m. Cây rụng lá vào mùa thu – đông. Mùa lá non trùng với mùa hoa."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ thân, vỏ rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ chứa tinh dầu mùi salicylat methyl."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tinh dầu dùng làm thuốc chống viêm, giảm đau. Nhân dân địa phương thường dùng vỏ cây ở dạng tươi, thái nhỏ, ngâm rượu trong 15-20 ngày, càng đặc càng tốt. Hoặc dùng nguyên liệu trên cất tinh dầu rồi pha với rượu. Khi dùng, lấy bông hút nước tẩm thuốc, xoa đều vào chỗ đau rồi nắn bóp chữa tê thấp, gân xương nhức mỏi. Ngày làm hai lần. Ở Ấn Độ, người ta dùng nước sắc chồi búp và cành non của cây dầu nóng điều trị những bệnh viêm. Lá có trong thành phần một thuốc trị tiêu chảy. Thuốc hãm từ cây được dùng làm thuốc bổ, trị hen và viêm phế quản mạn tính."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

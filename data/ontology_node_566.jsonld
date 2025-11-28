@@ -1,0 +1,205 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Râu hùm",
+            "ten_khac": "Râu hùm, Phá lủa (Tày), Ngải rợm, Nưa, Cẩm địa la, Râu hùm hoa tía, Ping đô (Kdong), Cu dòm (Bana)",
+            "ten_khoa_hoc": "Tacca chantrieri Andre",
+            "ma_taxon": "343837",
+            "ho": ""
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thảo, sống dai.",
+            "thân": "Thân rễ gần hình trụ, mọc bò dài, có đốt.",
+            "lá": "Lá hình mác thuôn hoặc trái xoan – bầu dài 50 cm, rộng 20 – 25 cm, gốc tù lệch nhau, đầu nhọn, mặt trên màu lục sẫm, nhẵn bóng, mặt dưới 1 khi có ít lông nhỏ, mép lá nguyên, lượn sóng, gân nối rõ ở mặt dưới; cuống lá có bẹ, hình lòng máng, dài đến 30cm",
+            "hoa": "Cụm hoa mọc trên một cán thẳng hoặc cong thành tán, ngắn hơn lá, nhẵn hoặc có ít lông; tổng bao có 4 lá bắc rộng bản, hình tim, không cuống mọc đối chéo nhau, hai lá to, hai lá nhỏ, màu lục, tía hoặc tím đen; lá bắc con dạng sợi dài cùng màu; hoa 15-20 cái, màu tím đen; bao hoa hình đấu gồm 6 thùy; nhị 6, màu tím đen, chỉ nhị đính vào giữa bao hoa; bầu hình nón ngựợc, có 6 cạnh nổi gò lên như những chiếc cánh.",
+            "quả": "Quả nang dài, màu đỏ tím; hạt hình thận, có vân dọc.",
+            "mùa hoa": "tháng 7-8",
+            "mùa quả": "tháng 9-10"
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Tacca Forst et Forst f. có khoảng hơn 10 loài trên thế giới, là những cây thảo thường xanh hoặc có phần trên mặt đất lụi hàng năm vào mùa đông. Chúng phân bố rải rác khắp vùng nhiệt đới châu Á, châu Phi và châu Đại Dương.\nỞ Việt Nam, có 6 loài, trong đó râu hùm là loài có phạm vi phân bố rộng rãi nhất. Theo thống kê chưa đầy đủ của Viện Dược liệu từ năm 1986, râu hùm đã phát hiện được ở 26 tỉnh miền núi và trung du. Vùng phân bố của cây chủ yếu tập trung ở các tỉnh miền núi từ Tây Nguyên trở ra, bao gồm Gia Lai, Kon Tum, Quảng Nam, Quảng Bình, Nghệ An, Thanh Hoá, Ninh Bình, Hoà Bình, Sơn La, Tuyên Quang, Yên Bái, Thái Nguyên, Bắc Cạn… Trên thế giới, vùng phân bố của râu hùm được xác định từ Nam Trung Quốc xuống khu vực Đông Dương và một số nước Đông Nam Á khác.\nRâu hùm là cây đặc biệt ưa ẩm và ưa bóng, mọc rải rác hay tập trung thành từng đám dọc theo các bờ khe suối dưới tán rừng. Trong quần hệ cây thảo ưa ẩm mọc lẫn với râu hùm thường có thiên niên kiện, vạn niên thanh rừng, thu hải đường (Begonia spp.)… Râu hùm mọc trên đất ẩm nhiều mùn với pH 4,5 – 6,5. Cây ra hoa quả hàng năm. Thông thường trên mỗi cây có 1-2 cụm hoa. Tỷ lệ hoa kết quả đạt khoảng 50%. Quả râu hùm khi già tự mở, để hạt thoát ra ngoài. Cây con mọc từ hạt vào khoảng tháng 4-5; sinh trưởng được 3- 4 năm thì bắt đầu có hoa quả. Râu hùm có khả năng tái sinh dinh dưỡng khỏe. Từ các đoạn thân rễ vùi xuống đất đều có khả năng nảy mầm. Tuy nhiên, tỷ lệ nảy mầm của phần đầu mầm thân rễ đạt cao nhất (100%); phần thân rễ già đôi khi bị thối hoặc không có khả năng nảy mầm.\nNguồn râu hùm ở Việt Nam ước tính có vài ngàn tấn. Mặc dù gần như chưa bị khai thác, song nạn phá rừng và khai thác rừng đã trực tiếp làm thu hẹp diện phân bố và khả năng trữ lượng tự nhiên của cây."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": "Râu hùm đã được Viện Dược liệu nghiên cứu trồng thử ở một số nơi. Cây trồng được cả ở trung du và đồng bằng trên nhiều loại đất có đủ ẩm và bóng râm. Cây được nhân giống bằng phần đầu mầm thân rễ. Thời vụ trồng vào tháng 2-3. Sau khi làm đất, lên luống cao 20 – 30 cm, rộng 1,2 m hoặc tạo thành vạt rộng, bổ hốc với khoảng cách 30 x 40 cm hoặc 40 x 50 cm. Củ giống được trồng ở độ sâu 5-7 cm, phủ đất nhỏ và tưới nước, giữ ẩm. Mỗi hốc bón lót chừng 0,5kg phân chuồng hoai mục. Cây không đòi hỏi chăm sóc đặc biệt."
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Thân rễ, thu hái quanh năm, rửa sạch, thái lát phơi hay sấy khô."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Thân rễ râu hùm chứa saponin steroid. Khi thủy phân cho diosgenin, β sitosterol, taccaosid. (CA, 1981, 94 . 61731T; CA. 1984,100.117830v).\nCác saponin tồn tại trong cây chủ yếu dưới dạng furostanol (vòng F của khung steroid mở ) dưới tác dụng của men hoặc acid thủy phân vòng F sẽ đóng lại và tạo thành dạng spirostanol ít phân cực hơn."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Râu hùm có vị đắng, cay, tính mát, có độc, có tác dụng thanh nhiệt, lý khí, chỉ thống."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Theo kinh nghiệm nhân dân, thân rễ râu hùm được dùng làm thuốc chữa tê thấp. Lấy 50g thân rễ râu hùm khô, giã nhỏ trộn với 30g bột bồ kết nướng giòn; ngâm vào 1/2 lít rượu trong 1-2 tuần lễ, thỉnh thoảng lắc đều. Dùng rượu này xoa bóp vào chỗ tê đau. Không được uống.\nViện Dược liệu đã nghiên cứu chiết từ thân rễ râu hùm hoạt chất diosgenin. Đó là nguyên liệu để bán tổng hợp các thuốc steroid như thuốc chống viêm, thuốc nội tiết, thuốc cai đẻ, thuốc tăng đồng hóa. Những thuốc này ngày càng có nhu cầu lớn ở trong nước và trên thế giới.\nNguồn : Cây thuốc và động vật làm thuốc ở Việt Nam."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": ""
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": ""
+        }
+    ]
+}

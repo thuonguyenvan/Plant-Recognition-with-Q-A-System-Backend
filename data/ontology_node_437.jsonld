@@ -1,0 +1,221 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bản lan căn",
+      "ten_khac": "Bản lam căn",
+      "ten_khoa_hoc": "Isatis indigotica L.",
+      "ma_taxon": "77509",
+      "ho": "Cải (Brassicaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo có rễ hình trụ dài, mập, mang nhiều rẽ phụ rất mảnh.",
+      "lá": "Lá mọc so le, hình mác rộng, góc thuôn có bẹ và tai ngắn ôm thân, đầu tù.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần ngọn thành ngủ rộng phân nhánh: hoa màu vàng, có 4 cánh.",
+      "quả": "Quả mọng, đài, đa dạng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Bản lan căn được trồng nhiều ở Trung Quốc, Đài Loan, Nhật Bản. Vào khoảng năm 2003 – 2004 bắt đầu được nhập nội vào Việt Nam. Cây đã được trồng thử tại Mường Khương. Sa Pa (Lào Cai), Sìn Hồ (Lai Châu) và Vườn thuốc của Trung tâm nghiên cứu cây trồng và chế biến cây thuốc Hà Nội – Viện Dược liệu (Ngoại thành Hà Nội)… Cây ưa sáng và ưa ẩm, có thể trồng được trên nhiều loại đất. Đất cần thoát nước, tơi xốp và có độ PH từ trung bình đến hơi chua. Theo một số người trực tiếp trồng thử bản lan căn ở Mường Khương (Lào Cai) cho biết, cây thích nghi và sẽ mọc tốt trên đất nương rẫy hoặc ruộng cao ở địa phương. Cách trồng và chăm sóc giống như trồng các loại rau cải, rau củ, su hào…",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Củ, lả và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Trung dược đại từ điển (1993) trong lá bản lan căn có chứa các hợp chất: isatan, glucobrasicin neoglucobrasicin, indolylmethyl – glucosinolat, 1 – sulpho – 3 – indolylmethyl – glucosinolat, indirubin và isatin. Từ rễ có mười một hợp chất được phân lập và xác định là isolariciressinol(1), lariciresinol(2), lariciresinol-9-O-beta-D-glucopyranoside (3), lariciresinol-4′-O-beta-D-glucopyranoside (4), lariciresinol-4,4′-bis-O-beta-D-glucopyranoside (5), 3-formylindole (6), 1-methoxy-3-indolecarbaldehyde (7), 1-methoxy-3-indoleacetonitril ( 8), deoxyvasicinone (9), epigoitrin (10), adenosine (11). Từ lá mười một hợp chất được phân lập và các cấu trúc được đặc trưng là 10H-indolo [3, 2-b] quinolin (1), indirubin (2), 4 (3H) -quinazo-linone (3), (E) -3- (3 ‘, 5′-dimethoxy-4’-hydroxybenzylidene) -2-indolinone (4), 2, 3-dihydropyrrolo [2, 1-b] quinazolin-9 (1H) -one (5), axit benzoic (6), axit o-droxy-benzoic (7), (-) -lariciresinol ( 8), (+) -isolariciresinol (9), isovitexin (10)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ bản lam căn có tính mát."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở các nước Đông Nam Á, rễ bản lan căn được dùng làm thuốc hạ sốt trong bệnh tinh hồng nhiệt; lá cũng được dùng làm thuốc. Cây này rất mát đặc biệt đối với máu, được dùng trị thương hàn, sởi và cảm. Ở Trung Quốc, bản lan căn được dùng trị viêm não dịch, sởi, quai bị, cúm."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

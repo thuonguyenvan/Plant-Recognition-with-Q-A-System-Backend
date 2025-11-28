@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bông bông",
+      "ten_khac": "Bông bông, Nam tỳ bà, Lá hen, Bàng biển, Cốc may (Tày).",
+      "ten_khoa_hoc": "Calotropis gigantea (L.) Dryand. ex Ait.f.",
+      "ma_taxon": "67574",
+      "ho": "Asclepiadaceae (Thiên lý)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 2-3m.",
+      "thân": "Thân đứng, phân nhiều cành. Vỏ thân lúc non khía rãnh, màu vàng nhạt, vỏ già màu xám trắng. Cảnh phủ lông dạng phấn, trắng như bông.",
+      "lá": "Lá mọc đối có phiến đáy, mép nguyên, cuống rất ngắn hoặc gần như không có cuống, gốc hình tim, 2 mặt đều có màu lục xám, mặt dưới có lông trắng như phấn. Ở gốc lá mặt trên có tuyến và một hàng lông màu nâu.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành xim gồm nhiều tán, hoa màu trắng; đài 5, thùy hình trứng, mặt ngoài có lông; tràng hợp thành hình xe, thùy hình mũi mác, chỉ nhị dính liền nhau thành một ống che chở cho nhụy.",
+      "quả": "Quả gồm 2 đại, hình giáo, thuôn nhọn dần về phía đầu, chứa nhiều hạt có mào lông.",
+      "mọc": "Toàn thân có nhựa mủ.",
+      "mùa hoa": "Tháng 5-8",
+      "mùa quả": "Tháng 5-8"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Năm 1974 (Thông báo dược liệu 21, .1974), Lê Hà Lệ Xuân nghiên cứu tác dụng của cao rượu bông bông trên 300 súc vật thí nghiệm đã đi tới những kết luận sau đây:  1.Chế phẩm của bông bông có những tác dụng điển hình của một glucozit chữa tim: Hoạt tính sinh vật trên mèo (theo Dược điển Liên Xô IX 1961 và Dược điển Việt Nam 1971) là 0,113; hoạt tính sinh vật so sánh với bột lá Digitalis chuẩn Trung Quốc là 73,44%; với liều tiêm trước bằng 50% đơn vị mèo, lượng thuốc tích luỹ sau 24 giờ là 7,88% dơn vị mèo (bằng 16% của liều tiêm trước); với liều tiêm trước bằng 75% đơn vị mèo, lượng thuốc tích luỹ sau 24 giờ là 20% đơn vị mèo (bằng 27% của liều tiêm trước). Như vậy, bông bông thuộc nhóm glucozit chữa tim sau 24 giờ tích luỹ ít, ít hơn strophantin G 2 lần, ít hơn Strophantin K và D 3 lần, ít hơn digitoxin 5,3 lần.  2. Chế phẩm bông bông ít độc: Liều chết LD~50 đối với chuột nhắt trắng tính theo Perchin là 3,95g. So với những glucozit chữa tim đã biết, khoảng cách an toàn tương đối rộng.  3. Trên tim ếch cô lập, với nồng độ 1:1 triệu, 1:10 triệu và 1:100 triệu đều có tác dụng tăng trương lực tâm thu và làm giảm nhịp tim rõ rệt. Với liều độc: 1:100.000 tim chết ở thì tâm thu.  4. Trên tim thỏ cô lập, với liều 0,008g và0,004g liều điều trị chế phẩm bồng bồng có tác dụng tăng sức co bóp tim, làm giảm nhịp tim và tăng cường trương lực cơ tim, thời gian tâm trương kéo dài, với liều độc gây ngừng tim ở tâm thu.  5. Trên điện tâm đồ thỏ với liều 0,3g/kg tiêm tĩnh mạch và 1g/kg uống đã thể hiện khoảng RR dài ra, phúc hệ QRS ngắn lại, biên độ sóng R tăng cao và khoảng T-P kéo dài ra rõ rệt. Với liều độc, xuất hiện nhịp tim chậm lại quá mức dẫn đến hiện tượng bloc nhĩ thất.  6. Trên hệ mạch tai thỏ với nồng độ 1:100, 1:150 có tác dụng dẫn mạch. Trên hệ mạch ếch, với nồng độ 1:100, 1:150 và 1:500 đều có tác đụng dãn mạch. Ở nồng độ thấp hơn 1:1000 có tác dụng gây co mạch.  7. Trên huyết áp mèo và thỏ, với liều điều trị chế phẩm bông bông có tác dụng làm tăng lực tâm thu, nhịp tim chậm và thời gian tâm trương kéo dài. Với liều độc, xuất hiện dấu hiệu ngộ độc, như huyết áp hạ dần, súc vật nôn, do hệ thần kinh phó giao cảm bị kích thích."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá có calotropin, thuỷ phân cho calotropagenin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân dùng lá cây bông bông làm thuốc chữa hen. Cách dùng như sau: Hái lá đem về, lấy khăn ướt lau sạch lông, thái nhỏ, sao qua cho héo. Ngày dùng 10 lá sắc với 1 bát rưỡi nước, cô còn 1 bát. Thêm đường vào, chia 3-4 lần trong một ngày. Nước hơi đắng và tanh, uống nhiều một lúc có thể gây nôn. Nên uống xa bữa cơm hoặc sau bữa cơm. Uống vào có thể thấy mỏi chân, tay, mình mẩy, đi ỉa lỏng (rất hiếm). Kết quả sau 2-3 ngày, có khi sau 7-8 ngày. Có trường hợp có kết quả sau 10 phút (Phan Như Thế).  Ngoài những công dụng kể trên, cây bông bông còn được dùng cả cây để trị hủi, giang mai, kiệt lỵ, tiêu chảy, thấp khớp, bệnh về da."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang và được trồng nhiều nơi ở nước ta để làm hàng rào hay để lấy lá làm thuốc. Lá hái gần quanh năm. Dùng vải sạch lau hết lông, phơi hay sấy khô mà dùng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

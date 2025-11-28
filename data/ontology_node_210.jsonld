@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch đậu khấu",
+      "ten_khac": "Bạch đậu khấu",
+      "ten_khoa_hoc": "Amomum testaceum Ridl.",
+      "ma_taxon": "119387",
+      "ho": "Zingiberaceae (Gừng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bạch đậu khấu là một loại cây thân thảo sống lâu năm, có thân rễ bò lan. Dưới đây là những đặc điểm hình thái chính của cây:",
+      "thân": "Thân mọc thành bụi, cây có thể cao khoảng 3 mét.",
+      "lá": "Lá hình mũi mác, dài khoảng 60 cm, rộng khoảng 12 cm, đầu lá nhọn. Mặt lá trơn nhẵn, không có lông, gần như không có cuống. Lưỡi lá (phần nối giữa lá và thân) hình tròn, dài từ 7-10 mm. Phần gốc bẹ lá và lưỡi lá có nhiều lông dài và thô.",
+      "hoa": "Hoa mọc thành cụm dưới gốc, dạng bông hình trụ, đôi khi có dạng chùm, dài 8-11 cm, rộng 4-5 cm. Lá bắc (bao quanh hoa) hình tam giác, dài 3.5-4 cm, màu vàng rơm với vân lưới rõ ràng. Ống hoa màu trắng pha chút đỏ, có lông mềm dài bao phủ. Cánh hoa màu trắng, dài khoảng 1 cm, rộng 5 mm. Cánh môi (một phần của hoa) hình bầu dục, dài 1.5 cm, rộng 1.2 cm, có màu vàng ở giữa, viền nâu vàng.",
+      "quả": "Quả hình gần tròn, đường kính khoảng 16 mm, có màu trắng hoặc vàng nhạt. Trên bề mặt quả có gờ tam giác nhẹ, 7-9 rãnh cạn và một số đường gờ dọc hơi nổi. Phần đầu và đáy quả có lông vàng thô. Vỏ quả có kết cấu gỗ, dễ nứt ra thành ba mảnh.",
+      "mùa hoa": "tháng 5-8",
+      "mùa quả": "tháng 5-8",
+      "mọc": null
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Môi trường sống phù hợp:  Ưa bóng râm, không thích ánh nắng trực tiếp. Rễ nông, thích hợp với loại đất cát pha màu mỡ, có khả năng thoát nước tốt và thông thoáng. Ưa độ ẩm cao, cần môi trường có độ ẩm trong đất trên 20% và độ ẩm không khí trên 80% để phát triển mạnh. Thường mọc thành từng khóm lớn ở ven rừng hay gần nguồn nước.  Thời gian ra hoa & kết quả:  Ra hoa vào tháng 5, đậu quả từ tháng 6 đến tháng 8. Cây con phát triển chậm, nhưng có thể mọc mầm từ gốc. Ở vùng khí hậu ấm áp, cây có thể mọc mầm quanh năm. Sau 2 năm mới bắt đầu ra hoa và kết quả. Nhiệt độ lý tưởng để cây ra hoa mạnh là 20-24°C vào đầu xuân. Mỗi chùm hoa nở kéo dài khoảng 5 tuần, hoa nở vào 6h sáng, bắt đầu rụng phấn lúc 9h, và tàn vào khoảng 1-2h trưa. Mỗi ngày, mỗi chùm hoa có thể nở từ 1-3 bông. Thời gian từ khi hoa nở đến khi quả chín khoảng 3 tháng.  Điều kiện môi trường tối ưu:  Nhiệt độ trung bình hàng năm khoảng 23°C. Lượng mưa tối thiểu từ 1500-2200 mm/năm giúp cây phát triển tốt quanh năm. Dưới 4°C, lá bị tổn thương do sương giá. Dưới 0°C, phần trên mặt đất của cây sẽ bị chết hoàn toàn. Trên 35°C (có thể lên đến 41°C nếu có bóng râm), cây vẫn sống tốt. Nếu nhiệt độ trên 28°C trong thời gian dài, cây sẽ không thể ra hoa bình thường. Dưới 20°C, hoa nở chậm, ít phấn, quá trình thụ phấn kém hiệu quả, hoa lâu tàn. Hoa tiết nhiều dịch nhầy, giúp quá trình thụ phấn dễ dàng hơn.  Kỹ thuật trồng và chăm sóc cây bạch đậu khấu:  1️⃣ Chuẩn bị đất trồng  Chọn đất gần nguồn nước, ấm áp, ẩm ướt, thoáng mát, có độ che phủ từ 70-80%. Đất phải màu mỡ, thoát nước tốt, ưu tiên loại đất cát pha. Cày xới đất thật sâu, làm cho đất tơi xốp. Tạo luống rộng 1-1,3m, cao khoảng 10cm, san phẳng bề mặt theo địa hình.  2️⃣ Ươm giống  Chọn hạt giống từ những quả chín già, to, chắc.  Xử lý hạt:  Bóc vỏ ngoài, chà sát với cát để loại bỏ lớp thịt quả. Rửa sạch bằng nước, phơi trong bóng râm cho khô.  Kích thích nảy mầm:  Trộn hạt với cát ẩm để kích thích nảy mầm. Khi hạt bắt đầu nảy mầm, gieo vào luống theo hàng, mỗi hạt cách nhau 12cm, sâu khoảng 2cm. Phủ lớp đất mỏng lên trên, tưới nước đủ ẩm. Phủ rơm rạ để giữ ẩm, khi cây con mọc lên thì dỡ bỏ rơm. Khi cây con có 3-4 lá, tỉa bớt để khoảng cách giữa các cây là 10cm.  3️⃣ Chuyển cây ra ruộng trồng (định cây)  Khi cây cao khoảng 30cm, gốc cây bắt đầu mọc 3-4 nhánh non, có thể đem trồng cố định.  Khoảng cách trồng:  Giữa các cây: 1m Giữa các hàng: 1,5m  Cách trồng:  Đào hố sâu khoảng 30cm. Đặt cây vào hố, lấp đất kín gốc, nén nhẹ để giữ chặt cây. Tưới nước thật đẫm, phủ rơm rạ để giữ ẩm.  4️⃣ Làm cỏ, xới đất và dọn vườn  Thường xuyên xới đất, làm cỏ để giữ đất tơi xốp, giúp cây hấp thụ dinh dưỡng tốt hơn. Cắt bỏ cành lá khô, dọn sạch cỏ dại, lá rụng để tránh sâu bệnh. Sau khi thu hoạch, cần cắt bỏ những cây già cỗi, cây bệnh để tạo không gian cho cây mới mọc.  5️⃣ Bón phân và vun gốc  Bón phân đầy đủ để cung cấp dinh dưỡng cho cây.  Bón thúc theo mùa:  Mùa xuân: Bón phân để kích thích cây mọc chồi non và ra hoa. Mùa đông: Bón phân giúp cây khỏe mạnh, tăng tỷ lệ ra hoa và đậu quả vào năm sau.  Sử dụng vi lượng phân bón để giúp cây nảy mầm nhanh hơn, tăng tỷ lệ đậu quả, giúp quả chặt và có nhiều tinh dầu hơn.  6️⃣ Điều chỉnh độ che phủ  Giai đoạn cây con, cây non hoặc cây đang ra hoa, kết quả cần độ che phủ từ 70-80%. Điều chỉnh ánh sáng theo từng giai đoạn phát triển để cây nhận đủ ánh sáng nhưng không bị khô héo.  7️⃣ Thụ phấn nhân tạo  Tỷ lệ đậu quả tự nhiên chỉ khoảng 0,2 – 0,6%, nên cần hỗ trợ thụ phấn bằng tay.  Thời điểm thụ phấn: Từ 9h sáng đến 1h trưa, khi hoa bắt đầu rụng phấn.  Cách thực hiện:  Dùng ngón tay cái và ngón trỏ giữ nhẹ cánh hoa.  Dùng một que nhỏ hoặc ngón tay lấy phấn hoa và chấm vào nhụy cái. Cách này có thể nâng tỷ lệ đậu quả lên khoảng 35%.  8️⃣ Tưới nước và thoát nước  Giữ đất luôn ẩm bằng cách tưới nước đều đặn, đặc biệt trong mùa khô. Thoát nước kịp thời khi mưa lớn để tránh ngập úng, thối rễ.  9️⃣ Trồng xen canh (kết hợp trồng cây che bóng)  Trồng cây lâu năm có tán rộng, lá rụng dễ phân hủy để che bóng, ví dụ: cây thuốc như cây chó đẻ. Trồng cây ngắn ngày làm bóng tạm thời như: cây đậu răng ngựa, cây gai đỏ, chuối… để giúp cây con phát triển tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả và hoa Quả hình cầu dẹt, 3 múi, đường kính 1,0 – 1,5 cm, vỏ ngoài màu trắng, nhẵn, có một số đường vân dọc, đôi khi còn sót lại cuống quả. Vỏ quả khô, dễ tách. Bên trong có 20 – 30 hạt, tập hợp thành hình cầu. Mùi thơm, vị cay."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả bạch đậu khấu chứa tinh dầu, 3 – 4 %, trong đó có 60 – 80 % cineol, camphen, p.cymen, α – humulen, limonen, α – pinen, terpinen và terpineol (Prosea 12 (1), 1999). Hoa chứa tinh dầu với các thành phần: 1,8 – cineol, α – pinen, α – terpineol, α – humulen, caryophylen, myrcen, p.cymen, α – humulen oxyd, Sabinen, limonen, terpinen – 4 – ol, carvon, myrtenal. (Trung dược từ hải II, 1996)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo y học cổ truyền, bạch đậu khấu có vị cay, tính ấm, quy vào các kinh phế, tỳ, thận có tác dụng hành khí, hóa thấp, ôn trung, chỉ ẩu (cầm nôn)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tiêu hóa tốt hơn: Hỗ trợ tiêu hóa, giúp ăn ngon miệng. Hành khí, làm ấm cơ thể: Giúp giảm đầy bụng, khó tiêu, chướng bụng. Giảm triệu chứng do lạnh và ẩm: Hỗ trợ điều trị buồn nôn, nôn mửa do lạnh, đau bụng do khí lạnh. Ứng dụng: Dùng để chữa các chứng đầy hơi, khó tiêu, chán ăn, buồn nôn, đau bụng do lạnh…  Chú ý: Khi sắc thuốc gần xong nước còn đang sôi mới cho bạch đậu khấu vào, vì sắc lâu dược liệu sẽ giảm tác dụng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa chứng bụng đầy, ngực đau: Bạch đậu khấu 5g, hậu phác 6g, quảng mộc hương 3g, cam thảo 3g. sắc nước uống. Chữa nôn mửa khi thai nghén: Bạch đậu khấu 3g, trúc nhự 9g, đại táo 3 quả, gừng tươi 3g. Gừng tươi giã nát, ép lấy nước. Các vị thuốc còn lại dùng nước sắc còn độ 50 – 60 ml, lọc uống với nước gừng. Chữa lợm giọng, buồn nôn:  Nhấm hạt đậu khấu, nuốt nước. Chữa trẻ em hay trớ sữa: Bạch đậu khấu 14 nhân, sa nhân 14 nhân, sinh cam thảo 6g, chích cam thảo 6g. Tán thành bột mịn, xát vào miệng trẻ. Giải độc rượu khi say rượu không tỉnh:  Bạch đậu khấu 5g, cam thảo 5g. sắc nước uống."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

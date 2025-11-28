@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mua thấp",
+      "ten_khac": "Mua thấp, Mua núi, Mua lùn, Cây ala",
+      "ten_khoa_hoc": "Melastoma dodecandrum Lour.",
+      "ma_taxon": "915554",
+      "ho": "Melastomaceae (Mua)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, hình bầu dục hoặc hình trứng, gốc tù, đầu nhọn, hai mặt nhẵn, có 3 gân nổi rõ ở mặt trên; cuống lá mảnh, có lông ngắn.",
+      "hoa": "Hoa nhỏ màu hồng hoặc đỏ tím, mọc riêng lẻ hoặc 2 – 3 cái ở ngọn thân và đầu cành; lá bắc 2, nhỏ; đài có 4 – 6 răng, có lông ở mép; ống đài có lông nhỏ; tràng 4-6 cánh mỏng cũng có lông ở mép; nhị 8 -12, bao phấn uốn cong, có tai ở gốc, chỉ nhị hình sợi, trung đới nhỏ; bầu hình cầu, 4 – 6 ô.",
+      "quả": "Quả mọng, hình cầu, khi chín màu đỏ hay tím đen, có lông thưa.",
+      "cây": "Cây nhỏ sum sê, phân nhánh nhiều.",
+      "thân": "Thân mọc bò bén rễ, sau đứng thẳng, màu lục hay tím đỏ.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "So với loài mua Melastoma candidum D.Don, mua thấp thường phân bố rải rác và ít khi tạo thành những quần thể lớn. Cây ưa ẩm, ưa sáng và có thể chịu bóng, thường mọc trên đất ẩm ở ven rừng, chân núi đá vôi và bờ nương rẫy. Trên các đồi cây bụi, chỉ thấy mua thấp dưới tán cây thưa – nơi không có cỏ xâm lấn. Cây mọc bò lan trên mặt đất, ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Sau khi bị cắt hoặc bị giẫm đạp, phần còn lại của cây đều có khả năng tái sinh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, tốt nhất vào mùa thu, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": ""
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mua thấp có vị chát, hơi ngọt, tính bình, làm săn se. Nụ và quả non chát hơn, quả chín lại ngọt, có tác dụng thanh nhiệt, giải độc, tiêu thũng, khử ứ, lợi thấp và cầm máu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mua thấp chữa viêm gan vàng da, viêm ruột, kiết lỵ, tiêu chảy, thấp khớp, đau lưng nhức xương, sai khớp, mụn nhọt, đinh râu, ứ nguyệt do đòn ngã, kinh nguyệt không đều, khí hư, rong kinh, động thai. Dùng rễ hoặc toàn cây 30 – 60 g, quả 6 – 12 g sắc Uống. Dùng ngoài, lấy lá sắc nước để rửa trĩ, ghẻ, ngứa, loét ngoài da."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

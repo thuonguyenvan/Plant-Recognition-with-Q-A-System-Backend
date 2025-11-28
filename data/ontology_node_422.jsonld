@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cườm rụng",
+      "ten_khac": "Bùm sụm, chùm rụm.",
+      "ten_khoa_hoc": "Carmona microphylla (Lam.) Don.",
+      "ma_taxon": "357658",
+      "ho": "Vòi voi (Boraginaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ dạng bụi.",
+      "thân": "Cành mảnh và nhẵn.",
+      "lá": "Lá mọc so le hoặc tụ tập ở mấu, không cuống, hình trái xoan ngược hay thuôn – trái xoan, dài 1 – 4 cm, rộng 0,5 – 2 cm, gốc thuôn, đầu tù, mép có 3 – 5 răng ở gần đầu lá, mặt trên có lông nháp và nhiều chấm trắng, mặt dưới có lông nhám; cuống lá dài 1 -7 mm, phủ đầy lông.",
+      "hoa": "Cụm hoa mọc thành ngù dài 2 – 3 cm, hoa nhỏ, màu trắng, có cuống ngắn, đài 5 răng có ống dài 1 mm, tràng hình chuông, 5 cánh, có ống dài 1,5 mm; nhị 5, chỉ nhị dài bằng bao phấn, đính ở gốc của ống tràng, bầu hình cầu – nón, 4 – 5 ô.",
+      "quả": "Quả nạc, đường kính 6 mm, khi chín màu đỏ, hạch chứa 1 – 4 hạt."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trong hệ thống phân loại thực vật có hoa của Takhtajan (1987), ông đã chuyển một số chi Carmona, Coldenia, Ehretia, Rotula từ họ Boraginaceae sang họ mới – Ehretiaceae. Quan điểm này chưa nhận được sự ủng hộ của nhiều nhà khoa học. Ngay ở Việt Nam, Nguyễn Tiến Bân và một số nhà phân loại thực vật khác (1997, 2003) vẫn xếp chi Carmona ở trong họ Boraginaceae  Về loài “Cườm rụng” được mô tả ở trên, ngay từ thế kỷ 18, đã được nhiều nhà khoa học tách khỏi chi Ehretia, chuyển thành một chi mới là Carmona. Và chi này chỉ có duy nhất một loài (cườm rụng), với tên hợp danh pháp như đã nêu.  Cây ưa sáng, chịu hạn tốt và thường mọc ở đồi, rừng còi khô hạn, ở vùng ven biển. Cườm rụng có thể sống được trên cát, đất cằn cỗi do đã bị rửa trôi mạnh. Do đó, loài cây này đã được lựa chọn làm cây bonsai hoặc loại cây cảnh có thể cắt tỉa được.  Trong tự nhiên, cây ra hoa quả hằng năm, tái sinh tự nhiên từ hạt, song có thể trồng được bằng cành. Bên cạnh các công dụng làm cảnh, làm thuốc, lá của cây còn làm trà uống; quả chín ăn được."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, thân, cành và lá."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân, cành và lá cườm rụng có vị đắng, tính bình, không độc, có tác dụng tiêu ban nóng, hoá đờm thấp, hạ khí, tiêu thực. Rễ có vị dịu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nhân dân Việt Nam dùng lá phơi khô trong bóng râm pha nước uống thay trà. Rễ, cành và thân chữa đau lưng, đau người, chân tay nhức mỏi. Mỗi ngày 15-30g, sắc uống.  Nhân dân Ấn Độ dùng rỡ sắc uống chữa bệnh, suy mòn giang mai, giải các chất độc thực vật, chữa rắn độc cắn. Ở Philippin, nước hãm lý, uống thay trà, nước sắc lá để trị đau dạ dày, tiêu chảy, chữa ho.  Bài thuốc có cườm rụng  Chữa sốt thương hàn, sốt nóng kéo dài không dứt: Lá cườm rụng 10g, dây lức, thổ phục linh, củ sả, cành cây dâu, mơ lông, trần bì, lá liễu, cỏ mần trầu, bồ công anh mỗi vị 10g, gừng sống 3 lát. Sắc đặc, uống trong ngày (kinh nghiệm ở tỉnh An Giang)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

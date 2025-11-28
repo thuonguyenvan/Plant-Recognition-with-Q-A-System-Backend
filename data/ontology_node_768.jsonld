@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sẻn hôi",
+      "ten_khac": "Cóc hôi, hoàng mộc hôi, vàng me",
+      "ten_khoa_hoc": "Zanthoxylum rhetsa (Roxb.)DC.",
+      "ma_taxon": "154212",
+      "ho": "Cam (Rutaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, có thể cao đến 30m, cành lúc đầu có lông sau nhẵn, gai nhỏ hình chóp, ngắn, loe ra ở gốc.",
+      "lá": "Lá kép mọc so le, thường tụ tập thành tủm ở đầu cành, lá chét 6 – 8 đội mọc đối, hình trái xoan – mũi mác, dài 9 cm, rộng 2,5 cm, gốc lệch, đầu nhọn, mép nguyên, gân nổi rõ ở mặt dưới lá.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành hình ngủ kép, ngắn hơn lá, có lông; đài có 4 răng, nhẵn, hình tam giác, mép có răng tràng 4 cánh nhẵn, hình bầu dục; hoa đực có 4 nhị, chi nhị dài bằng hay phấn, bầu hình thành bởi một khối hình trứng dài hoa cái không có nhị, bầu 1 – 3 noãn hình trứng.",
+      "quả": "Quả nang, to bằng hạt đậu, có mùi thơm, hạn màu đen bóng."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Zanthoxylum L. ở Việt Nam có 13 loài, phân bố ở khắp các vùng núi và trung du.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắc Lắc"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Thuận"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Sẻn hôi là loại cây gỗ trung sinh, khi lớn ưa sáng và có thể chịu hạn. Cây thường mọc rải rác ở rừng thí sinh hoặc rừng thưa rụng lá hoặc nửa rụng lá.",
+      "Đặc điểm sinh trưởng": "Cây ra hoa quả hàng năm, tái sinh tự nhiên bằng hạt; khi cây còn nhỏ nếu bị chặt có thể sẽ tái sinh cây chồi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ rễ, vỏ quả."
+    },
+    {
+      "@type": "Thành phần",
+      "tinh dầu chứa": "Hạt chứa tinh dầu chứa sabinen, limonen, α và β – pinen, p. cymen, terpien – 4 – ol, α – terpineol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả sẻn hôi vị đắng cay, mùi thơm, tính ấm nóng, vào 3 kinh phế, vị, thận; có công năng làm ấm, trừ lạnh, làm săn sóc, kích thích, lợi tiêu hóa. Vỏ rễ cây sẻn hôi có màu đỏ nâu, vị đắng, mùi thơm dễ chịu, tính ấm, có công năng kích thích, trị giun và điều kinh, lọc máu. Vỏ thân sẻn hôi mùi thơm, có công năng hạ sốt và bổ. Hạt sẻn hôi vỏ màu đen, nhẵn bóng, vị đắng, tính lạnh, có công năng, lợi niệu, tiêu thũng, chữa phù thũng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả sẻn hôi (cả hạt) làm ấm bụng (ôn trung), trừ lạnh, đau bụng lạnh, trị đầy hơi, thấp khớp. Còn làm gia vị thay hạt tiêu, thường được bảo quản trong giấm. Liều dùng, ngày 3-6g sắc uống, có thể tán thành bột, hãm uống.",
+      "chữa": "Vỏ rễ để điều kinh, trực giun. Vỏ thân được dùng trị ỉa chảy, sốt rét, thấp khớp, tiêu hoá kém. Liều dùng vỏ thân, vỏ rễ ngày 10 – 15g, sắc uống.",
+      "được_dùng": "Lá được dùng thay men để chế một loại bia gạo, do lá tiết ra một chất gôm thơm. Lá non được dùng để làm gia vị.",
+      "có tác dụng": "Ở Ấn Độ, quả được dùng do tính chất thơm và kích thích, săn se, kiện vị, kích thích tiêu hoá, chữa đau bụng, ỉa chảy[Chopra et al., 2001: 260]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

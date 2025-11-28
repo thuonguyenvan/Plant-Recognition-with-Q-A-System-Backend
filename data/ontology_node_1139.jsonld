@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Huyền hồ",
+      "ten_khac": "Huyền hồ sách, Huyền hồ",
+      "ten_khoa_hoc": "Corydalis yanhusuo W . T. Wang",
+      "ma_taxon": "491317",
+      "ho": "Papaveraceae (Thuốc phiện)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, nhẵn, sống lâu năm, cao 10 – 20cm.",
+      "thân": "Thân rễ gồm những củ nhỏ chắc, dẹt, dày 1,3cm, đường kính 1,5cm, màu vàng nâu.",
+      "lá": "Lá mọc so le, 2 – 3 lần xẻ chân vịt, các thùy lại chia nhỏ hơn, mép khía răng.",
+      "hoa": "Cụm hoa mọc thành chùm; hoa màu đỏ hồng hoặc đỏ tím; đài 2 răng; tràng 4 cánh thẳng không đều, 1 cánh dài hơn; nhị 6; bầu 2 ô.",
+      "quả": "Quả nang, thuôn hẹp.",
+      "mùa hoa": "tháng 4 – 5",
+      "mùa quả": "tháng 6-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Huyền hồ phân bố chủ yếu ở vùng ôn đới ấm thuộc khu vực Đông Á, bao gồm Trung Quốc, Nhật Bản và có thể cả Triều Tiên.  Theo Phạm Hoàng Hộ (1991 và 2000), chi Corydalis Vent, có 2 loài ở Việt Nam là Corydalis balansae Prain phân bố ở Lạng Sơn và Ninh Bình; loài C.tenuifolia Franch. ở Sa Pa, tỉnh Lào Cai. Huyền hồ ở Việt Nam là vị thuốc được nhập từ Trung Quốc."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ củ thu hái về rửa sạch phơi hay sấy khô. Khi dùng, sao tẩm với rượu để có tác dụng hành huyết; với giấm để cầm máu. Còn sao không tẩm lại có tác dụng điều huyết."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ huyền hồ chứa các alcaloid như d. corydalin, dl tetrahydropalmatin, dehydrocorydalin, columbamin, d. corybunbin, protopin, d. yanhunin, allocryptopin, d. glaucin, d. N methyl laurotetanin, leonticin, dihydro sanguinarin, L ambinin, Nor. glaucin, d. thaliporphin. (TDTH 1.2151).  Yamda. Masaho cho rằng dehydro corydalin là sản phẩm thứ cấp được tạo thành từ corydalin trong quá trình chế biến (CA. 108, 173418 u).  Hàm lượng corydalin và corybubbin đạt tối đa ở rễ được 4-5 tuổi (lúc này rễ đã có thể được dùng làm dược liệu). Còn cavidin không thay đổi theo tuổi của cây (CA. 110, 1989, 101578 q).  Hàm lượng alcaloid trong rễ củ tươi đạt tối đa lần thứ nhất vào tháng 8, hoặc tháng 9 (CA. 110, 1989, 82388 t).  Trong củ huyền hồ còn có 0,239 – 0,278 mg vitamin B1/100g tươi (CA. 125, 1966, 326906 c)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Huyền hồ có vị đắng hơi cay, tính ấm, vào ba kinh can, phế, tỳ, có tác dụng hoạt huyết, tán ứ, hành khí, chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Huyền hồ được dùng trị khí huyết ngưng trệ, đau khắp người, đau kinh, đau bụng, sau khi đẻ ứ huyết, chấn thương sưng đau. Ngày 6 – 12g, dạng thuốc sắc, hoặc hoàn tán. Thường phối hợp với các vị thuốc khác.",
+      "chữa": "Trong y học cổ truyền Trung Quốc, huyền hồ được dùng chủ yếu làm thuốc giảm đau, trị thấp khớp và điều kinh."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "1. Chữa u xơ tuyến vú: Huyền hồ 12g; đan sâm 16g; đương quy, xích thược, lá quất, hồng hoa, sài hồ, đào nhân, hương phụ chế, xuyên luyện tử, mỗi vị 12g. Sắc uống ngày một thang.  2. Chữa viêm phần phụ: Huyền hồ 8g; kê huyết đằng, ý dĩ, mỗi vị 16g; bồ công anh, kim ngân hoa, mỗi vị 12g; xuyên khung 10g nhũ hương, một dược, cam thảo, mỗi vị 4g. sắc uống ngày một thang."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Kiêng kỵ: Phụ nữ có thai và người huyết hư không có ứ trệ khống nên dùng."
+    }
+  ]
+}

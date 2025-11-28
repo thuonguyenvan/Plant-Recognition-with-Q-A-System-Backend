@@ -1,0 +1,295 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/cham-meo.html",
+      "ten": "Chàm mèo",
+      "ten_khac": "Chàm mèo, Chàm to lá, Đại lam, Mã lam, Chàm nhuộm, Thanh đại, Mạy ốt (Tày), Co sơn (Thái). Tần gàm (Dao)",
+      "ten_khoa_hoc": "Strobilanthes cusia (Nees) Kuntze",
+      "ma_taxon": "343957",
+      "ho": "Acanthaceae (Ô rô)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Lá mọc đối, thường mềm ỉu, hình trái xoan hay bầu dục thon, dài 10-13cm, gân phụ 6-7 cặp, mép có răng hay khía tai bèo, các lá cùng một đôi thường không bằng nhau.",
+        "hoa": "Hoa mọc so le hay mọc đối, xếp thành bông ít hoa; các bông này lại xếp thành chuỳ; lá bắc hình lá, nhẵn, lá bắc con hình sợi; đài cao 1cm, các lá đài nhọn; tràng hoa màu lam đến tím, cuống dài 3-3,5cm, phía trên loe ra, có 5 thuỳ bằng nhau, nhị 4; bầu không lông.",
+        "quả": "Quả nang dài, không lông.",
+        "cây": "Cây nhỏ lưu niên, cao 40-80cm (có khi đến 2m); thân nhẵn, phân nhánh nhiều, phình lên ở các mấu." ,
+        "mùa hoa": "tháng 11-2",
+        "mùa quả": "tháng 11-2"
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Cây mọc hoang ở các thung lũng ẩm ướt, các núi đá và được trồng lấy cành lá để nhuộm màu xanh chàm.",
+        "ở_vùng": [
+          {
+            "@type": "schema:Place",
+            "tên": "hầu hết các tỉnh vùng cao ở miền Bắc"
+          },
+          {
+            "@type": "schema:Place",
+            "tên": "miền Nam"
+          }
+        ],
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Hà Giang"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Bắc Thái"
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "tỉnh": {
+                "tên": "Hà Bắc"
+              }
+            }
+          ]
+        },
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:Place",
+              "nơi": {
+                "tên": "các vườn gia đình",
+                "ghi_chú": "..."
+              }
+            },
+            {
+              "@type": "schema:Place",
+              "nơi": {
+                "tên": "trên nương rẫy gần nguồn nước",
+                "ghi_chú": "..."
+              }
+            },
+             {
+              "@type": "schema:Place",
+              "nơi": {
+                "tên": "Bình Định",
+                "ghi_chú": "..."
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Người ta trồng chàm mèo bằng cách vào tháng 3-4. Sau khi trồng được 6 tháng đã có thể thu hái lá. Dùng lá tươi để chế bột chàm; lá tươi ngâm nước ở 30oC trong 12 giờ cho lên men. Lọc men, lọc, kiềm hoá bằng vôi và khuấy liên tục 4-5 giờ. Lọc gạn lấy bột Chàm, ép kiệt nước, thái thành miếng, phơi trong mát đến khô. Bột Chàm tốt phải chứa 60-70% indigotin."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": null
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lá – Folium Strobilanthis Cusiae, thường gọi là Mã lam; Bột chàm – Indigo naluralis, thường gọi là Thanh đại."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Lá Chàm mèo chứa 0,4-1% indican. Khi thuỷ phân, indican cho indoxyl và glucose. Khi bị oxy hoá, indoxyl cho indigotin. Indigotin có màu xanh lam sẫm. Còn có indirubin."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": null
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Chàm mèo được dùng chữa trẻ em kinh sợ, cam nhiệt, sốt, sốt phát cuồng, sưng amydgal, nôn mửa, thổ huyết, phụ nữ rong kinh, rong huyết. Ngày dùng 4-6g cao lá trộn thêm đường, hoặc dùng 1-4g bột Thanh đại với nước. Dùng ngoài lấy cả cây Chàm mèo nấu cao đặc bôi chữa chàm chốc viêm lợi chảy máu mồm miệng lở loét, rắn độc và sâu bọ cắn.  Đơn thuốc:  Tuệ Tĩnh đã dùng lá Chàm và Thanh đại để chữa một số bệnh sau:  Chữa uống thuốc quá liều lượng mà ngộ độc, buồn bực nguy cấp: Lá Chàm giã nhỏ, chế nước nguội, vắt lấy nước cốt uống vài bát. Chữa đơn lở nổi bọng nước, đau nhức: Lá chàm giã nát đắp. Chữa chảy máu mũi: Bột Chàm, bồ hóng sao, tán bột lượng bằng nhau, uống mỗi lần 4g. Chữa trẻ em cam răng, thối loét: Dùng Thanh đại bôi khắp chân răng, mỗi giờ bôi một lần. Chữa trẻ em sốt cao co giật, trợn mắt, hôn mê: Thanh đại hoà với nước cho uống, mỗi ngày 2-8g chia uống làm nhiều lần.  Viện Dược liệu đã bào chế viên Thanh đại từ cao khô lá Chàm sao để chữa cho phụ nữ bị rong kinh. Dùng viên thanh đại chứa 0,25g cao khô lá Chàm mèo, mỗi ngày uống 10 viên chia làm 2 lần. Uống từ thời điểm 5 ngày trước lúc bắt đầu có kinh nguyệt và uống liên tục 10 ngày. Uống nhắc lại như vậy vào tháng 2, thứ 3 hoặc lâu hơn, cho đến khi kinh nguyệt trở lại bình thường thì ngừng uống thuốc. Nếu lại tiếp tục uống kéo dài, kinh nguyệt có thể bị chậm lại quá mức bình thường.  Người ta cũng dùng cao Chàm mèo phối hợp với cao Ích mẫu để gây sẩy thai ở giai đoạn sớm (thời kỳ đầu thai nghén) đạt kết quả 63%."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": null
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chè dây",
+      "ten_khac": "Chè dây, Chè hoàng giang",
+      "ten_khoa_hoc": "Ampelopsis cantoniensis (Hook. et Arn.) Planch.",
+      "ma_taxon": "954524",
+      "ho": "Vitaceae (Nho)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây leo, thân và cành cứng hình trụ, có lông nhỏ.",
+      "thân": "Tua cuốn chẻ đôi, mọc đối diện với lá.",
+      "lá": "Lá kép lông chim mọc so le, có 7-13 lá chét có cuống, hình trái xoan, dài 2,5-7,5 cm, rộng 1,5-5 cm, gốc tròn, đầu nhọn, mép có ít răng cưa, nhẵn, mặt trên lá khi khô có những vết loang lổ như nấm mốc, mặt dưới rất nhạt; lá kèm khô xác.",
+      "hoa": "Cụm hoa mọc đối diện với lá thành ngù phân nhiều nhánh, rộng 3-6 cm; hoa nhiều màu trắng; dài hình chén có lông mịn, 5 răng ngắn, tràng có 5 cánh; nhị 5, chỉ nhị mảnh; bầu hình nón có 2 ô, mỗi ô 2 noãn.",
+      "quả": "Quả mọng khi chín màu đen, hạt 3-4 thót lại ở gốc."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài phân bố ở Ấn Độ, Trung Quốc, Lào, Inđônêxia và Việt Nam. Ở nước ta cây mọc dại theo bờ bụi ở nhiều nơi: Lào Cai, Hoà Bình, Hà Tây, Bắc Thái, Lạng Sơn, Quảng Ninh, Nghệ An… tới Lâm Đồng, Đồng Nai. Người ta thu hái dây lá tươi quanh năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất của chè dây thu hái vào lúc cây chưa ra hoa, cắt nhỏ, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chè dây chứa flavonoid, tannin, đường, không có alcaloid và saponin Theo các công trình của Phạm Thanh Kỳ và công sự, hàm lượng flavonoid toàn phần trong chè dây là 18,15%.flavonoid tồn tại dưới 2 dạng aglycon và glycoside."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, đắng, tính mát, có tác dụng giảm đau, làm liền sẹo, diệt khuẩn Helicobacter pylori, giảm viêm dạ dày."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá cũng dùng nấu nước uống thay chè. Gần đây, Viện Y học Cổ truyền Dân tộc đã sử dụng Chè dây dạng cao khô để điều trị bệnh loét dạ dày – hành tá tràng.  Bài thuốc có chè dây"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

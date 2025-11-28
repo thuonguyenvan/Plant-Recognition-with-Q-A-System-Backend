@@ -1,0 +1,264 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bổ béo",
+      "ten_khac": "Bùi béo, cây béo trắng, bổ béo, tiết nùng, lô nội",
+      "ten_khoa_hoc": "Gomphandra tonkinensis Gagnep.",
+      "ma_taxon": null,
+      "ho": "lcacinaceae (Thụ đào)",
+      "Mô tả": {
+        "cây": "Cây nhỏ, cao 2-4m.",
+        "rễ": "Rễ mọc thẳng, mập mềm và nạc, màu trắng ngà.",
+        "thân": "Cành non có lông tơ.",
+        "lá": "Lá mọc so le, hình ngọn giáo, có cuống ngắn, mép nguyên, đầu ngọn, có lông rất mịn, mặt trên nhẵn màu lục sẫm, mặt dưới màu xám nhạt.",
+        "hoa": "Cụm hoa mọc đối diện với lá thành ngù kép, gồm nhiều hoa nhỏ màu trắng, nụ hình trứng ngược thuôn dài dạng đầu rất ngắn, cánh hoa 5, hình tam giác có mũi nhọn ở đầu, nhị 5 mọc thò ra ngoài, bao phấn hình trái xoan, chỉ nhị có lông mềm ở nửa trên.",
+        "quả": "Quả hình thoi, mang dài tồn tại ở gốc, có lông.",
+        "mùa hoa": "tháng 5-9",
+        "mùa quả": "tháng 5-9"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Gomphandra Wall ex Lindl có 5 loài ở Việt Nam, đều là cây bụi, trong đó có 2 hoặc 3 loài có rễ củ và đều được dùng làm thuốc. Bổ béo là cây ưa ẩm, chịu bóng, thường mọc dưới tán rừng kín thường xanh nguyên sinh và thứ sinh. Đôi khi gặp ở rừng núi đá vôi ẩm hoặc bờ nương rẫy sát bìa rừng. Độ cao phân bố từ vài chục mét đến trên 1000m. Những tỉnh có bổ béo như: Thái Nguyên, Bắc Cạn, Cao Bằng, Lạng Sơn, Yên Bái, Tuyên Quang, Hòa Bình, Thanh Hóa, Nghệ An và Hà Tĩnh. Ở các tỉnh phía nam ít thấy hơn. Bổ béo còn phân bố ở Trung Quốc và Lào. Bổ béo mọc hoa hàng năm nhưng lượng quả trên cây thường ít. Tuy nhiên, đôi khi xung quanh gốc cây mẹ, có thể thấy cây con hoặc một vài cây ở lứa tuổi khác nhau. Cây mọc nơi đất tốt, tơi xốp, có rễ củ to và thẳng. Ngược lại, ở đối cây bụi, rễ củ thường có lõi gỗ to và ít nạc. Cây có khả năng tái sinh chồi tốt sau khi chặt.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bắc Cạn"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cao Bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lạng Sơn"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Yên Bái"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thanh Hóa"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Nghệ An"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Tĩnh"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ, thu hái quanh năm, tốt nhất vào mùa thu. Đào rễ về, rửa sạch, cắt bỏ gốc, đầu rễ và rễ con. Thái mỏng, ngâm nước vo gạo trong 24 giờ, rửa sạch, phơi hoặc sấy khô. Sau đó tẩm nước gừng (50g gừng trong 100ml nước), đun nóng 10 – 15 phút, phơi khô. Lại ngâm nước gừng, phơi nhiều lần cho đến khi bớt nước tẩm. Để nguội. Phơi hoặc sấy khô lần cuối cùng, rồi sao vàng."
+      },
+      "Thành phần": {
+        "thành phần": null
+      },
+      "Tính vị": {
+        "Có vị": "Rễ bồ bồ có vị ngọt, hơi đắng, tính mát, không độc. Có tác dụng bồi dưỡng cơ thể, sinh tân dịch, dưỡng tỳ, kích thích ăn ngon cơm, nhuận tràng, lợi tiểu, lợi sữa."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân ở vùng có cây mọc, khi đi rừng hoặc đi xa thường đào rễ củ ăn cho mát, giải khát, giải nhiệt, đồng thời chống mệt mỏi. Theo kinh nghiệm dân gian, rễ bổ béo được dùng làm thuốc bổ, uống lâu ngày người sẽ béo khoẻ. Mỗi ngày dùng 10 – 12g rễ khô, dưới dạng thuốc sắc hoặc tán bột, trộn mật làm thành viên. Có thể ngâm rượu uống.",
+        "chữa": "kém ăn, mất ngủ, cơ thể mệt mỏi, phụ nữ sau khi đẻ",
+        "làm thuốc": "lợi sữa"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

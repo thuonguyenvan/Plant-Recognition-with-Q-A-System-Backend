@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gừng dại tía",
+      "ten_khac": "Gừng đỏ, gừng tía",
+      "ten_khoa_hoc": "Zingiber purpureum Roscoe",
+      "ma_taxon": "1448361",
+      "ho": "Gừng (Zingiberaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo, cao 1,5 – 2m.",
+        "thân": "Thân rễ thuôn, có đốt, khía rãnh, ruột màu vàng cam.",
+        "lá": "Lá không cuống mọc thành hai dãy cách nhau, hình dải, dài 20 – 40 cm, rộng 2 – 3,5 cm, gốc tù, đầu thuôn nhọn, mặt trên nhẵn màu lục sẫm, mặt dưới nhạt có lông nhung, bẹ lá có lông.",
+        "hoa": "Từ thân rễ, mọc ra một cán hoa dài 20 – 40 cm, có bẹ dạng vảy và lông mềm bao quanh; cụm hoa dạng nón thuôn, dài 10 – 15 cm, rộng 4 – 6 cm, bao bọc bởi những lá bắc rộng màu gỉ sắt, mép lá bắc mỏng và có màu nhạt, có lông; hoa có lá đài màu đỏ; cánh hoa màu vàng, bầu có lông.",
+        "quả": "Quả nang tròn, cao 1,3 cm.",
+        "mùa hoa": "tháng 8 – 10",
+        "mùa quả": "tháng 8 – 10"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Zingiber Boehm. trên thế giới có khoảng 150 loài, phân bố rải rác khắp các vùng nhiệt đới, nhưng tập trung nhiều ở vùng Nam Á và Đông Nam Á, trong đó có Việt Nam đã ghi nhận được 12 loài.  Loài gừng dại trên phân bố rải rác ở Lạng Sơn (Hữu Lũng), Thái Nguyên, Hà Nội (Ba Vì), Ninh Bình (Cúc Phương) và một số tỉnh khác ở miền Nam. Trên thế giới, loài này có ở Ấn Độ, Thái Lan, Malaysia và Indonesia.",
+        "thường_mọc": "Gừng dại là loại cây thảo sống nhiều năm và thường xanh. Cây ưa ẩm và hơi chịu bóng; thường mọc ở ven rừng, dọc theo các lối đi trong rừng, trong các hốc mùn đá ở rừng núi đá vôi, hoặc trong các lùm bụi ở bờ khe suối và đôi khi còn thấy ở bờ các nương rẫy.",
+        "Đặc điểm sinh trưởng": "Cây ra hoa quả hàng năm, tái sinh tự nhiên từ hạt tốt. Đặc biệt cây có khả năng đẻ nhánh nhiều đồng thời với quá trình phát triển của thân rễ, nên gừng dại thường nhanh chóng tạo thành từng bụi lớn. Cây dễ dàng trồng được bằng các nhánh con của thân rễ (củ)."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ."
+      },
+      "Thành phần": {
+        "thành phần": "Thân rễ gừng dại tươi, cất béo hơi nước thu được 0,5% tinh dầu (The Wealth of raw material tin India, 1976).",
+        "gồm chất": "Thành phần chính của tinh dầu là 4 – ol (35%), sabinen (34,68%), y – terpinen (9%), α – terpinen (4,8%), p – cymol (2,1%), terpinelol (2,1%), α – pinen (2,5%), β – pinen (2,1%) và myrcen (1,6%). Tinh dầu ở dạng sánh, mùi thơm, kết tính ở nhiệt độ thường, cho tinh thể màu trắng đục, không tan trong nước, nhưng tan tốt trong nước ấm, để lạnh kết tinh lại và nổi lên trên bề mặt."
+      },
+      "Tính vị": {
+        "Có vị": "Gừng dại có vị cay, đắng, tính ấm. Có tác dụng trị đầy hơi, nhuận tràng nhẹ, trị lỵ, điều kinh, làm săn da [Võ Văn Chi, 1997: 535 – 536]."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân một số địa phương dùng củ gừng dại để chữa lỵ mạn tính. Gừng dại cũng được dùng để chữa bệnh toi gà [Đỗ Tất Lợi, 1999: 1191; Võ Văn Chi, 1997: 535-536]. Dịch ép củ được chế thành thuốc bôi để chữa áp xe, đau bụng, tiêu chảy.",
+        "chữa": "Ở Malaysia, nước sắc lá gừng dại và hạt tiêu được uống để trị đau dạ dày, nước sắc cây được dùng cho phụ nữ sau khi đẻ, củ được dùng làm thuốc tẩy giun cho trẻ em. Nhiều dạng thuốc xa bóp, thuốc đắp móng, thuốc sắc uống được dùng cho phụ nữ sau khi đẻ. Gừng dại còn được dùng trị viêm tấy, thấp khớp, thâm tím, đụng giập, bàn chân tê cóng, các chỗ đau, và dùng nấu nước tắm trị sốt. Ở Indonesia, gừng dại được dùng làm thuốc trị đầy hơi, giảm chướng bụng, gây trung tiện, trị tiêu chảy, đau bụng, táo bón, và vàng da. Gừng dại phối hợp với riềng nếp, thuỷ xương bồ và ít giấm dùng cho phụ nữ sau khi sinh đẻ làm thuốc lọc máu, giã nát cùng với định hướng xoa lên bụng trị chuột rút, co cứng cơ."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

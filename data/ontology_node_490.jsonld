@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nghệ xanh",
+      "ten_khac": "Nghệ đen, nghệ tím, nghệ đen đồng",
+      "ten_khoa_hoc": "Curcuma aeruginosa Roxb.",
+      "ma_taxon": "347768",
+      "ho": "Gừng (Zingiberceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống nhiều năm, cao 1,5 – 2m.",
+      "thân": "Thân rễ mập, hình trái xoan, dài 16 cm, dày 3 cm, đầu màu hồng, vỏ ngoài màu xám sáng, mặt trong màu lục lợ.",
+      "lá": "Lá mọc so le, hình mác thuôn, dài 30 – 70 cm, rộng 9 – 13 cm, hai mặt nhẵn, có một vệt màu đỏ nhạt ở gần giữa, bẹ lá dài và nhẵn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá xuất phát từ thân rễ trên một cán dài thành bông to hình trụ, bao bọc bởi những lá bắc màu lục sẫm, đầu nhuốm đỏ; đài màu trắng hoặc vàng ngà, có 3 răng hình tam giác; tràng có ống hẹp, cánh hoa màu hồng sẫm, cánh lưng có mũi nhọn dài, nhị có trung đới hình mũi hẹp, nhị lép hình elip đính ở gốc chỉ nhị, màu vàng, cánh môi hơi xẻ 3, màu vàng, bầu có lông.",
+      "mùa hoa": "tháng 4 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây phân bố tự nhiên ở một số tỉnh miền núi phía Bắc như: Sơn La (Mộc Châu), Điện Biên (Tuần Giáo), Tuyên Quang (Chiêm Hóa, Yên Sơn), Hà Giang (Vị Xuyên và ngoại ô thị xã Hà Giang), Thái Nguyên (Phú Lương, Đại Từ). Cây cũng được trồng rải rác trong nhân dân. Trên thế giới, cây có ở Ấn Độ, Mianma, Thái Lan, Campuchia và Indonesia.",
+      "thường_mọc": "Nghệ xanh lá cây đặc biệt ưa ẩm và chịu bóng. Cây thường mọc nơi đất còn tương đối màu mỡ, giàu chất mùn, bên cạnh các lùm bụi quanh làng, ven đường đi, bờ nương rẫy nhưng gần nguồn nước.",
+      "Đặc điểm sinh trưởng": "Cây sinh trưởng mạnh trong mùa hè – thu, đến mùa đông toàn bộ phần trên mặt đất bị tàn lụi. Hiện chưa quan sát được quả cũng như cây con mọc từ hạt. Nhân trồng dễ dàng bằng các nhánh củ con. Trồng vào mùa xuân."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong thân rễ nghệ xanh chứa tinh dầu, curcumenon, curcumol, curdion, epicurzerenon aerugidiol, difrucurmenon, guain, sesquiterrpen lacton, isofurranodien, furanodienon, dihydrogermacron, 13 hydroxygerlacron, zedoarol, sedoalacerol A và B redoalrondrol (guinolid) [Phạm Hoàng Hộ, 2006].",
+      "gồm chất": "Theo Lã Đình Mồi (2002) [Tài nguyên thực vật có tinh dầu ở Việt Nam, tập 2, tr.256], thành phần của tinh dầu nghệ xanh gồm α – pinen (0,07%) β – pinen (1,23%) limonen (0,13%) 1,8 cineol (2,98%), decanon – 2 (0,21%), camphor (1,16%), nanonol – 2 (0,06%), α – terpineol (0,32%), 8 – elemen (0,21%), β-elemen (2,82%), β – caryophyllen (0,76%), menthol (0,04%), isoborneol (0,05%), borneol (0,13%) sesquiterpen hydrocarbon (0,20%), β – cubeben (1,15%), α – zingiberen (2,72%), α – curcumen (0,4%) β – bisabolen (1,42%) sesquiterpen derivat (0,75%) δ – elemen (1,50%) δ – lacton (0,64%) 19,9% sesquiterpen."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nghệ xanh vị đắng, cay, tính ấm, vào kinh can, có công năng phá huyết, hành khí, tiêu tích, thông kinh, chỉ thống.  Cũng từ tương tự như ở Việt Nam, tài liệu Trung Quốc cho rằng thân rễ nghệ xanh, vị đắng cay, tính ôn, có công năng phá huyết, hành khí, tiêu tích tụ, chỉ thống [TDTH, 1996, VV. 1939]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ nghệ xanh được dùng trị tích huyết sinh đau bụng, kinh nguyệt bế tắc, ăn không tiền tích tụ lại, gan lách sưng to. Ngày dùng 3 – 10 sắc nước uống hoặc tán bột uống.",
+      "được_dùng": "Trong thời kỳ đói kém, nhân dân lấy thân rễ, mài hoặc gia thành bột, rửa sạch bột bằng nước, phơi bột cho khô dùng thay cho sắn, ngô.",
+      "làm thuốc": "Ở Indonesia và Thái Lan, nhân dân dùng thân rễ ngải xanh (có thể phối hợp với một số vị thuốc khác) sắc cho phụ nữ sau khi sinh con để chống các bệnh phát sinh sau đẻ, được coi như để lọc máu. Uống trong và đắp ngoài để chữa ngoại ban, lở ngứa. Còn dùng chữa béo phì, thấp khớp và chống giun.",
+      "có tác dụng": "Có thể dùng thân rễ tươi làm thuốc nhuộm xanh [De Padua et al., 1999: 211; Med, herb index, 1995: 271].",
+      "chữa": "Ở Trung Quốc, thân rễ ngải xanh được dùng chữa chứng giả tích tụ (chứng tích tụ hòn cục ở trong bụng), quảng phục trưởng thống (khoang bụng trướng đau), thực tích trướng thống (ăn không tiêu, bụng trướng đau), kinh bế phúc thống (không thấy kinh sinh đau bụng), khí huyết ngưng trệ [TDTH, 1996, II: 1939]."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Phụ nữ có thai không được dùng ngải xanh. Người cơ thể yếu mệt cũng không nên dùng. Nhưng có thể phối hợp với nhân sâm, bạch truật để dùng khi yếu mệt."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kê náp",
+      "ten_khac": "Đay, kê náp.",
+      "ten_khoa_hoc": "Hibiscus cannabinus L.",
+      "ma_taxon": "163761",
+      "ho": "Bông (Malvaceae)",
+      "Mô tả": {
+        "lá": null,
+        "hoa": null,
+        "quả": null,
+        "cây": "Cây thảo, sống hằng năm, mọc đứng, cao khoảng 2m hoặc hơn. Thân phình ở gốc, hơi có cạnh, gần như nhẵn. Lá mọc so le, hình lưỡi mác chia nhiều thùy chân vịt, dài 4 – 7 cm, rộng 1 – 2 cm, gốc tròn, đầu nhọn, mép hơi có răng cưa; cuống lá dài hơn lá, mềm và nhẵn; lá kèm hình chi. Cụm hoa mọc ở ngọn thành chùm dài mang lá; hoa màu vàng, gốc màu đỏ tía; đài phụ gồm 8 phiến hẹp, rời nhau ở gốc, dài 1 cm; đài có lông màu trắng nhạt với những hàng sợi mảnh như gai, lá đài hình tam giác nhọn, dài gấp đôi đài phụ; tràng hình nêm dài khoảng 5 cm; nhị nhiều đính trên một cột; bầu có lông. Quả hình tháp, có lông cứng dạng sợi, bao bọc bởi đài và đài phụ tồn tại, màu vàng, khi chín nứt làm 5 mảnh; hạt nhẵn, màu nâu nhạt, có những vảy nhỏ màu trắng nhạt.",
+        "mặt": null,
+        "đầu": null,
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": "tháng 8 – 9.",
+        "mùa quả": null
+      },
+      "Phân bố": {
+        "phân_bố": "Kê náp có nguồn gốc từ châu Phi, song không rõ đã được nhập trồng ở Việt Nam từ bao giờ, có thông tin rằng, cây cũng chỉ mới đưa vào từ thời Pháp thuộc. Cây được trồng nhiều tại các tỉnh Nam Định, Thái Bình, Hải Dương, Hà Nam và Ninh Bình. Vào khoảng năm 1944 – 1945, khi người Nhật Bản đô hộ nước ta đã bắt nhân dân ở đồng bằng Bắc Bộ nhổ lúa để trồng đay, hậu quả đã gây nên nạn đói khủng khiếp vào thời gian này.  Kê náp là loại cây đặc biệt ưa sáng, ưa ẩm và có mức độ sinh trưởng rất nhanh. Cây gieo trồng bằng hạt, chỉ sau 4 tháng có thể cao tới 3,5m và ra hoa quả nhiều. Hoa đay có tuyến mật nên cũng là nguồn thức ăn để nuôi ong mật. Ngược lại, ong mật cũng là tác nhân thụ phấn quan trọng của cây Kê náp.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Nam Định"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Thái Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hải Dương"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Hà Nam"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Bình"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Lá và hạt."
+      },
+      "Thành phần": {
+        "thành phần": "Hạt chứa dầu béo giống như dầu lạc, radium, thorium, robidium. Hạt chứa acid amin: lutidin arginin, tyrosin và lysine (CA, 1931, 25, 3376) và đã tìm thấy một flavonol khác là myricetin (The wealth of India (1959) vol 5, p.77).  Hoa chứa glucosid cannabistricin và flavonoid canabiscetin [Võ Văn Chỉ 1996, Từ điển Cây thuốc Việt Nam, tr. 611].  Người ta tìm thấy trong loài kê náp còn chứa lignin (5,95%), furfuraldehyd (11 – 30%), đường, pectin tanin, polysacharid."
+      },
+      "Tính vị": {
+        "Có vị": "Lá đay sợi vị chua có công năng kiện vị, gây xổ tẩy. Hạt kích dục và làm béo.  Tài liệu Ấn Độ [Kirtikar và Basu, 1998, I: 327] ghi: hạt đay sợi vị cay, chua; có công năng làm ăn ngon, kiện vị, kích dục và làm béo; hạt làm thông mật, kiện vị…"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá kê náp để nhuận tràng và tẩy, chữa thiểu năng mật. Dùng lá tươi giã nát lấy dịch uống. Lá có thể nấu canh, thay rau. Hạt giã nát, dùng ngoài đắp lên vết thương đau, bầm giập. Hạt có nhiều chất béo, có thể ép dầu ăn hoặc chế xà phòng Vỏ thân để làm sợi, dệt bao tải, lưới đánh cá.  Ở Ấn Độ, lá kê náp được dùng để tẩy, còn để chữa kiết lỵ, các bệnh về máu, về mật và đau họng [Kirtikar và Basu, 1998, I: 325]. Hoa để làm tăng tiết mật. Hạt dùng ngoài chữa đau và chấn. thương, đụng giập. Dùng trong để kiện vị, làm béo người, còn được coi là kích dục (Chopra “t al., 2001). Thường trồng trên các cánh đồng đi lấy sợi [Srivastava, 1989: 69]  Bài thuốc có kê náp  Chữa thiểu năng mật, làm tăng tiết mật:  Hoa cây kê náp 20 – 30g hoặc lá tươi 30 g rửa sạch, giã nát, ép lấy dịch (rất chua), thêm đường và hồ tiêu vừa đủ rồi uống (Chopra et al., 2001)."
+      },
+      "Cách dùng": {
+        "được_dùng": null,
+        "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

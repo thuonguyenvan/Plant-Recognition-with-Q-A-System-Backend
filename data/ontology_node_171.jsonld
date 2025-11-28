@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bàn Long Sâm",
+      "ten_khac": "Lan cuốn chiếu, Bàn long sâm",
+      "ten_khoa_hoc": "Spiranthes sinensis (Pers.) Ames.",
+      "ma_taxon": "323932",
+      "ho": "Orchidaceae (Lan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Bàn Long Sâm là một loại cây sống trên cạn, có chiều cao từ 15 – 50cm. Cây mọc thẳng đứng, phần gốc có nhiều rễ thịt dày và chắc.",
+      "lá": "Thường có 2-4 lá, mọc gần gốc, hình mũi mác ngược hoặc thuôn dài, kích thước khoảng 10-20cm dài và 4-10mm rộng.",
+      "hoa": "Mọc thành chùm ở ngọn cây, dài 10-20cm, gồm nhiều hoa nhỏ xếp dày theo dạng bông lúa. Hoa có màu trắng hoặc hồng nhạt, sắp xếp theo hình xoắn ốc quanh trục.",
+      "cánh hoa": "Lá đài giữa: Hình dải hẹp, đầu tù, dài khoảng 5mm, rộng khoảng 1.3mm. Lá đài bên: Dài tương đương lá đài giữa nhưng hẹp hơn. Cánh hoa: Cũng có kích thước tương tự lá đài nhưng mỏng hơn và đầu hơi tù. Cánh môi: Hình bầu dục dài, dài khoảng 4-5mm, rộng khoảng 2.5mm, đầu tròn, hơi cong xuống. Phần giữa có viền nhăn mạnh, bề mặt phía trên có lông dài cứng, phần gốc hơi lõm tạo thành một túi nhỏ chứa hai gai nhọn bên trong.",
+      "quả": "Có lông mịn.",
+      "mùa hoa": "Tháng 5-6"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Bàn Long Sâm thường được sử dụng trong các trường hợp như cơ thể suy nhược sau khi ốm, âm hư nội nhiệt, gây nóng trong người. Ngoài ra, dược liệu này còn giúp hỗ trợ điều trị ho ra máu, chóng mặt, đau đầu, đau lưng mỏi gối, tiểu đường, di tinh, tiểu đục, khí hư. Đồng thời, nó cũng có tác dụng giảm viêm sưng đau do viêm họng, rắn cắn, bỏng, mụn nhọt và các vết lở loét trên da."
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy có tài liệu nghiên cứu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bàn long sâm: vị ngọt đắng, tính bình, có tác dụng dưỡng âm thanh nhiệt, nhuận phế, chỉ khái (chống ho), giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm dân gian và các nghiên cứu y học cổ truyền, Bàn Long Sâm có nhiều công dụng quý, bao gồm:  Bổ dưỡng: Bàn Long Sâm được coi là một vị thuốc bổ, giúp tăng cường sức khỏe, phục hồi sức lực, đặc biệt là cho người mới ốm dậy, cơ thể suy nhược.  Hỗ trợ điều trị các bệnh về đường hô hấp: Bàn Long Sâm được sử dụng để hỗ trợ điều trị ho, đặc biệt là các trường hợp ho ra máu, ho lâu ngày không khỏi.  Hỗ trợ điều trị các bệnh đường tiêu hóa: Bàn Long Sâm cũng được dùng để hỗ trợ điều trị các vấn đề tiêu hóa như ăn uống kém tiêu, đầy bụng, khó tiêu.  Hỗ trợ điều trị các bệnh tiết niệu: Bàn Long Sâm có thể được dùng để hỗ trợ điều trị các bệnh tiết niệu như tiểu buốt, tiểu rắt.  Hỗ trợ điều trị các bệnh ngoài da: Bàn Long Sâm có thể được dùng ngoài da để hỗ trợ điều trị các bệnh như mụn nhọt, lở ngứa."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Bổ khí dưỡng huyết, trị cơ thể suy nhược sau ốm:  Cách 1: Bàn Long Sâm 9g, Đương Quy 9g, Hoàng Kỳ 15g, sắc nước uống. Cách 2: Rễ củ bàn long sâm 30g, rễ cây đậu đũa 15g, thịt lợn hoặc thịt gà 250g. Tất cả rửa sạch, thịt thái miếng ướp vừa vặn. Đổ nước ngập Bàn long sâm, rễ cây đậu đũa đun sôi, cho thịt vào hầm nhỏ lửa. Làm món canh ăn trong bữa ăn (bỏ bã thuốc, chỉ ăn thịt và uống nước canh); cách 3 ngày ăn 1 lần. Mỗi liệu trình 20 ngày.  Trị ho ra máu do lao phổi, cơ thể suy nhược: Bàn Long Sâm 15g, Bối Mẫu 9g, sắc nước uống.  Chữa ho do âm huyết hư tổn (lòng bàn chân, bàn tay nóng, miệng khô, đêm ngủ hay ra mồ hôi trộm, môi lưỡi đỏ nhạt hoặc đỏ tía, mạch nhỏ nhanh): Rễ củ Bàn long sâm 9-15g, mạch môn đông 8g, rửa sạch cắt nhỏ cho 500ml nước sắc nước uống 2 lần trong ngày. Dùng liền 5 ngày một liệu trình.  Trị suy nhược thần kinh, mất ngủ: Bàn Long Sâm 12g, Viễn Chí 9g, Hợp Hoan 15g, sắc nước uống.  Trị chóng mặt, suy nhược: Bàn Long Sâm (Long Bão Trụ) tán bột 3g, uống với nước canh dầu.  Trị đau lưng, di tinh, khí hư: Bàn Long Sâm, Hắc Vừng 30g, Đậu Đen, Bổ Cốt Chỉ, Sơn Dược, Phúc Bồn Tử, Kim Anh Tử mỗi loại 15g, sao khô tán bột, luyện mật làm hoàn, uống 9g/lần, ngày 2 lần.  Trị khí hư, bạch đới: Bàn Long Sâm 30g, cá lóc 1 con, hầm ăn.  Trị viêm họng, sưng đau họng:  Cách 1: Rễ Bàn Long Sâm 9g sắc nước uống, thêm Băng Phiến 0.6g, ngậm nuốt dần. Cách 2: Bàn Long Sâm 15g, Bách Lượng Kim 15g, sắc nước uống.  Trị trẻ nhỏ bị cảm nóng mùa hè: Bàn Long Sâm 6g, Rau Trai 15g, sắc nước uống.  Hỗ trợ điều trị tiểu đường:  Cách 1: Rễ Bàn Long Sâm tươi 30-60g, Bạch Quả 15g, tụy lợn 1 cái, sắc nước uống. Cách 2: Bàn long sâm 30g, tụy lợn 1 cái, lá ngân hạnh 30g. Tất cả rửa sạch, nấu canh ăn, tuần ăn 2 lần.  Trị viêm thận: Bàn Long Sâm tươi 30-60g, Vô Căn Đằng, Tinh Túc Thái, Rễ Mướp mỗi loại 30g, sắc nước uống.  Trị rắn cắn, mụn nhọt, viêm tấy: Giã nát Bàn Long Sâm tươi và Nhất Chi Tiễn, đắp lên vết thương.  Trị zona thần kinh: Rễ Bàn Long Sâm phơi khô, tán bột, trộn với dầu vừng, bôi lên vùng da tổn thương.  Trị bỏng, phỏng nước: Bàn Long Sâm 30g, giun đất 5 con, ít đường trắng, giã nhuyễn, đắp lên vết thương, thay thuốc mỗi ngày.  Chữa táo bón người cao tuổi: Bàn long sâm 9-15g, cá diếc tươi 60g. Cá diếc làm sạch ướp gia vị cho vừa. Bàn long sâm rửa sạch cho vào nồi đổ 500ml nước đun sôi thả cá diếc vào nấu chín, thêm đường trắng, chia 2 lần ăn trong ngày. Tuần ăn 2 lần, mỗi liệu trình 10 ngày."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "⚠️ Lưu ý: Các bài thuốc trên mang tính tham khảo, cần có sự tư vấn của thầy thuốc trước khi sử dụng."
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhót",
+      "ten_khac": "Nhót, Bất xá, Hồ đối tử, Lót (Tày)",
+      "ten_khoa_hoc": "Elaeagnus latifolia L.",
+      "ma_taxon": "940937",
+      "ho": "Elaeagnaceae (Nhót)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, mọc dựa, phân nhiều cành.",
+      "thân": "Cành vươn rất dài, không gai hoặc có gai do cành nhỏ biến đổi.",
+      "lá": "Lá mọc so le, phiến dai, hình bầu dục, dài 4 – 10cm, rộng 2 – 2,5cm, gốc tròn, đầu nhọn, mặt trên màu lục sẫm đen, mặt dưới trắng bạc, cuống lá dài 6 – 10mm.",
+      "hoa": "Hoa màu vàng rơm, mọc riêng lẻ hoặc tụ họp 2 – 3 cái ở kẽ lá, bao hoa dài 8mm, chỉ có 4 lá đài và 4 nhị.",
+      "quả": "Quả hạch, hình bầu dục, dài 2,5 – 3cm, có đài tồn tại ở đỉnh, màu đỏ khi chín, cùi quả nạc, mềm, mọng nước, vị chua, ăn được hạt có 8 sống dọc, nhọn ở hai đầu, dài 2cm.",
+      "mọc": "Cành, lá, hoa, quả đều có lông trắng hình khiên, đóng ánh.",
+      "mùa hoa": "tháng 1 – 2",
+      "mùa quả": "tháng 3 – 4."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trên thế giới có khoảng 20 loài thuộc chi Elaeagnus L, trong đó Việt Nam có 4 – 5 loài, riêng nhót là cây trồng ăn quả, còn lại là các loài mọc hoang dại, quả nhỏ vị chát và đắng, không ăn được.  Nhót là cây trồng lâu đời ở Việt Nam, chưa xác định được nguồn gốc. Cây cũng được trồng ở một số nước nhiệt đới khác trong khu vực, như Lào, Campuchia. Thái Lan và ở đảo Hải Nam của Trung Quốc.  Nhót rụng lá hàng năm vào mùa đông. Để tạo điều kiện cho cây mọc ra thế hệ cành mới, hàng năm vào mùa thu người ta thường cắt tỉa bỏ các cành già. Cây mọc chồi mới vào đầu mùa xuân và có hoa quả ngay trong cuối mùa xuân.  Nhót là loại cây ưa sáng, vì thế cây cần giá thể để mọc vươn.",
+      "Đặc điểm sinh trưởng": "Nhót rụng lá hàng năm vào mùa đông. Để tạo điều kiện cho cây mọc ra thế hệ cành mới, hàng năm vào mùa thu người ta thường cắt tỉa bỏ các cành già. Cây mọc chồi mới vào đầu mùa xuân và có hoa quả ngay trong cuối mùa xuân.  Nhót là loại cây ưa sáng, vì thế cây cần giá thể để mọc vươn."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Nhót là cây ăn quả được trồng phổ biến ở nhiều nơi. Cây có thể nhân giống bằng hạt hoặc bằng cành chiết. Hạt cần gieo ngay lúc còn tươi sau khi thu Gieo trong vườn ươm, sau đánh cây con đi trồng. Cây trồng từ hạt chậm có quả nhưng có tuổi thọ cao hơn cây trồng bằng cành chiết. Cây trồng bằng cành chiết sau 1 – 2 năm đã có thể cho quả.  Nhót thường được trồng vào mùa xuân. Cây không đòi hỏi đất tốt nhưng cần thoát nước, cao ráo như bờ ao, sườn đồi. Khi trồng, đào hố với kích thước 40x40x40cm, khoảng cách 6 – 8 x 6 – 8m, bón lót ít phân chuồng hoạt mục, đặt cây giống, dậm chặt gốc và tưới nước Khi mới trồng, cần định kỳ làm cỏ và xới xáo quanh gốc. Khi cây lớn, thỉnh thoảng cần tưới nước nếu trời quá khô hạn. Nên dùng nước phân chuồng, nước giải pha loãng tưới thúc cho cây vào lúc phát triển cành lá và khi ra hoa. Sau mỗi vụ thu hoạch, cắt tỉa bớt cành yếu, cành bị sâu, cành vô hiệu. Nhót không có sâu bệnh gì nguy hiểm."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả thu hái khi chín, lá thu hái quanh năm. Dùng tươi hay phơi khô. Còn dùng rễ và hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong quả nhót có axit hữu cơ, lá nhót có\u00a0tanin, saponozit, polyphenol.  Mới đây từ một loại nhót Elaeganus angustifolia, Nikolaeva A. F. đã chiết được hai chất ancaloit một là dihydroharman C12H12N2 và 2-metyl 1,2,3,4 tetrahydro p cacbolin C12H14N2\u00a0(theo Khimia prirod. soed., 1970, 5: 638)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trần Xuân Phi, Đỗ Kim Chi, Trần Kim Lang (Viên Dược liệu) đã nghiên cứu tác dụng dược lý của lá nhót và kết luận như sau:  Chế phẩm lá nhót có tác dụng kháng khuẩn đối với nhiều chủng gram dương và gram âm, đặc biệt đối với các chủng Shigella shigae, Sh.flex neri, Sh. dysenteriae typ 3, Sh. sonnei Trên động vật thí nghiệm, chế phẩm lá nhót có tác dụng ức chế quá trình viêm cấp tính cũng như mạn tính Chế phẩm lá nhót còn có tác dụng tăng cường sức co bóp của tử cung, không có tác dụng tăng cường co bóp cơ trơn ruột cô lập.  Về độc tính cấp trên chuột nhắt trắng bằng đường uống, chế phẩm lá nhờ có LD = 80g được liệu khô/kg thể trọng. Về độc tính bán mạn, thí nghiệm trên thỏ cho uống với liều 4 g/kg/ngày, liên tục trong 30 ngày, không gây những biến đổi về số lượng hồng bạch cầu, tỷ lệ huyết sắc tố. Đối với công năng gan thận, chế phẩm lá nhót không gây những biến đổi về thành phần protein trong huyết thanh (albumin, ox, p và y globulin). mentransaminaza (GOT. GPT) và hàm lượng urê huyết. Cũng liều lượng và thời gian như trên, chế phẩm lá nhót không gây ra những biến đổi bệnh lý thực thể ở các tổ chức gan, thận và thượng vị (20 – 30g) hoặc lá khô (6 – 12g) thái nhỏ sao vàng, sắc với 400ml nước còn 100ml, chia làm 2 lần uống trong ngày. Có thể dùng dưới dạng thuốc bột. Dùng riêng hoặc phối hợp với vỏ cây chân danh (đỗ trọng nam) với liều lượng bằng nhau. Có tác giả đã dùng viên cao lá nhót chữa lỵ trực khuẩn, hội chứng tiêu chảy, viêm đại tràng mạn tính (Trần Xuân Phi)  Lá nhót phơi khô giòn, tán bột, hòa với nước cơm uống chữa hen suyễn, hoặc dùng lá nhót khô (30g)\u00a0phối hợp lá bồng bồng lau sạch lông (5 lá), thái nhỏ sắc uống. Quả nhót cũng có tác dụng như lá nhót, 5 – 7 quả phơi khô, thái nhỏ.\u00a0 Rễ nhót chữa sắc uống thổ huyết, đau họng, ngày dùng 30g, sắc uống dùng ngoài rễ nhót nấu nước tắm chữa mụn nhọt.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Thôi chanh lá xôn",
+            "ten_khac": "Quăng lông, quăng",
+            "ten_khoa_hoc": "Alangium salviifolium (L.f.) Wangerin",
+            "ma_taxon": "427867",
+            "ho": "Thôi chanh (Alangiaceae)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây nhỏ hay cây nhỡ, cao 4 – 6 m.",
+            "thân": "Cành nhẵn, đôi khi có gai.",
+            "lá": "Lá mọc so le, hình bầu dục – thuôn, dài 10 – 20 cm, gốc tròn, đầu tù có mũi nhọn ngắn, mặt trên nhẵn, mặt dưới có lông mềm màu hung hoặc xám, đôi khi nhẵn và điểm những chấm nhỏ, gân lá nổi rõ.",
+            "hoa": "Cụm hoa mọc ở kẽ lá thành cụm, 3 – 5 hoa, cuống hoa có 3 lá bắc hẹp; đài 3 răng hình tam giác; tràng 6 – 10 cánh có lông mềm ở mặt ngoài, nhị 10 – 30, dài bằng cánh hoa, chỉ nhị hẹp, có lông ở gốc, bao phấn dài bằng chỉ nhị; bầu 1 ô và 1 noãn.",
+            "quả": "Quả hạch, hình trứng, hơi dẹt, có đài tồn tại, màu tím, có mùi thơm.",
+            "mùa hoa": "tháng 5 – 9",
+            "mùa quả": "tháng 5 – 9."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Alangium Lamk. ở Việt Nam đã biết có 6 loài và 1 thứ (var.). Phần lớn chúng là các cây gỗ nhỏ, loài thôi chanh trên cũng thuộc nhóm gỗ nhỏ. Cây phân bố chủ yếu ở các tỉnh phía Nam: Ninh Thuận (Phan Rang), Đồng Nai (Biên Hoà), Bà Rịa – Vũng Tàu; cây được trồng ở Thảo cầm viên (TP. Hồ Chí Minh). Trên thế giới, loài này phân bố ở Ấn Độ, Sri Lanka, Trung Quốc, Indonesia và Philippin.",
+            "thường_mọc": "Thôi chanh lá xôn là cây ưa sáng, thường mọc rải rác ở rừng thường xanh thứ sinh."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Vỏ thân, vỏ rễ, gỗ, quả."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Vỏ rễ chứa 2 alcaloid đồng phân là alangin A 0,15% và alangin B 0,10%, nhiều alcaloid khác là marckin, marckidin, tubulosin, emetin, cephaelin, poychotrin, alangicin, demethylpsychotrin.",
+            "gồm chất": "Vỏ chứa nhiều alcaloid là lamarchinin, N – methylcephaelin, deoxytubulosin, demethylcephaelin, cephaelin, psychotrin, tubulosin dimethylpsy- chotrin.",
+            "Các hợp chất": "Lá chứa các chất thuộc các nhóm:",
+            "chứa": "Sterol: stigmast – 5, 22, 25- trien – 3β – ol, campesterol, episterol.",
+            "triết xuất": "Terpen: alangisid, alangidiol, isoalangidiol.",
+            "đã nghiên cứu": "Alcaloid: ankorin, deoxytubulosin, alangimmarckin."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": "Vỏ rễ cây thôi chanh lá xôn vị đắng, chua, cay, có dầu nóng, hắc, có công năng xổ, trừ giun, chữa trĩ, giảm đau, chống viêm.",
+            "Có vị": "Vỏ thân rất đắng, có công năng thanh nhiệt, phát hãn, cầm nôn mửa, cầm ỉa chảy.",
+            "Có vị": "Quả có vị chua, chát, ngọt, có công năng thanh nhiệt, giải độc, trừ giun, nhuận tràng, lợi trung tiện.",
+            "Có vị": "Hạt có vị ngon, thơm, có năng thanh nhiệt, kích dục."
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Vỏ rễ cây thôi chanh lá xôn được dùng làm thuốc bổ đắng để kích thích tiêu hoá và phục hồi sức khỏe, dùng dạng bột hoặc ngâm rượu uống, mỗi ngày 100 – 300 mg bột vỏ rễ. Cũng dùng để lợi tiểu (khi bị báng) và hạ sốt, liều có thể dùng 0,4 – 0,6g bột vỏ rễ mỗi ngày. Có thể phối hợp với vị thuốc khác để trị hen. Cần chú ý vỏ rễ và vỏ thân cây quăng khá độc, vì cần dùng liều thấp. Phải có kinh nghiệm mới được dùng liều cao hơn.",
+            "giã nát": "Dùng ngoài thường dùng vỏ rễ tươi hoặc lá tươi, giã nát đắp lên các khớp bị sưng, chỗ da bị viêm.",
+            "chữa": "Để chữa trĩ, thường dùng vỏ rễ tươi.",
+            "được_dùng": "Ở Ấn Độ, vỏ rễ cây thôi chanh lá xôn được dùng để tẩy, trục giun, giải độc, viêm quầng, đau lưng, lỵ, trĩ, ỉa chảy, sốt, bệnh ngoài da, trước đây còn được dùng trị phong hủi, giang mai; còn được dùng để chống nôn [Kirtikar et al., 1998, tập II: 1237 – 1239].",
+            "chữa": "Vỏ thân được dùng trị nôn mửa và ỉa chảy, cũng để chữa sốt và làm ra mồ hôi.",
+            "làm thuốc": "Lá được dùng làm thuốc đắp để chữa đau khớp [Chopra et al., 2001: 10].",
+            "được_dùng": "Quả được dùng để nhuận tràng, lợi trung tiện, trị giun, giải độc, dùng trong viêm, bệnh về máu, người nóng, di mộng tinh, bệnh lậu.",
+            "làm thuốc": "Hạt có vị ngon và thơm, làm mát, kích dục, khó tiêu, bổ, nhuận tràng, được dùng khi người có cảm giác nóng bừng, người hư hao [Kirtikar, et al., 1998, vol.2: 123].",
+            "được_dùng": "Ở Thái Lan, vỏ thân cây thôi chanh lá xôn được dùng điều trị hen suyễn và ia chảy; gỗ được xem là bổ và dùng trị bệnh trĩ, quả được dùng làm thuốc lợi trung tiện và trừ giun.",
+            "được_dùng": "Ở Indonesia, vỏ rễ và vỏ thân được dùng trị phong hủi, viêm da, thấp khớp, làm săn se; quả để ăn."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sắn thuyền",
+      "ten_khac": "Sắn làm thuyền, Sắn võ",
+      "ten_khoa_hoc": "Syzygium polyanthum (Wight) Walf.",
+      "ma_taxon": "199425",
+      "ho": "Myrtaceae (Sim)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 5 – 7 m. Thân thẳng, hình trụ. Cành mảnh vươn dài, lúc đầu dẹt sau hình trụ, màu bựa đỏ.",
+      "lá": "Lá mọc đối, hình mác hoặc hình hậu dục, dài 6 – 9cm, rộng 2 – 4,5 cm, gốc thuôn, đầu tù, mặt trên sẫm bóng, khi khô trở thành màu đen, mặt dưới nhạt có những tuyến nhỏ, cuống lá ngắn.",
+      "hoa": "Cụm hoa mọc ở kẽ những lá đã rụng thành chùy phân nhánh, dài 2 – 3 cm, hoa nhiều; đài có 4 răng ngắn; tràng 4 cánh mỏng hình mắt châm, rời nhau; nhị nhiều; nhuỵ lõm.",
+      "quả": "Quả hình cầu, nhỏ như quả vối, đường kính 6 – 9mm, khi chín màu đỏ tím, ăn được, chứa một hạt.",
+      "mùa hoa": "tháng 7 – 9.",
+      "mùa quả": "tháng 7 – 9."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Sắn thuyền được nhân giống tự nhiên chủ yếu bằng hạt. Vào mùa thu, quả chín rụng xuống, đến mùa xuân mọc thành cây con, lúc này đánh cây về trồng.  Sau khi bén rễ, cây không cần chăm sóc nhiều."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và vỏ cây thu hái quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá sắn thuyền chứa tinh dầu, chất nhựa, chất nhầy và tanin.",
+      "Các hợp chất": "Quả có các hợp chất phenol, các glycosid petunidin và malvidin. Hai hợp chất này khi thuỷ phân cho petunidin và malvidin. Trong hoa, có kaempferol và các hợp chất triterpen."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ và lá sắn thuyền có vị đắng, chát, tính mát, vào các kinh tràng và vị, có tác dụng thu sáp, cầm tả lỵ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ngoài việc dùng lá sắn thuyền nấu om dạ giói, vỏ thân để xảm thuyền, lá sắn thuyền tươi còn được giã nát đắp chữa vết thương chảy mủ dai dẳng, vết mổ nhiễm khuẩn, vết hỏng, gây xương hở. Dựa vào kinh nghiệm trên, Bệnh viện Hữu nghị Việt Tiệp – Hải Phòng đã dùng lá sắn thuyền chữa có kết quả những vết thương nhiễm khuẩn, làm cho vết thương chóng khô, chống lên da non, và đặc biệt là không bị sẹo lồi.  Trạm Nghiên cứu Dược liệu Thái Bình đã bào chế thuốc mỡ sắn thuyền dùng bôi ngoài chữa các thể chàm có kết quả tốt. Thuốc gồm sắn thuyền 100g, nghệ răm gà, trầu không 2g; phen phi 2g; vaselin 100g. Các dược liệu nấu thành cao mềm, phen phi tán bột. Tất cả trộn với vaselin, đánh nhuyễn thành thuốc mỡ.  Để chữa kết lỵ mạn tính, lấy vỏ sắn thuyền khô 12g, thân rễ cây sơn áp 30g, cam sảo nếp rang cho thơm thật vàng thô 30g, sắc với 400ml nước còn 100ml, uống làm 2 lần trong ngày.  Vỏ sắn thuyền sấy khô, tán bột cho uống mỗi lần 2g với nước cơm lại chữa rỉ em tiêu chảy ngày đêm không ngớt (Nam dược thần hiệu).  (Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam)"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chi Syzygium Gaertn. gồm các loài nhỡ lớn cây gỗ hoặc cây bụi, phân bố ở vùng nhiệt đới từ Đông Nam Á và Nam Á là khu vực có sự đa dạng cao về thành phần loài của chi này. Ấn Độ có 75 loài, Việt Nam 55 loài… Một số loài cho gỗ, vài loài khác có quả ăn được. Loài sắn thuyền là đặc hữu ở Đông Dương. Tuy nhiên, cây cũng đã được phát hiện ở phía nam Trung Quốc (giáp Việt Nam).  Sắn thuyền thường mọc rải rác ở ven rừng ẩm, dọc thành lang ven suối ở cửa rừng. Ở các tỉnh phía nam, sắn thuyền mọc trên các bờ kênh rạch. Cây ưa khí hậu nhiệt đới nóng và ẩm, nhiệt độ trung bình 22 – 26°C, lượng mưa 1500 – 3000 mm/năm, cây có thể sinh trưởng tốt trên nhiều loại đất, đặc biệt là các loại đất feralit vàng đỏ, đất mòn trên núi có tầng dày, thịt dày.Sắn thuyền là cây phân bố tầng dưới rừng ủi hữu hết các tỉnh thuộc vùng núi thấp, trung du kể cả ở đồng bằng (miền Trung và Nam Bộ). Cây ra hoa, quả nhiều hằng năm, tái sinh tự nhiên chủ yếu từ hạt. Ngoài ra, cây còn có khả năng tái sinh cây chồi từ gốc sau khi bị chặt."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

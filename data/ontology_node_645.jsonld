@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xạ can",
+      "ten_khac": "Rẻ quạt, Xạ can, Lưỡi đồng",
+      "ten_khoa_hoc": "Belamcanda chinensis (L.) DC.",
+      "ma_taxon": "204330",
+      "ho": "Iridaceae (La đơn)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, sống nhiều năm, cao 0,5-1m.",
+      "thân": "Thân rễ mọc bò, phân nhiều nhánh. Thân ngắn bao bọc bởi những bẹ lá.",
+      "lá": "Lá hình dải, dài 30cm, rộng 2cm, gốc ốp lên nhau, đầu nhọn, gân song song, toàn bộ các lá xếp thành một mặt phẳng và xòe ra như cái quạt.",
+      "hoa": "Cụm hoa phân nhánh, dài 30-40cm; lá bắc dạng vảy, hoa có cuống dài, xếp trên nhánh như những tán đơn, màu cam điểm đốm tía; đài có răng nhỏ hình mũi mác; tràng có cánh rộng và dài hơn lá đài; nhị 3, đính ở gốc cánh hoa; bầu 3 ô.",
+      "quả": "Quả nang, hình trứng; hạt nhiều, màu đen bóng.",
+      "mùa hoa": "tháng 7-10",
+      "mùa quả": "tháng 7-10"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong xạ can, người ta đã chiết ra được một chất glucozit gọi là belamcandin C24H24O12 và tectoridin C22H22O11.",
+      "tìm thấy": "Có tác giả còn tìm thấy một glucozit khác gọi là iridin C24H28O4và shekanin (xạ can tố) với hiệu suất 0,05%.",
+      "thủy phân": "Belamcandin thuỷ phân sẽ cho glucoza và belamcangenin. Tectoridin thuỷ phân sẽ cho glucoza và tectorigenin (có tinh thể hình phiến, độ chảy 227-230°C)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo tài liệu cổ, xạ can có vị đắng, tính hàn, hơi độc, vào hai kinh can và phế. Tác dụng: thanh hỏa, giải độc, tán huyết, tiêu đờm. Dùng chữa yết hầu sưng đau, đờm nghẽn ở cổ họng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Xạ can còn là một vị thuốc dùng trong phạm vi nhân dân. Chủ yếu làm thuốc chữa viêm cổ họng, vùng amidan bị sưng mủ, đau cổ. Nói chung xạ can được coi là một vị thuốc quý chữa mọi bệnh về cổ họng. Ngoài ra còn là một vị thuốc chữa sốt, đại tiểu tiện không thông, sưng vú tắc tia sữa, chữa kinh nguyệt đau đớn, thuốc lọc máu. Có nơi còn dùng chữa rắn cắn: Nhai nuốt lấy nước, bã đắp lên nơi rắn cắn.",
+      "được_dùng": "Ngày dùng 3-6g dưới dạng thuốc sắc. Hoặc giã củ tươi 10-20g với vài hạt muối, vắt lấy nước, ngậm nuốt dần. Bã đắp ở ngoài.",
+      "chữa": "Người tỳ vị hư hàn, phụ nữ có thai không dùng được."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang khắp nơi ở Việt Nam. Có khi được trồng làm cảnh. Ngoài ra, còn mọc ở Trung Quốc, Nhật Bản, Philippin.",
+      "làm thuốc": "Thân rễ thu hái vào mùa xuân hoặc mùa thu. Rửa sạch, cắt bỏ rễ con phơi hay sấy khô, khi dùng, ngâm nước gạo một hai ngày cho mềm, thái mỏng phơi hay sấy khô mà dùng dần."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

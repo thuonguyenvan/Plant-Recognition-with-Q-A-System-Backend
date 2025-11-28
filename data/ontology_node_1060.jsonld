@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ tím",
+      "ten_khac": "Cỏ tím, Tử hoa địa đinh, Rau bướm",
+      "ten_khoa_hoc": "Viola betonicifolia Sm.",
+      "ma_taxon": "210157",
+      "ho": "Violaceae (Cỏ tím)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, cao 10-15 m.",
+      "lá": "Lá mọc từ gốc thành hình hoa thị, hình tam giác, gốc lõm hình tim, đầu hơi nhọn, hai mặt nhẵn hoặc hơi có lông, mép khía răng, cuống lá mảnh và dài, lá kèm nhọn màu nâu.",
+      "hoa": "Hoa mọc ở kẽ lá, có cuống dài ngắn hơn lá, lá bắc nguyên hình dải. Hoa màu trắng tím hoặc tía nhạt, đài có răng hình dải nhọn, tràng có cánh hình trái xoan ngược, có cựa tròn ở đầu, nhị trên 3 nhị dưới 2 bầu nhẵn.",
+      "quả": "Quả nang có 3 cạnh,hạt màu nâu nhạt.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 4-6"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cỏ tím thuộc loại cây sống nhiều năm, ưa sáng hay hơi chịu bóng, thường mọc trong bãi cỏ sát chân núi, trên nương rẫy vùng núi cao hoặc trong các hốc dưới tán rừng núi đá vôi (xã Thái An-Quản Bạ-Hà Giang ). Cây sinh trưởng mạnh trong mùa mưa ẩm đến cuối thu đầu đông, sau khi quả đã già phần trên mặt đất lụi tàn, phần dưới mặt đất sẽ mọc chồi vào giữa mùa xuân năm sau.  Quả cỏ tím khi khô tự mở, hạt nhiều phát tán ra xung quanh, đôi khi gặp chúng mọc tụ tập thành từng đám nhỏ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cả cây cỏ tím, thu hái quanh năm, dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cỏ tím có acid cerotic, violyeden."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cỏ tím có vị đắng nhạt, hơi the , tính mát, vào hai kinh tâm , can, có tác dụng làm mát máu, giải nhiệt giải độc, tiêu sưng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cỏ tím dùng chữa viêm họng,đau mắt, viêm tuyến vú, mụn mủ sưng lở. Ngày 40-60g cây tươi hoặc 20-30g cây khô sắc uống. Dùng ngoài lá tươi giã đắp chỗ sưng đau. Để chữa ngộ độc cỏ tím giã vắt lấy 50ml nước cốt uống sẽ nôn ra, uống nhiều thì nôn hết.  Ở Trung Quốc cả cây cỏ tím tươi giã nát đắp chữa sưng tấy và ung nhọt, còn để dùng chữa ngộ độc lá ngón. Cỏ tím phối hợp với đào nhân, xích thược, đương quy, hạt bí đao, bồ công anh sắc uống chữa viêm ruột.  Hoa cỏ tím phơi khô, sắc uống làm thuốc tẩy và phối hợp với nước trà uống chữa ho và cảm lạnh. Ở Trung Quốc loài Viola patrini được dùng đặc biệt để điều trị ung thư, hoa khô dùng làm thuốc tẩy. Ở Ấn Độ cây này được dùng trị giang mai, lao hạch và da tiết mật.  Bài thuốc có cỏ tím:  Chữa đinh râu: cỏ tím, kim ngân hoa, lá bồ công anh mỗi vị 40g, cúc hoa vàng, liên kiều mỗi vị 20g. Tất cả thái nhỏ phơi khô sắc uống, Chữa viêm tuyến tiền liệt: cỏ tím 40g, lá mã đề, dây bòng bong mỗi vị 20g sắc uống. Chữa quai bị: cỏ tím 40g, phèn chua 4g giã nhỏ đắp. Chữa tiêu chảy nôn tháo: Cỏ tím, hương nhu  mỗi vị 40g sắc uống. Chữa tràng nhạc, mụn mạch lươn: cỏ tím 40g sắc uống và giã đắp ngoài.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

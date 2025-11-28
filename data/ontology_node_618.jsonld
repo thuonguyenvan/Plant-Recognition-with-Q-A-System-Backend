@@ -1,0 +1,192 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Ý dĩ",
+            "ten_khac": "Ý dĩ, Bo bo, Hạt cườm, Co pắt, Mạy pít, Mác vất (Tày), Co đuôi (Thái), Nọ a châu (Bana)",
+            "ten_khoa_hoc": "Coix lachryma-jobi L.",
+            "ma_taxon": "145588",
+            "ho": "Poaceae (Hòa thảo)",
+            "Mô tả": {
+                "lá": "Ý dĩ là một loại cây sống quanh năm, có thể cao tới l-2m. Thân nhẵn bóng không có lông, có vạch dọc. Lá hình mác to, dài 10-40cm, rộng 3cm có những gân nổi rõ, gân giữa to.",
+                "hoa": "Hoa đơn tính cùng gốc, mọc ở kẽ lá thành bông. Hoa đực mọc ở phía trên, hoa cái ở phía đưới. Hoa đực có 3 nhị.",
+                "quả": "Quả dĩnh bao bọc bời bẹ của một lá bắc.",
+                "cây": "Ý dĩ là một loại cây sống quanh năm, có thể cao tới l-2m.",
+                "thân": "Thân nhẵn bóng không có lông, có vạch dọc."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "thành phần": "Trong ý dĩ nhân có khoảng 65% chất hydratcacbon, 5,4% chất béo, 13,7% chất protit và các axit amin như leuxin, lysin, acginin, tysosin, histidin, chất coixin hay coixol là một chất protit đặc biệt của ý dĩ, và axit glutamic. Tro có chừng 2,3%.",
+                "gồm chất": "Trong ý dĩ nhân có khoảng 65% chất hydratcacbon, 5,4% chất béo, 13,7% chất protit và các axit amin như leuxin, lysin, acginin, tysosin, histidin, chất coixin hay coixol là một chất protit đặc biệt của ý dĩ, và axit glutamic.",
+                "Các hợp chất": "C8H703N (6 – metoxy benzolon) độ chảy 151- 152°C.",
+                "tìm thấy": "Trong rễ ý dĩ cũng có chừng 17,6% chất protein, 7,2% chất béo và 52% tinh bột."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "Do lượng protit và chất béo và chất tinh bột cho nên ý dĩ là một chất thuốc bồi bổ cơ thể. Nhưng trong đông y thường coi ý dĩ là một vị thuốc nếu dùng sống “lợi thấp nhiệt”, dùng chín chữa tả lỵ, lợi tiểu tiện, tiêu thủy thũng, chữa được gân co quắp không co duỗi được, phong thấp lâu ngày không khỏi.",
+                "làm thuốc": "Do lượng protit và chất béo và chất tinh bột cho nên ý dĩ là một chất thuốc bồi bổ cơ thể. Nhưng trong đông y thường coi ý dĩ là một vị thuốc nếu dùng sống “lợi thấp nhiệt”, dùng chín chữa tả lỵ, lợi tiểu tiện, tiêu thủy thũng, chữa được gân co quắp không co duỗi được, phong thấp lâu ngày không khỏi.",
+                "chữa": "gân co quắp không co duỗi được, phong thấp lâu ngày không khỏi.",
+                "có tác dụng": "kiện tỳ, bổ phế, thanh nhiệt, thẩm thấp.",
+                "chữa": "phù thũng, tê thấp chân tay co rút, ỉa chảy do tỳ hư, phế ung, trường ung."
+            },
+            "Cách dùng": {
+                "được_dùng": "Đơn chữa tiểu tiện ra sỏi: Ý dĩ 20g, nước 600ml, sắc còn 200ml. Uống liên tục đến khi thấy tiểu tiện bình thường là được. Đơn thuốc chữa bệnh phổi, nôn ra máu:\u00a0Ý dĩ 40g, nuớc 400ml (2 bát) sắc còn 1 bát (200ml) thêm ít rượu vào uống làm hai lần trong ngày. Uống luôn 10 ngày. Đơn thuốc bổ chữa lao lực: Ý dĩ 5g, mạch môn đông 3g, tang bạch bì 3g, bách bộ 3 g, thiên môn đông 3g, nước 600ml. Sắc còn 200ml chia 3 lần uống trong ngày. Bài thuốc chữa tê thấp: Ý dĩ nhân 40g, phổ thục linh 20g, nước 600ml sắc còn 200ml. Chia làm 2 lần uống trong ngày. Uống liền 10 ngày nếu thấy tiểu tiện nhiều là bệnh giảm.",
+                "làm thuốc": "Đơn chữa tiểu tiện ra sỏi: Ý dĩ 20g, nước 600ml, sắc còn 200ml. Uống liên tục đến khi thấy tiểu tiện bình thường là được. Đơn thuốc chữa bệnh phổi, nôn ra máu:\u00a0Ý dĩ 40g, nuớc 400ml (2 bát) sắc còn 1 bát (200ml) thêm ít rượu vào uống làm hai lần trong ngày. Uống luôn 10 ngày. Đơn thuốc bổ chữa lao lực: Ý dĩ 5g, mạch môn đông 3g, tang bạch bì 3g, bách bộ 3 g, thiên môn đông 3g, nước 600ml. Sắc còn 200ml chia 3 lần uống trong ngày. Bài thuốc chữa tê thấp: Ý dĩ nhân 40g, phổ thục linh 20g, nước 600ml sắc còn 200ml. Chia làm 2 lần uống trong ngày. Uống liền 10 ngày nếu thấy tiểu tiện nhiều là bệnh giảm."
+            },
+            "luu_y": {}
+        }
+    ]
+}

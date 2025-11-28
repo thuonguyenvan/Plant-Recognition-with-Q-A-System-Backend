@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chè vằng",
+      "ten_khac": "Chè vằng, Râm ri, Râm trắng, Lài ba gân",
+      "ten_khoa_hoc": "Jasminum subtriplinerve Blume",
+      "ma_taxon": "502414",
+      "ho": "Oleaceae (Nhài)",
+      "Mô tả": {
+        "cây": "Cây chè vằng là một cây nhỏ, mọc thành bụi ở bờ rào hay bụi tre hoặc bám vào các cây lớn.",
+        "thân": "Thân cây cứng, chia thành từng đốt, đường kính 5-6mm, chia thành nhiều cành, có thể vươn cao 1-1,5mm và vươn dài tới 15-20m, thân và cành đều nhẵn.",
+        "lá": "Lá mọc đối, hình mũi mác, phía cuống tù hay hơi tròn, đầu lá nhọn dài 4-7,5cm, rộng 2-4,5cm, những lá phía trên nhỏ hơn lá phía dưới, mép nguyên, trên có 3 gân rõ rệt. Cuống lá nhẵn, dài 3-12mm.",
+        "hoa": "Hoa mọc thành xim nhiều hoa (chừng 7-9 hoa), cánh hoa màu trắng.",
+        "quả": "Quả hình cầu, đường kính 7-8mm (bằng hột ngô). Khi chín có màu vàng, trong quả có một hạt rắn chắc.",
+        "mùa hoa": "tháng 7-10",
+        "mùa quả": "tháng 7-10",
+        "mọc": "Cây dễ nhầm lẫn:  Loài Jasminum anastomosans Wall., cụm hoa chỉ có 2 – 3 hoa cũng được dùng với công dụng tương tự. Chú ý: Tránh dùng nhầm chè vằng với lá ngón vì chúng rất giống nhau ở dáng cây. Đã có trường hợp hái nhầm và dùng bị ngộ độc chết người. Xem thêm: https://tracuuduoclieu.vn/cach-phan-biet-la-ngon-va-che-vang-ngoai-tu-nhien.html"
+      },
+      "Phân bố": {
+        "phân_bố": "Chè vằng phân bố phổ biến và khá tập trung ở khu vực các nước Đông Nam Á và Nam Á. Ngoài ra, cây cũng còn gặp cả ở các tỉnh phía nam Trung Quốc và đảo Hải Nam. Ở Việt Nam, chè vằng có rải rác ở hầu hết các tỉnh thộc vùng núi thấp, trung du và cả đồng bằng. Không thấy cây mọc ở vùng núi cao trên 1500 m.  Ở Việt Nam, chiJasminum L. có 30 loài, trong đó 8 loài được dùng làm thuốc. Trừ loài hoa nhài, 7 loài còn lại thuộc nhóm dây leo hay cây mọc dựa, thường có tên gọi chung là “Vằng” hoặc “Chè vằng”. Nguồn trữ lượng chè vằng ở Việt Nam nhìn chung tương đối dồi dào. Việc thu hái cành lá hàng năm không ảnh hưởng xấu đến sự phát triển của cây.",
+        "thường_mọc": "Chè vằng là cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, nhất là thời kỳ cây còn nhỏ, thường mọc lẫn trong các lùm bụi ở ven đồi, bờ nương rẫy và quanh làng bản. Cây mọc nơi đất ẩm, sinh trưởng mạnh hơn cây ở vùng đồi khô hạn. Chỉ có những cây mọc trùm lên các cây bụi khác, được chiếu sáng đầy đủ mới thấy có nhiều hoa quả. Trong tự nhiên thường gặp nhiều cây con mọc từ hạt xung quanh gốc cây mẹ. Sau khi bị chặt phá nhiều lần, phần thân, cành còn lại của chè vằng đều có khả năng tái sinh nhiều chồi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Chè vằng với nồng độ nhất định có tác dụng kháng khuẩn mạnh hơn một số kháng sinh đối với tụ cầu khuẩn và liên cầu tan máu (Bệnh viện Thái Bình). Cao chiết chè vằng có tác dụng làm chuyển dạng tế bào lympho (Nguyễn Thị Hiền). Chè vằng ức chế khá mạnh tụ cầu vàng và liên cầu tan huyết nhóm A (Viện Dược liệu). Cao nước chè vằng có tác dụng ức chế yếu đối với ký sinh trùng  Entamoeba histolytica (Nguyễn Đức Minh). Chè vằng có tác dụng chống viêm cấp tính, viêm mãn tính, làm teo tuyến ức trên các mô hình thực nghiệm trên chuột và một số tác dụng sinh học khác như: làm lành vết thương, hạ sốt, bảo vệ niêm mạc, tăng tiết dịch mật, giảm nhu động ruột của chế phẩm cao cồn và cao nước bằng đường uống và đường tiêm. (Nguyễn Thị Ninh Hải).  Trong đề tài Góp phần nghiên cứu tác dụng chống nhiễm khuẩn của cây Chè vằng ở Quảng Nam- Đà Nẵng, DS.Trương Thị Ngọc Liên (Trạm Kiểm nghiệm Dược phẩm QN-ĐN, 1994) đã nghiên cứu trên lâm sàng điều trị 254 ca sản phụ ở Bệnh viện Hòa Vang, cho thấy cao chè vằng có tác dụng phòng và điều trị nhiễm khuẩn sau đẻ có hiệu quả: không dùng thuốc kháng sinh mà chỉ dùng Chè vằng trong trường hợp đẻ thường, giảm 50% thuốc kháng sinh trong trường hợp đẻ khó. Theo DS. Trương Thị Ngọc Liên, tử cung người phụ nữ sau khi đẻ như vết thương để ngỏ, sức khỏe lại bị giảm sút nên vi khuẩn dễ xâm nhập, nhất là ở nước ta điều kiện vệ sinh môi trường còn kém, đặc biệt là ở các tuyến cơ sở. Tuy nhiên để đề phòng nhiễm khuẩn dùng kháng sinh nguồn gốc vi sinh vật cho chị em phụ nữ sau khi đẻ thường là không cần thiết. Với kết quả đề tài này, hy vọng chè vằng sẽ được áp dụng rộng rãi ở khoa sản để góp phần chống nhiễm khuẩn, chóng phục hồi sức khỏe. Dùng  chè vằng sẽ kích thích tiêu hóa, ăn ngon miệng, không ảnh hưởng đến tiết sữa, đây là vấn đề bà mẹ nào cũng quan tâm đến sau khi sinh.  Đặc biệt, Trường Đại học Dược Hà Nội cũng có đề tài nghiên cứu về tác dụng chống nhiễm khuẩn của cây Chè vằng. Nghiên cứu này được áp dụng điều trị ở 254 sản phụ và cho nhiều kết quả đáng chú ý. Ví dụ như không dùng thuốc kháng sinh mà chỉ dùng chè Vằng trong trường hợp đẻ thường, giảm 50% thuốc kháng sinh trong trường hợp đẻ khó. Người ta cũng hy vọng rằng cây Chè Vằng sẽ được ứng dụng rộng rãi trong sản khoa để giúp chống nhiễm khuẩn và giúp sản phụ sớm hồi phục sức khỏe, giúp kích thích tiêu hóa.  Bài thuốc liên quan  Chữa phụ nữ kinh nguyệt không đều, bế kinh đau bụng: Chè vằng 20g, ích mẫu 16g, hy thiêm 16g, ngải cứu 8g, bạch đồng nữ 8g, nước 500ml. Sắc còn 300ml, uống làm 3 lần trong ngày. Chữa sưng vú, vết thương: Chè vằng 30g, sắc uống. Giã cây tươi đắp ngoài. Chữa áp xe vú: Lá chè vằng tươi giã nát dùng riêng hoặc trộn với cồn 50° đắp vào nơi áp xe. Ngày 3 lần, đêm 2 lần. Chữa vàng da: Chè vằng, ngấy hương, mỗi vị 20g, sắc uống, ngày một thang. Thuốc nhuận gan: Chè vằng 12g, nhân trần 20g; chi tử, lá mua, vỏ núc nác, rau má, lá bồ cu, vỏ đại, mỗi vị 12g; thanh bì 8g. Sắc uống ngày một thang.  Sản phẩm chứa thành phần Chè vàng trên thị trường hiện nay  Cao khô chè vằng   Cao khô Chè vằng với thành phần 100% cao khô dược liệu nguyên chất.   Dược liệu được sản xuất trên dây chuyền hiện đại đảm bảo chất lượng và hàm lượng hoạt chất cao nhất.   Cao khô Chè vằng là thảo dược quý giúp giảm đau nhức xương khớp, tăng cường chất lượng sữa mẹ sau sinh, ngăn ngừa nguy cơ nhiễm khuẩn, viêm tử cung, viêm tuyến sữa, giúp nhanh lành sẹo, lấy lại vóc dáng sau sinh, mát gan, thanh thiệt giải độc.  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Chè vằng. Nếu cần tư vấn và tìm hiểu thêm về cây Chè vằng và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 18001190 (miễn cước) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Cành lá, thu hái quanh năm, phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Lá chè vằng chứa alcaloid, nhựa, flavonoid (Nguyễn Thị Ninh Hải, Luận án Tiến sĩ Dược học 1986)"
+      },
+      "Tính vị": {
+        "Có vị": "Chè vằng có vị hơi đắng, chát, tính ấm, vào hai kinh: tâm, tỵ, có tác dụng thanh nhiệt, lợi thấp, khu phong, hoạt huyết, điều kinh, tiêu viêm, trừ mủ."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân nhiều tỉnh dùng lá vằng phơi khô nấu hay pha nước uống hằng ngày hay cho phụ nữ sau khi đẻ uống nhằm đem lại tác dụng lợi sữa và phòng các nhiễm khuẩn sau đẻ. Có nơi dùng lá nấu nước tắm cho trẻ con bị ghẻ lở.  Tại Miền Nam, nhân dân dùng lá chữa sưng vú cho phụ nữ mới đẻ uống, còn dùng chữa rắn cắn, rễ mài với dấm thanh để làm hết mủ những ung nhọt đã nung mủ. Liều uống hằng ngày: 20-30g lá khô; dùng ngoài: Không kể liều lượng.  Chè vằng được dùng trị kinh nguyệt không đều, bế kinh hoặc khi thấy kinh đau bụng, sau khi đẻ bị nhiễm khuẩn sốt cao, viêm hạch bạch huyết, viêm tử cung và tuyến vú, áp xe vú, khí hư bạch đới. Còn dùng trị phong thấp do huyết kém, đau nhức khớp xương, vàng da, ghẻ lở, chốc đầu, các bệnh ngứa ngoài da, rắn cắn. Ngày dùng 40 – 100g cây tươi hoặc 20 – 30g dược liệu khô dưới dạng thuốc sắc hoặc nấu nước tắm, liều lượng không hạn chế.  Kinh nghiệm dùng lá chè vằng của bệnh viện Thái Bình: Dùng lá chè Vằng giã nát đắp vào nơi áp xe. Ngày 3 lần, đêm 2 lần. Thời gian điều trị thường là 1 ngày đến 1 tuần tùy theo bệnh nặng nhẹ và được bắt đầu chữa bằng lá chè vằng sớm hay muộn. Trung bình 1,5 – 2 ngày. Bệnh nhân điều trị bằng chè vằng thường hết sốt sau 2 giờ dùng thuốc, sau khi khỏi công thức và số lượng bạch cầu trở lại bình thường, sữa cũng trở lại bình thường."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      },
+      "url": "https://tracuuduoclieu.vn/che-vang.html"
+    }
+  ]
+}

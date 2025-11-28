@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ô Đầu và Phụ Tử",
+      "ten_khac": "Xuyên ô, Thảo ô",
+      "ten_khoa_hoc": "Aconitum sinense Paxt",
+      "ho": "Ranunculaceae (Mao lương)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây ô đầu là loại cỏ sống lâu năm, cao chừng 0,6-1m.",
+      "rễ": "Rễ phát triển thành củ, có củ mẹ, củ con như cây âu ô đầu. Củ hái ở những cây trồng có thể tới 5cm đường kính.",
+      "lá": "Lá mọc so le, phiến lá rộng 5- 12cm, xẻ thành 3 thùy, 2 thùy 2 bên lại xẻ làm 2, thùy giữa lại xẻ làm 3 thùy con nữa. Mép các thùy đều có răng cưa thô, to.",
+      "hoa": "Cụm hoa dài 10-20cm, hoa màu xanh tím, quả dài 2mm. Hoa nở vào tháng 3-7.",
+      "quả": "Quả thu hoạch vào tháng 7-8."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Qua các tài liệu của Trung Quốc và Nhật Bản, trong ô đầu và phụ tử Trung Quốc cũng có những hoạt chất như âu ô đầu. Tuy nhiên tại sao muốn giảm lượng ancaloid lại không dùng liều nhỏ cho khỏi lãng phí thuốc hoặc là trong phụ tử, ngoài aconitin ra còn có chất gì khác tác dụng chăng? Trong khi sắc phối hợp với những vị thuốc khác có gì thay đổi không? Đó là những vấn để tồn tại trong thành phần hóa học của phụ tử. Một số băn khoăn đã được các nhà nghiên cứu Trung Quốc và Nhật Bản trả lời như sau:  1. Trong quá trình sắc thuốc (đun sôi và giữ sôi lâu) các ancaloit của phụ tử chế, tiếp tục bị phân hủy.  2. Khi sắc đơn thuốc “Tứ nghịch thang” (phụ tử được phối hợp với cam thảo và gừng) độc tính của phụ tử còn giảm nhiều hơn so vối nước sắc phụ tử riêng biệt, hoặc khi sắc phụ tử riêng, gừng riêng và cam thảo riêng rồi mới trộn ba dịch sắc riêng ấy với nhau. Người ta cho rằng, khi sắc phối hợp ba vị phụ tử, gừng và cam thảo, ngoài sự phân hủy aconitin bởi nhiệt, có thể còn sự hóa hợp giữa axit glucuronic của cam thảo với những ancaloid trong phụ tử.  3. Đông y không sử dụng các ancaloid độc trong phụ tử mà dùng các chất gây tác dụng cường tim trong ô đầu, phụ tử. Có lẽ chất “hồi dương cứu nghịch” hay “khởi tử hồi sinh” nói trong đông y là nằm ở đây. Tại Nhật Bản, người ta đã chiết từ nước sắc phụ tử chất higranim có tác dụng cường tim rất mạnh. Higranim rất bền với nhiệt độ, với áp suất, trong môi trường nước acid hóa, ở nồng độ l0g vẫn có tác dụng cường tim. Sau khi hấp 110-115°C trong 40 phút, hiệu lực cường tim chỉ giảm 2 lần, trong khi đó DL- 50 giảm độc tới 200 lần (Trung thảo dược học – Trung văn).  4. Tác dụng cường tim còn liên quan đến sự có mặt của ion Ca+2 trong nước sắc đơn thuốc có phụ tử. Nguồn ion Ca+2 này một phần có trong axit canxiphotphoaconitic trong phụ tử, một phần có trong nước muối, nước ót dùng chế phụ tử. Nước sắc phụ tử chế có tác dụng mạnh hơn nước sắc phụ tử sống (ô đầu) do nước sắc phụ tử chế có hàm lượng ion Ca+2 nhiều hơn. Nếu loại các ion Ca+2 khỏi nước sắc thì tác dụng cường tim cũng giảm đi khá nhiều."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ, ô đầu phụ tử đều có vị cay, ngọt, tính đại nhiệt, có độc, vào 12 đường kinh. Phụ tử có tác dụng hồi dương cứu nghịch, bổ hỏa, trợ dương, trục phong hàn, thấp tà; ô đầu sưu phong, táo thấp khứ hàn; phụ tử dùng chữa mồ hối toát ra nhiều quá, vong dương (mất dương), chân tay quờ quạng, bụng quặn đau, dương hư, sợ lạnh, mồ hôi trộm, ngực bụng lạnh đau, tả lỵ lâu ngày, phong hàn thấp tỳ (tê bại), đau nhức thận dương không đủ, cước khí, thủy thũng, mọi chứng trầm hàn cố lãnh. Ô đầu dùng chữa phong hàn thấp tỳ, các khớp sưng đau, chân tay co quắp, bán thân bất toại (liệt nửa người), đại hàn sinh đau bụng, âm hư lâu ngày không vỡ mủ, vết loét lâu ngày không liền miệng. Những người âm hư, dương thịnh, phụ nữ có thai không dùng được. Ô đầu không được dùng chung với bán hạ, qua lâu, bối mẫu bạch cập. Trong đông y, ô đầu chỉ được dùng ngâm rượu để xoa bóp khi bị đau nhức, mỏi chân tay. Đặc biệt lắm mới có người dùng cho uống để chữa bán thân bất toại, chân tay co quắp, mụn nhọt vỡ lâu không liền miệng. Liều thường dùng là 3-4g, sắc uống hay ngâm rượu. Phụ tử: Đông y coi là một vị thuốc hồi dương, khử phong hàn, dùng chữa một số triệu chứng nguy cấp, mạch gân như không có, ra nhiều mồ hôi (thoát dương) chân tay tê mỏi v…v… với liều 4-12g dưới dạng thuốc sắc. .\n Đơn thuốc có ô đầu phụ tử\n Chữa chân tay đau nhức, khớp xương sưng đau:\n Rượu phụ tử quế chi (đơn thuốc của Trương Trọng Cảnh) ô đầu 1g, quế chi 1g, cam thảo 1g, thược dược 2 g, táo đỏ 4g, rượu 100ml. Ngâm trong 3 ngày, lọc bỏ bã lấy rượu. Ngày uống 60ml rượu này chia làm nhiều lần uống, chữa bệnh chân tay đau nhức, khớp xương sưng đau.\n Thận khí hoàn: Can địa hoàng 16 – 32g, Sơn thù 8 – 16g, Bạch linh 8 – 12g, Sơn dược 8 – 16g, Trạch tả 8 – 12g, Đơn bì 8 – 12g, Phụ tử chế 4g, Quế chi 2 – 4g\n Cách dùng: Theo tỷ lệ trên, tất cả tán bột mịn, trộn đều, luyện mật làm hoàn. Mỗi lần uống 8 – 12g, ngày 1 – 2 lần, với nước sôi nóng hoặc gia thêm tý muối. Có thể làm thuốc thang sắc uống.\n Tác dụng: Ôn bổ thận dương. Bài này chủ yếu chữa các chứng bệnh mạn tính, viêm thận mạn, suy nhược thần kinh, bệnh béo phì, liệt dương, tiểu đêm, người già suy nhược có hội chứng thận dương hư. Bài thuốc này gia thêm Ngưu tất, Xa tiền tử gọi là “TẾ SINH THẬN KHÍ HOÀN” (Tế sinh phương) có tác dụng lợi niệu, tiêu phù, dùng chữa chứng thận dương hư, cơ thể nặng nề phù thũng, tiểu tiện ít.\n Chú ý: Bài thuốc không dùng đối với những trường hợp có hội chứng thận âm bất túc như đau lưng, mỏi gối, người nóng ra mồ hôi trộm, mạch tế sác."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây này hiện chưa được trồng ở nước ta. Chủ yếu mọc hoang và được trồng ở Trung Quốc (Tứ Xuyên, Quý Cháu, Vân Nam, Thiểm Tây, Cam Túc).  Củ thu hái vào cuối tháng 6 (hạ chí) đầu tháng 7 (tiểu mãn). Tùy theo yêu cầu muốn có ô đầu, phụ tử hay hắc phụ lựa chọn những củ và chế biến khác nhau như sau:  Ô đầu chọn những củ mẹ (khác với âu ô đầu, chỉ lấy củ con) cắt bỏ rễ con, rửa sạch đất phơi hay sấy khô. Thuốc rất độc.  Diêm phụ: còn gọi là phụ tử muối, hay sinh phụ tử, phụ tử sống. Chọn những củ con to nhất, cắt bỏ rễ con, rửa sạch cho vào vại, thêm vào đó magie clorua (đảm ba), muối ăn và nước. Cứ 100kg phụ tử thì dùng 40kg magie clorua, 30kg muối và 60 lít nước. Ngâm trong 10 ngày lấy ra phơi, phơi khô lại cho vào vại thêm nước, muối và magiê clorua để lúc nào cũng ngâm xâm xấp các củ. Sau đó mỗi ngày lại lấy ra phơi, tối lại ngâm. Thỉnh thoảng lại thêm muối, magie clorua để lúc nào cũng giữ được nồng độ cũ. Cuối cùng phơi nắng để muối thấm vào tới giữa củ, mặt ngoài thấy có muối kết tinh là được. Loại phụ tử này được nhập vào nước ta với hình thức đựng trong các vại, trông giống như những củ khoai sọ, dài 6-10cm, rộng có thể đạt tới 4- 6cm. Khi dùng có người chỉ rửa sạch hết muối, thái mỏng, phối hợp với các vị thuốc khác, đặc biệt cam thảo và gừng sống (sinh khương) sắc kỹ gạn lấy nước mà uống. Tuy nhiên nhiều người thường chỉ dám dùng sau khi đem sinh phụ trên nấu lại nhiều lần với đậu đen. Hắc phụ:\nChọn những củ con, to trung bình, rửa sạch đất cát, cho vào vại có chứa dung dịch magie clorua ngâm vài ngày, thông thường cứ 100kg phụ tử sống dùng 40kg magie clorua và 20kg nước. Sau đó cứ để như vậy, đun sôi 2-3 phút, lấy ra rửa sạch, để nguyên cả vỏ, thái thành từng miếng mỏng chừng 5mm rồi lại ngâm vào nước magie clorua nữa, cuối cùng thêm đường đỏ và dầu hạt cải mà tẩm và sao cho đến khi có màu nước chè đặc, cuối cùng lại dùng nước rửa cho đến khi hết vị cay tê là được, đem ra phơi khô hoặc sấy khô. Bạch phụ:\nChọn những củ con nhỏ, rửa sạch, cho vào vại ngâm với nước có magie clrua vài ngày, sau đó đem đun cho tới khi chín, lấy ra bóc vỏ đen, thái thành từng miếng mỏng dày chừng 3 mm, rồi cũng đem rửa cho tới khi hết vị cay, hấp chín, phơi khô, sau đó đem xông hơi diêm sinh cuối cùng phơi khô là được.  Mặc dầu sinh phụ, hắc phụ hay bạch phụ đã được chế biến như vậy rồi nhưng khi dùng có người còn chế với đậu đen hay ngâm nước với nhiều lần rồi mới dám dùng. Chúng tôi thấy cũng cần theo dõi nghiên cứu để đi tới thống nhất một phương pháp bào chế phụ tử, có như vậy mới dễ đánh giá tác dụng trị bệnh của các loại phụ tử."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

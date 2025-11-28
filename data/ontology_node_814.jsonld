@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quế",
+      "ten_khac": "Quế đơn, Quế bì, Quế Trung Quốc, Nhục quế, Mạy quẻ (Tày), Kía (Dao)",
+      "ten_khoa_hoc": "Cinnamomum cassia (L.) J. Presl.",
+      "ma_taxon": "774822",
+      "ho": "Long não (Lauraceae)."
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10 – 20m.",
+      "thân": "Cành hình trụ, nhẵn, màu nâu.",
+      "lá": "Lá mọc so le, dày cứng và dai, hình mác, dài 12 – 25cm, rộng 4-8cm, gốc thuôn, đầu nhọn, mặt trên nhẵn, màu lục sẫm bóng, mặt dưới màu xám tro, hơi có lông lúc còn non; gân 3, hình cung, nổi rõ ở mặt dưới, gân bên kéo dài đến đầu lá, gân phụ nhiều, song song; cuống lá to, dài 1,5-2cm, có rãnh ở mặt trên.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gần đầu cành thành chùy dài 7-15cm; bao hoa gồm 6 phiến gần bằng nhau, màu trăng, dài 3mm, mặt ngoài có lông nhỏ.",
+      "quả": "Quả hạch, hình trứng hoặc hình bầu dục, có cạnh dài 1,2 – 1,3cm, nằm trong đài tồn tại nguyên hoặc chia thùy.",
+      "mọc": "Vỏ và lá vò ra có mùi thơm.",
+      "mùa hoa": "tháng 4-7",
+      "mùa quả": "tháng 10-12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cinnamomum Blume là một chi lớn gồm khoảng 270 loài, hầu hết là cây gỗ; phân bố tập trung ở vùng nhiệt đới châu Á. Ở Ấn Độ có 20 loài; Trung Quốc 12 loài và Việt Nam 40 loài. Ở Việt Nam, nhiều loài mang tên quế, trong đó, có 3 loài là cây trồng, còn lại là mọc hoang dại. Quế có nguồn gốc ở Việt Nam, cách đây khoảng hơn 2000 năm, các triều đại phong kiến đã coi “quế Giao Chỉ” (Giao Chỉ là tên nước Việt cổ) như là sản vật quý để trao đổi và triều cống (Lê Trần Đức, 1990). Nhiều vùng quế đã được hình thành từ lâu đời ở Yên Bái; Quảng Ninh; Thanh Hoá (Thường Xuân); Quảng Nam (Trà My, Phước Sơn) và Quảng Ngãi (Trà Bồng)…",
+      "Đặc điểm sinh trưởng": "Quế là cây gỗ ưa sáng và chịu bóng, nhất là thời kỳ cây còn nhỏ (1-5 năm). Cây ưa khí hậu nhiệt đới nóng và ẩm, nhiệt độ trung bình năm cho cây sinh trưởng phát triển mạnh là 22 – 23°C; độ ẩm không thí trung bình khoảng 80%; lượng mưa hàng năm khoảng 1.600 mm hoặc hơn. Cây mọc được trên nhiều loại đất ẩm, nhiều mùn và tơi xốp, pH : 4,5 – 5,5. Quế có bộ rễ cọc khoẻ, cắm sâu xuống đất nên ít bị đổ khi có gió bão."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Quế được trồng từ lâu ở một số tỉnh miền Trung và miền Bắc Việt Nam. Cây có thể nhân giống được bằng hạt, chiết cành hoặc tách mầm. Quế ưa đất rừng có lớp đất mặt dày, tơi xốp, nhiều mùn, thoát nước, độ pH 4 – 5, độ dốc không quá 35%, độ cao trên 400 m, nhiều ánh sáng và khuất gió. Khi trồng, đào hố 30 x 30 x 30 cm. Nếu có điều kiện nên bón lót 5 – 7 kg phân chuồng, phân xanh ủ mục. Quế thường được trồng xen với mía, sắn hoặc chè vối khoảng cách 2 x 5 m hoặc tùy theo yêu cầu của cây trồng xen."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ thân, vỏ cành non được phơi hoặc sấy khô (Quế chi). Vỏ thân được phơi khô trong bóng râm (Quế nhục). Tinh dầu từ cành hoặc lá."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quế có vị ngọt, cay, mùi thơm, tính rất nóng, có tác dụng bổ hỏa, hồi dương, ấm thận tỳ, thông huyết mạch, trừ hàn tích."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quế được dùng làm thuốc cấp cứu bệnh do hàn như chân tay lạnh, mạch chậm nhỏ, hôn mê, đau bụng trúng thực, phong tê bại, chữa tiêu hóa kém, tả lỵ, thũng do tiểu tiện bất lợi, kinh bế, rắn cắn, ung thư. Ngày dùng 1- 4g dưới dạng thuốc hãm, hoàn tán hoặc mài vối nước mà uống. Kiêng kỵ : Những người âm hư, dương thịnh và phụ nữ thai nghén không nên dùng. Theo tài liệu nước ngoài, vỏ quế bì được dùng trong y học Trung Quốc để chữa những chứng bệnh sau : Cảm lạnh, phối hợp với nhân sâm, hoàng kỳ, thục địa. Tiêu chảy, phối hợp với mộc hương, phục linh, nhục đậu khấu. Đau vùng hông, phối hợp vói phụ tử, địa hoàng. Đau dạ dày, đau bụng, đau kinh, phối hợp với đương quy, hương phụ. Mụn nhọt lâu lành, phối hợp với ma hoàng, cao nhung, bạch giới tử. Liều dùng mỗi ngày : 2 – 7,5g, sắc nước uống. Hoặc tán bột, mỗi lần uống 0,5 – 2g, ngày uống 1-2 lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa cảm mạo (Quế chi thang): Quế chi 8g, cam thảo 6g, thược dược 6g, sinh khương 6g, táo đen 4 quả, nước 600 ml, sắc còn 200 ml. Chia 3 lần uống nóng trong ngày. Chữa đau bụng: Bột vỏ cành quế 4g, ngâm rượu uống. Chữa tiêu chảy: Vỏ thân quế 4g – 8g, gạo nếp rang vàng 10g, hạt cau già 4g, gừng nướng 2 lát. sắc uống. Chữa sai khớp, bong gân, chấn thương: Cao dán gồm hỗn hợp tinh dầu quế, hồi, menthol camphor, cao ngải cứu, cao cúc tần, được trộn đều vào hỗn hợp keo cao su. Chữa thấp khớp mạn tính thể hàn (Trường hợp bênh đang tiến triển, có hoặc không sưng khớp và đau nhiều): Quế chi 12g, rễ cỏ xước 40g, hy thiêm 28g thổ phục linh 20g, cỏ nhọ nồi 16g, ngải cứu 12g, thương nhĩ tử 12g, thiên niên kiện 12g. Sao vàng, sắc đăc ngày uống 1 thang, trong 7-10 ngày liền. Quế tiêm 12g, bạch thược 12g, phòng phong 12g, thương truật 12g, ma hoàng 8 – 12g, cam thảo 8g hắc phụ 8g. Sắc và chia 3 lần uống trong ngày. Quế chi 8g; độc hoạt, tang ký sinh, tần giao bạch linh, phòng phong, tục đoạn, ý dĩ, bạch thược, xuyên quy, ngưu tất, thục địa, đảng sâm, mỗi vị 12g; xuyên khung 8g; cam thảo, tế tân, mỗi vị 6g. sắc uống ngày một thang.  Quế chi 260g; thương truật 260g; hắc phụ chế, cam thảo, mỗi vị 160g; ma hoàng, tế tân, mỗi vị 80g. Thương truật ngâm nước gạo, thái mỏng sao vàng, các vị khác thái nhỏ phơi khô, tán lẫn, rây mịn. Ngày uống 20g chia 2 lần trước bữa ăn. Chữa viêm khớp dạng thấp đang tiến triển: Quế chi, bạch thược, thương truật, phòng phong, tri mẫu, mỗi vị 12g; gừng tươi, ma hoàng, hắc phụ chế, mỗi vị 8g; cam thảo 6g. sắc uống ngày một thang. Chữa suy nhược cơ thể do bệnh đường tiêu hóa: Nhục quế 4g; đảng sâm, bạch truật, hoàng kỳ, đại táo, mỗi vị 12g; trần bì, ngũ vị tử, mỗi vị 6g; cam thảo 4g; gừng 2g. sắc uống ngày một thang. Chữa dương hư, khí lực suy nhược, di tinh, liệt dương, thai nghén khó khăn, sợ lạnh: Nhục quế 12g; thục địa 24 – 32g; sơn thù, hoài sơn, bạch linh, mỗi vị 16g; mẫu đơn, trạch tả, môi vị 8g. Tán bột làm viên, mỗi ngày uống 30 – 40g, hay sắc uống. Chữa viêm phế quản mạn tính: Quế chi 12g, phục linh 16g, bạch truật 8g, cam thảo 4g. Sắc uống ngày một thang. Chữa hen phế quản khi hết cơn hen: Quế chi 8g; đại táo 12g; bạch thược, hoàng kỳ, mỗi vị 8g; gừng 4g. sắc uống ngày một thang. Nhục quế 4g; đảng sâm, bạch truật, phụ tử chê, mỗi vị 12g; can khương 8g; cam thảo 6g. sắc uống ngày một thang. Chữa viêm khớp cấp: Quế chi 8g; thạch cao, ngạnh mễ, mỗi vị 20g; tri mẫu hoàng bá, tang chi, mỗi vị 12g; thương truật 8g. Sắc uống ngày một thang. Chữa nhồi máu cơ tim: Nhục quế 6g, đương quy, đan sâm, nhục thung dang ba kích, mỗi vị 12g; nhân sâm, phụ tử chế, mỗi vị 8g. Sắc uống ngày một thang. Chữa thiếu máu: Quế tâm 6g, đảng sâm (thay nhân sâm) 16g; phục linh hoàng kỳ, thục địa, bạch thược, đại táo, mỗi vị 12g đương quy, ngũ vị tử, viễn chí, mỗi vị 10g; bạch truật 8g; cam thảo, trần bì, mỗi vị 6g; gừng 2g. sắc uống ngày một thang. Chữa viêm loét dạ dày tá tràng: Quế chi 8g; hoàng kỳ 16g; đại táo 12g; hương phụ, bạch thược, mỗi vị 8g; sinh khương, cam thảo, cao lương khương, mỗi vị 6g. sắc uống ngày một thang. Chữa viêm cầu thận cấp tính: Quế chi 8g; bạch truật, phục linh, trạch tả, mỗi vị 12g; trư linh 8g. sắc uống ngày một thang. Chữa kinh nguyệt không đều, chậm kinh: Nhục quế 4g; bạch truật, đảng sâm, bạch thược, hoàng kỳ, mỗi vị 12g; phục linh, thục địa, xuyên khung, đương quy, mỗi vị 8g; cam thảo 4g. sắc uống ngày một thang. Chữa bế kinh, chậm kinh đau bụng: Quế chi 12g; ích mẫu, củ gấu, mỗi vị 20g; ngải cứu 16g; gừng sao cháy 12g. sắc uống ngày một thang. Chữa bế kinh, vô kinh: Quế chi 8g; ngưu tất, đảng sâm, mỗi vị 12g; đương quy, xuyên khung, bạch thược, nga truật, đan bì, mỗi vị 8g; cam thảo 4g. sắc uống ngày một thang. Chữa nôn mửa khi có thai: Quế chi 8g, bạch thược 12g, đại táo 8g; cam thảo, sinh khương, mỗi vị 6g. sắc uống. Chữa viêm mũi dị ứng: Quế chi 8g; hoàng kỳ 16g; bạch thược 12g; bạch truật 8g; phòng phong, đại táo, mỗi vị 6g, gừng 2g. Nếu viêm cấp tính chảy nước mũi nhiều, thêm ma hoàng 4g, tế tân 6g. Nếu mệt mỏi, ăn kém, đoạn hơi, thêm đảng sâm 16g, kha tử 6g. 27. Kẹo ngậm chống viêm họng mũi cho công nhân ăn : Kẹo có hỗn hợp các tinh dầu : bạc hà, hương nhu, gừng, quế và menthol, vitamin c, acid citric. Trúng phong quyết lạnh, hôn mê: Quế tốt 12g, sắc, cho uống dần dần. Thuốc ngâm rửa trị viêm tắc động mạch: Quế chi 8g; đào nhân, kê huyết đằng, tam lăng, mỗi vị 12g. Đun sôi kỹ lấy nước ấm ngâm ngày 2 lần. Chữa viêm tắc động mạch: Quế chi 12g, đan sâm 20g, hoàng kỳ 20g, xuyên quy vỹ 16g, xích thược 12g, bạch chỉ 12g, nghệ 12g, nhũ hương 12g, một dược 12g, hồng hoa 12g, đào nhân 12g, tô mộc 12g. sắc uống ngày một thang. Các bài thuốc được dùng ở Trung Quốc Chữa cao huyết áp có kèm bệnh về tim: Quế 6g, đỗ trọng 12g, hoàng bá 10g, sa nhân 6g, cam thảo 6g. Thêm 800 ml nước, đun sôi trong 15-20 phút, chia 3 lần uống trong ngày. Chữa suy tim, viêm cơ tim với các biểu hiện phù, khó thở, loạn nhịp tim: Quế 15g, gừng 15g, sinh địa 15g, gai mèo 15g, mạch môn 9g, keo da lừa 9g, táo ta 3 quả, cam thảo 6g. Sắc và chia 3 lần uống trong ngày. Chữa bệnh cuồng loạn (hysteria), loạn thần kinh tim, mất ngủ: Quế 6g, phục linh 9g, táo ta (quả) 6g, cam thảo 4g. Đun sôi trong 800 ml nước trong 45 phút. Chia 3 lần uống trong ngày. Chữa viêm thận: Quế chi 4g, cốc tinh thảo (hoa) 4g, táo ta (quả) 4g, bạch thược 4g, đương quy Nhật Bản 4g, cam thảo 3g, bạch mộc thông 3g. sắc và chia 3 lần uống trong ngày. Chữa thấp khớp: Quế chi 12g, phụ tử chế 15g, bạch truật 12g, cam thảo 6g. sắc và chia 3 lần uống trong ngày. Chữa đái tháo đường giai đoạn đầu: Quế 10g, phụ tử chế 15g, mai rùa nướng 15g, sa nhân 6g, cam thảo 6g. sắc và chia 3 lần uống trong ngày. Chữa đái tháo đường: Quế 3g, sơn dược 15,5g, phụ tử chế 12g, phục linh 12g, sơn thù 10g, trạch tả 10g, sinh địa 10g, mẫu đơn bì 6g. sắc uống làm 3 lần trong ngày."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cơm cháy tròn",
+      "ten_khac": "Mậu mạ",
+      "ten_khoa_hoc": "Sambucus simpsonii Rehd.",
+      "ma_taxon": "84300",
+      "ho": "Cơm cháy (Caprifoliaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao 3 – 4m.",
+      "thân": "Thân có lõi to, xốp.",
+      "lá": "Lá kép lông chim, mọc đối, gồm 7 – 13 lá chét hình trứng nhọn, mép khía răng, mặt trên nhẵn màu lục bóng, mặt dưới nhạt, lá chét ở gốc thường xẻ thêm hai lần, ở cành mang hoa, số lá chét ít hơn (3 – 7 lá).",
+      "hoa": "Cụm hoa mọc ở đầu cành thành ngủ phân nhánh, có ít lông; hoa nhiều, đường kính 4 – 5 mm, có mùi đặc biệt; đài nhỏ, hình đấu, 5 răng màu trắng tràng có 5 cánh tròn, màu vàng ngà; nhị 5 có bao phấn màu vàng, thuôn dài; bầu có 3-5 ô, núm nhụy chia 5 thuỳ.",
+      "quả": "Quả mọng hình cầu, đường kính 4-5 mm, khi chín màu không sau tím đen, thịt quả có màu xám vị ngọt, hạt 4 – 5, hình thuôn hay ellip.",
+      "mùa hoa": "gần như quanh năm.",
+      "mùa quả": "gần như quanh năm."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Sambucus ở Việt Nam có 2 loài, phân bố rộng ở nhiều tỉnh miền núi phía bắc. Trong đó loài Cơm cháy tròn mới ghi nhận được ở Thừa Thiên Huế (Bạch Mã) và Lâm Đồng (Đà Lạt), cây còn có ở Lào. Cơm cháy tròn là loại cây ưa ẩm, ưa sáng.",
+      "thường_mọc": "thường mọc rải rác ở chỗ đất trống ven rừng hoặc gần các nguồn nước."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cơm cháy tròn chứa các nhóm chất chủ yếu sau đây glycosid cyanogeric: satimbunigrin; các anthocyanin, các glycosid iridoid: morronisid.",
+      "Các hợp chất": "Các chất triterpen, acid ursolic, acid oleanolic, tinh dầu, protein, đặc biệt là các protein làm bất hoạt ribosom của tế bào (RIPs)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá và toàn cây cơm cháy tròn vị đắng, tính ấm, có độc, có công năng chỉ huyết, sinh cơ, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá và ngọn cây cơm cháy thường được dùng ngoài, rửa sạch, giã nát đắp lên các chỗ viêm nhiễm, mụn nhọt, nấm ngoài da hoặc đắp lên chỗ bầm tím, các vết chém chặt để cầm máu và làm vết thương chóng lành.",
+      "được_dùng": "Ở Mỹ, thổ dân thường dùng vỏ trong của cây làm chè để lợi tiểu, nhuận tràng, gây trung tiện và làm ra mồ hôi.",
+      "sắc nước uống": "Nước sắc vỏ cây được dùng rửa để chữa eczema, lở loét hoặc rộp da.",
+      "giã nát": "Lá và ngọn cây giã nát đắp lên chỗ bầm tím, vết chém chặt để cầm máu, và chóng lành vết thương, đắp lên chỗ sưng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

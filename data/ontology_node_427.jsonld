@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc sao",
+      "ten_khac": "Cúc ba gân, sơn bạch cúc, nam tử uyển.",
+      "ten_khoa_hoc": "Aster trinervius Roxb.",
+      "ma_taxon": "933655",
+      "ho": "Cúc (Asteraceae)",
+      "Mô tả": {
+        "cây": "Cây thảo nhỏ, sống lâu năm, cao 0,4 – 1m, có thể hơn.",
+        "thân": "Thân và cành hình trụ, mọc đứng, phân nhánh ở ngọn, có khía và lông nhỏ.",
+        "lá": "Lá mọc so le, có cuống ngắn, hình mác, dài 3 – 7 cm, rộng 2,5 – 5 cm, gốc thuôn, đầu có mũi nhọn, gần chính 3, mép có răng thưa. Lá gần ngọn nhỏ và không cuống.",
+        "hoa": "Cụm hoa mọc ở kẽ lá hay đầu ngọn thành ngữ gồm nhiều đầu xếp thành 2 – 3 cái một, đầu có cuống dài 5 – 8 mm, lá bắc không đều, xếp thành 4 – 5 hàng, có mép mỏng, hoa cái ở vòng ngoài màu trắng hay tím; hoa lưỡng tính ở giữa có ống màu vàng, mào lông có nhiều sợi ngắn; tràng hình lưỡi có ống mảnh; tràng hình ống hơi loe ở đầu, có 5 thuỳ dài, nhị 5, không có tai; bầu thuôn dẹt có lông.",
+        "quả": "Quả bế, thuôn, dài 2,5 mm, có lông.",
+        "mùa hoa": "tháng 10 – 12.",
+        "mùa quả": "tháng 10 – 12."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Aster L. gồm khá nhiều loài, phân bố chủ yếu ở vùng ôn đới ấm và vùng cận nhiệt đới. Ở Việt Nam, chi này có 4 loài mọc tự nhiên và 1 – 2 loài khác được nhập trồng làm cảnh. Loài cúc sao thường gặp ở một số tỉnh miền núi, có độ cao từ 600m đến gần 2000 m (đèo Hoàng Liên Sơn – Sa Pa), thuộc các địa phương như: Cao Bằng (Nguyên Bình, Trùng Khánh); Hà Giang (Phó Bang, Yên Minh, Quản Bạ); Lào Cai (Sa Pa), Sơn La (Quỳnh Nhai, Sông Mã, Mai Sơn, Yên Châu, Mộc Châu), Điện Biên (Sa Dung – Điện Biên Đồng), Lai Châu (Phong Thổ): Kon Tum (Ngọc Linh – Đăk Glei), Lâm Đồng (Đà Lạt)… Trên thế giới, các sao phân bố ở Ấn Độ, Mianma, Nepan, Trung Quốc, và Nhật Bản.",
+        "thường_mọc": "Cúc Sao là cây ưa sáng, ưa khí hậu mát. Cây thường mọc ở các hốc đá ven rừng.",
+        "Đặc điểm sinh trưởng": "Cây ra hoa quả nhiều hàng năm, vào khoảng tháng 9 – 11. Tái sinh tự nhiên tốt từ hạt và có khả năng mọc chồi từ các phần còn lại sau khi bị cắt. Ngoài công dụng làm thuốc, cúc sao có thể trồng làm cảnh vì hoa đẹp và cây ra nhiều hoa."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây, tươi hay phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Phần trên mặt đất của các sao có các thành phần sau: Các diterpen glycosid: 16β hydroxy 17 acetoxy (-) Kauren – 19 oic acid – β – d, glucopyranosyl ester (CA. 1994; 120, 265 775) và 16 β, 17 dihydroxy (-) Kauren – 19 oic acid – β – d, glucopyranosyl ester [Phytochemistry vol.33 – ssue J. 23 July 1993: p. 1181 – 1183]. Các sesquiterpen lacton: Các hợp chất arteglacin β, diversosid và 2 phenylesthyl beta – D – glucopyranosid, crotocorylifuran, oplopanon."
+      },
+      "Tính vị": {
+        "Có vị": "Các sao vị đắng, hơi cay, tính bình, không độc; có công năng chỉ khái, hoá đàm, bình suyễn, thông tiểu, tán huyết, dưỡng huyết. Sách “Triết giang dân gian thường dùng thảo dược” ghi: cúc sao vị đắng, cay, tính mát, có công năng chỉ khái, hoá đàm, thanh nhiệt, tiêu độc [TDTH, 1993, I: 2425]."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cúc sao được dùng chữa các bệnh về phổi như ho, ho nhiều đờm, viêm khí phế quản cấp và mạn tính, ho gà. Còn dùng chữa sốt rét, đau bụng cấp. Do có tác dụng cầm máu, cúc sao được dùng chữa chảy máu mũi, thổ huyết, lỵ ra máu, đái ra máu. Nhân dân ở huyện Quản Bạ tỉnh Hà Giang dùng cúc sao để chữa đầy hơi. Mỗi ngày dùng 30 – 40g sắc nước uống, chia làm 2 lần. Để chữa trẻ em bị đơn đỏ chạy khắp người, người lớn bị đơn độc, sưng tấy cơ (như bắp đùi. bắp chân, bắp tay) nóng và đau nhức, lấy toàn cây cúc sao, nấu thành cao, mỗi lần uống tương đương 10g dược liệu khô, ngày 2 – 3 lần. Ở Trung Quốc, toàn cây cúc sao còn được dùng để điều trị viêm phế quản mạn tính. Thuốc được chế thành viên, mỗi viên có 0,5g cao khô chiết bằng nước. Mỗi lần uống 1 viên, ngày 3 lần."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

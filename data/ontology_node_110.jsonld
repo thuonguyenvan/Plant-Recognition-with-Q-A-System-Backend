@@ -1,0 +1,236 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu rựa",
+      "ten_khac": "Đậu dao, Đậu kiếm, Đậu tiệp, Đậu rựa, Đậu mèo ngòi, Đậu mèo trắng, Phắc đáp (Tày)",
+      "ten_khoa_hoc": "Canavalia ensiformis (L.) DC.",
+      "ma_taxon": "159809",
+      "ho": "Fabaceae (Đậu)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thảo cứng, sống hằng năm; phần ngọn leo.",
+        "thân": "Thân cành nhẵn, có khía dọc.",
+        "lá": "Lá kép mọc so le, gồm 3 lá chét mỏng, hình trái xoan hoặc hình trứng, gốc tròn, đầu nhọn, dài 8–15 cm, rộng 5–10 cm, hai mặt nhẵn, mặt trên màu lục, mặt dưới nhạt; gân chính 3, lá kèm nhỏ sớm rụng.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài, thẳng đứng; mỗi màu có 1–3 hoa màu tím hoặc trắng; đài hoa hình ống, hơi có lông ở mặt ngoài, cánh có hình mắt chim khuyết ở đầu.",
+        "quả": "Quả đậu dẹt, hơi cong, dài 15–30 cm có khi hơn, rộng 2,5–5 cm, có 3 gờ dọc rõ rệt; hạt màu trắng, xám hoặc đỏ.",
+        "mùa hoa": "tháng 6–11.",
+        "mùa quả": "tháng 6–11."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Canavalia DC. có 6 loài ở Việt Nam, hầu hết là những loài dây leo có kích thước tương đối lớn, nhất là đậu rựa. Cây có nguồn gốc ở vùng Ấn Độ, Malaysia.  Đậu rựa là cây nhập trồng, nhưng chưa rõ xuất xứ và thời gian cây được đưa vào Việt Nam từ khi nào. Cây được trồng rải rác ở các tỉnh Tây Nguyên, ven biển miền Trung, miền Tây Nam Bộ… Ở miền Bắc có ít hơn. Đậu rựa ưa sáng, có thể chịu được hạn và sinh trưởng tốt trên nhiều loại đất. Chưa thấy cây trồng ở vùng núi cao, có nhiệt độ trung bình năm dưới 20°C.  Đậu rựa còn là cây sinh trưởng phát triển nhanh. Cây trồng từ hạt sau 4–5 tháng đã có thể vươn dài tới hơn 10 m, phân nhiều cành, ra hoa quả. Bộ rễ của cây có nhiều nốt sần cố định đạm, vì thế ở một số nước Đông Nam Á và Ấn Độ, người ta trồng đậu rựa xen trong loại rừng mới trồng và trên nương rẫy để cải tạo đất và lấy lá làm thức ăn cho gia súc.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tây Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "ven biển miền Trung"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "miền Tây Nam Bộ"
+              }
+            }
+          ]
+        }
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Đậu rựa không kén đất, được trồng nhiều ở ven đồi, bờ rào, ven nương rẫy ở trung du. Cây được trồng bằng hạt vào mùa xuân. Người ta thường bổ hốc, gieo hạt bên cạnh các cây to, bờ rào để có chỗ leo cho đậu rựa. Cũng có thể cho cây bò lan trên mặt đất nhưng như vậy hoa, quả sẽ ít. Trồng cách này chủ yếu để cải tạo đất, diệt cỏ dại.  Đậu rựa dễ trồng, dễ sống, sinh trưởng mạnh vào mùa hè, ra hoa vào tháng 6–7, quả chín vào tháng 10-11. Quả non dùng xào nấu. Hạt dùng làm thực phẩm như các loại đậu khác."
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Hạt."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Đậu rựa là nguồn nguyên liệu giàu protein 23.34% và carbohydrat.",
+        "gồm chất": "Các protein gồm : canalin, concanavalin A, concanavalin B, canavalin.",
+        "thủy phân": "Canavalin (acid γ – guanidoxy – δ – aminobutyric) đem thuỷ phân cho urê và canalin (acid α – amino – γ – 0 – hydroxy aminobutyric).",
+        "chứa": "Ngoài ra, còn có arginin, cholin, trigonelin, desaminocanavanin, betonicin, canicin, kinogin. Đậu rựa có cân đối các acid amin.  Trong đậu rựa có chất kháng dinh dưỡng và chất độc bao gồm các chất ức chế trypsin, hemaglutinin, glucosid cyanogenetic và oligosaccharid.",
+        "đã nghiên cứu": "Đậu rựa chứa 1682 đơn vị ức chế trypsin, 13.532 đơn vị hemaglutinin (có thể khử các chất này bằng nhiệt. Đun 30 phút ở 96°C khử được chất kháng trypsin. Đun trong 3 giờ, các chất hemaglutinin không còn. Nếu dùng áp suất, giảm còn 30 phút thì khử được hoàn toàn chất kháng trypsin và trong 45 phút là các chất hemaglutinin.",
+        "tìm thấy": "Đậu rựa còn chứa Ca, Zn, P, Mg, Cu và Ni."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Hạt đậu rửa có vị ngọt, tính ôn, vào hai kinh vị và thận, có tác dụng ôn trung, hạ khí. Vỏ quả đậu rửa có vị ngọt, tính bình, có tác dụng ôn trung, hạ khí, tan ứ hoạt huyết. Rễ cây đậu rửa có vị đắng, tính hàn, có tác dụng khu phong thấp, tiêu thủng thông, bổ thận khí."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Quả đậu rửa lúc còn non, xào nấu là một món ăn ngon và là nguồn rau xanh có giá trị dinh dưỡng cao. Hạt đậu rửa già chứa hàm lượng cao protein, trong đó có những acid amin cần thiết cho cơ thể, được coi như một loại thuốc bổ dưỡng tốt, có thể được chế biến dưới dạng thức ăn như hầm với thịt, làm nhân bánh, thổi xôi, nấu chè. Chú ý ngoài chất bổ, đậu rửa còn chứa acid cyanhydric có thể gây say, do đó trước khi dùng cần luộc chín hạt, bỏ nước đầu rồi mới chế biến các món ăn vì chất độc dễ hoà tan trong nước và khi luộc bị nhiệt độ cao phân huỷ.  Trong y học, hạt đậu rửa dùng để chữa nấc do hư hàn, nôn mửa, đau dạ dày. Ngày dùng 9–15g dưới dạng thuốc sắc. Hoặc sao vàng tán bột, ngày dùng 5–6g bột, chiêu với nước. Vỏ quả đậu rửa để lâu năm, đốt thành bột than, uống với rượu, mỗi lần 3g, thêm 0.15g xạ hương càng tốt chữa bế kinh ở phụ nữ. Vỏ quả còn chữa lý lâu ngày, nấc.  Rễ đậu rửa chữa đau lưng do phong thấp với liều 30g/ngày, dùng nửa nước, nửa rượu sắc uống.  Bài thuốc có đậu rửa  Chữa nấc: Đậu rửa 18 hạt (1/2 hạt chín, 1/2 hạt còn xanh), thị đế 7 cái. Sắc uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": null
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": null
+      }
+    }
+  ]
+}

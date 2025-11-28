@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hồng hoa",
+      "ten_khac": "Hồng hoa, Rum, Hồng lam hoa",
+      "ten_khoa_hoc": "Carthamus tinctorius L.",
+      "ma_taxon": "76135",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống hàng năm, cao 0,6 – 1m, có thể đến 1,5 m.",
+      "thân": "Thân đứng, nhẵn, có vạch dọc, phân cành ở ngọn.",
+      "lá": "Lá mọc so le, không cuống, hình bầu dục hoặc hình trứng thuôn, dài 4-9 cm, rộng 1-3 cm, gốc tròn ôm lấy thân, đầu nhọn sắc, mép có răng không đều, dạng gai nhọn sắc, hai mặt màu xanh lục sẫm, gân giữa lồi ở mặt sau.",
+      "hoa": "Cụm hoa mọc thành đầu ở ngọn thân; tổng bao gồm những lá bắc ngoài có dạng lá, hình mác, mép có gai, những lá bắc trong nhỏ hơn hình trứng, mang 5 – 7 gai ở đầu và các vảy dạng sợi mỏng, trong suốt ở vòng trong cùng; hoa màu đỏ cam đính trên đế hoa dẹt; bao hoa hình ống dạng sợi, đỉnh có 5 thùy rất hẹp; nhị 5, đính ở họng của bao hoa thành ống bao quanh nhụy; không có mào lông.",
+      "quả": "Quả bế, hình trứng, dài 5-8 mm, rộng 4-5 mm ở đỉnh có 4 cạnh lồi.",
+      "mùa hoa": "tháng 6-8",
+      "mùa quả": "tháng 9-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Hồng hoa được trồng rộng rãi ở nhiều nơi thuộc Ấn Độ, Ai Cập, Trung Quốc, Italia, Tây Ban Nha, vùng Capcase thuộc Liên Xô cũ. Gần đây, cây được du nhập sang Mỹ, Australia và một số nước châu Á.  Hồng hoa được nhập từ Đông Âu và Liên Xô trước đây vào Việt Nam khoảng cuối những năm 70. Hạt được trồng thử nghiệm ở Trại thuốc Sa Pa (Lào Cai) và Văn Điển (Hà Nội) đều có kết quả tốt. Cây trồng ở Trại thuốc Văn Điển sinh trưởng phát triển khá mạnh; chiều cao cây tới gần 2 m; ra hoa quả nhiều. Hổng hoa là cây ưa sáng và ưa ẩm. Do có nguồn gốc ở vùng ôn đới ấm, nên khi trồng ở Việt Nam cần tránh mùa hè. Gần đây hồng hoa mới được nhập trồng trở lại, tại Sa Pa và Đà Lạt.",
+      "Đặc điểm sinh trưởng": "Hồng hoa là cây vùng ôn đới, có thể sinh trưởng và phát triển tốt trong điều kiện khí hậu xuân – hè ở đồng bằng và trung du Bắc Bộ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Hồng hoa được nhân giống bằng hạt.  Vào mùa quả chín, chọn những quả to của những cây khỏe, để chín già, mang về phơi khô, tách lấv hạt, tiếp tục phơi khô và bảo quản cẩn thận, đến tháng 12-1 dem gieo trong vườn ươm. Mỗi hecta ruộng sản xuất, cần gieo 2 – 2,5 kg hạt. Đất vườn ươm cần làm nhỏ, lên luống cao 15 – 20cm, rộng 70 – 90 cm. Hạt được ngâm vào nước nóng (1 sôi, 2 lạnh) trong 3-4 giờ, vớt ra, để ráo rồi gieo vãi hay gieo theo rạch. Dùng rơm rạ phủ và tưới nước hàng ngày. Sau 15-25 ngày, hạt nảy mầm. Khi cây có 4 – 5 lá thật, đánh đi trồng vào ngày râm mát hoặc có mưa nhỏ càng tốt.  Hồng hoa ưa đất cát pha, màu mỡ, cao ráo, thoát nước. Đất cần cày bừa kỹ, để ải, đập nhỏ, lên luống cao 20 – 25 cm, mặt luống rộng 70 hoặc 100 cm. Mỗi hecta cần bón lót 15 – 20 tấn phân chuồng, 300 kg lân và 150 kg kali. Phân có thể rải đều và phủ đất sâu 5 – 7 cm hoặc trộn với đất theo hốc. Cây con dược trồng với khoảng cách 30 X 40 cm, lệch nanh sấu thành 2 hàng trên luống rộng 70 cm hoặc 3 dãy trên luống rộng 100 cm. Trồng xong tưới ngay và tưới đều trong vòng 5-7 ngày. Từ khi trồng đến lúc thu hoạch, làm cỏ, xới xáo 3-4 lần, kết hợp bón thúc dạm và vun gốc. Mỗi lần bón 50 kg urê cho 1 ha.  Hồng hoa thường bị sâu đục thân và rệp đen gây hại. Sau khi trồng được 6-7 tháng, hồng hoa ra hoa và cho thu hoạch. Hoa được thu hái khi có màu đỏ sẫm. Cứ 2 – 3 ngày thu một lần vào lúc trời nắng ráo. Thu xong phơi trong râm mát hoặc nắng nhẹ đến khô. Bộ phận dùng Hoa thu hái khi cánh hoa chuvển từ vàng sang đỏ, để nơi râm mát, thoáng gió, hoặc phơi nắng nhẹ đến khô."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa thu hái khi cánh hoa chuvển từ vàng sang đỏ, để nơi râm mát, thoáng gió, hoặc phơi nắng nhẹ đến khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa hồng hoa chứa carthamin trong đó aglvcon gồm 2 đơn vị carthamidin và isocarthamidin. Ngoài carthamin còn có một số sắc tố màu vàng là saflor yellow A, sailor yellow B và saflomin A.",
+      "Các hợp chất": "Hạt chứa serotobenin, N-feruloyltrvptamin và N – (p.coumaroyl) – tryptarnin.     Ngoài ra, hạt còn có luteolin, luteolin – 7 – o – p – o – glucopyranosid, p – sitosterol, p – sitosterol -3-0 – p – D – glucopyranosid, nhiều acid carboxylic: acid lauric, acid myristic, acid palmitic, acid linoleic, acid arachidic và acid oleic, 15a, 20p – dihydroxy – pregn – 4 – en – 3 – on diglucosid.",
+      "triết xuất": "Khi hạt hồng hoa nảy mầm xuất hiện một số dẫn chất polyacetylen : 1-tridecen – 3,5,7,9 – 11 – pentayn; (11Z) – trideca – 1,11 – dien – 3,5,7,9 – tetrayn; (3Z, 11Z) – trideca – 1,3,11 – trien – 5,7,9 – triyn; (3E, 5Z, 11E) – trideca – 1,3,5,11 – tetraen – 7,9 – diyn và (3Z, 5E, 11E) – trideca – 1,3,5,11 – tetraen – 7 – 9 – diyn. Hạt chín không có các dẫn chất polyacetylen này. Trong các tế bào nuôi cấy của hồng hoa có ubiquinon 9. Hồng hoa còn có polysaccharid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hồng hoa có vị cay, tính ấm, vào hai kinh tâm và can, có tác dụng thông kinh, phá ứ huyết, sinh huyết, hoạt huyết (tùy theo có tẩm rượu hay không)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hồng hoa được dùng chữa bế kinh, đau kinh, ứ huyết sau đẻ, khí hư, viêm tử cung, viêm buồng trứng.",
+      "chữa": "Có khi dùng uống cho ra thai đã chết trong bụng. Dược liệu còn có tác dụng giảm nhiệt, ra mồ hôi, và được dùng trong bệnh viêm phổi, viêm dạ dày. Mỗi ngày 3 – 8g sắc hoặc ngâm rượu uống. Thường phối hợp vói các vị thuốc khác.",
+      "làm thuốc": "Còn dùng làm thuốc nhuộm màu vàng đỏ và để nhuộm thức ăn, không độc.",
+      "có tác dụng": "Hạt được dùng làm thuốc lợi tiểu và bổ. Dầu đun nóng dùng chữa đau nhức và thấp khớp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Trục thai chết trong bụng ra: a. Hồng hoa đun với rượu mà uống. b. Hồng hoa, rễ gấc, gỗ vang, cỏ nụ áo, vỏ cây vông đồng, lá đào, cỏ xước, sắc rồi chế thêm đồng tiện vào mà uống. Chữa huyết vận lên tim, khí muốn tuyệt: Hồng hoa 40g, sắc với rượu và đồng tiện mà uống. Chữa đại tiểu tiện không thông ở phụ nữ đẻ: Hồng hoa, hạt hướng dương, hoạt thạch, hạt cau, đều bằng nhau, tán nhỏ, uống lúc đói với rượu. Dưỡng huyết: Hồng hoa 2g, sắc uống. Tan máu ứ, thông kinh bể: Hồng hoa 6 – 8g, sắc hoặc ngâm rượu uống. Chữa phụ nữ sau khi đẻ máu xấu không ra, đau bụng, ngất mê man, hoặc phụ nữ kinh bế lâu ngày: Hồng hoa, tô mộc, nghệ đen, đều 8g. sắc, rồi chế thêm một chén rượu mà uống. Phòng và chống ban sởi: Hồng hoa 3-5 hạt. Nhai nuốt, chiêu với nước. Chữa đơn sưng, chạy chỗ này sang chỗ khác: Mầm cây hồng hoa, giã vắt lấy nước cốt uống, bã đắp. Chữa xuất huyết não do xơ cứng mạch máu não (kèm theo liệt nửa người và mất tiếng hoàn toàn hoặc không hoàn toàn): Hồng hoa 3g, hoàng kỳ 15g, sinh địa 15g, long đởm thảo 10g, hạt mơ 10g, đương quy 6g, bạch thược 6g, cát cánh 3g, cam thảo 3g, phòng phong 3g. sắc và chia 3 lần uống trong ngày. Uống trong 2-3 tháng. Chữa bệnh cứng bì: Hồng hoa, đương quy, dây đau xương, hoàng kỳ, tần cửu, đào nhân, bạch truật, đều 3g. sắc với 400 ml nước trong 30 phút, chia 3 lần uống trong ngày. Chữa lao phổi lâu ngày với sốt hoặc sốt nhẹ và ho ra máu: Hồng hoa 3g, bạch cập 15g, vỏ rễ dâu 9g, tri mẫu 9g, sinh địa 9g, hạt mơ 9g, bạch thược 9g, a giao 9g, bối mẫu 6g, cam thảo 3g, lòng trắng trứng gà 2 cái. Sắc với 800 ml nước, còn 200 ml, uống làm một lần. Dùng trong 10 ngày, sau đó nghỉ 7 ngàv, rồi lại uống tiếp đợt khác. Dùng 3-4 đợt như trên. Chữa suy tim (Bát trăn thang gia vị): Hồng hoa 12g; đảng sâm, bạch truật, mỗi vị 20g; thục địa, phục linh, đan sâm, ý dĩ, mỗi vị 16g; xuyên khung, đương quy, bạch thược, ngưu tất, mỗi vị 12g; cam thảo 4g. sắc uống ngày một thang. Chữa viêm gan mạn tính (Tứ vật dào hồng thang gia giảm): Hồng hoa 8g; bạch thược, xuyên khung, đan sâm, mỗi vị 12g; đương quy, đào nhân, diên hổ sách, mỗi vị 8g. Sắc uống ngày một thang. Chữa viêm khớp dạng thấp kéo dài có biến dạng teo cơ, dính cứng khớp: Hồng hoa 8g, cương tàm 12g; nam tinh chế, bạch giới tử sao, xuyên sơn giáp, đào nhân, mỗi vị 8g. sắc uống ngày một thang. Phối hợp vói các bài thuốc chữa thấp khớp khu phong, thanh nhiệt, trừ thấp và châm cứu. Chữa sỏi đường tiết niệu (Tứ vật đào hồng thang gia giảm): Hồng hoa 8g, sinh địa 16g; bạch thược, xuyên khung, đương quy, đại phúc bì, liên kiều, mỗi vị 12g; đào nhân, chỉ thực, uất kim, kê nội kim, mỗi vị 8g. Sắc uống ngày một thang. Chữa kinh nguyệt không đều huyết ứ (Tứ vật đào hồng thang): Hồng hoa 6g; sinh địa, bạch thược, mỗi vị 12g; xuyên quy, xuyên khung, đào nhân, mỗi vị 8g. sắc uống ngày một thang. Chữa đau bụng khi hành kinh do khí trệ huyết ứ (Huyết phụ trục ứ thang): Hồng hoa 8g; ngưu tất 12g; xuyên khung, dương quy, xích thược, đào nhân, huyền hồ, hương phụ, thanh bì, chỉ xác, mỗi vị 8g; mộc hương 6g, cam thào 4g. Sắc uống ngày một thang. Chữa đau bụng trước khi hành kinh, hoặc lúc mới hành kinh (Sinh huyết thanh nhiệt thang): Hồng hoa, đan bì, đào nhân, huyền hồ sách, hương phụ, mỗi vị 8g; mộc hương 6g, cam thảo 4g. sắc uống ngày một thang. Chữa viêm mạn tính, u xơ tử cung, buồng trứng: Hồng hoa 8g; hạt quất, hạt vải, thiên tiên đằng, hương phụ, đan sâm, xích thược, xuyên luyện tử, huyền hồ, đào nhân, tam lăng, nga truật, mỗi vị 12g. Sắc uống ngày một thang. Chữa chàm (Thuốc mỡ bôi): Hồng hoa, xuyên hoàng liên, hồng đơn, chu sa, mỗi vị 4g. Tán bột hòa với mỡ trăn bôi vào chỗ chàm.  *Phụ nữ có thai không nên dùng.  Hồng hoa được dùng trong y học Trung Quốc để điều tri mất kinh, khí hư, viêm tử cung mạn tính và viêm buồng trứng. Nó cũng được dùng điều trị viêm phổi và viêm dạ dày. Liều dùng một lần 3 – 8g dạng thuốc ngâm rượu. Dầu ép từ quả được dùng xoa ngoài da chữa thấp khớp. Ở Ấn Độ, hồng hoa được coi là thuốc an thần và điều kinh. Nó được dùng để điều trị sởi, bệnh tinh hồng nhiệt và các bệnh ngoại ban khác."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Phụ nữ có thai không nên dùng."
+    }
+  ]
+}

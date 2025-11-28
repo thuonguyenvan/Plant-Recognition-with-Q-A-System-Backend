@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chàm bụi",
+      "ten_khac": "Chàm quả cong",
+      "ten_khoa_hoc": "Indigofera suffruticosa Mill.",
+      "ma_taxon": "164064",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo mộc thành bụi, cao 1 – 1,5m, có lông áp sát.",
+      "rễ": "Rễ có nhiều nốt sần,",
+      "thân": "Thân hình trụ nhẫn.",
+      "lá": "Lá kép lông chim lẻ mọc so le, gồm 2 – 9 đối lá chét mọc đối, hình trái xoan ngược hay thuôn mắc, góc tròn, đầu nhọn, mặt trên gần nhẵn, mặt dưới có lông mọc rạp xuống.",
+      "hoa": "Cụm hoa mọc ở kẽ là thành chùm bông, cuống rất ngắn, gồm rất nhiều hoa màu đỏ, dáng cong xếp sít nhau; lá bắc hình sợi mảnh, đài hình chuông, răng ngắn và rộng, có lông ở mặt ngoài, tràng không đều.",
+      "quả": "Quả đậu, hình dài, nhẫn, xếp sít nhau, ngồi xuống phía dưới, mép dày và cong lên trên thành hình lưỡi cưa, hạt 5 – 10, hình khối.",
+      "mùa hoa": "tháng 8 – 9",
+      "mùa quả": "tháng 10 – 11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chàm bụi vốn có nguồn gốc có lẽ ở Ấn Độ, sau được du nhập hoặc phát tán xuống Malaysia, Thái Lan, Indonesia, Philippin, Australia và sang cả Trung Quốc, Lào. Ở Việt Nam, theo một số tài liệu Từ điển cây thuốc Việt Nam, 1997; Danh mục các loài thực vật Việt Nam, T.II, 2003] thì đây cũng là loại cây trồng, cùng với loài Chàm là nhỏ (l. tinctoria L.) để nhuộm vải và làm thuốc.  Vùng trồng chủ yếu ở các tỉnh thuộc vùng Việt Bắc và Đông Bắc như Cao Bằng, Lạng Sơn, Bắc Kạn, Quảng Ninh. Cây cũng có thể trở thành hoang dại hoá trên các nương rẫy cũ, ven đường đi hoặc ở các bãi hoang quanh làng bản.",
+      "Đặc điểm sinh trưởng": "Chàm bụi là cây ưa sáng, ưa ẩm và ưa khí hậu mát ở vùng núi. Cây gieo từ hạt, nếu không bị cắt cành lấy lá sẽ ra hoa quả ngay trong năm đầu tiên. Tái sinh tự nhiên và cũng được gieo trồng bằng hạt vào đầu mùa xuân. Rễ chàm bụi có nhiều tốt sần, chứa vi khuẩn cố định đạm. Vì thế cây còn được trồng để cải tạo đất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa một glucosid đặt tên là indican, chất này khi thuỷ phân cho glucosa và indoxy. Trong không khí indoxyl cho màu xanh đậm, rất bền [Võ Văn Chi, 1996, Từ điển cây thuốc Việt Nam, tr.209].  Trong lá chàm bụi còn chứa nitropropanoylglucopyranoisid (planta medica, 1978, 34, 172) và 2, 3, 4, 6 tetra – (3 – nitropropanoyl) – glucopyranosa [Phytochem, 1989, 28(4), 1251]. Ngoài ra người ta còn tìm thấy louisfieseron [Trung được từ hải,tập III, tr.425]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Chàm bụi vị đắng, hơi ngọt, tính lạnh, vào kinh can, có công năng thanh nhiệt, hạ sốt, giải độc, làm mát máu tiểu ban chẩn, tiêu sưng viêm, cầm máu, có độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Nước sắc lá chàm bụi có tác dụng làm toát mồ hôi, còn nước sắc rễ và hạt được dùng để trị giun.  Liều dùng: 6-12g sắc nước uống  Dùng ngoài chữa mụn nhọt, lở loét, nổi bọng nước đau nhức, lấy lá chàm bụi rửa sạch, giã nát, đắp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

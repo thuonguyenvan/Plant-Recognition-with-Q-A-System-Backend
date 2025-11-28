@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ớt ruộng",
+      "ten_khac": "Muồng đất, Sài đất , Rau dừa bụi",
+      "ten_khoa_hoc": "Ludwigia octovalvis (Jacq.) Ravens. subsp. sessiliflora (Michx) Raven.",
+      "ma_taxon": "236807",
+      "ho": "Rau dừa nước (Onagraceae)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, hình mác hẹp, dài 3 – 7.5cm, rộng  0,8 – 2cm, gốc thuôn, đầu nhọn, mép nguyên, hai mặt có lông tơ ngắn, cuống rất ngắn.",
+        "hoa": "Hoa to mọc đơn độc ở kẽ lá, gần như không cuống , màu vàng, đài hình ống dài, dính với bầu. 4 răng nhọn có lông, tràng 4 cánh, nhị 8, bầu hạ có lông.",
+        "quả": "Quả hơn hình chùy, dài 2,5 – 5cm có cạnh, hạt nhiều.",
+        "cây": "Cây thảo, phân cành nhiều, có lông nhiều hay ít.",
+        "thân": "Thân và cành hình trụ, có rãnh dọc, phủ lông ngắn.",
+        "mùa hoa": "tháng 6-8.",
+        "mùa quả": "tháng 6-8."
+      },
+      "Phân bố": {
+        "phân_bố": "Trước đây, căn  cứ vào sự tương quan giữa số nhị và số cánh hoa, người ta đã xếp một số đại diện có số nhị gấp đôi số cánh hoa vào chi Jussiaea L., còn số đại diện khác có số nhị nhiều hơn số cánh hoa vào chi Ludwigia L. Gần đây, về mặt hình thái, cả hai chi đều có chung những đặc điểm cơ bản khác (thể mạng lưới…), nên nhiều tác giả lại gộp chi Jussraea L vào chi Ludwigia L. và tên gọi của họ Oenotheraceae cũng được đổi thành Onagraceae A.L. Jussieu, năm 1789 Như vậy, chi Ludwigia L., hiện nay gồm đến 75 loài. phân bố chủ yếu ở vùng ôn đới đến cận nhiệt đới: vùng nhiệt đới Châu Á chỉ có một số ít loài. Ở Việt Nam, chi này có 6 loài, trong đó, ớt ruộng thuộc loại cây sống một năm, ưa sáng và đặc biệt ưa ẩm, thường mọc ở nơi có bùn hoặc ruộng nước (ruộng lúa, ruộng trồng rau muống…). Cây mọc từ hạt  vào cuối mùa xuân hoặc đầu mùa hè, sinh trưởng nhanh và ra hoa quả khi cây được khoảng 2 tháng tuổi. Mỗi kẽ lá trên cành thường có 1 quả, mỗi quả lại có nhiều hạt. Khi quả già, các đường nứt dọc trên mặt quả tự mở để hạt thoát ra ngoài. Hạt phát tán nhờ nước và nằm lẫn trong lớp đất bùn, sau 5 – 6 tháng mới nảy mầm."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây, thu hái quanh năm , dùng tươi hay phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Toàn cây ớt ruộng chứa flavonoid, hợp chất phenol, acid amin đường.",
+        "gồm chất": "Dầu béo chứa 61,1 – 74,8% acid linoleic (Trung dược từ hải I, 1993)."
+      },
+      "Tính vị": {
+        "Có vị": "Trong y học cổ truyền Trung Hoa, cây ớt ruộng  (thủy tiên đào) có vị nhạt, tính mát, có công năng sơ phong, lương huyết, thanh nhiệt, giải độc, tiêu thũng"
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Toàn cây ớt ruộng được dùng chữa tiêu chảy, kiết lỵ dưới dạng bột uống với sữa. Nước sắc ớt ruộng chữa đầy hơi chướng  bụng, giun đũa .  Ở vùng Jashpur (Ån Độ), nước sắc rễ ớt ruộng được dùng chữa sốt. Ở Malaysia, lá ớt ruộng có chất nhầy, giã nát đắp ngoài chữa đau đầu, sưng hạch ở cổ, viêm tinh hoàn. Ở Trung Quốc, cây ớt ruộng được dùng chữa cảm sốt, ho, đau bụng, lở loét miệng, mụn nhọt. Ở Đài Loan, lá hoặc toàn cây ớt ruộng giã nát dùng làm thuốc đắp chữa vết thương. Ở châu Phi, ớt ruộng chữa thấp khớp",
+        "sắc nước uống": "Liều dùng: 15 – 30g/ngày, sắc nước uống. Dùng ngoài, lấy nước sắc toàn cây để rửa.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

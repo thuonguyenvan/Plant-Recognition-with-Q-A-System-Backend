@@ -1,0 +1,187 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tơ hồng (Thỏ ty tử)",
+      "ten_khac": "Tơ hồng, Thỏ ty tử, Miễn từ, Đậu ký sinh, Hạt cây tơ hồng",
+      "ten_khoa_hoc": "Cuscuta sinensis Lam., Cuscuta chinensis",
+      "ma_taxon": "601626",
+      "ho": "Bìm bìm (Convolvulaceae)",
+      "Mô tả": {
+        "lá": "Cây tơ hồng hay dây tơ hồng là một loại dây ký sinh cuốn trên các cây khác, thân thành sợi màu vàng hay đỏ nâu nhạt, không có lá.",
+        "hoa": "Hoa ít thấy, hình cầu màu trắng nhạt, gần như không có cuống, tụ thành 10-20 hoa một.",
+        "quả": "Quả hình cầu, chiều ngang rộng hơn chiều cao, rộng độ 3mm, nứt từ dưới lên.",
+        "cây": "Cây tơ hồng hay dây tơ hồng là một loại dây ký sinh cuốn trên các cây khác, thân thành sợi màu vàng hay đỏ nâu nhạt, không có lá.",
+        "rễ": "cây có rễ mút để hút các thức ăn từ cây chủ.",
+        "hạt": "Hạt 2 đến 4, hình trứng, hình dẹt, dài chứng 2mm."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong hạt thỏ ty tử người ta mới thấy có một chất nhựa, tính chất glucozit gọi là cuscutin.",
+        "Các hợp chất": "Hoạt chất khác chưa rõ."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thỏ ty tử là một vị thuốc nhân dân.  Đông y coi thỏ ty tử là một vị thuốc bổ chữa bệnh liệt dương, di tinh, đau lưng, mỏi gối, tai ù, mắt mờ, sốt khát nước, dùng lâu đẹp nhan sắc.  Liều dùng: Ngày uống 8-16g.  Công năng, chủ trị: bổ thận, ích tinh, dưỡng can, minh mục, kiện tỳ, chỉ tả. Chủ trị: liệt dương, di tinh, đái không cầm được, mắt mờ, mắt hoa, ỉa lỏng. Những người dễ cường dương, bí đại tiện không nên dùng."
+      },
+      "Cách dùng": {
+        "được_dùng": "Thuốc bổ – cốt tinh: Thỏ ty tử 8g, ngũ vị tử 1g, xa tiền tử 1g, khởi tử 8g, phúc bồn tử 4g. Các vị tán nhỏ trộn với mật ong, làm thành viên bằng hạt ngô, mỗi lần uống 4g.",
+        "chữa": "Đơn thuốc chữa đi đái đêm, di tinh: Thỏ ty tử 7g, phúc bồn tử 4g, kim anh tử 6g, nước 400ml. Sắc còn 100ml. Lọc bỏ bã. Chia 2,3 lần uống trong ngày."
+      },
+      "luu_y": {}
+    }
+  ]
+}

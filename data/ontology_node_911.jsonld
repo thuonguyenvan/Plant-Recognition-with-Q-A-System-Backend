@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mào gà đỏ",
+      "ten_khac": "Mào gà đỏ , Mồng gà, Mảo cáy đeng (Tày), Chày gunsi (Dao), Kê quan Hoa",
+      "ten_khoa_hoc": "Celosia argentea L. var. cristata L.",
+      "ma_taxon": "160259",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây mào gà đỏ là một loại cỏ sống lâu năm, cao từ 30cm-1,5m hoặc hơn.",
+      "thân": "Thân đứng, có cành nhẵn.",
+      "lá": "Lá có cuống, phiến lá nguyên hình trứng đầu lá nhọn, phía gốc to rộng hơn lá cây mào gà trắng.",
+      "hoa": "Hoa đỏ, vàng hoặc trắng, cuống rất ngắn, mọc thành bông gần như không cuống hình vại với mép loe ra nhăn nheo.",
+      "quả": "Quả hình trứng hay hình cầu.",
+      "hạt": "Hạt to hơn hạt màu gà trắng."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt có chất béo, các chất khác chưa rõ."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ: kê quan hoa vị ngọt, tính lương, vào hai kinh can và đại trường.",
+      "có tác dụng": "Có tác dụng thanh nhiệt cầm máu.",
+      "chữa": "Chữa xích bạch lỵ, trĩ chảy máu, những người tích trệ không dùng được.",
+      "được_dùng": "Thường dùng như thanh tương tử"
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa lòi dom, ra máu: Sắc cả hoa và hạt mà uống. Ngày uống 8-15g. Có thể phơi khô, tán nhỏ chế thành viên. Chia làm nhiều lần uống trong ngày",
+      "chữa": "Chữa dạ dày, ruột chảy máu, tử cung xuất huyết, lỵ ra máu, kinh nguyệt dài ngày không hết: Hoa mào gà đỏ khô 10g (nếu tươi dùng 25-30g) sấy khô, tán nhỏ. Chia làm nhiều lần uống trong ngày. Mỗi lần dùng 1-2g (kinh nghiệm nhân dân).",
+      "chữa": "Đại tiện ra máu: Hoa mào gà sao cháy tán bột, uống mỗi lần 6 – 9g, mỗi ngày uống 2 – 3 lần, hoặc Hoa mào gà trắng 15g, Phòng phong 6g, Tông lư thán 10g, sắc uống, hoặc Hoa mào gà 30g, Ngải diệp 30g sao đen, sắc uống."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vông vang",
+      "ten_khac": "Vông vang, Bông vang",
+      "ten_khoa_hoc": "Hibiscus surattensis L.",
+      "ma_taxon": "426878",
+      "ho": "Bông (Malvaceae)",
+      "Mô tả": {
+        "lá": "hình tim, có cạnh hoặc chia thùy khá sâu cả hai mặt đều phủ nhiều lông",
+        "hoa": "màu vàng, mọc đơn độc ở nách lá phía trên, cuống hoa phủ lông và phía sát hoa hơi phình lên",
+        "quả": "thuôn trên phủ đầy lông trắng nhạt, chiều dài quả 4-5cm, với 5 cạnh, phía trong cũng phủ lông, chứa nhiều hạt hình thận, dẹt, dài 3- 44mm, rộng 1-2mm, trên mặt có những đường nhăn đồng tâm xung quanh rốn hạt.",
+        "cây": "Vông vang là một cây thân cỏ cao khoảng lm, phía gốc hơi thành gỗ và thân hơi có lông.",
+        "thân": "hơi có lông",
+        "cuống": "phủ lông và phía sát hoa hơi phình lên",
+        "mọc": "Mọc hoang khắp nơi ở những ruộng và những vùng mới vỡ hoang, trên những đổng cỏ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Hạt chứa dầu mùi xạ hương cho nên trên thị trường thường có tên hạt xạ (graine d’ambrette). Tinh dầu đặc ở nhiệt độ thường, màu vàng nhạt, mùi thơm của xạ, thành phần chủ yếu của tinh dầu là chất panmitin, famesola và ambretolite C16H28O2. Khi loại axit panmitic ta sẽ được một tinh dầu lỏng, được hãng Schimmel đưa vào thị trường từ năm 1902, tinh dầu này mạnh hơn tinh dầu thiên nhiên gấp 6 lần và với 5 hay 6 thể tích cồn 80° cho một dung dịch trong. Thường người ta chiết tinh dầu vông vang bằng dung môi, là một loại tinh dầu cao cấp có tác dụng làm dậy mùi và bền mùi, giá rất đắt. Rễ có chứa chất nhày như rễ sâm bố chính.",
+        "gồm chất": "chất panmitin, famesola và ambretolite C16H28O2",
+        "tinh dầu chứa": "chất panmitin, famesola và ambretolite C16H28O2"
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong công nghiệp để sản xuất tinh dầu. Nơi sản xuất chủ yếu trên thế giới là đông Ấn Độ và đảo Mactinic. Tại Ấn Độ và Malaixia người ta dùng cho vào quần áo chống nhậy. Về y dược, hạt vông vang được dùng làm thuốc trấn kinh, chữa di tinh và thông tiểu. Ngày dùng 4 đến 6g dưới dạng thuốc sắc hay thuốc bột. Còn dùng chữa rắn cắn (xem vị bông báo) Rễ do chất nhầy được dùng để hồ giấy, hoặc chế tinh bột. Có khi được dùng làm thuốc bổ, thuốc mát thay sâm bố chính.",
+        "chữa": "di tinh và thông tiểu",
+        "làm thuốc": "trấn kinh",
+        "có tác dụng": "chữa rắn cắn",
+        "được_dùng": "cho vào quần áo chống nhậy"
+      },
+      "Cách dùng": {
+        "được_dùng": "trong công nghiệp nước hoa hoặc làm thuốc",
+        "làm thuốc": "chế tinh dầu",
+        "có tác dụng": "làm chất dính trong nghề giấy hay làm tinh bột"
+      },
+      "luu_y": {}
+    }
+  ]
+}

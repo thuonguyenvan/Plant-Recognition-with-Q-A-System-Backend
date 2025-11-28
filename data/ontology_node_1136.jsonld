@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chùa dù",
+      "ten_khac": "Chùa dù, Dê sua tùa, Tả hùng dồ (Hmông), Kinh giới rừng",
+      "ten_khoa_hoc": "Elsholtzia penduliflora W.W. Smith.",
+      "ma_taxon": "966935",
+      "ho": "Lamiaceae (Hoa môi)",
+      "Mô tả": {
+        "cây": "Chùa dù (Sìn hồ, Lai Châu) còn có tên dê sua tùa (xã Huổi Dạng, Mường Lộng, Kỳ\u00a0Sơn, Nghệ An) hay tả hoàng đồ (Mường Khương, Bắc Hà, Lào Cai) là một cây nhỏ cao 13m, mọc hằng năm.",
+        "thân": "Thân vuông nhẵn, rễ cọc cứng, cành mọc từ lá, lá mọc đối chéo chữ thập.",
+        "lá": "Phiến lá hình mác nhọn dài 5-15cm, rộng 1-5cm, cuống lá dài 3-8mm, có lông ngắn, mép lá khía răng cưa không đều, màu hơi tím, mặt trên lục sẫm, mặt dưới nhạt hơn.",
+        "hoa": "Hoa mọc ở đầu cành và nách lá, cụm hoa hình bông dài 10-15cm, các hoa mọc vòng quanh trục của bông, các vòng xít nhau, riêng ở phía đầu cuống có 1-2 vòng cách xa nhau. Toàn bông 10 đến 30 vòng, mỗi vòng 6-30 hoa.",
+        "quả": "Quả hình bầu dục dẹt, dài 0,5 -1mm và xám đen hơi cứng, có rốn trắng ở gần đầu quả ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong chùa dù thành phần chủ yếu hiện nay là tinh dầu (4-6 phần nghìn). Hàm lượng cao nhất vào các tháng 8-9 trong lá, sau đến hoa và cành. Tinh dầu cất ra rất lỏng, màu vàng cam để lâu chuyển vàng đỏ. mùi thơm như tinh dầu khuynh diệp. Cất lại có màu vàng chanh. Tỷ trọng d200 =0,953, nD:0-1,462; αD +203. Chỉ số axit 0,27, chỉ số este 3,81, chỉ số xà phòng 0,08, chỉ số axetyl hoá 34,4 , chỉ số xà phòng của phần axetyl hoá 38,77, chỉ số iôt 34,09. Thành phần chủ yếu là xineola chiếm 75-80% (bằng sắc ký khí) hoặc 5660% (bằng resorxin) (Đỗ Tất Lợi, Nguyễn Hải Ban và Chu Bá Nam. 1974)."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong nhân dân, chùa dù được dùng làm thuốc chữa cảm cúm, sốt, ho sốt tiểu tiện ra máu, dưới dạng thuốc sắc hay thuốc hãm, cho người và cho ngựa. Ngày dùng 10 đến 16g. Có thể dùng làm nguyên liệu cất tinh dầu dùng uống hay xoa bóp thay tinh dầu khuynh diệp."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang dại từ những vùng núi cao lạnh như Mường Khương, Bắc Hà, Sapa (Lào Cai), Sìn Hồ (Lai Châu), Huổi Dạng. Mường Lộng (Kỳ Sơn, Nghệ An). Năm 1974, chúng tôi đã đưa thử một số cây về đồng bằng nóng thấp, thấy cây mọc tốt từ tháng 10 đến tháng 4 năm sau thì cây chết. Tại những vùng núi cao lạnh cây phát triển vào đầu tháng 3 đến tháng 12 thì cây chết. Mùa thu hái vào các tháng 7-8 cho đến lúc cây tàn lụi (tháng 11-12) nhưng chủ yếu là 7-8. Hái toàn cây về phơi khô dùng làm thuốc hoặc cất tinh dầu. Không phải chế biến gì đặc biệt."
+      },
+      "luu_y": {}
+    }
+  ]
+}

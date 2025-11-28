@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "An điền cỏ",
+      "ten_khac": "An điển, bọi ngỏi cỏ",
+      "ten_khoa_hoc": "Hedyotis herbacea (L.) Roxb.",
+      "ma_taxon": "501647",
+      "ho": "Cà phê (Rubiaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, sống hằng năm, cao 20-40 cm.",
+      "thân": "Thân mọc đứng, nhẵn, có 4 cạnh, sau gần tròn, màu lục xám.",
+      "lá": "Lá mọc đối, hình mác hẹp, dài 1 – 2,5 cm, rộng 1 – 5 mm, gốc tròn trên cuống ngắn, đầu thuôn nhọn, mặt trên màu lục xám hoặc có chấm đen, mặt dưới rất nhạt, gân chỉnh rõ; lá kèm chẻ đôi, dài 1 – 1,5 mm.",
+      "hoa": "Cụm hoa mọc riêng lẻ ở kẽ lá, ít khi 2, trên một cuống dài, mảnh; hoa nhỏ màu trắng, nhẵn; dài hình chuông có 4 răng nhỏ, mép có lông trắng hợp 4 cánh nhân tạo thành ống dài, hơi lọc ở họng: nhị 4 đính ở gần gốc cánh hoa; bầu 2 ô, noãn nhiều.",
+      "quả": "Quả nang, hình cầu, cao 1,5 – 2 mm, có đài tồn tại, khi nứt thành hai mảnh; hạt nhỏ, nhiều.",
+      "mùa hoa": "gần như quanh năm",
+      "mùa quả": "gần như quanh năm"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Hedyotis L. trên thế giới có khoảng 250 loài, phân bố rải rác khắp các vùng nhiệt đới và cận nhiệt đới Châu Á, Châu Úc, Bắc Mỹ và nhiều đảo ở Thái Bình Dương. Ở Việt Nam, chỉ này đã biết 65 loài, phần lớn là cây dạng có hoặc bụi nhỏ.  Loài (H. herbacea L.) kể trên được coi như loài cỏ dại, phân bố ở hầu hết các tỉnh thuộc đồng bằng hoặc trung du, nhất là vùng ven biển. Trên thế giới, loài này cũng phân bố rộng ở các quốc gia của vùng Đông – Nam Á, Ấn Độ, Pakistan và phía nam Trung Quốc.  Cây cỏ sống một năm, ưa sáng, ưa ẩm (khi còn nhỏ) và thường mọc thành đám trên các loại đất pha cát, ở vườn nhà, nương rẫy hay các bãi đất trống ở vùng ven biển. Hàng năm, cây con mọc từ hạt quan sát thấy vào tháng 4 – 6; sinh trưởng nhanh trong điều kiện nóng và ẩm, sau khi quả già toàn cây bị tàn lụi. Cây an điền có tái sinh tự nhiên chủ yếu bằng hạt và dễ nhân trồng.",
+      "Đặc điểm sinh trưởng": "Cây cỏ sống một năm, ưa sáng, ưa ẩm (khi còn nhỏ) và thường mọc thành đám trên các loại đất pha cát, ở vườn nhà, nương rẫy hay các bãi đất trống ở vùng ven biển. Hàng năm, cây con mọc từ hạt quan sát thấy vào tháng 4 – 6; sinh trưởng nhanh trong điều kiện nóng và ẩm, sau khi quả già toàn cây bị tàn lụi. Cây an điền có tái sinh tự nhiên chủ yếu bằng hạt và dễ nhân trồng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong cây an điền có người ta đã tách và xác định được cấu trúc các chất thuộc nhóm anthraquinon như: 2 – hydroxymethyl – 10 hydroxy – 1, 4 anthraquinon; 1, 4 dihydroxy – 2 hydroxymethyl anthraquinon; 2, 3 dimethoxy 9 hydroxy 1 – 4 anthraquinon và 1,4 dihydroxy – 2, 3 dimethoxy anthraquinon (Dharma Permana & Nordin Hj. 1999)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Toàn cây an điền có vị đắng, có công năng tiêu thực thuốc bổ đắng), hạ sốt, lá có công năng long đờm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây an điền cỏ được dùng để chữa sốt rét, đau thấp khớp. Lá được dùng làm thuốc hen suyễn, ho lao và làm long đờm. Ngày 10-20g sắc nước uống.  Ở Ấn Độ, toàn cây được dùng làm thuốc đắng, cũng dùng chữa sốt, sốt rét, sưng đau, khớp. Người bị thấp khớp, lấy toàn cây (tươi tốt) nấu nước lên, tăm, ngày một lần. Lá để long đờm khi bị hen [Srivastava, 1989: 104].  Bài thuốc có cây an điền cỏ  Chữa sưng đau do đòn ngã, thấp khớp:  Toàn cây bỏ rễ phơi khô, tán thành bột với mật ong, đắp lên khớp hoặc các chỗ sưng, bầm tím [Srivastava, 1989, 104].  Chữa bệnh phì chân voi:  Bột khô của cây cho vào dầu thực vật một lúc, lấy ra để nguội, đắp lên chỗ chân sưng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

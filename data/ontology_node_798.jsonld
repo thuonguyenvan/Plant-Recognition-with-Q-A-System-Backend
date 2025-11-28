@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau đắng",
+      "ten_khac": "Biển súc, Cây càng tôm, Cây xương cá",
+      "ten_khoa_hoc": "Polygonum aviculare L.",
+      "ma_taxon": "78678",
+      "ho": "Polygonaceae (Rau răm)",
+      "Mô tả": {
+        "cây": "Cây cỏ nhỏ, mọc bò thân và cành mọc toả tròn gần sát mặt đất, màu đỏ tím, đôi khi mọc cao tới 10-30cm.",
+        "lá": "Lá nhỏ, mọc so le, có bẹ chìa. Phiến lá dài 1,5-2cm, rộng 0,4cm.",
+        "hoa": "Hoa nhỏ, màu hồng tím, mọc tụ từ 1-5, thường 3-4 hoa ở kẽ lá.",
+        "quả": "Qủa ở cạnh, chứa một hạt đầu đen.",
+        "mùa hoa": "từ tháng 5-6",
+        "mùa quả": "kéo dài suốt mùa hè."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong rau đắng có 0,35% chất tannin, ngoài ra có vitamin C (tới 900mg% đối với cây khô kiệt), carotin (tới 39%), flavonozit avicularin C20H18O11, khi thuỷ phân avicularin sẽ cho quexetin và l.arabinoza Có tác giả cho rằng ít ancaloit, nhưng có tác giả cho rằng không có. Trong vỏ có anthraglucozit Ngoài ra còn đường, tinh dầu, nhựa, sáp. Độ tro 2,44%"
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong tài liệu cổ: Rau đắng (biển súc) có vị đắng, tính bình, không độc. Vào hai kinh vị và bàng quang. Có tác dụng lợi tiểu, thông lâm, sát trùng, dùng trong những trường hợp thấp nhiệt, lâm bệnh, vưu trùng, ác thương Trong nhân dân rau đắng được dùng làm thuốc lợi tiểu, chữa đái buốt, sỏi thận. Ngoài ra còn được dùng làm thuốc giải độc, chữa rắn cắn, mụn nhọt, vàng da. Ngày dùng 6-12g (khô) dưới dạng thuốc sắc. Có thể dùng tươi sao khô rồi sắc uống. Dùng ngoài giã nát đắp không kể liều lượng."
+      },
+      "Cách dùng": {
+        "được_dùng": "Độc vị rau đắng: Ngày uống 12g rau đắng phơi hay sấy khô dưới dạng thuốc sắc. Chữa tiểu tiện khó khăn, đái buốt, đái ra sỏi sạn",
+        "làm thuốc": "Đơn thuốc gồm nhi u vị: Rau đắng khô 12g, hoạt thạch 10g, nước ba bát, sắc còn một. Chia 3 lần uống trong ngày. Chữa viêm bàng quang, viêm đường tiểu tiện, đái buốt."
+      },
+      "luu_y": {}
+    }
+  ]
+}

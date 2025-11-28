@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cúc kim tiền",
+      "ten_khac": "Xu si, Cúc kim tiền",
+      "ten_khoa_hoc": "Calendula offcinalis L.",
+      "ma_taxon": "75931",
+      "ho": "Asteraceae (Cúc)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống hàng năm, cao 20 – 30 cm.",
+        "thân": "Thân mềm phân nhánh, có cạnh, có khía.",
+        "lá": "Lá mọc so le, gốc có phiến men theo cuống. Ôm thân, đầu tròn, nguyên hoặc hơi khía răng, hai mặt có lông mềm, lá ở gốc thuôn hẹp, lá ở phía trên hình mác.",
+        "hoa": "Cụm hoa mọc ở ngọn thân thành đầu màu vàng hoặc vàng da cam, đường kính 3 – 5 cm, hoa đơn hoặc kép, phía ngoài là hoa hình lưỡi xếp thành nhiều vòng, ở giữa lá hoa hình ống, có tràng hoa 5 cánh, 5 nhị, bao phấn đính xung quanh nhị, hoa hình lưỡi không có nhị, ở hoa kép đôi khi chỉ có toàn hoa hình lưỡi.",
+        "quả": "Quả bế, cong và có lông dày ở lưng.",
+        "mùa hoa": "tháng 6",
+        "mùa quả": "tháng 10"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Calendula L., có khoảng 25 loài trên thế giới, phân bố chủ yếu ở vùng Nam Âu, Bắc Phi và Tây Á. Chi này ở Việt Nam chỉ có một loài là cây cúc kim tiền. Cúc kim tiền có nguồn gốc ở vùng Ðịa Trung Hải và mọc hoang dại ở Punjab và Sind của Ấn Độ. Hiện nay, cây được trồng làm cảnh ở nhiều nước, trong đó có Việt Nam. Theo dự đoán, cúc kim tiền được nhập trồng vào nước ta khoảng hơn 100 năm nay. Là cây ôn đới, cúc kim tiền ưa khí hậu ẩm mát, chỉ trồng được vào vụ đông – xuân ở một số tỉnh phía bắc và Đà Lạt. Cây ra hoa quả nhiều, hạt chắc và là nguồn gieo giống hàng năm."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân, lá và hoa"
+      },
+      "Thành phần": {
+        "thành phần": "Cụm hoa cúc kim tiền chứa carotenoid gồm caroten 30mg%, lycopen và các dẫn chất có oxy như violaxanthin citroxanthin, rubixanthin, flavoxanthin Ngoài ra, còn có tinh dầu 0,02%, chất nhựa 3%, chất nhày 4%, acid salicylic, các triterpen arnidiol, faradiol, taraxasterol, amyrin, một chất đắng là calendin và các flavonid gồm các heterosid của isorhamnetol. Phần trên mặt đất chứa 6 saponin. Các chất này khi thủy phân cho acid oleanolic và acid glycuronic Hạt chứa dầu béo bao gồm các glycerid của acid lauric và acid palmitic."
+      },
+      "Tính vị": {
+        "Có vị": "Cúc kim tiền có vị nhạt, tính bình, hoa có tác dụng lương huyết, chỉ huyết, rễ có tác dụng hành khí, hoạt huyết."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cúc kim tiền làm tăng tiết mật, lợi tiểu, làm ra mồ hôi, điều hòa kinh nguyệt. Trung Quốc còn dùng chữa viêm loét dạ dày, tiêu chảy ra máu. Trong y học dân gian Bungari, cúc kim tiền được dùng trong nhiều bài thuốc, chữa các loại bệnh khác nhau như cảm cúm, vàng da, viêm dạ dày, viêm ruột, loét dạ dày tá tràng, tiêu chảy ra máu, viêm phổi, viêm họng, viên tai, viêm lợi, viêm miệng, viêm áp xe vú, viêm loét âm đạo; kinh nguyệt không đều, thống “kinh, kinh quá nhiều, vô kinh, phình giãn tĩnh mạch, trĩ, đau khớp, đau cơ, sai khớp, bong gân, ung thư dạ dày ruột, u xơ tử cung. Dùng ngoài, chữa vết thương thâm tím, đụng giập, vết thương lâu lành, lở loét ngoài da, eczema, mẩn ngứa, bỏng, mụn trứng cá, mụn cóc, côn trùng đốt Liều dùng 5 – 10g đến 30 – 40g, sắc uống hoặc hãm uống. Dùng ngoài không kể liều lượng. Bài thuốc có cúc kim tiền: Chữa cảm cúm, sốt, làm ra mồ hôi, lợi tiểu: Hoa cúc kim tiền 30 – 40g, hãm với 1 lít nước sôi trong 10 – 15 phút, uống thay chè trong ngày. Chữa vết thương đụng giập, lở loét, mẩn ngứa: Hoa cúc kim tiền, sắc lấy nước, rửa nhiều lần. Chữa mụn cơm trứng cá: Lá cúc kim tiền giã nát hoặc ép lấy dịch bôi. *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

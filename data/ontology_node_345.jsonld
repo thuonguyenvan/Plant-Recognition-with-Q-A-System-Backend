@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trám",
+      "ten_khac": "Cảm lãm, Trám trắng, Cà na, Thanh quả, Đêm ta lát (Cămpuchia).",
+      "ten_khoa_hoc": "Canarium album (Lour.) Raeusch.",
+      "ma_taxon": "62970",
+      "ho": "Burseraceae (Trám)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Trám trắng là một cây cao từ 12-15m thân mọc thẳng đứng, đường kính đạt tới 0,4-0,6m.",
+        "lá": "Lá mọc so le, kép lông chim gồm 5-7 đôi lá chét, cuống lá chung dài bằng 1/4-1/3 toàn lá, cuống lá chét dài 5-8mm. Lá chét dài 5-17cm, rộng 2-5,5cm mép nguyên.",
+        "hoa": "Hoa hình cầu, màu trắng, mọc thành từng nhóm 2-3 thành chuỳ ở đầu cành hay kẽ lá. Chuỳ dài 8-10cm,",
+        "quả": "Quả hình thoi, hai đầu tù, dài 45mm, rộng 20-25mm, hạch cứng nhẵn, hình thoi với 2 đầu nhọn, trong có 3 ngăn.",
+        "mùa hoa": "Mùa hoa tháng 6-7,",
+        "mùa quả": "mùa quả tháng 8-10."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Trong quả trám có chừng 1,2% chất protit, 1% chất béo, 12% chất hydrat cacbon, 0,204% canxi, 0,06% photpho, 0,0014% chất sắt và 021% vitamin C (theo kết quả phân tích của Viện vệ sinh Trung Quốc, 1975). Trong nhân quả trám có chừng 50-65% chất dầu béo. Nhựa trám là một chất mềm, màu vàng nhạt, nhưng nhiều khi có màu sẫm đen là do các cành lá, vỏ lẫn vào. Mùi thơm dễ chịu. Đun nóng (90°) sẽ chảy lỏng. Tan trong ête dầu hoả (có thể dùng để tinh chế), khi cất kéo bằng hơi nước, nhựa trám sẽ cho 18-30% tinh dầu. Tinh dầu này không màu hay màu hơi vàng nhạt, lỏng, mùi thơm, tỷ trọng 0,8870,841, hơi hữu tuyền. Khi đun tinh dầu một phần bắt đầu cất từ 100°C, nhưng phần lớn cất (ừ 158-177oC. Nếu lắc tinh dầu với natri bisunfit, chừng 6% tinh dầu tan trong đó (chất andehyt), tinh dầu còn lại sẽ có mùi thơm. Thành phần chủ yếu của tinh dầu trám đã được xác định là sabinen (45%), một nguyên liệu để tổng hợp chất thơm dùng trong hương liệu. Ngoài ra còn tecpinen (16,7%), tecpineol (10,8%), pinen (9%), tecpinen (4,9%)… Sau khi cất tinh dầu, còn lại một chất côlôphan, tan hoàn toàn trong ête, và tan một phần trong cồn lạnh. Chất nhựa trám được tiêu thụ trên thị trường quốc tế với tên Elemi."
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Quả trám trắng chỉ mới thấy dùng trong nhân dân. Tính chất chữa bệnh của trám ghi trong các tài liệu đông y cổ là: Vị chua ngọt, chát, tính ôn, không độc, vào 2 kinh phế, lợi yết hầu sinh tân chỉ khát, giải độc, là thuốc chữa yết hầu sưng đau, hoà hãn tư bổ, có thể giải được say rượu, nọc cá độc, nọc con dải, còn dùng chữa cổ họng sưng đau, ho nhiều đờm. Ngày dùng 2 đến 3 quả hoặc có thể hơn. Nhựa trám dùng cất tinh dầu dùng trong kỹ nghệ nước hoa, côlôphan còn lại có thể dùng trong kỹ nghệ xà phòng, vécni. Trong kháng chiến, tinh dầu đã được dùng làm dung môi chiết xuất cafein trong lá chè. Trong nhân dân dùng nhựa trám trộn với thân đậu tương làm hương thơm thấp khi cúng bái ngày lễ."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Chữa hóc xương cá:  Ngậm quả trám, nuốt lấy nước. Hoặc sắc 5 quả trám, lấy nước cho ngậm và nuốt.  Chữa ngộ độc do ăn phải cá độc:  Quả trám sắc lấy nước uống.  Cao quả trám:  Quả trám bóc bỏ hột: 100g. Thêm nước nấu đặc thành cao lỏng, sau thêm 50g phèn chua cô đặc lại lần nữa. Ngày dùng 2-3 lần, mỗi lần 2- 3g chữa cổ họng sưng đau nhiều đờm."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

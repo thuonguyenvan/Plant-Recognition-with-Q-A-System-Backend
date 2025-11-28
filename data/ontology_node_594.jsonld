@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trúc đào",
+      "ten_khac": "Trúc đào, Đào lê",
+      "ten_khoa_hoc": "Nerium oleander L.",
+      "ma_taxon": "47563",
+      "ho": "Apocynaceae (Trúc đào)",
+      "Mô tả": {
+        "lá": "Trúc đào là một cây nhỡ, có thể cao tới 4-5m, mọc riêng lẻ hay có khi trồng thành bụi. Cành mềm dẻo. Lá mọc đối hay mọc vòng từng 3 lá một, thuộc loại lá đơn, mép nguyên, cuống ngắn, phiến lá hình mác, dài 7-20cm, rộng từ 1-4cm, dai cứng, mặt trên màu xanh thẫm, mặt dưới màu nhạt hơn, gân đều, song song ngang hai bên gân chính.",
+        "hoa": "Hoa màu hồng hay màu trắng, mọc thành xim ở đầu cành.",
+        "quả": "Quả gồm hai đại, gầy, trong chứa rất nhiều hạt có nhiều lông.",
+        "mùa hoa": "tháng 5-7."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong lá trúc đào, người ta nghiên cứu thấy có 4 glucozit chủ yếu là oleandrin, neriin, neriantin, adynerin.",
+        "gồm chất": "Oleandrin còn gọi là neriolin (Liên Xô cũ) hay folinerin (theo tên gọi cùa Schering) hoặc oleandroat có công thức nguyên là C32H48O9 trọng lượng phân tử 576,70 là một glucozit không màu, có tinh thể hình kim, vị rất đắng, ít tan trong nước và trong benzen, tan trong clorofoc, trong cồn etylic và metylic, nhưng độ tan trong rượu metylic kém hơn trong rượu etylic. Cho phản ứng Legal và phản ứng Keller- Kiliani.",
+        "thủy phân": "Thủy phân axit (dùng axit clohydric 0,1N, trên nồi cách thủy trong 2 giờ) sẽ cho phần không đường gọi là oleandrigenin (hay 16 axetyl gitoxigenin) và một chất đường đăc biệt gọi là oleandroza.",
+        "thủy phân": "Nhưng nếu dùng dung dịch 0,5N HCl thủy phân trong 4 giờ trên nồi cách thủy thì ta sẽ được chất dianhydrogitoxigenin.",
+        "thủy phân": "Còn nếu dùng dung dịch kiềm nhẹ để thủy phân, thì ta sẽ thu được gốc desaxetyloleandrin.",
+        "gồm chất": "Neriin còn gọi là neriozit. Đây không phải là một nguyên chất, mà là một hỗn hợp glucozit trợ tim không có tinh thể, bột vô định hình màu vàng, tan trong nước và trong rượu, không tan trong ête etylic và ête dầu hoả, clorofoc. benzen, axetat etyl, dung dịch loãng trong nước rất dễ cho bọt, vị đắng, đun tới 160-170°C thì phân giải, năng suất quay cực αD =-20° (C=5% trong cồn), cho phản ứng Legal, không cho phản ứng KellerKiliani, mặc phân cách giữa hai lớp dung dịch có màu đỏ, lớp axit axetic có màu vàng xanh. Sau khi thủy phân bằng dung dịch 3 HCL đun sôi thì được 37-39% chất genin vô định hình, trong đó chỉ có 7-10% là không tan trong clorofoc. Do đó Zabolotnaia là người nghiên cứu chất này đã di đến kết luận là ít nhất neriin gồm hai chất khác nhau. Neriin chỉ có tác dụng trợ tim yếu.",
+        "gồm chất": "Adynerin là một glucozit trợ tim có tinh thể, không tan trong nước và benzen, tan trong nước clorofoc và cồn cao độ (97°) khó tan trong cồn metylic. Độ chảy 219-220°C. Năng suất quay cực αD=+9°38, trong công thức có một nối kép giữa • cacbon 8 và 9, do đó không có tác dụng trợ tim.",
+        "gồm chất": "Neriatin là một glucozit có tinh thể hoặc vô định hình, vị đắng, tan trong nước và cồn, không có tác dụng trợ tim. Công thức cấu tạo chưa được xác định rõ ràng, trong phân tử có hai nối kép nhung vị trí chưa được xác đinh.",
+        "triết xuất": "Cách chế tạo oleandrin. Căn cứ vào những phương pháp giới thiệu trong các tài liệu và đặc biệt phương pháp của Liên Xô cũ chúng tôi đã chế được chất oleandrin từ lá cây trúc đào mọc ở Việt Nam (Đỗ Tất Lợi, 1955, Tạp chí Y học Việt Nam,12, 41-42). Phương pháp đó có thể tóm tắt như sau: Giai đoạn chiết xuất. Lá trúc đào mới hái về, phơi khô trong mát cho tới khi tỷ lệ nước chỉ còn 12-14%, thái thành từng miếng nhỏ, kích thước 2-5mm, không nên tán thành bột nhỏ, cũng không nên để nguyên cả lá to vì như vậy tạp chất sẽ nhiều, khó tinh chế mà hoạt chất ra không hết. Ngâm 5kg lá thái nhỏ như trên với 50 lít rượu 250 trong 20 giờ, sau đó lấy cả được chừng 25-27 lít, sau đó ép thì sẽ được thêm chừng 18-20 lít nữa. Giai đoạn loại tạp chất. Đổ 45 lít rượu trên vào vại sành sức chứa chừng 75 lít, đổ dần vào đó nửa lít dung dịch chì axetat 30%. Sau đó phải thử xem đã hết tạp chất chưa, nghĩa là đem lọc một ít nước trên và thêm một ít chì axetat nữa, nếu còn thấy đục thì phải cho thêm chì axetat nữa. Làm như vậy cho đến khi dung dịch lọc, thêm chì axetat không còn kết tủa nữa. Để yên một đêm. gạn lấy nước trong, lọc qua phễu Buchner, sau cùng rửa chất cặn trên phễu bằng 2 lít rượu 25°. Dồn các nước trong lại và đổ dần vào đó 2 lít dung dịch natri sunfat 15%, mỗi lần chừng nửa lít và quấy cho đều, lọc qua giấy, thử xem phần lọc thêm dung dịch natri sunfat vào xem còn đục không. Nếu còn đục thì phải thêm cho đến khi hết chì axêtat. Giai đoạn tinh chế. Cho các dung dịch đã loại tạp chất vào một bình thuỷ tinh đặt trên nồi cách thuỷ và đun để thu hồi cồn. Nhiệt độ trong bình phải luôn luôn ở 50-55°. Nếu cao quá glucozit sẽ hỏng. Muốn vậy phải cất trong chân không 700- 720mm thuỷ ngân. Đem cô còn chừng 8 lít, để nguội, vớt những cục glucozit thô ra. Hiệu suất chừng 48-50g glucozit thô. Cho chỗ glucozit thô này vào một bình nửa lít và một số cồn 700 (chừng 200ml), đặt bình này trong nồi cách thuỷ và lắc cho đến khí tan hết. Lọc và cho vào tủ lạnh trong 2 ngày. Neriolin sẽ kết tinh, nhưng chưa được tinh khiết lắm. Cần phải kết tinh hai lần nữa. Muốn vậy hoà neriolin nói trên trong cồn 500 (chừng 200ml) lọc và để vào tủ lạnh. Làm lại một lần thứ hai nữa, neriolin sẽ rất tinh khiết. Hiệu suất chừng 5-6g nerioloin, tính ra cứ mỗi kg lá cây trúc đào khô sẽ được 1g neriolin nghĩa là hiệu suất 0,1%. Có khi chỉ được 0,05%."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Lá trúc đào được dùng làm nguyên liệu chiết xuất oleandrin, là thuốc uống được chỉ định điều trị suy tim, hở van hai lá, nhịp tim nhanh, các bệnh tim có phù, giảm niệu.",
+        "cong_dung_y_hoc": "Vì có tính độc cao, nên trúc đào không được dùng làm thuốc trong y học cổ truyền, chỉ dùng để chế thuốc trừ sâu, nấu nước trị ghẻ (20-30g lá tươi, nấu nước đặc rửa, ngày một lần)."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây này vốn mọc hoang ở vùng ven biển Địa Trung Hải, chưa rõ được di thực vào nước ta từ hồi nào, chỉ biết hiện nay được trồng làm cảnh ở các vườn hoa hay dọc bên đường như ở Đồng Đăng, Lạng Sơn.",
+        "phơi khô": "Có thể hái lá quanh năm, nhưng tốt nhất vào lúc cây sắp ra hoa hoặc đang ra hoa. Lá hái xong, cẩn phơi ngay cho khô, để lâu, tỷ lệ hoạt chất bị giảm sút. Cần phơi ngoài gió hay ở nhiệt độ thấp hơn 60°. Trúc đào mọc ở ta thường chỉ ít lá vào các tháng 1-2-3. Lá chỉ nên thu hái vào mùa hè, mùa thu. Các mùa khác cho ít hoạt chất."
+      },
+      "luu_y": {
+        "luu_y": "Cây rất độc, không được trồng ở nơi trẻ em dễ tiếp xúc."
+      }
+    }
+  ]
+}

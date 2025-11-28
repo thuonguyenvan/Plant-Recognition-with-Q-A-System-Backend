@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Kiến kỳ nam",
+      "ten_khac": "Bí kỳ nam, Kỳ nam kiến, Củ tự nhiên",
+      "ten_khoa_hoc": "Hydnophytum formicarum Jack",
+      "ma_taxon": "425668",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Có hai loại củ kỳ nam đều được dùng làm thuốc:  Kỳ nam lá rộng Hydnophytum formicarum Jack, là một cây phụ sinh, sống ở rừng thưa vùng trung du và có củ trơn, màu vỏ xám đen, bổ ra có thịt màu xám vàng với rất nhiều lỗ hang cho kiến ở. Thân từ 2 đến 4 tròn, nhẵn.",
+      "lá": "Lá hình trái xoan ngược dầy, nhẵn, gân phụ mịn 6-10 đôi,",
+      "hoa": "hoa không cuống trắng, ống vành 3mm, tiểu nhụỵ 4. Mùa hoa tháng 7-8.",
+      "quả": "Quả nhân cứng, vị ngọt, cao 5-7mm. Nhân: cao 5mm",
+      "thân": "Kỳ nam lá hẹp dài Myrmecodia armata DC. (còn có tên Myrmecodia tuberosa Jack) cũng là một cây phụ sinh, nhưng củ có gai do đó có tên kỳ nam gai, màu vỏ xám đen, bổ ra có thịt màu xám vàng; với rất nhiều lỗ cho kiến ở. Thân đơn độc, trơn nhẵn.",
+      "gân": "Lá thon, dầy, hẹp, gân phụ tới 8-10 đôi, bẹ 1cm, tiểu nhụy 4.",
+      "quả": "Quả nhẵn cứng, cao 2,5cm, nhân 4-5 hột, cao 4cm."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân phình hình củ"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Sơ bộ thấy nước ép củ kiến kỳ nam có chứa rất nhiều muối vô cơ (có lẽ do kiến tha về), vết ancaloit (Phân viện dược liệu tp. Hồ Chí Minh, 1981)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo kinh nghiệm nhân dân kiến kỳ nam dùng chữa các bệnh về gan, thận, ăn uống kém, da vàng xạm, mệt mỏi, uể oải. Ngày dùng 10-16g dưới dạng thuốc sắc. Có người dùng ngâm rượu."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "1 Chữa viêm gan, vàng da:  Kiến kỳ nam(20g), thảo quyết minh(10g) ,Astiso (20g) nhân trần 15g sắc cùng với 500ml nước , cho đến khi còn khoảng 100ml chia ra uống 2 lần trước khi ăn khoảng 1 giờ.",
+      "chữa": "2. Chữa đau bụng đi ngoài  20g Kiến kỳ nam sắc đặc chia làm 2 lần uống cách nhau 1 giờ.",
+      "chữa": "3. Chữa đau nhức gân xương, thấp khớp  Kiến kỳ nam 20g, ngũ gia bì 30g , rễ vú bò, xuyên tiêu mỗi vị 20g sắc nước uống."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

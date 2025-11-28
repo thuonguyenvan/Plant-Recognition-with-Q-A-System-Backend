@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chay bắc bộ",
+      "ten_khac": "Chay bắc bộ, Chay vỏ tía",
+      "ten_khoa_hoc": "Artocarpus tonkinensis A. Chev. ex Gagnep.",
+      "ma_taxon": "884146",
+      "ho": "Moraceae (Dâu tằm)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, xếp thành hai hàng, phiến có hình trái xoan hay bầu dục, dài 7-15cm, rộng 3-7cm, đầu nhọn, gốc tròn, gân nổi rõ, mặt dưới có lông ngắn màu hung.",
+        "hoa": "Hoa mọc đơn độc ở nách lá.",
+        "quả": "Quả phức gần tròn, cuống ngắn màu vàng, thịt mềm màu hồng, vị chua. Hạt to, chứa nhiều nhựa dính.",
+        "cây": "Cây gỗ to, cao đến 15m, thân nhẵn, mọc thẳng, phân cành nhiều. Cành lá non có lông hung, sau nhẵn, vỏ màu xám.",
+        "mùa hoa": "tháng 3-4",
+        "mùa quả": "tháng 7-9"
+      },
+      "Phân bố": {
+        "phân_bố": "Chay bắc bộ gần như là loài cây đặc hữu của Việt Nam, ít được tìm thấy ở các quốc gia khác trên thế giới, cây phân bố tự nhiên ở nhiều tỉnh phía Bắc như Lào Cai, Yên Bái, Lai Châu, Bắc Cạn…hiện được trồng ở nhiều tỉnh trung du và đồng bằng Bắc Bộ Việt Nam."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Sau nhiều năm nghiên cứu thử nghiệm trên động vật cũng như trên người bệnh, các nhà khoa học của Việt Nam cũng như quốc tế đã rất ngạc nhiên vì những tác dụng tuyệt vời của lá Chay băc bộ và kì vọng có thể ứng dụng vị thuốc này trong điều trị các bệnh cường miễn dịch. Đây là vị dược liệu đầu tiên trên thế giới được đánh giá là có tác dụng ức chế miễn dịch chọn lọc rất mạnh (chỉ ức chế miễn dịch gây bệnh mà không ảnh hưởng đến các miễn dịch có lợi của cơ thể), hơn nữa lại không hề có độc tính. Vì vậy Viện hoá – Viện hàn lâm khoa học việt nam đã thiết lập đề tài trọng điểm cấp Quốc gia để nghiên cứu toàn diện về cây Chay bắc bộ. Đề tài được thực hiện bởi GS.TSKH Trần Văn Sung, nguyên viện trưởng Viện hoá quốc gia.  Từ kết quả nghiên cứu của đề tài này, các nhà khoa học đã nhận thấy trong dịch chiết lá Chay có một hàm lượng lớn các flavonoid có hoạt tính sinh học mạnh. Nhóm nghiên cứu đã tiến hành chiết tách và phân lập được 4 hoạt chất chính được cho là thành phần chính có tác dụng ức chế miễn dịch là maesopsin, alphitonin, kaempferol và artonkin. Bốn hoạt chất này thuộc nhóm auronol glycoside, một nhóm chất hiếm được tìm thấy trong tự nhiên và có hoạt tính sinh học rất mạnh, trong đó có hai hoạt chất mới được tìm thấy và chưa có tài liệu nào trên thế giới công bố về các hoạt chất này. Cả bốn chất này đều có hoạt tính chống viêm nhưng mức độ kháng viêm là khác nhau, trong đó chất mới artonkin (đặt theo tên latin của cây Chay bắc bộ) được chứng minh là có hoạt tính ức chế sản sinh các cytokine mạnh, do đó đây là chất ức chế miễn dịch mạnh và chống viêm mạnh nhất. Các hoạt chất từ lá Chay nói trên sau đó được thử so sánh tác dụng ức chế miễn dịch với chất Cyclosporin A, một thuốc tốt nhất hiện nay trong điều trị bệnh tự miễn. Kết quả cho thấy hoạt lực của dịch chiết lá Chay mạnh tương đương so với Cyclosporin A ở liều từ 15 -25mg/ml.  Từ những nghiên cứu trên của GS.TSKH Trần Văn Sung và cộng sự đã làm sáng các tác dụng sinh học của cây Chay bắc bộ và hoàn toàn có thể ứng dụng để điều trị cho các bệnh nhân mắc các bệnh tự miễn như Lupus ban đỏ, viêm khớp dạng thấp, nhược cơ, vẩy nến…  Những bằng chứng khoa học trên đã cho thấy rằng việc sử dụng cây Chay trong điều trị không chỉ dừng lại ở kinh nghiệm dân gian mà có cơ sở khoa học rõ ràng, đồng thời tác dụng của vị dược liệu này không thua kém gì các thuốc tân dược hiện nay mà còn giúp hạn chế được các tác dụng không mong muốn của thuốc, giúp bệnh nhân có thể sử dụng được lâu dài. Đây sẽ là một loại thuốc không thể thiếu cho bệnh nhân tự miễn trong tương lai.  Ứng dụng dược liệu Chay bắc bộ trong điều trị bệnh  Những phát hiện mới từ dược liệu Chay bắc bộ đã mở ra một hướng đi mới trong điều trị các bệnh tự miễn. Kết quả của các đề tài nghiên cứu cấp nhà nước đã cho thấy hoàn toàn có thể ứng  dụng vị dược liệu này để làm thành thuốc chữa bệnh.  Đề tài sau đó đã được chuyển giao cho Công ty TNHH Tuệ Linh tiếp tục đầu tư nghiên cứu giai đoạn lâm sàng để chuyển thành thuốc (Công ty Tuệ Linh là một trong những đơn vị đi đầu trong công tác phát triển và bảo tồn cây thuốc Việt Nam với các sản phẩm như Giảo cổ lam, Cà gai leo, Tỏi tía). Công ty Tuệ Linh sau đó đã kết hợp với Viện hoá quốc gia để tiếp tục tiến hành những nghiên mới từ khâu trồng trọt nguyên liệu sạch đến khâu thu hái chế biến nguyên liệu lá Chay đạt chuẩn và xây dựng công thức bào chế để thử nghiệm trên động vật và trên người. Nghiên cứu mới đã cho thấy khi sử dụng hệ dung môi phối hợp giữa cồn và nước ở một tỷ lệ nhất định thì thu được sản phẩm cao lá Chay có hàm lượng hoạt chất cao hơn gấp 2 lần so với chỉ dùng nước sắc thông thường, đồng thời còn nhận thấy trong cao chiết cồn chứa một số thành phần hoạt chất mà trong cao chiết nước không có.  Hiện Công ty Tuệ Linh đã tiến hành quy hoạch vùng nguyên liệu cây Chay rộng lớn hàng trăm hecta sử dụng biện pháp nhân giống bằng dâm cành. Đồng thời cũng nghiên cứu bào chế ra sản phẩm thực phẩm chức năng Chay Tuệ Linh với thành phần chính là chiết xuất chuẩn hóa từ lá Chay kết hợp với các thành phần khác như Núc Nác, Thổ Phục Linh, Kim Ngân để tiến hành thử lâm sàng tại Bệnh viện E trên bệnh nhân viêm khớp dạng thấp và đang lập đề tài thử lâm sàng tại bệnh viện Da liễu trung ương trên bệnh nhân Lupus ban đỏ và vẩy nến.  Sản phẩm này đã được Công ty Tuệ Linh phối hợp với Trung tâm Dược lý & Dược lâm sàng – Trường Đại học Y Hà Nội tiến hành thử độc tính và đánh giá hiệu lực. Kết quả nghiên cứu cho thấy, Chay Tuệ Linh là một sản phẩm an toàn, không gây độc cho cơ thể và có hoạt tính chống viêm, giảm đau rất tốt, đồng thời thuốc có tác dụng rất chọn lọc trên hệ miễn dịch của cơ thể, đó là ức chế các miễn dịch đặc hiệu của cơ thể nhưng lại làm tăng các miễn dịch không đặc hiệu, do đó sẽ không gây ra tác dụng bội nhiễm khi sử dụng kéo dài như đối với các thuốc tân dược ức chế miễn dịch miễn dịch hiện nay. Chay Tuệ Linh được các nhà khoa học đánh giá cao, hứa hẹn khả năng trở thành sản phẩm Đông dược hàng đầu trong phòng, điều trị và hỗ trợ điều trị các bệnh tự miễn.  Ý kiến các chuyên gia  1. GS. BS. Hoàng Bảo Châu- Thầy Thuốc nhân dân- Nguyên Viện trưởng Viện Y học Cổ truyền Việt Nam  “… Tôi đã cùng với GS. Phan Chúc Lâm nghiên cứu tìm tòi về bệnh nhược cơ trong rất nhiều năm. Thực sự chúng tôi thấy rằng khi sử dụng các thuốc tây y như prednisolone, cyclophosphamide không hiệu quả trong điều trị bởi lẽ bệnh nhân có nguy cơ mắc các bệnh cơ hội do hệ miễn dịch của cơ thể suy giảm như viêm phổi, nhiễm nấm, virus…Chúng tôi đã tiến hành điều trị thử nghiệm cho một số bệnh nhân bị nhược cơ nặng bằng nước sắc lá Chay bắc bộ. Kết quả là chúng tôi đã chữa khỏi bệnh cho những bệnh nhân này và trong quá trình dùng thuốc bệnh nhân không gặp phải bất kì tác dụng phụ nào. Điều này là rất đáng mừng…”  2. GS.TSKH. Trần Văn Sung – Nguyên Viện trưởng Viện Hóa học – Viện Hàn lâm Khoa học và công nghệ Việt Nam  “…Đề tài nghiên cứu về cây Chay bắc bộ nằm trong nhiệm vụ Hợp tác quốc tế về khoa học và công nghệ theo Nghị định thư Việt Nam – Italia. Kết quả của nghiên cứu được các nhà khoa học đầu ngành của Italia đánh giá rất cao. Họ đã từng sàng lọc rất nhiều loại thảo mộc khác nhau trên khắp thế giới để tìm kiếm thuốc mới cho bệnh nhân tự miễn nhưng chưa tìm thấy 1 loài nào có hoạt tính tốt như ở cây Chay bắc bộ của Việt Nam. Thành phần hóa học trong vị dược liệu này rất hiếm được tìm thấy trong tự nhiên, có hoạt tính mạnh và tính chọn lọc cao. Do đó đây sẽ giải pháp cho bệnh nhân tự miễn trong tương lai …”  3. PGS.TS. Nguyễn Trọng Thông – Giám đốc Trung tâm Dược lý & Dược lâm sàng – Trường Đại học Y Hà Nội  “…Tôi đã tiến hành thử tác dụng dược lý của rất nhiều loại sản phẩm có nguồn gốc thảo dược. Nhưng tôi rất ấn tượng với kết quả nghiên cứu khi đánh giá tác dụng ức chế miễn dịch của dịch chiết lá Chay chuẩn hoá do Viện hoá quốc gia cung cấp. Sản phẩm này làm giảm đáng kể các miễn dịch đặc hiệu của cơ thể trong khi đó lại làm tăng các miễn dịch không đặc hiệu, như vậy là có tính chọn lọc rất cao. Tôi đánh giá tác dụng của sản phẩm không thua kém gì các thuốc tân dược hiện nay…”  4. PGS.TS. Nguyễn Duy Thuần – Viện trưởng VNC YHCT TuệTĩnh  Bệnh tự miễn như Lupus ban đỏ, Viêm khớp dạng thấp, eczema tổ đỉa, vẩy nến.. là những bệnh mà nền y học hiện nay đang rất lúng túng và khó khăn trong giải pháp điều trị, các thuốc tân dược rất nhiều độc hại và không chữa khỏi hẳn, Việc nhà nước ta nghiên cứu thành công một dược liệu có tác ức chế chọn lọc miễn dịch thể dịch mạnh có ý nghĩa không chỉ trong nước mà còn ở tầm quốc tế. Lần đầu tiên trên thế giới phát hiện một cây thuốc có chứa hoạt chất ức chế chọn lọc miễn dịch thể dịch lại không hề có độc tính, hứa hẹn ra đời một thuốc mang tầm quốc tế trong tương lai từ dược liệu Việt Nam, có thể chữa khỏi bệnh Lupus ban đỏ, viêm khớp dạng thấp, Vẩy nến….."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Quả, rễ – Fructus et Radix Artocarpi Tonkinensis."
+      },
+      "Thành phần": {
+        "thành phần": "Các nhà nghiên cứu đã phát hiện cây Chay có một hàm lượng lớn các flavonoid – một hoạt chất có hoạt tính sinh học mạnh.",
+        "Các hợp chất": "Nhóm nghiên cứu đã tiến hành chiết tách và phân lập được 4 hoạt chất là:\n Maesopsin Alphitonin Kaempferol Artonkin Đây là bốn hoạt chất hiếm tìm thấy trong tự nhiên, được cho là thành phần chính có tác dụng ức chế miễn dịch"
+      },
+      "Tính vị": {
+        "Có vị": "Quả chay có vị chua, tính bình, có tác dụng thu liễm, cầm máu và thanh nhiệt, khai vị giúp tiêu hoá, làm ăn ngon cơm. Rễ chay có vị chát, cũng có tác dụng làm se."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cây mọc hoang dại nhưng do tập tục ăn trầu bằng vỏ cây, vỏ rễ Chay nên nhân dân ta ở miền núi như Hà Bắc, Hà Giang, Tuyên Quang, Thanh Hóa…đã trồng cây Chay để lấy vỏ, lá và quả. Quả Chay chín có thể dùng ăn sống, nấu canh chua, có thể phơi khô cất dành để nấu canh. Nhân dân dùng quả Chay để chữa phổi nóng, ho ra máu, thổ huyết, chảy máu mũi, đau họng, hoặc dạ dày thiếu toan, kém ăn, có thể dùng quả Chay ăn trực tiếp hoặc ép lấy nước uống. Nếu không có quả Chay tươi thì dùng quả Chay khô hay rễ Chay sắc uống. Sở dĩ quả Chay chữa phổi nóng, ho ra máu, chảy máu cam hiệu quả là do quả này chứa rất nhiều Vitamin C thiên nhiên và các acid amin… Vỏ rễ Chay có màu đỏ dùng để nhai với trầu không. Theo Đông y thì lá và rễ Chay dùng để sắc uống, có tác dụng chữa đau lưng, mỏi gối, tê thấp và chữa rong kinh, bạch đới; còn dùng làm chắc chân răng. Liều dùng 20-40g dạng thuốc sắc và được nhân dân dùng phổ biến. Lá và rễ có thể thu hái quanh năm, chỉ cần phơi hay sấy khô mà không phải chế biến gì khác. Đặc biệt, dân gian còn lưu truyền bài thuốc sử dụng cây Chay có công dụng chữa tê thấp đau lưng, mỏi gối rất hiệu quả: lá và rễ Chay 20g, Thổ phục linh 15g, Thiên niên kiện 16g, nước 600ml, sắc còn 200ml, chia 2 lần uống trong ngày."
+      },
+      "Cách dùng": {
+        "được_dùng": "Tê thấp đau lưng, mỏi gối, dùng lá và rễ: Chay 20g, Thổ phục linh 15g, Thiên niên kiện 16g, nước 600ml, sắc còn 200ml, chia 2 lần uống trong ngày. Rong kinh, bạch đới:  Rễ Chay, rễ Cỏ tranh, mỗi vị 50-60g, sắc nước uống."
+      },
+      "luu_y": {}
+    }
+  ]
+}

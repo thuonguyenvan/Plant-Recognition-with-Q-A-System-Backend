@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhàu nước",
+      "ten_khac": "Nhàu nước, Cây ruột gà",
+      "ten_khoa_hoc": "Morinda persicifolia Buch.-Ham. var. oblonga Pit.",
+      "ma_taxon": "1496758",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 0,5 – 1m, cành lá sum sê.",
+      "thân": "Cành mọc ngang, gập xuống, lúc non dẹt, sau tròn, nhẵn, màu nâu, có rãnh dọc.",
+      "lá": "Lá mọc đối, hình mác, gốc thuôn hoặc hơi tròn, đầu nhọn, phiến lá đôi khi xẻ thuỳ, màu lục nhạt, dài 4 – 13cm, rộng 0,5 – 4,5cm, lá kèm ngắn.",
+      "hoa": "Cụm hoa mọc đối diện với lá, có cuống rất ngắn hoặc không cuống, hoa màu trắng hoặc hồng dính nhau bởi đài tạo thành một  khối hình đầu sau hình trụ dài 1 – 2cm, rộng 5 – 8mm; đài có 5 răng ngắn, tràng có ống loe ở đầu, có lông ở mặt trong, nhị 5 thọt, bầu có 1 noãn ở mỗi ô.",
+      "quả": "Quả thịt  hình trụ gồm nhiều quả hạch dính nhau. cao 2 – 2,5cm, mặt ngoài lồi lõm.",
+      "mùa hoa": "tháng 1 – 5",
+      "mùa quả": "tháng 6 – 7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Nhàu nước có vùng phân bố từ Ấn Độ đến Malaysia, Thái Lan, Campuchia và Việt Nam. Ở Việt Nam nhàu nước chỉ thấy ở các tỉnh thuộc Đồng bằng Nam Bộ",
+      "thường_mọc": "Nhàu nước là loại cây bụi thấp, phân cành nhiều. thường mọc rải rác hay thành đám dọc  theo các bờ kênh rạch, bờ ao, bờ ruộng hoặc ven đường đi",
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, có thể chịu được úng ngập, vì khi mọc ở bờ kênh rạch, toàn bộ phần rễ và gốc đã ở trong môi trường đất ngập nước. Tuy vậy, cây không ưa loại  đất phèn. Cây ra hoa quả nhiều hàng năm. Quả chín rụng, phát tán theo dòng nước, khi hạt  bám vào bờ đất mới nẩy mầm  được. Cây có khả năng tái sinh chồi khoẻ sau khi chặt"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ thu hoạch vào mùa khô, tốt nhất là loại rễ lớn có đường kính 1cm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ nhàu nước chứa morindin, một dẫn xuất của trihyđroxyanthraqumnon và 2 dẫn xuất khác của anthraquinon có điểm sôi theo thứ tự là 222° và 270° (Võ Văn Chi, 1997)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ nhàu nước được sử dụng ở miền Tây Nam Bộ để thay thế rễ nhàu chữa huyết áp cao bằng các chế phẩm cao lỏng, cao mềm, thuốc viên, thuốc nước, trà thuốc"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

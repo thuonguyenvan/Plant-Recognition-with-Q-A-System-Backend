@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Điền thanh gai",
+      "ten_khac": "Điên điển gai, muồng gai, muồng xai, rút dại, thích điền thanh.",
+      "ten_khoa_hoc": "Sesbania bispinosa (Jacq.) W. Wight",
+      "ma_taxon": "443513",
+      "ho": "Đậu (Fabaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo cứng, cao 1 – 1,5m.",
+        "thân": "Cành hình trụ, hơi có khía, màu lục rất nhạt, có ít gai nhỏ dẹt.",
+        "lá": "Lá kép hình lông chim gồm 20 – 60 lá chét thuôn dài 1 – 1,5 mm, rộng 2 – 3 mm, hai mặt lá điểm những chấm tím, mặt trên nhạt, cuống dài 3 – 20 cm, có gai; lá kèm nhọn.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chùm dài 5 – 10 cm, lá bắc dễ rụng; hoa màu vàng, đài hình chuông dài 4 mm, có 5 răng; tràng có cánh cờ hình trái xoan, cánh bên thuôn, cánh thìa hình bầu dục; nhị 2 bó, bao phấn hình mắt chim, có màu nâu ở lưng; bầu thuôn.",
+        "quả": "Quả đậu, dài 12 – 18 cm, rộng 2,5 mm, thắt lại giữa các hạt; hạt rất nhiều, thuộn, tròn ở hai đầu."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Sesbania Scop. ở Việt Nam có 5 loài, trong đó có 2 loại là cây trồng, điền thanh gai là một trong số ba loài mọc tự nhiên.  Điền thanh gọi là cây của vùng nhiệt đới, phân bố rất rộng, từ các nước Phi châu tới Ấn Độ, Pakistan, Campuchia, Lào, Việt Nam và Malaixia.  Ở Việt Nam, hường gặp chủ yếu dọc các bờ sông, trong các ruộng có thực bì thoái hoá, nơi lầy từ Quảng Ninh, Vĩnh Phú tới Lâm Đồng, Bà Rịa, Tây Ninh.  Cây ưa sáng, thường sống ở môi trường nước nông, trong các thuỷ vực ao hồ, đồng ngập nước hay các đầm lầy cửa rừng."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Hạt – Semen Sesbaniae Bispinosae."
+      },
+      "Thành phần": {
+        "thành phần": "Lá chứa 78,2% nước, 2,6% protein, chất chiết bằng ether 8,8%, chất xơ 6,3%, tro 2,2%.  Lá, thân và quả cho phản ứng dương tính với alcaloid.  Hạt chứa % tính theo Ca 0,37%; P: 0,59%; 28% chất gôm, hỗn hợp saponin. Nếu đem thuỷ phân, gôm, hỗn hợp saponin. Nếu đem thuỷ phân, saponin cho acid oleanolic và một sapogenin trung tính.  Phần thịt của hạt chứa 53,46% protein tính theo dược liệu khô kiệt (The Wealth of India IX, 1972)  Theo Chopra Nayar et al., 1956 hạt còn chứa galactomannan có mạch nhảnh gồm galactose, mannose theo tỷ lệ 1,0:1,9 [Compendium of Indian Medicinal Plants 5 (1990 – 1994), 1998]."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cành lá cây điền thanh gai được nhân dân sắc uống để giải nhiệt và chữa mụn nhọt.  Hạt được dùng lẫn với hạt thảo quyết minh sao sắc uống để chống bốc nóng, làm mát máu, nhuận táo và chữa phụ nữ huyết nhiệt, kinh nhiều, kinh sớm kỷ. Ngày dùng 16 – 20g sắc uống.  Ở Ấn Độ, theo kinh nghiệm của y học cổ truyền, rễ điền thanh gai được coi là có tác dụng chống nhiễm khuẩn, chống chất độc, tẩy giun sán, lợi tiểu, lợi sữa, trị các bệnh về mắt.  Ở một số một số vùng ở Ấn Độ và có thể ủ tươi trong hầm để làm thức ăn cho gia súc vào mùa đông.  Rễ điền thanh gai còn được dùng để làm giảm chướng bụng, làm phục hồi chức năng, trị lao hạch, sốt, loét, đái tháo đường, bạch biến, các chứng bệnh về họng, vết bọ cạp cắn. Vỏ cây có tác dụng làm săn. Lá có tác dụng tẩy, trị giun sán, làm mưng mủ, làm dịu, trị tràn dịch tinh mạc, làm giảm các chứng đau và viêm. Hạt là thuốc c điều kinh, kích thích, làm săn, được dùng trị bệnh đậu mùa, loét mạn tính, phát ban, tiêu chảy và kinh nguyệt quá nhiều.  Các địa phương, người ta dùng hạt tản nhỏ trộn với bột mỳ hoặc bột gạo dùng ngoài trị ngứa da. Cây được dùng làm phân xanh vẫn giữ được nhiệt độ thấp.  Ở Campuchia, tuy cây rút dại là một chất cầm máu tốt, được dùng trong các trường hợp bằng huyết."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

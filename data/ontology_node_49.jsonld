@@ -1,0 +1,198 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Đại Kế",
+            "ten_khac": "Đại kế, Ô rô cạn, Dã hồng hoa, Thích kế",
+            "ten_khoa_hoc": "Cirsium japonicum Fish. ex DC.",
+            "ma_taxon": "354344",
+            "ho": "Asteraceae (Cúc)",
+            "Mô tả": {
+                "lá": "mọc so le, hình mác không cuống, gốc ôm sát thân, mép uốn lượn, có răng cưa dạng gai sắc,lá gốc và lá ở giữa thân chia thuỳ không đều, dài 20-40cm, rộng 5–10cm, lá ở ngọn và cành có hoa ít chia thuỳ hơn, mặt trên nhẵn, mặt dưới nhạt.",
+                "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành đầu to, lá bắc có lông, xếp thành 5-7 hàng, không đều. Lá phía ngoài ngắn và sắc, lá phía trong mềm và gập xuống: hoa rất nhiều, lưỡng tính, màu tím đỏ, tràng có ống loe ra 5 cánh, 5 nhị có tai ở gốc, chỉ nhị có lông,bầu nhẵn.",
+                "quả": "Quả bế thuôn, hơi dẹt, nhẵn, có 5 cạnh mở.",
+                "cây": "Cây thảo nhỏ, sống lâu năm, cao 50-80cm.",
+                "thân": "Thân thẳng, màu lục, có rãnh dọc và nhiều lông.",
+                "rễ": "Rễ phân nhánh",
+                "mùa hoa": "tháng 5-7",
+                "mùa quả": "tháng 8-10"
+            },
+            "Phân bố": {
+                "phân_bố": "Cirsiura Mill là một chí lớn với tổng số khoảng 380 loài, phân bố ở vùng ôn đới và một số ít loài ở vùng cận nhiệt đới Bắc bán cầu. Ở Việt Nam, chi này có 4 loài, trong đó loài đại kế được coi là cây có vùng phân bố hạn chế nhất, thường chỉ thấy ở vùng núi cao trên 1500m như: Sa Pa (Lào Cai), Đổng Van, Mèo Vạc, Quản Bạ (Hà Giang), Sin Hổ (Lai Châu) và Mù Cang Chải (Yên Bái). Trên thế giới, đại kế có ở Trung Quốc, Nhật Bản và vùng Viễn Đông Nga.",
+                "thường_mọc": "Đại kế là cây ưa sáng, khi còn nhỏ hơi chịu bóng. thường mọc ở ven rừng, trên bãi cỏ, nương rẫy cũ của vùng núi đá vôi. Cây có thể chịu được hạn, nhờ hệ thống rẻ chùm mọng nước (gọi là củ) cắm sâu xuống đất. Trong trường hợp bị đốt (đốt nương), phần dưới mặt đất vẫn còn khả năng tái sinh cây mọc từ hạt xuất hiện vào tháng 4-5. đến cuối mùa thu ra hoa quả. Quả đại kế có túm lông, phát tán nhờ gió. Ở Việt Nam đại kế thuộc loại cây thuốc quý hiếm, rất ít gặp trong tự nhiên."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Toàn cây, thu hái vào mùa hạ, thu khi đang có hoa, phơi khô. Người ta cho rằng hái vào mùa thu tốt hơn. Rễ đào vào mùa thu sẽ có rễ to hơn, cắt bỏ rễ con, rửa sạch, phơi khô."
+            },
+            "Thành phần": {
+                "thành phần": "Toàn cây đại kế chứa tinh dầu. Lá có pectolinarin, aplataxen.  Phần trên mặt đất của cây chứa hai flavon glucosid là linarin và cirsimarin."
+            },
+            "Tính vị": {
+                "Có vị": "Đại kế có vị ngọt, đắng, tính mát, vào kinh tâm và can, có tác dụng làm mát máu (lương huyết), cảm máu, tán ứ, tiêu sưng tấy."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Đại kế được dùng chữa các dạng xuất huyết, chảy máu cam, ho ra máu, lao, nôn ra máu, đái ra máu, xuất huyết tử cung, băng lậu. Còn chữa viêm gan, viêm vú, thông sữa, viêm phù thũng, ung thũng, sang độc, cao huyết áp. Ngày uống 9–15g dạng thuốc sắc.  Dùng ngoài trị mụn nhọt độc, ghẻ lở, vết thương đụng dập, lấy 60–120g toàn cây, giã ép lấy nước uống.  Bài thuốc có đại kế  1. Chữa lao, ho ra máu:  Đại kế, tiểu kế, lá sen, trắc bá, rễ cỏ tranh, chi tử, đại hoàng, mẫu đơn bì, lượng bằng nhau, sao, nghiền thành bột. Mỗi lần 10–15g, uống với dịch ép ngó sen hoặc cà rốt sau bữa ăn.  2. Chữa ho ra máu, miệng khô:  Lá hoặc rễ đại kế tươi, rửa sạch giã nát, ép lấy nước uống, mỗi lần 30–50ml.  3. Chữa thổ huyết, chảy máu cam, đái ra máu:  Đại kế, trắc bá sao, lá sen, thiên thảo, rễ cỏ tranh, dành dành sao giòn, mỗi vị 20g, sắc uống. Riêng chảy máu cam, có thể dùng rễ đại kế (gõ giã nhỏ, ép lấy nước uống) với rượu hoặc rễ khô, tán bột, mỗi lần uống 10g với nước. Còn đái ra máu có thể dùng rễ đại kế tươi 60–90g, sắc trong 1 giờ, uống trước bữa ăn, ngày 3 lần.  4. Chữa băng huyết, kinh nguyệt quá nhiều:  Đại kế 20g, bổ hoàng 8g, đại táo 10 quả. Sắc chia 3 lần uống trong ngày. Hoặc đại kế, tiểu kế, bổ hoàng mỗi vị 10g, hạt trinh nữ, cỏ nho nhỏ mỗi vị 12g. Sắc uống.  5. Chữa ung thư gan, tràn dịch cổ trướng:  Đại kế và hàm ếch mỗi vị 80–100g, sắc uống (kinh nghiệm của Trung Quốc).  6. Chữa mụn nhọt, lở ngứa, vết thương đụng giập, sưng đau, viêm gan, viêm thận:  Đại kế, mộc thông, kim ngân hoa, ngưu tất, sinh địa, mỗi vị 20g, sắc uống. Nếu là viêm gan thì thay đại kế bằng tiểu kế. Trong trường hợp mụn nhọt, lở ngứa và vết thương, có thể lấy cây đại kế tươi, giã nát, vắt lấy nước uống và bôi ngoài.  Về biện chứng luận trị cần lưu ý là đại kế phối hợp với sinh địa, đại hoàng chữa ho ra máu, nôn ra máu, phối hợp với rễ cỏ tranh chữa tiểu tiện ra máu, với đại hoàng, đào nhân chữa viêm ruột, với hoa mào gà chữa băng lậu.  Chú ý: Không dùng đại kế cho bệnh nhân tì vị hư hàn và không có ứ trệ. Vị thuốc kỵ với dụng cụ bằng sắt.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+            },
+            "Cách dùng": {
+                "được_dùng": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

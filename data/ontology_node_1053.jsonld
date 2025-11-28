@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ mật gấu",
+      "ten_khac": "Cỏ mật gấu, Nhị rối vằn, Đẳng nha sọc, Nhị rối lùn, Hùng đởm thảo",
+      "ten_khoa_hoc": "Isodon lophanthoides (D.Don) Hara",
+      "ma_taxon": "865629",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 0,15 – 1m, phân nhánh ít hay nhiều.",
+      "thân": "Thân mọc đứng hoặc mọc bò, có 4 cạnh rõ, có lông nhất là ở phần non.",
+      "lá": "Lá mọc đối, không cuống hoặc có cuống, hình trứng rộng, dài 1,5 – 8 cm, rộng 0,5 -5 cm, gốc bằng hoặc hình nêm, đầu nhọn hoặc tù, mép khía răng hoặc khía tai bèo, hai mặt có lông tơ, cuống lá dài 0,5 – 2 cm.",
+      "hoa": "Cụm hoa mọc ở ngọn thành chuỳ dài hơn 20 cm; lá bắc rất nhỏ, rụng sớm; hoa nhỏ có cuống dài, màu trắng đốm hồng, đài hình chuông, 5 răng gần bằng nhau và nhọn, có lông tơ và hạch nhỏ màu vàng, tràng dài gấp đôi đài, có ống hình trụ. có lông ở mặt ngoài, phiến chia 2 môi, màu trắng có chấm hồng, môi trên chè 4 thuy ngắn bằng nhau, môi dưới nguyên dài hơn mỗi trên; nhị 4, thò ra ngoài tràng, 2 dài, 2 ngăn, bầu có vòi chẻ đôi.",
+      "quả": "Quả bế tư thuôn, hình bầu dục, nhẵn, màu nâu.",
+      "mùa hoa": "tháng 8-10",
+      "mùa quả": "tháng 11-12"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Isodon (Benth.) Schr. Ex Spach trên thế giới có khoảng 100 loài, phân bố chủ yếu ở vùng cận nhiệt đới. Chi này ở Việt Nam có 5 loài, cỏ mật gấu phân bố rải rác ở một số tỉnh miền núi như Lào Cai, Sơn La, Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên…  Có mật gấu là cây đặc biệt ưa ẩm, có thể chịu bóng và hơi ưa sáng. Cây thường mọc nơi đất ẩm, có nhiều mùn ở ven rừng núi đá vôi, gần bờ suối, ven đường đi trong rừng và đôi khi thấy ở cả các hốc mùn và kẽ đá. Là cây sống 1 năm (cá biệt là tới 2 năm), nên cây con mọc từ hạt vào cuối mùa xuân hay đầu mùa hè. Cây sinh trưởng nhanh trong mùa hè, sau khi quá già sẽ tàn lụi vào giữa mùa đông. Cây gieo trồng được bằng hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây – Herba Isodontis."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Phạm Hoàng Hộ [Cây có vị thuốc ở Việt Nam, 2006, tr.473] loài Isodon plectranthus, có tên Việt Nam là đằng nha cốt, rất giống với cỏ mật gấu, có chứa các diterpenoid như: leukamenin, kambebanin. effusamin A. sculponeatin, rabdophitin leudonynin và macrocalin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cỏ mật gấu thường dùng chữa viêm gan vàng da cấp tính, viêm túi mật, viêm ruột cấp, kiết lỵ.  Còn chữa sưng ứ do chấn thương, đụng dập hoặc bổ té.",
+      "được_dùng": "Liều dùng ngày 15 – 30g hoặc 30 – 60g tươi sắc uống trong ngày.",
+      "chữa": "Chữa hoàng đản, viêm gan, viêm túi mật cấp: cỏ mật gấu, mật thông, dành dành mỗi vị 20g, sắc uống trong ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ban",
+      "ten_khac": "Ban, Nọc sởi, Châm hương, Bioc lương (Thái), Địa nhĩ thảo, Nhã cam (Tày), Điền sơ hoàng, Cỏ ban",
+      "ten_khoa_hoc": "Hypericum japonicum Thunb.",
+      "ma_taxon": "323157",
+      "ho": "Hypericaceae (Nọc sởi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ sống 1 năm hay 2 năm, cao 10 – 20 cm.",
+      "thân": "Thân cứng nhẵn, phân nhiều cành.",
+      "lá": "Lá mọc đối, không cuống, hình trái xoan  hoặc hình trứng, dài 7 – 10 mm, 3 -5 gân tỏa từ gốc, phiến lá có những chấm nhỏ mờ.",
+      "hoa": "Cụm hoa mọc đơn độc hoặc thành nhánh  phân đôi ở ngọn, thân, cành, hoa nhỏ màu vàng: đài có 5 răng hình mũi mác, thuôn ở gốc, tràng 5 cánh hình bầu dục, dài hơn đài: nhị rất nhiêu hợp thành 3 bó, chỉ nhị rất mảnh, bao phấn nhỏ; bầu hình trứng thuôn.",
+      "quả": "Quả nang, hình trứng, mở theo 3 khe dọc thành 3 mảnh hẹp, hạt rất nhỏ, thuôn, có vạch dọc.",
+      "mùa hoa": "tháng 4 -6",
+      "mùa quả": "tháng 8 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Ở Việt Nam, có khoảng 6 -7 loài thuộc chi này, cây phân bố hầu hết các tỉnh từ vùng đồng bằng đến trung du và miền núi phía bắc. Ở các tỉnh phía nam, thường thấy ở vùng núi cao. Độ cao phân bố chung đến trên 1500 m. Cây còn thấy nhiều nước khác như: Trung quốc, Ấn Độ, Nepan, Srilanca, Niudilan, Malaysia, Thái Lan và Lào.",
+      "thường_mọc": "Ban thuộc loài cây ưa ẩm và có thể hơi chịu bóng. Cây thường mọc lẫn với các loài cỏ dại trên đất ẩm ở vườn nhà, ven đường đi, ruộng cao và các bãi đất trống trong thung lung. Cây mọc từ hạt vào cuối xuân hoặc đầu hè, sinh trưởng phát triển nhanh, trong khoảng 3-4 tháng là tàn lụi. Quả khi chín tự mở hạt vương vãi ngay trên mặt đất và có thể tồn tại một thời gian dài, qua đông đến mùa xuân năm sau mới nảy mầm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây dùng tươi hay phơi khô"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây ban chứa Sarotranol, isojacarenbin (Ishiguro Kyoko và cộng sự 1993)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị đắng, ngọt, tính mát có tác dụng thanh nhiệt, giải độc, thẩm thấp, lợi tiểu, tiêu sưng, giảm đau."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở việt nam, theo kinh nghiệm dân gian, cây ban được dùng chữa viêm gan vàng da, trẻ em lên sởi, vết thương sưng đau, mụn nhọt, sâu răng, hôi mồm, ho, có nơi còn dùng chữa rắn độc cắn. Ở Trung quốc, cây ban chữa viêm gan cấp hoặc mãn tính, viêm ruột thừa, viêm amidanm cam tích ở trẻ. Ở Malaysia, cây ban vò nát đắp ngoài chữa vết thương. Ở Papua New Guinea, cây ban được giã nát với gừng để chữa sốt rét."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa viêm gan vàng da:  Cây ban tươi (40g), sắc nước uống",
+      "được_dùng": "Chữa trẻ em  lên sởi  Cây ban tươi (1 nắm), sắc uống hàng để giải độc, hoặc phối hợp với kim ngân hoa hay lá diếp cá mỗi vị 1 nắm cùng sắc uống.",
+      "chữa": "Chữa rắn độc cắn  Cây ban tươi (70g) giã nát ép lấy nước, tẩm vào vải gạc rồi lau rửa miệng ngày 1 -2 lần; người lớn có thể ngậm.",
+      "chữa": "Chữa viêm thận cấp  Cây ban tươi (60g), hồng táo (10 quả). Sắc nước uống."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Húng quế",
+      "ten_khac": "Húng giổi, Rau é, É tía, É quế, Hương thái",
+      "ten_khoa_hoc": "Ocimum basilicum L. var. basilicum",
+      "ma_taxon": "61398",
+      "ho": "Lamiaceae ( Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thuộc thảo, sống hằng năm, thân nhẵn hay có lông, thường phân cành ngay từ dưới gốc, cao 50-60cm.",
+      "lá": "Lá mọc đối có cuống, phiến lá hình thuôn dài, có thứ màu xanh lục, có thứ màu tím đen nhạt.",
+      "hoa": "Hoa nhỏ màu trắng hay hơi tía, mọc thành chùm đơn hay phân nhánh với những hoa mọc thành vòng 5 đến 6 hoa một.",
+      "quả": "Quả chứa hạt đen bóng, khi ngâm vào nước có chất nhầy màu trắng bao quanh."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong cây húng quế có từ 0,4 đến 0,8% tinh dầu. Tinh dầu màu vàng nhạt, thơm nhẹ, dễ chịu. Tùy theo nơi trồng, các chỉ số hoá lý có thay đổi.",
+      "tinh dầu chứa": "Tinh dầu húng quế Việt Nam cất tại một số địa phương chứa tới 80-90% metylchavicola.",
+      "Các hợp chất": "Tinh dầu các loài Ocimum khác như Ocimum viride có thành phần chủ yếu là xinamat metyl, 35 đến 65% tymola, Ocimum sanctum có thành phần chủ yếu là linalola hoặc xineola (14-15%), các phenola (7-22%) chủ yếu là chavibetola và các tecpen không xác định, Ocimum gratissimum có thành phần chủ yếu hoặc là eugenola hoặc là tymola, Ocimum canum hay Ocimum americanum có thành phần chủ yếu hoặc camphora mà không có tymola hoặc chủ yếu tymola và không có camphora hoặc nữa chủ yếu là xitral với một ít xitronelola, mycxen và oxymen; Ocimum pilosum có thành phần chủ yếu là xitral…"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở nước ta trước đây húng quế chỉ thấy được trồng làm gia vị. Tại miền Nam, ngoài công dụng làm gia vị người ta còn thu hoạch hạt để ăn cho mát, hơi có tác dụng chống táo bón: Cho từ 6 đến 12g hạt vào nước thường hay nước đường. Đợi cho chất nhầy nở ra rồi uống.",
+      "làm thuốc": "Tại các nước khác người ta trồng húng quế chủ yếu làm nguồn cây cho nguyên liệu cất tinh dầu, hoặc lấy cây sắc uống chữa sốt, làm cho ra mồ hôi, chữa đau dạ dày, ăn uống không tiêu, thông tiểu, nấu nước súc miệng và ngậm chữa đau, sâu răng. Mỗi ngày uống từ 10 đến 25g dưới dạng thuốc sắc hay thuốc pha. Hạt có thể dùng đắp lên mắt đau đỏ.",
+      "được_dùng": "Từ năm 1975, tại miền Bắc một số tỉnh đã trồng húng quế với mục đích dùng cây cất tinh dầu dùng trong công nghiệp chất thơm trong nước và xuất khẩu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Người ta cho rằng cây này vốn nguồn gốc ở Ấn Độ và Trung Quốc, nhưng hiện nay được trồng ở nhiều nước nhiệt đới và ôn đới thuộc châu Á, châu Âu (như Pháp, Đức, các nước thuộc Liên Xô cũ, Ý, Tây Ban Nha…). Tại những nước này thường trồng với mục đích như hái lá và toàn cây cất tinh dầu dùng làm thuốc hay trong công nghiệp chất thơm.",
+      "làm thuốc": "Ở nước ta, tại miền Bắc trước đây chỉ thấy trồng lấy lá và ngọn làm gia vị. Từ năm 1975, tại một số tỉnh đã trồng trên quy mô lớn để cất tinh dầu húng quế dùng trong công nghiệp chất thơm ở trong và ngoài nước. Ở miền Nam, ngoài mục đích như làm gia vị như ở miền Bắc, người ta còn thu hoạch quả (gọi nhầm là hạt-Fructus Ocimi) để ăn cho mát và giải nhiệt gọi là hạt é.",
+      "phơi khô": "Để làm thuốc, người ta chỉ hái lá và ngọn có hoa (Herba Ocimi) phơi hay sấy khô. Để cất tinh dầu người ta hái toàn cây, cất tươi hay để hơi héo mới cất."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

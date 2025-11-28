@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mua tép",
+      "ten_khac": "Mua tép",
+      "ten_khoa_hoc": "Osbeckia nepalensis Hook.f.",
+      "ma_taxon": "570537",
+      "ho": "Melastomaceae (Mua)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhỏ, sống nhiều năm, cao 40 – 60cm.",
+      "thân": "Thân mọc thẳng đứng có 4 cạnh và lông thô dính, cành có cạnh, màu đỏ nhạt, phủ lông cứng ngắn.",
+      "lá": "Lá đối, hình bầu dục, dài 3 -7cm, rộng 0,5 – 1,5cm, gốc tù, đầu nhọn, mép nguyên, hai mặt có lông thô; gân 5 nổi rõ ở mặt dưới; cuống rất ngắn 1mm hay hơn.",
+      "hoa": "Cụm hoa mọc ở đầu ngọn thành đầu; hoa màu hồng hoặc tím hồng, đài có 4 răng hình tam giác nhọn, có lông ở mép, ống đài ngắn có vảy dạng răng cưa ở giữa; tràng 4 cánh rời; nhị 8, bao phấn màu vàng; bầu có lông cứng ở đỉnh.",
+      "quả": "Quả nang, hơi hẹp lại ở đầu và phẳng; hạt hình móng ngựa, mặt ngoài có u nhỏ.",
+      "mùa hoa": "tháng 3-8",
+      "mùa quả": "tháng 3-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Osbeckia L. ở Việt Nam có 10 loài phân bố rải rác khắp các vùng núi và trung du. Cây mua tép cũng thấy ở hầu hết các tỉnh Lào Cai, Lai Châu, Hà Giang, Bình Dương, Tây Ninh, Đồng Nai, các tỉnh ở Tây Nguyên và có thể ở các đảo lớn dọc theo bờ biển. Mua tép còn có ở khu vực nhiệt đới Nam Á và Đông Nam Á như Ân Độ, Malaysia, Thái Lan, Campuchia, Lào và Nam Trung Quốc.",
+      "thường_mọc": "Cây ưa sáng, thường mọc lẫn với các loài cỏ khác ở ven đồi, nương rẫy hay trên các ruộng cao ở vùng núi và trung du nhưng đã bỏ hoang. Mua tép có thể sống được trên nhiều loại đất kể cả đất bị rửa trôi nhiều, rất chua (pH 4- 5). Cây sinh trưởng mạnh trong mùa mưa ẩm, hoa thụ phấn chủ yếu nhờ côn trùng; nhân giống tự nhiên từ hạt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Mua tép chứa acid 2 – furoic, acid ursolic, acid succinic, quercelin và daucosterol (Compendium of Indian medicinal plants, vol. 5. 1990 – 1994, 1998)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mua tép có vị cay hơi ngọt, mùi thơm, tính bình, vào 3 kinh phế, tỳ và đại tràng, có tác dụng thông phổi, trừ ho hen, thanh nhiệt, giải độc, làm săn, thu liễm, cầm máu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mua tép được dùng chữa viêm phế quản, hen, lao phổi ho ra máu, đau họng, ho gà, lỵ cấp tính, viêm ruột, lỵ amíp. Còn chữa băng huyết, hậu sản đau bụng, cảm mạo. Ngày 30 – 60g toàn cây sắc uống. Để chữa viêm chân răng có mủ, đau răng, lấy toàn cây mua tép cắt nhỏ, sắc đặc, ngậm, ngày 3-4 lần.",
+      "chữa": "Bài thuốc có mua tép:  Chữa viêm phế quản, hen, ho, đau họng:  Mua tép 30g, thịt lợn nạc 125g, nấu nhừ, ăn làm nhiều lần trong ngày. Có thể lấy rễ, rửa sạch, nhai, nuốt nước dần để chữa đau họng, ho, ho ra máu; hoặc lấy lá tươi 30 – 40g, giã nát với một ít muối, ép lấy nước uống, bã đắp chữa đau họng.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hạ khô thảo",
+      "ten_khac": "Hạ khô thảo",
+      "ten_khoa_hoc": "Prunella vulgaris L.",
+      "ma_taxon": "52764",
+      "ho": "Lamiaceae (Hoa môi)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Hạ khô thảo là một cây sống dai có thân vuông màu hơi tím đỏ, lá mọc đối, hình trứng hay hình mác dài, mép nguyên hoặc hơi có răng cưa, có ít lông ở thân và lá.",
+      "hoa": "Cụm hoa mọc ở đầu cành giống như bông do nhiều hoa có cuống ngắn mọc vòng, mỗi vòng có 5 – 6 hoa. Đài hoa có 2 môi, môi trên có 3 răng, môi dưới có 2 răng, hình 3 cạnh. Cánh hoa màu tím nhạt hình môi, môi trên như cái mũ, môi dưới xẻ ba, thùy giữa rộng hơn.",
+      "quả": "Nhị 2 dài, 2 ngắn, đều thò ra khỏi tràng. Bầu có bốn ngăn. Vòi nhỏ dài. Quả nhỏ cứng.",
+      "cây": "Hạ khô thảo là một cây sống dai có thân vuông màu hơi tím đỏ",
+      "thân": "Hạ khô thảo là một cây sống dai có thân vuông màu hơi tím đỏ"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hiện nay hãy còn ít tài liệu nghiên cứu về cây này. Mới chỉ biết rằng cành mang hoa và quả chứa chừng 3.5% muối vô cơ tan trong nước. Trong số muối vô cơ này, là kali clorua, ngoài ra còn thấy một chất có tính chất ancaloit, acid ursolic."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính vị theo đông y: Vị đắng, cay, tính hàn, không độc, vào hai kinh Can và đởm. Có tác dụng thanh can hỏa, tán uất kết, tiêu ứ sáng mất, làm thuốc chữa loa lịch, giải trù nhiệt độc ở tử cung và âm hộ.",
+      "làm thuốc": "Những bài thuốc dùng hạ khô thảo trong nhân dân  Chữa tràng nhạc, mã đao: Hạ khô thảo 5 lạng (200g) đun lấy nước đặc uống, uống trước khi ăn cơm 2 giờ. (Bài thuốc trích trong sách “Tiết thị ngoại khoa-bản thảo cương mục”) . Cũng bệnh trên, có thể dùng hạ khô thảo, hương phụ, bối mẫu, viên chí cùng đun lấy nước đặc uống rất hay, không nên coi thường (sách “Kinh nghiệm phưong-bản thảo cương mục”). Chữa xích bạch đới: Hạ khô thảo tán nhỏ, mỗi lần uống 8g với nước cơm (sách ‘Từ thị phương’) Chữa tràng nhạc (loa lịch) hạ khô thảo 8g, cam thảo 2g, nước 3 bát (600ml) sắc còn 200ml chia 3 lần uống trong ngày. Thông tiểu tiện: Hạ khô thảo 8g, hương phụ tử 2g, cam thảo lg, nước 600ml, sắc còn 200ml chia ra 3 lẩn uống trong ngày. Bị đánh hay bị thương dùng hạ khô thảo tươi tán nhỏ đắp vào vết thương. Có thể dùng chữa bệnh cao huyết áp với liều 6-15g dưới dạng thuốc sắc."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây này hiện nay mới phát hiện được ở Sapa (Lào Cai), Tam Đảo (Vĩnh Phúc), Hà Giang vào các tháng 4, 5, 6 rất nhiều, sang đến tháng 8 một số đã lụi đi. Đã được khai thác. Trước đây phải nhập của Trung Quốc. Hiện nay nhiều nơi như Thanh Hóa, Nghệ An, Hà Tĩnh nói có hạ khô thảo nhưng chưa được xác minh.",
+      "phơi khô": "Vào mùa hạ, khi một số quả đã chín thì hái cành mang hoa và quả phơi hay sấy khô. Có người dùng cả bộ phận trên mặt đất hái về phơi hay sấy khô để dùng.",
+      "xấy khô": "Vào mùa hạ, khi một số quả đã chín thì hái cành mang hoa và quả phơi hay sấy khô. Có người dùng cả bộ phận trên mặt đất hái về phơi hay sấy khô để dùng."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

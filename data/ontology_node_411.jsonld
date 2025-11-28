@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ thạch sùng",
+      "ten_khac": "Có thạch sùng Xây Lan, có lưu ly, khuyển thiệt Tích Lan.",
+      "ten_khoa_hoc": "Cynoglossum zeylanicum (Vahl.) Thunb. ex Lehm.",
+      "ma_taxon": "161418",
+      "ho": "Vòi voi (Borraginaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao 50 – 80 cm, có khi hơn.",
+      "thân": "Thân hình trụ, mọc thẳng, có lông nhám.",
+      "lá": "Lá mọc so le, những lá phía gốc có cuống dài khoảng 1 cm, hình bầu dục – thuôn, dài 8 – 10 cm, rộng 2 – 3 cm, gốc có phiến men theo cuống, đầu tù hoặc hơi nhọn, hai mặt có lông, mặt trên nhám, mặt dưới mềm, những lá phía trên nhỏ, không cuống, ôm thân.",
+      "hoa": "Cụm hoa mọc ở ngọn và cành thành xim bo cạp phân đội, có lông dài, cành mang hoa hình zíc zắc; hoa nhỏ màu trắng, đài gồm 5 răng nhọn, có lông; tràng 5 cánh tròn, hợp thành ống ngắn, có vảy nhỏ; nhị 5, đính ở dưới các vảy, bầu nhẵn, 4 ô.",
+      "quả": "Quả hình cầu hoặc bầu dục, hơi dẹt, có gai nhỏ."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Cynoglossum L. ở Việt Nam chỉ có 2 loài, đều được dùng làm thuốc.  Cỏ thạch sùng vốn có nguồn gốc ở vùng cận nhiệt đới hoặc ôn đới ẩm thuộc châu Á. Cây phân bố ở Ấn Độ, Trung Quốc, Xri Lanca, Malaysia… Ở Việt Nam mới chỉ gặp ở một vài vùng núi cao (1300 – 1700m) tỉnh Lào Cai (Sa Pa), Lai Châu (Sìn Hồ), Kon Tum (Ngọc Linh), Quảng Nam (Trà My), Lâm Đồng (Đà Lạt).  Cây ưa sáng, ưa ẩm và thường mọc nơi đất trống ở ven đường đi, nương rẫy hay ở ven rừng. Hàng năm có thể gặp cây con mọc từ hạt vào tháng 4 – 5, ra hoa quả vào mùa thu, sau đó có thể tàn lụihoàn toàn vào mùa đông. Có thạch sùng tái sinh dự nhiên tốt từ hạt; dễ gieo trồng khi có nhu cầu.",
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, ưa ẩm và thường mọc nơi đất trống ở ven đường đi, nương rẫy hay ở ven rừng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cỏ thạch sùng có vị đắng, tính hàn, có tác dụng thanh nhiệt, giải độc, hoạt huyết, tán ứ, tiêu thũng, giảm đau và điều kinh."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cỏ thạch sùng có tác dụng độc nên chủ yếu được dùng ngoài để trị mụn nhọt mưng mủ, vết thương do dao chém. Lấy rễ, lá tươi giã đắp hoặc nấu nước rửa (Võ Văn Chi, 1997: 286).  Trong y học dân gian Nepal, dùng dịch ép rễ bồi đắp, hoặc bột dẻo từ lá đắp để trị vết thương hoặc vết đứt, vết chém do có tác dụng sát khuẩn.  Dùng dịch ép lá bồi đắp trị nhọt, đặc biệt nhọt ở hồng, eo, để vùng đỉnh nhọt bộc lộ không đắp, để nhọt mau chín và mủ chảy ra ngoài (Manandar N.P., 1992; Bhattarai N.K., 1993a; 1993b)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

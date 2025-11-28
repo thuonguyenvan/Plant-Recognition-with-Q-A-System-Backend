@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xộp",
+      "ten_khac": "Trâu cổ, Bị lệ, Vảy ốc, Cây xợp, Cơm lênh, Mộc liên, Sung thằn lằn, Múc púp (Tày), Xộp",
+      "ten_khoa_hoc": "Ficus pumila L.",
+      "ma_taxon": "162972",
+      "ho": "Moraceae (Dâu tằm)",
+      "Mô tả": {
+        "cây": "Cây xộp là một loại cây mọc leo hoặc trên đá, trên các cây cổ thụ lớn, có thể dài tới 5-10m.",
+        "thân": "Đường kính thân có thể tới 1cm, vỏ thân xù xì có từng đốt dài ngắn không đều. ở đốt mọc ra các rễ.",
+        "lá": "Có hai loại cành, những cành không mang hoa có lá nhỏ, dài 0,6-2,5cm, hình như vẩy ổc do đó có tên. Cành mang hoa có lá to và dày, dài 2,5-10cm, rộng l,5-4cm, mép nguyên, mặt lá ráp. Thân và lá non khi bẻ có nhựa mủ trắng.",
+        "hoa": "Hoa nhiều, đơn tính, đế hoa lõm.",
+        "quả": "“Quả” thực ra là một quả giả vì cấu tạo bởi một đế hoa lõm hình chén, miệng khép kín, ở giữa có một lỗ thủng con, quả dài độ 4cm, đường kính 3cm. Trong quả giả có nhiều “hạt” thực ra đó mới là quả thực. “Quả” con có màu lục, lúc chín có màu đỏ, có nhiều nhựa mủ trắng.",
+        "mùa quả": "Mùa quả tháng 8-9."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong vỏ quả có tới 13% chất gôm.",
+        "thủy phân": "Thủy phân chất gôm này cho glucose, fructose và arabinose.",
+        "chứa": "Trong thân và lá có một ít ancaloid (Theo hệ dược của Viện y học Bắc Kinh, 1958)."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả xộp là một vị thuốc nhân dân dùng từ lâu đời. Các sách cổ Thần nông bản thảo, Bản thảo cương mục đều có ghi. Theo các tài liệu cổ và kinh nghiệm nhân dân, quả xộp là một vị thuốc bổ, chữa được di tinh, liệt dương, đau lưng, lỵ lâu ngày, thoát giang (lòi dom), tắc tia sữa. Vùng Quảng Đông, Quảng Tây người ta dùng quả này phơi khô với tên vương bất lưu hành, một vị thuốc có tác dụng thông tia sữa. Có thể làm mứt để ăn.",
+        "được_dùng": "Liều dùng: Ngày uống 3-6g. Có thể uống tới 20-30g đưới dạng thuốc sắc hoặc chế thành cao mà ăn. Cành và lá chữa mụn nhọt, thông đại tiểu tiện, tiêu độc, lợi sữa. Ngày dùng 8-16g dưới dạng thuốc sắc hoặc nấu cao.",
+        "chữa": "Thuốc bổ chữa đau xương đau người:\n Cao quả xộp (Quả xộp thái nhỏ) nấu, với nước, lọc bỏ bã, cô đặc thanh cao. Ngày uống 5-10g chữa các chứng đau xương, đau người của người già, còn làm thuốc bổ, thuốc điều kinh, giúp sự tiêu hóa. Có thể dùng dây và lá phơi khô nấu cao.\n Rượu bổ chữa di tinh, liệt dương: Rượu cây xộp: Cành lá phơi khô l00g, đậu đen 50g, ngâm vào 250ml rượu, trong 10 ngày lọc lấy rượu mà uống. Khi uống có thể pha thêm đường làm thuốc bổ, chữa đau lưng, đau người, di tinh, liệt dương. Ngày uống 10-30ml rượu này."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang tại các tỉnh ở Việt Nam, đồng bằng cũng như miền rừng núi. Cây xộp cho các vị thuốc sau đây:\n “Quả” bị lệ thực, lương phấn quả, vương bất lưu hành (Quảng Đông) Fructus Fici pumilae là “quả” bổ dọc phơi khô. Có khi nhúng vào nước sôi một phút rồi mới phơi khô cho dễ bảo quản hơn. Cành mang lá phơi khô, bị lệ lạch thạch đằng, Caulis Fici pumilae. Có khi nguời ta dùng cả lá và nhựa mủ."
+      },
+      "luu_y": {}
+    }
+  ]
+}

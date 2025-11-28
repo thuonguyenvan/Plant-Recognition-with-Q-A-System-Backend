@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mướp khía",
+      "ten_khac": "Mướp hương, Mướp khía, Mướp tàu, Mác loy, Ve hom (Tày)",
+      "ten_khoa_hoc": "Luffa acutangula (L.) Roxb.",
+      "ma_taxon": "164869",
+      "ho": "Cucurbitaceae (Bầu bí)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, sống hàng năm, leo bằng tua cuốn.",
+      "thân": "Thân mảnh có khía vặn, tua cuốn chẻ đôi.",
+      "lá": "Lá mọc so le, có cuống dài, chia thùy nông và nhọn, gốc hình tim, đầu nhọn, mép có răng cưa, mặt trên sẫm, mặt dưới nhạt.",
+      "hoa": "Hoa đực và hoa cái cùng gốc, mọc ở kẽ lá, màu vàng rất nhạt; hoa đực tụ họp thành chùm, nhị 2-3; hoa cái mọc đơn độc, bầu thuôn.",
+      "quả": "Quả hình chùy dài, có 10 cạnh lồi rất rõ; hạt sần sùi, không có cánh.",
+      "mùa hoa": "tháng 4-6.",
+      "mùa quả": "tháng 4-6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Mướp khía có nguồn gốc ở Ấn Độ, hiện nay vẫn tồn tại quần thể này mọc hoang bên cạnh quần thể trồng. Tuy nhiên, trong quần thể trồng, qua quá trình chọn giống và du nhập đi khắp nơi đã tạo nên một vài giống mướp khía khác nhau về kích thước và đặc điểm thích nghi với các vùng trồng. Mướp khía được trồng rộng rãi ở các nước vùng nhiệt đới châu Á, như Ấn Độ, Thái Lan, Malaysia, Indonesia, Campuchia… Ở Việt Nam mướp khía có ở các tỉnh phía Nam, song nhìn tổng thể vẫn ít hơn so với loài mướp thường (L. cylindrica L.).  Mướp khía là cây ưa sáng, ưa ẩm và sinh trưởng rất nhanh trong vụ xuân – hè. Cây trồng ở phía Nam vào thời gian này là mùa khô, nên thường xuyên phải tưới nước. Mướp khía ra hoa quả nhiều, thụ phấn chủ yếu nhờ côn trùng.  Mướp khía là cây trồng quen thuộc; quả non, nụ hoa (đực) làm rau ăn; xơ mướp được dùng làm thuốc. Việt Nam đã từng xuất khẩu được mặt hàng này.",
+      "Đặc điểm sinh trưởng": "Mướp khía là cây ưa sáng, ưa ẩm và sinh trưởng rất nhanh trong vụ xuân – hè. Cây trồng ở phía Nam vào thời gian này là mùa khô, nên thường xuyên phải tưới nước. Mướp khía ra hoa quả nhiều, thụ phấn chủ yếu nhờ côn trùng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây gồm dây, lá và hạt. Để lấy xơ mướp, người ta thu hái quả chín vào mùa hè, thu lúc vỏ bắt đầu có màu vàng và đã có xơ trong ruột, mang về bỏ vỏ, hạt, lấy xơ phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây mướp khía chứa các saponin triterpenoid A, B, C, D, E, F, G (Chem, pharm Bull. 1991, 39, 599; CA. 115, 1991, 89108e).  Toàn cây còn có các protein có tác dụng làm bất hoạt ribosome (Rhifaozom inactivating proteins) n trichokirin, trichosanthin, momordin, plys°n momorcodin s… (CA. 120, 1994, 71903 d).  Nhân hạt mướp khía chứa protein thô 39,88%, chất béo 48,41%, sợi 1,89%, pentosan 2,24%, đường khử 3,61% và tro 4,77%.  Hạt chín chứa 19,9% một chất dầu màu nâu sáng với các đặc tính sau:  n25 = 1,4681, chỉ số xà phòng 188,5, chỉ số iod 9,57, các acid béo tự do (theo oleic) 1,1%, phần không xà phòng hóa 1%. Thành phần acid béo của đầu gồm acid béo no 24,13%, oleic 38,98% và linoleic 37,09% (The Wealth of India VI. 1962. 178). Người ta đã phân lập được từ hạt mướp khía 2 hợp chất 3 – 28 – o bidesmosidic heptaglycosid của acid oleanolic là acutosid H và acutosid I. Cấu trúc của 2 chất này đều có chung 1 protosaponin là acid oleanolic 3, o – [O – a – L – arabinopyranosyl] – (1 -» 3) – (3 – D. glucopyranosyl uronic acid. Khác nhau của 2 chất này là ở đây nối ester của chuỗi đường.  Acutosid H là 28 – o [O – 3- D – xylopyranosyl – (l-*3)-0-P-D – xylopyranosyl (1 -> 4) [O – p – D – xylopyranosyl (1 —»3)-0-a-L rhamnopyranoxyl (1 -» 2) – a. L – arabinopyranosyl] ester.  Acutosid I là 28 – o – [-0 – a – L – arabinopyranosyl (l->3)-0-p-D – xylopyranosyl (1 -» 4) [O – p – D – xylopyranosyl (1 -» 3)] – o – a – L – rhamnopyranosyl (1 —> 2) a – L – arabinopyranosyl] ester (CA. 115, 155044 f, 1991)  Hạt mướp khía còn có chất protein có tác dụng gây sẩy thai (abortifacient protein), protein này còn làm bất hoạt ribosome (CA. 115, 1991, 127423 p).  Ngoài ra, hạt còn chứa các hợp chất có tác dụng ức chế trypsin (trypsin inhibitor) là LA1,LA2."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Ấn Độ, cây mướp khía có tác dụng nhuận tràng và tẩy, được dùng trị bệnh da và hen, làm thuốc lợi tiểu và trị lách to. Quả khô tán bột là thuốc hít trị bệnh vàng da. Hạt còn có tác dụng gây nôn, long đờm và làm dịu. Ở Indonesia, hạt mướp khía được dùng trị sốt rét và các bệnh sốt khác, hạt được tán nhỏ uống sống hoặc trộn với nhựa mủ cây sữa. Ở Malaysia và Ấn Độ, rễ cây sắc uống trị rối loạn đường tiết niệu, sốt, làm tăng lực và làm thuốc điều kinh. Ở Thái Lan, nhân dân dùng rễ, thân và lá mướp khía trị sốt. Ở Campuchia, người ta uống nước hãm thân và rễ để lợi sữa, và dùng thân cây mướp khía phối hợp với những cây khác chế thuốc súc miệng.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

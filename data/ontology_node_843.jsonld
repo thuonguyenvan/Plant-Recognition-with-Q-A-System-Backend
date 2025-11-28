@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mù u",
+      "ten_khac": "Mù u, Còng, Hồ đồng",
+      "ten_khoa_hoc": "Calophyllum inophyllum L.",
+      "ma_taxon": "159698",
+      "ho": "Clusiaceae (Bứa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Mù u là một cây cao chừng 10-15m dáng đẹp",
+      "lá": "lá mọc đối, mỏng, thon dài, phía cuống hơi thắt lại, đầu lá hơi tù, phiến lá dài 10-17cm, rộng 5-8cm, gân rất nhỏ, nhiều, chạy song song và nổi rõ cả hai mặt lá.",
+      "hoa": "Hoa khá to, thơm, màu trắng, mọc thành chùm xim ở kẽ lá hay đầu cành. Từ xa, người ta phân biệt được cây mù u với cây khác là nhờ màu trắng đặc biệt của hoa.",
+      "quả": "Quả hạch, hình cầu, đường kính chừng 2,5cm khi chín có màu vàng nhạt, vỏ quả giữa mỏng, vỏ quả trong dày, cứng. Hạt có lá mầm chứa rất nhiều dầu.",
+      "mùa hoa": "tháng 2- 6",
+      "mùa quả": "tháng 10-11-12"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt mù u chứa từ 41-51% dầu, nếu tính nhân không, tỷ lệ có thể tới 73%. Từ dầu thô đó có thể tách ra 71,5% dầu béo và 28,5% nhựa, có loại dầu chứa tới 90,3% dầu béo và 9,7% nhựa. Tỷ trọng 0,910-0,918. Chỉ số xà phòng 188-190. Độ chảy của axit béo 30-380",
+      "gồm chất": "Dầu thô rất sánh, màu xanh lục sẫm, có mùi đặc biệt, vị đắng. Khi đã loại nhựa rồi, dầu sẽ lỏng hơn màu nâu vàng. Trong dầu mù u có panmitin, stearin, olein và arachidin. Chỉ số iot của dầu là 90,4.",
+      "Các hợp chất": "Những năm gần đây, dầu mù u đã được nghiên cứu kỹ hơn. Dietrich P. Lederer E. và Polonsky đã chiết được từ hạt mù u axit calophylic và chất calophylotlit, từ các chất trên lại chiết ra được axit benzoic và axetonphenon. Các tác giả trên còn chiết từ hạt một chất lacton. Chất lacton này xà phòng hóa cho axit calophylic (Bull.Soc Chim. France 5, 1953, tr 546-549).",
+      "chứa": "Nhựa mù u lấy được từ dầu thô có màu nâu sẫm, tan trong benzen, cacbon sunfua, ete dầu hỏa, cồn và các dung môi hữu cơ nói chung. Độ chảy 30-350, chỉ số iot 125,2.",
+      "triết xuất": "Từ thân cây trích được một thứ nhựa màu lục nhạt, cũng dùng làm thuốc.",
+      "tìm thấy": "Trong vỏ cây chứa 11,9% tanin (theo Gana, 1969, Philip. Sci. A, 11: 262) Theo Kalaw và Sacay (1952, Philip, Agric 14, 424) trong lá, vỏ và rễ có chứa axit xyanhydric và một chất saponin"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Phần lớn còn dùng trong phạm vi nhân dân.",
+      "chữa": "Nhựa mù u dùng chữa ghẻ, bệnh ngoài da hay trộn đều với ít vôi đun lên rồi bôi vào.",
+      "được_dùng": "Theo Petard (1940, Rev.Bot.appliquee et d’Agronomie coloniale 26:210-211) este etylic của dầu mù u dùng để điều trị có kết quả chứng viêm dây thần kinh do hủi. Liều dùng của este etylic dầu mù u là 5-10ml (tiêm bắp thịt sâu), 5-20ml (uống). Có thể dùng nhiều ngày liền vì uống không độc. Năm 1947, Mauboussin còn dùng dầu mù u có iot để điều trị bệnh tràng nhạc (luận án thi bác sĩ y khoa, Paris)",
+      "có tác dụng": "Dầu mù u còn dùng xoa bóp trị bệnh thấp khớp. Năm 1951, A.Ormanegy và cộng sự đã chứng minh tác dụng lên sẹo và an thần của dầu mù u Từ năm 1983, tại bệnh viện chợ Rẫy TP. Hồ chí minh, Nguyễn Quang Long đã dùng dầu mù u điều trị các vết thương, viêm xương có kết quả rất tốt Nguyễn Tiến hải dùng dầu mù u điều trị thành công lộ tuyến viêm cổ tử cung",
+      "làm thuốc": "Ngoài công dụng làm thuốc, dầu mù u còn được nhân dân dùng thắp đèn, có thể dùng nấu xà phòng. Gỗ mù u dùng đóng thuyền và làm cột buồm."
+    },
+    {
+      "@type": "Cách dùng",
+      "mọc": "Cây mù u mọc hoang và được trồng tại rất nhiều tỉnh miền Bắc, Nam nước ta: Quảng Ninh, Kiến An, từ Quảng Bình đến Phan Thiết, Vĩnh Long, Mỹ Tho, Gia Định, Sông Bé, Bà Rịa…còn mọc ở một số tỉnh miền Nam Trung Quốc, Nhật Bản, Lào, Campuchia.",
+      "thường_mọc": "Cây mù u mọc hoang thường mọc tại những vùng đất cát tại bờ bể. Nhân dân miền Trung thường trồng lấy hạt ép dầu thắp đèn.",
+      "cho quả": "Cây trồng 4 năm bắt đầu cho quả. Năm đầu một cây cho khoảng 4kg hạt, những năm sau từ 30-50kg hạt.",
+      "thu hoạch": "Ở các tỉnh phía Nam vụ thu hoạch chính tháng 11-12, vụ sau vào tháng 4-5 (trước mùa mưa)."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

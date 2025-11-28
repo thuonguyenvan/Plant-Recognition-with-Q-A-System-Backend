@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch cổ đinh",
+      "ten_khac": "Sài hồ nam , ngân sài hồ.",
+      "ten_khoa_hoc": "Polycarpaea corymbosa (L.) Lamk.",
+      "ma_taxon": "167167",
+      "ho": "Cẩm chướng (Caryophyllaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống một năm, cao 10 – 40 cm.",
+      "rễ": "Rễ mọc thẳng, không phân nhánh, ít nhiều hoá gỗ.",
+      "thân": "Cành nhẵn hoặc có lông như len màu trắng nhạt.",
+      "lá": "Lá mọc đối hoặc mọc vòng, hình dải hẹp, dài khoảng 2 cm, rộng 5 mm, gốc thuôn, đầu nhọn, hai mặt nhẵn hoặc hơi có lông; lá kèm hình tam giác nhọn, màu trắng, 2 – 3 lần ngắn hơn lá ở phía dưới và dài bằng lá phía trên.",
+      "hoa": "Cụm hoa hình ngù chia 4 – 5 nhánh; lá bắc dạng vảy màu trắng hoặc hơi xám; hoa màu trắng hoặc hơi hung; đài 5 răng hình tam giác nhọn: tràng có cánh gần như vuông, có răng hoặc không răng, dính trên một đĩa mỏng, nhị 5, chi nhị ngắn hơn cánh hoa, bao phấn nhỏ hình mắt chim; bầu hình con quay, tròn đầu.",
+      "quả": "Quả nang, 3 mảnh vỏ; hạt 6 – 7, hình thận, có một đường rãnh.",
+      "mùa hoa": "tháng 6 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Polycarpaea Lamk, có 6 loài ở Việt Nam, trong đó có loài bạch cổ đinh trên; cây phân bố chủ yếu ở vùng ven biển, từ Hải Phòng, Thái Bình vào đến tận Ninh Thuận và Bình Thuận. Trên thế giới, loài này còn có ở các nước Trung Quốc, Campuchia, Thái Lan, Malaysia,… Bạch cổ đinh là loại cây thảo, sống một năm. Cây ưa sáng, ưa ẩm, nhưng sau khi đã ra hoa quả cây có khả năng hơi chụi hạn. Bạch cổ đinh thường mọc trên các vùng đất cát, đất cát pha lẫn sỏi đá ở ven đồi hay trong các trang cây bụi và có vùng duyên hải. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên bằng hạt, sau khi quả già, toàn cây tàn lụi."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sách “Cây thuốc Việt Nam” [Lê Trần Đức, 1997: 242] chỉ ghi: công năng thanh nhiệt, tư âm. Sách “Tuyền châu bản thảo” ghi: bạch cổ định vị ngọt, tính bình; vào các kinh tâm, can, phế, vị; có đắp lên. Công năng thanh nhiệt, giải độc, lợi tiểu tiện, chủ trị kiết lỵ, viêm ruột, lâm lậu, tiểu tiện bí, ung sang thăng độc [TDTH, 1996, II – 66]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây cả rễ được nhân dân sắc uống để chữa cảm sốt, đổ mồ hôi trộm. Có thể dùng như sài hồ bắc. Liều dùng 15 – 30 g/ngày sắc nước uống. Dùng tươi 30 – 50g giã nát, vắt lấy dịch uống. Ở Ấn Độ, người ta dùng toàn cây tươi, giã nát, uống dịch, bã đắp ngoài làm thuốc chữa rắn cắn, các loại côn trùng đốt. Lá khô giã nát thành bột, chiều với nước thành bánh đắp nguội hoặc rang nóng đắp trị nhọt, sưng viêm, vết cắn. Bột lá luyện với mật mía chế thành dạng viên tròn để điều trị vàng da [Chopra et al., 2001: 199]. Còn dùng toàn cây sắc uống chữa đái són đau, sỏi tiết niệu, mụn nhọt, sưng viêm lở loét [Kartikar, 1998, I – 239]. Theo Mhaskar và Caius, dù dùng trong hay dùng ngoài, bạch cổ đinh đều không có tác dụng chữa rắn cắn (Kirtikar, 1998, I – 240). Ở Malaysia, hoa bạch cổ đinh thường thấy trong các cửa hàng dược liệu của người Hoa kiều được dùng để làm dịu và sẵn se (Perry et al., 1980:75). Bài thuốc có bạch cổ đinh 1. Chữa cảm sốt, khi nóng khi rét, ớn lạnh, ngực tức, miệng đắng, không muốn ăn, sốt rét: Bạch cổ đinh toàn cây, hoàng cầm (hoặc hoàng đằng), cát sâm, mỗi vị 0,5g, bán hạ chế,cam thảo (hay cam thảo dây) mỗi vị 10g, gừng sống 3 lát, sắc lấy nước uống. 2. Chữa mụn nhọt, lở loét: Cây bạch cổ đinh, rây lấy bột mịn, bột hạt tiêu, trộn đều, chiêu với nước sôi để nguội, đắp lên."
+    }
+  ]
+}

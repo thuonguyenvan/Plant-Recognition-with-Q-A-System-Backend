@@ -1,0 +1,201 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Bọ mẩy",
+            "ten_khac": "Bọ mẩy, Đại thanh, Nữ trinh bọ nẹt, Đắng cẩy, Lẹo đực, Mạy kì cáy (Tày), Co khỉ cáy (Thái)",
+            "ten_khoa_hoc": "Clerodendrum cyrtophyllum Turcz",
+            "ma_taxon": "472981",
+            "ho": "Verbenaceae (Cỏ roi ngựa)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây nhỏ, cành tròn, lúc non có lông sau nhẵn.",
+            "lá": "Lá hình mác đầu nhọn, phía cuống cũng nhọn hay hơi tròn, hai mặt đều nhẵn, màu xanh lục sẫm, dài 5-13cm, rộng 3-7cm, gân nổi rõ ở mặt dưới.",
+            "hoa": "Cụm hoa hình ngù chùy, nhẵn, mang những nhánh hoa thưa, màu trắng, đôi khi màu hồng. Đài và tràng hoa có lông. Nhị thời dài gấp 2 lần ống hoa. Nhụy có vòi dài bằng hay gần bằng nhị, núm xẻ hai.",
+            "quả": "Qủa nhỏ bọc trong đài (hình)"
+        },
+        {
+            "@type": "Phân bố"
+        },
+        {
+            "@type": "Thông tin khác"
+        },
+        {
+            "@type": "Bộ phận dùng"
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Chưa thấy tài liệu nghiên cứu. Sơ bộ chúng tôi thấy có ancaloit"
+        },
+        {
+            "@type": "Tính vị"
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Chỉ mới thấy dùng trong phạm vị nhân dân. Thường dùng cho phụ nữ sau khi sinh nở, sao vàng sắc uống cho ăn ngon cơm, chóng lại sức. Ngày dùng từ 10-15g",
+            "làm thuốc": "Một vài vùng thường hái lá non về nấu canh ăn",
+            "chữa": "Nhân dân tỉnh Hồ nam Trung quốc dùng bọ mẩy chữa sốt phát ban, viêm amy đan, cổ họng, lỵ trực trùng.",
+            "có tác dụng": "Chú thích:  Cho đến nay cây này chưa được chính thức đưa vào khai thác ở nước ta. Nhưng một số tỉnh đã thu mua rễ cây này và bán với tên đại cốt bì. Đây là một sự nhầm lẫn cần tránh (xem vị địa cốt bì)."
+        },
+        {
+            "@type": "Cách dùng",
+            "mọc": "Mọc hoang khắp nơi trong nước ta, còn mọc tại Lào, Campuchia, Trung quốc, hay ưa đồi đất đỏ",
+            "được_dùng": "Thường hái toàn cây, bỏ rễ đem về phơi hay sấy khô mà dùng. Không phải chế biến gì, hoặc chỉ sao vàng cho thơm."
+        },
+        {
+            "@type": "luu_y"
+        }
+    ]
+}

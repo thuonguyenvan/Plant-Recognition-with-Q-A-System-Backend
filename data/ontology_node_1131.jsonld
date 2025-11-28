@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chổi xuể",
+      "ten_khac": "Chổi xuể, Thanh hao, Chổi trện",
+      "ten_khoa_hoc": "Baeckea frutescens L.",
+      "ma_taxon": "427988",
+      "ho": "Myrtaceae (Sim)",
+      "Mô tả": {
+        "cây": "Cây bụi cao 0,5-2m.",
+        "thân": "Phân nhánh ngay từ gốc, thân và cành nhỏ, mềm, mùi thơm.",
+        "lá": "Lá mọc đối hình kim không có cuống, nhẵn bóng, dài chừng 1cm, chỉ có một gân ở giữa, trên phiến lá nhỏ có những tuyến nhỏ, màu nâu.",
+        "hoa": "Hoa trắng, nhỏ, mọc đơn độc ở nách lá. Lá bắc rất nhỏ bé, sớm rụng, nụ hoa hình chóp ngược, ống đài chia 4 thùy, hình 3 cạnh hơi nhọn đầu. Cánh tràng tròn, rời nhau, nhị 8-10, chỉ rất ngắn, có tuyến tròn nằm ở giữa đỉnh các ô phấn.",
+        "quả": "Quả nang mở theo đường rách ngang. Hạt có cạnh, phôi thẳng.",
+        "mùa hoa": "Mùa hoa từ tháng 4 đến tháng 8."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Tháng 12 năm 1971, Đỗ Tất Lợi và Trần Tố Hoa đã định lượng tinh đầu trong toàn cây chổi xuể (trừ rễ) thu hái ở Quảng Bình, Bắc Cạn và Thái Nguyên đã thấy hàm lượng tinh dầu trong toàn cây tươi là 5-7%0 (0,5-0,7%). Nếu cất lá riêng được hàm lượng tinh dầu từ 10-30%o (1-3%). Tháng 2/1972, Phan Tống Sơn, Ngô Minh và Nguyễn Thu Huyền (Tạp chí Hóa học, 1974, 39-43) đã cất từ cây chổi xuể tươi thu hái ở Đông Triều, Quảng Ninh được 0,5% tinh đầu."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cho đến nay, nhân dân thường chỉ dùng cây chổi xuể làm chổi quét nhà ( lá và cành đùng cho vào chum vại đựng đậu xanh hay quần áo để tránh nhậy, sâu bọ cắn hại. Khi đau bụng, nguời ta thường nằm trên giường hay chõng có nan thưa, dưới gầm đốt cây chổi xuể. Có người dùng lá và hoa cây chổi xuể sắc uống điều kinh nguyệt không đều là 6g dưới dạng thuốc sắc. Người ta còn dùng cho phụ nữ sau khi đẻ uống để ăn ngon cơm, chóng đói, chóng hết huyết hôi. Trước đây không thấy nhân dân cất tinh dầu để dùng. Chỉ thấy ở một số nơi cất cầy chổi xuể cùng với cây tràm và bán hỗn hợp tinh dẩu tràm và tinh dầu chổi xuể với nhau. Tại Hà Nội, (trước và sau hiệp định Giơnevơ 1954 có một hiệu thuốc đông y sản xuất một loại thuốc mang tên “rượu chổi Hoa Kỳ” nhưng lại dịch ra tên “American camphor alcohol” nghĩa là cồn long não, chứ không phái chế từ cây chổi xuể.  Với những kính nghiệm trong nhân dân và những nghiên cứu gần đây, chúng ta có thể khai thác cây chổi xuể cất tinh dầu đùng chế một số dầu xoa và uống chữa cảm cúm, đau nhức, ăn uống không tiêu như tại các tinh Nghệ An, Hà Tĩnh vẫn làm."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang dại rất phổ biến trên các đồi miền trung du Vĩnh Phúc, Phú Thọ, Bắc Cạn, Thái Nguyên, Nghệ An, Hà Tĩnh, Quảng Nam, Đà Nẵng… Nhân dân thường thu hái thân cầy về làm chổi quét nhà. Khi bị cảm sốt, dùng ngay chổi này đốt duới giường, trõng của người ốm nằm để chữa bệnh. Một số địa phương đã bắt đầu dùng toàn cây (trừ bỏ rễ) hay hái cây về, phơi khô cho lá rụng hết, rồi dùng lá này cất tinh dầu gọi là tinh dầu chổi xuể hay tinh dầu chổi, còn gọi là dầu chổi. Người ta còn hái hoa cây chổi xuể phơi trong mát cho khô đùng làm thuốc."
+      },
+      "luu_y": {}
+    }
+  ]
+}

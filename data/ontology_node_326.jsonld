@@ -1,0 +1,262 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây vú sữa",
+      "ten_khac": "Vú sữa",
+      "ten_khoa_hoc": "Chrysophyllum cainito L.",
+      "ma_taxon": "48876",
+      "ho": "Hồng xiêm (Sapotaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 10-15m, có nhựa mủ trắng.",
+      "thân": "Thân hình trụ, cành mảnh dài mọc trải trống, vỏ nứt nẻ.",
+      "lá": "Lá mọc so le, hình bầu dục thuôn, gốc tròn, đầu nhọn, mép nguyên, mặt trên màu lục sẫm bóng, mặt dưới phủ lông dày màu hung vàng rất mịn, gân bên song song; búp non cũng có một lớp nhung màu hung vàng.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành tán nhỏ; đài 5 răng xếp lợp; tràng 5 cánh hình chuông; nhị 5 dính trên ống tràng, không có nhị lép, bầu 5-10 ô, mỗi ô có 1 noãn.",
+      "quả": "Quả mọng, hình cầu, to bằng nắm tay, vỏ ngoài nhẵn màu đỏ tím khi chín, thịt mềm màu trắng như sữa; hạt dẹt, bóng.",
+      "mùa hoa": "tháng 9-10",
+      "mùa quả": "tháng 2-4."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Vú sữa là loài cây bản địa ở vùng Tây Ấn Độ và cũng sớm được trồng ở đây, sau lan ra các nước khác trong khu vực, cả vùng nhiệt đới châu Mỹ. Ở vùng Đông Nam Á, vú sữa được trồng nhiều ở Indonesia, Philippin, Singapore, Thái Lan, Malaysia, Campuchia và Lào.  Ở Việt Nam, vú sữa chủ yếu tập trung ở các tỉnh phía nam, từ Quảng Nam, Quảng Ngãi trở vào, đặc biệt là các tỉnh miền Tây Nam Bội như Tiền Giang, Cần Thơ, Bến Tre, Đồng Tháp, Sa Đéc, Sóc Trăng và Bình Dương. Các tỉnh ở miền Bắc cũng có trồng nhưng ít hơn nhiều do cây cho ít quả và chất lượng quả cũng kém ngon.  Vú sữa là cây ưa sáng, không kén đất, sinh trưởng phát triển tốt trong điều kiện khí hậu nhiệt đới điển hình nóng và ẩm hoặc hơi khô, nhiệt độ trung bình từ 23-16 độc C. Cây sinh trưởng kém ở nhiệt độ trung bình năm dưới 20 độ C. Vú sữa có thể ra hoa rải rác quanh năm, nhưng thường tập trung vào một vụ chính từ tháng 9 đến tháng 2 năm sau (ở Philippin tháng 9-4, Indonesia tháng 3-7).  Vú sữa là cây ăn quả quan trọng ở vùng Đông Nam Á. Tổng sản lượng hàng năm trong toàn khu vực có thể đến hàng triệu tấn, trong đó Philippin là nước trồng vú sữa không nhiều, nhưng năm 1987 đã thu được 25.389 tấn quả. Ở Việt Nam ước tính sản lượng quả vú sữa mỗi năm cũng đến vài ngàn tấn, gần đay đã xuất tiểu ngạch qua biên giới Trung Quốc.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Nam"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Ngãi"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Tiền Giang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Cần Thơ"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bến Tre"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Đồng Tháp"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Sa Đéc"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Sóc Trăng"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bình Dương"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Vú sữa được trồng chủ yếu ở miền Nam, Cây ưa nhiệt độ và độ ẩm không khí thường xuyên cao, yếu chịu rét.  Vú sữa được nhân giống chủ yếu bằng hạt. Hạt vú sữa rắn chắc, giữ được sức nẩy mầm lâu. Hạt gieo trong vườn ươm sau 3-6 tuần thì mọc. Khi cây có 3-4 lá, có thể đánh đi trồng hoặc tốt hơn là trồng ở vườn ghép, đợi 24-30 tháng khi đường kính gốc ghép đạt 1-2cm thì ghép. Có thể ghép mắt hoặc ghép áp. Ghép áp có thể tiến hành sớm hơn, khi gốc ghép được 6-12 tháng tuổi. Ghép áp đạt 60-80% tỷ lệ sống, trong khi đó ghép mắt chỉ đạt 40-60%.  Cây ưa đất tốt, tuy nhiên vẫn chịu được đất cát pha nếu bốn phân đầy đủ. Đặc biệt cần bốn nhiều kali. Cây không chịu úng, ít sâu bệnh. Hàng năm cần bón phân thúc và tưới khi quả lớn.  Trồng bằng hạt phải mất 5-9 năm vú sữa mới cho quả. Quả cần thu lúc đã chín kỹ."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, rễ và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả vú sữa chứa chất khô 11,4%, protein 2,34%, chất béo 1,39%, acid hữu cơ 0,17%, đường toàn phần 4,40%, chất xơ 0,86%.  Hạt chứa chất đắng lucumin, dầu béo 6,6%, saponin 0,19%, dexirose 2,4%.  Lá có ít nhựa, acid resinic, một alcaloid và một chất đắng vô định hình.  (The Wcalth of India II. 1950)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả vú sữa xanh có vị chát, có tác dụng san se. Rễ và lá có tác dụng làm tan máu ứ, hoạt huyết, tiêu sưng, giảm đau. Vỏ thân có tác dụng kích thích và bổ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Một số nơi dùng vỏ cây vú sữa làm thuốc bổ và kích thích. Dùng dưới dạng thuốc sắc. Ngày uống 6-10g.  Quả vú sữa có thịt ngọt, thơm ngon khi thật chín, được dùng làm thức ăn bổ, tráng miệng. Rễ và lá chữa các chứng đau nhức, sưng tấy. Người ta còn dùng lá sắc lấy nước uống chữa bệnh đau dạ dày. Liều thường dùng 6-10g/ ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

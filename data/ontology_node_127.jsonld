@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Đậu đỏ",
+      "ten_khac": "Đậu đỏ, Xích tiểu đậu",
+      "ten_khoa_hoc": "Vigna angularis (Willd.) Ohwi et Ohashi",
+      "ma_taxon": "122889",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây loại thảo sống hằng năm, dài 1,5-2m.",
+      "lá": "Lá kép gồm 3 lá chét, lá chét đôi khi lại chia thành ba thuỳ cắt nông, mặt dưới nhiều lông trắng dài.",
+      "hoa": "Mùa hạ ở nách lá mọc hoa vàng hình bướm.",
+      "quả": "Quả nhỏ và dài trên mặt có lông, trong chứa hạ nhỏ.",
+      "hạt": "Hạt hình bầu dục hai đầu hơi dẹt, dài 2mm, đường kính 1,5mm vỏ màu đỏ nâu, hay tía nâu trơn bong nơi rốn ở phía bên hạt màu tráng vàng lục, chất cứng dòn."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong đậu đỏ nhỏ có chứa chất protit: chất béo, gluxit, canxi, photpho, sắt, vitamin B và một số chất khác"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo tài liệu cổ đậu đỏ nhỏ có vị ngọt, chua, tính bình vào hai kinh tâm và tiểu trường. Có tác dụng lợi thuỷ, hành huyết, tiêu thũng, bài nũng (loại mủ). Dùng trị thuỷ thũng cước khi tả lỵ ung nhọt sưng tấy",
+      "chữa": "Thường dùng hiện nay chữa phù thũng, dùng ngoài giã nát đắp lên nơi mụn nhọt, sưng tấy. Ngày dùng 20-40g dưới dạng thuốc sắc hay thuốc bột, dùng ngoài không kể liều lượng",
+      "được_dùng": "Đơn thuốc có đậu đỏ nhỏ Xích tiểu đậu, đương quy tán (Kim quy) dùng chữa đái ra máu: đậu đỏ nhỏ, đương quy hai vị bằng nhau tán bột. Ngày uống 10-20g bột này"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Đậu đỏ mọc hoang, vì cành lá nó ruờm rà, dày kín nên người ta thường trồng nơi nào nhiều cỏ tranh khó trừ thì cành lá rườm rà che rợp nắng làm cho cỏ tranh không mọc lên được, trồng liền vài năm thì có thể diệt được giống cỏ tranh cho nên ở Trung quốc người ta còn gọi là mao sài mễ",
+      "mọc": "Đậu đỏ chủ yếu mọc ở những vùng miền Bắc Trung quốc như Hà bắc, Liêu ninh, Sơn đông. Vào màu thu khi quả chín người ta hái lấy quả đem về đập lấy hạt.",
+      "phơi khô": "Có nơi dùng loại phan xích đậu thay, những hạt phan xích đậu rộng, ngắn không có rốn lồi cao còn hạt đậu nhỏ đỏ hẹp dài, có rốn hơi lồi cao. Cũng không nên nhầm với hạt cam thảo dây (tương tư tử) có rốn màu đen, khi dùng phơi hay sấy khô tán nhỏ"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

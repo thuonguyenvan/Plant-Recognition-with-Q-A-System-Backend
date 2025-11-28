@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mắm",
+      "ten_khac": "Mắm",
+      "ten_khoa_hoc": "Avicennia marina Vierh. var. rumphiana Bakhuiz",
+      "ma_taxon": "75723",
+      "ho": "Verbenaceae (Cỏ roi ngựa)",
+      "Mô tả": {
+        "cây": "Cây nhỡ hay cây gỗ lớn, thường phân cành nhiều ở gốc, cao 5-25m.",
+        "thân": "Những cành non lúc đầu phủ lông tơ trắng hay xám sau đó nhẵn bóng, có nhiều lỗ bì.",
+        "rễ": "Rễ thở hình dùi, mọc nổi trên bùn.",
+        "lá": "Lá thuôn hình mũi mác dài 4- 12cm, rộng 2-6cm, mặt trên nhẵn bóng, mặt dưới phủ lông, và mờ. Cả hai mặt đều có tuyến muối thừa.",
+        "hoa": "Hoa vàng hay vàng cam, mọc thành thùy ở ngọn cành gồm nhiều xim dài 3-15cm.",
+        "quả": "Quả nang hình trứng dài 3-4cm, rộng 1,5-2cm, đỉnh nhọn, màu vàng lục.",
+        "mặt": "Mắm đen – Avicennia marina Vierh var. – rumphiana Bakhuiz là cây bụi hoặc cây nhỡ, ít khi là cây to. Các cành khúc khuỷu, lá hình trái xoan ngược, tròn đầu, thuôn dần ở gốc, mặt trên nhẵn, hoá đen khi lá rụng, mặt dưới có nhiều lông hình dẹt màu trắng. Hoa giống như hoa loài trên."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Không thấy có ancaloid và glucozid (Theo Peirier) Kết quả phân tích mắm Avicennia tomentosa của một tác giả khác cho thấy tro 7,96% (chủ yếu có natri, kali, sắt, cacbonat), tinh dầu 0,6%, nhựa 2%, tanin 17%, chất đường 11%, không thấy có ancaloid, rất ít glucozid. Một chất màu đỏ chuyển thành đỏ xim trong môi trường kiềm và vàng rồi kết tủa trong môi trường axit."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhân dân ven biển miền Nam thường dùng lá cây mắm để đuổi muỗi. A. Petelot (1953) có thu thập một số tài liệu cho biết nhân dân nhiều nước trên thế giới (Cuba, Guyan, Tân Calêđônìa…) dùng vỏ mắm chữa hủi dưới dạng cao mềm hay cao lỏng. Cao mềm ngày cho uống từ 6 đến 8g dưới dạng thuốc viên, có thể dùng vỏ mắm ngâm rượu uống. Trên những vết loét của người ta đắp dung dịch có pha 50% cao lỏng mắm và 50% nước."
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây sống vùng nước mặn hay nước lợ, gặp ở cả hai miền nước ta, thường là cây tiên phong cố định bãi lầy, ưa sáng, chịu mặn giỏi, được trồng hoặc mọc tự nhiên. Lá làm phân xanh, chứa nhiều đạm, quả ăn được. Vỏ thân và vỏ rễ dùng làm thuốc."
+      },
+      "luu_y": {}
+    }
+  ]
+}

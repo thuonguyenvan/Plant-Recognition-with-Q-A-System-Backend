@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngọc trúc",
+      "ten_khac": "Ngọc trúc",
+      "ten_khoa_hoc": "Polygonatum odoratum (Mill.) Druce",
+      "ma_taxon": "61454",
+      "ho": "Convallariaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Cây Ngọc Trúc là cây thân thảo sống nhiều năm, chiều cao từ 20 – 70 cm. Thân rễ mọc ngang dưới đất, có hình trụ hơi dẹt, đường kính từ 5 – 14 mm, màu vàng trắng, có vị ngọt và hơi dính. Trên thân rễ có nhiều rễ con và mầm, mỗi 2 – 3 đốt có thể mọc lên một cành thân trên mặt đất. Thân cây mọc thẳng nhưng hơi nghiêng về một phía, có gân dọc, nhẵn, không có lông, màu xanh hoặc hơi tím đỏ, phần gốc có vài bẹ lá dạng màng.",
+      "lá": "Lá đơn, mọc so le trên thân, thường xếp theo hai hàng. Mỗi cây có khoảng 7 – 12 lá, hình bầu dục hoặc hình chữ nhật thuôn dài. Kích thước lá: Dài 5 – 12 cm, rộng 3 – 16 cm. Màu sắc: Mặt trên màu xanh, mặt dưới hơi phấn trắng. Mép lá nguyên, đầu lá hơi nhọn, gốc lá hình nêm. Cuống lá rất ngắn hoặc không có.",
+      "hoa": "Hoa mọc thành cụm 1 – 4 bông, trong điều kiện trồng có thể lên đến 8 bông. Cuống hoa dài 1 – 1,5 cm, có hoặc không có lá bắc nhỏ hình mũi mác. Hoa màu trắng lục hoặc vàng lục, hình chuông với 6 cánh hoa dính nhau ở phần gốc. Bên trong có nhị dài khoảng 4 mm, bầu nhụy 3 ngăn, vòi nhụy dài 10 – 14 mm, có mùi thơm nhẹ.",
+      "quả": "Quả mọng, hình tròn, màu xanh đen khi chín, đường kính 7 – 10 mm. Mỗi quả có 7 – 9 hạt, hạt hình bầu dục, màu nâu vàng, không bóng. Khi chín, quả sẽ tự rụng.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 6-9",
+      "cây": "Loài Disporopsis aspera (Hua) Engl. ex Krause (Ngọc Trúc hoàng tinh) vẫn được khai thác, thu mua và sử dụng thay thế Ngọc Trúc ở nhiều nơi miền núi."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "1. Nhu cầu độ ẩm  Cây ưa ẩm nhưng không chịu được úng nước. Khi lượng mưa trung bình hàng tháng đạt 150 – 200 mm, thân rễ phát triển mạnh nhất. Nếu lượng mưa thấp hơn 25 – 50 mm, cây sẽ sinh trưởng chậm. Cây trồng ở các địa phương trên tỏ ra thích nghi với điều kiện khí hậu ẩm mát của vùng nhiệt đới núi cao (khoảng   1400 – 1600m) Độ ẩm thích hợp giúp cây phát triển tốt, nhưng quá nhiều nước hoặc hạn hán đều ảnh hưởng tiêu cực đến sự sinh trưởng.  2. Đặc điểm về ánh sáng  Cây Ngọc Trúc là loài ưa bóng, có khả năng chịu bóng tốt. Ánh sáng mạnh có thể làm cháy lá, đặc biệt là ở giai đoạn cây con. Khi cây còn nhỏ, nếu gặp ánh nắng gắt, nhiệt độ cao và khô hạn, sự phát triển sẽ bị ức chế. Che bóng nhẹ giúp làm giảm cường độ ánh sáng, ổn định nhiệt độ không khí và đất, tạo điều kiện thuận lợi cho cây con phát triển.  3. Ảnh hưởng của nhiệt độ  Cây phát triển tốt nhất trong khí hậu mát mẻ. Ngọc Trúc ra hoa quả hàng năm. Cây con mọc từ hạt vào khoảng tháng 5-6. Cây có khả năng đẻ nhánh khoẻ từ phần thân rễ, thường mọc thành từng khóm lớn có nhiều nhánh.  Chu kỳ sinh trưởng khoảng 210 ngày, với từng giai đoạn thích hợp:  9 – 13°C: Thân rễ bắt đầu nảy mầm. 18 – 22°C: Cây ra hoa. 19 – 25°C: Thân rễ dưới đất phát triển mạnh, đây là giai đoạn tích lũy chất dinh dưỡng nhiều nhất. Khi nhiệt độ xuống dưới 20°C vào mùa thu, quả chín và phần trên mặt đất của cây chậm phát triển lại."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ thu hái vào mùa thu,, đào về, rửa sạch, cắt bỏ rễ con, đem phơi héo, hay đổ qua rồi lăn cho mềm, phơi khô. Ngọc Trúc thường được chế biến như sau:  Dạng thái phiến: Lấy dược liệu đã phơi khô thái phiến vát dài 3 – 5cm, dày 2 – 5cm. Dạng tẩm mật ong: Lấy Ngọc Trúc phiến tẩm đều với mật ong (cứ 10 kg Ngọc Trúc dùng 1-1,5 kg mật ong) trong 30 phút, rồi dùng lửa nhỏ sao đến khi có màu vàng, thơm, sờ không dính tay là được. Dạng chưng: Ngọc Trúc rửa sạch, đồ 6 – 8 giờ, ủ 1 ngày 1 đêm; tiếp tục làm như vậy 2 – 3 lần đến khi thuốc có màu đen, thái khúc dài 2 – 3cm. Dạng chế với rượu: (Ngọc Trúc 10kg, rượu 1,5kg). Ngọc Trúc rửa sạch, ủ mềm đủ 8 giờ cho mềm, thái khúc như trên, thêm rượu và chưng 4 giờ. Đựng dược liệu vào dụng cụ bằng đồng hoặc nhôm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo tài liệu Trung Quốc, Ngọc Trúc chứa các glucosid convallamarin, convallarin, azetidin acid carboxylic, các flavonoid như vitextin, vitextin 2′ glucosid, saponarin acid cheliđonic, các chất vô cơ Ca, P, K, Mg, Mn, Si. (Trung dược từ hải I, 1331; CA 103, 1985, 102083s).  Ngoài ra, còn chất nhầy odoranan, polygonum ‘ fructan o, A B C D (Võ Văn Chi Từ điển cây thuốc Việt Nam 1999 – 845). Từ dịch chiết methanol của Ngọc Trúc đã loại chất béo; Zaneczko Z; Jansson p. E- Sendra J đã chiết được một hỗn hợp các saponin steroid polyfurosid (I) và sản phẩm thuỷ phân do men của nó là odosprosid. Cấu trúc của (I) được xác định như sau: (CA. 108, 128433J)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo Dược điển Trung Quốc, Ngọc Trúc có vị ngọt, tính hơi hàn, quy vào kinh Phế và Vị, chủ yếu dùng để bổ âm, dưỡng phế, nhuận táo, sinh tân chỉ khát. Nó thường được sử dụng để điều trị tổn thương âm ở phổi và dạ dày, ho khan do nhiệt, họng khô, khát nước do nội nhiệt. Ngoài ra, các nghiên cứu cũng cho thấy Ngọc Trúc có tác dụng làm chậm quá trình lão hóa, giúp bồi bổ cơ thể và tăng cường sức khỏe."
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1/ Chữa âm hư phát sốt, ho khan, miệng khô, họng ráo ra mồ hôi trộm, cơ thể suy nhược: (a) Ngọc Trúc 16g; mạch môn, sa sâm, mỗi vị 12g; cam thảo dây 8g. sắc uống ngày một thang. (b) Ngọc Trúc, sinh địa, mạch môn, sa sâm, mỗi vị 12g; đường phèn 20g. sắc uống ngày một thang, hoặc làm viên uống.  2/ Chữa lao phổi: (a) Ngọc Trúc 16g; mạch môn, sa sâm, mỗi vị 12g; cam thảo dây 8g. sắc uống ngày một thang. (b) Ngọc Trúc, sinh địa, mạch môn, sa sâm, mỗi vị 12g; đường phèn 20g. sắc uống ngày một thang, hoặc làm viên uống.  3/ Nguyệt hoa thang gia giảm: Ngọc Trúc 8g; thiên môn, sinh địa, mạch môn, hoài sơn, phù bình, a giao, mỗi vị 12g; bách bộ, bối mẫu, bách hợp, mỗi vị 8g. Sắc uống ngày một thang.  4/ Bổ phế thang gia giảm: Ngọc Trúc 12g; đảng sâm 16g; bạch truật, hoài sơn, mạch môn, bách bộ chế, mỗi vị 12g; ngũ vị tử 6g. Sắc uống ngày một thang.  5/ Chữa viêm màng phổi do lao (Sa sâm mạch đông thang): Ngọc Trúc 16g; sa sâm, mạch môn, bạch thược, địa cốt bì, mỗi vị 12g; ngân sài hồ 8g; trần bì, bối mẫu, mỗi vị 6g. Sắc uống ngày một thang.  6/ Chữa viêm khớp dạng thấp: Ngọc Trúc 400g; đương quy 2000g; hoài sơn, hà thủ ô đỏ, đan sâm, mỗi vị 400g; đơn bì, bạch linh, mạch môn, trạch tả, mỗi vị 200g; thanh bì, chỉ thực, thù nhục, mỗi vị 100g. Các vị thuốc tán nhỏ, dùng mật ong hoặc sứô luyện thành viên 5g, ngày uống 4-6 viên.  7/ Chữa mắt đau đỏ, thấy hoa đèn, mù tối: Ngọc Trúc 12g; sinh địa, huyền sâm, thảo quyết minh sao, cúc hoa, mỗi vị 10g; bạc hà 2g. sắc xông hơi và uống.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

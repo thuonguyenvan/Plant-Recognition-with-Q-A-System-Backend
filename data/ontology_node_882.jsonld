@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mè lai",
+      "ten_khac": "Dầu lai, Dầu mè tía",
+      "ten_khoa_hoc": "Jatropha gossypiifolia L.",
+      "ma_taxon": "119099",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Cây nhỏ, cao 1 – 2m. Lá mọc so le, chia 3 thùy, đôi khi 5 thùy, gần như tròn, đường kính 12 – 15cm, gốc hình tim rộng, đầu hơi nhọn, mép có lông mi dạng tuyến rất nhỏ; cuống lá dài bằng phiến cũng có lông dạng tuyến; lá kèm xẻ.",
+        "hoa": "Cụm hoa mọc thành chùy; lá bắc thuôn; hoa màu đỏ, đơn tính; hoa đực có lá dài hình trái xoan có lông ở mặt ngoài; cánh hoa nhẵn, nhị một bó; hoa cái có lá đài hơi dài hơn ở hoa đực, cánh hoa giống hoa đực; bầu có lông.",
+        "quả": "Quả nang, hình cầu nhẵn, bằng ở hai đầu, có 3 khía; hạt màu xám đỏ, điểm chấm đen.",
+        "cây": "Cây nhỏ, cao 1 – 2m.",
+        "cuống": "cuống lá dài bằng phiến cũng có lông dạng tuyến",
+        "mùa hoa": "tháng 4-6",
+        "mùa quả": "tháng 4-6"
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Mè lai có nguồn gốc ở vùng nhiệt đới châu Mỹ, từ Mexico đến Paraguay; sau được du nhập và phát triển trồng ở khắp các vùng nhiệt đới châu Á, châu Phi và nhiều đảo khác ở Thái Bình Dương.  Ở Việt Nam, mè lai là cây trồng, song cũng có thể thấy cây đã trở nên hoang dại hóa ở nhiều tỉnh thuộc vùng trung du và núi thấp của miền Bắc, như Vĩnh Phúc, Phú Thọ, Bắc Ninh, Tuyên Quang, Thái Nguyên, Hà Tây, Quảng Ninh… Mè lai thuộc loại cây đặc biệt ưa sáng và chịu được khô hạn. Người ta thường trồng mè lai làm hàng rào xung quanh các ruộng cao hoặc bờ nương rẫy ở vùng đồi. Cây ra hoa quả nhiều hàng năm; tái sinh tự nhiên tốt từ hạt và có thể trồng được dễ dàng bằng cắm cành.",
+        "Đặc điểm sinh trưởng": "Mè lai thuộc loại cây đặc biệt ưa sáng và chịu được khô hạn. Người ta thường trồng mè lai làm hàng rào xung quanh các ruộng cao hoặc bờ nương rẫy ở vùng đồi. Cây ra hoa quả nhiều hàng năm; tái sinh tự nhiên tốt từ hạt và có thể trồng được dễ dàng bằng cắm cành."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Lá, hạt và vỏ cây."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": ""
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": ""
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Dầu hạt mè lai được dùng bôi ngoài trị bệnh phong. Nhựa cây bôi chữa rắn cắn. Lá sắc uống chữa ho khan, mỗi lần dùng 7-12 lá. Còn dùng lá mè lai, lá vạn niên thanh và củ ngô đồng nấu thành cao để làm thuốc dán.  Ở một số nước Đông Nam Á, nhựa mủ mè lai được dùng ngoài trị loét, lá tươi giã đắp trị sưng vú. Lá dùng uống trị bệnh sốt từng cơn hoặc nấu nước tắm trị sốt. Nước sắc lá là thuốc tẩy, làm dễ tiêu, trị bệnh về tai và hoa liễu, thuốc lọc máu. Lá đắp ngoài trị mụn nhọt, eczema và ngứa. Rễ trị bệnh phong và nước sắc vỏ cây có tác dụng điều kinh.  Mè lai được dùng ở Ấn Độ trị bệnh đường tiết niệu, nước sắc vỏ cây để điều kinh, nước sắc lá trị đau dạ dày, bệnh hoa liễu và đổ lọc máu. Lá dùng đắp trị mụn nhọt, ngứa, eczema, dịch ép lá bôi trị loét lưỡi trẻ nhỏ, lá tươi đắp tật sưng vú. Ở Nepal, nhân dân trị đau răng bằng nhựa mủ mè lai.  Ở Haiti, nước sắc lá mè lai dùng uống trị đau bụng, dịch ép lá trị phù. Ở Đông Phi, nhân dân dùng nhựa mủ trị vết loét trên lưỡi trẻ nhỏ; lá được dùng ngoài trị bệnh ngoài da và uống để nhuận tràng; trồng mè lai làm hàng rào để đuổi rắn. Ở Venezuela, rễ được đùng trị bệnh phong và giải độc rắn cắn.  Ở Costa Rica, nước sắc toàn cây mè lai được coi là có tác dụng trị ung thư, mặt khác ở đó có tỷ lệ người mắc ung thư thực quản cao, có thể do mè lai chứa một số este đồng gây ung thư trong đầu hạt. Ở đảo Ăng Ti, nhân dân dùng lá tươi trị sốt trong sốt từng cơn, nhựa mủ bôi trị loét, dầu hạt dùng ngoài trị bệnh phong.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

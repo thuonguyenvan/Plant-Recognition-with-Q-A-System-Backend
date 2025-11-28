@@ -1,0 +1,187 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cây Thị",
+            "ten_khac": "Thị, Hoàng phê, Thị muộn, Thị thập hùng, Mác chăng (Tày)",
+            "ten_khoa_hoc": "Diospyros decandra Lour.",
+            "ma_taxon": "430945",
+            "ho": "Ebenaceae (Thị)",
+            "Mô tả": {
+                "lá": "Lá mọc so le, phiến lá hình trứng thuôn, dài 5- 8cm, rộng 2- 4cm, cuống dài 6- 9mm, có phủ lông.",
+                "hoa": "Hoa đa tính họp thành xim, màu trắng. đài hợp ở gốc 4 răng, cả hai mặt đều có lông. Tràng hợp, 4 răng, nhị 8-14. Nhuỵ có 2 vòi.",
+                "quả": "Quả tròn hơi dẹp, đường kính 3-5cm, có 6- 8 ngăn, khi chín màu vàng, mang đài tồn tại. hạt cứng dẹt, dài 3cm, phôi sừng.",
+                "cây": "Thị là một cây gỗ cao tới 5-6m.",
+                "mùi": "mùi thơm hay khó chịu tuỳ theo người thích hay không."
+            },
+            "Phân bố": {},
+            "Thông tin khác": {},
+            "Bộ phận dùng": {},
+            "Thành phần": {
+                "Vỏ quả chứa": "một ít tinh dầu mùi gần giống mùi ête amyl valerianic.",
+                "Thịt quả thị": "Theo kết quả phân tích của Peirier (1932) có 86,20% nước; 0,16% chất béo; 0,67% chất protit; 12% gluxít; 0,33% tanin; 0,47% xenluloza; 0,50% tro.",
+                "Tanin trong thị": "thuộc loại tanin pyrocatechic, khi bị ôxy hóa thì cho chất màu đỏ nâu.",
+                "Lá": "chưa có tài liệu nghiên cứu."
+            },
+            "Tính vị": {},
+            "Công dụng": {
+                "cong_dung_y_hoc": "1. Năm 1961:  Bệnh viện Phú Thọ đã dùng nước sắc lá thị (100g lá thị phơi khô, sắc với nước và lấy đúng 100ml), mỗi ngày cho uống 10-20-30ml, đồng thời lấy bông tẩm nước sắc này đắp vào rốn để chữa bệnh không trung tiện được sau khi mổ. Kết quả rất tốt. Trong nhân dân, thường dùng lá thị phơi khô cho hút để gây đánh trung tiện, lá tươi giã đắp vào mụn nhọt cho chóng tan.  2. Thịt quả thị ăn nhiều vào lúc đói có thể trị được giun kim (kinh nghiệm nhân dân).  Vỏ quả thị phơi khô đốt thành than được dùng bôi lên các nơi phồng do con giời leo gây ra. Có khi người ta đốt vỏ quả thị thành than, trộn với than của cuống chiếu (chiếu trải giường nằm) và đinh hương tán nhỏ thổi vào các lỗ rò ở hậu môn.  Chú thích:  Năm 1953, Nguyễn Bá Tước có nghiên cứu quả maklua hay mạc nưa hay mạc luua (Campuchia) (Diospyros mollis Griff.), mọc ở Lào, Cãmpuchia, Thái Lan, Miến Điện.  Nhân dân Cămpuchia dùng hạt tẩy giun. Nguyễn Bá Tước đã chiết được từ quả này một hoạt chất hydro quinonic bằng ête axit. Kết tinh trong cồn 30° thành tinh thể hình kim, độ chảy 250-251o không tan trong nước, có huỳnh quang, xanh tím rõ mạnh ở tia cực tím. Tính chất paranaphtoquinon, công thức thô là C12H12O Tác giả đề nghị gọi là diospyroquinon. Ngoài diospyroquinon ra, còn tanin (1% tanin catechic steiol, axit hữu cơ, men (invectin và emunsin không có oxydaza, peroxydaza, không có ancaloit và flavon. Ngoài tác dụng trên giun còn có tác dụng kháng sinh nhẹ."
+            },
+            "Cách dùng": {
+                "được_dùng": "Được trồng ở khắp nơi ở Việt nam, chủ yếu để lấy quả ăn.  Quả hái về vào các tháng 8-9. Ngoài ra người ta còn dùng lá tươi hay phơi khô làm thuốc. Không có chế biến gì đặc biệt."
+            },
+            "Lưu ý": {}
+        }
+    ]
+}

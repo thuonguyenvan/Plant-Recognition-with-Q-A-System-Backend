@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thanh ngâm",
+      "ten_khac": "Thanh ngâm, Thằm ngăm đất, Sản đắng, Mật đất, Cây mật cá, Co khom địn (Thái), Cứt chuột, Rau đắng , Măng rô",
+      "ten_khoa_hoc": "Picria fel-terrae Lour.",
+      "ma_taxon": "841093",
+      "ho": "Scrophulariaceae (Hoa mõm chó)",
+      "Mô tả": {
+        "cây": "Cỏ sống hằng năm, cao 20cm, phân rất nhiều nhánh, với thân màu xanh hay đỏ tím.",
+        "lá": "Lá mọc đối, dài 35-45mm, rộng 25-30mm, khía răng, cuống dài 1-2cm, có dìa cánh.",
+        "hoa": "Hoa màu trắng, mọc thành chùm 4-5 hoa, thưa, lá bắc hình trái xoan có lông; đài xẻ ở dưới gốc có 4 thùy, 2 thùy lớn hình tim, 2 thùy nhỏ hình vạch; tràng có ống hình trụ gồm 2 môi, môi trên nguyên nhẵn, môi dưới dài hơn chia 3 thùy nông; nhị 2.",
+        "quả": "Quả nang dẹt, nằm trong đài còn lại, trông giống con hến. Hạt hình trụ, màu vàng, hơi thắt ở giữa.",
+        "mùa hoa": "tháng 9-11",
+        "mùa quả": "tháng 9-11"
+      },
+      "Thành phần": {
+        "thành phần": "Trong cây có một glucosid gọi là curangin (theo Boorsma) có tác dụng giống như digitalin và cũng có tác dụng trợ tim."
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây thanh ngâm vị đắng, chát, tính mát vào kinh can và tâm, có tác dụng thanh nhiệt, giải độc, tiêu thũng, lợi thấp, giảm đau, cầm máu. Lá có vị khai, kích thích ruột, làm ra mồ hôi, lợi tiểu, điều kinh."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cỏ thanh ngâm là một vị thuốc dùng trong những trường hợp kém ăn, kích thích tiêu hóa, lợi tiểu, cho ra mồ hôi, điều kinh, đau bụng, đau ngang lưng, mệt nhọc.",
+        "được_dùng": "Dùng dưới dạng thuốc sắc hay ngâm rượu. Ngày uống từ 6-12g. Dùng ngoài đắp nơi rấn cắn và vết thương, vết loét, không kể liều lượng. Người ta cho rằng khi đắp vết thương, vết loét, chất curangin thấm qua máu vào người và thành thuốc giải độc.",
+        "chữa": "kém ăn, kém ngủ, ho gà, đau ngực, ghẻ lở, mẩn ngứa"
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây mọc hoang dại ở miền rừng núi, nơi ẩm mát. Còn thấy mọc ở Philippin, Trung Quốc, Ấn Độ, Malaixia, Inđônêxia. Làm thuốc, người ta thu hái cả cây vào mùa hạ; hái về phơi hay sấy khô. Có khi sao thơm mà dùng."
+      }
+    }
+  ]
+}

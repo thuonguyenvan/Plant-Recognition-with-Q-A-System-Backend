@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hương bài",
+      "ten_khac": "Hương bài, Lưỡi đòng",
+      "ten_khoa_hoc": "Dianella ensifolia (L.) DC.",
+      "ma_taxon": "346164",
+      "ho": "Phormiaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây hương bài sở dĩ có tên như vậy là do rễ cây này được dùng làm hương đốt trong những ngày tết, dáng cây trông giống như cỗ bài Là một loài cỏ sống dai, có thân rễ nằm ngang, thân cao chừng 40-50cm, có thể tới 1m.",
+      "lá": "lá mọc so le, ôm lấy thân theo hai bên thân hình nan quạt giấy trông như chiếc quạt hay quân bài, do đó có tên rẻ quạt hay hương bài. Lá hình mác dài 40-70cm, rộng 1,53,5cm, không cuống, phía dưới dài, ôm lấy thân.",
+      "hoa": "Cụm hoa tận cùng, dài 10-20cm (không kể cuống) mọc thành thuỳ xim ngắn. hoa màu vàng nhạt hay hơi tím nhạt, khi còn là nụ có hình trứng, 3 lá đài, 3 cánh tràng, 6 nhị, bầu hình cầu, 3 ngăn,",
+      "quả": "quả mọng màu đỏ tía sẩm hay xanh đen, hình cầu đường kính 8-9mm ngăn có 1-3 hạt hình trứng"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chúng tôi chưa thấy nhân dân ta dùng cây hương bài làm thuốc, chỉ mới thấy dùng rễ phơi khô trộn với nhiều vị thơm khác như hồi, quế chi và bã mía để làm hương thắp Tỷ lệ các vị đại để như sau: rễ hương bài phơi khô 1kg, nẩy cây bưởi (vỏ thân cây bưởi tự bong ra) 1kg, bạch đàn và đại hồi mỗi thứ 300g, quế chi 300g, trầm 1kg, mía thái mỏng, giã và vắt bỏ nước đi 5kg. tất cả sấy khô tán nhỏ, cuộn vào giấy bản, trong có lõi que nứa để làm chân hương Tại các nước khác, người ta dùng lá giã nát đắp lên các mun nhọt. cây có độc không dùng làm thuồc uống được, súc vật ăn có thể chết. Tại Nghệ an và một số tỉnh Hoa nam Trung quốc, người ta dùng rễ cây này chỉ vắt lấy nước, dùng nước này tẩm gạo, phơi khô, gạo khô lại tẩm, làm như vậy 3 lần, rang gạo thơm, chuột ăn sẽ chết."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hương bài được trồng và mọc hoang ở nhiều nơi trong nước ta: tại các tỉnh miền Bắc, trồng chủ yếu ở các làng quanh vùng Tiền Hải – tỉnh Thái Bình để lấy rễ làm hương thắp, còn trồng nhiều ở Thanh hoá, Nghệ an, Hà tĩnh Chưa được trồng trên quy mô lớn, thường chỉ thấy mỗi gia đình trồng vài khóm để dùng trong dịp tết, cây có thể trồng trong bong râm và có thể trồng ngoài nắng. mùa hoa tháng 6-7. Đất trồng là đất mùn, đất vườn Vào cuối mùa thu, đào lấy rễ và thân rễ, rửa sạch phơi khô"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

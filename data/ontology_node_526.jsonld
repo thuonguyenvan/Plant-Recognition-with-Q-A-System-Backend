@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thồm lồm gai",
+      "ten_khac": "Thồm lồm gai, Rau má ngọ, Giang bản quy, Rau sông chua dây, Chua me gai",
+      "ten_khoa_hoc": "Polygonum perfoliatum L.",
+      "ma_taxon": "131249",
+      "ho": "Polygonaceae (Rau răm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống lâu năm, mọc dựa hoặc leo.",
+      "thân": "Thân hình trụ, nhẵn, màu tía, có gai quặp, ít ở gốc và nhiều ở ngọn.",
+      "lá": "Lá mọc so le, hình tam giác, dài 9 – 11cm, rộng 3 – 6cm, gốc bằng, đầu nhọn; cuống lá dài 3 – 5 cm mang đầy gai móc, hơi đính vào trong phiến gần gốc lá; bẹ chìa dạng lá.",
+      "hoa": "Cụm hoa mọc ở ngọn thành bông ngắn, ở phía dưới cuống cụm hoa có một bẹ chìa phát triển giống bẹ chìa của lá; lá bắc mỏng, hẹp, tỏa rộng; hoa màu trắng; bao hoa có 5 mảnh dạng cánh; nhị 8.",
+      "quả": "Quả có 3 rãnh dọc, khi chín màu đen, bao bọc bởi bao hoa tồn tại."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Thồm lồm gai phân bố ở vùng cận nhiệt đới và nhiệt đới Châu Á, bao gồm Ấn Độ, phía nam Trung Quốc, Lào, Nhật Bản, Indonesia. Ở Việt Nam, thồm lồm gai thường gặp ở các tỉnh miền núi và trung du, đôi khi thấy cả ở vùng đồng bằng nhất là ở phía Bắc.",
+      "thường_mọc": "Thồm lồm gai là cây ưa ẩm và ưa sáng, thường mọc lẫn với các loài cỏ hay cây bụi thấp ở bờ nương rẫy, ven rừng, ven đường đi hay trong các lùm bụi ở quanh làng.",
+      "Đặc điểm sinh trưởng": "Cây sinh trưởng mạnh trong mùa mưa ẩm, ra hoa quả nhiều hàng năm. Cây con mọc từ hạt thường thấy vào cuối mùa xuân hoặc đầu mùa hè. Trong thời kỳ sinh trưởng mạnh, nếu bị chặt phá, phần còn lại vẫn có khả năng tái sinh, nhưng những cây chồi mới mọc có thể sẽ không kịp ra hoa vào cuối mùa hè cùng năm. Thồm lồm gai có sức sống dai, lượng gieo giống nhiều, cây lại có nhiều gai nên thường gây khó khăn cho việc canh tác, trồng trọt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, dùng tươi."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ thồm lồm gai chứa kaempferol, acid cafeic methyl ester, quercetin, acid protocatechuic quercetin -3-O-β -D – glucuronid Me ester, acid cafeic acid 3, 3’, 4, 4’ – tetramethylelagic, acid vanilic, betulin acid betulic và acid ursolic. Ngoài ra, còn có ester của sterol, phytosteryl – β – D – glucosid, 3, 3′, 4 4′- tetramethvlelagic, acid 3, 3′ – dimethylelagic ester của acid béo mạch dài, acid béo và di – Me tartrat. Hạt khô chứa 3,30% dầu béo với các đặc điểm như sau: D420 0,9250, n20,437, chỉ số acid 2,9, chỉ số xà phòng hóa 184,6, chỉ số iod 105,9, chất không xà phòng hóa 4,9%. Các acid béo có trong dầu béo là acid no 22,1%, acid oleic 38%, acid linoleic 35,7% acid linolenic 4,2%. Toàn cây có indican, persicarin, acid p. coumaric, acid ferulic, acid citronelic. Acid 3, 3′ – dimethylelagic có tác dụng hạ huyết áp và co bóp tim đối với chuột cống.  Theo Maskey Kumud và cs, 1982 quả thồm lồm gai có fructose.  (Trung dược từ hải I, 1993; The Wealth of India VIII, 1969; Từ điển cây thuốc 1997; CA 100: 117. 81 lq; CA 103: 121. 967 z)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thồm lồm gai có vị chua, tính mát, có tác dụng thanh nhiệt, trừ thấp, tiêu độc, khỏi ngứa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thồm lồm gai được dùng uống trị cảm sốt, viêm ruột, tiêu chảy, kiết lỵ. Ngày 20 – 40g, sắc uống. Cây tươi giã đắp và nấu nước tấm rửa chữa mụn nhọt, viêm da lở ngứa, tai lở loét, trẻ chảy dãi loét cằm, chốc đầu, rắn cắn. Lá cũng được dùng nấu nước rửa, chữa vêt bỏng. Ở Ấn Độ, thồm lồm gai là thuốc làm dịu da, đắp trị khối u.  Nguồn: Cây thuốc và động vật làm thuốc."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

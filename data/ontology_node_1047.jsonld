@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ Sữa Lá Nhỏ",
+      "ten_khac": "Cỏ sữa lá nhỏ, Vú sữa đất, Cẩm địa, Thiên căn thảo, Nhả nực nọi (Thái), Nhả nậm mòn, Chạ cam (Tày), Cỏ sữa nhỏ lá",
+      "ten_khoa_hoc": "Euphorbia thymifolia L.",
+      "ma_taxon": "200055",
+      "ho": "Euphorbiaceae (Thầu dầu)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây thân thảo, sống hằng năm hoặc sống dai, có nhựa mủ.",
+        "thân": "Thân và cành mảnh, mọc tỏa rộng trên mặt đất, màu đỏ tím, có lông rất nhỏ.",
+        "lá": "Lá mọc đối, hình bầu dục, dài 7mm, rộng 4mm, gốc và đầu tù, mép có răng cưa nhỏ, mặt dưới phủ lông mịn, gân chính và gân bên nổi rõ, lá kèm nhỏ, hình dải.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành xim ít hoa; hoa hình chuông, 5 thùy hình tam giác nhọn, bầu có lông.",
+        "quả": "Quả nang, có lông nhỏ; hạt nhẵn có 4 cạnh.",
+        "mùa hoa": "tháng 5-10",
+        "mùa quả": "tháng 5-10"
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Ở Việt Nam, chi Euphorbia L. có 24 loài, trong đó gần 10 loài được dùng làm thuốc. Loài cỏ sữa lá nhỏ phân bố chủ yếu ở vùng nhiệt đới châu Á, Ấn Độ, Camphuchia, Lào, Malaysia, Indonesia, Philippin, Brunei, Thái Lan, Trung Quốc và Việt Nam Cây cũng được ghi nhận ở một số nước vùng Nam Mỹ.  Cỏ sữa lá nhỏ mọc rải rác khắp các tỉnh đồng bằng, ven biển, hải đảo, trung du và miền núi."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Toàn cây cỏ sữa lá nhỏ, thu hái vào mùa hè cùng tươi hay phơi khô."
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Bộ phận trên mặt đất có cpitaraxerol, quercetin 30- galactosid và alcol. Lá và thân có flavonoid là cosmosin. Rễ có alcol myricylic, laraxerol và tyrucalol. Cỏ sữa lá nhỏ chứa tinh dầu màu xanh, mùi đặc biệt, vị kích ứng. Thành phần gồm cymol, carvacrol, limonen, sesquiterpene và acid salicylic."
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Cỏ sữa có vị đắng the, tính bình, mát."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Cỏ sữa lá nhỏ được dùng toàn cây làm thuốc chữa lỵ trực khuẩn rất phổ cập trong nhân dân, nhất là đối với trẻ em.  Ngoài ra, còn dùng chữa cho trẻ em ỉa phân xanh, mụn nhọt, phụ nữ băng huyết hoặc mới đẻ ít sữa hoặc tắc tia sữa. Ngày dùng 40 – 100g, dạng thuốc sắc. Trẻ em 10 – 20g. Dùng riêng có thể hoặc phối hợp với rau sam.  Bài thuốc có cỏ sữa lá nhỏ  1/ Chữa lỵ trực khuẩn, hội chứng lỵ, tiêu chảy:  Cỏ sữa lá nhỏ 100g, rau sam 80g, nước 300ml sắc còn 150 ml, uống 3 lần trong ngày.  2/ Chữa kiết lỵ:  Cỏ sữa lá nhỏ, rau sam, rau má, lá mơ, mỗi vị 8s, vỏ lựu 6g, hạt cau khô 6g, cam thảo nướng 4g, vỏ quýt 4g. Sắc uống.  3/ Chữa đại tiện, táo bón ra máu:  Cỏ sữa lá nhỏ 60g, cỏ nhọ nồi 60g, nước 250 ml. Sắc còn 100 ml, chia làm 2 lần uống trong ngày.  4/ Chữa phụ nữ mới đẻ ít sữa hoặc tắc tia sữa:  Cỏ sữa lá nhỏ tươi 40g, hạt cây bông gạo 40g. Sắc kỹ lấy nước, cho gạo vào nấu cháo ăn."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "luu_y",
+        "luu_y": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chà là đồi",
+      "ten_khac": "Chả là núi, chà là nhỏ, muồng muồng",
+      "ten_khoa_hoc": "Phoenix loureiri Kunth var. humilis (Becc.) S.C.Barow.",
+      "ma_taxon": "365730",
+      "ho": "Cau (Arecaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi nhỏ, cao 3 – 4m.",
+      "thân": "Thân thường tiêu giảm thành trụ ngắn.",
+      "lá": "Lá kép lông chim, mọc tụ tập ở ngọn, dài hơn Tim gồm những lá chét ngăn và hẹp, các lá chét ở gốc cuống có dạng gai.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành bông mo hẹp, dải 20 cm, có lông tơ mềm, phân nhánh nhiều, nhánh mọc vòng và xếp thành nhiều tầng. Cụm hoa đực ngắn, rất hẹp, dạng chùy dài 4 – 5 cm gồm rất nhiều hoa hình bầu dục thuôn, đài hình chén nhọn, chia 3 răng hình tam giác; cánh hoa thuôn, nhị 6, chỉ nhị rất ngắn, bao phấn hình dải dài. Cụm hoa cái dài 15 cm, phân nhánh nhiều gồm nhiều họa có đài hình chén, chia 3 thùy, 3 cánh hoa gần tròn; bầu có 3 lá noãn, kéo dài ở đỉnh thành dầu nhụy cong.",
+      "quả": "Quả gần hình cầu, có mũi nhọn, khi chín màu vàng, rồi chuyển màu đỏ nâu: hạt to khoảng 1 cm.",
+      "mùa hoa": "tháng 3 – 4",
+      "mùa quả": "tháng 9 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Phoenix L. trên thế giới có 17 loài, phân bố khắp các vùng nhiệt đới, ở Việt Nam có 5 loài (kể cả 1 loài nhập nội). Loài chà là trên được phân thành 2 thứ (var.) và vùng phân bố của chúng ở nước ta cũng khác nhau:  Chà là núi (Phoenix loureri Kunth. var. loureiri Kunth. ); mọc ở đồi, độ cao so với mặt biến khoảng 700 – 1000m, ở Gia Lai (An Khê). Đắk Lắk (Krông Pắk). Chả là đồi (Phoenix loureiei Kunth. var.humilis (Becc.) SC. Barow ): mọc ở đồi, ở độ cao thấp, dưới 500m so với mặt biển. Phân bố rộng rãi khắp các tỉnh vùng núi thấp, trung du và ra đến một số hải đảo. Bao gồm các tỉnh: Hoà Bình (Kỳ Sơn, Lương Sơn), Tuyên Quang (Sơn Dương), Vĩnh Phúc (Tam Đảo, Lập Thạch), Phú Thọ (Đoan Hùng, Phù Ninh), Thái Nguyên (Đại Từ, Phú Bình), Lạng Sơn (Hữu Lũng), Bắc Giang (Lục Ngạn, Sơn Động); Quảng Ninh vào đến tận các tỉnh miền Trung, như Bình Định, Khánh Hoà, Ninh Thuận. Còn có ở một số đảo lớn như Hòn Mê (Thanh Hoá), Cù Lao Chàm (Quảng Nam).",
+      "thường_mọc": "Chà là đồi là cây đặc biệt ưa sáng, thường mọc rải rác hoặc tập trung thành đảm nhỏ ở đồi cây bụi. Cây có thể sống được trên nhiều loại đất, kể cả đất đã bị rửa trôi nhiều và nghèo dinh dưỡng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Chà là đồi là cây sống lâu năm, có khả năng chịu hạn rất tốt, không kén đất đai, ít bị sâu bệnh hại. Cây trồng không tốn công chăm sóc.  Nơi trồng nên chọn chỗ đất cao, thoát nước, cây trồng bằng hạt. Gieo hạt vào mùa xuân, ở Vườn ươm, dự đoán sau 8 – 12 tháng có thể đánh cây con đem trồng. Cuống lá chà là đồi có nhiều gai, vì thế khi trồng cần khoảng cách thoa (1,5 – 2m một cây) để về sau dễ chăm sóc và cắt tỉa bớt lá gai khi cây mọc thành bụi lớn."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả. Chồi ngọn."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chà là đồi (P.humilis Royle var. loureiri.) chứa vitexin, glucoluteolin, orientin, isoorientin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thịt quả chà là đồi cho trẻ ăn để khỏi đái dầm. Giã nát thịt quả đắp để chữa nứt nẻ da. Kinh nghiệm dân gian ở Tây Nguyên (Việt Nam) dùng quả làm thuốc chữa la chảy và để giã rượu. Quả có hương vị đặc biệt, dùng ăn được, nên liều chữa bệnh có thể 20 – 80g thịt quả tươi.  Hạt chà là đối tán thành bột rồi xoa lên đầu để gây mọc tóc. Rễ cây chà là đồi được nhân dân ta sắc uống chữa đòn ngã tổn thương, đau nhức. Chồi của cây tạo thành một loại cổ hũ như chồi dừa, có hương vị thơm ngon, ăn được.  Nhân dân dùng lá chà là đồi, xé nhỏ, phơi khô. để nhồi nệm làm gối hoặc đệm. Bao chung (lá bắc xếp thành vòng bao lây cụm hoa) phơi khô, tán bột, ngày uống 10 – 20g vào lúc tảng sáng khi đói với nước nóng chữa bệnh giang mai (Les plantes dans la médecine tunisienne) (Theo Lê Trần Đức, 1997; 1305)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

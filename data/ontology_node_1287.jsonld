@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cói",
+      "ten_khac": "Cói, lác, cói nước, lác nước",
+      "ten_khoa_hoc": "Cyperus malaccensis Lam.",
+      "ma_taxon": "427438",
+      "ho": "Cyperaceae (Cói)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo nhẵn, cao 40 – 100 cm.",
+      "rễ": "Thân rễ mọc bò, phủ những vảy màu đen nhạt.",
+      "thân": "Thân mọc thẳng, khỏe, có các mặt lõm, ở phần ngọn hơi có cánh.",
+      "lá": "Lá có bẹ dài ở phần gốc, mọc tụ tập ở ngọn, hình ngọn giáo hẹp, mép nguyên, nhẵn.",
+      "hoa": "Cụm hoa mọc ở ngọn thành bông ngắn gồm 4 – 10 bông nhỏ; lá bắc 2 – 5; bông nhỏ tỏa rộng, gần tròn, dài 15 – 22 mm, có 20 – 40 hoa; trục bông nhỏ có cánh hẹp; nhị 3; bao phấn hình dài thuôn.",
+      "quả": "Quả bế, thuôn hẹp, màu nâu đen nhạt, hình 3 cạnh.",
+      "mùa hoa": "tháng 7 – 9",
+      "mùa quả": "tháng 7 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Cyperus L. trên thế giới có khoảng 300 loài, phân bố rộng rãi khắp các vùng nhiệt đới và cận nhiệt đới, vùng ôn đới cũng có một số ít loài.  Ở Việt Nam hiện đã biết 61 loài và 4 thứ (Var.), phân bố từ vùng ven biển đến vùng đồng bằng, trung du và ở cả núi cao (Nguyễn Khắc Khôi, 2002). Cói phân bố gần như ở khắp các tỉnh ven biển, bao gồm Quảng Ninh, Hải Phòng, Thái Bình, Nam Định, Ninh Bình, Thanh Hoá, Nghệ An, Hà Tĩnh, Quảng Bình, Thừa Thiên – Huế, Quảng Ngãi, Ninh Thuận, Bình Thuận, Bến Tre, Kiên Giang, Bạc Liêu, Cà Mau. Có cả ở những tình nhiều kênh rạch như Tiền Giang, Long An: hoặc một vài địa phương ở sâu trong đất liền như Lạng Sơn, Hà Nội, Gia Lai. Thế giới cói cũng phân bố khá phổ biến ở Trung Quốc, Thái Lan, Malaysia, Indonesia, Australia.",
+      "thường_mọc": "Cây ưa sáng, mọc thành đám và trở nên loài ưu thế ở vùng cửa sông, thuộc vùng triều cao, trên đất bùn lầy nước lợ hoặc nước ngọt (ruộng lầy, đất ngập nước trong đất liền)."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cói vốn là cây mọc hoang dại, tuy nhiên để có sợi cói dài người ta vẫn phải trồng. Nơi trồng là các ruộng lầy, nhiều bùn, nước lợ ở vùng ven biển.  Cây giống: Cói ra hoa kết quả nhiều, nhưng cây giống để trồng thường lấy các nhánh con, tách ra từ các khóm. Cách trồng: Vào mùa nước cạn, tiến hành nhổ và vợ hết các loại cỏ dại khác, sau đó trồng cói như kiểu trồng lúa. Mỗi khóm trồng 3 – 4 nhánh, khảng cách 25 – 30 cm/khóm. Chăm sóc: Cói có khả năng sinh trưởng, phát triển nhanh. Song trong giai đoạn đầu, sau khi cây hồi phục người ta vẫn phải bón phân chuồng mục hoặc vãi đều NPK xuống ruộng, khi có cỏ dại khác xâm lấn cần vợ bỏ ngay. Sau mỗi lứa cắt cũng cần bón phân tiếp. Cói trồng sau 3 – 4 năm mới phải trồng lại."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân, rễ."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân rễ cói (thường gọi là củ cói) có vị ngọt, hơi the, hơi mặn, mùi thơm, tính mát, có công năng lợi tiểu, tiêu viêm, thông huyết mạch, tiểu tích bảng hòn cục."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ cói được dùng chữa bí tiểu tiện, đầy tức ở bàng quang, thuỷ thũng, bụng báng, nặng bụng, tiêu hoá kém. Còn được dùng chữa bế kinh, lợm giong, buồn nôn. Ngày dùng 10 – 20g, sắc nước uống chia 2 – 3 lần.  Thân rễ cũng được dùng điều trị bệnh sau khi đẻ (Post – partum treatment). Thân cây cói được dùng dệt chiếu, làm thảm, đệm túi, bao tải, dây buộc và nhiều mặt hàng thủ công khác."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

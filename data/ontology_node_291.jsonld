@@ -1,0 +1,252 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Cây sê ri",
+            "ten_khac": "Xơri vuông, Kim đồng nam, Anh đào Barbados, Anh đào Antilles",
+            "ten_khoa_hoc": "Malpighia glabra L.",
+            "ma_taxon": "165102",
+            "ho": "Măng Rô (Malpighiaceae)",
+            "description": {
+                "@type": "Mô tả",
+                "lá": "Lá mọc so le, nhẵn, dài 5-7 cm, gốc thuôn, đầu tròn, mép nguyên; cuống rất ngắn.",
+                "hoa": "Hoa mọc ở kẽ lá, màu hồng; dài có 5 răng nhọn; tràng 5 cánh có móng hẹp dài; nhị 10.",
+                "quả": "Quả hạch, hình cầu hơi dẹt, đường kính 1-2 cm, có 3 rãnh nông chia quả thành 3 phần bằng nhau, khi chín có màu đỏ sẫm bóng, thịt quả dày mềm nhiều nước, có vị ngọt thơm hơi chua, nhân có 3 rãnh.",
+                "cây": "Cây nhỏ hay cây nhỡ, dạng bụi.",
+                "thân": "Cành màu xám, có lỗ bi nhỏ."
+            },
+            "distribution": {
+                "@type": "Phân bố",
+                "phân_bố": "Sê ri có nguồn gốc ở vùng Trung Mỹ – Caribê đến Hoa Kỳ. Ở đây, cây đã được trồng từ lâu đời. Hiện nay, sê ri còn được thấy phổ biến ở khu vực nhiệt đới và cận nhiệt đới Nam Mỹ, Đông Nam Á và Nam Á, trong đó có Việt Nam. Ở Việt Nam, sê ri chỉ thấy trồng ở thành phố Hồ Chí Minh và các tỉnh lân cận.",
+                "ở_vùng": [
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Trung Mỹ"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Caribê"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Hoa Kỳ"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "nhiệt đới và cận nhiệt đới Nam Mỹ"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Đông Nam Á"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Nam Á"
+                    },
+                    {
+                        "@type": "schema:Place",
+                        "tên": "Việt Nam"
+                    }
+                ],
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": "tỉnh",
+                    "tỉnh": {
+                        "@type": "schema:Place",
+                        "tên": "Hồ Chí Minh"
+                    }
+                },
+                "Đặc điểm sinh trưởng": "Đó là loài cây nhiệt đới, ưa sáng, chịu hạn tốt, thích hợp với khí hậu nóng và ẩm, có nhiệt độ trung bình năm từ 20 đến 28°C.  Ở châu Mỹ, cây được trồng ở vùng núi cao hay nơi có khí hậu cận nhiệt đới, và còn có khả năng chịu lạnh tốt (khoảng -2°C). Tuy nhiên, ở thời kỳ cây non này mầm, sương mù và nhiệt độ thấp sẽ làm cho sê ri bị chết. Cây trồng bằng hạt sau 3 – 4 năm bắt đầu cho nhiều quả. Thời gian thu hoạch kéo dài đến 15 năm. Hoa sê ri tự thụ phấn hoặc thụ phấn nhờ côn trùng (ong mật). Cây có khả năng tái sinh cây chồi khoẻ sau khi bị chặt lớn. Sê ri ưa ở các tỉnh phía nam Việt Nam suốt năm trưởng, phát triển tốt trên nhiều loại đất. Đất trồng thích hợp cần thoát nước, pH từ trung tính đến hơi chua (5,5). Trồng bằng hạt, cành chiết hay giâm cành.",
+                "được_trồng": {
+                    "@type": "schema:ItemList",
+                    "mục": "nơi",
+                    "nơi": {
+                        "@type": "schema:Place",
+                        "tên": "Các nước vùng Trung Mỹ và Caribê",
+                        "ghi_chú": "Quả sê ri thường được chế biến dưới dạng mứt quả hay nước ép, đóng hộp xuất khẩu sang thị trường Hoa Kỳ."
+                    }
+                }
+            },
+            "additionalInformation": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": null
+            },
+            "usedParts": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Quả thu hái khi chín đỏ, dùng tươi."
+            },
+            "compositionList": {
+                "@type": "Thành phần",
+                "thành phần": "Thịt quả sê ri chiếm khoảng một nửa trọng lượng quả. Trong 100g thịt quả, có nước 82 – 91g, protein 0,7 – 1,8g, chất mỡ 0,1 – 0,2g, carbohydrate 7 – 14g, chất xơ 0,6 – 1,2g, vitamin C 4,7g (Proscea P. 1992).  Theo Cavalcante Maria Lucia, 1992, quả sê ri có 3 carotenoid là α-caroten, β-caroten và β-cryptoxanthin, với hàm lượng cao (CA 117, 2326/10³m).  Các vitamin khác là vitamin A 4300 – 12.500 đơn vị quốc tế vitamin A/100g, thiamin, riboflavin và niacin (Albert Y Leung và cs, 1996).  Theo Kuni Yoshi Shinetu và cs, 1992, hàm lượng glucose trong quả là 1,7%, fructose 2,0%, acid malic 0,97%, acid dehydroascorbic 1,3%.  Vỏ thân chứa tanin 20 – 25% dùng trong công nghệ thuộc da."
+            },
+            "tasteProperty": {
+                "@type": "Tính vị",
+                "Có vị": null
+            },
+            "medicalUseList": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Quả sê ri tươi chứa lượng vitamin C cao, vừa là món ăn bổ, vừa là vị thuốc tốt. Ở Ấn Độ, nước uống chế từ quả sê ri được dùng trị viêm họng, kiết lỵ, tiêu chảy và rối loạn chức năng gan. Có người ăn thường xuyên quả sê ri để chữa chứng tăng cholesterol máu."
+            },
+            "preparation": {
+                "@type": "Cách dùng",
+                "được_dùng": null
+            },
+            "caution": {
+                "@type": "luu_y",
+                "luu_y": null
+            },
+           "url": "https://tracuuduoclieu.vn/cay-se-ri.html"
+        }
+    ]
+}

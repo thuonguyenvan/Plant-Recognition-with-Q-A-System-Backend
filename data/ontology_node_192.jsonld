@@ -1,0 +1,321 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dứa dại",
+      "ten_khac": "Dứa dại, Dứa gỗ, Dứa gai, Mạy lạ (Tày), Co nam lụ (Thái), Lâu kìm (Dao)",
+      "ten_khoa_hoc": "Pandanus tonkinensis Mart. ex B. Stone",
+      "ma_taxon": "1146110",
+      "ho": "Pandanaceae (Dứa dại)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao 1-2m.",
+      "thân": "Thân gỗ phân nhánh, mang nhiều ngấn ngang là những sẹo do lá rụng để lại và những rễ phụ.",
+      "lá": "Lá mọc tập trung ở ngọn thân, cứng, hình dải, dài 0,7-0,8m, rộng 4cm, gốc thành bẹ to, đầu có hình mũi nhọn sắc, mép và gân có gai cứng, mặt trên màu lục sẫm bóng, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân hay kẽ lá gồm hoa đực và hoa cái hợp thành bông bao bọc trong mo; hoa đực có nhiều nhị, hoa cái có một số lá noãn",
+      "quả": "Quả phức to, có cuống mập, hình trứng hay gần tròn, gồm nhiều quả hạch, khi chín màu vàng.",
+      "mùa hoa": "tháng 2-5.",
+      "mùa quả": "tháng 2-5."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, hạt, lá, rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây dứa gỗ rừng chứa physcion, cirsilincol, acid palmitic, acid stearic, triacetanol – 1, β – sitosterol, stigmasterol, campestrol, daucosterol, β – sitostenon, stigmast – 4 -en – 3,6-dion.",
+      "Hạt phấn hoa và lá bắc rất thơm, khi chưng cất cho nước thơm.": "Hạt phấn hoa và lá bắc rất thơm, khi chưng cất cho nước thơm.",
+      "Phần ngoài của hoa, lá bắc chứa tinh dầu trong đó 70% là methyl ether của B – phenyl ethyl alcol.": "Phần ngoài của hoa, lá bắc chứa tinh dầu trong đó 70% là methyl ether của B – phenyl ethyl alcol.",
+      "Hoa nở chứa 0,1 – 0,3% tinh đầu trong đó có alcol benzylic, geraniol, linalol, linalyl acetat, bromostyren, phenyl alcol, aldehyd.": "Hoa nở chứa 0,1 – 0,3% tinh đầu trong đó có alcol benzylic, geraniol, linalol, linalyl acetat, bromostyren, phenyl alcol, aldehyd."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả dứa gỗ có vị ngọt, nhạt, tính mát, có công năng giải nhiệt, làm ra mồ hôi, tiêu viêm, lợi tiểu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá dứa gỗ có vị đắng, cay, thơm, chứa tinh dầu: có công năng kích thích và sát trùng."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ cửa gỗ có công năng thanh nhiệt, hạ sốt, làm long đờm, lợi tiểu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cụm hoa đực cây dừa gỗ có công năng trợ tim."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Sách “Tân hoa bản thảo cương yếu” ghi: Rễ dứa gỗ vị ngọt, nhạt, tính mát, có công năng phát hãn, giải nhiệt, lợi thuỷ, hoá thấp."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa cây dứa gỗ vị ngọt, tính hàn, có công năng thanh nhiệt, lợi thuỷ, khu thấp nhiệt, chỉ nhiệt tả [TDTH, 1998, IV: 123]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả hạch dứa gỗ, vị ngọt, tính bình, hơi mát; có công năng thanh nhiệt, lương huyết, tiêu viêm, giải độc, lợi tiểu [TDTH, 1997, III: 1570]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ dứa gỗ được dùng trị cảm mạo, sốt, viêm thận, thuỷ thũng, nhiễm khuẩn tiết niệu, viêm gan, xơ gan cổ trướng, viêm kết mạc mắt.",
+      "được_dùng": "Rễ dứa gỗ được dùng trị cảm mạo, sốt, viêm thận, thuỷ thũng, nhiễm khuẩn tiết niệu, viêm gan, xơ gan cổ trướng, viêm kết mạc mắt.",
+      "Liều dùng mỗi lần 15 – 30g dạng thuốc sắc.": "Liều dùng mỗi lần 15 – 30g dạng thuốc sắc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ chùm của cây dứa gỗ, rửa sạch, sao vàng, sắc uống để chữa mất ngủ, nhức đầu.",
+      "được_dùng": "Rễ chùm của cây dứa gỗ, rửa sạch, sao vàng, sắc uống để chữa mất ngủ, nhức đầu."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đọt non và rễ (rễ chưa bám đến đất được cho là tốt hơn) được dùng trong nhân dân làm thuốc thông tiểu, chữa đái rắt, sỏi tiết niệu.",
+      "được_dùng": "Đọt non và rễ (rễ chưa bám đến đất được cho là tốt hơn) được dùng trong nhân dân làm thuốc thông tiểu, chữa đái rắt, sỏi tiết niệu.",
+      "Còn dùng đắp để chữa lòi dom, Liều dùng 6 – 10g rễ, đọt non dùng 15 – 20g sắc uống. Dùng ngoài lấy lượng vừa đủ.": "Còn dùng đắp để chữa lòi dom, Liều dùng 6 – 10g rễ, đọt non dùng 15 – 20g sắc uống. Dùng ngoài lấy lượng vừa đủ."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả dứa gỗ được dùng chữa lỵ và ho,",
+      "được_dùng": "Quả dứa gỗ được dùng chữa lỵ và ho,",
+      "Liều dùng 30 – 90g tươi sắc lấy nước uống.": "Liều dùng 30 – 90g tươi sắc lấy nước uống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt có thể ăn được và được dùng trị viêm tinh hoàn, chữa trĩ.",
+      "được_dùng": "Hạt có thể ăn được và được dùng trị viêm tinh hoàn, chữa trĩ.",
+      "Ngày 20 – 40g sắc nước uống.": "Ngày 20 – 40g sắc nước uống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cùi quả, nếu nấu kỹ để loại bỏ các tinh thể calci oxalat, có thể dùng để ăn.",
+      "được_dùng": "Cùi quả, nếu nấu kỹ để loại bỏ các tinh thể calci oxalat, có thể dùng để ăn."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chồi non ở ngọn được dùng làm rau ăn như nõn dừa.",
+      "được_dùng": "Chồi non ở ngọn được dùng làm rau ăn như nõn dừa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Phần gốc trắng và mềm của lá dứa gỗ cũng ăn được.",
+      "được_dùng": "Phần gốc trắng và mềm của lá dứa gỗ cũng ăn được."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tinh dầu từ hoa và lá bắc được dùng trong công nghiệp mỹ phẩm.",
+      "được_dùng": "Tinh dầu từ hoa và lá bắc được dùng trong công nghiệp mỹ phẩm.",
+      "Xoa vào thái dương và mũi để trị nhức đầu, N041 vào chỗ đau nhức đề chữa thấp khớp.": "Xoa vào thái dương và mũi để trị nhức đầu, N041 vào chỗ đau nhức đề chữa thấp khớp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bài thuốc có dứa gỗ  Chữa khó đại, đái rắt, lợi tiểu: Dùng rễ dứa gỗ và rễ dứa, mỗi vị 20 – 40g, sắc lấy nước uống.",
+      "được_dùng": "Bài thuốc có dứa gỗ  Chữa khó đại, đái rắt, lợi tiểu: Dùng rễ dứa gỗ và rễ dứa, mỗi vị 20 – 40g, sắc lấy nước uống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa nước tiểu vàng, đường tiểu tiện thông: Rễ dứa gỗ, rau dừa nước, mỗi vị 15g, râu ngô 10g, vỏ quýt 5g. Đổ 500 ml nước, sắc còn 150ml, ngày uống 1 thang (Kinh nghiệm ở An Giang).",
+      "được_dùng": "Chữa nước tiểu vàng, đường tiểu tiện thông: Rễ dứa gỗ, rau dừa nước, mỗi vị 15g, râu ngô 10g, vỏ quýt 5g. Đổ 500 ml nước, sắc còn 150ml, ngày uống 1 thang (Kinh nghiệm ở An Giang)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa phù thũng, cổ trướng: Rễ dứa gỗ 40g, rễ cỏ xước, cỏ lưỡi mèo (Elephantopus scaber L.), mỗi vị 20 – 30g, sắc uống, ngày 1 thang.",
+      "được_dùng": "Chữa phù thũng, cổ trướng: Rễ dứa gỗ 40g, rễ cỏ xước, cỏ lưỡi mèo (Elephantopus scaber L.), mỗi vị 20 – 30g, sắc uống, ngày 1 thang."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Để dễ tiêu hoá, mau phục hồi sức khỏe, bổ dưỡng cho phụ nữ sau khi đẻ: Rễ dứa gỗ, vỏ cây chòi mòi Antidesma ghaesembilla Gaertn., mỗi vị 40 – 60g, sắc lấy nước uống, ngày 1 thang.",
+      "được_dùng": "Để dễ tiêu hoá, mau phục hồi sức khỏe, bổ dưỡng cho phụ nữ sau khi đẻ: Rễ dứa gỗ, vỏ cây chòi mòi Antidesma ghaesembilla Gaertn., mỗi vị 40 – 60g, sắc lấy nước uống, ngày 1 thang."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa viêm thận, phù thũng: Rễ dứa gỗ 30 – 60g nấu với thịt lợn nạc rồi ăn (kinh nghiệm ở Trung Quốc).",
+      "được_dùng": "Chữa viêm thận, phù thũng: Rễ dứa gỗ 30 – 60g nấu với thịt lợn nạc rồi ăn (kinh nghiệm ở Trung Quốc)."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Chữa sỏi thận, sỏi tiết niệu: Hạt dứa gỗ 10g, hạt chuối hột 10g, kim tiền thảo 15g, thân rễ (củ) cây cỏ ống Panicum repens L. 10g, sắc lấy nước uống, ngày 1 thang (kinh nghiệm ở An Giang).",
+      "được_dùng": "Chữa sỏi thận, sỏi tiết niệu: Hạt dứa gỗ 10g, hạt chuối hột 10g, kim tiền thảo 15g, thân rễ (củ) cây cỏ ống Panicum repens L. 10g, sắc lấy nước uống, ngày 1 thang (kinh nghiệm ở An Giang)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang và được trồng ở nhiều nơi để làm hàng rào và có hoa thơm, nhiều nơi trồng lấy lá dệt chiếu và túi.",
+      "Cây mọc hoang và được trồng ở nhiều nơi để làm hàng rào và có hoa thơm, nhiều nơi trồng lấy lá dệt chiếu và túi.": "Cây mọc hoang và được trồng ở nhiều nơi để làm hàng rào và có hoa thơm, nhiều nơi trồng lấy lá dệt chiếu và túi."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Người ta dùng đọt non để ăn, phần trắng và mầm của cuống lá đôi khi cũng được dùng để ăn.",
+      "Người ta dùng đọt non để ăn, phần trắng và mầm của cuống lá đôi khi cũng được dùng để ăn.": "Người ta dùng đọt non để ăn, phần trắng và mầm của cuống lá đôi khi cũng được dùng để ăn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Đọt non và rễ còn được dùng làm thuốc.",
+      "Đọt non và rễ còn được dùng làm thuốc.": "Đọt non và rễ còn được dùng làm thuốc."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Rễ lấy về (rễ non chưa bám đất tốt hơn) thái mỏng, phơi hay sấy khô dùng dần.",
+      "Rễ lấy về (rễ non chưa bám đất tốt hơn) thái mỏng, phơi hay sấy khô dùng dần.": "Rễ lấy về (rễ non chưa bám đất tốt hơn) thái mỏng, phơi hay sấy khô dùng dần."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

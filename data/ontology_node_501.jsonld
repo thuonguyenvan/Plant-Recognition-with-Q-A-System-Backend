@@ -1,0 +1,326 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nàng nàng lá to",
+      "ten_khac": "Bọt ếch lá to, tu hú lá to, tử châu lá to",
+      "ten_khoa_hoc": "Callicarpa macrophylla Vahl",
+      "ma_taxon": "711946",
+      "ho": "Cỏ roi ngựa (Verbenaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay cây nhỡ dạng bụi, cao 3 – 5m.",
+      "thân": "Thân hình trụ, phần nhiều cành.",
+      "cành": "Cành non hơi có cạnh và có lông mịn hình sao, màu xám nhạt.",
+      "lá": "Lá mọc đối, hình trái xoan hoặc trái xoan – mũi mác, gốc hình nêm hoặc tròn, đầu thuôn thành mũi nhọn, mép có răng nhỏ đểu, hai mặt có lông ngắn hình sao, màu trắng hoặc xám, dày hơn ở mặt dưới; cuống lá mập, ngắn, có lông.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành sim phân đôi; lá bắc nhọn và thẳng, hoa nhiều màu tía; đài hình đấu, 4 răng rất nhỏ, phủ lông hình sao, tràng có ống ngắn, 4 cánh nhẵn hoặc hơi có lông, nhị 4, thò ra ngoài tràng, bầu nhẵn.",
+      "quả": "Quả hạch nhẵn.",
+      "mùa hoa": "tháng 3 – 5",
+      "mùa quả": "tháng 6 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Callicarpa L. trên toàn thế giới có khoảng 140 loài, phân bố ở vùng nhiệt đới và cận nhiệt đới ở cả 2 bán cầu; ở Việt Nam có 20 loài. Loài nàng nàng lá to trên phân bố rải rác ở các tỉnh miền núi, tới độ cao khoảng 1.300m (Tế Xăng – Kon Tum).",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Điện Biên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tây"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tĩnh"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Khánh Hòa"
+            }
+          }
+        ]
+      },
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Ấn Độ"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Nể Pan"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Srilanka"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Butan"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Mianma"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Trung Quốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Thái Lan"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Indonesia"
+        }
+      ]
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa luteolin, apigenin, luteolin – 7 – O – glucuronil, apigenin – 7 – O – glucuronid, 3, 3 – trimethoxy – 4′, 5-dihydroxyplavon.",
+      "gồm chất": "Nàng nàng lá to còn chứa calliterpenon (=3’OXO-13β-kauran-16α, 17-diol) acetat (=16α, 17- isopropylideno-3-OXO-fhyllocla-dan), cafliphyllin, acid betulinic, 5, 4′-dihydroxy-3, 7- dimethoxyflavon và β-sitosterol, 3β-16α, 17- trihydroxyphyllocladan."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá nàng nàng lá to được dùng trị các loại chảy máu như: xuất huyết đường tiêu hóa, thổ huyết (nôn ra máu); khái huyết (ho khạc ra máu); chảy máu cam, đái ra máu; vết thương hở xuất huyết, đòn ngã tổn thương, ngoại thương xuất huyết. Liều dùng, ngày 20 – 40g sắc nước uống.",
+      "được_dùng": "Với các bệnh tổn thương xuất huyết bên ngoài, nên kết hợp dùng ngoài, lấy cây tươi, rửa sạch, giã nát, đắp.",
+      "làm thuốc": "Rễ được dùng trị phong thấp, đau nhức xương, ngày dùng 40 – 60g sắc kĩ với nước, uống.",
+      "chữa": "Ở Trung Quốc, chủ yếu dùng nàng nàng lá to để điều trị các bệnh xuất huyết như thổ huyết, khái huyết, tiện huyết (đái ra máu), chảy máu cam, lao xuất huyết. Ngày dùng 15 – 60g sắc uống. Rễ được dùng chữa đau xương, phong thấp [TDTH, 1993, 1: 271; Kee, 1999: 355]. Ở Ấn Độ, nhân dân lấy lá hơ nóng, đắp lên chỗ khớp xương sưng đau để chữa thấp khớp [Srivastava, 1989: 22; Nadkarni, 1999: 235]. Dầu của rễ có mùi thơm, có tác dụng lợi tiêu hoá, kiện vị, để điều trị rối loạn hoạt động dạ dày (Chopra, 2001: 45: Kirtikar, et al., 1998, III: 1922). Trong y học Ayurveda (Ấn Độ), nàng nàng lá to được dùng điều trị lỵ ra máu, các chứng xuất huyết. Còn được dùng chữa sốt, có cảm giác bỏng rát và rối loạn tiết niệu (Sarim, 1996)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

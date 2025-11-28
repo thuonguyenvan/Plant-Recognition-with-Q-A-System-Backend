@@ -1,0 +1,193 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sơn tuế",
+      "ten_khac": "Thiên tuế không gai",
+      "ten_khoa_hoc": "Cycas inermis L.",
+      "ma_taxon": "136201",
+      "ho": "Tuế (Cycadaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống lâu năm, cao 1 – 2m.",
+      "lá": "Lá mọc tập trung ở ngọn, hình lông chim, gồm rất nhiều lá chét mọc đối hình dải, ngọn giáo, hai mặt nhẵn, mặt trên màu lục sẫm, mặt dưới nhạt ; cuống lá không có gai.",
+      "hoa": "Nón đực mọc thẳng đứng ở ngọn, đơn độc, hình trái xoan thuôn ở đầu, đường kính 10 cm, vảy quả ở gần ngọn gập xuống, tận cùng bằng một bản phiến xẻ tua ; nón cái gồm nhiều lá noãn có lông, phần cuối không sinh sản.",
+      "quả": "Hạt hình trái xoan, dài khoảng 4 cm, màu hung đỏ, xếp sít lại thành chùm to."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Việt Nam là nước có số loài tuế (Cycas) phong phú vào bậc nhất trên thế giới. Với tổng số 24 loài, chỉ xếp sau Australia (28 loài) và trên Trung Quốc (18 loài) (K. D. Hill., N. T. Hiệp, P. K. Loc., 2004). Sơn tuế được tìm thấy ở Việt Nam và mô tả từ năm 1793. Cho đến nay cây cũng mới chỉ thấy có Việt Nam. Cây phân bố rải rác dọc theo bờ biển, từ phía nam đèo Hải Vân – thành phố Đà Nẵng đến Đồng Nai (VQG Cát Tiên). Riêng ở tỉnh Khánh Hoà có 2 điểm phân bố là Cam Ranh và huyện Khánh Sơn.",
+      "Đặc điểm sinh trưởng": "Sơn tuế thuộc nhóm tuế thân cột cao, ưa sáng và có khả năng chịu hạn tốt. Nơi sống thường thấy là rừng kín thường xanh đã trở nên thí sinh hoặc rừng nửa rụng lá. Đất ở đây thường nghèo dinh dưỡng, trên đá granit."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Sơn tuế chứa 0,027 – 0,061% cycasin, sotetsuflavon, hirokiflavon, amentoflavon, các neocycasin A, B, C, D, E, E, F, G. (Trung được tử hải I, 1993)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá sơn tuế có vị ngọt, hơi chua, tính ổn. Sách “Phúc kiến dân gian thảo dược” ghi: vị ngọt, hơi ôn, có ít độc; sách “Triết Giang dân gian thảo dược” lại ghi tính hàn, sách “Toàn quốc Trung thảo dược hội biên” ghi: vị ngọt, nhạt, tính bình, có ít độc; còn sách “Trung thảo dược học” lại ghi: lá sơn tuế vị ngọt, tính ôn [Trung dược từ hải, quyển I, tr.1261]. Nhân hạt sơn tuế có vị bùi, tính bình, ăn được, ít độc, có tác dụng sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Để chữa các tổn thương ngoài da, vết loét, vết thương, mụn nhọt, lấy hạt sơn tuế, nghiền nát, xoa nhẹ lên tổn thương. Lá khô mỗi ngày 10 – 15g sắc uống chữa ung bướu.",
+      "được_dùng": "Nhân hạt có độc, nhưng có thể chế thành bột để ăn. Cắt nhân hạt ra từng mảnh nhỏ, ngâm suốt 3 ngày đêm ở chỗ nước chảy. Sau đó, rửa kỹ, phơi khô ngoài nắng thật kỹ, rồi chế thành bột. Loại bột trắng ăn ngon hơn bột gạo. Nếu chế biến không kỹ, ăn dễ bị say.",
+      "làm thuốc": "Ở Ấn Độ, nón đực được dùng để kích thích và kích dục, nghiền nón đực thành bột, phối hợp với các chất khác làm thành bánh, mứt ăn để chữa yếu sinh lý."
+    }
+  ]
+}

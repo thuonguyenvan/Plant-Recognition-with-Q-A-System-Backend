@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mù mắt",
+      "ten_khac": "Cây mù mắt, Hoa dài, Cây mù mắt, Lỗ danh",
+      "ten_khoa_hoc": "Hippobroma longifolia (L.) G. Don",
+      "ma_taxon": "154827",
+      "ho": "Lobeliaceae ( Lỗ bình)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, cao 0,5m, phân nhiều cành, thân có lông.",
+      "thân": "Toàn cây có nhựa mủ độc màu trắng, dây vào mắt có thể làm mù mắt.",
+      "lá": "Lá mọc so le, hình mũi mác, gốc thuôn,đầu nhọn, mép có răng thưa, mặt trên sẫm, mặt dưới nhạt.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá, lưỡng tính, không đều, 5 lá đài răng nhọn, 5 cánh hoa liền nhau thành một ống dài tới 10cm, màu trắng, 5 nhị dính liền nhau bởi bao phấn thành một ống bao quanh vòi nhụy, còn chỉ nhị vẫn rời nhau, 2 lá noãn, bầu hạ. Một vòi dài tận cùng tới đầu nhụy hai thuỳ.",
+      "quả": "Quả nang, hình trứng hoặc hình cầu, có đài tồn tại, hai ngăn chứa nhiều hạt nhỏ.",
+      "mùa hoa": "tháng 5 – 6.",
+      "mùa quả": "tháng 7 – 8."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây vốn nguồn gốc ở Pêru (Nam Mỹ), sau được du nhập sang vùng Địa Trung Hải, châu Phi. Hiện nay, cây mọc hoang dại và được trồng ở nhiều nước Châu Á, cây có ở Ấn Độ, Trung Quốc, Malaysia và Việt Nam. Ở Việt Nam, Mù mắt mọc tự nhiên rải rác ở vùng núi cao trên 1300m như Mù Cang Chải (Yên Bái), Yên Minh, Quản Bạ ( Hà Giang ), Bắc Hà ( Lào Cai).",
+      "thường_mọc": "Cây thường  mọc lẫn trong các trảng cỏ ở đồi, nương rẫy, các bãi hoang hay ven đường đi. Cây ra hoa quả nhiều, khi quả già tự mở để hạt phát tán ra xung quanh. Có hiện tượng rụng  lá và hơi tàn lụi vào mùa đông. Mù mắt ở Việt Nam có thể xếp vào diện những loài hiếm. Trong quá trình điều tra ở các địa phương, thỉnh thoảng mới gặp một vài cá thể. Cần lưu ý bảo tồn.",
+      "Đặc điểm sinh trưởng": "Thường ít được thu hái, do tính chất gây kích ứng của nhựa mủ. Muốn dùng cây này, người ta thu hái toàn bộ phận trên mặt đất vào lúc cây kết quả và gần chín. Thu hái về thái nhỏ, phơi hay sấy khô."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Từ cây có thể chiết được một chất độc kết tính là alcaloid gọi là isotomin có tác dụng tương tư như lobelin.",
+      "chứa": "Toàn cây hoa dài chứa nhựa hắc mủ rất đắng gây kích ứng mắt, nêm vào có cảm giác nóng bỏng."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây hoa dài rất ít được sử dụng ở Việt Nam, nhưng có thể nghiên cứu để chiết isotomin có tác dụng gần như lobelin, một loại thuốc kích thích dùng trong bệnh hen suyễn, khó thở.",
+      "được_dùng": "Cồn thuốc 1:10 (trong cồn 70o) có thể dùng với liều 1-3g trong 24 giờ.",
+      "chữa": "Cây có độc nên phải dùng hết sức cẩn thận."
+    },
+    {
+      "@type": "Cách dùng",
+      "phơi khô": "Cây thu hái vào lúc quả gần chín. Thái nhỏ và phơi khô, sấy khô.",
+      "được_dùng": "Dùng toàn thân cây.",
+      "có tác dụng": "Cây có độc, phải đặc biệt chú ý tránh nhầm lẫn."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phan tả diệp",
+      "ten_khac": "Hiệp diệp, Phan tả diệp, Tiêm diệp, Séné",
+      "ten_khoa_hoc": "Cassia angustifolia Vahl",
+      "ma_taxon": "52349",
+      "ho": "Caesalpiniaceae (Vang)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao chừng 1m.",
+      "lá": "Lá kép lông chim chẵn, thường gồm 5 đến 8 đôi, cuống ngắn, phiến lá chét về phía cuống hơi không đối xứng.",
+      "hoa": "Hoa mọc thành chùm ở kẽ lá, gồm 6-14 hoa, cánh hoa màu vàng, 10 nhị: 3 nhị phía trên nhỏ và bất thụ, 4 nhị ở giữa cùng lớn, 3 nhị ở dưới cong.",
+      "quả": "Quả đậu hình túi, dài 4-6cm, rộng 1 – 17cm, khi còn non có lông trắng mềm, về sau rụng đi, trong quả có 4-7 hạt.",
+      "mùa hoa": "tháng 9-12",
+      "mùa quả": "tháng 3 năm sau."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoạt chất của phan tả diệp là antraglucozit với tỷ lệ từ 1-1,5% antraglucozit toàn bộ, biểu thị bằng emodin trong đó trên 90% ở dạng kết hợp.",
+      "gồm chất": "Thành phần chủ yếu các antraglucozit đó là: Xenozit A (sennozid A) và xenozit B tức là chất dihydro direin anthron glucozit. Ngoài ra, một chất thứ ba đã được xác định là aloe.emođin tự do và rein.",
+      "Các hợp chất": "Những chất khác là kaempferola C10H6O2(OH)4 và izoramnetin, Xenozit A:"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Phan tả diệp được dùng cả trong Đông y và Tây y Theo tài liệu cổ phan tả diệp vị ngọt, đắng, tính hàn, vào kinh đại tràng. Có tác dụng tiêu tích trệ, thông đại tiện. Dùng chữa ăn uống không tiêu, bụng ngực đầy trướng, táo bón.",
+      "làm thuốc": "Hiện dùng làm thuốc giúp sự tiêu hoá: Ngày dùng 1 -2g, nhuận tràng với liều 3-4g, tẩy mạnh với liều 5-7g dưới dạng thuốc sắc hay thuốc pha."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Những cây Phan tả diệp mọc hoang và được trồng ở các nước nhiệt đới châu Phi, Ấn Độ (tây bắc và nam). Thường người ta chia Phan tả diệp trên thị trường thế giới thành:  Phan tả diệp Alexandrie hay phan tả diệp Ai Cập hay Khactum, chủ yếu là loài Cassia acutifolia (lá nhọn). Phan tả diệp Tinnevelly hay phan tả diệp Ấn Độ, chủ yếu là Cassia angustifoiia (lá hẹp).",
+      "làm thuốc": "Trong mỗi loại đều có trộn lẫn một số lá khác như loại phan tả diệp Ai Cập thường pha lẫn lá thảo quyết minh Cassiatora.",
+      "quả": "Ngoài việc sử dụng lá, người ta còn dùng cả quả."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Liễu",
+      "ten_khac": "Liễu, Dương liễu, Thuỳ liễu",
+      "ten_khoa_hoc": "Salix babylonica L.",
+      "ma_taxon": "58316",
+      "ho": "Salicaceae (Liễu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân gỗ cao 3-10m, có các cành nhánh mảnh và thõng xuống, màu lục nhạt hay đo đỏ.",
+      "lá": "Lá hình dải thuôn, nhọn hai đầu, có răng cưa mịn và đều, nhẵn, với các lá kèm hình dải, ngọn giáo, nhọn có răng cưa, dài gần bằng cuống lá.",
+      "hoa": "Cụm hoa đuôi sóc hình trụ, cũng phát triển đồng thời với lá. Hoa màu vàng.",
+      "quả": "Quả nang mở 2 mảnh."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài cây của Trung Ðông, được nhập trồng từ lâu làm cây cảnh ven đường hay ven các hồ, nhất là ở miền Bắc Việt Nam."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, hoa, quả, cành, rễ – Folium, Flos, Fructus, Ramudus, Radix Salicis Babylonicae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chứa enzym salicinase."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cành và rễ trị gân cốt đau nhức, răng lợi sưng đau, đờm nhiệt, đái buốt, đái đục, hoàng đản, các chứng nóng uất ở trong Lá, hoa và quả dùng trị mụn nhọt độc, sưng tấy, lở ngứa. Ở châu Âu, vỏ cũng được dùng trị tê thấp, đau dây thần kinh, tẩy giun và sát trùng. Ở Ấn Ðộ, lá và vỏ cây được dùng trị sốt rét gián cách và sốt rét cơn, vỏ được dùng làm thuốc trị giun.  Ðơn thuốc có Liễu :  Chữa bị thương gân xương đau nhức, hoặc bị bỏng uất nóng ở trong hoặc phong nhiệt đau nhói chỗ này sang chỗ khác hay tay chân co giật: Dùng cành lá liễu 40-60g sắc uống. Chữa mụn nhọt sưng tấy, dị ứng do sơn ăn lở ngứa: Dùng lá và cành liễu non 100-150g nấu nước uống và xông rửa. Chữa nhọt ở vú: Dùng lá liễu giã nát đắp, lúc đầu thấy nóng sau tiếp tục đắp thì bình thường rồi khỏi. Chữa sâu răng: Dùng cành liễu nấu cao xỉa. Chữa nôn, khạc ra máu: Dùng nhị hoa liễu sấy khô, tán nhỏ, uống mỗi lần 4g. Chữa trẻ em cam răng thối loét (Cam tẩu mã): Dùng nhị hoa liễu đốt tồn tính (không để chảy ra tro) tán nhỏ với một tý xạ hương hay băng phiến, xát vào chân răng."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sâm cau",
+      "ten_khac": "Sâm cau, Ngải cau, Tiên mao, Cồ nốc lan, Sâm đỏ, Thài lèng, Soọng cà (Tày), Nam sáng ton (Dao)",
+      "ten_khoa_hoc": "Curculigo orchioides Gaertn.",
+      "ma_taxon": "182480",
+      "ho": "Hypoxidaceae (Sâm cau)",
+      "Mô tả": {
+        "cây": "Cây thảo, sống lâu năm, cao 20 – 30 cm, có khi hơn.",
+        "thân": "Thân rễ, hình trụ dài, mọc thẳng, thót lại ở hai đầu, mang nhiều rễ phụ có dạng giống thân rễ.",
+        "lá": "Lá mọc tụ họp thành túm từ thân rễ, xếp nếp như lá cau, hình mũi mác hẹp, dài 20 – 30 cm, rộng 2,5 – 3 cm, gốc thuôn, đầu nhọn, hai mặt nhẵn gần như cùng màu, gân song song rất rõ; bẹ lá to và dài; cuống lá dài khoảng 10 cm.",
+        "hoa": "Cụm hoa mọc trên một cán ngắn ở kẽ lá, mang 3 – 5 hoa màu vàng; lá bắc hình trái xoan, đài 3 răng có lông; tràng 3 cánh nhẵn; nhị 6, xếp thành hai dãy, chỉ nhị ngắn; bầu hình thoi, có lông rậm.",
+        "quả": "Quả nang, thuôn, dài 1,2 – 1,5 cm; hạt 1 – 4, phình ở đầu.",
+        "mùa hoa": "Tháng 5 – 7",
+        "mùa quả": "Tháng 5 – 7"
+      },
+      "Phân bố": {
+        "phân_bố": "Trên thế giới, Sâm cau phân bố ở một số tỉnh phía nam Trung Quốc, Lào, Việt Nam và một vài nước khác ở Đông Nam Á. Ở Việt Nam, cây phân bố rải rác ở các tỉnh vùng núi, từ Lai Châu, Tuyên Quang, Cao Bằng. Trước năm 1980, các tỉnh Sơn La, Hòa Bình thường khai thác được nhiều cây thuốc này và hiện nay trở nên hiếm dần. Trước thực trạng này, công ty TNHH Tuệ Linh đã tiên phong phát triển một vùng trồng Sâm cau rộng 3 ha ở vùng núi Tây Bắc nhằm bảo vệ loại thảo dược quý này thoát khỏi nguy cơ tuyệt chủng đang cận kề áp sát.",
+        "thường_mọc": "Sâm cau là loại cây ưa ẩm, ưu sáng và có thể hơi chịu bóng, thường mọc trên những nơi đất còn tương đối màu mỡ trong thung lũng, chân núi đá vôi hoặc ven nương rẫy.",
+        "Đặc điểm sinh trưởng": "Cây sinh trưởng tốt trong mùa mưa ẩm, phần thân rễ chính dạng củ, cắm sâu xuống đất, hoa quả hàng năm, khi già tự mở để hạt phát tán ra xung quanh."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Sâm cau được nhân giống bằng hạt hoặc bằng mầm. Người dân thường đánh cây con mọc hoang về trồng. Rễ sâm cau hình trụ, ăn sâu, khi đánh chú ý dào sâu lấy hết rễ. Nên đánh khi cây còn nhỏ. Thời vụ trồng tốt nhất vào mùa xuân. Các mùa khác cũng trồng được nhưng phải chăm sóc nhiều hơn.  Sâm cau sống rất khỏe, lá xanh tốt quanh năm, vì thế có thể trồng trong chậu, trong bồn như cây xanh. Nếu trồng ở đất, có thể trồng với khoảng cách 30cm * 40cm hay 30cm * 50cm. Cần bón một ít phân lót cho đất tơi xốp, thỉnh thoảng xới xáo, bón thêm phân. Thu hoạch vào cuối năm, đào lấy củ, rửa sạch, thái mỏng, phơi khô, cấy giữ dùng dần."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ, thu hái quanh năm, đào về rửa sạch ngâm nước vo gạo để khử bớt độc, rồi phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Phân tích bột thân rễ được các thành phần sau: cao ether 1,28%; cao cồn 4,14%; cao nước 19,92%; tinh bột 43,48%; sợi 14,18%; tro 8,60%; tanin 4,15%. (The Wealth of India, vol V. 1950, p. 400)",
+        "Các hợp chất": "Thân rễ sâm cau chứa các chất thuộc nhóm cycloartan triterpenic:",
+        "đã nghiên cứu": "Misra Triguna N, Singh Ram S đã phân lập và xác định chất 24-methylcycloart-7-en-3-β-20-diol. Xu junping, Xu Rensheng đã tách được các cycloartan glycosid là curculigo saponin A → F.G.H.I.J với cấu trúc của genin chung là curculigenin A được xác định là 3β, 10α, 16β-trihydroxycycloartan-24-on. Các triterpen penta cyclic cũng được chiết xuất từ thân rễ sâm cau như acid 31-methyl-30-zo-20-ursen-28 oic.",
+        "gồm chất": "Các phenyl glucosid và chlorophenyl glucosid curculigosid B, curculigin B và C có cấu trúc là:  2-β-D-glucopyranosyloxy-5-hydroxybenzyl-2-methoxy-6hydroxybenzoat. 24-dichloro-3-methyl-5-methoxyphenol-O-β-D-apiofuranosyl(1→6)-D-glucopyranosid; và 2,4,6-trichloro-3-methyl-5-methoxyphenol-O-C-D-xylopyranoyl (1 → 6)-β-O–glucopyranosid. Curculigin A là một ví dụ về chlorophenyl glucosid và corchiosid A thuộc loại phelyl glucosid đều có ở thân rễ sâm cau. Một số chất aliphatic như 25-hydroxy-33-methylpentatricontan-6-on, hentricontanol, và các hợp chất chứa nitơ như N-acetyl-N-hydroxy-2-carbomethoxy-2H-3,4,5,6-tetrahydro-1,2,3,5,6-oxatetrazin và N-N,N’.N’-tetramethylsuccinamid cũng đã được phát hiện trong thân rễ sâm cau.",
+        "Ngoài ra": "còn sucrose, sitosterol, stigmasterol và các hợp chất flavonoid như 5,7-dimethoxydihydromyricetin-3-O-α-L-xylopyranosyl-4-O-β-D-glucopyranosid, yuccagemin và lycorin.",
+        "tìm thấy": "Yamasaki Kazuya đã định lượng một số mẫu sâm cau của Trung Quốc thấy hàm lượng curculosid khoảng 2%. Các chất curculigenin A, curculigol đã được nghiên cứu thấy có tác dụng chống độc gan."
+      },
+      "Tính vị": {
+        "Có vị": "Sâm cau vị cay tính ấm, có độc, quy vào hai kinh tỳ và thận, có tác dụng thêm sức nóng, làm hết lạnh, cường dương, mạnh gân xương."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Sâm cau được dùng chữa nam giới tinh lạnh, liệt dương, người già đái són, lạnh dạ, kém ăn, tê thấp, lưng gối vận động khó khăn. Liều dùng mỗi ngày 12 – 20g dưới dạng thuốc sắc hay ngâm rượu uống. Dùng riêng hoặc phối hợp với các vị khác. Còn dùng chữa hen và tiêu chảy. Nhân dân ở một số vùng dân tộc thiểu số dùng rễ củ sâm cau làm thuốc bổ. Dùng ngoài, rễ giã nát đắp chữa lở loét.",
+        "được_dùng": "Trong y học cổ truyền Trung Quốc, nước sắc thân rễ sâm cau tán bột được dùng làm thuốc bổ chung, thuốc hồi sức để điều trị suy nhược cơ thể, đau lưng, viêm khớp, viêm thận mạn tính. Thuốc còn làm tăng huyết áp, và điều kinh.",
+        "làm thuốc": "Ở Ấn Độ, Nepal và Philipin, thân rễ sâm cau được dùng làm thuốc lợi tiểu và kích dục chữa bệnh ngoài da, loét dạ dày tá tràng, trĩ, lậu, bạch đới, hen, vàng da, tiêu chảy và nhức đầu. Ở Ấn Độ, người ta còn dùng thân rễ sâm cau để gây sẩy thai dưới dạng thuốc sắc, hoặc thuốc bột uống với đường trong một cốc sữa. Rễ sâm cau là một thành phần trong bài thuốc cổ truyền Ấn Độ gồm 10 dược liệu trị sỏi niệu. Dùng ngoài, rễ sâm cau giã nát, đắp chữa ngứa và bệnh ngoài da. Ở Thái Lan, thân rễ sâm cau là thuốc lợi tiểu và trị tiêu chảy. Ở Papua Niu Guiê, thân rễ và lá sâm cau được hơ nóng cho mềm, rồi chà xát lên cơ thể làm thuốc tránh thụ thai."
+      },
+      "Cách dùng": {
+        "chữa": "Chữa liệt dương do rối loạn thần kinh chức năng: Sâm cau 8g; sâm Bố Chính, hoài sơn, trâu cổ, kỷ tử, ngưu tất, tục đoạn, thạch hộc, mỗi vị 12g; cam thảo nam, cáp giới, ngũ gia bì, mỗi vị 8g. Sắc uống ngày một thang.",
+        "chữa": "Chữa phong thấp, lưng lạnh đau, thần kinh suy nhược, liệt dương: Sâm cau 50g thái nhỏ, sao vàng, rượu trắng 650ml. Ngâm trong 7 ngày hơn. Mỗi ngày uống hai lần vào trước hai bữa ăn chính, mỗi lần 25 – 30ml.",
+        "chữa": "Chữa nam giới liệt dương, phụ nữ tử cung lạnh khó thụ thai: Sâm cau 20g; thục địa, ba kích, phá cố chỉ, hồ đào nhục, mỗi vị 16g; hồi hương 4g. Sắc uống ngày một thang.",
+        "chữa": "Chữa tê thấp, đau mình mẩy: Sâm cau, hy thiêm, hà thủ ô, mỗi vị 50g, rượu trắng 650ml, Ngâm trong 7 ngày hay hơn. Ngày uống 50ml chia hai lần.",
+        "chữa": "Chữa sốt xuất huyết: Sâm cau 20g sao đen, cỏ nhọ nồi 12g, trắc bách diệp 10g sao đen, quả dành dành 8g sao đen. Sắc uống ngày một thang.",
+        "chữa": "Chữa huyết áp cao, nhất là phụ nữ ở thời kỳ mãn kinh: Sâm cau, ba kích, dâm dương hoắc, tri mẫu, hoàng bá, đương quy, mỗi vị 12g. Sắc uống ngày một thang."
+      },
+      "luu_y": {
+        "luu_y": "Dùng sâm cau liều cao kéo dài sẽ gây cường dương, làm tinh hao kiệt sức. Người hư yếu không dùng. Xem thêm: [Video] Sâm cau – Lựa chọn sao cho đúng!  https://tracuuduoclieu.vn/wp-content/uploads/2020/11/sam-cau-chon-sao-c.mp4"
+      }
+    }
+  ]
+}

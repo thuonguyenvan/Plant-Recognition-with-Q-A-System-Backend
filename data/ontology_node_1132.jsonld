@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chóc Gai",
+      "ten_khac": "Chóc gai, Ráy gai, Sơn thục gai, Cây cừa, Cây móp (Nam Bộ).",
+      "ten_khoa_hoc": "Lasia spinosa (L.) Thw.",
+      "ma_taxon": "425691",
+      "ho": "Araceae (Ráy)",
+      "description": {
+        "@type": "Mô tả",
+        "lá": "Lá mọc thẳng từ thân rễ, cuống lá dài, có gai. Lá non hình mũi tên, lá già xẻ lông chim, mép nguyên.",
+        "hoa": "Cụm hoa là một bông mo mang hoa cái ở gốc, hoa đực ở trên.",
+        "quả": "Quả mọng.",
+        "cây": "Cây loại nhỏ, thân rễ nằm ngang, có nhiều gai.",
+        "mùa hoa": "tháng 3-4.",
+        "mùa quả": "tháng 3-4."
+      },
+      "phan_bo": {
+        "@type": "Phân bố"
+      },
+      "thong_tin_khac": {
+        "@type": "Thông tin khác"
+      },
+      "bo_phan_dung": {
+        "@type": "Bộ phận dùng"
+      },
+      "thanh_phan": {
+        "@type": "Thành phần",
+        "thành phần": "Chưa thấy tài liệu nghiên cứu. Sơ bộ thấy thân rễ chứa những chất cho những vết tương tự với rất nhiều loại axit amin trên sắc ký lớp móng."
+      },
+      "tinh_vi": {
+        "@type": "Tính vị"
+      },
+      "cong_dung_y_hoc": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Vị thuốc nhân dân dùng chữa ho, đau họng, phù thũng, tê thấp, suy gan, di chứng do sốt rét. Ngày dùng 4 đến 16g dưới dạng thuốc sắc hay ngâm rượu. Dùng riêng hay phối hợp với một số vị thuốc khác như nghệ."
+      },
+      "cach_dung": {
+        "@type": "Cách dùng",
+        "được_dùng": "Cây mọc hoang dại ở khắp nơi ẩm ướt trên có tàn che: Ruộng nước, bờ ao, bãi rẫy, ven suối. Người ta thường dùng thân rễ thu hái vào mùa thu đông. Đào rễ về rửa sạch, thái mỏng phơi hay sấy khô. Có khi người ta ngâm với nước gừng, nước phèn trước khi phơi hay sấy khô. Thuốc tăng cường sinh lý Bài thuốc bổ huyết điều kinh"
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      },
+      "url": "https://tracuuduoclieu.vn/choc-gai.html"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bần",
+      "ten_khac": "Bần, Bần chua, Bần sẻ",
+      "ten_khoa_hoc": "Sonneratia caseolaris (L.) Engl.",
+      "ma_taxon": "196662",
+      "ho": "Sonneratiaceae (Bần)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá hình trái xoan ngược hay trái xoan thuôn, thon hẹp thành cuống ở góc, cụt hay tròn ở chóp, dai, dài 5-10cm, rộng 35-45mm.",
+      "hoa": "Hoa đơn độc ở ngọn, rộng 5cm, có cuống hoa ngắn và bậm.",
+      "quả": "Quả mọng hơi nạc, đường kính 3cm hay hơn, cao 18-20mm. Hạt dạng cái đinh, dài 6-7mm.",
+      "cây": "Cây gỗ nhỏ, nhẵn, có các nhánh có đốt, với 4 góc tù."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây của rừng ngập mặn, gặp dọc bờ biển nước ta. từ sông Bạch Ðằng, qua Nha Trang đến thành phố Hồ Chí Minh, Cần Thơ… Loài cây ưa sáng nơi có nước mặn ít nhất là một phần trong năm. Cây có những rễ thở (phế căn). Nở hoa vào tháng 3-4, sau mùa khô, trước mùa mưa; nở về đêm, nhờ dơi thụ phấn. Bần là cây chắn sóng, bảo vệ đất ở vùng ven biển."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá, quả – Folium et Fructus Sonneratiae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ thân và gỗ chứa archin(emodin), archinin (chrysophanic acid) và archicin. Trong quả có chất màu, archin và archicin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Người ta lấy quả chua ăn sống hay nấu canh cá. Cũng được sử dụng làm thuốc đắp vào chỗ viêm tấy vì bong gân. Ở Ấn Độ, người ta dùng dịch quả lên men làm thuốc ngăn chặn của chứng xuất huyết. Ta dùng lá giã ra, thêm tí muối, làm thuốc đắp tốt các vết thương đụng giập và vết thương nhẹ. Ở Malaixia, người ta giã lá lẫn với cơm làm thuốc đắp chữa bí tiểu tiện. Cây Bần còn có những công dụng khác như rễ thở dùng làm nút chai; cành làm cần câu và làm củi đun.  Ghi chú: Cây Bần trứng hay Bần ổi – Sonneratia ovata Bak., có vỏ tróc thành mảnh mỏng như vỏ ổi, lá hình bầu dục, mọc phổ biến ở các vùng rừng ngập mặn, cũng có quả vị chua thơm, thường được nhân dân dùng nấu canh chua."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

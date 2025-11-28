@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bông tai",
+      "ten_khac": "Ngô thị, Mã lợi cân, Vạn niên hoa, tThảo mộc miên, Mác kha сау (Тàу)",
+      "ten_khoa_hoc": "Asclepias curassavica L.",
+      "ma_taxon": "75602",
+      "ho": "Thiên lý (Asclepiadaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, sống lâu năm, cao 1-1,5 m. Thân mảnh. Nhẵn, ít phân nhánh.",
+      "lá": "Lá mọc đối, hình mác, dài 8 – 20 cm, rộng 1,8 – 3,5 cm, gốc và đầu thuôn, hai mặt nhẵn, mặt trên xanh sẫm, mặt dưới nhạt, có gân nổi rõ, cuống ngắn, lá khi bấm có nhựa mủ trắng.",
+      "hoa": "Cụm hoa mọc ở ngọn thân và kẽ lá gần ngọn thành xim tán hoa, 6 – 12, màu đỏ, đài có 5 răng hình mác nhọn, tràng có 5 cánh, khi nở cụp gập xuống, tràng phụ màu vàng gắn vào cột nhị, nhị đính ở gốc tràng. Chỉ nhị dính thành ống, bao phấn có tai ở gốc.",
+      "quả": "Quả cấu tạo bởi hai đại nhẵn, choãi ra, phình ở gốc: hạt màu đỏ nâu mang một chùm lông.",
+      "mùa hoa": "tháng 4 – 9",
+      "mùa quả": "tháng 4 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Asclepias L., chỉ có một loài là cây bông tai ở Việt Nam. Cây có nguồn gốc ở vùng nhiệt đới Nam Mỹ và mọc rải rác khắp các vùng nhiệt đới khác của thế giới. Ở Việt Nam. bông tai là loại cây cảnh có hoa đẹp, được trồng trong chậu hoặc trên các ô đất nhân tạo ở ban công. Cây ưa sáng, có thể hơi chịu hạn. Cây trồng ở các tỉnh phía nam ra hoa quả nhiều hơn ở các tỉnh phía bắc. Quả khô tự mở; hạt có mào lông, phát tán được nhờ gió. Cây có thể trồng được bằng cách giâm cành."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây thu hái quanh năm, dùng tươi hay khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây bông tai chứa một glucosid độc là asclepiadin, 6 flavonoid glycosid là quercetin 3 – O. (2″, 6″ – α – L – dirhamnopyranosyl – β – D – galactopyranosid, quercetin – 3 – O – β – D glucopyranosyl – (1 -> 6) – β – D – galactopyranosid, quercetin – 3 – O – (2″ – O – α – L – rhamnopyranosyl – 3 – D – galactopyranosid quercetin – 3 – O – α – L. rhamnopyranosyl – (1->6) – 6 – D – glucopyranosid, quercetin – 3 – O – β – D – galactopyranosid, quercetin – 3 – О -β – D – glucopyranosid (CA 124: 82. 143q. Thân có 3′- epi-19′ – morafosid và 12 β hydroxycoroglaucigenin (CA 116: 124, 885a) Cardenolid, sterol tự do, triacylglycerol, triterpenyl acetat, steryl vä triterpen ester (CA 5: 203.414 d). Nhựa mủ có thành phần chính là voruscharin (CA 4 39264 m), lipase (CA 115: 228312g)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bông tai có vị đắng, tính hàn, có tác dụng hoạt huyết, tiêu viêm, điều kinh, thanh nhiệt, chỉ thống, sinh cơ"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở một số địa phương, nhân dân dùng rễ bông tai sắc uống chữa khí hư, mụn nhọt. Lá sắc uống chữa bệnh kiết lỵ nhưng với liều lớn lại gây ngộ độc. Ở Trung Quốc, bông tai được dùng chữa viêm amidan, viêm phế quản, viêm phổi, Viêm đường tiết niệu, bang lậu đới hạ, kinh nguyệt không đều. Ở Ấn Độ, lá để tẩy giun, làm thuốc ra mồ hôi: hoa làm thuốc cầm máu, rễ được dùng gây nôn, gây se xoắn chữa kiết lỵ Liều dùng: 0,6-9,0g, sắc nước uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Bông tai có độc, khi sử dụng cần thận trọng. Dùng quá liều dễ bị ngộ độc với triệu chứng đau đầu chóng mặt, buồn nôn, nôn mửa, đau bụng đi ngoài, nói lảm nhảm, chân tay lạnh ra mồ hôi, mặt nhợt nhạt, mạch không đều, đồng tử giãn to, tiếp theo là co giật hôn mê, tim ngừng đập, tử vong. Cấp cứu bằng cách gây nôn rửa dạ dày, hoặc tẩy, nếu ngộ độc đã lâu, uống lòng trắng trứng gà, vitamin C, nước chè đặc, tiêm atropin, tiêm truyền tĩnh mạch glucose, giữ ấm. Đồng thời, điều trị triệu chứng, nếu xuất hiện bồn chồn vật vã thì dùng thuốc an thần uống chloral hydrat 12g, hoặc tiêm bắp thịt phenobarbital nếu trụy tim mạch thì dùng thuốc gây hưng phấn."
+    }
+  ]
+}

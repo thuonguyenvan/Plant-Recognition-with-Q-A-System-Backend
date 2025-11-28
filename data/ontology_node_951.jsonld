@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngọc lan ta",
+      "ten_khac": "Ngọc lan ta, Kim cương mộc, Cây sứ, Ngọc lan hoa trắng",
+      "ten_khoa_hoc": "Michelia alba L.",
+      "ma_taxon": "1070812",
+      "ho": "Magnoliaceae (Mộc lan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây gỗ to, cao 10-20m, vỏ xám.",
+      "lá": "Lá to, dài, mặt trên nhẵn, mặt dưới có lông thưa, đầu nhọn, cuống mảnh.",
+      "hoa": "Hoa đơn độc ở nách lá, lá bắc có lông. Bao hoa 10-15 mảnh, hình dải, nhọn, không phân hoá thành đài và tràng, màu trắng, thơm, xếp xoắn ốc, nhị nhiều, lá noãn nhiều xếp theo đường xoắn ốc trên đế hoa đài.",
+      "quả": "Quả kép hình nón, gồm nhiều đại, mỗi đại có 1-8 hạt, hình trứng.",
+      "mùa hoa": "tháng 4-9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Ấn Độ, được trồng từ lâu đời ở nước ta. Cây thường được trồng làm cảnh trong các vườn, trong công viên các thành phố, khá phổ biến ở đồng bằng miền Nam. Thu hái hoa vào mùa hè và thu trước khi hoa nở hoàn toàn, dùng tươi hay phơi khô. Rễ và lá thu hái quanh năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hoa, lá, rễ – Flos, Folium et Radix Micheliae Albae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa có tinh dầu 0,0125%, trong đó có linalol, metyl cugenol, metyl etyl, acetic ester, acid acetic. Lá cũng có tinh dầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa có thể dùng chế nước hoa và dùng trị: Viêm phế quản, ho gà; Đau đầu, chóng mặt, đau ngực; Viêm tiền liệt tuyến, bạch đới.  Ở Philippin người ta dùng nước sắc hoa cho người bị sẩy thai uống.  Lá dùng chưng cất tinh dầu và trị: Viêm phế quản mạn tính; Bệnh đường tiết niệu, giảm niệu. Rễ dùng trị bệnh đường tiết niệu, mụn nhọt và viêm mủ da.",
+      "được_dùng": "Hoa 6-12g; lá, rễ 15-30g, dạng thuốc sắc. Dùng ngoài, lấy lá tươi giã đắp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Viêm phế quản: Ngọc lan trắng 5-7 hoa, đun sôi rồi thêm mật ong uống. Viêm phế quản mạn của người già: Lá Ngọc lan tươi, lá Gừa mỗi vị 30g, Giun đất khô (Địa long) 5g, sắc nước và chia làm hai lần uống sáng chiều. Thanh nhiệt, giải khát: Hoa ngọc lan 20g, đậu xanh 150g, đường phèn 50g. Cách chế biến: Đậu xanh rửa sạch, hoa ngọc lan tách từng cánh, rửa sạch, để ráo nước. Đậu xanh cho nước đun sôi nhỏ lửa khoảng 30 phút cho nhừ rồi cho đường phèn vào, tắt lửa, rắc hoa ngọc lan vào rồi trộn đều là dùng được. Tác dụng thanh nhiệt tiêu thử, giải khát. Chữa đau bụng kinh: Hoa ngọc lan (chưa nở) 12g, sắc uống thay trà vào lúc sáng sớm. Dùng 30 ngày là một liệu trình, có tác dụng giảm đau bụng kinh ở phụ nữ. Điều trị chứng ho gà: Hoa ngọc lan 8 cái, lá chanh 10g, gừng 3g. Tất cả rửa sạch cho vào ấm đổ nửa lít nước, sắc còn một nửa, chia làm 3 lần. Uống 1 tuần. Chữa ho do lạnh: Hoa ngọc lan 20g, đem tẩm mật ong trong 3 ngày rồi sắc (nấu) uống như trà. Chữa đau đầu: Ngọc lan hoa trắng 8 cái, hoa nhài 10 cái, lá hoa sen 20g. Tất cả rửa sạch cho vào ấm đổ 550ml nước, sắc còn 250ml, chia làm 3 lần. Uống 1 tuần. Nhuận da, kích thích tiêu hóa: Hoa ngọc lan 6g, 1 thìa trà xanh. Hoa ngọc lan rửa sạch bằng nước muối, vẩy cho ráo nước, để vào bát. Rót nước sôi vào bát, sau đó cho trà xanh vào. Hãm uống thay trà trong ngày.",
+      "làm thuốc": "Cây thuốc và vị thuốc Việt Nam – Đỗ Tất Lợi"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

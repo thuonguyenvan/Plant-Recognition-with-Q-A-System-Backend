@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mao lương",
+      "ten_khac": "Rau cần dại, chu liên, thạch long nhục",
+      "ten_khoa_hoc": "Ranunculus sceleratus L.",
+      "ma_taxon": "59301",
+      "ho": "Hoàng Liên (Ranunculaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao 0,30 – 0,70m.",
+      "thân": "Thân và cành mọc thẳng, nhẵn.",
+      "lá": "Lá phía gốc có cuống, xẻ 3 thùy, lá ở giữa và gần ngọn xẻ thành dải nhỏ, ngắn.",
+      "hoa": "Cụm hoa mọc ở đầu ngọn thành ngù; lá bắc hình dải; hoa nhỏ, nhiều, mà vàng nhạt; đài có 5 răng ngắn; tràng 5 cánh mỏng; nhị nhiều, ngắn; bầu có nhiều noãn,",
+      "quả": "Quả bể, hình trứng hơi dẹt, đầu hình nón, hẹp, thành 1 quả tụ.",
+      "mùa hoa": "tháng 5",
+      "mùa quả": "tháng 7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Ranunculus L. phân bố chủ yếu ở vùng ôn đới ẩm và cận nhiệt đới, ở Việt Nam có 5 loài. Loài mao lương trên phân bố chủ yếu ở các tỉnh miền núi phía Bắc, từ độ cao khoảng 1.300m trở xuống, bao gồm: Hà Giang (Quản Ba: Quyết Tiến, Tùng Vài); Điện Biên (Thanh Lương, Thanh Chăn), Lạng Sơn (Cao Lộc: Đồng Đăng, Vân Lãng…); Cao Bằng (Quảng Hòa); Phú Thọ (Thanh Sơn); Hà Tây cũ (Ba Vì); Ninh Bình, Hà Nam… Trên thế giới, loài này ghi nhận có ở châu Âu, Ấn Độ, Trung Quốc, Nhật Bản…",
+      "thường_mọc": "Mao lương là cây ưa sáng, ưa ẩm. Cây thường mọc ở ven rừng, ven đường đi, bờ nương rẫy. Cây mọc từ hạt có thể thấy từ cuối mùa đông hoặc đầu mùa xuân, sinh trưởng mạnh trong vụ xuân – hè và sau khi có quả già, toàn cây tàn lụi ngay trong mùa thu hoặc đầu màu đông. Mao lương tái sinh tự nhiên tốt từ hạt."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong cây chứa protoanemonin (anemonol) ở tất cả các bộ phận của cây trừ hạt là chất độc, nhưng sau khi phơi khô sẽ chuyển thành anemonin it độc hơn (The wealth of India, 1996).",
+      "gồm chất": "Trong hạt chứa 18% protein, 26% dầu béo và alcaloid: ranunculin, pronemonin, nemonin, và pyrogalol tannin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mao lương vị đắng, mùi hắc (đặc biệt là khi tươi), tính bình, có độc (nếu đã xử lí với nhiệt thị độc tính giảm), có công năng trừ phong thấp, tiêu thũng, tiêu viêm, tán kết, trừ sốt rét, giải phiền, bình khi vị, bổ thận hư, âm khi bất túc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mao lương được người xưa rất trọng dụng để trị thận yếu, tinh ít, lạnh tinh, lạnh quy đầu, uống lâu người nhẹ nhõm, sáng mắt, lâu già, da dẻ tươi nhuận [Lê Trần Đức, 1997: 927].",
+      "chữa": "Còn được dùng chữa lao, hạch bạch huyết, sốt rét, thấp khớp.",
+      "sắc uống": "Ngày 3 – 9g, sắc kỹ uống.",
+      "giã nát": "Dùng ngoài, lấy hạt, giã nát, đắp vào chỗ sưng tấy.",
+      "được_dùng": "Có thể dùng cây tươi, rửa sạch, giã nát, lấy dịch bội vào chỗ rắn cắn, viêm mủ da, lở loét lâu ngày. Cũng có thể đắp lên nhưng cần theo dõi, nếu thấy chỗ đắp sưng lên thì tháo bỏ thuốc đắp ra.",
+      "có tác dụng": "Ở Ấn Độ, cây mao lương tươi, giã nát, đập vào da để làm phồng da. Rượu lá mao lương (với lượng lá ít ngâm với rượu, rất nhiều lá thì độc) bôi lên các vết côn trùng đốt hoặc xoa để chữa đau dây thần kinh liên sườn [Kirtikar et al., 1998, I: 14].",
+      "làm thuốc": "Dùng trong, toàn cây mao lương được dùng chữa bệnh về thận, điều kinh, làm lợi sữa, làm thuốc dễ tiêu [Nadkarni, 1999: 1049] (cần dùng liều thấp 4 – 8g, sắc kỹ uống)."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Cây mao lương rất độc. Nếu luộc mao lương ăn sẽ rất nguy hiểm với biểu hiện cay, nóng rát miệng, phồng da và niêm mạc, ăn nhiều sẽ chết [Duke, 2002: 178]. Tuyệt đối không được ăn hoặc uống dịch tươi của cây mao lương. Khi dùng mao lương, phải dùng liều thấp và phải sắc thật kỹ."
+    }
+  ]
+}

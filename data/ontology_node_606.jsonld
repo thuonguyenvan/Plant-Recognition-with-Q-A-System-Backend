@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Vải",
+      "ten_khac": "Vải, Lệ chi, Mạy chia (Tày)",
+      "ten_khoa_hoc": "Litchi chinensis Sonn.",
+      "ma_taxon": "223964",
+      "ho": "Bồ hòn (Sapindaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Vải là một cây to có thể cao tới 10m.",
+      "thân": "Cành thường mọc ngang, lá kép chẵn, gồm 3 đến 4 đôi lá chét hình mác, hay thuôn dài, hai đầu tù, dai, mặt trên bóng, mặt dưới mờ.",
+      "hoa": "Hoa mọc thành chuỳ tận cùng, trên cành mang hoa phủ đầy lông nâu nhạt. Hoa không cánh, 5 lá đài dính nhau. Nhị 7-10, 3 lá noãn nhung 1 lép nên bầu chỉ có 2 ô, mỗi ô chứa một noãn.",
+      "quả": "Quả hình cầu, to gần bằng quả trứng gà, vỏ quả khô và mỏng, sần sùi chứa một hạt to bao bọc bởi một áo hạt trắng, mẫm, nhiều nước, thơm ngọt và chua, ăn được."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong áo hạt (tử y) ta thường gọi là múi vải có chất đường chủ yếu là glucoza (66%); một ít dưới dạng sacaroza (5%); protein 1,5%; chất béo 1,4%; vitamin C (trung bình 40mg trong 100g dịch áo hạt); vitamin C2, vitamin A và B (hai thứ vitamin này thường chỉ thấy trong áo hạt tươi, khô thì thường mất đi), axit xitric.",
+      "gồm chất": "Trong hạt vải (lệ chi hạch) có tanin 1-1,5%, độ tro 1-1,2%, độ ẩm 10-12%, chất béo 5-6%.",
+      "có hoạt chất": "Trong hạt vải có metylenxyciopropyglyxin:"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Áo hạt được dùng ăn và làm thuốc từ lâu đời. Trong tài liệu cổ người ta cho rằng áo hạt có vị ngọt, chua, tính bình hay ôn, không có độc. Có tác dụng nuôi huyết, làm hết phiền khát, tiêu thũng, chữa những bệnh mụn nhọt, ăn nhiều đẹp nhan sắc nhưng trong tác giả cổ cũng có tác giả lại nói rằng ăn nhiều thì phát nhiệt, chảy máu cam và đau răng (Mậu Hy Ưng và Hoàng Cung Tú).",
+      "được_dùng": "Ngày dùng 10-16g áo hạt khô. Hạt vải (lệ chi hạch) cũng là một vi thuốc được dùng từ lâu đời. Theo tài liệu cổ, lệ chi hạch có vị ngọt, chát tính ôn, không có độc. Có tác dụng tán hàn, thấp kết khí, là thuốc chữa âm nang sưng đau (thoát vị). Còn dùng chữa ỉa chảy của trẻ em.",
+      "làm thuốc": "Ngày dùng từ 4 đến 8g dưới dạng bột hay sắc uống. Các bộ phận khác. Ngoài ra người ta còn dùng hoa, vỏ thân và rễ sắc lấy nước súc miệng chữa bệnh viêm họng, đau răng."
+    },
+    {
+      "@type": "Cách dùng",
+      "chữa": "Chữa nhọt: Múi vải giã nát với ô mai thành cao đắp lên mụn nhọt (theo sách Tế sinh bí lâm).",
+      "giã nát": "Đơn khác: 5-7 múi vải giã nát với ít hồ nếp, dán thành miếng cao dán lên nơi mụn nhọt (để hở miệng) (theo sách Phổ tế phương).",
+      "sắc uống": "Chữa nấc: Vải cả quả đốt thành than tán bột hoà với nước nóng mà uống. (Y phương trích yếu).",
+      "được_dùng": "Chữa đậu sang không mọc: Múi vải ngâm rượu cho uống. Ngày dùng 2-3 múi.",
+      "làm thuốc": "Đau răng: Quả vải để cả vỏ hạt, thêm ít hạt muối, đốt thành than, nghiền nhỏ, xát vào răng thì thấy kết quả.",
+      "có tác dụng": "Chữa hòn dái sưng đau: Hạt vải đốt thành than nghiền với rượu cho uống, mỗi ngày 4 đến 6g.",
+      "sắc nước uống": "Đơn khác: Hạt vải thái mỏng, sấy khô, tán nhỏ, trần bì 36g sấy khô tán nhỏ, lưu hoàng 16g, tất cả ba vị tán nhỏ, dùng nước cơm thêm ít muối làm thành viên bằng hạt đậu xanh, lúc nào đau uống 9 viên thuốc này, dùng rượu mà chiêu thuốc.",
+      "phơi khô": "Đơn khác: Hạt vải, trần bì, hồi hương ba vị bằng nhau tán nhỏ, mỗi lần uống 4 đến 6g, dùng rượu chiêu thuốc."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

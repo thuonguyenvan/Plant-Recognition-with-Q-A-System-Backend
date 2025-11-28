@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Phục linh",
+      "ten_khac": "Bạch phục linh, Bạch linh, Phục thần",
+      "ten_khoa_hoc": "Poria cocos Wolf (Pachyma hoelen Rumph)",
+      "ma_taxon": 1169836,
+      "ho": "Nấm lỗ Polyporaceae",
+      "Mô tả": {
+        "cây": "Nấm này mọc ký sinh trên rễ cây thông. Vì người ta cho phục linh là linh khí của cây thông nấp ở dưới đất, do đó mà đặt tên. Nếu nấm mọc xung quanh rễ khi đào lên có rễ thông ỡ giữa nấm thì gọi là phục thần. người ta cho loại này có tác dụng yên thần phách, chữa sợ hãi, mất ngủ. Nấm hình khối to, có thể nặng tới 5kg, nhỏ có thể bằng nắm tay. Mặt ngoài màu xám đen, nhăn heo có khi thành bướu. cắt ngang sẽ thấy mặt lổn nhổn hoặc trắng (bạch phục linh) hoặc hồng xám (xích phục linh). Bột phục linh có màu trắng xám, chủ yếu gồm các khuẩn ty, bào tử, cuống đám tử. Dùng glyxerin để soi sẽ thấy các khuẩn ty không mầu, thỉnh thoảng có các khuẩn ty màu nâu đường kính 3-4 µm. cuống đám tử có đường kính 9-18 µm, trên đầu có nhiều đám bào tử đường kính 11-26 µm. Ngoài ra đôi khi có các đám chất keo."
+      },
+      "Phân bố": {
+        "phân_bố": "Phục linh hiện phải nhập của Trung quốc. Loại tốt nhất mọc ở Vân Nam gọi là Vân linh. Thứ ở Quảng Đông có thể không tốt bằng thứ ở Vân nam. Năm 1977 phát hiện thấy có vùng Đà Lạt (Lâm Đồng) ở nước ta."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Chưa rõ hoạt chất là gì. Tuy nhiện trong phục linh người ta đã phân tích có chất đường đặc biệt của phục linh: pachymoza, glucoza, fructoza và chất khoáng Mới đây người ta nghiên cứu thấy thành phần phục linh gồm 3 loại: Các axit có thành phần hợp chất tritecpen: axit pachimic C, axit tumolosic Đường đặc bịêt của phục linh: Pachyman có trong phục linh tới 75% Ngoài ra còn ergosterol, cholin, histidin và rất ít men proteaza"
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Tính chất phục linh theo tài liệu cổ: vị ngọt, nhạt, tính bình, vào 5 kinh, tâm, phế, thận, tỳ và vị. Có tác dụng lợi thuỷ, thấm thấp, bổ tỳ, định tâm, dùng chữa tiểu tiện khó khăn, thuỷ thũng trướng man, tiết tả, phục thẩm định tâm, an thần chữa hồi hộp mất ngủ. Trong nhân dân, phục linh được coi là vị thuốc bổ, thuốc lợi tiểu, dùng trong bệnh thuỷ thũng. Còn dùng làm thuốc trấn tĩnh, chữa các trường hợp mất ngủ, hay sợ hãi, di tinh. Ngày dùng 5-10g dưới dạng thuốc sắc, bột hay viên"
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa bệnh thuỷ thũng: phục linh 10g, mộc thông 5g, tang bạch bì 10g, nước 600ml. Sắc còn 200ml. chia làm 3 lần uống trong ngày Đơn thuốc chữa phù thũng, sợ hãi: phục linh 8g, cam thảo 3g, quế chi 4g, sinh khương 3g, nước 400ml, sắc còn 200ml Chia làm 3 lần uống trong ngày Chữa vết đen trên mặt: tán bột phục linh mà bôi"
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

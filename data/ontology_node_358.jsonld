@@ -1,0 +1,291 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lá diễn tàu",
+      "ten_khac": "Cửu căn, cây gan heo, can thái",
+      "ten_khoa_hoc": "Dicliptera chinensis (L.) Nees",
+      "ma_taxon": "161827",
+      "ho": "Ô rô (Acanthaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo sum sê, sống hằng năm, cao 10 – 50 cm.",
+      "thân": "Cành non có 4 cạnh, có lông mềm, cành già gần tròn, nhẵn.",
+      "lá": "Lá mọc đối, hình trứng hay thuôn, dài 2 – 8 cm, rộng 1 – 4 cm, gốc thuôn, đầu nhọn, hai mặt có lông rải rác.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành sim co; tổng bao gồm những lá bắc không bằng nhau, hình trứng thuôn, lá bắc con hình chỉ, đài có răng đều, rời nhau, hình dải hẹp, trang chia hai mối, mối dưới hơi xẻ ba thuỳ, mỗi trên hình trứng nguyên, nhị hai đính ở họng tràng, bao phấn hai ô; bầu nhẵn.",
+      "quả": "Quả nang ngắn, có lông tơ ở đầu, hạt dẹt.",
+      "mùa hoa": "tháng 12 – 5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây diễn tàu phân bố chủ yếu ở Trung Quốc, Bangladesh, Đông Bắc Ấn Độ và khu vực Đông Nam Á.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Phúc Kiến"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đài Loan"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Đông"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đảo Hải Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quảng Tây"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hong Kong"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Macau"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Vân Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Quý Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tứ Xuyên"
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Cây diễn tàu thường mọc ở những khu vực có độ cao dưới 1800 mét, như dưới tán rừng thưa, ven suối và ven đường. Cây có khả năng chịu bóng râm, chịu hạn, chịu lạnh, chịu ẩm, thích nghi với cả đất màu mỡ lẫn đất khô cằn. Tuy nhiên, cây phát triển tốt nhất trong môi trường nửa râm mát, đất ẩm và giàu dinh dưỡng."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Cây có thể thu hái quanh năm, có thể dùng tươi hoặc phơi khô để bảo quản và sử dụng lâu dài."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Toàn cây chứa acid hữu cơ, acid amin và đường [Trung được từ hải, vol. II, 997].",
+      "gồm chất": "n-hexatriacontol, axit stearic, lupenone, lupeol, sitostane-4-ene-3-one, stigmastan-5-ene-7-one-3β palmitate, β-sitosterol, axit oleanolic, 3β,6β-stigmastan-4-ene-3,6-diol, 6p-hydroxy-stigmastan-4-ene-3-one, 3β-hydroxy-stigmastan-5-ene-7-one, stigmastanol khử hydro và stigmastanol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, hơi chát, tính mát."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thanh nhiệt, giải độc. Làm mát máu, lợi tiểu.",
+      "được_dùng": "Cảm mạo, sốt. Viêm họng, sưng đau họng. Ho do phổi nóng. Viêm gan, viêm ruột, tiêu chảy, kiết lỵ. Viêm thận, tiểu buốt do nhiệt. Cao huyết áp. Viêm kết mạc, đau mắt đỏ. Bệnh zona thần kinh, nhọt, mụn viêm. Hỗ trợ điều trị tiểu đường và một số bệnh viêm nhiễm khác."
+    },
+    {
+      "@type": "Cách dùng",
+      "sắc uống": "Sắc 15 – 30g cây khô với nước và uống.",
+      "giã nát": "Giã nát cây tươi và đắp lên vùng bị tổn thương."
+    },
+    {
+      "@type": "Công dụng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa phong thấp, viêm khớp, giảm niệu, đái ra dưỡng chấp: Ngày 30 – 60g dược liệu là toàn cây khô hoặc 60 – 120g cây tươi, sắc lấy nước uống.",
+      "giã nát": "Dùng ngoài trị lở, sưng, rôm sẩy, mụn nhọt, phỏng ra; dùng lá tươi, giã nát, xoa lên hoặc đắp.",
+      "sắc nước uống": "Chữa cảm mạo và sốt: Lá cây lá diễn tàu, đơn kim (toàn cây bỏ rễ), rau má, mỗi vị 45g, sắc lấy nước uống trong ngày.",
+      "chữa": "Trị bệnh zona thần kinh: Dùng cây diễn tàu tươi, thêm chút muối, giã nát rồi trộn với nước vo gạo, lấy nước bôi lên vùng da bị tổn thương."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

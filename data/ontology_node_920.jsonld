@@ -1,0 +1,291 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/ngu-trao.html",
+            "ten": "Ngũ trảo",
+            "ten_khac": "Ngũ trảo, Mẫu kinh, Ô liên mẫu",
+            "ten_khoa_hoc": "Cayratia japonica (Thunb.) Gagnep.",
+            "ma_taxon": "795186",
+            "ho": "Vitaceae (Nho)",
+            "description": {
+                "@type": "Mô tả",
+                "lá": "mọc so le, kép chân vịt gồm 5 lá chét hình trái xoan, dài 5 – 8cm, rộng 3 – 4cm, gốc tròn, đầu nhọn, lá chét tận cùng dài hơn, tất cả các lá chét đều nhẵn hoặc có lông ở mặt dưới, gân lá chằng chịt thành mạng lưới rõ, mép có răng tù hơi nhọn; cuống chung dài 2 – 5cm; lá kèm hình tam giác tù.",
+                "hoa": "màu trắng; đài hình đấu hơi có 4 răng; tràng 4 cánh; nhị 4; bầu nhẵn.",
+                "quả": "hình cầu, hơi thắt lại ở gốc; hạt 3-4, nhăn ở mặt lưng.",
+                "cây": "nhỏ leo, nhẵn hoặc có ít lông.",
+                "thân": "cành hình trụ. có khía; tua cuốn chia 2-3 nhánh.",
+                "mùa hoa": "gần như quanh năm.",
+                "mùa quả": "gần như quanh năm."
+            },
+            "distribution": {
+                "@type": "Phân bố",
+                "phân_bố": "Cayratia Juss. là chi tương đối lớn gồm các loài là dây leo phân bố rải rác khắp vùng cận nhiệt đới và nhiệt đới Bắc bán cầu. Ở Việt Nam có 15 loài, trong đó có cây ngũ trảo. Ngũ trảo chỉ thấy ở châu Á, bao gồm Ấn Độ, Trung Quốc, Nhật Bản, Lào, Philippin, Indonesia và Việt Nam.",
+                "các_tỉnh": {
+                    "@type": "schema:ItemList",
+                    "mục": [
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Lạng Sơn"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Cao Bằng"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Yên Bái"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Lai Châu"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Hòa Bình"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Nghệ An"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Vĩnh Phúc"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Thái Nguyên"
+                            }
+                        },
+                                                {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Kon Tum"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Đắc Lắc"
+                            }
+                        },
+                        {
+                            "@type": "schema:ListItem",
+                            "tỉnh": {
+                                "@type": "schema:Place",
+                                "tên": "Lâm Đồng"
+                            }
+                        }
+                    ]
+                },
+                "Đặc điểm sinh trưởng": "Ngũ trảo là loại cây ưa ẩm, ưa sáng, có khả năng hơi chịu bóng, thường mọc trên đất ẩm, leo lên các cây bụi hay các loại cỏ cao ở ven rừng, sinh trưởng mạnh trong mùa xuân hè, ra hoa quả nhiều nhất là ở những cây được chiếu sáng nhiều. Cây được nhân giống tự nhiên chủ yếu bằng hạt và có khả năng tái sinh khi bị chặt phát nhiều lần."
+            },
+            "additionalInformation": {
+                "@type": "Thông tin khác",
+                "thong_tin_khac": null
+            },
+            "usedParts": {
+                "@type": "Bộ phận dùng",
+                "bo_phan_dung": "Phần trên mặt đất phơi hoặc sấy khô."
+            },
+            "compositionList": {
+                "@type": "Thành phần",
+                "thành phần": "Toàn cây ngũ trảo chứa apigenin, lutcolin, luteolin-7-0- glucosid, lupeol, araban,gôm",
+                "gồm chất": "Rễ chứa alcaloid, tinh bột. gôm, nhựa",
+                "Các hợp chất": "Vỏ quả có cayratinin, delphilipin3- coumaroyl- sophorosid-5-monoglucosid"
+            },
+            "tasteProperty": {
+                "@type": "Tính vị",
+                "Có vị": "Ngũ trảo có vị đắng, chua, tính hàn, có tác dụng thanh nhiệt giải độc, hoạt huyết tán ứ, lợi niệu, tiêu thũng."
+            },
+            "medicalUseList": {
+                "@type": "Công dụng",
+                "cong_dung_y_hoc": "Theo kinh nghiệm dân gian, toàn cây ngũ trảo được dùng làm thuốc chống viêm. Rễ tươi giã nát, đắp chữa sưng vú. Rễ và thân thái nhỏ, phơi khô, sao vàng, lấy 20g sắc uống làm hai lần trong ngày để chữa tê thấp. Có thể phối hợp với rễ cây nhàu (liều lượng bằng nhau) dưới dạng rượu ngâm. Dây lá ngũ trảo giã nát với lá cà độc dược, bọc lá chuối non hơ nóng đắp vào những khớp sưng đau do thấp khớp. Lá ngũ trảo tươi rửa sạch, giã nhỏ, đắp chữa vết thương, sưng tấy. Lá giã với ít gừng và rượu, gạn uống chữa viêm đường tiết niệu, đái ra máu. Lá khô (20 – 30g) sắc uống chữa mụn nhọt, hoặc phối hợp với lá đào lộn hột, lá cù đèn hạt ý dĩ (liều lượng bằng nhau) sắc uống lúc nóng để hạ nhiệt, làm ra mồ hôi.  Ở Đông Nam Á, người ta dùng những phần khác nhau của cây ngũ trảo để trị sốt. Ở Malaysia, lá ngũ trảo sắc với một củ hành tây và vôi, đắp lên đầu trị nhức đầu dữ dội. Hoa khô tán bột dùng trị sốt. Ở Indonesia, người ta dùng phần trên mặt đất của cây ngũ trảo để trị sốt và sốt rét. Ở đảo Solomon, nhân dân lại dùng lá xát vào bụng phía trên dạ dày để trị táo bón.  Ở Trung Quốc, rễ hoặc phần trên mặt đất được dùng trị sốt, làm tiêu độc tố trong bệnh quai bị, vàng da, lỵ và chống sưng tấy trong thấp khớp. Cây còn được dùng chữa viêm họng, ghẻ lở, mụn nhọt, viêm thận phù thũng, vàng da, lỵ, đòn ngã tổn thương. Rễ được dùng trị ung thư và làm thuốc lợi tiểu trị tiểu tiện ra máu. Nước sắc rễ trị viêm vú. Lá tán bột trị bọ cạp và rết cắn.  Ở Ấn Độ, quả ngũ trảo được dùng làm thuốc đắp trị sưng tấy và những chỗ đau nhức, vỏ thân là thuốc giải độc.  *Nguồn:Cây thuốc và động vật làm thuốc ở Việt Nam"
+            },
+            "preparation": {
+                "@type": "Cách dùng",
+                "được_dùng": null
+            },
+            "caution": {
+                "@type": "luu_y",
+                "luu_y": null
+            }
+        }
+    ]
+}

@@ -1,0 +1,241 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hành",
+      "ten_khac": "Hành, Hành hoa, Hành hương, Hom búa (Thái), Búa (Tày), Thông bạch, Sông (Dao)",
+      "ten_khoa_hoc": "Allium fistulosum L.",
+      "ma_taxon": "126225",
+      "ho": "Alliaceae (Hành)",
+      "Mô tả": {
+        "lá": "Hành lá một loại cỏ sống lâu năm, có mùi đặc biệt. Lá gồm 5-6 lá, hình trụ rỗng, dài 30- 50cm, đường kính 4-8mm, phía giữa phình lên, đầu thuôn nhọn.",
+        "hoa": "Cụm hoa mọc trên một cán mang hoa hình trụ, rỗng, cụm hoa hình xim có ngấn thành hình tán giả, nhưng cuống tán giả ngắn đến nỗi cụm hoa trông giống hình cầu. Bao hoa gồm 2 vòng, mỗi vòng gồm 3 cánh, 3 lá đài màu trắng 6 nhị, chỉ nhị phình ở gốc, không có răng, bao phấn hình chữ T, 2 ngăn, dài 1 mm, một nhuỵ, bầu thượng, 3 ngăn, mỗi ngăn có nhiều noãn.",
+        "quả": "Quả nang, hình tròn đường kính chừng 6mm, hạt hình cạnh, màu đen.",
+        "cây": "...",
+        "mặt": "...",
+        "đầu": "...",
+        "thân": "...",
+        "cuống": "...",
+        "gốc": "...",
+        "cao": "...",
+        "rễ": "...",
+        "củ": "...",
+        "mọc": "...",
+        "mùa hoa": "...",
+        "mùa quả": "..."
+      },
+      "Phân bố": {
+        "phân_bố": "...",
+        "ở_vùng": [],
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": []
+        },
+        "được_trồng": {
+          "@type": "schema:ItemList",
+          "mục": []
+        },
+        "chủ_yếu": "...",
+        "thường_mọc": "...",
+        "Đặc điểm sinh trưởng": "..."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "..."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "..."
+      },
+      "Thành phần": {
+        "thành phần": "Trong hành có axit malic, phytin và chất alylsunfit.",
+        "gồm chất": "...",
+        "Các hợp chất": "...",
+        "chứa": "...",
+        "triết xuất": "...",
+        "đã nghiên cứu": "...",
+        "tìm thấy": "...",
+        "thủy phân": "Chúng ta đã biết atixin là một chất dầu không màu, tan trong cồn, trong benzen, ête, khi hoà tan trong nước dễ bị thuỷ phân, có tác dụng diệt khuẩn rất mạnh.",
+        "các hoạt chất": "...",
+        "tinh dầu chứa": "Có tác giả nói trong hành có tinh dầu, trong tinh dầu chủ yếu có chất kháng sinh atixin C6H10OS2.",
+        "có hoạt chất": "...",
+        "dấu hiệu đặc trưng": "..."
+      },
+      "Tính vị": {
+        "Có vị": "..."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hành là một vị thuốc rất thông dụng trong nhân dân. Được ghi trong các tài liệu cổ từ lâu.  Trong các tài liệu cổ này, người ta cho rằng hành có vị cay, bình mà không độc có năng lực phát biểu, hoà trung, thông dương, hoạt huyết, dùng làm thuốc ra mồ hôi, lợi tiểu, sát trùng, chữa đau răng, sắc uống lấy nước chữa các chứng sốt, sốt rét, cảm, nhức đầu, mặt mày phù thũng, còn làm yên thai, sáng mắt, lợi ngũ lạng.",
+        "được_dùng": "...",
+        "làm thuốc": "...",
+        "có tác dụng": "...",
+        "sắc uống": "...",
+        "giã nát": "...",
+        "sắc nước uống": "...",
+        "chữa": "..."
+      },
+      "Cách dùng": {
+        "được_dùng": "...",
+        "làm thuốc": "...",
+        "có tác dụng": "...",
+        "sắc uống": "...",
+        "giã nát": "...",
+        "sắc nước uống": "...",
+        "phơi khô": "...",
+        "xấy khô": "..."
+      },
+      "luu_y": {
+        "luu_y": "..."
+      }
+    }
+  ]
+}

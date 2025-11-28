@@ -1,0 +1,224 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngô đồng",
+      "ten_khac": "Trôm đơn, cây bo rừng, tơ đồng",
+      "ten_khoa_hoc": "Firmiana simplex (L.) W. Wight",
+      "ma_taxon": "162991",
+      "ho": "Trôm (Sterculiaceae)",
+      "Mô tả": {
+        "lá": "Cây to, cao 20 – 30m. Lá đa dạng, kép chân vịt, mọc so le, hình tim, từ nguyên đến xẻ 3 – 5 thuỳ hình tam giác, gốc xẻ sâu thành 2 thuỳ tròn to, đầu từ thuôn nhọn, hai mặt hơi có lông, sau nhẵn; cuống lá dài.",
+        "hoa": "Cụm hoa mọc ở ngọn thành chùy phân nhánh, có lông mềm; đài 5 răng hình trứng ngắn, có lông sắt ở mặt ngoài. Hoa đực có cuống bộ nhị nhăn và bầu lép có lông, chia 5 cạnh. Hoa lưỡng tính có bầu hình cầu có lông, vòi nhụy ngắn, đầu nhụy chia 5 thuỳ.",
+        "quả": "Quả gồm 5 đại, mở trước khi chín, hạt hình cầu.",
+        "cây": "Cây to, cao 20 – 30m.",
+        "mùa hoa": "tháng 5 – 7",
+        "mùa quả": "tháng 8 – 10"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Firmiana Marsili ở Việt Nam chỉ có 2 loài. Một loại phân bố ở các tỉnh miền núi phía Bắc, và loài ngô đồng chỉ thấy ở phía Nam: Khánh Hoà (Cam Ranh, Nha Trang) và Bà Rịa – Vũng Tàu (Bà Rịa), Quảng Nam (Cù Lao Chàm) và có thể có ở Ninh Thuận, Bình Thuận.  Ngô đồng là cây gỗ mọc nhanh, ưa sáng và có khả năng chịu hạn tốt. Cây thường mọc ở rừng thưa nửa rụng lá hoặc rừng khô ở vùng ven biển. Cây cũng được trồng để lấy sợi (Từ điển cây thuốc Việt Nam, 1997). Cây trưởng thành ra hoa quả hàng năm. Tái sinh tự nhiên tốt từ hạt.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Khánh Hoà"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Bà Rịa – Vũng Tàu"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Quảng Nam"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Ninh Thuận"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Bình Thuận"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ, vỏ, hoa, hạt và lá."
+      },
+      "Thành phần": {
+        "thành phần": "Hạt chứa 40% dầu, thành phần chính là acid sterculic, palmitic, oleic, linoleic và cafein [Võ Văn Chi, 1996, Từ điển cây thuốc Việt Nam, tr 97], [Phạm Hoàng Hộ, 2006, Cây có vị thuốc ở Việt Nam, tr.103].  Theo các tác giả Trung Quốc, ngô đồng chứa nhiều triterpen [Trung dược từ hải, vol.3, p.209 – 212]. Ngoài ra còn tìm thấy β – amyrin, betain, cholin (CA, 1991, 115, 46076a) lupeol, octacosanol (CA, 1991, 114, 139814j), kaemferol – 3- O – β – D – rutinosid (CA,1991, 114, 244264C) [Fitoterapia 1990, 61 (4) 373], quercetin – 3- O – β – D – neohespe – ridosid, hyperosid và glucosamin [CA, 1991, 115, 46076a]."
+      },
+      "Tính vị": {
+        "Có vị": "Rễ và vỏ cây ngô đồng vị đắng, tính mát, có công năng trừ phong thấp, tiêu viêm, sát trùng. Hoa và hạt vị ngọt tính bình, có công năng nhuận phế, hoà vị, tiêu tích trệ. Lá ngô đồng vị ngọt, tính bình, có công năng thanh nhiệt giải độc, an thần, giáng tiêu viêm, làm hạ cholesterol."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Rễ ngô đồng được dùng chữa thấp khớp, viêm khớp dạng thấp, đau nhức xương. Ngày dùng 15 – 30g sắc lấy nước uống. Có thể dùng lá thay rễ còn dùng chữa lao phổi, thổ huyết, bạch đới, đòn ngã tổn thương.  Vỏ cây ngô đồng được dùng chữa trĩ, lòi dom, tóc bạc. Lấy vỏ cây hoặc vỏ cành bỏ lớp bần ở ngoài, chỉ lấy lớp trắng ở bên trong, đốt thành than nghiền thành bột trộn với dầu thực vật, rồi bối vào chỗ trĩ hoặc bôi vào chân tóc bạc.  Lá ngô đồng được dùng chữa cao huyết áp, bệnh mạch vành, tăng cholesterol huyết. Lấy lá ngô đồng 5 – 10g (10 – 20g tươi) sắc uống, ngày 1 thang. Để chữa thấp khớp đau nhức xương, suy nhược thần kinh, di tinh, bất lực, dùng 15 – 30g sắc uống, ngày một thang. Dùng ngoài, lấy lá khô, tán thành bột mịn hòa với mật ong bôi lên chỗ sưng tấy, mụn nhọt, lở loét.  Hoa ngô đồng được dùng chữa thuỷ thũng, bỏng chốc đầu, lở loét ngoài da. Để chữa thuỷ thũng, lấy hoa ngô đồng 10 – 15g sắc uống, ngày một thang. Để chữa bỏng, chốc đầu, lở loét, lấy hoa ngô đồng khô tán thành bột mịn, hòa với dầu thực vật bôi lên chỗ đau.  Ở Trung Quốc, rễ ngô đồng cũng được dùng để trị thấp khớp, đau nhức xương, chống sưng, phù, ngoài cách sắc uống, nếu là tươi, có thể dùng 30 – 60g giã nát, vắt lấy nước uống. Vỏ cây cũng được dùng chữa trĩ và tóc bạc sớm. Hạt được dùng chữa trĩ, viêm miệng, lở loét ngoài da."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

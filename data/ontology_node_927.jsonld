@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mắm trắng",
+      "ten_khac": "Mắm trắng.",
+      "ten_khoa_hoc": "Avicennia marina Vierh. var. alba Bakhuiz",
+      "ma_taxon": "75723",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ hay cây to, phân cành ngay từ gốc, cao 8 – 20m.",
+      "rễ": "Rễ thở hình dùi, mọc nổi trên bùn.",
+      "thân": "Cành non phủ lông tơ trắng hoặc xám, cành già và bóng, có nhiều lỗ.",
+      "lá": "Lá mọc đối, hình bầu dục thuôn, gốc và đầu nhọn, mép hơi lượn sóng, mặt trên nhẵn bóng, mặt dưới phủ lông màu trắng, óng ánh, hai mặt lá đều có tuyến tiết muối thừa, cuống lá cũng có nhiều lông.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành chùy gồm nhiều xim, hoa màu vàng, đài nhỏ, 5 răng gần như không đều, phủ lông ở phần gốc mặt ngoài,tràng có ống ngắn sớm rụng, 4 cánh đều, có lông dài màu trắng ở mặt ngoài, nhị 4 không đều, đính ở họng tràng, bầu hình trụ, có lông.",
+      "quả": "Quả nang, hình quả lê, phồng ở một phía, màu vàng lục."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây mắm thuộc nhóm cây gỗ ưa sáng, thường mọc khá tập trung cùng với một số loài cây ngập mặn khác tạo thành kiểu rừng đặc biệt trên nền đất bùn nhão ở cửa sông vùng ven biển. Cây sớm phân cành, kèm theo bộ rễ chống phát triển. Cây ưa khí hậu nhiệt đới nóng và ẩm. Cây mọc ở phía nam thường có kích thước và chiều cao lớn hơn ở vùng ven biển Quảng Ninh, Hải Phòng,. Mắm ra hoa quả nhiều, hoa thụ phấn chủ yếu nhờ côn trùng. Khi quả già rụng xuống nước vẫn có khả năng nảy mầm, khi thủy triều rút sẽ đọng lại trên lớp bùn và nhanh chóng tạo thành một cây con có thể trụ vững đến đợt thủy triều tiếp theo."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ, rễ và hạt."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ thân, vỏ rễ và hạt cây mắm trắng có vị chát, có tác dụng làm săn se, lá cây\u00a0khử trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ thân cây mắm ngày 30 – 40g chế thành cao lỏng, cao mềm hoặc ngâm rượu uống. kết hợp lấy bông tẩm thuốc bôi lên chỗ lở loét chữa phong hủi, bệnh ngoài da, ghẻ. Hạt mắm nghiền thành bột mịn, trộn với bơ làm thành bột nhão, bôi xoa chữa đậu mùa.  Theo tài liệu ở nước ngoài, hạt (ở Ấn độ) và vỏ rễ (ở Mianma) được dùng để kích dục. Quả chưa chín giã nát, đắp chữa áp xe mưng mủ. Ở Indonexia, chất nhựa rỉ ra từ vỏ thân, có tác dụng tránh thai, dùng không thấy tác dụng phụ.  Trong nhân dân, lá mắm có tác dụng xua đuổi muỗi và được dùng làm phân xanh. Quả ăn được. Tro gỗ cây mắm có tỷ lệ kali cao, trước đây dùng để giặt thay xà phòng.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thung",
+      "ten_khac": "Cây búng, đăng, tung",
+      "ten_khoa_hoc": "Tetrameles nudiflora R.Br.",
+      "ma_taxon": "130531",
+      "ho": "Thung (Datiscaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 15 – 20m, có khi hơn, có bạnh vè to và cao từ 5 – 7m.",
+      "thân": "Thân cỏ gỗ mềm, vỏ nứt nẻ màu xám nhạt.",
+      "lá": "Lá có cuống rất dài, mọc so le sau khi hoa nở hình bầu dục, gốc tròn hoặc hơi hình tim, đầu tù rồi thuôn nhọn, mép khía răng nhỏ.",
+      "hoa": "Hoa đơn tính khác gốc; hoa đực họp thành chùy không cuống, đài có 4 răng gần hình ống; tràng 0 hoặc 1 – 4 cánh ngắn hơn đài; nhị 4, chỉ nhị dài gấp hai lần đài; hoa cái họp thành bông gồm nhiều hoa không cuống, to hơn hoa đực; đài 4 răng gần hình cầu; tràng và nhị 0; bầu dính với đài, lõm ở định, lá noãn 4.",
+      "quả": "Quả nang, hạt nhiều hình thuôn.",
+      "mùa hoa": "tháng 2 – 4",
+      "mùa quả": "tháng 5 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Họ Datiscaceae ở Việt Nam chỉ có 2 chi, mỗi chi chỉ có 1 loài và như vậy, chi Tetrameles R. Br có loài đại diện là cây thung kể trên.  Trên thế giới, thung phân bố chủ yếu ở vùng nhiệt đới châu Á, bao gồm các Quốc gia: Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Malaysia và Indonesia. Ở Việt Nam, thung đã ghi nhận được về phân bố ở tỉnh Sơn La (Mộc Châu, Thuận Châu), Lào Cai, Cao Bằng, Ninh Bình (Cúc Phương), Kon Tum (Sa Thày), Đắk Lắk, Đắk Nông (Quảng Phú), Lâm Đồng (Bảo Lộc), Đồng Nai (Định Quán), Bà Rịa – Vũng Tàu (Côn Đảo). Thung là loại cây gỗ lớn, mọc nhanh và có các rễ bạch vè cao tới vài mét. Cây thường mọc rải rác trong các rừng kín thường xanh.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắk Lắk"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đắk Nông"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Bà Rịa – Vũng Tàu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ cây thung có tác dụng nhuận tràng, lợi tiểu, thanh huyết và thông mật."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Ấn Độ, người ta dùng vỏ làm thuốc trị thấp khớp, phù thũng, cổ trướng và hoàng đản.  Ở Campuchia, thường dùng phối hợp với các vị thuốc khác chữa bệnh về gan với phù thũng, vàng da và thấp khớp. Dùng phối hợp vỏ cây thung với vỏ cây me sắc uống hay hãm nước nóng uống làm thuốc bổ. Cây non mới có 2 – 3 lá dùng dạng thuốc hãm hay thuốc sắc trị co giật."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

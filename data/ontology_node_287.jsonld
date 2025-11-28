@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chua chát",
+      "ten_khac": "Sơn tra Việt Nam, Táo mèo, Sán sá (Tày), Co sam sa (Thái)",
+      "ten_khoa_hoc": "Docynia indica (Wall.) Decne.",
+      "ma_taxon": "542772",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỡ cao 5m, nhánh và thân non có gai và lá có phiến có thùy.",
+      "lá": "Lá ở nhánh già không có thùy, thon, dài 7-10cm, đầy lông lúc non, mép có răng nhỏ, gân phụ 6-10 cặp; lá kèm mau rụng.",
+      "hoa": "Tán 1-3 hoa, cuống ngắn; đài đầy lông trắng, mịn, phiến nhọn; cánh hoa to 10x5mm, mỏng, không lông; nhị ngắn; vòi nhụy 5, dính nhau, bầu nhiều noãn.",
+      "quả": "Quả thịt, tròn hay hình trứng, vàng vàng to 5cm, vỏ quả trong cứng.",
+      "mùa hoa": "tháng 2-4",
+      "mùa quả": "tháng 7 trở đi.",
+      "mọc": "Chú ý : Tránh nhầm với vị sơn tra của Trung Quốc có tên khoa học là Crataegus cuneata Sieb. et Zucc. (nam sơn tra hay dã sơn tra).  Sơn tra Trung Quốc khác với sơn tra Việt Nam (táo mèo) ở chỗ: lá non và lá già xẻ 3-5 thùy, mép có răng cưa, quả hình cầu nhỏ, đường kính 1-1,2cm, khi chín màu vàng hay màu đỏ (nam sơn tra), 1-1,5cm khi chín màu đỏ sẫm (bắc sơn tra).  Quả Sơn tra Trung Quốc – Crataegus cuneata Sieb. et Zucc."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Trên thế giới, táo mèo phân bố ở Ấn Độ, Mianma và 1 số tỉnh phía nam Trung Quốc. Ở Việt Nam, cây phân bố chủ yếu ở vùng núi cao phía Bắc như Hà Giang, Lào Cai, Yên Bái, Lai Châu."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả – Fructus Docyniae Indicae; Quả chín dùng được hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Sơ bộ thấy táo mèo thu hái ở Lào Cai chứa tanin 2,76%, đường 16,4%, acid hữu cơ 2,7%;"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Táo mèo có vị chua, ngọt, hơi chát, tính ấm, có tác dụng kiện vị, tiêu thực."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả ăn được và được dùng là thuốc bổ tỳ, kích thích tiêu hóa, làm ăn ngon, dễ tiêu, chữa đầy bụng, ợ chua. Dạng dùng là bột, viên hoặc cao lỏng.  Có thể kết hợp với các vị thuốc theo công thức sau: táo mèo 25g, củ sả 25g, chỉ xác 25g, vỏ vối 25g, cỏ quýt 25g, củ gấu 40g, gừng tươi 20g, phèn 10g. Tất cả phơi khô tán bột."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

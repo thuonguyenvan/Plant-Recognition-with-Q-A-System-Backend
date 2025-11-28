@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch thược",
+      "ten_khac": "Bạch thược, Mẫu đơn",
+      "ten_khoa_hoc": "Paeonia lactiflora Pall.",
+      "ma_taxon": "127857",
+      "ho": "Paeoniaceae",
+      "Mô tả": {
+        "lá": "Lá mọc so le, có cuống dài, chia thành 3 – 7 thùy hình trứng hoặc mác thuôn, dài 8 – 12 cm, ròng 2 – 4 cm, đầu nhọn.",
+        "hoa": "Hoa mọc to riêng lẻ ở ngọn thân, gồm nhiều cánh màu trắng, nhị vàng.",
+        "quả": "Mùa quả: Tháng 8 – 9.",
+        "cây": "Cây thảo, sống lâu năm, cao 50 – 80 cm",
+        "thân": "Thân nhẵn, mọc thẳng.",
+        "rễ": "Rê củ to, mập, mặt ngoài màu nâu, ruột màu trắng hoặc hồng nhạt.",
+        "mùa hoa": "Tháng 5 – 7",
+        "mọc": "Tránh nhầm với cây hoa thược dược (Dahlia variabulus Desf) thuộc họ Cúc (Asteraceae) mà nhiều sách vần dùng để chỉ bạch thược. Cây này được trồng làm cảnh và trang trí vào ngày Tết Nguyên đán. Cũng tránh nhầm với cây đơn đỏ, đơn trắng (thuộc chi Lxora, họ Rubiaceae) là những cây bản địa cũng được gọi là mẫu đơn."
+      },
+      "Phân bố": {
+        "phân_bố": "Bạch thược vốn là cây mọc tự nhiên ở một số tình Hắc Long Giang, Cát Lâm, Hà Bắc, Liêu Ninh, Sơn Đông… (Trung Quốc) Do giá trị và nhu cầu làm thuốc tăng, nên bạch thược cũng như một số loài khác cùng chi đã được đưa vào trồng từ lâu đời ở nhiều địa phương của Trung Quốc.",
+        "Đặc điểm sinh trưởng": "Bạch thược thuộc loại cây bụi ưa ẩm và ưa sáng Cây trồng ở Sa Pa đã tỏ ra thích nghi với điều kiện khí hậu của vùng á nhiệt đới núi cao, nhiêt độ trung bình khoảng 15,3°C, lượng mưa 2800 mm/năm. Cây trồng từ hạt sau 4 hoặc 5 năm mới bắt đầu có hoa. Bạch Thược rụng lá vào mùa đông, trên thân và cành có nhiều chồi ngủ. Đến khọảng giữa tháng 2 năm sau (sau tết âm lịch), từ các chồi ngủ nhanh chóng mọc ra cành và lá non mới. Mùa hoa bắt đầu vào giữa tháng 5, kéo dài từ 10 đến 15 ngày, song mỗi hoa chỉ nở trong vòng vài giờ, đến trưa đã bắt đầu tàn. Hạt giống thu được ở những cây trồng, đem gieo đã cho những lứa cây mới. Bach thược có khả năng mọc chồi từ gốc hoặc từ rễ của cây. Chồi tách từ rễ củ có thể làm cây giống để trồng. Bạch thược là cây thuốc quý đã nhập trồng được ở Sa Pa. Trước mắt cần chú ý bảo tồn, tránh để mất giống. Đồng thời, có kế hoạch xúc tiến nhân trồng rộng rãi hơn."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ thu hái từ cây 3 – 5 tuổi vào hè – thu, rửa sạch đất cát, cắt bỏ đầu đuôi và rễ con, gọt bỏ vỏ ngoài, cho vào nước sôi, đun sơ qua, vớt ra, đảo hoặc lăn tròn, rồi phơi hay sấy khô. Rễ hình trụ tròn, hai đầu đều nhau hoặc một đầu hơi to hơn, thẳng hoặc hơi cong queo, dài 10 – 20 cm. đường kính 1 – 2 cm. Mặt ngoài màu nâu nhạt hoặc màu phấn trắng, chỗ chưa cạo hết vỏ có màu nâu xám, đôi khi có đường nhăn dọc rõ rệt."
+      },
+      "Thành phần": {
+        "thành phần": "Rễ bạch thược chứa 3,30 – 570% paconiflorin, oxypaeoniflorin, albiflorin, benzoyl paconiflorin Ngoài ra, rễ còn có ít hoặc không có paconol, paeonosid hoac paeonolid, lactiflorin, (Z) – (ISSR) – B – punen – 10 – vl vicianosid, B – sitosterol, B – sitosterol – ca – glucosid, acid benzoic (vào khoảng 1%), acid palmitic, acid cis-9, 2-octadccadienoic, nhiều alkan (C24 – C26), daucosterol, acid galic, methyl galat, d -catechin, myoinositol, sucrose và glucogalin. Theo Kokei Kamiya và cộng sự, 1997, bạch thược còn chứa các hợp chất triterpen và flavonold Các hợp chất triterpen từ rễ là acid oleanolic, hederagenin, 11, 12 α – cpoxy-3β, 23-dhydrovvolean – 28, 13β – olid: 30 – norhederagenin; acid hetulinic, 3β – hydroxyolean – 12 – en – 28 – al. 11α, 12α – cpoxy – 3β, 23 – dihydroxy – 30 – norolean – 20 (29) – en 28, 13- old. Các flavonoid từ lá (1.06%) bao gồm kaempferol – 3 = O = β – D-glucosid và kaempferol – 3.7 – di – O – β- glucosid."
+      },
+      "Tính vị": {
+        "Có vị": "Bach thươc có vị đắng chua, hơi chát, vào 3 kinh can, tỳ, phế, có tác dụng bình can, chỉ thống, dưỡng huyết, điều kinh, liễm âm, chỉ hàn, tiêu viêm, làm mát, lợi tiểu."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Bạch thược chữa đau bụng, tả lỵ do ruột co bóp quá mạnh, lưng ngực đau, chân tay nhức mỏi, nhức đầu, mắt hoa, bệnh về mạch như viêm mạch huyết khối, tắc mạch, nghẽn mạch não, kinh nguyệt không đều, bế kinh, xích bạch đới, mồ hôi trộm, tiểu tiện khó. Ngày 6 – 12g dạng thuốc sắc. Để thuốc có hiệu quả hơn, tùy theo bệnh mà chế biến thích hợp. Để sống có tác dụng mát dịu, chữa đau cơ bắp, nhức đầu hoa mắt, trị tả lỵ, cảm mao, giải nhiệt, tiểu tiện khó, mồ hôi trộm Sao tẩm chữa kinh nguyệt không đều, xích bạch đới, bế kinh"
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa hai chân và đầu gối đau nhức, khó co duỗi. đau bụng, háo khát, đái đường:  Bạch thược 8g, cam thảo 4g, sắc chia 2 lần uống trong ngày hoặc tán bột, mỗi lần uống 4g, ngày 3 lần.  Quế chi gia linh truật thang (bài thuốc của Trương Trọng Cảnh) chữa đau nhức, mắt hoa:  Bạch thược 6g, quế chi 6g, đại táo 6g, sinh khương 6g, phục linh 6g, bạch truật 6g, cam thảo 4g sắc chia 3 lần uống trong ngày.  Bài tư vật thang chữa kinh nguyệt không đều, đau bụng khi hành kinh, xích bạch đới, bế kinh sinh đau nhức:  Bạch thược, sinh địa mỗi vị 20g… đương quy 10g, xuyên khung 4g, hoặc tứ vật gia ngưu tất (thêm ngưu tất 20g), hoặc tứ vật gia ngưu tất, mần tưới (mỗi vị 15g) sắc uống hoặc chế thành cao, hoặc viên hoàn uống.  Chữa băng huyết, rong huyết, hành kinh không dứt hoặc ngừng rồi lại thấy:  Bạch thược, trắc bách diệp, sao sém đen, mỗi vị 12 – 20g, sắc uống (Nam đươc thần hiệu)"
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

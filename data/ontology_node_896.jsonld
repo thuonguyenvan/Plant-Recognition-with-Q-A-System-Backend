@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ngưu tất",
+      "ten_khac": "Ngưu tất, Cỏ xước, Hoài ngưu tất",
+      "ten_khoa_hoc": "Achyranthes bidentata Blume",
+      "ma_taxon": "474181",
+      "ho": "Amaranthaceae (Rau rền)",
+      "Mô tả": {
+        "rễ": "Rễ to, dài, dẻo là loại tốt.",
+        "thân": "Loại có thân và rễ màu hồng gọi là hồng thảo căn.",
+        "rễ": "Rễ hình trụ, dài 20 – 30 cm, đường kính 0,5 – 1,0 cm.",
+        "đầu": "Đầu trên mang vết tích của gốc thân, đầu dưới thuôn nhỏ.",
+        "mặt": "Mặt ngoài màu vàng nâu, có nhiều nếp nhăn dọc nhỏ và vết tích của rễ con."
+      },
+      "Phân bố": {
+        "phân_bố": "Ngưu tất có nguồn gốc ở vùng Đông Bắc Trung quốc hoặc Nhật Bản. Cây đã được thuần hóa và trồng từ lâu đời ở những nước này. Ngưu tất được nhập từ Trung Quốc vào Việt Nam, năm 1960. Lúc đầu cây được trồng thuần hóa ở Sapa, sau chuyển sang Sìn Hồ (Lai Châu) rồi về trại thuốc Tam Đảo (Vĩnh Phúc) và trại thuốc Văn Điển (Hà Nội). Cách đây khoảng 30 năm, ngưu tất đã được trồng dưới dạng sản xuất được liệu ở vùng ngoại thành Hà Nội và các tỉnh thuốc đồng bằng Bắc Bộ. Có thể coi ngưu tất là một ví dụ điển hình về một cây thuốc có nguồn gốc ôn đới, qua quá trình nghiên cứu di thực đã có thể trồng thành công cả ở vùng đồng bằng có khí hậu nhiệt đới gió mùa. Điều đó cho thấy ngưu tất là cây có biên độ sinh thái tương đối rộng, mặc dù thời vụ trồng chủ yếu vẫn ở thời kì \u00a0có nhiệt độ thấp trong năm. Ngưu tất là cây ưu sáng và ưu ẩm. Cây có hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt.",
+        "Đặc điểm sinh trưởng": "Ngưu tất là cây ưu sáng và ưu ẩm. Cây có hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Hồng căn thảo là một loại ngưu tất có thân lá và rễ đỏ cùng loài Achyranthes bidentate."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ ­ Radix Achyranthis Bidentatae.  Rễ hình trụ tương đối thẳng, dài 20­-30 cm, đường kính 0,5­1 cm. Ðầu trên mang vết tích của cổ rễ, đầu dưới hơi thuôn nhỏ. Mặt ngoài màu vàng đất hay nâu nhạt, có nhiều nếp nhăn dọc nhỏ và vết tích của rễ con."
+      },
+      "Thành phần": {
+        "thành phần": "Rễ Ngưu tất có chứa khoảng 4% saponin toàn phần trong đó có acid oleanolic [(3beta)-3-Hydroxyolean-12-en-28-oic acid] 0,096%, và acid oleanolic α -L-rhamnopyranosyl – β – D- galactopyranosid. Rễ còn chứa ecdysteron và inokosteron. Hàm lượng ecdysteron khoảng 0,037%. Rễ Ngưu tất chứa một saccharid là fructan mạch ngắn với mức độ trùng hợp trung bình là 8. Chất saccharid này có tác dụng cải thiện hệ miễn dịch (Yu Bias và cs, 1995) Rễ còn có một peptidpolysaccharid trong đó 24,1% là peptid bao gồm glycin, serin, acid glutamic và acid aspartic. Chất peptidpolysaccharid này có tác dụng miễn dịch (Fang J. N, và cs, 1990; CZ 114: 29994k) Betain có trong rễ với hàm lượng 0,93-1,029% đã được chứng minh là ổn định trong quá trình chế biến. Rễ khô còn có emodin và physcion."
+      },
+      "Tính vị": {
+        "Có vị": "Ngưu tất có vị đắng chua, tính bình, không độc, vào 2 kinh can và thận. Dạng sống có tác dụng hành huyết tan ứ, tiêu ung lợi thấp. Dạng chín có tác dụng bổ can, ích thân, cường gân tráng cốt."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ngưu tất dạng sống chữa cổ họng sưng đau, mụn nhọt, đái rát buốt, đái ra máu hoặc sỏi, bế kinh, bụng dưới kết hòn cục, đẻ khó hoặc khi đẻ rau thai \u00a0không ra, sau khi đẻ ứ huyết gây đau bụng, chấn thương, ứ máu bầm, đầu gối nhức mỏi. Ngưu tất sao tẩm chữa can thận hư, ù tai, đau lưng, mỏi gối, tay chân co quắp hoặc bại liệt. Ngày dùng 6-12g dạng thuốc sắc hoặc bột. Phụ nữ có thai, băng huyết không nên dùng ngưu tất. Trong y học Trung Quốc, rễ ngưu tất với liều 5 – 12g dưới dạng nước sắc được sử dụng làm thuốc phục hồi sức lực, lợi tiểu, chữ bế kinh, đau kinh, tăng huyết áp, thấp khớp, sỏi đường tiết niệu, viêm họng, viêm amidan. Ngoài ra, nó còn được dùng làm thuốc kích thích tình dục, tráng dương, chữa liệt dương, gây sảy thai. Dùng ngoài, nước sắc 20% Ngưu tất chữa các bệnh về da chân và các móng (bệnh nấm biểu bì). Hạt được dùng làm thuốc chống độc, chữa thấp khớp, hen phế quản (phối hợp với một số dược liệu khác). Phụ nữ có thai không được dùng."
+      },
+      "Cách dùng": {
+        "được_dùng": "Bài 1  Chữa co giật, bại liệt, phong thấp, teo cơ, xơ vữa mạch máu.  Ngưu tất 10 – 12 g, sắc uống.  Bài 2  Chữa phong thấp, thấp khớp.  Ngưu tất 12 g, hy thiêm 16g, thổ phục linh 16g, lá lốt 10g. Dạng thuốc viên, ngày uống 3 lần, mỗi lần 10 – 15g. Ngưu tất 10g, vòi voi 15g, ké đầu ngựa 15g, lá lốt 15g. Dạng thuốc viên, mỗi lần uống 10 – 15g. Ngưu tất 10g, lá lốt \u00a016g, cỏ xước 16g, cành dâu 20g, cà gai 16g. Sao qua, sắc thuốc mỗi ngày một thang. Dùng 3 -5 thang liền. Có thể củng cố kết quả bằng cành lá lốt nấu với lạc ăn trong 7 ngày. Ngưu tất 12g, thổ phục linh 20g, hy thiêm 15g, cà gai leo 15g, ích mẫu 10g, hương phụ 10g, ké đầu ngựa 10g. Sắc kỹ, ngày uống một thang.  Bài 3  Chữa viêm đa khớp dạng thấp.  Ngưu tất 12g, độc hoạt 12g, tang ký sinh 12g, phòng phong 12g, tục đoạn 12g, xuyên khung, thục địa, bạch thược, đảng sâm, ý dĩ, mỗi vị 12g, tần giao 10g, quế chi 8g, xuyên khung 8g, cam thảo 6g, tế tân 6g. Sắc uống ngày một thang.  Bài 4  Chữa bị thương máu tụ ở ngoài hay bị ngã máu ứ ở trong, lao động nhiều chân tay nhức mỏi.  Ngưu tất 100g, huyết giác 50g, sâm đại hành 30g, ngâm với 600 ml rượu 35 – 400, thi thoảng lắc đều. Sau 10 ngày, uống mỗi lần 15 ml, ngày 2 lần.  Bài 5  Chữa trẻ em chậm đi.  Ngưu tất, mộc qua, mỗi vị 6g, vỏ chân chim 12g, tán nhỏ, uống với nước cơm.  Bài 6  Chữa huyết áp cao, nhức đầu chóng mặt, nhức mắt, ù tai, mắt mờ, rồi loạn tiền đình, khó ngủ, đau nhức dây thần kinh, rút gân, co giật, táo bón.  Ngưu tất 12g, hạt muống 12g. Sắc uống mỗi ngày một thang.  Bài 7  Chữa xuất huyết nào do xơ cứng mạch máu não, kèm theo liệt nửa người, mất tiếng hoàn toàn hoặc không hoàn toàn và đau lưng.  Ngưu tất 3g, hoàng kỳ 15.5g, sinh địa 15.5g, long đởm thảo 10g, hạt mơ 10g, đương quy 6g, bạch thược 6g, hồng hoa 3g, cát cánh 3g, cam thảo, phòng phong 3g. Sắc chia 3 lần uống trong ngày. Uống 2 -3 tháng.  Bài 8  Chữa xơ cứng động mạch với chóng mặt ù tai.  Ngưu tất 6g, sinh địa 12.5g, gai dầu 12.5g, mạch môn, bạch thược, mẫu đơn, trắc bách diệp, keo da lừa, mỗi vị 9g, giun đất phơi khô 6g, cam thảo 4.5g, nhân sâm 3g. Sắc với 800 ml nước, còn 300 ml chia 3 lần, uống trong ngày.  Bài 9  Bài thuốc tư âm bổ thủy, dùng trong điều trị sốt xuất huyết.  Ngưu tất, tri mẫu, hoàng bá, sinh địa, huyền sâm, mạch môn, hạt muống sao, đan sâm, đơn bì xích thược, cỏ nhọ nồi, trắc bá sao, huyết dụ, mỗi vị 10- 16g, sắc uống ngày 1 thang.  Bài 10: Chữa kinh nguyệt châm, lương \u00a0huyết ít, màu thẫm đen, bụng đau, đại tiện thường táo.  Ngưu tất 12g, ích mẫu 16g, nghệ xanh 16g, củ gấu (tứ chế) 16g, lá mần tưới, tô mộc, chỉ xác mỗi vị 12g. Sắc uống, ngày một thang, mỗi tháng 3-5 thang.  Bài 11: Chữa kinh ra không định kỳ, lượng ít, sắc nhạt mệt mỏi.  Ngưu tất 12g, hoài sơn, đẳng sâm, ý dĩ, mỗi vị 16g, biển đậu, đan sâm, mỗi vị 12g, bạch truật, long nhãn, táo nhân, mỗi vị 8g. Sắc uống ngày một thang.  Bài 12: Chữa rong kinh.  Ngưu tất 12g, cỏ nhọ nồi 16g, bạch truật 12g, phục linh, bán hạ chế, trần bì, hương phụ, mỗi vị 8g, sắc uống ngày một thang  Bài 13: Chữa bế kinh.  Do huyết bị giảm sút : ngưu tất 12g, đảng sâm 20g, hoài sơn, ý dĩ, ích mẫu, mỗi vị 16g, bạch truật, kỷ tử, thục địa, hà thủ ô, kê huyết đằng mỗi vị 12g. Sắc uống ngày một thang. Do huyết ứ trệ: ngưu tất 12g, ích mẫu 16g, đào nhân, uất kim, tạo giác thích, hương phụ, mỗi vị 8g, sắc uống ngày một thang.  Bài 14: Chữa viêm cầu thận cấp tính, phù thũng, đái đỏ sen, viên gan virus, đái vàng thẫm, da vàng, viêm bang quang đái ra máu.  Ngưu tất 12g, rễ cỏ tranh, cỏ mã đề, mộc thông, huyết dụ, lá móng tay, huyền sâm, mỗi vị 15g, sắc uống.  Bài 15: Chữa viêm cầu thận mạn tính.  Ngưu tất 12g, xa tiền tử 16g, thục địa, hoài sơn, kỷ tử mỗi vị 12g, cúc hoa 10g, sơn thù, đan bì, trạch tả, phục linh mỗi vị 8g, sắc uống ngày một thang.  Bài 16: Chữa đái ra máu do sỏi đường tiết niệu, sang chấn.  Ngưu tất 12g, cỏ nhọ nồi, ngẫu tiết, mỗi vị 16g, ích mẫu, uất kim, huyết dụ, đan sâm, mỗi vị 12g, chỉ thực 6g, bách thảo sương 4g. Sắc uống ngày một thang.  Bài 17: Chữa bí tiểu tiện hay gặp ở người già.  Ngưu tất, thục địa, hoài sơn, xa tiền tử, mỗi vị 12g, sơn thù, phục linh, trạch tả, đan bì, phụ tử chế, mỗi vị 8g, nhục quế 4g. Sắc uống ngày một thang.  Bài 18: Chữa viêm phần phụ mạn tĩnh.  Ngưu tất, đan sâm, mỗi vị 12g, hạt quýt, hạt vải, hương phụ, xuyên luyện tử, tam lăng, nga truật, mỗi vị 8g, sắc uống ngày một thang.  Bài 19: Chữa bại liệt trẻ em.  Ngưu tất 160g, tri mẫu, thục địa mỗi vị 80g, bạch thược 60g, cao quy bản, đương quy, tỏa dương, cao xương hổ, mỗi vị 40g, trần bì 30g, hoàng bá 16g. Tán bột làm viên, ngày uống 8g.  Bài 20: Chữa lao xương và lao khớp xương.  Ngưu tất 12g, miết giáp 20g, ngân sài hồ, địa cốt bì, mẫu đơn bì, xuyên tục đoạn, mỗi vị 12g, thanh cao, đào nhân, mỗi vị 8g, hồng hoa 4g. Nếu có mồ hôi trộm thêm mẫu lệ 40g.  Nếu có ổ áp xe thêm : kim ngân hoa 20g, liên kiều 16g, bối mẫu 8g. Sắc uống ngày một thang.  Bài 21: Chữa viêm tắc động mạch.  Ngưu tất, đảng sâm, biển đậu, kê huyết đằng, đan sâm, cỏ nhọ nồi, mỗi vị 16g, huyết dụ, trạch lan, mỗi vị 12g, quế chị, phụ tử chế, mỗi vị 6g, sắc uống ngày một thang."
+      },
+      "luu_y": {
+        "luu_y": "Phụ nữ có thai, băng huyết không dùng."
+      }
+    }
+  ]
+}

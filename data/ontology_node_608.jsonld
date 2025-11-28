@@ -1,0 +1,234 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trúc diệp sâm",
+      "ten_khac": "Song hoa cựu, Trúc diệp sâm",
+      "ten_khoa_hoc": "Disporum calcaratum D. Don",
+      "ma_taxon": "141255",
+      "ho": "Convallariaceae (Tóc tiên)",
+      "Mô tả": {
+        "lá": "hình bầu dục hoặc hình trứng, gần như không cuống, gốc tròn, đầu nhọn, mép nguyên, 5-7 gân chính hình cung",
+        "hoa": "màu đỏ tía sẫm, bao hoa có 6 mảnh rời và bằng nhau, dài 10-12 mm, có cựa ở gốc",
+        "quả": "mọng, hình cầu, khi chín màu xanh lơ tím",
+        "cây": "Cây nhỏ, cao 30 – 60 cm. Thân rễ mảnh.",
+        "mùa hoa": "tháng 4",
+        "mùa quả": "tháng 7"
+      },
+      "Phân bố": {
+        "phân_bố": "Chi\u00a0DisporumSalisb. D. Don có 4 – 5 loài ở Việt Nam phân bố chủ yếu ở vùng núi cao, nhất là ở các tỉnh miền núi phía bắc. Trúc diệp sâm là loài của vùng Nam Trung Quốc, Bắc Việt Nam, Miannia và Ấn Độ. Ở Việt Nam, cây chỉ có ở một số vùng núi cao trên 1000m, thuộc tỉnh Lào Cai, Lai Châu, Sơn La, Hoà Bình, Yên Bái, Cao bằng và Lạng Sơn. Trúc diệp sâm là loài câv ưa ẩm và đặc biệt ưa bóng. Cây thường mọc dưới tán rừng ẩm, dọc theo các bờ khe suối hay bên các hốc đá. Cây sinh trưởng phát triển tốt trong điều kiện khí hậu ẩm mát của vùng cận nhiệt đới – nhiệt đới núi cao. Đất nơi có trúc diệp sâm mọc thường giàu chất mùn, giữ nước tốt và có pH trung tính. Trúc diệp sâm ra hoa quả đều hàng năm. Cây con tái sinh lừ hạt tốt ở xung quanh gốc cây mẹ; phần thân rễ nằm sát mặt đất cũng có khả năng đẻ nhánh khỏe. Trúc diệp sâm là cây có vùng phân bố tương đối hạn chế. Do nạn phá rừng đã làm thu hẹp nơi sống, nên cần quan tâm bảo vệ loài cây quý hiếm này.",
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lai Châu"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Sơn La"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hoà Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Yên Bái"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Cao bằng"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Lạng Sơn"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thân rễ, hoa, lá. Rễ thu hái vào mùa hè, thu. Rửa sạch phơi hoặc sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": ""
+      },
+      "Tính vị": {
+        "Có vị": "Thân rễ trúc diệp sâm có vị ngọt, tính bình, có tác dụng dưỡng âm, ích khí, nhuận phế."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trúc diệp sâm được dùng làm thuốc bổ, chữa ho do phổi nóng, nóng buốt trong xương, lưng đau tê mỏi, mồ hôi trộm, bạch đới. Ngày 10 – 16g thân rễ tươi thái nhỏ, nấu với thịt ăn, thường phối hợp với hoàng tinh, tế tân với lượng bằng nhau.  Bài thuốc có trúc diệp sâm:  Chữa cơ thể nóng hầm hập, bứt rứt, khó ngủ: Thân rễ trúc diệp sâm, vỏ quả dưa hấu, hạt đậu ván trắng, lá sen, mỗi vị 12g, sắc uống làm 2 lần trong ngày. Dùng nhiều ngày"
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

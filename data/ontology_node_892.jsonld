@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mận rừng",
+      "ten_khac": "Mận rừng, Táo rừng, Hồng rừng, Thịnh canh xiểng, Bút mèo, Vàng trầm",
+      "ten_khoa_hoc": "Rhamnus crenatus Sieb. et Zucc. var. cambodianus (Pierre ex Pitard) Tardieu",
+      "ma_taxon": "1256700",
+      "ho": "Rhamnaceae (Táo ta)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay cây nhỡ, cao vài mét.",
+      "thân": "Cành non mềm, có lông tơ, cành già nhẵn hoặc ít lông thưa.",
+      "lá": "Lá mọc so le, hình trứng, gốc thuôn hoặc hơi tròn, đầu bằng có mũi nhọn ngắn, mép hơi khía răng, mặt trên sẫm bóng, mặt dưới nhạt có lông nổi rất rõ; cuống ngắn có khía rãnh.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm tán, 5-8 hoa nhỏ màu trắng vàng; đài 5 thuỳ nhỏ, có ống ngắn; tràng 5 cánh nhẵn; nhị 5, chỉ nhị ngắn, dẹt, bao phấn dài hơn chỉ nhị; bầu thượng, hình chóp, 3 ô.",
+      "quả": "Quả hình cầu, nạc, có đài tồn tại, khi chín màu đỏ sau đen.",
+      "mùa hoa": "tháng 5-7",
+      "mùa quả": "tháng 8 -10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Rhamnus L. gồm các loài là cây bụi hoặc gỗ nhỏ, phân bố rải rác ở vùng nhiệt đới, cận nhiệt đới và ôn đới ấm. Chi này ở Việt Nam có khoảng 10 loài, trong đó mận rừng là cây phân bố ở hầu hết các tỉnh miền núi và trung du phía Bắc. Độ cao phân bố thường dưới 1000m. Ở các tỉnh phía Nam, ít gặp. Mận rừng còn thấy ở Trung Quốc, Lào và Ấn Độ…  Cây ưa sáng, có thể chịu được hạn; khi cây còn nhỏ chịu bóng tốt, thường mọc lẫn trong các quần hệ cây bụi ở đồi hay trên đất sau nương rẫy. Ở vùng đồng bằng, đôi khi cũng gặp trong các lùm bụi quanh làng.  Cây ra hoa quả nhiều hàng năm. Hoa có tuyến mật, hấp dẫn côn trùng, nhờ vậy sự thụ phấn trở nên có hiệu quả. Tái sinh tự nhiên từ hạt tốt. Sau khi bị chặt phá, phần còn lại có khả năng tái sinh cây chồi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Mận rừng không kén đất, có tính chống chịu cao, ít bị sâu bệnh, được trồng ở một số tỉnh trung du và miền núi phía bắc. Cây được nhân giống chủ yếu bằng cành vào mùa xuân. Khi trồng, đào hố 50x50x50cm, bón lót ít phân chuồng nếu có điều kiện, sau đó cắm cành và tưới giữ ẩm. Cây dễ sống, không cần chăm sóc nhiều."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả, lá, rễ. Lá , rễ thu hái quanh năm, dùng tươi hay phơi khô. Qủa thu hái vào tháng 8."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong mận rừng, có chrysarobin, acid chrysophanic (Medicinal Plants in South East Asia trang 339)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mận rừng có vị đắng, tính bình, có độc, dùng ngoài có tác dụng sát trùng, tiêu viêm, chống ngứa."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ và lá mận rừng được dùng ngoài chữa bệnh hắc lào, vẩy nến, mụn rộp, lang ben. vỏ rễ (10g), rửa sạch, thái nhỏ, ngâm với 20ml giấm trong 3-7 ngày. Muốn dùng ngay, có thể đun nhỏ lửa cho giấm bay đi để được một cắn sền sệt hoặc ngâm với 30ml rượu càng lâu càng tốt. Ngày bôi 2 lần trong nhiều ngày. Thuốc không gây xót, khó chịu cho người dùng, nhất là dạng cao đã làm bay hơi giấm.  Để chữa lở ngứa, mày đay, lấy 50 -100g lá tươi, rửa sạch, vò nát, đun sôi với 4-5 lít nước trong 30 phút đến 1 giờ. Đợi cho nước ấm, đem tắm, dùng bã xát vào chỗ lở ngứa, ngày 1 lần, dùng nhiều ngày.  Chú ý: Rễ, thân, lá và quả mận rừng đều chứa chất độc, không được uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa ghẻ: Vỏ rễ mận rừng (30g) phơi khô, tán bột, trộn với mỡ lợn thành bột nhão, cho vào vải mỏng, hơ nóng rồi đắp. Chữa eczema: Rễ mận rừng (30g), quả xuyên tiêu (9g), lá bạch đàn (15g) nấu nước rửa.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

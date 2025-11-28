@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xuân hoa",
+      "ten_khac": "Xuân hoa, Hoàn ngọc",
+      "ten_khoa_hoc": "Pseuderanthemum palatiferum (Nees) Radlk. ex Lindau, 1883",
+      "ma_taxon": "156486",
+      "ho": "Acanthaceae (Ô rô)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Đây là loại cây bụi, sống nhiều năm, cao 1-2 m, thân non màu xanh lục, phân nhiều cành mảnh, phần gốc hóa gỗ màu nâu.",
+      "lá": "Lá mọc đối, hình mũi mác, dài 12 – 17cm, gốc thuôn, đầu nhọn, mép nguyên.",
+      "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu cành, thành xim dài 10 – 16cm; hoa lưỡng tính, màu trắng pha tím, đài 5 lá rời nhau, tràng hợp có ống hẹp và dài; bao phấn màu tím, bầu thượng, nhẵn, 2 ô.",
+      "quả": "Quả nang, chứa 4 hạt."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Pseuderanthemum Radlk chưa xác định chính xác hiện nay có bao nhiêu loài ở Việt Nam. Theo Raymond Bemost, 1939 có 7 loài: Phạm Hoàng Hộ 1993 có 9 loài; Nguyễn Tiến Bản, 1997 có 10 loài. Song tất cả đều ghi nhận xuân hoa là một cây mọc tự nhiên ở vùng núi, vài năm gần đây được trồng rải rác trong nhân dân. Xuân hoa thuộc loại cây ưu ẩm, ưu sáng và có thể hơi chịu bóng nhất là khi còn nhỏ. Cây trồng sinh trưởng mạnh mẽ trong mua xuân – hè, mùa đông có hiện tượng nửa rụng lá. Xuân hoa trồng nên 1 năm tuổi mới có hoa, tái sinh tự nhiên chủ yếu từ hạt, có khả năng tái sinh cây chồi khoa sau khi bị chặt. Ngoài ra, cánh cắm cành, giâm cành đêu có thể tái sinh thành cây mới.",
+      "Đặc điểm sinh trưởng": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Xuân hoa được nhân giống dễ dàng bằng giâm cành. Chỉ cần một đoạn cành hoặc ngọn cây dài 20 – 25cm cắm xuống đất ẩm là ra rễ. Có thể trồng xuân hoa quanh năm."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây Xuân hoa chứa sterol, flavonoid, đường khử, carotenoid, acid hữu cơ. 7 chất đã được phân lập, trong đó 4 chất là Phytol, β-sitosterol, hỗn hợp đồng phân Epimer của Stigmasterol và Poriferasterol. Lá tươi chứa diệp lục toàn phần 2,65mg/g, protein hòa tan 25,5mg/g, polysaccharid hòa tan 0,80%, và các chất: Ca 875,5mg%, Mg 837,6mg%, K 587,5mg%, Na 162,7mg%, Fe 38,75mg%, Al 37,5mg%, V 3,75mg %, Cu 0,43mg%, Mn 0,34mg%, Ni 0,19mg%. Lá có enzym với hoạt tính cao ở pH 7,5, nhiệt độ 70oC."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây Xuân hoa:  Lá cây Xuân hoa chữa đau bụng do nhiễm khuẩn đường tiêu hoá, tiêu chảy, đòn ngã tổn thương, vết thương, tiêu mủ, mụn lồi.  Cây Xuân hoa lá hoa: còn dùng trong phạm vi nhân dân.  Ở Thái Bình, bộ phận trên mặt đất của cây XHLH dùng để chữa viêm đại tràng cấp và mạn tính, đau bụng do co thắt, đầy hơi, chướng bụng, sôi bụng, trĩ xuất huyết, đi ngoài ra máu, chảy máu cam, chảy máu do chấn thương phần mềm. Ở Hoà Bình, XHLH được dùng để chữa cao huyết áp. Ở thành phố Thái Nguyên, XHLH dùng để chữa viêm loét dạ dày – tá tràng chảy máu có hiệu quả. Ngoài ra phần lá non còn ăn với nem chạo và gỏi để tăng vị chua chát, phòng đầy bụng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ðau dạ dầy do bị loét, viêm: ăn 2 lần/ngày. Mỗi lần không quá 7 lá. Khoảng 50 lá là khỏi. Chảy máu đường ruột: Uống lá tươi hoặc lá đã nát, dùng 7–10 lá. Khoảng 1-2 lần là khỏi. Viêm đại tràng co thắt: Ăn như trên 100 lá, kết hợp ăn lá mơ lông trong bữa ăn. Ăn từ 1 đến 2 tháng. Viêm gan, sơ gan cổ trướng: Ngày ăn 2-3 lần, mỗi lần 7 lá dùng khoảng 150 lá. Ðau thận, viêm thận, đau thường xuyên: Dùng không quá 50 lá, chỉ khoảng 30 lá là dứt cơn đau, ngày 3 lần, mỗi lần 3-7 lá. Tả lỏng, đi lỵ, rối loạn tiêu hóa: 7-15 lá, dùng 2 lần là khỏi. Mệt mỏi toàn thân: 3-7 lá, ăn 2 lần. Ðái dắt, đái buốt, đái dục, đái ra máu: Ăn từ 14-21 lá hoặc dã nát uống nước đặc."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

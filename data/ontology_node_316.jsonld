@@ -1,0 +1,271 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/cay-sau-rieng.html",
+      "ten": "Cây sầu riêng",
+      "ten_khac": "Sầu riêng",
+      "ten_khoa_hoc": "Durio zibethinus DC .",
+      "ma_taxon": "64443",
+      "ho": "Gạo (Bombacaceae)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây to, cao 15 – 20 m.",
+        "lá": "Lá mọc so le, hình trứng, dài 9 – 15 cm, rộng 3 – 5 cm, gốc tròn, đầu thuôn nhọn, mép nguyên, mặt trên màu lục, mặt dưới màu vàng sẫm, có lông, gân chính nổi rõ; cuống lá dài 1,5 – 2,8 cm.",
+        "hoa": "Cụm hoa mọc ở thân thành chùm: nhiều bao hình vảy, gồm 5 lá bắc đính với nhau; hoa màu trắng; đài hình chuông; có 5 răng hình tam giác ngắn; tràng 5 cánh, dài hơn đài, nhị nhiều, dài hơn cánh hoa, gồm 5 bó hở đính nhau ở gốc; bầu hình trứng.",
+        "quả": "Quả nang to, có vỏ dày cứng và gai nhọn, khi chín nứt thành 5 mảnh; hạt to bao bọc bởi phần thịt mềm màu vàng nhạt, giống như múi mít, có mùi đặc biệt.",
+        "mùa hoa": "tháng 4",
+        "mùa quả": "tháng 7"
+      },
+      "Phân bố": {
+        "@type": "Phân bố",
+        "phân_bố": "Durio L. là một chi nhỏ, hiện có 6 loài có quả và hạt ăn được, phân bố chủ yếu ở vùng Đông Nam Á và Nam Á.  Sầu riêng có nguồn gốc ở Malaysia, và đã trở thành cây ăn quả quan trọng, được trồng rộng rãi ở Thái Lan, Indonesia, Philippin, Campuchia, SriLanka, vùng Nam Ấn Độ và Việt Nam. Ở Việt Nam, sầu riêng chỉ thấy trồng ở các tỉnh phía nam; nhiều nhất các tỉnh miền Tây và Đông Nam Bộ, như Long An, Tiền Giang, Sa Đéc, Cần Thơ, Đồng Nai, Bình Dương… Gần đây đã phát triển trồng cả ở các tỉnh Tây Nguyên, Bình Thuận và Ninh Thuận. Sầu riêng trồng hiện nay gồm nhiều giống, phổ biến nhất ở Thái Lan, Malaysia và Indonesia là các giống được ký hiệu là D₁, D₂, D₃, D₄, D₁₀, D₁₁… trong số này, chắc chắn đã có giống được nhập vào Việt Nam.  Sầu riêng là cây ăn quả điển hình của vùng nhiệt đới. Cây thích nghi cao với khí hậu nóng và ẩm, nhiệt độ trung bình năm từ 22 đến 26°C. Cây có thể trồng ở vùng núi đến độ cao 800 m (ở Thái Lan, Indonesia); nhưng ở những vùng có nhiệt độ trung bình năm dưới 22°C, sầu riêng phát triển kém và đậu quả rất ít. Đặc điểm này cho thấy là không trồng được sầu riêng ở các tỉnh phía bắc. Cây và giống có hệ tán dày, thành phần cơ giới nhẹ, dễ thấm nước. Lượng mưa thích hợp cho cây sinh trưởng tốt từ 1.500 mm/năm trở lên. Cây ra hoa quả hằng năm. Tùy vùng trồng mà hoa quả có thể tập trung vào một vụ chính hay kèm thêm một vụ phụ nữa (hoa sau niên thường nở vào buổi chiều); sau thu phấn thường kéo dài từ 2 – 3 tuần, quả chín sau 105 ngày, kể từ thời điểm thu hoạch; cũng có giống dài ngày, thời gian này kéo dài hơn 130 ngày.  Trên thế giới, Thái Lan là nước trồng nhiều sầu riêng nhất, sản lượng hằng năm lên tới gần nửa triệu tấn (444.500 tấn/1987 và 1998); sau đến Malaysia 262.000 tấn; Indonesia 200.000 tấn. Các tỉnh ở Nam Bộ Việt Nam cũng trồng nhiều sầu riêng, song sản lượng còn ở mức khiêm tốn hơn nhiều.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Long An"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tiền Giang"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Sa Đéc"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Cần Thơ"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đồng Nai"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bình Dương"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Tây Nguyên"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Bình Thuận"
+              }
+            },
+            {
+              "@type": "schema:ListItem",
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Thuận"
+              }
+            }
+          ]
+        },
+        "Đặc điểm sinh trưởng": "Cây thích nghi cao với khí hậu nóng và ẩm, nhiệt độ trung bình năm từ 22 đến 26°C."
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Trước đây, sầu riêng chủ yếu được nhân giống bằng hạt. Hiện nay, phương pháp nhân giống tốt nhất là ghép cây, vì gieo hạt cây chậm ra quả, năng suất và chất lượng quả không ổn định. Hạt chỉ còn dùng để ươm lấy gốc ghép.  Hạt sầu riêng nhanh mất sức nảy mầm, vì vậy sau khi lấy từ những quả đã chín kỹ, cần rửa sạch cùi rồi đem gieo ngay. Sầu riêng có rễ yếu, không ưa đánh đi trồng lại. Cách tốt nhất là gieo hạt trong bầu để sau khi ghép, đem đi trồng không ảnh hưởng tới bộ rễ, tỷ lệ sống sẽ cao hơn. Ruột bầu nên dùng đất phù sa hoặc đất phù nhẹ, trộn với cát, rêu và phân mục. Gieo hạt xong, xếp bầu thành luống nơi khô ráo, tưới ẩm nhẹ, trên luống giăng che bóng dâm sáng. Khi cây con có đường kính 1 cm trở lên (khoảng 1 năm tuổi) là ghép được. Phổ biến là dùng phương pháp ghép mắt. Thời vụ ghép tốt nhất vào mùa mưa (tháng 6 – 9). Ghép xong dùng dây nilon buộc lại, không cho nước thấm vào. Sau 20 ngày, mở dây, đợi thêm một tuần nữa, rồi cắt ngọn gốc ghép. Nếu chăm sóc tốt, 3 – 6 tháng sau, có thể đem đi trồng.  Trồng sầu riêng cần chọn đất thịt pha cát, thịt pha sét hoặc đất bazan có tầng đất mặt dày. Sầu riêng rất dễ bị bệnh nếu không thoát nước tốt, vì vậy nên chọn đất dốc và làm rãnh thoát nước nếu cần. Đất bằng phải đánh líp (luống) cao. Có thể lên líp đơn (rộng 5 – 6 m) hay líp đôi (rộng 10 – 12 m), mương rộng 3 – 4 m. Trên líp đôi, cần xẻ thêm những rãnh nhỏ theo chiều ngang để thoát nước. Ở những vùng thấp, cần có thể đắp thêm nền lên líp để trồng, để phòng bị ngập khi có mưa lớn.  Thời vụ trồng cây vào tháng 5 – 7. Kích thước hố khoảng 1 x 1 x 0,75 m, cách nhau 8 – 12 m là vừa. Trồng líp đôi hoặc thành băng nên đào hố theo kiểu chéo nửa sâu. Lấp hố cao hơn mặt đất 15 – 20 cm bằng phân, rác mục, xong lấp đất mặt lên trên, cao 20 – 30 cm. Giai đoạn cây vừa trồng nên nông nhẹ sâu, lấp quanh bầu hàng dẻo đất màu, không cho phân, nhất là phân khoáng tiếp xúc với rễ. Trồng xong, cắm cọc, buộc bao che để tránh lọng gốc. Dùng phân, lá dừa che bóng cho cây, tránh nắng chói hoặc mưa dầm. Có thể trồng đu đủ, chuối tiêu (cắt gốc sau khi rụng lá) che bóng cho cây trong thời kỳ đầu. Nên tranh thủ trồng thêm rau màu để tăng thu nhập và tránh cỏ dại chen sầu riêng.  Trong khoảng một tháng đầu, nên tưới cho sầu riêng ngày một lần, sau đó gặp hạn mới tưới (có thể phủ gốc bằng rơm, rác nhưng mùa mưa cần vén bớt rơm để tránh mốc). Khi cây đang ra hoa kết quả cũng cần nước, nhưng tưới quá nhiều sẽ làm rụng quả và nhiều cành. Cây trồng được 3 năm bắt đầu ra hoa. Lúc này nên bón 1 kg urê + 1,5 kg super lân + 0,5 kg sulfat kali/cây/năm, chia làm 3 lần: trước khi ra hoa và khi quả có đường kính 10 – 15 cm, bón 1/3N + 1/2 K. Ngoài ra cần bón thêm 20 – 30 kg phân chuồng. Phân khoáng nên hoà với nước để tưới, phân chuồng thì xới đất quanh hình chiếu tán cây để bón. Không dùng KCl để bón cho sầu riêng vì làm quả bị sượng.  Ngay từ khi sầu riêng còn nhỏ, phải chú ý cắt tỉa cành tán tạo tán để giữ cho cây thoáng, khoẻ, hạn chế tác hại của sâu bệnh, gió bão.  Đặc biệt, khi sầu riêng ra hoa bói lần đầu (khoảng năm thứ ba) cần ngắt bỏ. Năm sau cũng nên chỉ cho đậu một vài quả ở mỗi cây. Quả cây non có chất lượng thấp, dễ nhiễm sâu bệnh, ảnh hưởng đến sinh trưởng về sau. Khi cây đã thành thục, mỗi năm có thể ra hoa 2 – 3 đợt, cây khoẻ đủ sức nuôi mốt, cần tỉa hoa 1 đợt để lại một đợt hoa để thu quả tập trung hoặc 2 đợt (trổ đợt để lại một số hoa vừa phải) để rải vụ.  Sầu riêng thụ phấn ngoài hoa nhờ côn trùng, sâu bọ. Nếu để thụ phấn tự nhiên, quả sẽ ít, không đều và không chủ động được thời gian thu hoạch. Vì vậy, nên thụ phấn nhân tạo bổ sung. Ngoài ra, còn có thể kích thích cây ra hoa trái vụ bằng phương pháp châm bón hoặc dùng các chất điều hòa sinh trưởng thích hợp.  Sầu riêng hay bị bệnh. Những bệnh chủ yếu là chảy mủ nhau cành (Phytophthora), thối rễ (Pythium), thân thư (Colletotrichum). Ngoài các biện pháp canh tác phòng ngừa, có thể dùng các thuốc đặc hiệu để phòng chữa. Sầu riêng cũng bị một số sâu hại như sâu đục cành, sâu và ruồi đục quả.  Quả chín sau khi nở hoa khoảng 4 tháng. Có thể hái quả ương và ủ ấm hoặc chờ quả chín rụng (quả rụng hay bị dập, thường phải ăn ngay). Mỗi cây trung bình cho 50 – 70 quả, nếu chăm sóc tốt có thể đạt 200 – 500 quả/cây/năm. Cây cho quả đến 50 – 60 năm.  Quả chín chỉ giữ được trong vòng một tuần, ở 15°C có thể giữ được 3 tuần. Bảo quản nhanh ở -24°C có thể giữ được 3 tháng."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Vỏ quả, lá và rễ, phơi khô."
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Trong dịch chiết pentan quả sầu riêng, Nalf. R Velluz A đã phân tích được 43 thành phần là hợp chất chứa sulfur thuộc các loại dialkyl-di và trisulfid; 3 (alkylthio) và 3 (alkyldithio)-butan-1-ol; 1,1-bis (alkylthio) alcan và S-alkyl-thioester. Ngoài ra, còn có (Z, Z)- (EZ) và (E, E)-deca-2,4-dienoat, 1E (3Z, 6Z)-deca dienoat và E1 (7Z, Z) (EZ)- và (E, E) deca inenoat. Tất cả tạo thành mùi đặc biệt của sầu riêng. (CA. 125, 1996, 326903 b)  Wesumen, Hungo, Koolhaas, Wim – E phân tích 3 loại quả sầu riêng ở Indonesia bằng GC.MS thấy có 43 phụ mùi. Trong những chất có mùi mạnh nhất trong sầu riêng được xác định là 3,5-dimethyl-1,2,4-trithiol còn chất E1-2-methyl butanoat là hợp chất mùi không có sulfur trong sầu riêng. (CA. 125, 220681, 1996)  Wong. K.C; Tie D.Y. phân tích thành phần bay hơi của một số loại sầu riêng khác nhau, trong tổng số 63 thành phần được xác định có 30 ester, 16 hợp chất có sulfur, 5 hợp chất ceton, 8 hợp chất aldehyt và 4 chất chứa hỗn hợp nhiều nhóm chức; một số chất ít gặp trong cây là cis và trans dimethyl, 1,2,4 trithiol và S-alkyl ester của các acid alkylthiocarboxylic (CA. 123, 1995, 29588 y)  Mohamad Suhaila đã chiết và xác định được các chất pectin từ quả sầu riêng. Còn Tharbusson Mac R., Brown Michael J lại xác định được protein trong hạt đạt tên là zibethinin. (CA. 117, 1992, 2331(c); CA. 124, 1996, 173926 p)"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Sầu riêng là một loại quả ngon, có mùi đặc biệt. Ăn quả sầu riêng có tác dụng kích thích sinh dục.  Lá và rễ sầu riêng được nhân dân dùng làm thuốc chữa cảm sốt, viêm gan, vàng da. Ngày dùng 10 – 20g dưới dạng thuốc sắc, dùng riêng hoặc phối hợp với lá và rễ cây khác. Lá sầu riêng còn nấu nước tắm cho người vàng da, bệnh gan.  Hạt sầu riêng có chất bột, rang nướng hay luộc ăn như hạt mít, hoặc có thể dùng làm mứt kẹo.  Ở Malaysia, nước sắc của rễ sầu riêng được dùng làm thuốc hạ sốt; lá đắp tại chỗ đau dùng nước sắc để tắm chữa vàng da. Ở Indonesia, thân rễ và vỏ quả đó đã được dùng làm thuốc điều kinh và gây sẩy thai. Ở đảo Sunda, nhân dân còn dùng nước ép của sầu riêng làm thuốc kích dục. Ở Ấn Độ, quả sầu riêng được coi là có tác dụng làm trẻ lại.  Bài thuốc món ăn từ cây sầu riêng:  Bổ thận tráng dương:  Bầu dục lợn 1 bộ, sầu riêng (sắp chín) 200g, gia vị vừa đủ. Bầu dục thái nhỏ ướp gia vị. Sầu riêng chọn quả sắp chín để thái miếng nhỏ xào với bầu dục. Ăn nóng. Ngày 1 lần. Cần ăn 5 lần, chữa người bị chứng lãnh cảm, suy yếu tình dục.  Chữa di tinh, liệt dương:  Sầu riêng 50g, đường 20g (hoặc mật ong lượng thích hợp) đánh nhừ như kem – thêm khoảng 100ml nước sôi để nguội hòa đều để uống. Ngày 2 lần trong 10 ngày.  Thuốc bổ thận cứng gân cốt, kích thích tiêu hóa:  Vỏ quả sầu riêng 15g, đậu đen sao 10g, tang ký sinh 12g, hà thủ ô chế 15g, đỗ trọng 15g, cốt toái bổ 15g, vỏ quýt 8g. Sắc uống.  Trị tiêu chảy:  Vỏ quả sầu riêng 20g, vỏ quả măng cụt 20g. Sắc với 3 bát nước lấy 1 bát chia 2 lần uống. Bệnh nhẹ chỉ dùng 1 trong 2 vị.  Sốt rét, đau gan vàng da:  Rễ, lá cây sầu riêng 12g, cam thảo dây 12g, chi tử (quả dành dành) 12g sắc với 3 bát nước lấy 1 bát. Uống làm 2 lần. Dùng 5 ngày."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng"
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

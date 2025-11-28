@@ -1,0 +1,296 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lát hoa",
+      "ten_khac": "Cây gỗ lát, lát da đồng.",
+      "ten_khoa_hoc": "Chukrasia tabularis A. Juss.",
+      "ma_taxon": "184205",
+      "ho": "Meliaceae ( Xoan)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 – 25m, tán lá rộng.",
+      "thân": "Thân có vỏ màu đen, chấm trắng, phủ lông sát ngắn, màu hung, thường nứt dọc và bong từng mảng. Gốc có bạnh vè. Cành non có lông màu vàng xỉn.",
+      "lá": "Lá kép lông chim, 7 – 20 đôi lá chét mọc so le, đôi khi gần đối, hình thuôn mũi mác, dài 10 – 12 cm, rộng 5 – 6 cm, gốc lệch, đầu thuôn nhọn; lá non màu hồng đỏ; cuống lá dài 30 – 50 cm.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành thùy thẳng đứng, thưa, có lông, ngắn hơn lá, dài 20 cm, lá bắc thuôn, sớm rụng, hoa lưỡng tính màu vàng nhạt, có cuống ngắn, đài hình sao, 5 răng ngắn, có lông ở mặt ngoài; tràng 5 cánh có thuôn dài, mép uốn cong, mặt ngoài hơi có lông, mặt trong nhăn; nhị 10, hơi ngắn hơn cánh hoa, gốc hơi phình, bao phấn nhẵn; bầu thuôn dài, có lông, thắt lại ở đầu, 3 ô, mỗi ô có 20 – 40 noãn.",
+      "quả": "Quả nang, hình trứng, dài 4 – 4,5 cm, rộng 3,5 – 4 cm, hơi có mũi nhọn ở đầu, nhẵn; hạt nhiều, nhỏ, dẹt, có cánh mỏng ở đầu.",
+      "mùa hoa": "tháng 7 – 10",
+      "mùa quả": "tháng 7 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Chukrasia A. Juss. chỉ có một loài lát hoa Việt Nam. Căn cứ vào hình thái lá, quả… các nhà thực vật học đã chia loài này thành 4 thứ (Varietas) và chỉ thấy ở các tỉnh phía Nam (Trần Đình Đại, 2003). Lát hoa phân bố tự nhiên ở một số tỉnh miền núi phía Bắc như: Lai Châu, Lào Cai, Yên Bái, Tuyên Quang, Hà Giang, Cao Bằng, Lạng Sơn, Thái Nguyên, Hoà Bình, Sơn La, Thanh Hoá, Nghệ An… Cây còn được trồng ở khắp các địa phương.  Trên thế giới, lát hoa có ở Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia và Indonesia.",
+      "thường_mọc": "Lát hoa là loại cây gỗ to, khi còn nhỏ là cây chịu bóng, lớn lên ưa sáng. Cây vốn mọc tự nhiên những vùng rừng núi đá vôi hoặc rừng trên núi đất lẫn đá; thường mọc lẫn với những cây gỗ lớn các họ Meliaceae, Anacardiaceae Lauraceae, Fabaceae… Độ cao phân bố không vượt quá 1.000m. Cây trưởng thành có thể ra hoa quả hàng năm, tái sinh tự nhiên từ hạt nhưng tỷ lệ nảy mầm thấp hơn nhiều trong trồng trọt (Vu Van Dung, et al., 1997).",
+      "Đặc điểm sinh trưởng": "Lát hoa là cây cho gỗ quý, lõi gỗ màu nâu nhạt, có nhiều vấn đẹp, dùng để đóng đồ gỗ cao cấp. Do bị khai thác kiệt quệ trong tự nhiên, cây đã được đưa vào Sách đỏ Việt Nam (1996) để bảo vệ. Tuy nhiên, đây là loài cây gỗ dễ trồng, mọc nhanh; sau khoảng 40 năm, có thể đạt đến đường kính thân 50 – 60 cm.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lai Châu"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Nghệ An"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá và vỏ chứa 22 và 15% tanin (The wealth of India, 1952). Ngoài ra còn chứa một chất keo tan trong nước có màu đỏ, thường được sử dụng để trộn với một số loại gum khác của Ấn Độ.  Theo Phạm Hoàng Hộ (2006), lát hoa còn chứa tinh dầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vỏ cây, vỏ cành cây lát hoa có vị chát, có tác dụng làm săn se."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ cây, vỏ cành và lá non cây lát hoa được dùng chữa tiêu chảy. Ngày 5 – 10g sắc uống. Gỗ cũng được dùng như vỏ, nhưng liều 10 – 15g.  Ở Ấn Độ, người ta còn dùng lát hoa chữa tiêu chảy. Gỗ lát hoa dùng để chế tạo đồ dùng gia đình"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

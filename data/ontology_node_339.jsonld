@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thạch lựu",
+      "ten_khac": "bạch lự, tháp lựu, lự chùa Tháp",
+      "ten_khoa_hoc": "Punica granatum L.",
+      "ma_taxon": "58300",
+      "ho": "Lựu (Punicaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây lựu là một cây thuộc mộc, cao chừng 3-4m, cây nhỏ, có khi có gai.",
+      "lá": "Lá dài, nhỏ, mềm mỏng, đơn, mép nguyên có khi mọc thành cụm nhưng thường mọc so le hoặc hơi mọc đối, cuống ngắn.",
+      "hoa": "Mùa hạ nở hoa màu đỏ tươi hoặc màu trắng (bạch lựu) hoặc mọc riêng lẻ hoặc từng xim có độ 3 hoa",
+      "quả": "Quả to bằng nắm tay. Đầu quả còn 4-5 lá đài tồn tại. Vỏ dày, ngoài da sắc lục, khi chín có màu vàng đỏ lốm đốm. Trong quả có 8 ngăn xếp thành hai tầng, tầng trên có 5 ngăn tầng dưới có 3. Các loại ngăn phân cách bởi các màng mỏng, hạt rất nhiều, hình 5 cạnh, sắc hồng trắng."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "1. Làm thuốc chữa sán (phụ nữ có thai và trẻ em không dùng được)  Nên dùng vỏ rễ lựu vì trong vỏ, chất Peletierin, Isopeletierin được kết hợp tự nhiên với tanin thành một chất không ta, tác dụng nhiều đối với sán ở trong ruột, ít làm mệt cơ thể người. Tuy nhiên uống cả vỏ hơi khó uống. nếu chọn vỏ mới đào, vì vỏ tươi hiệu lực mạnh hơn do có nhiều ancaloit. Khi dùng rễ khô, cần ngâm nước vài giờ trước khi pha chế thì vẫn có hiệu lực chữa sán (Soubeyran) J.E.de Vrij đã dùng vỏ lựu bảo quản được 13 năm để chế cao mà vẫn có hiệu lực như vỏ tươi Ta có thể dùng Peletierin chế từ vỏ lựu. Liều dùng Peletierin sunfat thường là 0,3g phối hợp với 0,4g tanin. Một số tác giả cho rằng tác dụng của Peletierin có tác dụng thường kèm theo tới 50 -60% pseudo-peletierin không có tác dụng. Trong trường hợp này liều dùng phải tăng lên từ 0,3-0,5g trong 24 giờ. Nhưng dùng phải rất thận trọng, có trường hợp dùng liều thường vẫn bị ngô độc chết người.  2. Ngoài công dụng chữa sán, vỏ rễ và vỏ thân còn dùng làm thuốc ngậm chữa đau răng, chữa đi ngoài, đi lỵ. Nhưng để chữa lỵ đi ngoài, thường dùng vỏ quả (xem vỏ quả ở mục các vị thuốc chữa lỵ). Ngoài ra còn dùng để thuộc da, làm mực."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Thuốc chữa sán theo dược thư của Pháp Vỏ lựu khô tán vừa phải 60g  Nước cất 750g Cần ngâm bột trong 6 giờ. Sau đó sắc còn 500g, rồi gạn và lọc Sáng sớm uống thuốc này, chia làm 2 lần hay 3 lần uống cứ cách nửa giờ uống 1 lần, sau khi uống liều cuối cùng được 2 giờ thì uống 1 liều thuốc tẩy. Khi uống thuốc cần nằm nghỉ, nhắm mắt cho đỡ mệt  2. Đơn thuốc chữa sán có phối hợp với thuốc tẩy  Vỏ rễ lựu 40g Đại hoàng 4g Hạt cau 4g Nước 750ml sắc còn 300ml Tối hôm trước nhịn đói. Sáng sớm hôm sau uống thuốc này, chia làm 2-3 lần uống. Trong khi uống thuốc cần nằm nghỉ. Đợi khi nào thật buồn đi ngoài hãy đi, mông nhúng hẳn vào một chậu nước ấm ấm, sán ra hết."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

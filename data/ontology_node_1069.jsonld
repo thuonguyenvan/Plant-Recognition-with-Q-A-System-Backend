@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dầu giun",
+      "ten_khac": "Dầu giun, Cỏ hôi, Kinh giới đất, Rau muối dại",
+      "ten_khoa_hoc": "Chenopodium ambrosioides L.",
+      "ma_taxon": "76746",
+      "ho": "Chenopodiaceae ( Họ Dền )"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây dầu giun là một loại cỏ sống hàng năm, nhưng cũng có khi ở đất tốt và cao ráo mọc 2-3 năm.",
+      "cao": "Cao chừng 1-5m hay hơn.",
+      "thân": "Vỏ lá, thân và hoa có mùi hăng, đặc biệt.",
+      "lá": "Lá có cuống, mọc cách dài thon, một đầu nhọn, màu lục nhạt, phiến lá không phẳng, chung quanh có răng cưa thưa và không rõ rệt, dài chừng 35-75mm, rộng 13-25mm. Trên lá có lông, thường ở các gân lá nhất là ở mặt dưới.",
+      "hoa": "Hoa mọc tập trung thành xim đơn (glomerule) ở kẽ lá. Giữa chùm là hoa đực hay hoa lưỡng tính, xung quanh có hoa cái nhỏ và không có cuống. Đường kính hoa độ 1mm, bao hoa có cánh hình bầu dục, hoa có 5 nhị nhưng có khi chỉ 3 hoặc 2, bầu hình bầu dục.",
+      "quả": "Qủa là những bế quả màu lục nhạt hay nâu nhạt, hình cầu, đường kính chừng 1,5mm, cùi mỏng, có lá đài không rụng, trong chứa một hạt nhỏ đen và bóng.",
+      "vị hắc đặc biệt": "Vị hắc đặc biệt",
+      "lông": "Thân cây non, lá , bầu hoa có lông thuộc 3 loại: lông che chở đa tế bào, lông che chở đa tế bào nhưng tế bào sau cùng lớn hơn, thành góc với các tế bào khác và lông bài tiết, chân ngắn gồm 1 hay 2 tế bào, tận cùng bằng một tế bào phồng to lên.",
+      "hái": "Hái toàn cây và hạt để cất tinh dầu làm thuốc chữa giun (hình 111, Hm 7,4)"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoạt chất của cây dầu giun là tinh dầu giun. Tinh dầu giun cất từ cả cây hoặc từ hạt.",
+      "hiệu suất": "Hiệu suất của hạt từ\u00a00,65%-1%, hiệu suất của cây, chỉ chừng 0,35%",
+      "cất mau": "Vì tinh dầu rất hay hỏng, cho nên cần cất mau, từng mẻ nhỏ một. Nếu đun nóng quá, tinh dầu bị phá hủy trước khi bốc lên",
+      "tinh dầu giun": "Tinh dầu giun mùi hăng, vị nóng, đắng, màu vàng nhạt. Tỷ trọng ở 150 từ 0,965 đến 0,990, tan trong 3-10 phần rượu 700, rất tan trong ete và clorofoc, hơi tả tuyền (D từ -4-805) 1g=L giọt.",
+      "thành phần chủ yếu": "Thành phần chủ yếu của tinh dầu giun là atcaridol (ít nhất phải có 65%). Tinh dầu của hoa và hạt có chứa nhiều hơn (trong các tháng 5,6,7,8 tỷ lệ có thể lên đến 75-85%)",
+      "ngoài ra": "Ngoài ra còn chất ximen (22-35%), cacbua khác, ít campho, dimetyl etylen, oxyt, axit butylic và glycol.",
+      "chất atcaridol": "Chất atcaridol là một peroxyt có nhân para-ximen, rất dễ bị phá hủy khi cất tinh dầu",
+      "giá trị": "Giá trị của tinh dầu giun do tỷ lệ atcaridol quyết định.",
+      "định lượng atcaridol": "Định lượng atcaridol: muốn định lượng atcaridol, ta dựa trên tính oxy hóa của nó. Trong tinh dầu hòa tan và axit axetic ở môi trường axit clodhydric, chất atcaridol giải phóng iot của kali iodua theo tỷ lệ thuận. Định lượng iot giải phóng ta có thể tính được lượng atcaridol",
+      "cách tiến hành": "Cách tiến hành: Loại hết nước trong tinh dầu bằng cách ngâm với Na2SO4 khan, lấy một trọng lượng Pg chừng\u00a02,5g tinh dầu cân thật đúng, hòa tan vào trong một lượng axit axetic kết tinh được để có thể đủ một thể tích tổng số là 50ml Trộn 3ml dung dịch KI (có 83g KI trong 100ml) với 5ml HCl đặc (Tt) và 10ml axit axetic kết tinh được Cho hỗn hợp này vào trong tủ lạnh hay một hỗn hợp sinh hàn ở nhiệt độ 0o\u00a0– 3o. Khi hỗn hợp này đã thật lạnh rồi, cho thật nhanh 5ml dung dịch tinh dầu trong axit axetic chuẩn bị trên kia và đã chứa sẵn trong ống nhỏ giọt Mohr. Nút kỹ và để hỗn hợp trong tủ lạnh 5 phút Thêm vào 5ml cacbon tetraclorua. Định lượng iot giải phóng bằng dung dịch N/10 natri hyposunfit Làm một dung dịch đối chứng khác (không có tinh dầu) để so sánh. Chỉ trộn 3ml dung dịch Kl, 5ml HCL đặc, 15ml axit axetic kết tinh được và 20ml mước cất. Cho hỗn hợp này vào tủ lạnh cùng với hỗn hợp để định lượng. Thêm 5ml cacbon tetraclorua và dung dịch N/10 natri hyposunfit cho tới khi hết màu. Ví dụ N và n ml dung dịch N/10 natri hyposunfit đã dùng để định lượng dung dịch so sánh và dung dịch để định lượng.",
+      "tinh dầu giun dùng": "Tinh dầu giun dùng làm thuốc phải chứa ít nhất 60% và nhiều nhất 80% atcaridol"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "tinh dầu độc": "Tinh dầu độc ở liều tương đối thấp do tác dụng suy yếu đối với tim, nó còn có tác dụng hạ huyết áp và hại đến nhịp thở",
+      "liều mạnh": "Liều mạnh, nó làm ống tiêu hóa bị xót hay buồn nôn, nôn mửa, chóng mặt, ù tai, hoa mắt, lạnh đầu ngón chân ngón tay Có trường hợp chết với hiện tượng trung khu hô hấp bị tê liệt",
+      "rất độc": "Nó rất độc với giun: 1 dung dịch nước có 1/5.000 trong lượng tinh dầu giun cũng đủ làm tê kiệt giun đũa Đối với giun của ngựa rất khó chữa mà cũng chỉ cần một liều 16-20ml để tiêu diệt hết",
+      "chất atcaridol tác dụng": "Chất atcaridol tác dụng mạnh gấp hai lần tinh dầu. Liều độc của atcaridol là 300mg cho 1kg thân thể của thỏ,\u00a0600mg đối với chuột bạch và 500mg đối với ếch. Cá chết sau 12 giờ trong một dung dịch 1/8.000",
+      "tinh dầu giun có tác dụng": "Tinh dầu giun có tác dụng đối với giun đũa, giun mỏ nhưng không tác dụng đối với sán và giun kim",
+      "tóm lại": "Tóm lại tinh dầu giun và atcaridol có tác dụng đối với giun đũa nhưng độc và nguy hiểm cho nên không nên dùng đối với người già, đàn bà có thai, người yếu."
+    },
+    {
+      "@type": "Cách dùng",
+      "ngày uống": "Ngày uống 30-50 giọt chia làm hai hay ba lần uống (nhỏ trên miếng đường) hai giờ sau khi uống hết tinh dầu, uống một liều thuốc tẩy muối magie sunfat hoặc uống cả 30-50 giọt ngay một lần hòa tan trong 30ml dầu thầu dầu.",
+      "trẻ em": "Trẻ em tùy theo tuổi, uống 10-20 giọt một ngày",
+      "thuốc có độc": "Thuốc có độc, dùng phải cẩn thận"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

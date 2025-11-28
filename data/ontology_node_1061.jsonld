@@ -1,0 +1,208 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ nhọ nồi",
+      "ten_khac": "Cỏ nhọ nồi, Cỏ mực",
+      "ten_khoa_hoc": "Eclipta prostrata (L.) L.",
+      "ma_taxon": "76765",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "lá mọc đối có lông ở hai mặt, dài 2-8cm, rộng 5-15mm",
+      "hoa": "Cụm hoa hình đầu màu trắng ở kẽ lá hoặc đầu cành, lá bắc thon dài 5-6mm, cũng có lông.",
+      "quả": "Quả bế 3 cạnh, hoặc dẹt, có cánh. Dài 3mm, rộng 1,5mm, đầu cụt",
+      "cây": "Cỏ nhọ nồi là một loài cỏ mọc thẳng đứng có thể cao tới 80cm",
+      "thân": "thân có lông cứng",
+      "mọc": "mọc hoang khắp nơi ở nước ta."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo các nhà nghiên cứu trước, trong nhọ nồi có một ít tinh dầu, tannin, chất đắng, carotene và chất ancaloit gọi là ecliptin.",
+      "gồm chất": "Có sách nói chất ancaloit là nicotin.",
+      "triết xuất": "Năm 1959 Govindachari T.R và đồng sự đã chiết được từ cỏ nhọ nồi một chất wedelolacton là một cumarin lacton.",
+      "đã nghiên cứu": "Sau đó tác giả cũng thấy chất này trong cây sài đất (công thức wedelolacton, xem ở cây sài đất).",
+      "Các hợp chất": "Ngoài wedelolacton, năm 1972 K.K Bharagava (Ind.J.Chem 8,72:810) còn tách được demetyl wedelolacton và một flavonozit chưa xác định."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị ngọt, chua tính lương vào hai kinh can và thận"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tác dụng bổ thận âm, chỉ huyết lỵ.",
+      "chữa": "Dùng chữa can thận âm kém, lỵ và ỉa ra máu, làm đen râu tóc.",
+      "được_dùng": "Nhân dân vẫn dùng cây nhọ nồi giã vắt lấy nước uống để cầm máu trong rong kinh, trĩ ra máu, bị thương chảy máu.",
+      "chữa": "Còn dùng chữa ho hen, ho lao, viêm cổ họng, ngày dùng 6-12g dưới dạng sắc uống hay làm thành viên mà uống.",
+      "chữa": "những người thợ nề dùng cỏ nhọ nồi để xoa tay chữa bệnh bỏng rát do vôi.",
+      "chữa": "Có người dùng chữa bệnh nấm ở ngoài da, làm thuốc mọc tóc (sắc uống hoặc ngâm vào dầu dừa mà bôi), nhuộm tóc, bôi lên những chỗ chóc ở da thịt để có màu tím đen."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

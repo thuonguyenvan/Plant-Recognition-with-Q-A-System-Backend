@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Lúa mì",
+      "ten_khac": "Lúa miến, tiểu mạch",
+      "ten_khoa_hoc": "Triticum aestivum L.",
+      "ma_taxon": "64161",
+      "ho": "Poaceae ( Luá)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Lúa mì là một loại cây thảo sống lâu năm, có rễ hình sợi và xơ.",
+      "cao": "Thân cây cao từ 0,8 đến 1,5 mét",
+      "thân": "có màu xanh nhạt, hình trụ, nhẵn và đôi khi có màu xám.",
+      "lá": "Các lá mọc xen kẽ dọc theo thân cây và có màu xanh hoặc xanh xám, nhẵn và đôi khi có màu xám. Những lưỡi dao của lá mọc dần dần và uốn cong, phần gốc của lá có các cực quang tròn với các mép gợn sóng giống như sẹo. Các bẹ lá hở giống như lá cây, dây chằng có màng ngắn và dài khoảng 1-2mm, trong khi đó hạch sưng to và sần sùi.",
+      "hoa": "Mỗi thân cây kết thúc bằng một cành hoa thẳng đứng, gai hoa này có màu xám hoặc xanh lục với các mảng đậm hơn. Mỗi bông hoa con dài khoảng 10-15mm, bao gồm một cặp chùm hoa ở gốc cùng với 2-5 hoa con. Các vảy dài 9-11mm và có hình trứng, lồi dọc theo bề mặt và nhẵn. Trong hoa con, các màng nhợt nhạt xuất hiện dọc theo các mặt bên trong. Ở đỉnh của cả hạt và nốt sần đều có 1-2 răng nhỏ.",
+      "mùa hoa": "Thời gian ra hoa thường từ cuối mùa xuân đến giữa mùa hè, và hoa được thụ phấn bởi gió.",
+      "quả": "Hoa được thay thế bằng các hạt dài 7,5-8,5mm và ngang 3,5-3,75mm, có hình dạng elip và màu sáng. Các hạt lồi ở một bên và uốn cong ở bên kia."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Lúa mì là loại cây lương thực chủ yếu ở vùng ôn đới ấm và đã được trồng từ thời cổ đại. Cây trồng nhiều ở tất cả các quốc gia thuộc châu Âu, Liên bang Nga, Bắc Phi, Bắc Mỹ, Trung Cận Đông, Trung Á và Trung Quốc. Lúa mì cũng đã nhập nội vào Việt Nam từ những năm 1960. Cây được trồng ở Mộc Châu – Sơn La, Điện Biên, Trùng Khánh – Cao Bằng và Hà Giang. Tuy nhiên, do hạn chế về năng suất nên những điểm trồng lúa mì trên cũng chỉ dừng ở phạm vi thử nghiệm và hiện không còn trồng nữa.  Lúa mì là cây ưa sáng, ưa khí hậu ẩm mát, nên cây trồng ở nước ta trước đây chỉ thấy vào vụ xuân – hè, Cây gieo hạt vào đầu mùa xuân, đến mùa hè đã cho thu hoạch. Trong khi đó, thời vụ gieo trồng lúa mì trên thế giới, tuỳ theo vùng lãnh thổ và loại giống có thể khác biệt nhau. Toàn bộ vòng đời của cây chỉ kéo dài dưới 6 tháng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hạt lúa mì chứa nhiều nhóm chất quan trọng như:",
+      "gồm chất": "Các chất khoáng: Ca, Mg, P, Fe, Na, K, Zn, V, Cu, S, CI, Si, Be, Cd, Cr, Mn, Mo, Ni, Sr, T, Co và phytin – phospho",
+      "Các hợp chất": "các enzym: anpha – amylase, proteinase, peptidase, asparagin – synthetase, cytindin – deaminase, oxidase, lipoxidase, co – enzym, acid glutamic decarboxylase (CA. 1976, 85, 37259x).",
+      "chứa": "Các vitamin, caroten, thiamin, riboflavin, acid nicotinic, cholin, tocophenol, xanthophyl (lutein).",
+      "triết xuất": "Các carbohydrat như tinh bột, cellulosa, hemicellulosa, levosin, sorleosa (CA, 1976, 85, 23392v).",
+      "đã nghiên cứu": "Các protein như cytochrom C (một loại haemoprotein)",
+      "tìm thấy": "các acid amin như: arginin, histidin, isoleucin, leucinlysin, methionin, phenylalanin, valin, threonin, tryptophan, adenin, tyamin, cholin, betain."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hạt lúa mì có vị ngọt, tính mát, có tác dụng làm săn phân."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hạt lúa mì rang lên, sắc uống, có tác dụng chữa tiêu chảy. Ăn bánh mì mà không ăn kèm thêm rau thì bị táo bón.",
+      "được_dùng": "Theo kinh nghiệm của nhân dân Tunisi, dùng rạ lúa mì sắc uống làm gẩy người, sút cân [Lê Trần Đức, 1997: 1085 – 1087].",
+      "có tác dụng": "Theo kinh nghiệm của nhân dân Ấn Độ, hạt lúa mì có tác dụng làm mát, chứa dầu; bổ, tăng dục, nhuận tràng, làm cho béo, làm tăng sự ngon miệng và vị giác, có tác dụng trị đa tiết mật.",
+      "chữa": "Ở Trung Quốc, hạt rang lên được coi là có tác dụng trị chứng ra nhiều mồ hôi, đặc biệt trong bệnh lao phổi ở phụ nữ [Kiritkar K.R. et al., 1998: 2700 – 2701)",
+      "làm thuốc": "Trong y học dân gian Italia, mầm lúa mì hầm trong dầu ô – liu, được dùng ngoài, xoa trên da đầu để chữa chứng rụng tóc (De Feo V, 1992).",
+      "sắc uống": "Chữa tiêu chảy ra nước: Bột mì rang cháy uống với nước cơm, hay với nước chè, liều lượng không hạn chế.",
+      "sắc nước uống": "Chữa trẻ em tiêu chảy kéo dài:  Hạt lúa mì, ý dĩ, đều sao, sắc uống thay nước, hoặc tán bột, cho ăn hàng ngày thì khỏi [Lê Trần Đức, 1997: 1085 – 1087]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

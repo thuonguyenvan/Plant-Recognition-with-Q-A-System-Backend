@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây ông lão",
+      "ten_khac": "Mộc thông, linh tiền, khau kan san (Tày).",
+      "ten_khoa_hoc": "Clematis smilacifolia Wall.",
+      "ma_taxon": "940168",
+      "ho": "Hoàng liên (Ranunculaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, mọc bò dài",
+      "thân": "Thân cành mềm, có khía, nhẵn.",
+      "lá": "Lá mọc đối, thường có 3 lá chét hình tim, đầu nhọn, mép nguyên, cuống lá dài, vặn vẹo.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và đầu cành thành chùy, 3 hoa màu trắng nhạt, cuống hoa dài hơn lá đài.",
+      "quả": "Quả bế dẹt, có lông, tận cùng bởi một vòi nhụy rất dài, phủ đầy lông mềm, màu trắng nhạt.",
+      "mùa hoa": "tháng 12 – 3."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Clematis L., có 15 loài ở Việt Nam, 6 loài được dùng làm thuốc, trong đó có dây ông lão. Dây ông lão phân bố rải rác khắp các tỉnh miền núi phía Bắc, bao gồm từ miền Tây tỉnh Nghệ An, Thanh Hóa trở ra. Ở các tỉnh phía Nam, phạm vi phân bố của loài hạn chế hơn, mới chỉ thấy ở vùng núi Ngọc Linh thuộc tỉnh Quảng Nam và Kon Tum. Theo Võ Văn Chi (1997) cây này còn có ở miền Tây Quảng Bình và tỉnh Kiên Giang (Phú Quốc). Dây ông lão thuộc loại dây leo bằng thân quấn hoặc bằng các cuống lá kép (nguồn gốc là cành). Cây sinh trưởng mạnh trong mùa mưa ẩm, ra hoa quả nhiều hằng năm; tái sinh tự nhiên chủ yếu từ hạt, song cây còn có khả năng mọc cây chổi từ phần thân và gốc sau khi cắt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và thân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ cây dây ông lão có vị đắng, tính bình, hơi ấm, có tác dụng khu phong, trừ thấp, thông lạc, chỉ thống. Thân có vị ngọt, nhạt, hơi đắng, tính mát, có tác dụng tiêu viêm, lợi niệu. Hoa vị nhạt, tính bình."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ gây ông lão được dùng chữa đau lưng, nhức mỏi, khó tiêu, phù thũng, đau răng. Liều dùng 6 – 12g ngâm rượu hoặc sắc uống. Cả cây nấu nước tắm rửa để trị ghẻ hoặc ngứa. Theo tài liệu Ấn Độ [Kirikar et al., 199, Indian medicinal plants, trang 5, Hehra Dun, India], nước sắc dây ông lão uống chữa đau mình mẩy."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

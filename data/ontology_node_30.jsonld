@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Canh kina",
+      "ten_khac": "Canh ki na, Canh kina, Canhkina",
+      "ten_khoa_hoc": "Cinchona spp .",
+      "ma_taxon": "160578",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối, có cuống, với hai lá kèm thường sớm rụng. Phiến lá nguyên hình trứng, có gân lá hình lông chim.",
+      "hoa": "Hoa mọc thành chùm xim tận cùng, hoa đều, mẫu 5, cánh hoa màu trắng hay hơi hồng, thường có mùi thơm dễ chịu. Đài có 5 răng, tràng hình ống, loe ở miệng, với 5 thuỳ, 5 nhị đính trên ống tràng. Trong nhiều loài có hoa với vòi nhị dài hoặc ngắn không đều. Bầu dưới, với hai ngăn mang nhiều noãn.",
+      "quả": "Hạt nhiều, nhỏ, dẹt có dìa hơi có răng.",
+      "cây": "Canh kina là những cây nhỏ hay cây to có thể cao 15-20m.",
+      "thân": "Trong một số loài như canhkina xám, ở góc gân chính và gân phụ có các túi nhỏ mang lông."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ canhkina thường chứa từ 8 đến 10% nước, 4 đến 5% chất vô cơ, một ít tinh bột, chất gôm, một ít tinh dầu, các chất sterola (cinchola được xác định là 3 sitosterol).",
+      "gồm chất": "Axit quinic (hexahydrotetrahydroxybenzoic) được chiết từ vỏ canhkina từ năm 1790 nhưng phải một thế kỷ sau người ta mới xác định được cấu trúc:",
+      "Các hợp chất": "Các tanin catechic (còn gọi là axit quinotanic) chiếm từ 3 đến 5% vỏ. Các tanin này khi bị oxy hoá sẽ cho một phlobaphen gọi là chất đỏ của canhkina.",
+      "triết xuất": "Một chất đắng gọi là quinovin, được Pelletier và Caventou chiết ra từ 1821. Năm 1859, Halsivetz đã chứng minh đây là một glucozit.",
+      "các hoạt chất": "Hoạt chất chính của canhkina được coi là những ancaloit chiếm từ 3 đến 15% trong vỏ những cây canhkina trồng.",
+      "đã nghiên cứu": "Việc nghiên cứu những ancaloit này đã được tiến hành từ lâu, vì trước 1850 người ta đã chiết được 4 ancaloit chính. Năm 1881, Gomes – một người Tây Ban Nha lần đầu tiên đã chiết được chất ancaloit đẩu tiên vỏ canhkina và đặt tên là cinchonin. Vài năm sau Pelletier và Caventou cũng chiết được từ một loài canhkina vỏ xám (C. officinalis) chất cinchonin nhưng tinh khiết hơn. Đến nàm 1820, Pelletier và Caventou đã chiết từ vỏ một loài canhkina c. cordifoiia Mutis một ancaloit mới và đặt tên là quinin. Ngoài 4 ancaloit chính ấy ra, người ta còn tách được từ vỏ canhkina khoảng 20 ancaloit khác nữa với hàm lượng ít hơn. Hiện nay người ta xếp những ancaloit trong vỏ canhkina",
+      "tìm thấy": "Trong lá một số cây canhkina người ta thường chỉ chiết được rất ít ancaloit chính của canhkina, nhưng lại được từ 0,5 đến 0,7% ancaloit nhân indol như quinamin, xinchophyllamin và izoxinchophylamin (theo Lemen và cộng sự, 1965)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ canhkina dùng làm thuốc chữa sốt, sốt rét, thuốc bổ (thường dùng vỏ canhkina đỏ). Với liều 1 đến 5 hoặc 10g một ngày dưới dạng thuốc bột, thuốc viên.",
+      "làm thuốc": "Vì đắng cho nên thường làm dưới dạng cao rồi làm thành viên. Canhkina đỏ làm thuốc bổ dưới dạng rượu có pha thêm đường. Bột canhkina còn dùng rắc lên vết thương, vết loét.",
+      "được_dùng": "Vỏ canhkina chủ yếu hiện nay dùng làm nguyên liệu chiết các ancaloit, chất quinin. Quinin dùng làm thuốc sốt, thuốc sốt rét với liều 1 đến 2g một ngày, chia làm nhiều lần uống, mỗi lần 0,50g."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Toàn bộ các loài canhkina đều nguồn gốc Nam Mỹ. Cây canhkina mọc hoang dại trên sườn phía đông dãy núi chạy dọc dài 4.000km, rộng 75 đến 100km từ vĩ tuyến 10° bắc đến vĩ tuyến 22° nam thuộc các nước Côlômbia, Equatơ, Pêru, Bôlivia. Vùng có canhkina mọc hoang có độ cao 1.500 đến 3.000m, nhiệt độ trung bình 15°, ít chênh lệch, mưa nhiều, độ ẩm cao.",
+      "làm thuốc": "Tại Việt Nam, canhkina được trồng nhiều ở vùng đất đỏ trên cao nguyên Lang biang (Trung Bộ)."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

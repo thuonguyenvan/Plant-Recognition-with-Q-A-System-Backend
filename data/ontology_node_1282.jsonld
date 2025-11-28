@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hành tây",
+      "ten_khac": "Hành tây",
+      "ten_khoa_hoc": "Allium cepa L.",
+      "ma_taxon": "48592",
+      "ho": "Alliaceae (Hành)",
+      "Mô tả": {
+        "cây": "Cây thảo, nhẵn, sống dai do một hành phình to mà ta thường gọi là củ hành, có kích thước thay đổi, gồm nhiều vẩy thịt tức là các bẹ có chứa nhiều chất dinh dưỡng.",
+        "củ": "Củ hành có hình dạng tròn đều (hình cầu) hoặc tròn hơi dẹp hình bầu dục hoặc hình bầu dục dài, thường có màu vàng hay màu tím hoặc màu trắng.",
+        "thân": "Thân chính thức nằm ở dưới giò mang nhiều rễ nhỏ.",
+        "lá": "Lá dài hình trụ, nhọn, rỗng ở giữa.",
+        "hoa": "Hoa họp thành tán giả nằm ở đầu một cán hoa hình ống tròn, phình ở giữa. Hoa màu trắng có cuống dài.",
+        "quả": "Quả hạch, có màng; 3 góc với 3 ngăn, bên trên có núm nhuỵ còn tồn tại.",
+        "hạt": "Hạt có cánh dày, đen nhạt, ráp."
+      },
+      "Phân bố": {
+        "phân_bố": "Hành tây có nguồn gốc từ vùng Trung Á, được trồng từ thời Thượng cổ. Hành tây chịu lạnh giỏi ở nhiệt độ dưới 10oC. Nhưng yêu cầu nhiệt độ không khí nơi trồng chỉ trong phạm vi 15-25oC. Thường nhân giống bằng hạt. Tốc độ nảy mầm của hạt biến động trong phạm vi 7-15 ngày, có khi tới 20 ngày nhưng nếu gieo hạt vào những tháng có nhiệt độ cao thì hạt mau nảy mầm hơn. Hiện nay, các vùng trồng Hành tây chủ yếu ở nước ta dùng một trong hai giống Grano và Granex nhập từ Pháp và Nhật. Hành Grano có củ hành tròn cao, vỏ ngoài màu vàng đậm, thịt trắng; còn hành Granex có hình tròn dẹp, dáng dẹp, vỏ ngoài màu vàng nhạt, thịt trắng, có đường kính củ lớn hơn; cả hai giống đều có chất lượng ngon, đã thích hợp với hầu hết các vùng trồng hành lớn ở đồng bằng sông Hồng, vùng duyên hải miền Trung cũng như vùng Đà Lạt, tỉnh Lâm Đồng."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Củ (thân hành)."
+      },
+      "Thành phần": {
+        "thành phần": "Hành tây giàu về đường, vitamin A, B, C, muối khoáng, Na, K, P, Ca, Fe, S, l, Si, H3PO4, acid acetic, disulfur allyl và propyl, dầu bay hơi, glucokinin, oxydase và diastase. Ở Ấn Độ, người ta cho biết trong cây Hành có tinh dầu (0,05%) và sulfit hữu cơ, các acid phenolic. Thành phần chủ yếu của tinh dầu là allyl propyl disulfit. Hoạt chất là acid glycollic. Vẩy chứa catechol và acid protocatechuic.  Ở nước ta, Viện vệ sinh dịch tễ và Viện nghiên cứu kỹ thuật ăn mặc Việt Nam đã cho biết, trong 100g Hành tây có 88g nước; 1,8g protid; 8,3g glucid; 0,1g chất xơ; 0,8g tro và 38mg calcium, 58mg phosphor; 0,8mg chất sắt; 0,03mg caroten; 0,03 mg B1; 0,04mg B2; 0,2mg PP và tới 10mg vitamin C."
+      },
+      "Tính vị": {
+        "Có vị": "Hành tây khi dùng trong, có tính chất kích thích chung, lợi tiểu mạnh, hoà tan và làm giảm urê và các chlorur, chống thấp khớp, chống bệnh hoại huyết, sát khuẩn và chống nhiễm khuẩn, gây tiết, trị ho, làm dễ tiêu hoá, cân bằng tuyến, chống xơ cứng, chống chứng huyết khối, kích dục, chống đái đường, chống tràng nhạc, trị giun, gây ngủ nhẹ, trị bệnh ngoài da và hệ lông. Được dùng ngoài để làm dịu và tan sưng, sát khuẩn, chống đau, xua muỗi."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hành tây là loại rau được sử dụng phổ biến ở châu Âu trong bữa ăn hàng ngày. Ở nước ta, Hành tây cũng thường được sử dụng để xào với các loại thịt, dùng chế dầu giấm và để ăn sống rất được ưa chuộng. Hành tây được dùng để chữa ho, trừ đờm, làm ra mồ hôi, lợi tiểu, điều trị cổ trướng do xơ gan. Nước ép hành tươi 200g, mật ong 100g ngày uống 2 lần, mỗi lần 30-60g. Nếu đái không thông hay khó thở nên ăn nhiều hành tây hay sắc uống 50g. Dùng ngoài đắp trị mụn nhọt.  Theo kinh nghiệm y học cổ truyền của nhiều nước, hành tây được dùng điều trị lỵ, vết loét, vết thương, sẹo, hen, làm thuốc lợi tiểu, và thuốc hỗ trợ bệnh đái tháo đường.  Hành tây còn được dùng trong phạm vi kinh nghiệm dân gian làm thuốc tẩy giun sán, kích dục, điều kinh long đờm, điều trị vết bầm tím, viêm phế quản, đau bụng, đầy hơi, tăng huyết áp."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

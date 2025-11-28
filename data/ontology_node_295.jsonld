@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây tai mèo",
+      "ten_khac": "Tai mèo, Bông vàng, Phác nhật sai, Bất thực",
+      "ten_khoa_hoc": "Abroma augusta (L.) L.f.",
+      "ma_taxon": "343895",
+      "ho": "Sterculiaceae (Trôm)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá đa dạng, phiến lá hình trái xoan, dạng tim, chia thùy hay không, có khi hình trái xoan thon, thường có răng, hơi có lông nhung, với lông hình sao hay không, ở mặt dưới có nhiều hơn, dài 10-20cm, rộng 5-24cm.",
+      "hoa": "Hoa màu tía, xếp 3-5 cái ở nách hay ở đầu cuối các nhánh có lá.",
+      "quả": "Quả nang, dạng màng, cao 4cm, phía đỉnh cụt và rộng hơn ở gốc, với 5 góc có cánh, hầu như nhẵn, mở ở đỉnh; hạt rất nhiều, hình trứng ngược, dài 2mm, hơi sần sùi.",
+      "cây": "Cây nhỡ cao 1-3m.",
+      "mùa hoa": "tháng 5-6",
+      "mùa quả": "tháng 7-11"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài phân bố từ Ấn Độ, qua Nam Trung Quốc, Việt Nam, các nước Nam Á châu tới Bắc Úc.",
+      "thường_mọc": "Ở nước ta, cây thường mọc ở các đồi cây bụi và các bãi ven suối trong rừng nhiều nơi. Cũng thường được trồng lấy sợi vỏ làm dây chống ẩm tốt."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá – Radix et Folium Abromae Augustae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá non và lá bánh tẻ, tước bỏ gân cứng, vò kỹ, thái nhỏ dùng nấu canh; canh có vị nhớt, mùi thơm như rau bí. Nhân dân dùng vỏ rễ làm thuốc chữa bại liệt, lậu và điều kinh. Ở Trung Quốc, rễ và lá dùng làm thuốc trị đòn ngã gãy xương, kinh nguyệt không đều và mụn nhọt sưng đỏ. Ở Ấn Độ, vỏ rễ dùng trị đau bụng kinh và dùng điều kinh ở các dạng sung huyết. Lá hãm uống chữa bệnh lậu với liều 2g dịch rễ tươi mỗi ngày, trộn với Hồ tiêu, dùng làm thuốc lợi trung tiện, lợi tiêu hoá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

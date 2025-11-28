@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nghể chàm",
+      "ten_khac": "Nghệ nhuộm",
+      "ten_khoa_hoc": "Polygonum tinctorium Ait.",
+      "ma_taxon": "915050",
+      "ho": "Rau răm (Polygonaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm.",
+      "thân": "Thân phân cành ít hay nhiều, có khía, nhẵn, gốc dày thường màu sẫm, các dáng dài 3 – 5 cm.",
+      "lá": "Lá mọc so le, hình bầu dục hơi thuôn, dài 5 – 11 cm, rộng 3 – 4 cm, gốc có phiến men theo cuống, đầu nhọn thành mũi, nhẵn, khi khô có màu lục lam nhạt; bẹ chìa mỏng, phủ kín đến gần nửa đóng thân.",
+      "hoa": "Cụm hoa là chùm tận cùng hoặc ở kẽ lá, mang nhiều bông hình trụ, lá bắc hình phễu, hơi có lông mi ở mép, hoa đơn độc hoặc tụ họp 2 -5 cái lá bắc.",
+      "quả": "Quả hình 3 cạnh hoặc hình thấu kính, nhi. bóng.",
+      "mùa hoa": "tháng 6 – 9",
+      "mùa quả": "tháng 6 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Polygonum L. là chi lớn nhất trong họ Rau răm (Polygonaceae), ở Việt Nam có 35 loài, trong đó có cây nghể chàm.  Nghể chàm là tên gọi, được nhân dân vùng Ba Vì – Hà Tây và Hòa Bình sử dụng để chỉ loài trên (P, tinctorium Ait.), do cành và lá của nó được ngâm để nhuộm vải thành màu xanh chàm. Nghể chàm là loại cây thảo, sống nhiều năm, thường mọc thành đám trên đất ẩm hay có thể bị ngập nước tạm thời ở ven bờ suối, hay các bãi lầy ở ven rừng. Cây phân bố rải rác ở vùng núi, thuộc các tỉnh Hà Tây (Ba Vì, Hương Sơn), Hòa Bình (Kỳ Sơn, Tân Lạc, Mai Châu), Lào Cai (Sa Pa), Tuyên Quang (Nà Hang, Chiêm Hoá) và một vài nơi khác.",
+      "thường_mọc": "Nghể chàm là cây ưa ẩm, ưa sáng hoặc có thể hơi chịu bóng. Cây sinh trưởng gần như quanh năm, có khả năng mọc chồi nhánh khá nhiều. Do đó, trong quần thể tự nhiên khó phân biệt từng có thể. Cây ra hoa quả nhiều hằng năm, những nhánh đã có hoa quả sẽ đẻ ra các nhánh phụ và sẽ có hoa quả trong các năm sau.",
+      "Đặc điểm sinh trưởng": "Cây sinh trưởng gần như quanh năm, có khả năng mọc chồi nhánh khá nhiều."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá có hợp chất indicant (indoxyl – β – O – glucosid) (CA 127: 305373e)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Nghể chàm có tác dụng thanh nhiệt, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cây nghể chàm được dùng để chế bột chàm hay thanh đại như các loại cây chàm khác. Toàn cây sắc uống chữa thổ huyết, nôn mửa, điên cuồng, khát nước. Đồng bào dân tộc ở một số vùng dùng cây này làm thuốc gây sẩy thai.  Bột chàm hay thanh đại được dùng phổ biến trong y học cổ truyền làm thuốc chữa sốt, trúng độc, viêm amiđan, cam tẩu mã, viêm lợi chảy máu. Liều uống mỗi ngày 2 – 6g, dùng ngoài không kể liều lượng. Vỏ cây nghề chàm dùng ngoài trị mụn nhọt độc, rắn cắn, bò cạp và ong đốt. Hoa được giã lấy nước bôi làm thuốc chữa loét vòm miệng, viêm họng cấp, viêm amidan, viêm lợi, viêm niêm mạc miệng.  Ở Trung Quốc, nghể chàm được dùng làm thuốc hạ sốt, kháng khuẩn và kháng virus để điều trị các bệnh nhiễm khuẩn và nhiễm virus như nhiễm khuẩn đường hô hấp trên, viêm thanh quản, sởi, quai bị, viêm não, viêm gan, áp xe phổi, kiết lỵ, viêm dạ dày – ruột cấp tính, nhọt độc.",
+      "chữa": "Rễ nghề chàm giã nát, trộn với xạ hương và hùng hoàng, dùng đắp.",
+      "làm thuốc": "Thanh đại, hàn the, mỗi vị 5g, ngưu hoàng lg, băng phiến 0,5g. Tất cả tán nhỏ. Khi dùng, súc miệng sạch, bôi thuốc vào chỗ đau.",
+      "sắc uống": "Thanh đại hoà với nước, mỗi ngày uống 2 – 8g, chia làm nhiều lần.",
+      "giã nát": "Thanh đại, cùng với phèn chua, hoàng liên, đinh hương, dùng bôi."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

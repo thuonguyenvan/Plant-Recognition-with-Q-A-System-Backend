@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Riềng rừng",
+      "ten_khoa_hoc": "Alpinia conchigera Griff.",
+      "ma_taxon": "425487",
+      "ho": "Gừng (Zingiberaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 60 – 80 cm, có khi đến 2m.",
+      "thân": "Thân rễ hình trụ, bò ngang, màu hồng nhạt.",
+      "lá": "Lá mọc so le thành hai dãy, hình dải – mũi mác, dài 17 cm, rộng 3 cm, gốc thuôn thành be to có khía, lưỡi bé nguyên, tròn hoặc hơi nhọn, dài 4 – 6 mm, hai mặt nhắn, mặt trên bóng, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành chùy, dài khoảng 10 cm, phân thành 15 – 25 nhánh có cuống ngắn và lông mềm; lá bắc rất nhỏ, hoa màu trắng hoặc đỏ da cam, cao 1 cm; đài ngắn hình chuông, có răng không rõ; tràng có ống ngắn, cánh hoa hình trái xoan, khum, nhẵn; nhị có chỉ nhị mảnh, bao phấn nhẫn, nhị lép hình giùi, cánh mỗi cuộn lại thành hình cầu chia 3 thuỷ; bầu nhẵn.",
+      "quả": "Quả mọng, hình cầu, đường kính 8 mm, màu đỏ nâu khi khô, bao bọc trong bao hoa tồn tại, hạt 3 – 5, có 3 cạnh màu nâu vàng.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 9 – 12."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Alpinia Roxb., trên thế giới có khoảng 230 loài, phân bố chủ yếu ở vùng nhiệt đới và nhiệt đới bắc bán cầu; chỉ có một số loài ở Australia và các đảo ở Thái Bình Dương. Ở Việt Nam, chi này đã biết 27 loài, trong đó có một số loài mới công bố đối với khoa học và cho Việt Nam (Nguyễn Quốc Bình, 2005 trong: Danh lục các loài thực vật Việt Nam, T. III). Loài riềng rừng trên mới thấy ở các tỉnh phía Nam, như An Giang, Đồng Nai và một vài nơi khác cùng ở Nam Bộ. Trên thế giới, cây này phân bố ở Ấn Độ, Trung Quốc, Campuchia, Malaysia, Indonesia, Philippin.",
+      "thường_mọc": "Riềng rừng là cây nhiệt đới tương đối điển hình. Cây ưa ẩm và chịu bóng, nhất là khi còn nhỏ, thường mọc lẫn trong các lùm bụi hoặc các loài có cao dọc theo bờ sông suối, từ trong rừng ra đến cửa rừng.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "An Giang"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Đồng Nai"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ, thu quanh năm, rửa sạch, thái lát, phơi hoặc sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa có tài liệu nghiên cứu về thành phần hoá học loài riềng rừng. Nhưng theo Phạm Hoàng Hộ (2006) loài A. oxyphylla Mig. có mọc ở nước ta chứa một chất là 1-(4′ – hydroxyl – 3 methoxyphenyl) – 7 phenyl – 3 – heptanon cay gấp 125 lần so với zingiberon trong loài riềng thường. Ngoài ra còn có chứa yakuchinon – 13 có tác dụng trợ tim.  Trịnh Đình Chinh et al., (VAST – procedings, 2008, tr.240) đã phân lập được từ loài riềng lưỡi ngắn mọc ở Quảng Trị (A. breviligulata Gapnep.) tinh dầu mà thành phần chính là E – E – farnesol (65%) (trong hạt). Còn tinh dầu trong củ lại chủ yếu là β – penen, borneol, thân và lá lại chứa cả α và β – pinen. Khi chiết thân rễ với methanol và n – hexan. Dịch chiết n – hexan chứa α – humulen (1,95%), acid hexadecanoid (18,21%) và β – sitosterol."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thân rễ (và cả lá) riềng rừng vị cay, tính nóng, mùi thơm; có công năng kiện tỳ vị, giúp tiêu hoá và giảm đau; còn gây phấn khích và trị ho."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thân rễ riềng rừng cũng được dùng như các loại riềng khác, có tác dụng kích thích tiêu hoá, làm ăn ngon cơm, chữa đầy hơi, đau bụng, đau dạ dày, đi lỏng, ngày 2 – 5g rễ khô tán nhỏ rồi hãm hoặc sắc uống. Có thể tán thành bột mịn uống với nước ngày 1- 2g. Còn dùng làm gia vị, làm men rượu.",
+      "được_dùng": "Ở Malaysia, lá tươi dùng riêng hoặc phối hợp với thân rễ, rửa sạch, giã nát, hơ nóng, làm thành miếng đắp vào nơi máu tụ, chống thấp khớp, đau trong xương. Lá giã nát làm thành bánh đắp vào gan bàn chân sau khi đẻ [Van Valkenburg et al., 2001, vol.2: 571]. Ở Indonesia, thân rễ riềng rừng được dùng để kích thích, làm ra mồ hôi, để chữa viêm phế quản, vàng da, nhức đầu, chóng mặt, phối hợp với một số vị thuốc khác sắc uống để bổ và kích thích ăn uống cho người mới đẻ. Cũng để làm gia vị, thức ăn [Medicinal her in Indonesia, 1995: 267]."
+    }
+  ]
+}

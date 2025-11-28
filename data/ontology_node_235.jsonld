@@ -1,0 +1,213 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/co-muc-tuc.html",
+            "ten": "Cỏ mục túc",
+            "ten_khac": "Linh lăng, cỏ mê đi ca gô.",
+            "ten_khoa_hoc": "Medicago sativa L.",
+            "ma_taxon": "1093263",
+            "ho": "Đậu (Fabaceae)."
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây thảo, sống hằng năm hoặc nhiều năm, cao 0,3 – 0,8m, gốc hoá gỗ.",
+            "thân": "Thân hình trụ nhẵn, mọc đứng, phân cảnh nhiều.",
+            "lá": "Lá kép mọc so le, 3 lá chét hình trái xoan ngược hay thuôn, mép khía răng ở gần đầu lá, hai mặt nhẵn; lá kèm nhọn dài, có răng ở gốc.",
+            "hoa": "Cụm hoa mọc ở kẽ lá hoặc đầu ngọn thành chùm dài hơn lá, hoa to, nhiều, màu tím hoặc xanh lơ.",
+            "quả": "Quả đậu nhắn hoặc hơi có lông, mọc đứng thắng, cong 2 – 3 vòng hình xoắn ốc, mở giữa: hạt nhiều.",
+            "mùa hoa": "tháng 6 – 9",
+            "mùa quả": "tháng 6 – 9"
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Chi Medicago L. ở Việt Nam có 2 loài đều là cây nhập nội. Cỏ mục túc vốn có nguồn gốc ở vùng Địa Trung Hải, sau được du nhập trồng ở nhiều quốc gia trên thế giới. Cây được Bộ Nông trường (nay là Bộ Nông nghiệp và Phát triển Nông thôn) nhập giống từ Cu Ba, vào năm 1968 hoặc 1969, đem trồng đầu tiên tại ở nông trường bò sữa Ba Vì (Hà Tây) và Mộc Châu (Sơn La)."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Toàn cây (bỏ rễ), phơi khô hoặc dùng tươi."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Cỏ mục túc chứa protein 19,90 – 22,71%, chất béo 1,41 – 2,87%, chất xơ 21,54 – 31, 13%. Có acid amin là arginin 3.5/16g, histidin 1,5/169, lysin 4,2/16g, tryptophan phenylalanin 4,1/16g, methionin 1,3/16g, threonin 5/16g, leucin 7,9/16g, isoleucin 4,3/16g, valin 49/16g, các thành phần vô cơ: P, K, Na, Mo. Các nguyên tố khác là 31, Cr, Co, Cu, Fe, Mn. Me, Ni, Ag, St, Ti, Va và Zn.  Cỏ mục túc giàu vitamin A, E và chứa β– catotel 6,24, thiamin 0,15, riboflavin 0,46, niacin và α – tocopherol 15,23mg/100g.  Lá chứa một saponin rất độc được xác định là triglucosid của acid medicagenic, các chất monogalactosyl, digalactosyl và sulfoquinovosyl 0,8% diglycerid, có trong glyceroglycolipid, một Isoflavan là sativin. Lá còn có β- methyl – D – glucosid (Võ Văn Chi, 1997).  Hạt chứa acid sialic, 7 – methoxy-3, 5, 8, 3’, 4’ – pentahydroxyflavon.  Hoa chứa myren, limonen và linalol.  Rễ chứa medicarpin – D – glucosid và một saponin khi thuỷ phân cho hederagenin, glucose và arabinose."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": null
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Chủ yếu được dùng làm thức ăn cho gia súc, vì trong cành và lá chứa hàm lượng protein cao (gần 30%) và một số vitamin. Được biết cây cũng được dùng làm thuốc theo kinh nghiệm của thổ dân vùng Trung cận đông và Địa Trung Hải."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null,
+            "làm thuốc": null,
+            "có tác dụng": null,
+            "sắc uống": null,
+            "giã nát": null,
+            "sắc nước uống": null,
+            "phơi khô": null,
+            "xấy khô": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

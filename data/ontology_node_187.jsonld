@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch hoa xà thiệt thảo",
+      "ten_khac": "Bạch hoa xà thiệt thảo, An điền bò",
+      "ten_khoa_hoc": "Hedyotis diffusa Willd.",
+      "ma_taxon": "1404885",
+      "ho": "Rubiaceae (Cà phê)",
+      "Mô tả": {
+        "thân": "Cây thảo mọc bò, sống hàng năm, dài 20 – 25 cm. Thân vuông màu nâu nhạt. Cành lá sum sê.",
+        "lá": "Lá mọc đối, hình mác thuôn, dài 1 – 3,5cm, rộng 1 – 3mm, gốc và đầu nhọn, mặt trên nhẵn hoặc hơi nháp, mặt dưới màu xám nhạt, chỉ gân giữa rõ và nổi gồ; lá kèm có răng nhỏ ở đầu.",
+        "hoa": "Hoa màu trắng, ít khi hồng, có cuống, mọc đơn độc hoặc đôi một ở kẽ lá; lá đài 4, hình mác, mép có lông dạng mi; cánh hoa 4, hai mặt nhẵn, ống tràng dài 1,5mm; nhị 4, đính vào họng tràng; bầu có hai ô đựng nhiều noãn, đầu nhụy chia đôi.",
+        "quả": "Quả khô, cao 2 – 2,5 mm, đầu bằng, bao bọc bởi những lá đài tồn tại; hạt nhiều có cạnh.",
+        "mùa hoa": "Gần như quanh năm.",
+        "mùa quả": "Gần như quanh năm.",
+        "luu_y": "Cây dễ nhầm lẫn: Cây lưỡi rắn – Vương thái tô, xương cá, an điền {Hedyotis corymbosa (L.) Lamk., Oldenlandia corymbosa L.) cùng họ (xem Lưỡi rắn)."
+      },
+      "Phân bố": {
+        "phân_bố": "Cây ưa môi trường ấm áp và ẩm ướt, không chịu được hạn hán và ngập úng, không đòi hỏi nhiều về đất, nhưng phát triển tốt hơn trên đất thịt pha cát màu mỡ hoặc đất thịt mùn.",
+        "thường_mọc": "Bạch hoa xà thiệt thảo thường mọc rải rác hoặc thành từng đám ở vườn, ven đường đi và nhất là ở các gò đất cao, ruộng trồng màu ở vùng trung du. Hàng năm, cây con mọc từ hạt và sinh trưởng, phát triển nhanh trong mùa hè. Sau khi có hoa quả, toàn cây tàn lụi vào giữa mùa thu.",
+        "Đặc điểm sinh trưởng": "Cần lưu ý, hạt bạch hoa xà thiệt thảo tồn tại 5-6 tháng qua mùa đông và gần hết mùa xuân năm sau mới nảy mầm.  Nguồn bạch hoa xà thiệt thảo mọc tự nhiên khá phong phú. Song, muốn chủ động về nguyên liệu để làm thuốc, cần thiết vẫn phải trồng. Cây trồng bằng hạt vào mùa xuân hoặc đầu mùa hè, sau 3-4 tháng có thể thu hoạch."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Bạch hoa xà thiệt thảo là một vị thuốc có tác dụng thanh nhiệt, giải độc, tiêu viêm và kháng khuẩn. Dưới đây là một số ứng dụng lâm sàng của dược liệu này trong điều trị các bệnh lý khác nhau:  1. Điều trị viêm phổi ở trẻ em  Dùng Bạch hoa xà thiệt thảo dạng tiêm với liều 2ml mỗi lần (chứa 4g dược liệu), tiêm bắp ngày 2 lần.  Trẻ sơ sinh giảm một nửa liều lượng.  Thời gian điều trị: 5-7 ngày.  Kết quả nghiên cứu trên 112 bệnh nhi:52 ca khỏi hẳn  25 ca cải thiện đáng kể 17 ca có tiến triển tốt 12 ca không hiệu quả 6 ca tử vong  Thời gian nằm viện trung bình: 7,98 ngày  2. Điều trị viêm ruột thừa  Dùng Bạch hoa xà thiệt thảo tươi 1 lạng (hoặc dạng khô 5 đồng cân), sắc nước uống ngày 2 lần. Trường hợp nặng có thể tăng liều lên 2-3 lạng/ngày. Nếu bệnh nhân bị chướng bụng nặng, có thể phối hợp với châm cứu hoặc truyền dịch.  Kết quả trên 19 bệnh nhân: Tất cả đều khỏi, trong đó có 12 ca viêm ruột thừa cấp và 3 ca áp-xe ruột thừa.  Thời gian hạ sốt trung bình:  1,9 ngày (viêm ruột thừa cấp tính) 3,3 ngày (áp-xe ruột thừa)  Thời gian hồi phục triệu chứng trung bình:  3,2 ngày (viêm ruột thừa cấp tính) 6 ngày (áp-xe ruột thừa)  1 trường hợp tái phát sau 4 tháng, nhưng tiếp tục điều trị bằng phương pháp trên và khỏi hẳn.  Ngoài ra, một nghiên cứu trên 50 bệnh nhân viêm ruột thừa các thể khác nhau (bao gồm viêm ruột thừa thủng có biến chứng viêm phúc mạc) cho thấy:  Triệu chứng lâm sàng mất sau 2-3 ngày dùng thuốc Khỏi bệnh hoàn toàn sau 1 tuần Dạng sắc uống hiệu quả hơn so với tiêm bắp  3. Điều trị viêm mào tinh hoàn sau thắt ống dẫn tinh  Dùng Bạch hoa xà thiệt thảo 1 lạng/ngày, sắc uống trong 3-4 tuần (có thể kéo dài đến 10 tuần).  Kết quả nghiên cứu trên 19 bệnh nhân (đã từng thử nhiều phương pháp khác nhưng không hiệu quả):  10 ca viêm mào tinh hoàn đơn thuần:  3 ca khỏi hoàn toàn (mào tinh mềm, không còn đau) 7 ca cải thiện tốt (giảm đau đáng kể)  9 ca viêm mào tinh kết hợp viêm tinh hoàn:  6 ca cải thiện tốt 3 ca không hiệu quả  Tác dụng của Bạch hoa xà thiệt thảo:  Ức chế quá trình sinh tinh, giúp giảm tắc nghẽn ống dẫn tinh. Kháng viêm, giảm phù nề.  4. Điều trị rắn độc cắn  Cách dùng: Bạch hoa xà thiệt thảo khô 5 đồng cân, sắc với 500ml rượu trắng, đun sôi 3-5 phút. 2/3 lượng thuốc uống trong ngày, chia 2-3 lần. 1/3 còn lại dùng để đắp lên vết cắn. Trước khi đắp, cần hút máu độc, rửa sạch vết thương, khử trùng, rồi đắp bông tẩm thuốc lên.  Nếu bệnh nhân không uống được rượu, có thể sắc nước, nhưng hiệu quả tốt nhất vẫn là dùng rượu thuốc.  Kết quả trên 19 bệnh nhân:  Dùng 3-6 thang thuốc, tất cả đều khỏi. Với trường hợp nặng hoặc có bội nhiễm, có thể kết hợp với kháng sinh và thảo dược khác.  5. Điều trị viêm vùng chậu, viêm phần phụ  Dùng Bạch hoa xà thiệt thảo 1,5 lạng, kết hợp với:  Nhị diện châm (两面针) 3 đồng cân, hoặc Xuyên phá thạch (苌芝) 3 đồng cân.  Sắc uống mỗi ngày 1 thang.  Kết quả trên 77 bệnh nhân:  73 ca khỏi hoàn toàn 4 ca không hiệu quả  Ngoài ra, có nghiên cứu sử dụng dạng tiêm bắp (100% dịch chiết Bạch hoa xà thiệt thảo, 2ml mỗi lần, 3 lần/ngày) để điều trị ung thư cổ tử cung, ung thư dạ dày, ung thư gan, giúp cải thiện triệu chứng đáng kể."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây, thu hái vào mùa hạ, thu, rửa sạch rồi phơi hoặc sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": "Toàn bộ cây chứa asperuloside, acid asperulosidic, acid deacetylasperulosidic, acid geniposidic, scandoside, este metyl scandoside, 6-O-hydroxycinnamoyl este metyl scandoside, 6-OP-methO-xycinnamlyl este metyl scandoside, 6-O-feruloyl este metyl scandoside, 2-methyl-3-hydroxyanthraquinone ( 2-methyl-3-hydroxy-4-methoxyanthraquinone, 2-methyl-3-hydroxy-4-methoxyanthraquinone, v.v. [1-3], cũng như axit ursolic, β-sitosterol [4], hentriacon-tane, stigmasterol, axit oleanolic, β-sitosterol-β-glucoside, axit p-coumaric, v.v."
+      },
+      "Tính vị": {
+        "Có vị": "Bạch hoa xà thiệt thảo có vị ngọt, đắng, tính hàn vào các kinh vị, đại tràng, tiểu tràng, có tác dụng thanh nhiệt, giải độc, lợi thấp, tán ứ, chống u."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Ở nước ta:  Bạch hoa xà thiệt thảo được phát hiện ở nước ta từ thời Tuệ Tĩnh, dùng chữa rắn cắn, sởi đậu.  Ở Trung Quốc:  Bạch hoa xà thiệt thảo được dùng làm thuốc chống viêm, chữa phế nhiệt, hen suyễn, viêm họng, viêm amygdal, viêm đường tiết niệu, viêm vùng chậu.  Từ những năm 1950 đến nay, Bạch hoa xà thiệt thảo đã trở thành một loại dược liệu phổ biến trong y học cổ truyền Trung Quốc để hỗ trợ điều trị nhiều loại ung thư, bao gồm:Ung thư dạ dày  Ung thư phổi Ung thư trực tràng Lymphoma ác tính Ung thư buồng trứng Ung thư bàng quang Cùng với Bán chi liên (Scutellaria barbata), Bạch hoa xà thiệt thảo có tác dụng:Tăng cường hệ miễn dịch Kích thích quá trình tự chết của tế bào ung thư (apoptosis) Chống đột biến gen Ức chế enzyme telomerase (enzyme giúp tế bào ung thư phân chia vô hạn) Ngăn chặn sự phát triển và phân chia của tế bào ung thư  Khi kết hợp với Bán chi liên, tác dụng không chỉ là cộng hưởng mà còn có hiệu quả hiệp đồng, giúp tăng cường khả năng điều trị ung thư.  Theo một số tư liệu y học cổ truyền Trung Quốc, Bạch hoa xà thiệt thảo có nhiều công dụng trong điều trị bệnh:  Theo “潮州志·物产志” (Triều Châu Chí – Vật Sản Chí): Dùng nước ép từ thân và lá để uống có thể chữa viêm ruột thừa và các bệnh liên quan đến đường ruột. Theo “广西中药志” (Quảng Tây Trung Dược Chí): Dược liệu này được sử dụng để điều trị chứng suy dinh dưỡng ở trẻ em, rắn độc cắn, ung bướu. Ngoài ra, còn có tác dụng trị các bệnh ngoài da như bạch bào sang và lở loét dạng ghẻ lở. Theo “闽南民间草药” (Dược Thảo Dân Gian Mân Nam): Có tác dụng thanh nhiệt giải độc, tiêu viêm giảm đau. Theo “泉州本草” (Tuyền Châu Bản Thảo): Giúp thanh nhiệt, tán ứ, tiêu viêm, giải độc, được dùng để trị ung nhọt, lở loét, hạch viêm. Đồng thời, có tác dụng thanh phế hỏa, tả phế nhiệt, dùng trong điều trị ho do phế nhiệt, khó thở và tức ngực. Theo “广西中草药” (Quảng Tây Trung Thảo Dược): Có công năng thanh nhiệt giải độc, hoạt huyết lợi tiểu, điều trị viêm amidan, viêm họng, viêm ruột thừa, viêm gan, kiết lỵ, nhiễm trùng đường tiểu và suy dinh dưỡng ở trẻ em.  Ở Ấn Độ:  Bạch hoa xà thiệt thảo là thuốc chữa bệnh về gan mật, vàng da, sốt, lậu, máu xấu. Liều dùng: 15 – 60g/ngày. sắc nước uống.  Dùng ngoài, giã nát đắp tại chỗ.  Chú ý: đối với phụ nữ có thai khi dùng phải thận trọng.  Công dụng đối với các bệnh lý khác  Hỗ trợ điều trị viêm gan:  Theo kinh nghiệm dân gian, có tác dụng thanh nhiệt giải độc, hỗ trợ điều trị các loại viêm gan do nhiễm độc, viêm gan do virus. Nghiên cứu cho thấy Bạch hoa xà thiệt thảo có tác dụng bảo vệ gan và lợi mật nhờ các hợp chất như Oleanolic acid và Iridoid glycosides, giúp giảm men gan.  Kháng khuẩn – chống viêm:  Có tác dụng chống vi khuẩn, tiêu viêm, đặc biệt hữu ích trong điều trị viêm dạ dày do vi khuẩn Helicobacter pylori. Giúp sửa chữa tổn thương niêm mạc dạ dày, ức chế sự phát triển của dị sản ruột (tình trạng tiền ung thư ở dạ dày).  Tác dụng đối với hệ tiết niệu:  Có hiệu quả lợi tiểu, giúp hỗ trợ điều trị viêm đường tiết niệu, tiểu khó. Dân gian Trung Quốc có câu: “小便不利，服白花蛇舌草即利” (Tiểu tiện khó, dùng Bạch hoa xà thiệt thảo sẽ thông suốt).  Hỗ trợ điều trị bệnh thận:  Có tác dụng tăng cường miễn dịch, hỗ trợ điều trị viêm cầu thận cấp và mãn tính, hội chứng thận hư.  Tác dụng tiêu viêm – giảm đau:  Tiêu ứ tán kết, kích thích hệ thống miễn dịch, tăng cường thực bào của bạch cầu. Dùng trong các bệnh lý do ứ trệ khí huyết, như u nang buồng trứng, phì đại tuyến tiền liệt.  Tác dụng đối với thần kinh:  An thần, giảm đau, gây ngủ nhẹ. Có thể dùng để hỗ trợ điều trị rối loạn thần kinh, suy nhược thần kinh, trẻ nhỏ hay quấy khóc về đêm."
+      },
+      "Cách dùng": {
+        "được_dùng": "Biên niên sử y học cổ truyền Quảng Tây: “Phụ nữ có thai nên thận trọng khi dùng.”"
+      },
+      "luu_y": {}
+    }
+  ]
+}

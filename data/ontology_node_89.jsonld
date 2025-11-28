@@ -1,0 +1,195 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/dong-quy.html",
+            "ten": "Đông quỳ",
+            "ten_khac": "Đông quỳ",
+            "ten_khoa_hoc": "Malva verticillata L.",
+            "ma_taxon": "77954",
+            "ho": "Malvaceae (Bông)",
+            "Mô tả": {
+                "cây": "Cây thảo, sống hai năm, cao 1m hay hơn.",
+                "thân": "Thân hình trụ, mọc thẳng, phân nhiều cành, màu lục, phủ lông hình sao.",
+                "lá": "Lá mọc so le, hình tim hoặc gần tròn, đường kính 4 – 5cm, gốc hình tim sâu, đầu tròn hoặc hơi nhọn, chia 5 thùy nông không đều hình chân vịt, thùy giữa lớn hơn, mép khía răng đều, gần gốc 5 tuổi rõ ở cả hai mặt, cuống lá dài 2 – 8cm, lá kèm hình tam giác nhọn.",
+                "hoa": "Cụm hoa mọc ở kẽ lá, gồm 4 – 5 hoa không cuống hoặc có cuống ngắn, màu trắng có vân đỏ tím, đường kính 1cm, đài hình chuông, 5 răng nhỏ và ngắn, tiểu đài có 5 lá bắc ngắn hơn đài: tràng 5 cánh bằng đầu, nhị nhiều có chỉ ngắn đính trên một cột.",
+                "quả": "Quả nang chứa nhiều hạt dẹt."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Malva L., chỉ có một loài là cây đông quỳ ở Việt Nam. Cây được nhập trồng để làm cảnh, song có tác giả cho rằng, cây có mọc hoang dại ở Lai Châu (Võ Văn Chi, 1997). Đông quỳ là loại cây ưa sáng và đặc biệt ưa ẩm, gieo trồng từ hạt sau 3 tháng bắt đầu có hoa, nụ hoa mọc ra từ các kẽ lá, hoa nở từ dưới lên. Đặc biệt, khi cây bắt đầu có hoa, phần ngọn và cành vẫn tiếp tục phát triển, từ các kẽ lá cũng tiếp tục mọc ra nụ và hoa.  Cây trồng dễ dàng bằng hạt."
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Rễ và cành lá thu hái quanh năm, phơi khô.  Hạt thu hái vào mùa xuân, phơi trong râm."
+            },
+            "Thành phần": {
+                "thành phần": "Đông quỳ chứa acid malvalic (TDTH III, 186)  Gần đây, một số tác giả đã phân lập được các polysaccharid có tác dụng sinh học:  Polysaccharid MVS I cấu tạo bởi arabinose, galactose, và glucose với tỷ lệ phân tử 3: 6: 7 (Chem Pharm Bull – 1991, 39, 2630). Polysaccharid MVS II A ( trong hạt) cấu tạo bởi arabinose, glactose, mannose với tỷ lệ phân tử 14: 28: 1. MVS-II G:  gồm glucose, glactose, và mannose với tỷ lệ phân tử 10: 1: 1 (Chem Pharm Bull 1988. 36,2778). MVS III A gồm arabinose, xylose, galactose… và acid galacturonic (16: 1: 8: 3) (trong hạt) (Phytochemistry 1989. 28, 2609) Các polysaccharid acid MVS IV A chứa 3, 3% protein (Planta medica 1990, 56, 73) MVS VI (trong hạt) gồm arabinose, xylose, galactose, glucose, rhamnose và acod galacturonic (30: 15:20: 3: 2: 10 ). Các polysaccharid MVS-I, MVS II A,  MVS III A, MVS IV A. MVS VI có tác dụng kháng bổ thế mạnh (anti complementary activity). Polysaccharid MVS I và polysaccharid giàu MVS V – CH từ peptidoglycan MVS, V cùng thể hiện hoạt tính giảm đường huyết (Planta medica1990, 56, 168). Hạt đồng quỳ còn chứa: các glycan có tác dụng sinh học."
+            },
+            "Tính vị": {
+                "Có vị": "Hạt đông quỳ có vị ngọt, tính hàn, vào các kinh đại tràng, tiểu tràng và bàng quang, có tác dụng lợi tiểu, lợi sữa, nhuận tràng. Cành lá có vị ngọt, tính hàn có tác dụng thanh nhiệt, lợi thấp. Rễ có vị ngọt, tính ấm, có tác dụng bổ trung, ích khí."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Hạt đông quỳ có tính chất nhầy và làm dịu, được dùng chữa bí đại tiểu tiện, phù khi có thai. Ít sữa, sỏi tiết niệu, Ngày 3 – 9g dưới dạng bột hoặc sắc uống.  Thân và lá chữa viêm đường tiết niệu, phong nhiệt sinh ho. Ngày 3 – 9g sắc uống. Cành lá tươi, giã nát, đắp tại chỗ chữa sưng vú. Lá phơi âm can, đốt tồn tính, tán bột, sát chữa ghẻ và ngứa. Lá và ngọn non được dùng làm rau ăn để lợi tiêu hóa, thường dùng cho phụ nữ sắp đẻ.  Rễ được dùng chữa ít sữa, sỏi thận. Ngày 30-60g, sắc uống. Rễ phơi âm can, sao tôn tính, lấy tro, tán bột mịn, rắc chữa vết thương, chỗ lở loét, hôi thối.  Bài thuốc có đông quỳ:  Chữa phù khi có thai, thân thể nặng nề, bí tiểu tiện, hoa mắt khi đang ngồi đứng dậy:  Hạt đông quỳ 500g, phục linh 90 g. tất cả nghiền thành bột. Ngày uống 3 lần, mỗi lần 10g đến khi đi đái được(Quỳ tử phục linh tán). Hoặc hạt đông quỳ 6g, đại hoàng 3g. Sắc chia 2 lần uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+            },
+            "Cách dùng": {
+                "được_dùng": null
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

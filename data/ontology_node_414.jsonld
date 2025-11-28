@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ đậu hai lá",
+      "ten_khac": "Đinh quý thảo, thương phòng.",
+      "ten_khoa_hoc": "Zornia gibbosa Span.",
+      "ma_taxon": "787020",
+      "ho": "Đậu (Fabaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm hay sống dai, phân cành từ gốc, gốc phình thành củ thon nhỏ. Cành mảnh lúc đầu mọc ngả, sau đứng thẳng, dài 30 – 50 cm.",
+      "lá": "Lá mọc đối có 2 lá chét hình trái xoan thuôn hay hình dải – mũi mác, gốc tròn, đầu có mũi nhọn ngắn; lá kèm hình mác nhọn có cựa ngắn.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành bông thưa, lá bắc giống lá kèm nhưng rộng hơn, hoa màu vàng, đài có hai môi không giống nhau; tràng có cánh mang cựa, nhị 1 bó, không đều nhau.",
+      "quả": "Quả đậu, thắt lại giữa các hạt, có lông hoặc nhẵn, đôi khi có vân mạng.",
+      "mùa hoa": "tháng 4 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Zornia J. Gmel. ở Việt Nam mới biết có hai loài. Loài cỏ đậu hai lá phân bố rải rác khắp các tỉnh, từ vùng trung du và đồng bằng Bắc Bộ vào đến Nam Trung Bộ và ở cả Tây Nguyên. Loài này cũng phân bố ở Ấn Độ, Mianma, Trung Quốc, Thái Lan, Xri Lanka và Indonesia.",
+      "thường_mọc": "Cỏ đậu hai lá là cây thảo sống nhiều năm, thường mọc lẫn với các loại cỏ thấp ở ven đường đi, bãi sông, trên nương rẫy, ven rừng, chân đồi và rừng thưa rụng lá hoặc nửa rụng lá ở Tây Nguyên.",
+      "Đặc điểm sinh trưởng": "Cây ưa sáng, ưa ẩm và có thể chịu được hạn, đồng thời cũng thích nghi được trên nhiều loại đất, kể cả đất cát pha, hơi chua và nghèo dinh dưỡng.  Cây ra hoa quả hàng năm, tái sinh tự nhiên chủ yếu từ hạt và mọc cây chồi khỏe sau khi bị cắt hay bị gia súc ăn phần cành và lá."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn bộ phần thân, cành mang lá; rễ. Dùng tươi hay phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cỏ đậu hai lá có vị ngọt nhạt, tính mát, có công năng thanh nhiệt, giải biểu, tán ứ, tiêu sưng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Củ đậu hai là được dùng chữa cảm mạo, viêm họng, viêm kết mạc, viêm dạ dày, ruột cấp, rối loạn tiêu hoá, kiết lỵ, viêm gan vàng da, viêm vú cấp; trẻ em cam tích và suy dinh dưỡng.",
+      "được_dùng": "Liều dùng mỗi ngày 15-30g (hoặc 30-60g), sắc lấy nước uống. Dùng ngoài còn lấy cây tươi, rửa sạch, giã nát, đắp lên chỗ đòn ngã tổn thương, nhọt, viêm da, sưng tấy.",
+      "chữa": "Rễ cây cỏ đậu hai lá đốt thành than, tán nhỏ, chiều với nước, đắp lên chỗ ung nhọt, đinh độ. khi chưa vỡ mủ, có thể làm tiêu."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

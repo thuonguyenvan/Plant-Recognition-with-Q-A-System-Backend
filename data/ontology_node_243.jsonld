@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba chạc",
+      "ten_khac": "ba chạc, dầu dấu,chè cỏ, thùa kheo bí bái, mạt, kom la van tio tăng (Viêm tian), swai anor (Cămpuchia).",
+      "ten_khoa_hoc": "Evodia lepta (Spreng.) Merr.",
+      "ma_taxon": "537955",
+      "ho": "Cam (Rutaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ cao 1-3m, cành màu đỏ xám.",
+      "lá": "Lá kép gồm ba lá chét nguyên, trông giống chạc ba nhánh do đó có tên ba chạc.",
+      "hoa": "Cụm hoa mọc ở kẽ lá và ngắn hơn lá.",
+      "quả": "Quả nang gồm 1-4 vỏ nhẵn, phía ngoài nhăn nheo, mỗi ngăn chứa một hạt hình cầu đường kính 2mm, màu đen xanh, bóng.",
+      "mùa hoa": "Tháng 4-7"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong lá, vỏ quả có tinh dầu mùi thơm nhẹ dễ chịu.",
+      "Các hợp chất": "Lá và rễ ba chạc chứa alkaloid.",
+      "tinh dầu chứa": "Lá, vỏ quả, vỏ rễ có tinh dầu mùi thơm nhẹ, tinh dầu có α-pinen và furfuraldehyd."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ba chạc có vị đắng, mùi thơm, tính lạnh"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "có tác dụng thanh nhiệt, giải độc, trừ bệnh ôn nhiệt, trừ thấp, chống ngứa, giảm đau, lợi sữa",
+      "có tác dụng": "Tác dụng kháng khuẩn: nước sắc lá ba chạc có tác dụng ức chế trực khuẩn lỵ Shigella ở nồng độ pha loãng.",
+      "có tác dụng": "Tác dụng lợi sữa: Trên mô hình diều chim bổ câu, cao cồn và nước sắc lá và cành non ba chạc, liều tính theo dược liệu khô là 10g/kg/ngày, uống 10 ngày làm cho tế bào biểu mô diều chim bồ câu chuyển sang hình đăng ten, trong đó có 1/5 số con đã hình thành tuyến sữa, tức là có tác dụng lợi sữa.",
+      "Độc cấp tính": "Cao nước lá và cành non cho chuột nhắt trắng uống, đã xác định được LD50 là 300g/kg tính theo dược liệu khô, tức là có độc tính cấp rất thấp."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang, rất phổ biến ở khắp nơi trong nước ta, miền núi cũng như đồng bằng. Còn thấy mọc ở Trung Quốc, Philippin.",
+      "làm thuốc": "Người ta dùng lá tươi về nấu nước tắm ghẻ, mụn nhọt, lở loét. Thân và rễ thái mỏng phơi khô cũng được dùng làm thuốc."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

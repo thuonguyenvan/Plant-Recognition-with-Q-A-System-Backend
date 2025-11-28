@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch đồng nữ",
+      "ten_khac": "Bạch đồng nữ, Vậy trắng, Mò trắng, Bấn trắng, Lẹo trắng, Poóng phi đớn (Thái), Mạy xì cáy phà, Poong pị (Tày)",
+      "ten_khoa_hoc": "Clerodendrum petasites (Lour.) Moore.",
+      "ma_taxon": "67538",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây Bạch đồng nữ thuộc họ Hoa môi (Lamiaceae), là một loại cây bụi có chiều cao từ 1 – 3,5 mét.",
+      "thân": "Cành non có dạng hơi vuông, trên thân có các rãnh dọc không rõ ràng. Toàn thân cây được phủ một lớp lông mềm, màu xám nâu, sờ vào có cảm giác mịn. Khi cây già, phần lõi thân trở nên xốp, nhưng không bị rỗng khi khô.",
+      "lá": "Hình trái tim hoặc hình trứng rộng, đôi khi thuôn dài hơn. Lá có kích thước dài từ 6 – 18 cm, rộng từ 4 – 15 cm. Đầu lá nhọn dần, Gốc lá hình tim hoặc gần như cắt ngang. Hai mặt lá đều có lông mềm, đặc biệt phần gân lá ở mặt dưới có lông màu xám nâu dày hơn. Cuống lá dài từ 1,5 – 12 cm.",
+      "hoa": "Cụm hoa hình cầu, mọc ở đầu cành, thường có từ 2 – 5 nhánh. Cuống cụm hoa khá dày, dài 1,5 – 11 cm. Lá bắc (phần bảo vệ hoa) có hình trứng hoặc hình bầu dục, có cuống ngắn hoặc gần như không cuống, dài 0,5 – 2,4 cm. Đài hoa hình chuông, ban đầu có màu xanh, sau đó chuyển sang màu đỏ. Đài có 5 gờ dọc và một số đốm tuyến nhỏ, phía trên tách thành 5 thùy sâu đến giữa đài, thùy có dạng trứng hoặc trứng rộng, đầu nhọn. Tràng hoa có màu trắng hoặc hồng nhạt, bên ngoài có lông mềm hoặc lông tuyến nhỏ. Ống tràng hoa thon dài, khoảng 2 cm, đầu hoa xòe ra với cánh hoa có dạng trứng ngược dài, kích thước 5 – 6 mm. Nhị hoa gồm 4 nhị, cùng với nhụy đều nhô ra khỏi ống tràng.",
+      "quả": "Dạng gần tròn, đường kính khoảng 7 mm. Khi còn non có màu xanh lục, khi chín chuyển thành xanh đậm hoặc đen. Quả được bao bọc trong đài hoa màu đỏ đã phát triển lớn hơn khi trưởng thành.",
+      "mùa hoa": "Từ tháng 4 đến tháng 10.",
+      "mùa quả": "Từ tháng 4 đến tháng 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Clerodendrum L. là một chi lớn có khoảng 350 loài đã được ghi nhận, gồm các loại cây bụi, bụi nhỏ hoăc cây gỗ, phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới châu Á. Ở Việt Nam, có khoảng 30 loài, trong đó hơn 10 loài được được sử dụng làm thuốc. Bạch đồng nữ thuộc loài cây bụi, ưa sáng và có thể hơi chịu bóng, phân bố rất rải rác khắp các tỉnh vùng trung du và đồng bằng, cả ở miền Nam lẫn miền Bắc. Cây thường mọc lẫn với một số cây nhỏ khác ở quanh làng, ven đường đi và chân đồi. Còn được trồng ở một số địa phương để làm thuốc. Ở Ấn Độ, bạch đồng nữ được trồng làm cảnh vì có hoa đẹp. Bạch đồng nữ ra hoa quả hàng năm, tuy nhiên xung quanh cây mẹ, lượng cây con mọc từ hạt ít. Phần thân và gốc còn lại sau khi chặt, có khả năng tiếp tục tái sinh. Cách trồng Bạch đồng nữ không kén đất, có thể trồng ở nhiều nơi từ miền núi đến đồng bằng, cần đủ ẩm, không úng ngập. Hiện nay, cây được khai thác chủ yếu từ nguồn hoang dại, mới chỉ được trồng ở các vườn thuốc của bệnh viện, trạm xá, trường học, viện nghiên cứu… Cây được nhân giống bằng hạt. Hạt được gieo vào tháng 2-3 hoặc tháng 8-9 trong vườn ươm. Khi cây cao 30 – 40 cm, có 4 – 5 lá thật, đánh ra trồng. Đất được cày bừa, lên thành luống hoặc có thể để nguyên và trồng theo vạt. Khi trồng, bổ hốc với khoảng cách 50 x 50 cm, mỗi hốc bón lót 1 – 2 kg phân chuồng.",
+      "thường_mọc": "Cây thường mọc lẫn với một số cây nhỏ khác ở quanh làng, ven đường đi và chân đồi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá thu hái quanh năm, tốt nhất vào lúc cây đang ra hoa. Chọn lá bánh tẻ không bị sâu úa. Rễ đào về rửa sạch phơi hoặc sấy khô, khi dùng thái mỏng, không phải chế biến."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Bạch đồng nữ chứa Havonoid, tanin, cumarin, acid nhân thơm, aldehyd nhân thơm và dẫn chất amin có nhóm carbonyl. Xích đồng nam chứa một chất đắng là clerodin, 2 flavonoid glucosid, và hispidalin 7 – 0 – glucoronid, scutellarein 7-0 glucoronid, 1 furantri terpenoid. Ngọc nữ đỏ chứa ethylcholestan – 5 – 22 -25 trien 3β – ol, vết anthocyan."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Bạch đồng nữ có vị hơi đắng, mùi hôi, tính mát, vào hai kinh: tâm, tỳ, có tác dụng thanh nhiệt, giải độc, khu phong, trừ thấp, tiêu viêm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo y học cổ truyền Trung Quốc: Cây Bạch đồng nữ có nhiều công dụng chữa bệnh, bao gồm: Thanh nhiệt, dưỡng âm, giúp giảm sốt do cảm mạo. Tuyên phế hóa đờm, hỗ trợ điều trị ho, viêm phổi, lao phổi kèm ho ra máu. Trừ phong giảm đau, dùng để chữa đau nhức cơ thể, đặc biệt là đau bụng kinh. Làm mát máu, cầm máu, có tác dụng trong các trường hợp chảy máu cam, ho ra máu hoặc rong kinh. Chữa viêm mật vàng da, gân xương đau nhức, mỏi lưng, huyết áp cao Ngày dùng 12 – 16 g rễ dưới dạng thuốc sắc hay thuốc viên. Còn dùng bạch đồng nữ trong điều trị vết thương bỏng. Bạch đồng nữ thuộc nhóm thuốc có tác dụng làm rụng nhanh các hoại tử ở vết loét. Dùng cành lá hoa tươi rửa sạch, đun sôi với nước rồi lọc và dùng nước lọc này để nhỏ giọt liên tục hoặc ngâm vết thương. Trong y học dân gian Nepan, nước ép lá tươi, chồi non giã nát, hoặc nước ép rễ tươi uống để trị giun sán với liều lượng như sau: Nước ép lá tươi: mỗi ngày uống một lần khoảng 4 thìa cà phê, liền trong 4 ngày. Hoặc uống mỗi ngày, một lần 2 thìa cà phê nưóc ép lá tươi cho đến khi ra giun. Trong y học dân gian Ấn Độ, thuốc nhão chế từ chồi non của cây bạch đồng nữ và cây ổi với một nhúm muối để điều trị đau dạ dày do đầy hơi, mỗi lần uống 2 thìa cà phê, ngày 2 lần cho tới khi khỏi. Bài thuốc có bạch đồng nữ Thuốc làm rụng nhanh các hoại từ ở vết bỏng: Cành lá, hoa tươi bạch đồng nữ rửa sạch 1 kg, nước 10 lít. Đun sôi 30 phút lọc lấy nước, nhỏ giọt liên tục hoặc ngâm vết thương ngày 2 lần, mỗi lần 1 giờ. Thuốc điều kinh: Bạch đồng nữ 16g, ích mẫu 40g, hương phụ chế 15g, đậu đen 10g, nghệ vàng 2g, ngải cứu 2g. Sắc đặc, ngày uống một thang. Chữa kinh nguyệt không đều, kinh thấy sớm kỳ, lượng máu nhiều đỏ tươi, hoặc máu ít đỏ thẫm, đau bụng trước khi thấy kinh: Bạch đồng nữ, ích mẫu, cỏ nhọ nồi, rễ gai, dành dành hay vỏ núc nác, mỗi vị 20g. sắc uống. Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

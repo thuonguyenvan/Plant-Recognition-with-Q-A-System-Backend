@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thảo quả",
+      "ten_khac": "Thảo quả, Mác hầu (Tày), Đò ho, Thảo đậu khấu",
+      "ten_khoa_hoc": "Amomum tsao-ko Crév. et Lem.",
+      "ma_taxon": "1231270",
+      "ho": "Zingiberaceae (Gừng)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, có lá có cuống ngắn, có lá không có cuống, bẹ lá có khía dọc, phiến lá dài 0,60-0,70m, rộng tới 0,20m, nhẵn, mặt trên có màu xanh sẫm, mặt dưới hơi mờ, mép nguyên.",
+        "hoa": "Cụm hoa thành bông mọc từ gốc, dài chừng 13-20cm, hoa màu đỏ nhạt.",
+        "quả": "Quả từ 8 đến 17 trên mỗi bông, khi chín có màu đỏ nâu dài khoảng 3-4cm, đường kính 2-3cm, khi còn tươi mặt bóng nhẵn, vỏ ngoài dày 5mm. Trong quả chia thành 3 ngăn, mỗi ngăn có chừng 7 hạt có áo hạt hình tháp ép vào nhau, rất thơm.",
+        "cây": "Thảo quả là một loại cỏ sống lâu năm, cao chừng 2,5-3m.",
+        "thân": "Thân rễ mọc ngang, to thô, có đốt, đường kính chừng 2,5-4cm, giữa có màu trắng nhạt, phía ngoài có màu hồng thơm, mẫm, rất chóng thành xơ."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {
+        "thong_tin_khac": "Bảo quản để nơi khô ráo và đậy kín, vì dễ bị mốc. Tránh quá nóng để giữ tinh dầu. Nếu chớm mốc phải phơi hay sấy nhẹ.  Theo:  [1] Sách Những Cây Thuốc và Vị Thuốc Việt Nam- GS Đỗ Tất Lợi [2] Sách Cây thuốc ở Việt nam Ấn phẩm của WHO liên kết với Viện dược liệu Hà nội [3] Tiềm năng của Amomum tsao-ko như một loại thuốc cổ truyền Trung Quốc: Ứng dụng lâm sàng truyền thống, hóa thực vật và đặc tính dược lý [https://www.sciencedirect.com/science/article/pii/S1878535223003982]"
+      },
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Trong thảo quả có chừng 1-1,5% tinh dầu. tinh dầu màu vàng nhạt, mùi thơm ngọt, vị nồng cay dễ chịu (Đỗ Tất Lợi, 1957).  Năm 1989, Nguyễn Xuân Dũng và cộng sự đã nghiên cứu thấy trong tinh dầu thảo quả có các thành phần chủ yếu: 1-8 cineol (30.61%), trans-2 undecanal (17,33%), citral B (gernial)(10,57%), -terpineol (4,34%).  Cho đến nay, hơn 300 hợp chất đã được phát hiện trong quả Thảo quả, ít nhất 209 trong số đó đã được phân lập và xác định. Theo đặc điểm của cấu trúc lõi, các hợp chất này có thể được phân loại thành terpenoid, phenylpropanoid,acid hữu cơ và các hợp chất khác. Nhìn chung, có 32 terpenoid, 157 phenylpropanoid, 19 acid hữu cơ, và một pyrrole. Vì Thảo quả có mùi thơm và cay nên tinh dầu của nó đã thu hút nhiều sự chú ý của các nhà khoa học."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thảo quả là một vị thuốc, đồng thời là một gia vị. thảo quả tường được dùng để thêm vào một số bánh kẹo, đặc biệt loại kẹo chè lam. Trong thuốc, thảo quả chỉ mới thấy dùng trong phạm vi nhân dân.[1]  Trong các sách cổ, người ta cho thảo quả có vị cay, chát, tính ôn và không độc, vào hai kinh Tỳ và Vị, có năng lực táo thấp, khử hàn, trừ đờm, chữa sốt rét, tiêu thực, hoá tích dùng làm thuốc kiện tỳ, giải độc, chữa đau bụng, nôn mửa, hôi mồm.  Theo sách Cây thuốc ở việt nam Ấn phẩm của WHO liên kết với Viện dược liệu Hà nội: Thảo quả có tác dụng như: kháng khuẩn và làm dịu dạ dày, được dùng để giảm chứng khó tiêu, đầy hơi, đau bụng, nôn mửa, tiêu chảy và ho. Hạt của cây này cũng được dùng làm nước súc miệng để điều trị đau răng, viêm nướu và bệnh nha chu.[2]  Theo y học hiện đại, Thảo quả được sử dụng để hỗ trợ điều trị ung thư, viêm nhiễm, bệnh tim mạch, tiểu đường, bệnh đường tiêu hóa, v.v. [3]  Liều dùng hàng ngày: 3 đến 6g dùng riêng hay phối hợp với nhiều vị thuốc khác, sắc hay làm thành thuốc viên.  Công dụng của Thảo quả: khử hàn, trừ đờm chữa ho, đau bụng, nôn, dễ tiêu, sốt rét, kích thích tiêu hóa, giải độc."
+      },
+      "Cách dùng": {
+        "được_dùng": "Theo đông y, phàm âm huyết không đủ mà không không hàn thấp thực tà không nên dùng.  Người bị cảm nắng mà đi tả dữ dội, nước tiểu đỏ, miệng khô đắng thì không nên dùng.  Người thuộc chứng âm hư, thiếu máu mà không hàn thấp, thực tà không được dùng."
+      },
+      "luu_y": {}
+    }
+  ]
+}

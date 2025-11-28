@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ké hoa vàng",
+      "ten_khac": "Ké hoa vàng, Chổi đực, Bái nhọn, Khắt bó lương (Thái), Xi phú (Kho), Cây ro, Khắt lót (Tày)",
+      "ten_khoa_hoc": "Sida rhombifolia L.",
+      "ma_taxon": "79077",
+      "ho": "Malvaceae (Bông)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ mọc thẳng đứng, cao 0,5-1m, thân và cành có nhiều lông ngắn hình sao.",
+      "lá": "Lá hình trứng hay gần như hình trứng, đầu hơi nhọn ngắn, mép hơi răng cưa, dài 1,5-4cm, rộng 1-2,5cm, cuống dài 3-5mm, rất nhiều lông.",
+      "hoa": "Hoa màu vàng, mọc ở kẽ lá hay đầu cành. Đài hình chuông lá đài có lông màu trắng nhạt ở phía ngoài. Cánh trắng màu vàng cũng có lông mịn. Nhị 20, nhụy có 7 vòi.",
+      "quả": "Quả có vỏ mỏng dễ vỡ, ở đỉnh có lông, phía lưng có 2 vết nổi. Hạt cũng có lông."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Phần trên mặt đất và rễ ké hoa vàng chứa cholin, betain, phenethylamine, quinazolin, carboxyl tryptamine.",
+      "lá": "Lá chứa acid myristic, acid stearic, acid palmitic, acid oleic, acid linoleic, nhiều acis amin: lysin, histidine,…",
+      "hạt": "Hạt chứa nhiều acid malvalic, acid stereulic"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ké hoa vàng có vị cay ngọt, tính mát, có tác dụng làm ra mồ hôi nhẹ, giảm cân, giải cảm, phong nhiệt, làm tan máu ứ, tiêu sung."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ké hoa vàng còn là một vị thuốc dùng trong phạm vi nhân dân để làm vị thuốc mát chữa mụn nhọt, tiểu tiện nóng đỏ hay vàng đậm, sốt, lỵ. Dùng tươi hay khô",
+      "được_dùng": "Ngoài công dụng làm thuốc, người ta còn dùng dây sợi làm dây buộc.",
+      "làm thuốc": "Nếu cây tươi hay lá tươi, ngày dùng 40 -80g dưới hình thức thuốc sắc, sao vàng trước khi sắc cho thơm cho dễ uống. Nếu dùng khô chỉ sắc uống ngày 20-40g.",
+      "chữa": "Bài thuốc có vị Ké hoa vàng:  Chữa mụn nhọt, sưng chín mé: Lá ké hoa vàng, lá cỏ xước, mỗi vị 50g. Rửa sạch, lấy mỗi thứ 25g, giã nát đắp lên vết thương. Nửa còn lại phơi khô, sắc với 400ml nước, còn 100ml, uống làm 2 lần trong ngày. Ngày làm 1 lần Chữa kém ăn, mệt mỏi, đau nhức, mất ngủ, phù nề ở phụ nữ mới đẻ: Cây ké hoa vàng, nhân trần, thân và rễ mộc thông, rễ móc diều (vuốt hùm), mỗi vị 20g, sao vàng, sắc uống. Phụ nữ có thai không dùng. Chữa dị ứng mẩn ngứa: Ké hoa vàng (cành lá có hoa) 50g, lá thồm lồm 50g, lá trầu không 30g. Dùng tươi giã nhỏ, lấy cả nước lẫn bã xát nhẹ lên vết mẩn. Ngày làm 1-2 lần. Chứa kiết lỵ: Rễ ké hoa vàng, rễ xích đồng nam, mỗi vị 20g. Sắc uống trong ngày. Dùng 3-4 ngày. Chữa ban chẩn: Ké hoa vàng 8g, rễ lá lức 10g, cỏ mần trầu, cát căn, đậu chiều, dây giác tía, mỗi vị 8g, kinh giới 6g, cam thảo đất 5g, bạc hà 4g, gừng sống 3 lát. Sắc uống ngày một thang. Viêm ruột lỵ: Dùng Ké hoa vàng, Mã đề, mỗi vị 30g, Nghể răm 15g, sắc uống. Vàng da: Dùng Ké hoa vàng, Vẩy rồng, Hàm ếch, mỗi vị 30g sắc uống. Viêm hạch bạch huyết do lao cổ: Dùng Ké hoa vàng 60g nấu với thịt với lượng gấp đôi rồi ăn. Cũng dùng lá tươi đắp ngoài. Chữa sốt, đau lưng, tê thấp: Dùng toàn cây 30g sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây ké hoa vàng mọc hoang rất phổ biến khắp nơi ở nước ta, còn mọc ở Campuchia, Lào, Ấn độ, Indonexia, Trung quốc (miền Nam và hải nam), Malaixia.",
+      "phơi khô": "Người ta hay hái lá cây để dùng tươi. Nhưng có khi hái lá hay toàn cây về phơi khô.",
+      "sắc uống": "Khi dùng có khi sao vàng để sắc uống.",
+      "thu hái": "Có thể thu hái quanh năm, nhưng tốt nhất vào lúc cây đang ra hoa"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhím",
+      "ten_khac": "Con dim, Hào chư, Cao chư, Sơn chư, Loan chư",
+      "ten_khoa_hoc": "Hystrix hodgsoni Gray",
+      "ma_taxon": "1124146",
+      "ho": "Nhím Hystricidae",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Nhím là loài thú lớn nhất trong bộ Gặm nhấm (iRodentia) vào tuổi trưởng thành (2 đến 2,5 tuổi) nặng tới 14-15kg, lúc mới sinh ra nặng 350-540g, hai tháng tuổi nặng 2,5-3kg, một năm đạt 9-10kg. Nhím đào hang trong đồi để ở. Nhím trưởng thành động dục vào lúc gần một năm tuổi và có thể đẻ lứa con đầu tiên vào lúc 16-20 tháng tuổi. Thời gian chửa dài khoảng 115-120 ngày. Mỗi lứa đẻ một con, đặc biệt có thể đẻ hai con. Thời kỳ đẻ của nhím vào các tháng 8-9 và 3-4 mỗi năm. Đặc điểm của nhím là có bộ da mọc tua tủa những lông châm cứng, dài nhọn. Người ta thường quan niệm sai lầm là nhím có khả năng bắn lông châm vào kẻ thù. Thực tế là khi gặp nguy hiểm, nhím chỉ dựng lông cứng và giật lùi để xông vào kẻ địch."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác"
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Chưa thấy tài liệu nghiên cứu."
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Theo tài liệu cổ dạ dày nhím có vị đắng, ngọt, tính bình (Bản thảo cương mục của Lý Thời Trân thì vị ngọt, tính hàn, không độc). Vào hai kinh vị và đại tràng. Có tác dụng lương huyết (mát máu, giải độc, làm hết đau, trĩ lậu ra huyết. Dùng chữa những trường hợp trĩ lòi dom chảy máu, di mộng tinh, nôn mửa, lỵ ra máu. Hiện nay vẫn dùng theo kinh nghiệm cổ với liều 6 đến 16g dưới dạng thuốc bột hay sắc uống."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Chữa lòi dom chảy máu: Dạ dày nhím sao phồng (với hoạt thạch rồi rây bỏ hoạt thạch) 3-6g, hoa hòe l0g, thêm 100ml nước sắc kỹ rồi dùng nước sắc hoa hòe này chiêu dạ dày nhím đã sao và tán bột. Liều trên chia làm 3 lần uống trong ngày. Chữa thủy thũng, cổ trướng, hoàng đan: Đốt tồn tính dạ dày nhím, mỗi lần uống 8g hòa rượu uống (kinh nghiệm trong sách cổ)."
+      },
+      "luu_y": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

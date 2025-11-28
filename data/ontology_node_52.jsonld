@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/gang-vang.html",
+      "ten": "Găng vàng",
+      "ten_khac": [
+        "Găng cơm",
+        "Găng lá nhỏ",
+        "Cẩm xà lặc",
+        "Găng cốm",
+        "Găng hoa nhỏ",
+        "Căng cườm",
+        "Nam càng"
+      ],
+      "ten_khoa_hoc": "Canthium parvifolium Roxb.",
+      "ma_taxon": "595967",
+      "ho": "Rubiaceae (Cà phê)",
+      "description": {
+        "@type": "Mô tả",
+        "cây": "Cây nhỏ hay cây nhỡ, cao 3 – 4m.",
+        "thân": "Thân cành mảnh, mọc đứng, có 4 cạnh. Cành non có lông màu nâu, cành già tròn nhẵn, có gai đứng hoặc ngang ở kẽ lá.",
+        "lá": "Lá hình bầu dục, gốc thuôn, đầu nhọn, dài 1,2- 5cm, rộng 0.6 – 3cm, mặt trên nhẵn màu lục sẫm, mặt dưới nhạt có lông dày ở các gân, lá kèm nhọn, có lông, cuống lá ngắn.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chuỳ, hoa màu vàng nhạt, vàng lục hoặc trắng, đài 5 có ống ngắn, tràng 5 có ống nhẵn ở mặt ngoài, có lông ở họng, nhị 5, chỉ nhị ngắn dính ở họng tràng, bầu có 2 ô, mỗi ô 1 noãn.",
+        "quả": "Quả hạch, gần hình cầu, nhẵn, khi chín màu đen.",
+        "mùa hoa": "tháng 4 – 8.",
+        "mùa quả": "tháng 4 – 8."
+      },
+      "distribution": {
+        "@type": "Phân bố",
+        "phân_bố": "Chi Canthium Lam. có khoảng 230 loài, phân bố rộng rãi từ vùng ôn đới ấm đến vùng cận nhiệt đới và nhiệt đới. Ở Việt Nam, có 10 loài. Loài găng vàng phân bố chủ yếu ở các tỉnh vùng ven biển, tập trung từ các tỉnh Quảng Bình, Quảng Trị vào đến Vũng Tàu – Côn Đảo. Trên thế giới, loài này cũng phổ biến ở Ấn Độ, Srilanca và Malaysia.",
+        "thường_mọc": "Găng vàng là cây ưa sáng và chịu hạn, thường mọc trên các đồi cây bụi, truông gai và bờ nương rẫy. Cây sống được trên nhiều loại đất, kể cả đất pha cát vùng ven biển. Ra hoa kết quả nhiều hàng năm, chưa quan sát được cây con mọc từ hạt."
+      },
+      "additionalInformation": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": ""
+      },
+      "usedParts": {
+        "@type": "Bộ phận dùng",
+        "bo_phan_dung": "Rễ, lá và vỏ cây,"
+      },
+      "compositionList": {
+        "@type": "Thành phần",
+        "thành phần": "Toàn cây găng vàng chứa alcaloid, saponin"
+      },
+      "tasteProperty": {
+        "@type": "Tính vị",
+        "Có vị": "Vỏ thân, vỏ cành găng vàng có vị đắng, chát, có tác dụng làm săn se, tiêu sưng, giảm đau, tan máu ứ. Rễ cây có tác dụng lợi thuỷ, tiêu thũng, chỉ thống, còn có tác dụng diệt giun sán (tài liệu nước ngoài)."
+      },
+      "medicalUseList": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Nhân dân thường dùng quả găng vàng để giặt quần áo, tơ lụa không chịu được kiềm của xà phòng. Quả chín ăn được nhưng vỏ quả rất đắng. Vỏ thân, vỏ cành (nếu là cành non có thể dùng cả vỏ lẫn lõi) được dùng chữa kiết lỵ. Liều dùng hằng ngày là 12 – 20g dược liệu, phơi khô thái nhỏ sắc với 200ml nước còn 50ml. uốոg trong ngày.  Vỏ thân găng vàng ngâm rượu xoa bóp dùng như vị huyết giác với tác dụng giảm đau, tiêu sưng, chữa đau nhức cơ thể do lao động nặng nhọc hay bị thương tụ máu. Có thể kết hợp dùng lá tươi giã nát đắp ngoài.  Vỏ rễ găng vàng phối hợp với rễ cây vải trắng, sắc nước uống chữa ho ra máu, ngộ độc.  Theo tài liệu nước ngoài, ở Malaysia và Indonesia, thân và lá găng vàng chữa vết thương, bệnh về mắt, là thuốc dùng cho phụ nữ sau khi đẻ. Ở Philippin, nước sắc của lá và vỏ thân găng vàng là thuốc điều kinh. Ở Ấn Độ nước sắc của lá và rễ chữa băng huyết (flux). Ở Trung Quốc, rễ găng vàng chữa vàng da."
+      },
+      "preparation": {
+        "@type": "Cách dùng",
+        "được_dùng": ""
+      },
+      "caution": {
+        "@type": "Lưu ý",
+        "luu_y": ""
+      }
+    }
+  ]
+}

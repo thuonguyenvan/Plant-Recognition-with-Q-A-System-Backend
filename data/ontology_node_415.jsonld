@@ -1,0 +1,285 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chóc máu",
+      "ten_khac": "Sa lạp nước, sa lạp mộc, chóp máu.",
+      "ten_khoa_hoc": "Salacia chinensis L.",
+      "ma_taxon": "425782",
+      "ho": "Dây mối (Celastraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi leo, cao 2 – 3m.",
+      "thân": "Cành non nhắn, màu đỏ nhạt, cành già sần sùi, màu xám đen nhạt.",
+      "lá": "Lá mọc đối, hình thuôn – mũi mác, dài 3 – 8 cm, rộng 1,3 – 4 cm, gốc nhọn, đầu gần tròn hoặc có mũi tù ngắn, mép khía răng, mặt trên bóng và có màu lục đen nhạt khi khô, mặt dưới màu lục nâu, có gân nổi rõ, cuống lá dài 4 – 7 mm, có rãnh ở mặt trên.",
+      "hoa": "Cụm hoa mọc ở kẽ lá gồm ít hoa màu trắng vàng nhạt; đài có 5 răng hình tam giác tù, dính nhau ở gốc, khía răng nhỏ; tràng 5 cánh mép nguyên, tròn đầu, móng hẹp, nhị 3 bọc lấy một đĩa mật dày, chỉ nhị ngắn, dẹt, bao phấn có các ô choãi ra ở gốc, bầu 3 ô, mỗi ô có hai noãn.",
+      "quả": "Quả mọng, hình quả lê sau hình cầu, cao và rộng 8 – 10 mm, màu đỏ, hạt 1, không có cánh.",
+      "mùa hoa": "tháng 12 – 1",
+      "mùa quả": "tháng 2 – 4."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Salacia L, ở Việt Nam có 14 loài, phần lớn có dạng sống cây bụi, phân bổ rải rác khắp vùng núi thấp, trung du và hải đảo.  Loài chóc máu kể trên có vùng phân bố tương đối rộng, bao gồm các tỉnh Lạng Sơn (Đồng Đăng); Bắc Giang (Lạng Giang: Kép); Quảng Ninh (Quảng Yên); Ninh Bình (Đồng Giao); Nghệ An (Quỳnh Lưu); Quảng Trị, Thừa Thiên Huế; Đà Nẵng, Ninh Thuận (Ninh Hải); Đắk Nông (Đắk Mil); Đồng Nai (Biên Hòa) và Kiên Giang (Phú Quốc). Trên thế giới, loại này có ở Ấn Độ, Mianma, Trung Quốc, Lào, Thái Lan, Malaysia, Indonesia và Philippin.",
+      "Đặc điểm sinh trưởng": "Chóc máu là cây ưa sáng, chịu được hạn và nắng nóng.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bắc Giang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Ninh Bình"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghệ An"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Trị"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thừa Thiên Huế"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Đà Nẵng"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Ninh Thuận"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Đắk Nông"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Đồng Nai"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Kiên Giang"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rễ chứa leucopelargonidin, các dimer và tetramer của chúng. Vỏ rễ chứa 2 chất thuộc nhóm 1, 3 – diceton, chất béo, dulcitol, mangiferin, 1 – friedelen – 3 – on, friedelan – 1, 3 – dion – 7a – ol, phlobatanin và tanin glycosid. Thân  chứa nhựa gutta, một dimer của leucopelargonidin. Lá chứa nhựa gutta."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ chóc máu vị chát, tính ấm, có công năng khư phong, trừ thấp, thông kinh hoạt lạc. Sách “Tân hoa bản thảo cương yếu” cũng ghi: rễ, vỏ thân chóc máu vị chát, tính ôn, có công năng khư phong trừ thấp, thông kinh hoạt lạc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ chóc máu được dùng chữa viêm khớp, phong thấp, đau lưng, mỏi cơ bắp, cơ thể suy nhược. Liều dùng 20 – 40g sắc uống trong ngày.  Ở Ấn Độ [Chopra et al., 2001: 89] và Philippin [Perry et al., 1980: 179], nước sắc rễ chóc máu được dùng để điều trị vô kinh (amenorrhea) và thống kinh (đau khi thấy kinh) và được cho là có khả năng gây sẩy thai. Ở Indonesia [Medicinal herb index, 1995: 148], rễ để làm săn se, chữa thống kinh và gây sẩy thai. Quả mọng có thể ăn được.",
+      "chữa": "phong thấp, viêm khớp, đau lưng, nhức mỏi gân cơ:",
+      "được_dùng": "Rễ chóc máu, rễ cây khuy áo nhẵn (Pittosporum glabratum Lindl.), dây máu, mỗi vị 15 – 20g, sắc nước uống mỗi ngày."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

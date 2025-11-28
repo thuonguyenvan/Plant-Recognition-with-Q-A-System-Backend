@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng liên gai",
+      "ten_khac": "Hoàng liên gai",
+      "ten_khoa_hoc": "Berberis wallichiana DC.",
+      "ma_taxon": "968037",
+      "ho": "Berberidaceae (Hoàng liên gai)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao 2-3m có những cành vươn dài, vỏ thân màu vàng xám nhạt, mỗi đốt, dưới chùm lá có gai 3 nhánh, dài 1 – 1,5cm.",
+      "lá": "Lá mọc chum 3-4 lá, có khi tới 8 lá ở mỗi đốt. Cuống lá ngắn 0,5-1cm, phiến lá nguyên, hình mác, mép có răng cưa to, cứng dài 16-17cm, rộng 46cm, mặt trên màu xanh lục nhạt, mặt dưới màu trắng.",
+      "hoa": "hoa màu vàng, mọc thành chum.",
+      "quả": "Quả mọng hình trái xoan, dài khoảng 1cm mọc trên một cuống dài 30-35mm, khi chín có màu tím đen trong chứa 3-4 hạt đen dài 5-6mm, rộng 2-3mm",
+      "mùa quả": "tháng 5-6"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong thân rễ hoàng liên gai đều chứa berberin. Hàm lượng đạt tới 3-4% (Đỗ Tất Lợi, 1963)"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoàng liên gai được dùng làm thuốc chữa lỵ, đau mắt, ăn uống kém tiêu. Dùng dưới dạng thuốc sắc, mỗi ngày uống 4- 6g. Có thể tán bột mà uống. Còn dùng làm nguyên liệu chiết xuất berberin.",
+      "có tác dụng": "Hoàng liên gai ngâm rượu uống chữa những triệu chứng của huyết áp cao như hoa mắt, nhức đầu, chóng mặt, đau ngang lưng. Rượu hoàng liên gai ngâm chữa đau răng.",
+      "chữa": "đi lỵ: hoàng liên gai 4g, nước 150ml, có thể thêm ít đường vào cho dễ uống. Chữa đau răng: hoàng liên gai 10g, rượu trắng 100ml, ngâm trong 7-10 ngày. Chấm vào nơi đau răng"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây hoàng liên gai mọc hoang ở Sapa (quanh thị trấn) và trên những vùng núi cao tỉnh lào cai. Theo tài liệu cũ nhân dân Sa Pa gọi cây này là hoàng mù (có lẽ do chữ hoàng mộc là gỗ màu vàng) nhưng trên thực tế điều tra, chúng tôi thấy ít người biết tên này. Cho nên vào năm 1961, khi chúng tôi phát hiện lại chúng tôi tạm đặt tên là hoàng liên gai (để phân biệt với cây hoàng liên cũng mọc ở đây nhưng thuộc họ Mao lương, xem vị này).",
+      "làm thuốc": "Ta có thể dùng thân và rễ cây. Thân và rễ đào về cắt ngắn, thái mỏng phơi hay sấy khô mà dùng, không phải chế biến gì khác. Có thể trồng cây này bằng hạt, cây mọc rất dễ dàng tại thị trấn Sapa. Cho tới nay chưa ai phát triển trồng, chỉ dựa vào nguồn mọc hoang. Cần đặt vấn đề trồng để bảo đảm nguồn lợi lâu dài."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

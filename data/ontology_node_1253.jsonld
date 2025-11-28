@@ -1,0 +1,193 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Riềng",
+      "ten_khac": "Riềng, Cao lương khương, Tiểu lương khương, Phong khương, Galangal",
+      "ten_khoa_hoc": "Alpinia officinarum Hance",
+      "ma_taxon": "785903",
+      "ho": "Gừng (Zingiberaceae)",
+      "Mô tả": {
+        "cây": "Riềng làm một loại cỏ nhỏ, cao chừng 0,7-1,2m, thân rễ mọc bò ngang, dài hình trụ đường kính 12-18mm, màu nâu đỏ, phủ nhiều vẩy, chia thành nhiều đốt không đều nhau, màu trắng nhạt.",
+        "lá": "lá không có cuống, có bẹ, hình mác dài, nhẵn, dài 22-40cm, rộng 24mm.",
+        "hoa": "Cụm hoa hình chùy, mọc ở đầu cành có lông măng dài chừng 10cm. Hoa rất sít nhau, mặt trong màu trắng, mép hơi mỏng, kèm hai lá bắc hình mo, một có màu xanh, một có màu trắng. tràng hình ống có 3 thùy tù, hình thon, dài từ 15-20mm, rộng từ 4-5mm, thùy giữa chỉ hơi lớn hơn các thùy khác, cánh môi hình trứng, dài 20mm, rộng 15-18mm, màu trắng, có vạch đỏ sim.",
+        "quả": "Quả hình cầu có lông. Hạt có áo hạt."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong riềng có từ 0,5-1% tinh dầu, lỏng sền sệt, màu vàng xanh, có mùi long não, trong đó chủ yếu có xineola và metylxinnamat. Ngoài tinh dầu, trong riềng còn có các chất sau đây: một chất dầu có vị cay gọi là galangola. Ba chất có tinh thể, không có vị gì, đều là dẫn xuất của flavon. Số lượng ước chừng 0,1%. Ba chất đó là galangin C15H10O5, alpinin C17H16O6 và kaempferit C16H12O6 (1-3 dioxy-4-metoxyflavonon)."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Theo tài liệu cổ: cao lương khương vị cay, tính ôn, vào hai kinh tỳ và vị. có tác dụng ôn trung tán hàn, hết đau tiêu thực Được dùng cả trong đông và tây y làm thuốc kích thích tiêu hóa, ăn ngon cơm, chữa đầy hơi, đau bụng, đau dạ dày, sốt rét, sốt nóng, đi lỏng, trúng hàn, nôn mửa. Có khi người ta dùng nhai để chữa đau răng: Ngày dùng 3-6g dưới dạng thuốc sắc, thuốc bột hay rượu thuốc"
+      },
+      "Cách dùng": {
+        "được_dùng": "Chữa đau bụng nôn mửa: cao lương khương 8g, đại táo 1 quả. Sắc với 300ml nước, còn 100ml chia hay 3 lần uống trong ngày Chữa sốt, sốt rét, kém ăn: cao lương khương tẩm dầu vừng sao 40g, can khương nướng 40g. Hai vị tán nhỏ, dùng mật lợn hòa vào làm thành viên, bằng hạt ngô. Ngày uống 15-20 viên/ ngày.  Chú thích:  Ngoài vị riềng kể trên nước ta còn có một vị riềng nữa gọi là riềng nếp-Alpinia galanga Swartz cùng họ, cũng được dùng làm gia vị và làm thuốc, nhưng thường không quí bằng loại riềng nói trên. Riềng nếp so với riềng thì to cao hơn, lá cũng hình mác, nhọn, mép lá có dìa trắng, dài 40cm, rộng 7cm, không cuống. cụm hoa hình chùy dài 15-30cm. Hoa trắng, điểm hồng, dài 20-25cm, tràng hình ống ngắn không vượt quá dài. Quả hình cầu hay hình trứng, dài 12mm, rộng 8mm, màu đỏ nâu, thân rễ to thô bán tại thị trường với trên đại cao lương khương, dài 8 -20cm, đường kính 1,5-3cm, màu nâu hồng nhạt, mùi vị không thơm như cao lương khương, cũng có nơi dùng như cao lương khương chữa đau bụng, đi ỉa, nôn mửa, đi lỵ phối hợp với than tóc rối, uống chữa ngộ độc thịt cóc."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

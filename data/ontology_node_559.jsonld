@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ráy leo lá rách",
+      "ten_khac": "Lân tơ uyn, Chuối hương lá xẻ, Đuôi phượng, Dây xống rắn, Cuổi hùm (Tày), Co mác ngùm (Thái)",
+      "ten_khoa_hoc": "Raphidophora decursiva (Roxb.) Schott",
+      "ma_taxon": "431536",
+      "ho": "Araceae (Ráy)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo leo, cao 4 – 20 m.",
+      "thân": "Thân và cành hình trụ, mập, nhẵn, màu lục xám, rễ mọc dài từ các mấu bám vào thân các cây to.",
+      "lá": "Lá to, mọc so le, hình trứng, màu lục sẫm hoặc đốm vàng, gốc hình tim, đầu nhọn, phiến xẻ thùy dạng lông chim đến tận gân chính, mỗi bên có khoảng 10-15 thùy hình dải, gốc hẹp lại và thủng lỗ; cuống lá mập, dài bằng lá hoặc dài hơn.",
+      "hoa": "Cụm hoa là một bông hình trụ, màu lục nhạt, bao bọc trong một mô nạc, hình trái xoan thuôn, màu vàng ở cả hai mặt, nhạt hơn ở mép, sớm rụng; hoa nhiều, lưỡng tính, không có bao hoa, có hình 6 cạnh (nhìn từ trên xuống); nhị 4, bao phấn hình tim thuôn; bầu 2 ô, đầu nhụy màu vàng nhạt.",
+      "quả": "Quả mọng, khi chín màu đỏ da cam, chứa nhiều hạt.",
+      "mùa hoa": "tháng 7-9",
+      "mùa quả": "tháng 7-9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Raphidophora Hassk. có 120 loài trên thế giới, phân bố rải rác ở vùng nhiệt đới, từ Tây Phi sang châu Á đến Bắc Australia. Ở Việt Nam có 14 loài, trong đó có 4 loài được dùng làm thuốc hoặc trồng làm cảnh, trang trí nội thất như R.decursiva (Roxb.) Schott, R. hongkongensis Schott, R. hookeri Schott và R. megaphylla H. Li (Nguyễn Văn Dư, 2000).  Ráy leo lá rách phân bố chủ yếu ở vùng cận nhiệt đới và nhiệt đới châu Á, từ Nam Trung Quốc, đảo Hải Nam, Việt Nam, Lào đến một số nước khác trong vùng Đông Nam Á. Ở Việt Nam, ráy leo lá rách thường gặp trong các quần hệ rừng kín thường xanh ẩm nhiệt đới, trên núi đất hay núi đá vôi, có nhiều ở Cao Bằng, Lạng Sơn, Bắc Cạn, Thái Nguyên, Tuyên Quang, Hoà Bình, Thanh Hoá, Ninh Bình, Tây Nguyên. Cây còn có ở các vùng rừng trên các đảo lớn như Cát Bà, Cô Tô, Côn Đảo và Phú Quốc.",
+      "thường_mọc": "Ráy leo lá rách là cây rất ưa ẩm và có khả năng chịu bóng tốt, thường mọc bám và leo trên thân những cây gỗ lớn hoặc các tảng đá. Với khả năng đẻ nhánh khỏe và sinh trưởng mạnh, ráy leo lá rách thường tạo thành những khóm lớn. Một khóm có thể cho khai thác từ vài tạ đến một tấn thân rễ tươi. Cây ra hoa quả đều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Khả năng tái sinh dinh dưỡng khỏe của ráy leo lá rách cũng là một ưu thế cạnh tranh tốt đối với các loài cây phụ sinh khác. Nguồn trữ lượng ráy leo lá rách ở Việt Nam rất lớn. Tuy nhiên, nạn phá rừng làm nương rẫy và trồng rừng mới là nguyên nhân chủ yếu làm thu hẹp vùng phân bố tự nhiên của cây."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Ráy leo lá rách chứa saponin."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Dựa vào kinh nghiệm dân gian, nhân dân ở Kon Tum thường dùng ráy leo lá rách đắp vào vết thương khi làm nương rẫy bị dao rựa cắt đứt da thịt. Nhiều cơ sở quân y được ở chiến truờng miền Nam trong kháng chiến chống Mỹ đã dùng ráy leo lá rách chữa vết thương cho nhiều thương binh. Riêng bác sĩ Lê Khắc Lập đã dùng cây này điều trị cho 357 trường hợp vết thương phần mềm, đạt kết quả tốt và đã xác định các chỉ định điều trị của ráy leo lá rách trong ngoại khoa là tất cả các vết thương phần mềm có miệng rộng, nếu là vết thương chột, miệng nhỏ thì phải rạch rộng, cắt lọc tốt rồi mới dùng; các vết bỏng độ II và III được điều trị có kết quả rõ rệt.  Cần chú ý là đối với vết thương chột, miệng nhỏ, ở trong sâu còn dị vật, không nên dùng ráy leo lá rách vì sẽ làm cho vết thương chóng liền miệng, làm ứ đọng mủ trong sâu. Cách dùng ráy leo lá rách như sau: lấy 1 kg thân cây, bỏ lá, cạo hết rễ, rửa rạch, băm nhỏ cho vào 3 lít nước đun sôi trong 3 giờ. Lọc qua vài và cô lại còn 700ml dụng dịch. Khi đắp vào vết thương, bệnh nhân chỉ có cảm giác hơi xót như rửa nước muối ưu trương trong lần thay băng đầu tiên, những ngày sau sẽ hết xót. Không nên dùng dung dịch ráy leo lá rách quá đặc, nhất là dùng cao, vì khi đắp lên vết thương thuốc gây xót mạnh và gây phản ứng sưng đỏ tại chỗ. Sau khi rửa vết thương bằng nước muối hoặc bằng nước sắc ráy leo lá rách càng tốt, dùng vải gạc tẩm dung dịch dược liệu đắp lên vết thương, băng lại và cách 2-3 ngày thay băng một lần tùy mức độ mủ nhầy của vết thương. Nước sắc ráy leo lá rách chỉ dùng được trong vòng 5-7 ngày. Đặng Hanh Khôi đã cải tiến dạng bào chế, dùng tiện lợi và bảo quản được trong vòng một năm.  Ngoài tác dụng trên, đồng bào ở các tỉnh Tây Bắc, Việt Bắc còn dùng lá tươi ráy leo lá rách chữa di mộng tinh, chân tay co quắp. Nhân dân Phú Yên dùng thân lá sắc uống chữa cảm cúm, đau khớp, đau mình. Đồng bào ở Gia Lai nấu cao ráy leo lá rách thêm đường uống chữa đau dạ dày, lỵ.  Cao ráy leo lá rách dùng phối hợp vái hoàng đằng chữa nấm gây bệnh ngoài da, với núc nác chữa tiêu chảy, kiết lỵ.  Bài thuốc có ráy leo lá rách  Thuốc bó gãy xương: Cả cây ráy leo lá rách 50g, dây tơ hồng 30g, dây bìm bìm 30g, dây đau xương 30g. Tất cả giã nhỏ, trộn với rượu 90° đủ xâm xấp, đắp. Ngày thay một lần dùng 5-7 ngày.  Nguồn : Cây thuốc và động vật làm thuốc ở Việt Nam ."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

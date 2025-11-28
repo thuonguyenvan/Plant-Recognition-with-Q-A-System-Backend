@@ -1,0 +1,236 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thạch hộc tuyết mai",
+      "ten_khac": "Hoàng thảo củ, tuyết mai, lan củ khóm, bạch cầu, thạch hộc vôi.",
+      "ten_khoa_hoc": "Dendrobium crumenatum Sw.",
+      "ma_taxon": "344994",
+      "ho": "Lan (Orchidaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo dạng bụi, cao 30 – 60 cm, có khi hơn.",
+        "thân": "Thân mảnh, nhẵn, các gióng ở góc phồng lên thành hình thoi dài 8 – 10 cm, dày 1 – 1,5 cm.",
+        "lá": "Lá mọc so le, không cuống, hình mũi mác, dài 5 – 7 cm, rộng 7- 18 mm, gốc thuôn, đầu tù, hai mặt nhăn, gân lá song song.",
+        "hoa": "Cụm hoa mọc thành chùm ở ngọn cành, dài 10 – 20 cm; hoa thưa màu trắng có đốm vàng nhạt họng; lá đài hình lưỡi hái; cánh môi chia 3 thùy hẹp ở gốc, mép có răng nhỏ không đều; nhị có phần phụ hình lưỡi hái, bao phấn hình bán cầu.",
+        "quả": "Quả ít gặp.",
+        "mùa hoa": "tháng 4 – 7."
+      },
+      "Phân bố": {
+        "phân_bố": "Dendrobium Sw. có lẽ là chi lớn nhất trong hệ Orchidaceae. Theo ước đoán của Takhtajan A.(1996) chi này có tới 1.500 loài, phân bổ tập trung ở vùng Đông – Nam Á, bao gồm Việt Nam, Lào, Campuchia, Thái Lan, Malaysia, Indonesia, Niu Ghinê xuống cả phía Đông – Bắc Australia. Một số loài cũng phân bố ở Nam Á, Mianma, Nam và Đông – Nam Trung Quốc… Ở Việt Nam, chi Dendrobium Sw. cũng có số lượng nhiều loài so với các chi khác của họ Orchidaceae. Trong công bố mới nhất gần đây của Dương Đức Huyến (2007) thì ở Việt Nam đã mô tả được 101 loại và 1 thứ, trong đó có loài thạch hộc tuyết mai hay còn gọi là thạc hộc vôi kể trên [Dương Đức Huyền, 2007; Thực vật chí Việt Nam, T.9 . Dendrobium Sw./Orchidaceae).  Sở dĩ loài D.crtunenatum Sw, có tên gọi là “Thạch hộc tuyết mai” hay “Tuyết mai” bởi lẽ, theo một số người chơi phong lan ở phía Nam thấy hoa của cây này có màu trắng tinh khiết (họng của cánh môi hơi vàng).  Thạch hộc tuyết mai ở nước ta mới chỉ thấy phân bố chủ yếu ở các tỉnh phía Nam, bao gồm: Khánh Hoà (Khánh Vĩnh, Khánh Sơn); Kon Tum (Đăk Glei, Komplông, Tu Mơ Rông – ở núi Ngọc Linh); Đắk Lắk (Easúp, Buôn Đôn, Krông Ana); Lâm Đồng (Bảo Lộc); Ninh Thuận (Phước Bình); Đồng Nai (Tân Phú, Cát Tiên)… Cây cũng phân bố ở Xi Lanca, Ấn Độ, Mianma, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia, Philippin và Indonesia (Dương Đức Huyến, 2007).  Hiện nay, các loài thuộc chi Dendrobium Sw. nói chung và loài tuyết mai kể trên nói riêng đã bị thu thập và khai thác kiệt quệ để làm cảnh và làm thuốc. Tất cả các loài lan thuộc chi Dendrobium đều nằm trong diện quản lý của Nhà nước (Nghị định số 32/2006/NĐ – CP, 30/3/2006). Để bảo tồn tự nhiên loài phong lan này, trước hết cần chú ý bảo vệ nguyên vẹn quần thể tuyết mai ở vườn Quốc gia Nam Cát Tiên (Đồng Nai) và ở khu Bảo tồn thiên nhiên núi Ngọc Linh.",
+        "các_tỉnh": {
+          "@type": "schema:ItemList",
+          "mục": [
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Khánh Hoà"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Kon Tum"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đắk Lắk"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Lâm Đồng"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Ninh Thuận"
+              }
+            },
+            {
+              "tỉnh": {
+                "@type": "schema:Place",
+                "tên": "Đồng Nai"
+              }
+            }
+          ]
+        }
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Theo các tác giả Ấn Độ [The Wealth of India, 1952 vol III, p.32] và Trung Quốc [Trung Dược đại từ điển, 1993, vol 1, tr 1461 và 1466] Thạch hộc tuyết mai chứa các alcaloid dendrobin, dendramin, nibilon, dendroxin, dendrin, 6 – hydroxydendroxin, 4 – hydroxyl – dendroxin, N- isopentenyl dendroxinin chlorid, isopentenyl – 6 – hydroxyldendroxinin chlorid, N – methyldend- robium, aduncin, shihunin, shihunidin và dendrophenol [J.pharm. Sci, 1975 64(4) p.535)."
+      },
+      "Tính vị": {
+        "Có vị": "Thạch hộc tuyết mai vị ngọt, nhạt, tính bình hơi hàn; có công năng dưỡng ẩm, tráng dương, ích vị, sinh tân, chỉ khát."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Thạch hộc tuyết mai khô tán bột, hãm uống để bổ mát, sốt ra mồ hôi nhiều, cảm nắng, khát; toàn cây (chặt nhỏ phơi khô) sắc uống (thường phổi hợp với các vị thuốc khác) để chữa đau lưng, đau thận; cũng được dùng chữa động kinh, bệnh về thần kinh, người có trạng thái ốm yếu, mới ốm dậy. Liều dùng mỗi lần 8 – 16g.  Ở Malaysia, toàn cây thạch hộc tuyết mai được dùng làm thuốc bổ, kiện vị, lợi nước bọt (sialagogue), dùng khi bị sốt vừa phải, nhất là sốt có kèm ra nhiều mồ hôi, được dùng sau khi ốm dây, để chống stress, khô miệng, khô họng, trướng bụng, chán ăn, đau lưng, giảm thị lực. Lá tươi nghiền nát đắp để chữa mụn nhọt, nốt mù hoặc vết trầy xước, có thể dùng lá khô, nghiền thành bột, chiều còn lại giã nhỏ nát, đắp vào bên ngoài ở phía tai đau. Còn dùng nước ép hoa và lá thạch hộc tuyết mại, uống để chữa va chảy [Van Valkenburg et al., 2001, 1: 213; Chopra et al., 2001: 93)."
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

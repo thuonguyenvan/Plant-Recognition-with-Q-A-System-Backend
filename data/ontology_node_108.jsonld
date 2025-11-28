@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây đậu xanh",
+      "ten_khac": "Đậu xanh, Đậu tằm, Lục đậu, Má thủa kheo (Thái), Thúa kheo (Tày)",
+      "ten_khoa_hoc": "Phaseolus aureus Roxb.",
+      "ma_taxon": "122885",
+      "ho": "Fabaceae (Đậu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, mọc đứng, sống hằng năm, ít phân cành, cao 50–60 cm.",
+      "thân": "Thân cành hơi có cạnh và rãnh, phủ đầy lông mềm.",
+      "lá": "Lá kép mọc so le, gồm 3 lá chét hình trái xoan–tam giác, gốc tròn, đầu nhọn, dài 5–11 cm, rộng 4–9 cm, mặt trên màu lục sẫm, mặt dưới nhạt, gần 3 toát từ gốc; cuống lá dài 10–15 cm.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chùm; hoa nhiều màu vàng nhạt hoặc màu lục; đài hình chuông, nhẵn; tràng có cánh cờ rộng, cánh thìa hình liềm, cánh bên có tai nhọn; nhị 2 bó; bầu có lông.",
+      "quả": "Quả đậu, hình trụ, dài 5–10 cm, lúc đầu có lông, sau nhẵn; hạt nhiều màu lục.",
+      "mùa hoa": "tháng 3–5",
+      "mùa quả": "tháng 6–8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Đậu xanh có nguồn gốc ở Ấn Độ – Myanmar, sau đó được trồng rộng rãi ở các nước vùng Nam Á và Đông Nam Á khác. Đậu xanh là sản phẩm riêng của vùng nhiệt đới châu Á. Các châu lục khác chưa thấy trồng (J. S. Siemonsma & Arwooth Na Lambang, 1992 in PROSEA, No1 Pulses, tr. 72–74).  Ở Việt Nam, đậu xanh là cây trồng từ xa xưa, có khắp các tỉnh, từ vùng đồng bằng đến miền núi có độ cao dưới 1000 m. Vài năm trở lại đây, do hình thức kinh tế trang trại phát triển, đậu xanh được trồng với diện tích lớn ở Tây Nguyên, Đông Tây Nguyên, các tỉnh miền Đông và ven biển miền Trung.  Đậu xanh là loại cây trồng ngắn ngày, sinh trưởng, phát triển trong điều kiện thời tiết nóng – ẩm, có nhiều nắng và lượng mưa trong cả thời kỳ này là 200–300 mm; nhiệt độ thích hợp 28–30°C. Tuy nhiên, giới hạn về nhiệt độ ở các vùng trồng thường khá rộng, từ 20 đến 38°C. Do đó, ở các nước vùng Nam Á và Đông Nam Á, cây trồng được cả ở vùng gần bờ biển lẫn vùng núi đến độ cao gần 2000 m. Đậu xanh trồng bằng hạt sau khoảng 70 ngày bắt đầu ra hoa. Thời kỳ hoa và quả chín kéo dài gần một tháng. Quá trình thụ phấn thường diễn ra trong đêm, trước khi hoa nở vào lúc sáng sớm. Tuy theo mỗi loại giống mà thời kỳ sinh trưởng, cũng như thời vụ trồng ở các nơi có chênh lệch nhau một số ngày.  Ở Việt Nam hiện nay, có nhiều chủng và giống đậu xanh được trồng. Loại hạt to đều, vỏ xanh bóng và trong lòng cũng hơi có màu xanh, là giống được người dân ở đồng bằng Bắc Bộ thích trồng. Tổng diện tích trồng đậu xanh mỗi năm ở châu Á vào khoảng 4 triệu hecta với sản lượng khoảng 2 triệu tấn. Riêng Ấn Độ đã chiếm hơn 50% diện tích trồng cũng như sản lượng của đậu xanh. Tuy nhiên, Thái Lan lại là nước xuất khẩu đậu xanh nhiều nhất cho Đài Loan, Nhật Bản, Hoa Kỳ và châu Âu, mỗi năm khoảng 250.000 tấn."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt đã được phơi hay sấy khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong 100g phần ăn được của hạt đậu xanh có nước 10 g, protein 22 g, mỡ 1 g, carbohydrat 60 g, chất xơ 4 g.  Các acid amin là methionin 458 mg%, tryptophan432 mg%, phenylalanin 1259 mg%, threonin 736mg%, valin 989 mg%, leucin 1607 mg%, isoleucin941 mg%, arginin 1470 mg%, histidin 663 mg%,cystin 113 mg%, tyrosin 556 mg%, alanin 809 mg%,acid aspartic 2449 mg%, acid glutamic 3122 mg%,glycin 758 mg%, prolin 802 mg%, serin 908 mg%.  Đậu xanh là nguồn thực phẩm giàu lysin bổ sungcho gạo. Ngoài ra, còn có vitamin A 5mcg%, vitamin B₁0,72 mg%, vitamin B₂ 0,15 mg%, vitamin PP2,4mg%, vitamin B₆ 0,47 mg%, vitamin C 4 mg%,acid folic 121 mcg%, acid pantothenic 2,5 mg%; vàcác nguyên tố Na 6 mg%, K 1132 mg%, Ca 64 mg%,P 377 mg%, Fe 4,8 mg%, Cu 0,76 mg%.  Vỏ hạt đậu xanh chứa 0,8% flavonoid toàn phần.Theo một số tác giả (Nguyễn Thị Tâm 1994, Trần LưuVăn Hiến và cs. 1998), các flavonoid này bao gồmviteixin 90,5% và isovitexin 9,5%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hạt đậu xanh có vị ngọt, tính mát, vào các kinh tâm và vị, có tác dụng thanh nhiệt, tiêu thử, lợi thủy, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Đậu xanh là món ăn thông dụng trong nhân dân, trộn với gạo nếp để đồ xôi, làm bánh, nấu cháo, nấu chè, làm giá đậu ăn sống hoặc xào. Nó còn là nguyên liệu làm miến. Tác dụng chữa bệnh của đậu xanh từ lâu đã được ghi trong sách Nam dược thần hiệu của Tuệ Tĩnh và Bản thảo cương mục của Lý Thời Trần, như chữa sốt nóng, phiền khát, phù thũng, tà lý, mụn nhọt sưng tấy, lở miệng lưỡi, các trường hợp ngộ độc… Vỏ hạt đậu xanh cũng có tác dụng giải nhiệt, tiêu độc, làm cho mắt khỏi mờ.  Liều dùng: Hạt đậu xanh 15–30g/ngày, sắc nước uống.  Dùng ngoài: Giã nát đắp tại chỗ. Ở Philippines, nước sắc hạt đậu xanh là thuốc lợi tiểu chữa bệnh beri-beri. Còn ở Nhật Bản, hạt đậu xanh lại phòng ngừa bệnh này.  Bài thuốc có đậu xanh  1. Phòng và chữa say nắng:  Hạt đậu xanh lượng vừa đủ, sắc nước uống.  2. Chữa bệnh ôn nhiệt, sốt cao, hôn mê, co giật (Thượng “Thần tiên cương yếu”):  Vỏ hạt đậu xanh, sinh địa, huyền sâm, thạch cao, huyền minh phấn, cam thảo, mỗi vị 10g. Sắc nước uống (Y học vệ sinh giải tạp chú – Chu Văn An).  3. Chữa phát nóng, sưng quai hàm, nhức nhối:  Đậu xanh tán hoàn thô nhã nhỏ trộn với giấm, phết một lớp thật dày lên chỗ sưng đau. Nếu khô lại thì thêm giấm vào. Ngày làm một lần đến khi khỏi bệnh (Nam dược thần hiệu).  4. Chữa ngộ độc:  Hạt đậu xanh để sống, nghiền nhỏ, chế nước vào, hòa đều cho uống thật nhiều để nôn ra và giải độc.  5. Chữa ngộ độc rượu:  Đậu xanh 90–120g, bồ công anh, đại thanh diệp, tử thảo căn, kim ngân hoa mỗi vị 30–60g, cam thảo sống 9–15g. Sắc nước uống, ngày một thang. Trẻ con giảm liều theo tuổi.  6. Chữa đái đường (tiểu khát), khát nước uống nhiều, đái tháo:  Đậu xanh nấu cháo ăn hằng ngày, và sắc nước hồng di (củ lợn) uống thay chè.  7. Chữa sỏi đường tiết niệu:  Đậu xanh 250g, kim tiền thảo, ké nội kim, hải kim sa, xuyên ngưu tất mỗi thứ 60g. Gia giảm tùy theo triệu chứng: nếu đái ra máu thêm bạch mao căn, thược dược mỗi thứ 25g; khi suy yếu thêm hoàng kỳ, đương quy mỗi thứ 60g; vĩ thêm hoài sơn dược, phúc linh mỗi thứ 60g, đại táo 10 quả, thêm đại hoàng 15g, mang tiêu 12g; đau bụng thêm ngưu tất, mộc hương mỗi thứ 30g; đậu hồng thêm đỗ trọng, tang ký sinh mỗi thứ 30g. Tất cả nghiền thành bột, trộn đều, mỗi ngày uống 2 lần, mỗi lần 15g. Sau khi uống khoảng 30 phút, ăn thêm đậu luộc và hoạt động nhiều. Mỗi đợt điều trị là một tháng.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

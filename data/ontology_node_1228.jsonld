@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ô Đầu Việt Nam",
+      "ten_khac": "Ô Đầu Việt Nam, Củ gấu tàu, Củ ấu tàu, Thảo ô, xuyên ô, co u tàu (Thái), ú tàu (Tày)",
+      "ten_khoa_hoc": "Aconitum fortunei Hemsl",
+      "ma_taxon": null,
+      "ho": "Ranunculaceae (Mao lương)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 0,6-1m.",
+      "rễ": "Rễ củ mập, hình con quay, rễ cái to mang nhiều rễ nhỏ (nên có tên phụ tử), mặt ngoài nhẵn, màu đen.",
+      "thân": "Thân đứng, hình trụ, ít phân nhánh.",
+      "lá": "Lá mọc so le, có gân hình chân vịt; lá của cây con hình tim tròn, có răng cưa to, lá già xẻ 3-5 thùy to không đều, mép khía răng nhọn, hai mặt có lông ngắn, mặt trên lục bóng, mặt dưới nhạt.",
+      "hoa": "Cụm hoa mọc ở ngọn thân thành chùm; hoa to, màu xanh lam mọc sít nhau; bao hoa gồm 5 lá đài, lá đài trên thẳng và cong hình mũ chụp kín tràng hoa đã tiêu giảm; nhị nhiều; bầu có 3 ô chứa nhiều lá noãn.",
+      "quả": "Quả gồm 5 đại mỏng; nhiều hạt, trên mặt có nhiều vảy nhỏ.",
+      "mùa hoa": "tháng 10-11.",
+      "mùa quả": "tháng 10-11."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Ô đầu của ta chứa chừng 5 phần nghìn ancaloid toàn phần, tan trong nước. Củ con chứa nhiều ancaloid hơn. Khi xác định liều tối đa gây độc, người ta thấy những ancaloit đó có độ độc của aconitin. Khi bị phá hủy các ancaloid đó sẽ cho các chất ít độc hơn. Có tác giả sau khi nghiên cứu, đã đề nghị dùng ô đầu Việt Nam thay ô đầu của châu Âu"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Ô đầu và phụ tử đều có vị cay, ngọt, tính nhiệt; có độc mạnh. Ô đầu có tác dụng khu phong, táo thấp, khư hàn. Phụ tử có tác dụng hồi dương cứu nghịch, bổ hỏa, trục phong hàn thấp tà."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trong y học hiện đại, ô đầu được dùng làm thuốc chữa ho, sưng đau dưới dạng cồn thuốc 1:10. Lưu ý thuốc độc bảng A, khi dùng phải hết sức thận trọng Trong y học cổ truyền ô đầu được các vị lương y thống nhất và coi là vị thuốc rất độc, còn phụ tử có người cho là độc, người khác lại không độc vì có thể dùng hàng gam đến 40-50g. Khi dùng diêm phụ tử có người chỉ rửa hết muối, thái mỏng phối hợp với các vị thuốc khác , đặc biệt với cam thảo và gừng sống, sắc kỹ gạn lấy nước rồi uống. Tuy nhiên nhiều người cho dám dùng diêm phụ tử sau khi đã nấu nhiều lần với đậu đen. Do độc lớn nên trong y học cổ truyền, ô đầu chỉ được dùng để xoa bóp chân tay nhức mỏi, đau thuốc dưới dạng rượu ngâm. Ở miền núi cao, một số người đã dùng ô đầu làm thuốc dưới nhiều hình thức như nấu cháo, ngâm rượu uống và xoa bóp. Để đảm bảo an toàn, khi dùng ô đầu phụ tử phải hết sức thận trọng, chỉ dùng những chế phẩm đã được bào chế kỹ, phối hợp với các vị thuốc khác để giảm độc. Bài thuốc có ô đầu, phụ tử Chữa đau xương, sai khớp: Ô đầu, nghệ rừng, nhân hạt gấc, mật gấu, mật trăn, huyết linh. Tất cả ngâm rượu. Dùng xoa bóp ngày 2 lần, không được uống. Chữa trúng hàn, hôn mê, ngộ lạnh nôn tháo: Phụ tử sống (sinh phụ tử) và gừng lùi chín, mỗi vị 20g. Sắc uống nhiều lần."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây mọc hoang ở các vùng núi cao biên giới nước ta: Lào Cai (Sapa), Hà Giang, Khu Tây Bắc (Nghĩa Lộ). Thường thấy tại các savan cỏ. Rễ củ hái vào các tháng 7-10 trước khi cây ra hoa, là lúc củ có kích thước to nhất. Trước đây khi hái thường cứ để nguyên một mẩu thân dài chừng 15cm, để dễ bó lại thành từng bó 20 củ một, phơi khô. Riêng tại Nghĩa Lộ, một năm ta có thể thu mua tới vài tấn ô đầu khô. Thời Pháp những củ này được xuất sang Trung Quốc để rồi lại nhập sang ta với tên ô đầu hay thảo ô đầu. Do cách chế biến, chúng ta thấy nên xếp vào loại ô đầu."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

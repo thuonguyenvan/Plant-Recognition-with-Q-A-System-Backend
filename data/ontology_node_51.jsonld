@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Gáo",
+      "ten_khac": "Gáo nam, Gáo",
+      "ten_khoa_hoc": "Nauclea orientalis (L.) L.",
+      "ma_taxon": "370103",
+      "ho": "Rubiaceae (Cà phê)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Phiến lá hình trái xoan, dài 8-25cm.",
+      "hoa": "Hoa tập trung thành hình đầu, đơn độc ở đầu cành. Hoa vàng hay trắng vàng, mùi thơm. Đài 5, tròn ở đỉnh, nhẵn, ống dài nhẵn, ngắn. Tràng 5, hình bầu dục ngược, nhẵn, ống tràng hơi có lông ở họng. Nhị 5, đính vào họng tràng, chỉ rất ngắn, bao phấn tù ở đỉnh. Bầu 2 ô, nhiều noãn.",
+      "quả": "Quả dính lại với nhau thành một khối, hình cầu, mỗi quả 2 ô, mỗi ô chứa 5-8 hạt.",
+      "cây": "Cây gỗ to cao, cành non màu nâu đậm, nhẵn, sau màu xám trắng.",
+      "mặt": "màu lục bóng ở mặt trên, màu nâu nhạt ở mặt dưới.",
+      "đầu": "Tù ở đỉnh",
+      "thân": null,
+      "cuống": "Cuống khía rãnh ở mặt trên, lá kèm hình trái xoan, dài hay bầu dục, tù và tròn ở đỉnh.",
+      "gốc": "tròn và hình tim ở gốc phiến lá",
+      "cao": null,
+      "rễ": null,
+      "củ": null,
+      "mọc": null,
+      "mùa hoa": "tháng 3",
+      "mùa quả": "tháng 7"
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Chưa thấy tài liệu nghiên cứu.",
+      "gồm chất": "Theo Heckel và Schlagdenhauffeen (1883-1885) trong vỏ cây Sarcocephalus esculentus có chứa ancaloit tên là dounkakin nhưng nhiều tác giả tìm lại không thấy (Em.Pertoi-Matières premieres’usuelỉes du règne végétai, 1943-1944, tome 2, 2062)"
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ gáo được nhân dân dùng làm thuốc chữa sốt dưới dạng thuốc sắc với liều 10-16g. Có thể dùng gỗ gáo thái mỏng, cũng sắc như vỏ gáo.",
+      "làm thuốc": "Chữa xơ gan cổ trướng :  Vỏ gáo, cỏ sữa lớn lá, cỏ xước toàn cây. Ba vị bằng nhau, mỗi vị 10g. sắc uống trong ngày. Dùng liền trong 10-15 ngày (Kinh nghiệm nhân dân). Gỗ gáo được đóng đồ đạc thông thường.",
+      "chữa": "Tại vùng Tây châu Phi thuộc Xuđăng người ta dùng vỏ cây Sarcocephalus esculentus Afz. với tên đuanđakê (douandake) làm thuốc bổ, chữa sốt gần như vỏ cây canhkina do đó vỏ cây này còn mang tên vỏ canhkina châu Phi."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây phân bố ở khắp nước ta, nhiều ở miền Nam. Thường thích ẩm và thấy mọc ở khe suối, chân đồi. Thường nhân dân bóc vỏ cây dùng tươi hay phơi khô dùng dần. Có nơi lấy cả gỗ, chẻ nhỏ phơi khô, có màu vàng nhạt vị rất đắng.",
+      "làm thuốc": "Ở nước ta có nơi khai thác vỏ và gỗ cây Sarcocephalus officinalis Pierre với tên Hoàng bá (thực tế là cây khác-xem vị này).",
+      "sắc vỏ chữa sốt": null
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

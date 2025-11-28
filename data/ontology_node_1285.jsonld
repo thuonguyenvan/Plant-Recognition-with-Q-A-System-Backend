@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/co-ca.html",
+      "ten": "Cô ca",
+      "ten_khac": "Cô ca",
+      "ten_khoa_hoc": "Erythroxylum coca Lam.",
+      "ma_taxon": "64337",
+      "ho": "Erythroxylaceae ( Cooca)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, có cuống ngắn, kèm theo hai lá kèm biến đổi thành gai. Phiến lá hình bầu dục nguyên, mặt trên màu xanh lục nhạt, mặt dưới màu nhạt hơn. Hai bên gân giữa có hai đường cong lồi (gân giả) tương ứng với hai nếp gấp của lá trong chồi.",
+        "hoa": "Hoa đều, lưỡng tính, xếp thành xim, ở kẽ lá hoặc lá bắc. Cuống ngắn. Tràng 5, nhánh màu trắng, mặt trong cánh hoa có 1 lưỡi nhỏ khía ở ngọn, 10 nhị hữu thụ dính liền nhau ở gốc thành một ống phồng.",
+        "quả": "Quả hạch nhỏ màu đỏ tươi, ở trên đài còn lại, đựng 1 hạt có nội nhũ.",
+        "cây": "Cây nhỡ cao 3-5m, khi trồng thường nhỏ hơn.",
+        "thân": null,
+        "cuống": null,
+        "gốc": null,
+        "cao": null,
+        "rễ": null,
+        "củ": null,
+        "mọc": null,
+        "mùa hoa": null,
+        "mùa quả": null,
+        "mặt": null,
+        "đầu": null
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong lá cô ca có từ 6-7% nước, 8-10% chất vô cơ, một ít tanin, axit clorogenic.",
+        "gồm chất": "Trước đây người ta xác định trong lá cô ca có cocaxitrin và cocaflavin, nhưng nay người ta đã xác định các chất đó tương ứng với rutozit và izoquexitrozit 0,05 đến 0,10% tinh dầu với thành phần chủ yếu là salixylat metyl, các chất sáp (ở mặt lá), một ít vitamin B1 B2 và G",
+        "Các hợp chất": "Hoạt chất của cô ca được xác định là những ancaloid có với hàm lượng từ 0,5 đến 2% thuộc hai nhóm chính là:\nDẫn xuất của N-metyl pyrrolidin gồm 1 vòng, bay hơi. Đó là hygrin và cuscohygrin. Dẫn xuất của pseudotropanol; gồm 2 vòng, không bay hơi, quan trọng nhất, trong đó người ta lại phân ra:\nEste của ecgonin (axit pseudotropanolcacbonic) hay ecgonein gồm:\nCocain hay metylbenzoylecgonin, chứa ancol của pseudotropanol được este hóa bởi axit benzoic. Xinamylcocain (metyl xinamyl ecgonin). Truxillin hay cocamin (metyltrucillyl ecgonin) trong đó axit este hóa là các axit α hay β truxilic (dixinnamic) là những đồng phân cis và trans. Tropacocain tức là benzoyl pseuđotropanol.",
+        "chứa": "Ngoài ra Hegnauer còn phát hiện được một ít nicotin.",
+        "triết xuất": null,
+        "đã nghiên cứu": null,
+        "tìm thấy": null,
+        "thủy phân": null,
+        "các hoạt chất": null,
+        "tinh dầu chứa": null,
+        "có hoạt chất": null,
+        "dấu hiệu đặc trưng": "Tỷ lệ những ancaloid thay đổi tùy theo nguồn gốc: Lá ở Bôlivia (Huanuco) chứa chủ yếu cocain và cuscohygrin, lá Pêru (Truxillo) chứa cocain và xinamylcocacin, lá ở Giava chứa xinamylcocain và một ít tropacocain."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Trong y dược lá côca (phải chứa ít nhất 0,7% ancaloid, trong đó chủ yếu là cocain) được dùng làm thuốc, nhưng xếp vào những thuốc gây nghiện, khi dùng phải theo những chế độ rất nghiêm ngặt để tránh gây nghiện cho người dùng. Những chế phẩm của lá côca như bột, cồn, cao lỏng chứa trên 5 phần nghìn ancaloid cũng đều phải theo những quy chế đối với thuốc gây nghiện.",
+        "được_dùng": "Trước đây người ta thường dùng chế phẩm của lá côca làm thuốc bổ, nhưng hiện nay việc sử dụng này đã rất hạn chế. Dùng ngoài nước hãm lá côca được dùng làm thuốc súc miệng.",
+        "làm thuốc": "Hiện nay công dụng chủ yếu của lá côca là làm nguyên liệu chiết cocain dưới dạng clo- hydrat cocain (thuốc độc gây nghiện, dùng với liều dùng tối đa 0,03-0,06) để làm thuốc tê tại chỗ trong khoa tai mũi họng, răng.",
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "chữa": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Cây vốn nguồn gốc những vùng nhiệt đới và á nhiệt đới nam châu Mỹ. Những nước sản xuất nhiều nhất hiện nay là Pêru, Bôlivia (năm 1963 sản xuất 3000 tấn lá). Đó là những con số công bố chính thức, thực tế thì lớn hơn nhiều, ngoài ra còn ở Côlômbia (vài trăm tấn lá/năm), Inđonexia trước đây sản xuất tới 1.500 tấn lá/năm, nhưng hiện nay rút xuống còn khoảng 2 tấn/năm.",
+        "làm thuốc": "Người ta phân biệt ra nhiều chủng cô ca: Chủng Erythroxylon coca Lam. của Bôlivia và Pêru trồng trên vùng cao, lá dai, to. Chủng Erythroxylon coca var. spruceanum Burck (E. truxillense Rusby) trồng ở đồng bằng, vùng thấp, lá mỏng và nhỏ hơn, trồng ở Giava (Inđônêxia) từ cuối thế kỷ 19. Chủng Erythroxylon coca var. novodrannatense Morris, lá tròn và rộng.",
+        "có tác dụng": "Trồng bằng hạt, tại Bôlivia người ta trồng tại những vùng cao từ 300-1.800m, nhiệt độ trung bình trong năm giữa 18-26°C. Thường có tính chất lẻ tẻ từng gia đình.",
+        "sắc uống": "Thu hoạch lá bắt đầu từ năm thứ hai. Phơi hay sấy, rồi đóng thành bao từ 30-50kg. Mỗi hecta cho 85kg lá một vụ. Mỗi năm cho 340-359kg. Nếu chăm sóc đúng có thể cho tới 800kg. Mỗi năm hái lá từ 2 đến 4 lần. Cây này được nhập vào nước ta từ lâu, vào khoảng 1930, nhưng không được phát triển. Cả miền Bắc và miền Nam đều thấy mọc tốt.",
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

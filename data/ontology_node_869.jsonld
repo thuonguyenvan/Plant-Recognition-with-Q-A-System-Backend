@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhó đông",
+      "ten_khac": "Nhó đông",
+      "ten_khoa_hoc": "Morinda longissima Y.Z. Ruan",
+      "ma_taxon": "1320770",
+      "ho": "Rubiaceae (Cà phê)",
+      "Mô tả": {
+        "cây": "Cây bụi, cao 2 – 4m, gỗ thân và rễ có màu vàng.",
+        "thân": "Thân hình trụ, mọc thẳng, cành non có 4 cạnh, màu lục nhạt.",
+        "lá": "Lá mọc đối hình bầu dục thuôn hoặc hình mác, dài 12- 18cm, rộng 6 – 10cm, gốc thuôn, đầu nhọn, hai mặt lúc non gần như nhẵn, khi già mặt dưới  có ít lông ngắn mềm, gần giữa nổi rõ, cuống lá dài 2 – 3cm, lá kèm gần hình tim nguyên hoặc chia thùy.",
+        "hoa": "Cụm hoa mọc ở đầu cành  hay kẽ lá thành đầu có cuống dài 2 – 2,5cm,  hoa nhỏ, màu trắng sít nhau, ở gốc mỗi hóa có 1 – 2 hàng phiến bao hình dùi; đài lúc đầu rời nhau sau hàn liền; tràng có 4 – 5 cánh hợp thành ống dài 2,5 – 3cm; nhị 4 – 5 đính ở khoảng 2/5 phần trên của ống tràng, chỉ nhị ngắn; bầu 4 ô.",
+        "quả": "Quả nạc gồm nhiều quả mọng nhỏ.",
+        "mùa hoa": "tháng 4 – 6",
+        "mùa quả": "tháng 7 – 12."
+      },
+      "Phân bố": {
+        "phân_bố": "Cây mọc hoang rải rác ở ven rừng thứ sinh hoặc ở trên nương rẫy cũ với độ cao dưới 800m.",
+        "thường_mọc": "Thường gặp ở Sơn La, Lào Cai, Quảng Nam, Thừa Thiên Huế."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Bộ phận dùng là phần trên mặt đất."
+      },
+      "Thành phần": {
+        "thành phần": "Lá, thân và rễ cây nhó đông đều có các nhóm chất gồm anthranoid, coumarin, acid hữu cơ, carotenoid, phytosterol và đường khử tự do. Hàm lượng các chất này ở lá và rễ nhiều hơn so với ở thân."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Nhó đông có vị đắng, màu vàng, tính bình, không độc, có tác dụng thanh nhiệt, giải độc, kiện tỳ, hoạt huyết, tiêu viêm, tán ứ, chữa viêm gan, vàng da, xơ gan, được dùng dưới các dạng thuốc sau:\n Nước sắc: dược liệu nhó đông 20 – 30g, thái nhỏ, phơi khô, sắc với 400ml nước còn 100ml, uống làm 2 lần trong ngày. Cao mềm: lấy 1kg rễ nhó đông, thái mỏng đổ nước xâm xấp, nấu kiệt làm 2 lần. Lần thứ nhất nấu trong 6 – 8 giờ, rút nước. Lần thứ hai trong 3 – 4 giờ. Trộn hai nước lại cô nhỏ lửa thành cao  mềm. Ngày uống 3 lần, mỗi lần 3 – 4g.\n Ngoài ra, còn dùng dạng cốm được bào chế từ cao nhó đông trộn với đường.\n Thuốc giúp người bệnh ăn ngủ tốt, hết vàng da, vàng mắt, đầy bụng.\n Đồng bào ở xã Chiềng An, thị xã Sơn La còn dùng rễ hoặc thân già (phần sát gốc rễ của cây nhó đông phối hợp với rễ cây hé mọ (Psychotria) để chữa viêm đại tràng cho kết quả tốt."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

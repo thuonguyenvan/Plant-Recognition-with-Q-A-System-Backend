@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ mắt gà",
+      "ten_khac": "Kê nhãn thảo, đậu ba lá sọc, đậu mắt tôm.",
+      "ten_khoa_hoc": "Kummerowia striata (Thunb.) Schindl",
+      "ma_taxon": "143558",
+      "ho": "Đậu (Fabaceae)",
+      "Mô tả": {
+        "cây": "Cây thảo cứng, sống nhiều năm, mọc đứng hay lan toả, phân cành từ gốc, cao 20 – 40 cm.",
+        "thân": "Thân và cành mảnh, nằm sát mặt đất, gần như hình sợi, có lông mềm áp sát.",
+        "lá": "Lá kép chân vịt, mọc so le, 3 lá chét, hình bầu dục – thuôn, gần bằng nhau, dài 1 – 1,2 cm, rộng 5 – 6 mm, gốc thuôn hẹp, đầu tù có mũi nhọn, ít lông; cuống lá mảnh, nhẵn, là kèm thuôn nhọn, màu vàng, có khía, nhẵn.",
+        "hoa": "Cụm hoa mọc ở kẽ lá, ít hoa, ngắn hơn là rất nhiều; hoa 2-3 cái; lá bắc 3 – 4, đính ở gốc của đài; đài hình ống, dạng chuông, dài 2,5 mm, ít lông, 4 – 5 răng dài bằng ống đài, có vân và có lông trắng có cánh cờ hình bầu dục có móng rộng, các cánh bên có tai ở móng, cánh thìa dài bằng cánh cờ, hai lần rộng hơn cánh bên, tù và thằng, cụt ở móng; nhị 2 bó, bao phấn bằng nhau; bầu ngắn, 1 noãn.",
+        "quả": "Quả đậu, hình bầu dục nhọn, dẹt, có vân, có lông, hạt hình thận.",
+        "mùa hoa": "tháng 7 – 9",
+        "mùa quả": "tháng 10 – 11."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Kummerowia Schindl. ở Việt Nam chỉ có 2 loài, loài cỏ mắt gà phân bố rải rác ở một số tỉnh miền núi, như Lào Cai (Sa Pa), Lạng Sơn (Chi Lăng, Đồng Mỏ, Hữu Lũng), Hà Giang (Quản Bạ) và Lâm Đồng (Đà Lạt). Trên thế giới, loài này phân bố ở Triều Tiên, Trung Quốc, Nhật Bản và Lào.  Cỏ mắt gà là cây thân thảo sống 1 năm. Cây ưa ẩm, ưa sáng thường mọc lẫn trong các tràng cỏ, bãi đất trống ven rừng, chân đồi hay ven đường đi."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây."
+      },
+      "Thành phần": {
+        "thành phần": "Lá và thân chứa genistein, isoorientin, isoquercitrin, isovitexin, kaempferol, luteolin – 7. 0 – glucosid, quercetin, rutin, 8 – sitosterol và glucosid của nó, một chất tương tự kaempferol – 3 – 0 – galactosid và vài chất isoflavon chưa được nhận dạng [CA 14, 1991: 98212 r]."
+      },
+      "Tính vị": {
+        "Có vị": "Toàn cây cỏ mắt gà vị ngọt, nhạt, tính mát; có công năng thanh nhiệt giải độc, lợi tiểu, tiêu tích trệ, chỉ tả. Sách “Bản thảo cầu nguyên” ghi: cỏ mắt gà vị ngọt, cay, tính bình. Sách “Tứ Xuyên Trung được chí” ghi: vị cay, tính hàn, vị cỏ mắt gà có công năng thanh nhiệt, giải độc, hoạt huyết, lợi tiểu, chỉ tả."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cỏ mắt gà được dùng trị cảm mạo, phong nhiệt, mắt đỏ sưng đau, rối loạn tiêu hóa, khó ăn tiêu, viêm gan cấp tính. Liều dùng mỗi lần 20-40g, sắc lấy nước uống.  Lá non cũng được dùng làm rau ăn, luộc ăn như các loại rau đậu khác."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

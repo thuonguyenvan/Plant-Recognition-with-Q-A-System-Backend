@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mộc hoa trắng",
+      "ten_khac": "Mức hoa trắng, Mộc vài (Tày), Mức lá to, Thừng mực lá to, Xí chào (Kho) )",
+      "ten_khoa_hoc": "Holarrhena pubescens Wall. ex G. Don",
+      "ma_taxon": "186561",
+      "ho": "Apocynaceae (Trúc đào)",
+      "Mô tả": {
+        "cây": "Cây nhỏ hoặc to, có thể cao tới 12m.",
+        "thân": "Cành non nhẵn hoặc mang lông màu nâu đỏ, trên mặt có nhiều bì khổng trắng rõ. Sẹo lá còn sót lại thường nổi lên.",
+        "lá": "Lá mọc đối gần như không cuống, không có lá kèm, nguyên, hình bầu dục đầu tù hay nhọn, đáy lá tròn hoặc nhọn, dài từ 12-15cm, rộng từ 4-8cm, mặt lá bóng, màu xanh lục nhạt.",
+        "hoa": "Hoa trắng mọc thành xim hình ngù ở kẻ lá hay đầu cành.",
+        "quả": "Quả là những đại màu nâu có vân dọc hơi hình cung dài 15-30cm, rộng 5-7mm.",
+        "hạt": "Rất nhiều hạt dài 10-20mm, rộng 22,5mm, dày 1-1,5mm màu nâu nhạt, đáy tròn, đầu hơi hẹp lõm một mặt, trên mặt có một đường còn màu trắng hơi nhạt. Chùm lông của hạt màu hơi hung hung, dài 2-4,5cm. Lá mầm gấp nhiều lần.",
+        "mùa hoa": "tháng 3-7",
+        "mùa quả": "tháng 6-12"
+      },
+      "Phân bố": {
+        "phân_bố": "Mọc khắp nơi ở Việt Nam. Tại miền bắc có ở Bắc Giang, Bắc Ninh, Cao Bằng, Lạng Sơn, Vĩnh Phúc, Phú Thọ, Hà Tây, Hòa Bình và nhiều tỉnh khác Còn mọc ở Ấn Độ, Miến Điện, Thái Lan, Malaysia"
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Từ vỏ hạt cây mộc hoa trắng người ta đã chiết xuất các ancaloit chủ yếu sau đây:  Chất conesin có tinh thể hình lăng trụ (kết tinh trong axêtôn) độ chảy 125 oC, αD = -1,9o (CHCl3) hoặc + 21oC (C2H5OH). Cho muối clohydrat, bromhydrat và oxalate có tinh thể. Conesin cho phản ứng sau đây: Hoà tan một ít conesin trong 8 giọt H2SO4. Thêm một giọt HNO3 đặc vào sẽ có ngay màu vàng tươi. Màu vàng sẫm dần. Nếu thêm một giọt axit nitric nữa, sẽ ngả màu nâu bẩn, sau ngả màu lục. Theo Ciaus J. F. Mhaskar trong hạt mộc hoa trắng có từ 36-40% dầu và 0,025% ancaloit."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Hạt và vỏ được dùng làm thuốc chữa lỵ amip. Thường dùng dưới dạng bột, cồn thuốc hoặc cao lỏng.  Bột vỏ ngày uống 10g Bột hạt ngày uống 3-6g Cao lỏng 1/1 ngày uống 1-3g Cồn hạt (1/5) ngày uống 2-6g"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

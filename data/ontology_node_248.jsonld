@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Ba đậu",
+      "ten_khac": "Ba đậu, Mạy vắt (Tày), Mằn để, Cóng khói, Giang tử, Ba đậu tàu, Pụt tau (Dao), San to yà (HMông)",
+      "ten_khoa_hoc": "Croton tiglium L.",
+      "ma_taxon": "427400",
+      "ho": "Euphorbiaceae (Thầu dầu)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Ba đậu là một cây nhỡ cao 3-6m, cành nhẵn.",
+      "lá": "Lá mọc so le, nguyên, hình trứng, đầu nhọn, mép có răng cưa nhỏ, dài 6-8cm, rộng 4-5cm, cuống nhỏ, dài 1-2cm. Trông toàn thân cây thường thấy một số lá màu đỏ nâu.",
+      "hoa": "Hoa mọc thành chùm dài 10-20cm ở đầu cành, hoa cái ở phía dưới, hoa đực ở đỉnh, cuống nhỏ dài 1-3mm.",
+      "quả": "Quả nang, nhẵn, màu vàng nhạt, cao 2cm, có 3 mảnh vỏ khi chín tách ra. Hạt hình trứng dài 10mm, rộng 4-6mm, ngoài có vỏ cứng, mờ, màu nâu xám (khác hạt thầu dầu bóng và có vân)."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Phòng và điều trị bạch hầu:  Đối với những người tiếp xúc gần với bệnh nhân bạch hầu, gia đình của bệnh nhân, những người trong giai đoạn hồi phục từ bạch hầu, những người khỏe mạnh mang mầm bệnh, và các trường hợp bạch hầu nhẹ, có thể sử dụng phương pháp bôi đắp bột ba đậu để phòng và điều trị.  Cách thực hiện:  Lấy 0.5 gram hạt ba đậu sống đã loại bỏ vỏ trong ngoài, nghiền thành bột trong cối sạch (hoặc thêm 0.5 gram thuốc đỏ để nghiền chung). Lấy một lượng bùn ba đậu kích thước bằng hạt đậu xanh, đặt lên miếng gạc khoảng\u00a01.5 cm vuông. Dán lên vùng giữa hai lông mày tại huyệt ấn đường, hoặc vùng cổ tại huyệt phụ tự. Sau\u00a06 đến 8 giờ\u00a0(tối đa\u00a012 giờ), lấy miếng gạc ra, có thể thấy một bóng nước nhỏ xuất hiện tại vùng da được bôi đắp. Dùng kim đã tiệt trùng đâm thủng bóng nước và dùng bông tiệt trùng lau khô dịch lỏng, sau đó bôi dung dịch\u00a0long đởm tử.  Kết quả quan sát:  Đối với những người tiếp xúc gần và gia đình của bệnh nhân, sau khi dán băng có bột ba đậu kết hợp thuốc đỏ, quan sát cho thấy có thể giảm tỷ lệ mắc bệnh.  Đối với những người trong giai đoạn hồi phục từ bạch hầu hoặc những người khỏe mạnh mang mầm bệnh, sau khi bôi bột ba đậu, hơn 90% trường hợp có thể làm mất hiện tượng mang mầm bệnh trong 8 đến 24 giờ.  Đối với các trường hợp bạch hầu nhẹ, có thể kết hợp điều trị với\u00a0penicillin\u00a0và các phương pháp điều trị triệu chứng khác."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": null
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thuốc dùng cả trong Đông y và Tây y nhưng cách dùng có khác nhau. Theo tài liệu cổ, ba đậu vị cay, tính nóng, rất độc, vào 2 kinh vị và đại tràng. Có tác dụng tả hàn tích, trục đờm, hành thủy. Tây y chỉ dùng dầu ba đậu làm thuốc lùa bệnh trong những trường hợp tê thấp, viêm phổi, đau ruột, viêm phế quản. Nếu dùng trên da bụng, cần bảo vệ rốn bằng một miếng thuốc dán. Còn nếu làm thuốc tẩy, dùng trong những trường hợp táo khó chữa, sau khi dùng những loại thuốc khác không có tác dụng. Nhưng thuốc rất độc (xếp vào loại độc bảng A). Dùng ngoài với liều 6-7 giọt trộn với dầu khác như dầu lạc, dầu thầu dầu rồi dùng bút lông mà bôi để tránh phồng tay, thường bôi trên một diện tích nhỏ hơn diện tích định gây phồng. Uống trong với liều 1 giọt trộn với dầu hay ruột bánh mì. Liều tối đa một lần 0,05g, trong 24 giờ 0,10g. Gần đây ít dùng trong Tây y vì nhiều nguy hiểm. Trong nhân dân, người ta thường dùng dưới hình thức ba đậu sương, nghĩa là hạt ba đậu ép bỏ hết dầu rồi dùng với liều 0,01-0,05g, thường phối hợp với nhiều vị thuốc khác nên đỡ nguy hiểm hơn.",
+      "làm thuốc": "Đơn thuốc có dầu ba đậu  Đơn tam vật bạch thang (của Trương Trọng Cảnh) Ba đậu sương 1g, cát cánh 3g, bối mẫu 3g. Tất cả tán bột, trộn đều. Mỗi lần uống 0,2g, dùng nước ấm mà chiêu. Chữa bệnh viêm niêm mạc dạ dày cấp tính, đau bụng. Đơn thứ 2 chữa đau bụng viêm dạ dày (Diệp Quyết Tuyền). Ba đậu sương 0,5g, nhục quế 3g, trầm hương 2g, đinh hương 3g. Tất cả tán nhỏ, trộn đều. Mỗi lần dùng 0,5g đến 1g, dùng nước chiêu thuốc.  Chữa thủy thũng  Ba đậu 200mg, hạnh nhân 3g. Chế thành viên bằng hạt đậu xanh. Ngày uống 3-6 viên. Uống đến khi lợi tiểu, đi ngoài nhuận thì thôi. Kinh nghiệm nhân dân chữa ngộ độc do ba đậu: Uống nước hoàng liên, nước đậu đũa, nước lạnh.",
+      "chữa": "Chữa bệnh viêm niêm mạc dạ dày cấp tính, đau bụng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ba đậu mọc hoang và được trồng ở nhiều tỉnh miền Bắc nước ta, nhiều nhất tại các tỉnh miền núi như Hà Giang, Tuyên Quang, Hòa Bình, Bắc Cạn, Thái Nguyên, miền Trung Bộ cũng có. Còn mọc ở Trung Quốc (Vân Nam, Quảng Đông, Quảng Tây, Tứ Xuyên, Hồ Nam, Hồ Bắc). Vào tháng 8-9, quả chín nhưng chưa nứt các mảnh vỏ, lúc đó hái về phơi khô đập lấy hạt, rồi phơi khô lần nữa là được. Cũng có khi để bảo quản dễ dàng hơn, người ta để nguyên cả quả, khi dùng mới đập lấy hạt."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

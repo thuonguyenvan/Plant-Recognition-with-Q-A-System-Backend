@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cải trời",
+      "ten_khac": "Cải trời, Cải ma, Kim đầu tuyến, Cỏ hôi",
+      "ten_khoa_hoc": "Blumea lacera (Burm.f.) DC.",
+      "ma_taxon": "370028",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, cao 30 – 50cm, phân cành nhiều hay ít.",
+      "thân": "Thân có rãnh khía, có lông dày, màu lục hoặc tím đỏ.",
+      "lá": "Lá mọc so le, hình trái xoan; lá phía gốc hình bầu dục, phiến men theo cuống, ở gốc chia thùy không đều, hơi có tai ở cuống, dài 9 cm, rộng 4 cm; lá ở giữa thân hình bầu dục, gốc thuôn, đầu tù, có răng không đều; lá phía trên tiêu giảm, dài khoảng 2 cm, không cuống; các lá đều có lông mềm màu trắng.",
+      "hoa": "Cụm hoa tận cùng thành đầu màu trắng hay vàng, rộng 5mm; lá bắc xếp thành 3-4 hàng, có lông ở lưng; hoa phía ngoài là hoa cái, ở giữa là hoa lưỡng tính, tràng hoa cái mảnh, hình chỉ, có 3 răng nhỏ; tràng hoa lưỡng tính loe ra ở đầu, có 5 răng, nhị 5, bầu hình trụ, hơi có lông.",
+      "quả": "Quả bế hình trụ, có 10 sống dọc, có lông thưa.",
+      "mùa hoa": "tháng 3-6",
+      "mùa quả": "tháng 3-6",
+      "mọc": "Loài Blumea subcapitata DC. cũng được gọi là cải trời và được dùng với công dụng tương tự.  Một số người dùng cải trời làm thuốc thay hạ khô thảo. Tránh nhầm lẫn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Blumea DC. có khoảng 80 loài, phân bố chủ yếu ở vùng nhiệt đới châu Á, châu Phi và châu Đại Dương. Nhiều loài được dùng làm thuốc hoặc lấy tinh dầu. Ở Ấn Độ có hơn 30 loài, Philippin: 19 loài (4 loài làm thuốc) ; Inđônêxia: 18 loài (2 loài làm thuốc), New Guinia: 13 loài (2 loài làm thuốc) và Việt Nam: 25 – 30 loài, trong đó có 7 – 8 loài dùng làm thuốc. Cải trời là một loài cỏ dại có nguồn gốc ở vùng Ấn Độ – Malaysia, sau lan ra khắp các nước lân cận ở khu vực Nam Á, Đông Nam Á, Đông Dương, đến tận Trung Quốc và Autralia. Ở Việt Nam, cây phân bố khắp các tỉnh vùng núi thấp (dưới 1000m), trung du và đồng bằng. Ở Ấn Độ, cây có thể có ở độ cao 2500m và có chiều cao trên 2m.",
+      "Đặc điểm sinh trưởng": "Cải trời là cây ưa sáng mọc nhanh. Cây con mọc từ hạt thường thấy vào giữa mùa xuân; sinh trưởng mạnh trong mùa hè, ra hoa quả vào giữa mùa thu, sau đó tàn lụi. Cây có thể chịu được khô hạn vào thời kỳ có hoa quả. Hạt có túm lông, dễ dàng phát tán nhờ gió. Trước khi có hoa, nếu bị cắt, phần còn lại có khả năng tiếp tục tái sinh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cải trời mới chỉ được trồng ở các vườn cây thuốc, vườn thực vật của các trạm y tế xã, bệnh viện, trường học, viện nghiên cứu. Cây được gieo thẳng từ hạt vào tháng 2-3 và 8-9 ở đồng bằng và tháng 3 – 4 ở miền núi. Cây không kén đất, có khả năng chịu hạn và ít bị sâu bệnh, có thể trồng trên đất tận dụng. Nếu trồng nhiều cần cày bừa, lên thành luống cao 15 – 20cm, rộng 1 – 1,2m và gieo theo hàng cách nhau 15cm. Khi cây mọc thì tỉa định cây, giữ khoảng cách giữa các cây là 10 – 12 cm. Có thể dùng nước giải, nước phân chuồng để tưới cho cây xanh tốt. Nói chung không cần chăm sóc gì đặc biệt."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây cải trời thu hái vào mùa xuân, hè, chặt nhỏ phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Wehmer, toàn cây cải trời chứa 0,085% tinh dầu với thành phần chủ yếu là mai hoa băng phiến (The Wealth of India I, 1948). Tinh dầu từ cải trời ở Nigeria chứa thymoquinol – dimethyl – ether (Prosea 12 (1), 1999). Theo tài liệu khác, tinh dầu cải trời chứa 60% cineol, 10% fenchon, khoảng 6% citral. Lá cải trời chứa flavonoid: 5 – hydroxy – 3, 6, 7, 3′, 4′ – pentamethoxyflavon, 5, 3′, 4′ – trihydroxy – 3, 6, 7 – trimethoxy fia von và một ít hợp chất flavon khác. Phần trên mặt đất còn có campestrol. Hai glycosid cũng có trong toàn cây: 19α – hydroxy – urs – 12 – en – 24, 28 – dioat – 3- 0- β- D- xylopyranosid và 2 – isopropyl – 5 – isoprenyl phenol – 4- 0- β- D- xylopyranosid (Prosea 12 (1), 1999)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cải trời có vị đắng, mùi thơm, tính bình, có tác dụng thanh can hoả, giải độc, tiêu viêm, tán uất, tiêu hòn cục, cầm máu, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây cải trời trị tràng nhạc, mụn nhọt, lở ngứa, vết thương, băng huyết, chảy máu cam, tức ngực, yếu phổi, sổ mũi xuất tiết, ho có đờm, viêm phế quản, táo bón, mất ngủ, đái vàng và sốt. Ngày 10 – 30g dưới dạng thuốc sắc hoặc nấu thành cao đặc sền sệt để uống dần. Có thể phối hợp với các vị thuốc khác. Ở Ấn Độ, người ta dùng lá cải trời trị đau bụng, toàn cây để tẩy giun. Ở Malaysia, tinh dầu của cải trời được dùng để xua đuổi sâu bọ hoặc làm thuốc duốc cá. Trong sinh hoạt, lá có mùi thơm, thường được thu hái làm rau luộc ăn hoặc nấu với tép, với cá. Ở Java, người ta cũng dùng chồi non nấu canh ăn."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa mụn nhọt, lở ngứa, vết thương chảy máu: Dùng cải trời thay hạ khô thảo, ngày 20 – 30g sắc uống và giã tươi đắp ngoài. Chữa bạch đới, viêm âm đạo, thấp nhiệt, chân lở  sưng đau: Cải trời 30g, dây kim ngân hoa, hy thiêm, mộc thông, huyết dụ, mỗi vị 15g sắc uống. Chữa lao hạch, loại hạch rắn, hạch bã đậu, hạch rò mủ: Cải trời 20g, xạ can 10g sắc uống trong ngày uống liền nhiều tháng. Nếu có rò mủ đắp cao lá mỏ quạ tại chỗ,ngày một lần."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

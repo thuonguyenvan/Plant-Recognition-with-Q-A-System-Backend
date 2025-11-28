@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau càng cua",
+      "ten_khac": "Cây tiêu màng",
+      "ten_khoa_hoc": "Peperomia pellucida (L.) H. B. K.",
+      "ma_taxon": "166494",
+      "ho": "Hồ tiêu (Piperaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Rau càng cua là một loại cây thảo mộc một năm, có thân mọng nước và thường cao từ 20 – 40 cm.",
+      "thân": "Thân cây thẳng đứng hoặc đôi khi mọc bò sát đất ở phần gốc. Không có lông, phân nhánh nhiều. Các đốt thân dưới thường mọc rễ phụ, giúp cây dễ dàng phát triển ở những nơi ẩm ướt.",
+      "lá": "Lá mọc so le, có dạng màng mỏng, hơi trong suốt. Hình trứng rộng hoặc tam giác, chiều dài và chiều rộng gần bằng nhau (khoảng 1 – 3.5 cm). Đầu lá nhọn hoặc tù, gốc hình tim. Mặt trên và mặt dưới đều nhẵn, không có lông. Gân lá có 5 – 7 đường, tỏa ra từ gốc, gân lưới không rõ ràng. Cuống lá dài 1 – 2 cm.",
+      "hoa": "Hoa mọc thành cụm dạng bông, xuất hiện ở ngọn cây hoặc đối diện với lá. Cụm hoa mảnh, dài 2 – 6 cm, không có lông. Hoa nhỏ, mọc thưa. Lá bắc hình tròn, đường kính khoảng 0.5 mm, có một cuống nhỏ ở giữa. Bao phấn hình tròn, có cuống nhị ngắn. Bầu nhụy hình bầu dục, đầu nhụy có lông tơ ngắn.",
+      "quả": "Quả mọng, hình cầu, đường kính khoảng 0.5 mm, đầu nhọn.",
+      "mùa hoa": "Ra hoa từ tháng 4 – 7 hàng năm.",
+      "mọc": "Rau càng cua thường mọc ở nơi ẩm ướt, đặc biệt là vùng đất thấp, dễ sinh trưởng và phát triển mạnh trong điều kiện khí hậu nhiệt đới."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây có nguồn gốc từ vùng nhiệt đới châu Mỹ. Chi Peperomia Ruiz et Rav, ở Việt Nam đã biết có 6 loài. Loài rau càng cua phân bố tự nhiên gần như khắp các tỉnh miền núi, đôi khi gặp ở vùng trung du và cả đồng bằng (hiếm). Cây còn được trồng lấy rau ăn hoặc trồng làm cảnh trên các hòn non bộ. Trên thế giới, rau càng cua cũng bố rải rác ở nhiều nước thuộc vùng nhiệt đới và cận nhiệt đới châu Á.",
+      "thường_mọc": "Cây đặc biệt ưa ẩm và ưa bóng, thường mọc thành đám nhỏ ở các hốc mùn đá, thậm chí ở các kẽ đá hoặc trên bề mặt đá chỗ có rêu bám. Cây cũng mọc trên đất ở bờ khe suối."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau càng cua chứa các chất apigenin (5, 7, 4 – trihydroxyflavon), acacetin (5, 7 – dihydroxy – 4′ – methoxyflavon), isovitexin (5, 7, 4 – trihydroxy- 8 – C. glucosid), pellucidatin – 8 – neohesperidosid, [5 – hydroxy – 3, 6, 7, 4 – tetramethoxyflavon – 8 – O -glucosyl (1 – 2) rhamnosid], (CA 121, 1994: 78279f), (CA 121, 1994: 276688s)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cây rau càng cua vị ngọt, chua, hơi chát, tính mát, có công năng thanh nhiệt giải độc, tán ứ chị thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tác dụng trên các vi sinh vật: Cao chiết bằng ethylacetat của toàn cây rau càng cua bỏ rễ có tác dụng kháng khuẩn khá mạnh trên Bacillus subtilis, Pseudomonas aeruginosae và Staphylococcus aureus. Mức độ tác dụng mạnh hơn penicillin [De Padua et al., 1999, vol.1: 380]. Tác dụng chống viêm: Cao nước toàn cây rau càng cua có tác dụng chống viêm có ý nghĩa, nhưng chỉ loại thu hái vào mùa đông và mùa xuân mới có tác dụng (Arrigoni et al., 2002). Cao chiết nước của phần trên mặt đất cây rau càng cua đã được thử tác dụng chống viêm trên mô hình gây phù bằng caragenin và bằng acid arachidonic ở chuột cống trắng. Kết quả cho thấy, cao với liều cho uống 200 và 400 mg/kg có tác dụng chống viêm tốt (Arrigoni – Blank et al., 2004). Tác dụng giảm đau: Cao chiết bằng methanol của phần trên mặt đất cây rau càng cua với liều từ 70 – 210 mg/kg có tác dụng giảm đau do acid acetic ở chuột nhắt trắng (Aziba et al., 2001). Cao chiết nước phần trên mặt đất của cây rau càng cua đã được nghiên cứu tác dụng giảm đau trên mô hình gây đau quặn bụng bằng acid acetic và thử nghiệm tấm nóng trên chuột nhắt trắng. Kết quả cho thấy, trên mô hình dùng acid acetic, cao có tác dụng mạnh nhất ở liều 400 mg/kg, trong khi dùng mô hình tấm nóng, liều tốt nhất là 100 mg/kg (Arrigoni – Blank et al., 2004). Tác dụng trên tế bào ung thư: Đã nghiên cứu tác dụng của một số chất chiết từ toàn cây rau càng cua trên ba dòng tế bào ung thư của người là HL – 60 (bệnh đa bạch cầu tiền tuỷ bào cấp), MCF – 7 (dòng tế bào ung thư vú) và Hela (dòng tế bào ung thư cổ tử cung). Kết quả cho thấy chất secolignan – 1 có tác dụng ức chế sự phát triển của cả 3 dòng tế bào ung thư với IC50 từ 1,4 đến 9,1 micromol, chất peperomin E có IC50 từ 1,8 đến 11,1 micromol, chất secolignan – 2 có tác dụng ức chế yếu trên dòng tế bào HL – 60 với IC 50 là 10,8 micromol (Xu S. et al., 2006)."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Lấy 50 – 100g rau càng cua, rửa sạch rồi nhai ngậm hoặc xay nước uống mỗi ngày. Dùng liên tục 3 – 5 ngày để thấy hiệu quả.",
+      "làm thuốc": "Ăn sống 150g rau càng cua hoặc xay lấy nước uống để giúp thanh nhiệt, giảm sưng viêm.",
+      "có tác dụng": "Có thể ăn sống, xay nước uống hoặc giã nát đắp lên vùng da bị tổn thương để giúp da nhanh hồi phục.",
+      "sắc uống": "Rau càng cua 100g rửa sạch, bóp giấm hoặc chanh. Ếch 1 con (100g), làm sạch, bỏ đầu, lấy thịt tẩm bột rán chín vàng. Trộn đều các nguyên liệu và ăn 2 – 3 lần/tuần.",
+      "sắc nước uống": "Rau càng cua 150 – 200g, rửa sạch, đun với 300ml nước. Chia làm 2 lần uống trong ngày, liên tục 5 ngày.",
+      "giã nát": "Rau càng cua 100g, rửa sạch, bóp giấm. Thịt bò 100g, xào chín tới rồi trộn với rau càng cua. Ăn cùng cơm, tuần 3 lần để cải thiện tình trạng thiếu máu.",
+      "phơi khô": "Rau càng cua 50 – 100g, sắc nước uống mỗi ngày.",
+      "xấy khô": "Rau càng cua 100 – 150g, đun sôi với 250ml nước. Chia làm 2 lần uống trong ngày, bã rau có thể đắp lên vùng sưng."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tam giác mạch (Mạch ba góc)",
+      "ten_khac": "Mạch đen, Mạch ba góc, Lúa mạch đen, Kiều mạch, Khẩu mẹc, Cooc, Mẹc slam (Tày), Phàm co mẹ (Dao)",
+      "ten_khoa_hoc": "Fagopyrum esculentum Moench",
+      "ma_taxon": "145601",
+      "ho": "Polygonaceae (Rau răm)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá nguyên đơn, mọc cách, mép nguyên, có bẹ chìa, lá phía dưới hình tim, đầu hơi nhọn, có uống, lá phía trên giống hình mũi tên, không có cuống gân lá hình chân vị.",
+      "hoa": "Hoa mọc hành chùm ở ngọn và nách lá. Hoa lưỡng tính chỉ có một vòng bao hoa, màu trắng, đỏ hoặc trắng hồng. Bao hoa có 5 bản tồn tại trên quả.",
+      "quả": "Quả khô có 3 góc gồm 2 lần vỏ, lớp vỏ ngoài đen xám khi già, lớp vỏ hạt vỏ trong mọng, màu trắng vàng, bao hoa tồn tại.",
+      "cây": "Mạch ba góc là một cây thuộc thảo, có nhiều cành, cao trung bình 0,7m, thân hình trụ, màu xanh hay đỏ.",
+      "thân": "thân hình trụ, màu xanh hay đỏ.",
+      "hạt": "Hạt có nội nhũ bột lớn, phôi thẳng, hình lá xếp nếp."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Tỷ lệ trong lá cao nhất, ví dụ như trong lá và hoa có tỷ lệ rutin cao nhất là 6,37% thì riêng trong lá tỷ lệ 7,92% còn trong hoa là 4,15%, tỷ lệ rutin trong thân thấp nhất 0,4%.  Trong quá trình phát triển của cây tỷ lệ rutin cũng thay đổi: người ta nhận thấy tỷ lệ rutin cao nhất vào khi hoa mới nở (ước 26 ngày sau khi gieo hạt). Tuy nhiên có cây cho hiệu suất cao nhất khi hái thời kỳ 40-54 ngày sau khi gieo hạt, lượng rutin tăng tới 3,5-4 lần so với hiệu suất nói trên.",
+      "gồm chất": "Mạch 3 góc có chứa nhiều axit amin như alanin, glycin, leucin, serin, lysin,.."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Mạch ba góc có vị ngọt, tính mát, vào các kinh tỳ, vị, đại tràng. Có tác dụng khai vị, khoản tràng, hạ khí, tiêu tích."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Bột mạch ba góc dùng để nấu cháo, làm bánh, làm nguồn thức ăn chống đói quan trọng của đồng bào miền núi. Quả và lá dùng để nuôi gia súc. Ở một số nơi, nhân dân dùng lá nấu canh ăn để kích thích tiêu hóa, làm sáng mắt, thính tai.",
+      "được_dùng": "Rutin được dùng làm thuốc ngừa tai biến mạch máu do xơ vữa động mạch, tăng huyết áp, gây nên rối loạn tuần hoàn tĩnh mạch."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây được trồng ở nhiều tỉnh miền bắc nước ta như Cao Bằng, Lạng Sơn, Thái Nguyên, Bắc Cạn. Còn được trồng tại nhiều nước ở châu Âu, châu Á (Trung Quốc, Nhật).  Mạch ba góc được trồng lấy hạt có bột ăn thay lúa ngô cho người và súc vật tuy nhiên ăn mạch ba góc không người rất mệt, nên thường trộn thêm với ngô và gạo.  Mạch 3 góc ở tỉnh biên giới có thể trồng vào 2 vụ: vụ xuân hạ trồng vào tháng 1-2, đến tháng 4-5 thu hoạch; vụ thu đông trồng vào 8-9, đến tháng 11-12 thu hoạch, trung bình từ khi trồng đến khi thu hoạch là 2-3 tháng. Ta có thể trồng mạch ba góc để lấy quả ăn rồi dùng cây bỏ đi để chiết rutin hoặc ta có thể trồng để lấy lá và hoa chiết rutin mà không thu hoạch quả."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

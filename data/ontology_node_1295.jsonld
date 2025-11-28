@@ -1,0 +1,269 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cau đất",
+      "ten_khac": "Cau đất, Trúc kinh, Lan đất bông ngắn",
+      "ten_khoa_hoc": "Tropidia curculigoides Lindl.",
+      "ma_taxon": "426284",
+      "ho": "Orchidaceae (Lan)",
+      "Mô tả": {
+        "lá": "Lá mọc so le, hình mác, dài 15-20 cm, rộng 1-4 cm, gốc hẹp, cong dạng máng, thuôn dần về phía cuống thành bẹ, đầu thuôn nhọn, không cuống, gân lá 7 song song, nổi rõ ở mặt dưói.",
+        "hoa": "Cụm hoa ngắn mọc ở gần ngọn, đối xứng với lá gồm nhiều hoa màu trắng lục, có khi đến 20 cái; đài có răng bằng nhau, hình mác, dạng trứng hẹp, đầu nhọn, dài 7-10 mm; tràng có cánh ngắn và hẹp hơn lá đài, hình mác, dài 6-8 mm, đầu tù; cánh môi hình trứng, dài 6-8 mm, không chia thùy, gốc hơi lõm, đầu nhọn.",
+        "quả": "Quả nang, hình bầu dục, khi chín nứt làm nhiều mảnh dính nhau ở hai đầu như chiếc đèn lồng, trong có nhiều hạt rất nhỏ.",
+        "cây": "Cây thảo, cao 40 – 60 cm. Thân rễ ngắn bao bọc bởi những vảy thô. Thân thẳng, nhẵn, ít hoặc không phân nhánh.",
+        "mùa hoa": "tháng 1-4.",
+        "mùa quả": "tháng 1-4."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Tropidia Lindl. có 2 loài ở Việt Nam. Loài cau đất phân bố rải rác ở Ấn Độ, Mianma, Trung Quốc, Lào, Việt Nam, Campuchia, Thái Lan, Malaysia và Indonesia.",
+        "ở_vùng": [
+          {
+            "tên": "Ấn Độ"
+          },
+          {
+            "tên": "Mianma"
+          },
+          {
+            "tên": "Trung Quốc"
+          },
+          {
+            "tên": "Lào"
+          },
+          {
+            "tên": "Việt Nam"
+          },
+          {
+            "tên": "Campuchia"
+          },
+          {
+            "tên": "Thái Lan"
+          },
+          {
+            "tên": "Malaysia"
+          },
+          {
+            "tên": "Indonesia"
+          }
+        ],
+        "các_tỉnh": {
+          "mục": [
+            {
+              "tỉnh": {
+                "tên": "Lào Cai"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Yên Bái"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Tuyên Quang"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Thái Nguyên"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hòa Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Hà Tĩnh"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Ninh Bình"
+              }
+            },
+            {
+              "tỉnh": {
+                "tên": "Đồng Nai"
+              }
+            }
+          ]
+        },
+        "thường_mọc": "Cau đất là cây ưa ẩm và ưa bóng, thường mọc dưới tán rừng ẩm, dọc theo bờ suối. Cây mọc ở dạng khóm đơn độc; đôi khi phân nhánh. Cau đất ra hoa khi phần ngọn vẫn tiếp tục phát triển tạo ra các lá non. Trong mỗi quả, có rất nhiều hạt nhỏ có thể dùng để nhân\u00a0giống tự nhiên. Cau đất cũng được các nhà sưu tầm lan trồng làm cảnh vì có tán lá đẹp."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Rễ, thu hái quanh năm, dùng tươi hay phơi sấy khô."
+      },
+      "Thành phần": {
+        "thành phần": null
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Theo kinh nghiệm của nhân dân miền núi, rễ cau đất bóc bỏ vảy, rửa sạch, phơi khô, thái nhỏ, sao vàng 10 – 20g sắc với 200 ml nước còn 50 ml uống làm một lần trong ngày, chữa tiêu chảy. Cả cây cau đất gồm rễ và thân lá phối hợp với lá cây trọng đũa với liều lượng bằng nhau 20g, sắc uống chữa cảm gió, sốt rét.  Nhân dân Lào ở tỉnh Sầm Nưa gọi cây cau đất là sâm cau và dùng rễ làm thuốc bổ, chữa ứ huyết, đau lưng, tê thấp.  Ở Ấn Độ và Malaysia, nước sắc rễ cau đất cũng dùng chữa tiêu chảy, nước sắc của toàn cây cau đất phối hợp với các vị thuốc khác chữa sốt rét (Burkill)."
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

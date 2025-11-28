@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cối xay",
+      "ten_khac": "Cối xay, Giàng xay, Kim hoa thảo, Quýnh ma, Co tó ép (Thái), Phao tôn (Tày)",
+      "ten_khoa_hoc": "Abutilon indicum (L.) Sweet",
+      "ma_taxon": "157844",
+      "ho": "Malvaceae (Bông)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc so le, có cuống dài, hình tim, đầu nhọn, mép khía răng, hai mặt có lông mềm, mặt dưới màu trắng xám, gân chính 5 – 7; lá kèm hình chỉ.",
+      "hoa": "Hoa màu vàng, mọc riêng lẻ ở kẽ lá; cuống dài có đốt gấp khúc; đài có lông ngắn ở mặt ngoài, lông dài ở mặt trong, hình tam giác, màu tro; cánh hoa hình tam giác ngược hay hình nêm; nhị nhiều, tụ tập trên một trụ có lông xồm xoàm ở gốc; bầu có lông, gồm khoảng 20 lá noãn.",
+      "quả": "Quả do nhiều nang họp lại, xếp xít nhau nom giống cái cối xay, nang có lông ở phần lưng và có mỏ nhọn.",
+      "cây": "Cây nhỏ mọc thành bụi, sống lâu năm, cao 1 – 1,5 m. Cành hình trụ, phủ lông nhỏ mềm, hình sao.",
+      "mùa hoa": "tháng 2 – 3",
+      "mùa quả": "tháng 4 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng ở thời kỳ cây còn nhỏ, thường mọc lẫn với các loại cây bụi thấp ở bờ rào, ven đồi hoặc bờ nương rẫy.\nCây ra hoa quả nhiều hàng năm; rụng lá vào mùa đông hoặc mùa khô. Mỗi quả có nhiều hạt; khi chín tự mở cho hạt thoát ra ngoài. Sau khi chặt, phần còn lại của cây có khả năng tiếp tục tái sinh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cối xay có thể trồng ở nhiều nơi, tốt nhất là trên đất nhiều mùn, không bị úng ngập. Cây được nhân giống bằng hạt. Hạt được gieo và mùa xuân trong vườn ươm, sau đó đánh cây con đi trồng. Vườn ươm cần làm đất cho tơi nhỏ, lên luống vừa phải sao cho tiện chăm sóc. Hạt nên trộn với cát, gieo vãi hoặc gieo theo hàng, dùng rơm rạ phủ lên mặt luống và tưới ẩm hằng ngày. Đất trồng cối xay, sau khi cày bừa, làm sạch cỏ, cần lên thành luống cao 30cm, rộng 70 – 90cm và bón lót một ít phân chuồng mục. Cây con được đánh đi trồng vào ngày tạnh ráo, với khoảng cách 50x50cm hoặc 50x70cm, mỗi luống chồng 2 hàng, có thể trồng theo nanh sấu. Trồng xong, nhất thiết phải tưới nước ngay, nếu không sẽ chết. Lần thứ nhất dùng vào tháng 2 -3 để cây sinh trưởng và lần thứ 2 vào tháng 5-7 để giúp cây ra hoa, kết hạt. Có thể dùng nước phân chuồng, phân đạm hoặc nước giải pha loãng để tưới thúc. Cối xay có thế bị sâu cắn lá. Nếu nhiều có thể dùng Sherpa 25EC để phun với nồng độ 0,1 – 0,15%. Khi cây cao khoảng 1m, bắt đầu thu hoạch cành lá, phơi khô và bảo quản nơi khô rao. Hạt cối xay chín rải rác, căn định kỳ thu hái kịp thời."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Phần trên mặt đất của cây cối xay đã phơi hoặc sấy khô. Dược liệu gồm những đoạn thân, cành lá, quả…"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Flavonoid, hợp chất phenol, acid amin, acid hữu cơ, đường.",
+      "Các hợp chất": "Các flavonoid là gossypin, gossypitin, cyanidin-3-rutinosid. Các acid amin là alanin, acid glutamic, arginin, valin. Các đường là glucose, fructose, galactose.",
+      "chứa": "Hạt chứa 5% dầu béo, các acid béo là acid palmitic, acid stearic và một số acid béo khác; phần không xà phòng hóa chiếm 1,7%;"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Cối xay có vị ngọt, tính bình, có tác dụng thanh nhiệt, lợi thấp, tiêu thung, hoạt huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cối xay là vị thuốc được sử dụng theo kinh nghiệm nhân dân, chữa cảm sốt, đau đầu, bí tiểu tiện, phù thũng sau khi đẻ, kiết lỵ, mắt có màng mộng, tai điếc. Lá giã nát đạp ngoài chữa mụn nhọt. Ngoài ra, lá cối xay phơi khô sắc uống với nhân trần và vọng cách dùng chữa chứng vàng da hậu sản. Liều dùng mỗi ngày 5 -10g dược liệu khô hoặc 10 – 40g dược liệu tươi. Dựa trên cơ sở phát hiện chống viêm của cối xay. Viện quân y 103 quân khu 5 đã dùng cối xay phối hợp với các vị thuốc khác trong đơn chè khớp như sau: lá và thân cây cối xay 3g, trinh nữ 10g, rau muống biển 3g, lá lạc tiên 3g, rễ có xướng 3g, lá vòi voi 3g, lá lốt 3g. Hãm uống như hè trong ngày. Đã điều trị có kết quả tốt cho nhiều người bệnh đau viêm khớp có sốt 38 – 39oC với số ngày nằm viện trung bình là 40,8 ngày."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

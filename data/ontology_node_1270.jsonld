@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cô La",
+      "ten_khac": "Cô la, Sảng tây",
+      "ten_khoa_hoc": "Cola nitida (Vent.) Schott. et Endl.",
+      "ma_taxon": "428194",
+      "ho": "Sterculiaceae (Trôm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây cao 1- 15m",
+      "lá": "lá nguyên, hình trứng dài thuôn, nhọn dài 15- 25cm, rộng 6-10cm (đối với loài Cola nitida), cuống lá phình ở dưới, lá mọc đơn độc (trong loài Cola nilida, nhưng mọc vòng trong loài Cola verticillata Stapf.).",
+      "hoa": "Cụm hoa là những chùm nhỏ, kép hoặc gồm toàn hoa đực, hoặc gồm hoa đực và hoa lưỡng tính. Không có tràng mà chỉ có 5 lá đài trắng điểm tía, 10 nhị đực xếp thành hai hàng, nhụy hình trứng gồm 5-6 lá noãn.",
+      "quả": "Quả gồm 2 đến 6 đại hóa gỗ họp thành hình sao quanh cuống. Mỗi đại dài 8-12cm, rộng 4-8cm, có sống ở lưng và rãnh ở phía bụng. Mặt quả xù xì thành những u. Mỗi quả chứa 5-10 hạt to, xếp thành hai hàng, hơi 4 cạnh, bị biến dạng do ép vào nhau, màu trắng, hồng hay đỏ nhạt khi còn tuơi. Trong loài Cola nitida chỉ có 2 lá mẫm to, trong loài Cola acuminata Schott et Endl., Cola ballayi Cornu, Cola verlicillata P. Beauv. các lá mẩm được chia thành 4, thành 6, người ta gọi đó là cola “quart” (quart là 1/4). Còn loại cola chỉ có 2 lá mầm thì gọi là cola “demi” (demi là nửa)."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hạt côla chứa từ 10 đến 12% nước, 2 đến 4% chất vô cơ, 40% tinh bột, một ít đường khử, chất nhầy, 1 đến 2% chất béo, một ít betain. Khi quả còn tươi, có một ít sắc tố antoxyan làm cho hạt có màu, khi khô thì không còn.",
+      "gồm chất": "Người ta cho rằng hoạt chất của côla gồm hai nhóm:",
+      "Các hợp chất": "Nhóm các tanoid (5-10%) tìm thấy vào cuối thế kỷ 18. Năm 1906 và 1910, Goris đã chiết được chất kolatin và kolatein. Năm 1930, Freudenberg đã xác định là những chất d.catechola và 1.epicatechola. Trong hạt tươi chứa nhiều và ở dạng kết hợp với cafein. Trong quá trình bảo quản, các catechcAa bị oxy hoá và trùng hiệp hóa để cho chất màu đỏ côla (rouge de cola) không tan trong nước.",
+      "chứa": "Nhóm các ancaloid dẫn xuất của purin gồm caferin (trimetyl 1,3,7 dioxy 2-6 purin) từ 1,5 đến 2,5%, kèm theo một ít theobro-min 3-7 dioxy 2-6purin)."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Côla tươi được dùng tại chỗ. Mỗi năm tiêu thụ hàng nghìn tấn, còn chỉ xuất sang châu Âu khoảng vài trăm tấn một năm. Các nước châu Âu dùng côla làm thuốc từ cuối thế kỷ 19. Đây là một vị thuốc có tác dụng kích thích dùng trong những trường hợp mới yếu dậy hay lao động chân tay, lao động trí óc quá sức.",
+      "được_dùng": "Thường dùng dưới dạng bột (hạt khô hoặc ổn định), cao lỏng (chứa 1,25% cafein), cao mềm (chứa ít nhất 0,80g cafein trong 1kg). Hằng năm riêng Pháp tiêu thụ 15-20 tấn hạt làm thuốc. Tại nhiều nước châu Mỹ, người ta rất hay dùng côla để chế nước giải khát dùng riêng hoặc phối hợp với côca (côcacôla chế gần như loại bia) để làm nước giải khát. Tuy nhiên do thiếu côca cho nên một số nước uống tuy mang tên “nước Cô La” nhưng thực tế chỉ là một dung dịch chứa cafein, một ít tanin và một số, chất khác, chứ không có hạt côla.",
+      "làm thuốc": "Liều dùng: Bột hay cao lỏng dùng mỗi ngày từ 1 đến 2g, cồn côla, mỗi ngày 2 đến l0g, rượu vang côla, mỗi ngày 60 đến l00g."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Côla nguồn gốc ở những nước châu Phi nhiệt đới, mọc hoang dại ở miền tây châu Phi, Guynê, Gana. Côla ưa mọc ở dưới bóng cây. Hiện nay côla được trồng ở những nước châu Phi và di thực đến nhiều nước nhiệt đới khác như Inđonexia, Braxin. Tại Việt Nam, từ trước 1945, Pháp có nhập một số cây côla về trồng thí nghiệm ở trạm nghiên cứu nông nghiệp Phú Hộ (Vĩnh Phúc) nay là Viện cây công nghiệp, cây ăn quả và cây làm thuốc. Nhưng từ đó đến nay cây này chưa được nhân ra, mặc dầu cây mọc tốt và thích hợp với khí hậu của nước ta. Thường người ta trồng loài Cola nitída var. mixta và Cola acuminata. Sau 15 năm mới cho quả, nhưng tiếp tục cho quả đến 50-60 tuổi. Hái quả khi gần chín. Mổ quả lấy hạt, xếp thành đống hay ngâm nước vài ngày. Xát và rửa để loại hết lớp vỏ nhầy. Khi dùng tại chỗ, người ta để hạt nơi ẩm, bọc trong những lá chuối to, đặt trong thúng hay sọt. Muốn gửi đi xuất khẩu, người ta bọc bột than gỗ để hút ẩm, hoặc trong túi vải nhựa chứa vôi để hút ẩm. Để giữ cho hạt không biến màu, người ta ổn định hạt bằng hơi nước hay hơi cồn. Nếu không hạt sẽ ngả màu nâu rất nhanh. Kích thước hạt thay đổi và có thể nặng tới 25g."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

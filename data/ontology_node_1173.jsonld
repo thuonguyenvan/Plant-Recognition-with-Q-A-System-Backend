@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hồng",
+      "ten_khac": "Hồng, Thị đinh, Hồng thị, Mác pháp, Mạy chí (Tày)",
+      "ten_khoa_hoc": "Diospyros kaki Thunb.",
+      "ma_taxon": "83468",
+      "ho": "Ebenaceae (Thị)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "lá mọc so le, hình trứng hay trái xoan, gốc thuôn, đầu tù hơi nhọn, mặt trên màu lục sẫm, mặt dưới nhạt có lông",
+      "hoa": "hoa đơn tính cùng gốc, màu vàng nhạt; hoa đực tụ họp thành xim 3 hoa, nhị 16, có khi hơn, hoa cái mọc đơn độc, đài có 5 răng, bầu 4 ô, thường có vách giả",
+      "quả": "quả mọng, hình cầu hoặc hình trứng, nhẵn, phẳng hoặc có sống dọc, mang đài tồn tại cong lên, khi chín màu vàng hoặc đỏ; hạt dẹt, màu nâu vàng hoặc nâu đen",
+      "cây": "Cây to",
+      "mùa hoa": "tháng 3 – 7",
+      "mùa quả": "tháng 8 – 10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Diospyros L. gồm các loài là cây gỗ, phân bố rải rác từ vùng ôn đới ấm đến vùng nhiệt đới. Vùng Đông và Đông – Nam Á là khu vực có tính đa dạng Cao của chi này.  Ở Việt Nam, chi Diospyros L. có khoảng 60 loài; 9 loài cho gỗ có giá trị sử dụng, trong đó có gỗ mun (D. mun A.Chev.) (V.V.Dung et al., 1996; Vietnam Forest Trees); hai loài có quả ăn được là hồng (D. kaki L.f.) và cậy (D. lotus L.). Ở vùng Đông – Nam Á, còn có 2 loài hồng khác được trồng là :  D. blancoi A.DC… mọc hoang dại ở các cánh rừng nguyên sinh hoặc thứ sinh, thuộc vùng núi thấp và trung bình. Cây được trồng ở vườn hay ven đường để lấy quả ăn và lấy gỗ.  D. digyna Jacq có nguồn gốc ở Vùng Trung Mỹ (Mehico và Guatemala). Cây trồng ở Philippin do người Tây Ban Nha đưa vào. Quả chín ăn được; quá xanh rất chát thường dùng để duốc cá. Gỗ để đóng đồ Và dùng trong xây dựng. Cây hồng đang được trồng phổ biến ở Việt Nam hiện nay có nguồn gốc ở Trung Quốc. Sau được du nhập sang các nước Đông Nam Á khác như ở vùng Bắc Thái Lan, đảo Java, Sumatra (Indonesia); Malaysia. Ở Italia, Israel, Brazil, Mỹ (California) cũng có trồng loài hồng này. Hồng là cây ăn quả lâu đời ở các tỉnh phía bắc từ Thanh Hóa trở ra. Cây thường trồng ở vườn nhà, vườn trang trại, ở độ cao từ 500 m trở xuống. Ở miền Nam, hồng mới được phát triển ở Đà Lạt (Lâm Đồng). Các giống hồng đang được trồng hiện nay vô cùng phong phú như hồng Hạc, hồng Lạng, hồng vuông, hồng trứng.",
+      "Đặc điểm sinh trưởng": "Về đặc điểm sinh học, nhìn chung, hồng là loại cây thích nghỉ với vùng trồng có khí hậu ôn hòa. Nhiệt độ trung bình năm thường không vượt quá 25°C, lượng mưa khoảng 2000 mm/năm phân bố đều quanh năm. Cây rụng lá vào cuối mùa thu hay đầu mùa đông, sinh trưởng mạnh trong mùa xuân – hè. Hoa thụ phấn chủ yếu nhờ côn trùng. Khả năng tái sinh tự nhiên từ chồi rễ mạnh.  Nhật Bản và Trung Quốc sản xuất nhiều hồng nhất thế giới. Năm 1986, Nhật Bản có 27.000 ha cây hồng màu với sản lượng quả là 291.000 tấn. Riêng đảo Sumatra (Indonesia) mỗi năm thu hoạch khoảng 1500 tấn xuất khẩu sang Singapore hoặc Israel thường xuyên có khoảng 1500ha trồng (PROSEA, No2 – Edible fruits and Nuts, 1992, 154-156), Hồng trồng ở Việt Nam hiện nay cũng rất nhiều, nhưng chủ yếu cung cấp cho nhu cầu tiêu dùng trong nước."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả hồng xanh hoặc chín. Tai hồng là thị đế, phơi hay sấy khô. Còn dùng vỏ thân, vỏ rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Quả hồng chứa 79,6% nước, 0,8% protein, 0,2% chất béo, 0,4% chất khoáng, 19% carbohydrat, calci, phosphor, sắt, caroten, vitamin A, thiamin, riboflavin, miacin và Vitamin C. Đã tìm thấy trong quả các hợp chất như Citrullin. isodiospyrin, bisisodiospyrin, 2,3 – butyllen glycol manitol, phytofluen, neodiospyrin, zeaxanthin và lyeopin. Quả còn có tanin, pectin và polysacharid. Tanin khi thủy phân với kiềm thu được phloroglucinol và pyrocatechol. Hạt hồng chứa 0.8% acid citric, 4,76% đường khử và 5,9% đường tự do. Lá hồng chứa flavonoid."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả hồng chín có vị ngọt, hơi chát, tính bình, có tác dụng nhuận phế, trừ đờm, khỏi ho, sinh tân dịch. Tai hồng có vị đắng, chát, tính ấm, vào kinh vị, có tác dụng ôn trung, hạ khí, làm giáng khí nghịch xuống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả hồng chín để ăn, chữa suy dinh dưỡng, háo khát, ho có đờm. Ngày 10 – 20g có thể hơn. Có thể làm mứt hồng, ngày 3 – 5 quả. Quả hồng chín phơi khô còn chữa trĩ, táo bón, lòi dom. Tai hồng chữa nấc, đầy bụng không tiêu, đau bụng lạnh, nôn mửa, đái dầm, hay đi đái đêm. Ngày 6 – 10g dạng thuốc sắc hoặc thuốc bột.  Thị sương (Saccharum kaki) là chất đường trong quả hồng chín, ép lấy nước hoặc khi làm mứt nước chảy ra, cô nhỏ lửa thành đường, đổ khuôn, cắt ra phơi khô dùng chữa đau bụng, họng khô, ho.  Thị tất (Succus kaki Siccatus) là nước ép từ quả hồng chưa chín, phơi hay sấy khô, được dùng làm thuốc chữa cao huyết áp có kết quả tốt và thuốc cầm máu chống sung huyết ở bệnh trĩ.  Vỏ thân hoặc vỏ rễ chữa băng huyết, đại tiểu tiện ra máu. Ngày 60 – 80g, sắc uống."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa nấc, đầy bụng, khó tiêu: Tai hồng 8g, đinh hương 8g, sinh khương 3g, sắc chia nhiều lần uống trong ngày. Có thể thêm trần bì 4g, thanh bì 4g, bán hạ 2g. Nếu người nóng nhiều, giảm đinh hương; hoặc lạnh, có thể tăng đến 10g. Để chữa nấc, có thể dùng riêng tai hồng 8 – 10g sắc uống, hoặc tán bột uống với rượu. Chữa đái dầm, đái nhiều về đêm: Tai hồng khô 8 – 16g thái nhỏ sắc với nước còn 50ml, uống vào buổi tối trước khi đi ngủ. Chữa nôn mửa, lo nghĩ, phiền uất: Tai hồng 7 cái, hồ tiêu 7 hạt, hoắc hương 4g, sa nhân 4g, tỏi 3 nhánh, hành 2 củ, gừng 7 lát. Tất cả băm nhỏ, sắc uống chia làm 2 lần trong ngày (Nam dược thần hiệu). Chữa trĩ ra máu, táo bón: Quả hồng khô 8g, mộc nhĩ 6g, thái nhỏ, nấu chín ăn. 5. Chữa lòi dom: Quả hồng khô đốt cháy sém, tán nhỏ, uống mỗi lần 8g với nước cơm. Chữa tiêu chảy, cao huyết áp: Quả hồng xanh 30 – 40g giã nát, thêm nước, gạn uống."
+    }
+  ]
+}

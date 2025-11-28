@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/co-may.html",
+      "ten": "Cỏ may",
+      "ten_khac": [
+        "Cỏ may",
+        "Châm thảo",
+        "Nhả khoác (Tày)",
+        "Hất dạ (K'ho)"
+      ],
+      "ten_khoa_hoc": "Chrysopogon aciculatus (Retz.) Trin.",
+      "ma_taxon": "160547",
+      "ho": "Poaceae (Lúa)",
+      "Mô tả": {
+        "cây": "Cây cỏ may là một loại cỏ sống lâu năm, thân rễ cứng mọc bò. Thân bò lan trên mặt đất, mọc đến đâu bén rễ đến đó: những thân mọc thẳng lên cao 20-50cm, có nhi u đốt, đốt phía gốc ngắn hơn phía trên.",
+        "lá": "Lá mọc so le, lá phía dưới mọc mau, lá phía trên mọc thưa hơn. Phiến lá hẹp dài 2-10cm, rộng 3-5mm, đầu nhọn, phía cuống tròn, nhẵn.",
+        "hoa": "Cụm hoa mọc thành chuỳ dài 5-10cm, màu tím than, có những nhánh mọc vòng mang hoa mọc thành bông dài 8mm.",
+        "quả": "Quả chín có thể móc vào quần áo khi người ta đi qua do đó có tên cỏ may. Và cũng do hình thức này, cây lan từ vùng này sang vùng khác."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Chưa có tài liệu nghiên cứu"
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Cây cỏ may còn là một vị thuốc dùng trong nhân dân. Tại vùng Thanh Hoá, Nghệ An, Hà Tĩnh, có người dùng cỏ may chữa bệnh da vàng, mắt vàng, bệnh về gan như sau: Toàn cây cỏ may cả rễ rửa sạch, thái nhỏ sao vàng, 300g, nước rửa nửa lít, sắc còn 250ml, chia làm nhi u lần uống trong ngày thay nước uống. Thường sau 4-5 ngày thấy có kết quả rõ rệt Theo sự điều tra của A. Sallet (1931) tại Vinh có người gọi cây này là nam hoàng liên và nhân dân ở Huế và một số tỉnh miền Trung dùng nó chữa giun như sau: quả cỏ may 20g sao vàng, sắc với 500ml nước cho sôi kỹ, sau đó lọc bỏ bã và cô đặc còn 150ml. Sau khi ăn cơm uống hết chỗ thuốc này để chữa giun đũa. Cần kiểm tra lại, chúng tôi chưa thấy lại kinh nghiệm này trong nhân dân"
+      },
+      "Cách dùng": {
+        "được_dùng": "Cỏ may mọc hoang ở khắp nơi trong nước ta. Còn mọc ở các nước khác vùng châu Á như Ấn Độ, Thái Lan, Miến Điện, Nam Trung Quốc. Thường ít dùng làm thuốc. nhưng cũng có người dùng cây hái v phơi khô hay sao vàng, có người chỉ dùng quả."
+      },
+      "luu_y": {}
+    }
+  ]
+}

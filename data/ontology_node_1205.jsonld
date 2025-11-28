@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng kinh",
+      "ten_khac": "Hoàng kinh, Chân chim, Ngũ trảo, Mẫu kinh, Co cút kệ (Thái)",
+      "ten_khoa_hoc": "Vitex negundo L.",
+      "ma_taxon": "170273",
+      "ho": "Verbenaceae (Cỏ roi ngựa)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá mọc đối có cuống, có 3-5 lá chét hình ngọn giáo nhọn, mép nguyên hay có răng, dài 5-10cm, rộng 2,5cm, màu lục trắng nhạt.",
+      "hoa": "Hoa nhỏ, nhiều, mọc thành chuỳ xim ở ngọn, phủ một lớp lông màu xám trắng hay xám nâu.",
+      "quả": "Quả dạng quả mọng, màu đen hay vàng, lõm ở đỉnh, bao bởi đài đồng trưởng, chứa 4 hạt.",
+      "cây": "Cây có kích thước thay đổi, thường cao 3-5m, có cành phủ lớp lông dày đặc và mịn, màu xám hay xám nâu.",
+      "mùa hoa": "tháng 5-7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Loài của Ấn Độ, Trung Quốc, Lào, Campuchia, Thái Lan, Malaixia và Việt Nam. Ở nước ta, cây mọc hoang và cũng được trồng từ Lạng Sơn, Quảng Ninh, Bắc Thái, Hà Tây, Hà Nội, Ninh Bình, Thanh Hoá, Nghệ An, Thừa Thiên – Huế, Quảng Nam – Đà Nẵng, Bình Định tới Sông Bé, Tiền Giang, Kiên Giang. Hoàng kinh là cây có kích thước thay đổi từ dạng bụi lớn đến cây gỗ nhỏ. Cây thường mọc ở rừng thứ sinh, đồi cây bụi hay trong các lùm bụi trên các gò cao. Cây ưa sáng, ra hoa quả nhiều hàng năm, tái sinh tự nhiên từ hạt. Ngoài ra, cây cũng có khả năng tái sinh cây chồi sau khi bị chặt. Trồng bằng hạt hoặc bằng cành vào đầu mùa mưa. Thu hái lá, rễ, vỏ quanh năm, dùng tươi hay phơi khô. Quả thu hái vào mùa hè thu, phơi khô dùng dần."
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả; thường gọi là Hoàng kinh tử. Lá và rễ cũng được dùng."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá tươi chứa 0,05% tinh dầu, lá phơi khô chứa một alcaloid; người ta đã tách được alcaloid nishindin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá vị cay, mùi thơm, tính bình, có tác dụng giải biểu, hoá thấp, lợi tiểu, điều kinh và trừ giun. Quả vị cay đắng, tính ấm, có tác dụng khư phong, trừ đàm, hành khí, giảm đau, trừ giun. Rễ bổ, hạ nhiệt và làm long đờm. Vỏ cây kích thích tiêu hoá và làm long đờm."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá được dùng trị nhức mỏi gân cốt, trị sốt cách nhật, dùng tắm trị phù thũng, bán thân bất toại và bại liệt. Nấu lá xông hoặc dùng lá khô làm thuốc hút cho bớt nhức đầu. Sắc uống chữa đau lâu, đái ra máu, sưng mình mẩy, viêm ruột và trị lỵ. Có người dùng lá tươi lót xuống giường thành đệm nằm cho bớt nhức mỏi và đắp hòn dái sưng đau (Thiên truỵ). Ở Trung Quốc, lá được dùng trị cảm mạo, viêm ruột và trị lỵ. Ở Ấn Độ, người ta dùng lá khô quấn thuốc hút trị đau đầu và xuất tiết. Quả, hạt sắc nước cho phụ nữ uống chữa kinh nguyệt khó khăn, không đều, bạch đới và cũng dùng uống cho ra mồ hôi, bớt nhức đầu. Còn dùng trị bệnh về tim và hen suyễn. Người ta cho rằng nó có tính chất làm bền răng, giảm đau đầu, đau mắt, đau tai. Ở Trung Quốc, quả được dùng trị cảm mạo, ho đờm, thở khò khè, nhức mỏi sốt rét, đau dạ dày, sa bọng đái và bệnh trĩ. Ở Ấn Độ, người ta dùng quả làm thuốc trị giun. Rễ dùng sắc nước uống trị bệnh sốt rét và giã nát lấy nước uống làm thuốc trị ho. Vỏ cây giúp làm ăn ngon cơm, dễ tiêu hoá và cũng dùng chữa hen suyễn. Thường dùng 2-4g hạt, 30g rễ, 40-80g lá tươi sắc uống. Dùng ngoài không kể liều lượng."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

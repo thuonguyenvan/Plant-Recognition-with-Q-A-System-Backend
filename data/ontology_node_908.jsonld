@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sâm ngọc linh",
+      "ten_khac": "Sâm K5, Sâm Ngọc Linh, Thuốc giấu, Nhân sâm Việt Nam",
+      "ten_khoa_hoc": "Panax vietnamensis Ha & Grushv.",
+      "ma_taxon": "1116659",
+      "ho": "Araliaceae (Nhân sâm)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây thân thảo, sống nhiều năm, cao đến 1m.",
+        "thân": "Thân rễ mập có đường kính 3,5cm, không có rễ phụ dày dự trữ, đôi khi ở một số cây phần cuối thân rễ có củ gần hình cầu, đường kính đến 5cm.  Đốt trên cùng của thân rễ tồn tại 1-4 thân. Thân nhẵn cao 40-80cm, rộng, có 3 mặt hơi tròn có những rãnh nhỏ theo chiều dọc.",
+        "lá": "Lá mọc vòng, thường có 4 (ít khi 3, 5, 6).  Lá kép chân vịt có 5 (ít khi 6,7) lá chét, lá dài 7-12cm (ít khi 15cm). Lá chét trên cùng hình trứng ngược hoặc hình mũi mác, dài 8-14cm, rộng 3-5cm, đầu lá thường nhọn đột ngột, mũi nhọn kéo 1,5-2cm, gốc lá hình nêm, mép lá có răng cưa nhỏ đều, gân bên 19 (ít khi 8-11) cập dọc theo gân chính và gân bên ở mặt trên của lá chét có nhiều lông cứng dạng gai dài đến 3mm, mặt dưới ít hơn.",
+        "hoa": "Cụm hoa dài 25 cm, gấp 1,5-2 lần chiều dài của cuống lá, thường mang tán đơn độc ở tận cùng, đôi khi có thêm 14 tán phụ hoặc một hoa đơn độc. Tán hoa chính đường kính 2,5cm, có 50-120 hoa. Hoa màu vàng lục nhạt, đường kính hoa nở 3-4mm. Bầu 1 ô, 1 vòi (chiếm 80%) đôi khi có 2 ô, 2 vòi (chiếm 20%).",
+        "quả": "Quả khi chín màu đỏ, thường có một chấm đen ở trên đỉnh quả. Quả 1 hạt hình thận, quả 2 hạt có hình cầu hơi dẹt dài 7-10mm rộng 4-6mm."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Cho đến những năm 1985, các Nhà thực vật học ở Việt Nam chỉ ghi nhận chính thức có hai loài thuộc chi Panax là Panax pseudoginseng Wall. (Tam thất) vừa mọc hoang dại, vừa được trồng ở một số tỉnh biên giới phía bắc Việt Nam và Panax bipinnatifidus Seem, (nhân sâm đốt trúc) phát hiện ở vùng gần Sapa (Lào Cai). Trong tập 1 (1970) Phạm Hoàng Hộ đã mô tả rất ngắn và sơ lược một loài mà tác giả thu thập được ở vùng cao nguyên Lang Biang (Lâm Đồng) được xác định là Panax schinseng var. japonicum Mak. Nhưng mẫu vật đã bị mất và không tìm được mẫu vật khác. Vào năm 1970, một số Nhà thực vật của Viện dược liệu Hà Nội có phát hiện ở vùng Sapa có hai sâm đều cùng chi Panax, trong đó có một loài được xác định là Panax bipinnatifidus Seem. Còn một loài chỉ dừng lại ở loài Panax sp. không có thấy thông báo về thực vật, mà chỉ thấy một thông báo “ Một số tác dụng dược lý của cây sâm mới Việt Nam” (Thông báo dược liệu số 19-1973, tr. 22-46) với các tác giả Phạm Duy Mai, Vũ Thị Tâm, Trần Kim Lạng, Hà Ngọc Tuyết. Theo lời các tác giả, do thành phần hoá học (bằng sắc ký lớp mỏng) giống nhau, và dược liệu khô không phân biệt được giữa hai loài Panax một cách dẽ dàng, cho nên khi nghiên cứu dược lý, các tác giả phải dùng dược liệu hỗn hợp cả hai loài. Cho nên công trình nghiên cứu không giúp ta phân biệt tác dụng nào là của Panax sp, tác dụng nào là của Panax bipinnatifidus. Chúng ta đã lỡ một dịp đánh giá một loài của Panax sp. mà chúng tôi nghĩ rằng, về hình thức bề ngoài rất nhiều điểm gần gũi với loài nhân sâm Việt Nam sẽ nói sau đây: Đúng 9 giờ sáng ngày 19-03-1973, giữa lúc kháng chiến chống Mỹ đang ở giai đoạn cao độ, một đoàn điều tra dược liệu của miền Trung bộ, do dược sĩ Đào Kim Long và Nguyễn Châu Giang dẫn đầu đã phát hiện trên con đường đi từ làng Ku-gia theo sườn Đông Nam dãy núi Ngọc Linh ở độ cao 1-500m hai cây Panax đầu tiên, một cây 9 tuổi, một cây 11 tuổi và đến 19 giờ cùng ngày đã đặt chân vào vùng sâm Ngọc Linh rộng lớn. Đến tháng 9-1985, Hà Thị Dung và I. V. Gmshvisky, sau khi nghiên cứu 50 mẫu vật đối chiếu với những mẫu vật của thế giới đã kết luận sâm Ngọc Linh là một loài mới, một loài Panax đặc hữu của khu hệ thực vật Việt Nam và đặt tên Panax vieimmensis Hà et Grushv (Tạp chí Sinh học, 9-1985, 45-48)."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Từ năm 1973 đến nay, đã có nhiều cơ quan, nhà khoa học trong và ngoài nước nghiên cứu về sâm Ngọc Linh, và gần 50 nghiên cứu sinh đã bảo vệ thành công luận án phó tiến sĩ, tiến sĩ từ các công trình nghiên cứu về loài cây quý hiếm này. Trong hai năm 1974 và 1975, Viện Dược liệu thuộc Bộ Y tế nghiên cứu thấy thành phần saponin triterpen của tam thất, nhân sâm và sâm Ngọc Linh có 9 hoặc 11 chất có Rf ngang nhau, màu giống nhau ở hai hệ dung môi khác nhau. Theo đánh giá của Nguyễn Minh Đức, Võ Duy Huấn trong nǎm 1994 thì từ sâm Ngọc Linh đã chiết được 50 hợp chất, xác định cấu trúc hóa học cho thấy 26 hợp chất có cấu trúc đã biết (thường thấy ở sâm Triều Tiên, sâm Mỹ, sâm Nhật) và 24 saponin pammaran có cấu trúc mới không bắt gặp tại các loại sâm khác trên thế giới. Sâm Ngọc Linh chứa chủ yếu các saponin triterpen, nhưng cũng là một trong những cây sâm có hàm lượng saponin khung pammaran cao nhất (khoảng 12-15%) và số lượng saponin nhiều nhất so với các loài khác của chi Panax. Ngoài ra trong sâm Ngọc Linh còn có 14 axit béo, 16 axit amin (trong đó có 8 axit amin không thay thế được) và 18 nguyên tố đa lượng, vi lượng. Những kết quả nghiên cứu mới nhất bổ sung thêm danh sách saponin và axít amin dài hơn nữa. Theo tiến sĩ Nguyễn Bá Hoạt cán bộ Viện Dược liệu thì về mặt hoá học, thân rễ và rễ củ Sâm Ngọc Linh hiện nay (2007) đã phân lập được 52 saponin trong đó 26 sanopin thường thấy ở sâm Triều Tiên, sâm Mỹ, sâm Nhật. Trong lá và cọng đã phân lập được 19 saponin pammaran, trong đó có 8 saponin có cấu trúc mới. Đã xác định được trong sâm Ngọc Linh 17 axit amin, 20 chất khoáng vi lượng và hàm lượng tinh dầu là 0,1%"
+      },
+      "Tính vị": {
+        "@type": "Tính vị"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Do những nguyên nhân đã nói ở phần trên, hiện nay Nhân sâm Việt Nam hầu như không thấy được tiêu thụ và sử dụng dưới rễ củ đơn độc như rễ củ Nhân sâm Triều Tiên (Panax ginseng). Thường chỉ được sử đụng phối hợp với nhiều vị thuốc khác trong một thang thuốc hay một dạng bào chế (viên, nước, xirô. ..) Thật ra, việc nói Sâm Ngọc Linh được phát hiện vào năm 1973 là chỉ là phát hiện đối với giới y học. Bởi Sâm Ngọc Linh đã được đồng bào dân tộc thiểu số sống ở vùng Trung Trung Bộ Việt Nam sử dụng từ rất lâu như một loại thuốc trong những bài thuốc cổ truyền cầm máu, lành vết thương, làm thuốc bổ, thuốc trị sốt rét, đau bụng, phù thũng,… Nhưng nhờ dấu mốc sự kiện năm 1973 mà Sâm Ngọc Linh đã được nghiên cứu kỹ lưỡng; được biết đến và ứng dụng rộng rãi hơn trong hỗ trợ điều trị bệnh và bồi bổ sức khỏe. Tác dụng của Sâm Ngọc Linh dựa trên nghiên cứu dược lý thực nghiệm: những kết quả nghiên cứu dược lý thực nghiệm Sâm Ngọc Linh đã chứng minh Sâm Ngọc Linh có tác dụng chống stress vậy lý, stress tâm lý và trầm cảm, kích thích hệ miễn dịch, chống oxy hóa, lão hóa, phòng chống ung thư, bảo vệ tế bào gan. Tác dụng của Sâm Ngọc Linh dựa trên nghiên cứu dược lý lâm sàng: những nghiên cứu dược lý lâm sàng của Sâm Ngọc Linh cũng cho kết quả tốt; các bệnh nhân được thử nghiệm sử dụng Sâm Ngọc Linh để hỗ trợ điều trị bệnh của mình đều ăn ngon, ngủ tốt, lên cân, tăng thị lực, hoạt động trí tuệ và thể lực cải thiện, gia tăng sức đề kháng, cải thiện các trường hợp suy nhược thần kinh và suy nhược sinh dục, nâng cao huyết áp người bị huyết áp thấp. Ngoài những tác dụng nói trên, theo Dược sĩ Đào Kim Long – người phát hiện ra Sâm Ngọc Linh vào năm 1973 – Sâm Ngọc Linh có những tác dụng tuyệt hảo như tăng lực, phục hồi sự suy giảm chức năng giúp cho tình trạng của cơ thể trở lại bình thường, kháng các độc tố gây hại tế bào, giúp kéo dài sự sống của tế bào và tăng các tế bào mới. Đặc biệt, theo PGS.TS. Nguyễn Thời Nhâm – người có công thẩm định thành công giá trị của Sâm Ngọc Linh vào năm 1976 tại Ba Lan và giới thiệu sâm trong các hội nghị tại Nhật, Mỹ, Canada – thì Sâm Ngọc Linh có những tác dụng mà sâm Triều Tiên và sâm Trung Quốc không có như kháng khuẩn, chống trầm cảm, giảm lo âu (stress), chống oxy hóa và hiệp lực tốt với thuốc kháng sinh, thuốc trị bệnh tiểu đường. Dùng riêng hay phối hợp với các vị thuốc cũng với liều 2-6g một ngày."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "được_dùng": "Cách 1: Ngậm tan Sâm Ngọc Linh trong miệng: Đây là cách cơ bản và đơn giản nhất: dùng cho những người bệnh lâu ngày, mệt mỏi, kém ăn, và mắc chứng “phế hư”: chức năng hô hấp kém, phổi yếu, thở gấp, hen suyễn Cách 2: Sâm Ngọc Linh tẩm mật ong: Cách làm: bạn hãy rửa củ sâm thật sạch xong cắt lát mỏng và xếp từng lát sâm vào bình bằng thủy tinh hoặc bằng sành đổ mật ong đầy ngập sâm, đóng nắp kín trong thời gian khoảng 1 tháng là có thể dùng được, mỗi ngày ngậm từ 3- 5 lát sâm. Các bạn nên sử dụng loại mật ong rừng nguyên chất để ngâm sâm. Cách 3: Sử dụng Sâm Ngọc Linh theo kiểu pha trà uống: Cách làm: Sâm Ngọc Linh thái mỏng thành nhiều lát, khi dùng cho vài lát Sâm (1g – 2g) vào ấm, đổ nước sôi vào pha như trà. Sau 5 phút có thể sử dụng. Có thể dùng vài lần như vậy cho đến khi cảm thấy vị nhạt dần thì lấy bả ra nhai và nuốt dần. Cách 4: Sâm Ngọc Linh ngâm rượu: dùng cho người mọi người để bồi bổ sức khỏe, đặc biệt là nam giới, những người phải uống bia rượu nhiều, nên thay thế bằng rượu sâm ngọc linh để bảo vệ gan thận, bồi bổ sức khỏe. Cách làm: Rửa sạch sâm, ngâm vào rượu 50 – 70 độ , và đặc biệt phải ngâm vào bình thủy tinh. Phải ngâm 3 tháng trở lên thì khi sử dụng mới thấy có tác dụng tốt cho cơ thể. Ngâm Sâm Ngọc Linh với tỉ lệ 100g Sâm Ngọc Linh ngâm với từ 2-3 lít rượu, mỗi ngày dùng 50-100(ml) Cách 5: Nấu cháo với sâm Ngọc Linh: dùng cho người mắc các chứng bệnh mãn tính đường tiêu hóa, người già suy yếu, răng hỏng nhiều. Cách làm: dùng 3g Sâm Ngọc Linh thái lát rồi sắc với nước, sau đó cho thêm gạo và nước vào nấu thành cháo"
+      },
+      "Lưu ý": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

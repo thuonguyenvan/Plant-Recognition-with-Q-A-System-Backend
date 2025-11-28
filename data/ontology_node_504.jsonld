@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Việt quất",
+      "ten_khac": "Việt quất",
+      "ten_khoa_hoc": "Vaccinium corymbosum L.",
+      "ma_taxon": "52740",
+      "ho": "Ericaceae ( Âu thạch nam)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Dạng cây bụi cao khoảng 30-60 cm. Có thể cao đến 3m.",
+      "thân": "Thân cây có ít nhánh, màu sắc có thể thay đổi từ xanh lá cây đến đỏ đến nâu. Các chồi sinh dưỡng có hình tam giác.",
+      "lá": "Lá hình elip, có cuống ngắn.",
+      "hoa": "Hoa dạng chùm. Hoa dạng hình chuông, màu trắng, màu hồng nhạt hoặc đỏ, đôi khi nhuộm màu xanh.",
+      "quả": "Quả mọng, có màu xanh lam khi chín."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Vaccinium L. là một chi lớn, các loài phân bố chủ yếu ở Bắc Mỹ, Châu Âu và Châu Á. Nhiều loài được bán thương mại với tên thông dụng tiếng Anh bao gồm “blueberry” đến từ Bắc Mỹ, đặc biệt là Đại Tây Dương, Canada và Đông Bắc Hoa Kỳ.  Hiện nay, việt quất được trồng thương mại ở Nam bán cầu ở Úc, New Zealand và các quốc gia Nam Mỹ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá việt quất: tannin, flavonoid, Iridoids monoterpenic, Axit phenolic, Alkaloid.",
+      "gồm chất": "Quả việt quất chứa anthocyanins , các polyphenol khác và các chất phytochemical khác nhau, tannin, flavonoid, Iridoids, Pectin.",
+      "dấu hiệu đặc trưng": "Giá trị dinh dưỡng trên 100 g  Năng lượng 240 kJ (57 kcal)  Carbohydrate 14,49 g Đường 9,96 g Chất xơ 2,4 g Chất béo 0,33 g Chất đạm 0,74 g  Vitamin  beta-Caroten 32 μg lutein zeaxanthin 80 μg Vitamin A 54 IU Thiamine (B1) 0,037 mg Riboflavin (B2) 0,041 mg Niacin (B3) 0,418 mg Axit pantothenic (B5) 0,124 mg Vitamin B6 0,052 mg Folate (B9) 6 μg Vitamin C 9,7 mg Vitamin E 0,57 mg Vitamin K 19,3 μg  Khoáng chất  Canxi 6 mg Magiê 6 mg Mangan 0,336 mg Phốt pho 12 mg Kali 77 mg Natri 1 mg Kẽm 0,165 mg  Các thành phần khác: Nước 84 g"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả việt quất là loại trái cây nhập khẩu được nhiều người Việt Nam ưa chuộng nhờ hương vị thơm ngon, bổ dưỡng.  Giúp xương chắc khỏe  Tác dụng của quả việt quất có thể giúp xương bạn chắc khỏe nhờ có chứa các chất như sắt, phốt pho, canxi, magiê, mangan, kẽm và vitamin K.  Kẽm và sắt đóng vai trò quan trọng trong việc duy trì sức khỏe của xương. Vitamin K giúp bạn bổ sung canxi cho xương và giảm thiểu nguy cơ nứt xương. Quả việt quất là một trong những loại thực phẩm tăng cường dinh dưỡng cho trẻ em và có thể được bổ sung vào bữa ăn để giúp bé có được sức khỏe tốt hơn.  Tác dụng của quả việt quất giúp giảm huyết áp  Bản thân quả việt quất tươi không hề chứa natri mà chỉ chứa các loại chất như kali, canxi và magiê, giúp duy trì huyết áp ở mức ổn định.  Kiểm soát bệnh tiểu đường  Một nghiên cứu được xuất bản trong tập san y khoa của tập đoàn BMJ vào năm 2013 cho thấy một số loại trái cây (không phải là nước ép) có thể làm giảm rủi ro của bệnh tiểu đường tuýp 2 ở người lớn (bệnh nhân tiểu đường tuýp 2 là những người đã cải thiện được lượng đường, lượng chất béo và lượng insulin trong cơ thể).  Trong suốt quá trình nghiên cứu, có đến 6,5% người tham gia đang gia tăng bệnh tiểu đường. Tuy nhiên, những nhà nghiên cứu nhận thấy tiêu thụ 3 khẩu phần việt quất, nho, nho khô, táo hoặc lê mỗi tuần có thể giúp những bệnh nhân này giảm thiểu nguy cơ tiểu đường loại 2 đến 7%.  Trái việt quất giúp ngừa bệnh tim mạch  Trong quả việt quất không chứa cholesterol nhưng lại chứa các dưỡng chất tốt cho sức khỏe như chất xơ, kali, folate, vitamin C và vitamin B6, là những chất hỗ trợ rất tốt cho sức khỏe của tim. Chất xơ trong quả giúp hạ thấp lượng cholesterol trong máu và cải thiện sức khỏe hệ tim mạch.  Theo nghiên cứu gần đây từ trường Y tế cộng đồng Harvard và Đại học East Anglia, quá trình chống oxy hóa có thể giúp cơ thể giảm 32% nguy cơ bị đau tim và đột quỵ đối với phụ nữ ở tuổi thanh niên và trung niên. Nghiên cứu do chuyên gia dinh dưỡng thực hiện cho thấy tiêu thụ ít nhất ba phần việt quất hoặc dâu tây mỗi ngày sẽ cho kết quả tốt nhất cho phụ nữ.  Cải thiện tinh thần sức khỏe  Tác dụng của quả việt quất có thể giúp bạn tăng cường và cải thiện trí nhớ, để bạn cảm thấy thư giãn hơn cũng như giảm thiểu bệnh Parkinson – bệnh gây ra sự rối loạn thoái hóa thần kinh phát sinh do các tế bào bị ngưng hoạt động ở nhiều phần của bộ não.  Tác dụng của quả việt quất giúp ngăn ngừa ung thư  Vitamin C, vitamin A và các dưỡng chất thực vật khác nhau trong quả việt quất có tác dụng tương tự chất chống oxy hóa mạnh, bảo vệ các tế bào, ngăn ngừa khối u, giảm viêm và giúp phòng ngừa và làm chậm sự phát triển của một số loại ung thư: ung thư thực quản, ung thư phổi, tuyến tiền liệt và ung thư kết trực tràng…  Tăng cường hệ tiêu hóa  Theo báo cáo của USDA, trong 100g việt quất có chứa 2,4g chất xơ. Tác dụng của quả việt quất có thể giúp bạn ngăn ngừa táo bón và giúp cho hệ tiêu hóa của bạn được khỏe mạnh do có hàm lượng chất xơ cao.  Ngoài ra, theo chế độ ăn kiêng do cơ quan sức khỏe của Mỹ đề xuất, mỗi ngày phụ nữ nên ăn 21–25g chất xơ và đàn ông là 30–38g.  Chống oxy hóa  Vitamin C được xem như là một dưỡng chất cần thiết giúp bạn tránh khỏi sự lão hóa da dưới tác động của ánh nắng mặt trời, ô nhiễm và khói bụi. Chỉ cần uống một tách việt quất là bạn đã cung cấp tới 24% lượng vitamin C cần thiết cho cơ thể mỗi ngày.  Sản phẩm có thành phần Việt quất trên thị trường hiện nay  Sáng mắt Tuệ Linh  Công dụng  Hỗ trợ tăng cường lực, giúp sáng mắt, chống mỏi mắt, mờ mắt, khô mắt. Hỗ trợ phòng ngừa các tật khúc xạ (cận thị, viễn thị, loạn thị). Hỗ trợ giảm cận thị tiến triển Hỗ trợ tăng cường sức khỏe cho đôi mắt, phòng lão hóa mắt, các bệnh đục thủy tinh thể, thoái hóa điểm vàng.  Sáng mắt Tuệ Linh – Giúp mắt sáng khỏe mỗi ngày  Trên đây là một số thông tin về hình ảnh, liều lượng công dụng của cây Việt quất. Nếu cần tư vấn và tìm hiểu thêm về cây Việt quất và các loại cây dược liệu khác bạn có thể liên hệ qua số tổng đài tư vấn 1800.1190 (miễn phí tư vấn) hoặc đặt câu hỏi của bạn ở mục ý kiến ở cuối bài viết, Tra cứu dược liệu sẽ giải đáp những thắc giúp bạn có thêm những thông tin đáng tin cậy."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "",
+      "làm thuốc": "",
+      "có tác dụng": "",
+      "sắc uống": "",
+      "giã nát": "",
+      "sắc nước uống": "",
+      "phơi khô": "",
+      "xấy khô": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "schema:url": "https://tracuuduoclieu.vn/ban-tron.html",
+            "ten": "Ban tròn",
+            "ten_khac": "cỏ vỏ lúa, ban vỏ lúa, ban tràn",
+            "ten_khoa_hoc": "Hypericum patulum Thunb.",
+            "ma_taxon": "349201",
+            "ho": "Ban (Hypericaceae)",
+            "Mô tả": {
+                "lá": "Lá mọc đối, cuống rất ngắn, hình trái xoan hay bầu dục, dài 3 – 5 cm, gốc tròn, đầu tù hay hơi nhọn, mặt trên màu lục, mặt dưới nhạt hơn, có điểm tuyến rõ.",
+                "hoa": "Cụm hoa mọc ở đầu cành thành ngủ, hoa lộ, 3 – 4 cái màu vàng: 5 lá dài, 5 cánh hoa, 10 – 15 nhị, bao phần nhỏ hình mắt chim.",
+                "quả": "Quả nang, hình trứng, đầu thót dần, dài 1-2 cm, hạt hơi cong, có mũi nhọn, dài 1,5 mm.",
+                "cây": "Cây bụi nhỏ",
+                "cao": "0,4 – 1m.",
+                "thân": "Thân cành mảnh, hình trụ, vỏ ngoài màu đỏ."
+            },
+            "Phân bố": {
+                "phân_bố": "Chi Hypericum L. có khoảng 420 loài trên thế giới, phân bố rộng rãi khắp các vùng nhiệt đới và ôn đới ẩm. Ở Việt Nam, theo những nghiên cứu mới nhất, có khoảng 15 loại (Ngô Đức Phương, 2006), trong đó có cây ban tròn. Đó là một loài mới được ghi nhận, bổ sung cho hệ thực vật ở Việt Nam.",
+                "thường_mọc": "Ban tròn là cây ưa ẩm, ưa sáng hoặc có thể hơi chịu bóng khi còn nhỏ. Cây thường mọc ở ven rừng (nhất là rừng núi đá vôi), bờ mương hay đồi cây bụi. Độ cao phân bố 1300 – 2000 m (đèo Hoàng Liên Sơn). Ở các điểm phân bổ kể trên, ban tròn mọc tự nhiên trong vùng có khí hậu nhiệt đới núi cao, quanh năm mát và ẩm.",
+                "các_tỉnh": {
+                    "mục": [
+                        {
+                            "tỉnh": {
+                                "tên": "Hà Giang"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Lai Châu"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Lào Cai"
+                            }
+                        }
+                    ]
+                },
+                "ở_vùng": [
+                    {
+                        "tên": "Trung Quốc"
+                    },
+                    {
+                        "tên": "Ấn Độ"
+                    }
+                ]
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Hạt và phần trên mặt đất."
+            },
+            "Thành phần": {
+                "thành phần": "Các loài trong chi Hypericum L. có thành phần hóa học hết sức phong phú. Chúng chứa các nhóm chất chính như: xanthonoid, anthraquinoloid, cathechin, flavonol, coumarin, acid hữu cơ, acid amin, tinh dầu.",
+                "triết xuất": "Tinh dầu lá của Hypericum patulum Thunb được chiết xuất bằng phương pháp chưng cất và các thành phần của nó được xác định bằng cách sử dụng GC và GC-MS. 46 thành phần, 82,2% tổng thành phần tinh dầu, đã được đặc trưng.",
+                "Các hợp chất": "Các hydrocacbon monoterpene (62,2%) và hydrocacbon sesquiterpene (11,6%) được xác định là các phần chính của tinh dầu cùng với một lượng nhỏ diterpens (0,3%).",
+                "tinh dầu chứa": "β-pinen (30,2%), α-pinen (18,3%), limonene (8,4%) và α-humulene (2,3%)."
+            },
+            "Tính vị": {
+                "Có vị": null
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Ở Việt Nam, Lào, Campuchia, hạt ban tròn được giã và đắp trị rắn cắn và ong đốt.",
+                "chữa": "Ở Trung Quốc, toàn cây ban tròn được dùng chữa nhiễm khuẩn đường hô hấp trên, viêm gan, viêm thận và lỵ.",
+                "có tác dụng": "Rễ làm tăng tuần hoàn máu, kích thích tiết sữa, lợi tiểu."
+            },
+            "Cách dùng": null,
+            "luu_y": null
+        }
+    ]
+}

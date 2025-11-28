@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoàng nàn",
+      "ten_khac": "Hoàng nàn, Vỏ doãn, Mã tiền lá quế",
+      "ten_khoa_hoc": "Strychnos wallichiana Steud.",
+      "ma_taxon": "902581",
+      "ho": "Loganiaceae (Mã tiền)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Hoàng nàn là một loại cây mọc leo, cành gầy, nhẵn, có những móc mọc đối ở đầu những cành non, thân có vỏ xám với những đám màu vàng đỏ.",
+      "lá": "Lá mọc đối, nhẵn, dai, hơi bầu dục, phía cuống nhọn hay hơi tròn, đầu tù hay nhọn, dài 6-12cm, rộng 3-6cm, cuống ngắn.",
+      "hoa": "Hoa không cuống, mọc thành chùy ngù tận cùng, phủ lông màu hung nâu.",
+      "quả": "Quả hình cầu, đường kính 4-5cm, vỏ ngoài cứng, dày 4mm, trong chứa nhiều hạt hình khuy áo, đường kính 22mm hay hơn, dày 18mm giống như hạt mã tiền, cho nên có người cho hoàng nàn là vỏ cây mã tiền. Thu hái hạt thì gọi là mã tiền, thu hái vỏ thì gọi là hoàng nàn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": null
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong hoàng nàn có strycnin, bruxin. Hàm lượng ancaloit toàn phần lên tới 5,23% trong đó strycnin chiếm 2,37-2,43% và bruxin chiếm 2,81%. Tuy nhiên việc chiết xuất những ancaloit bằng phương pháp thông thường gặp trở ngại do chất nhựa kèm theo."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoàng nàn là một vị thuốc rất độc. Tuy nhiên nhân dân nhiều tỉnh nước ta dùng hoàng nàn chữa chó dại cắn, chữa hủi, ghẻ và một số bệnh ngoài da khó chữa. Chúng tôi còn thu thập được một đơn thuốc dùng hoàng nàn chữa thấp khớp. Để chữa ghẻ, hoàng nàn thường được dùng phối hợp với lá trầu không, thủy ngân. Hoàng nàn trước khi dùng phải chế biến như phần thu hái chế biến đã nói trên. Một vài vùng miền Trung nước ta lại dùng hoàng nàn để làm thuốc cường dương, kích thích dục tính của phụ nữ. Thuốc có độc, không có kinh nghiệm không được dùng.  Đơn thuốc có hoàng nàn dùng trong nhân dân  Đơn thuốc chữa tê thấp (theo kinh nghiệm của ông Phúc, nguyên trưởng ty y tế Hoà Bình-Đỗ Tất Lợi ghi lại)  Hoàng nàn chế sao vàng 600g, hương phụ tứ chế 160g, thảo quả không sao, bỏ vỏ lấy hạt 20g, đại hồi bỏ hạt, lấy vỏ 20g. Bốn vị tán nhỏ. Sau bữa ăn nửa giờ, uống 2-3g thuốc này, chiêu bằng nước hoặc bằng rượu. Uống xong đi nằm. Chữa nhức xương, sưng đầu gối, tê thấp. Một số người uống thuốc này vào thấy đau hơn, nhưng sau thì đỡ.  Chưa có dịp kiểm tra. Sơ bộ tính thấy liều dùng quá cao. Mỗi lần uống 100mg Ancaloit là quá cao. Ghi ở đây làm tài liệu tham khảo."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Theo các tác giả nghiên cứu trước, hoàng nàn chỉ thấy mọc ở một số nơi của miền Bắc Việt Nam: Hà Tây (Ba Vì), Lai Châu, Thanh Hoá, Nghệ An, Hà Tĩnh. Tại Lào cũng khu trú trên cùng một vĩ tuyến. Nhưng như trên đã nói, có thể ở những vùng này chỉ khai thác vỏ cho nên cho đó là hoàng nàn, còn những vùng khác chỉ khai thác hạt cho nên cho đó là cây mã tiền. Vấn đề còn đang nghiên cứu xác minh thêm. Thường người ta chặt cả cành, cắt thành từng khúc rồi mang về bóc vỏ. vỏ dài 4-5cm, cuốn vòng, đường kính 1-3cm, dày 1,5-2mm, mặt ngoài có những nốt sần xám đen hay đỏ nâu, có nốt sần to, mặt trong xám nâu nhạt, có vết kẻ dọc, vết bẻ nhẵn, trông rõ hai lớp. Khi thêm một giọt axit nitric vào mặt trong thấy có màu đỏ máu, mặt ngoài có màu lục đen. Vị rất đắng. Trước đây vỏ hoàng nàn được bán tự do khắp nơi, những hàng tạp hoá đều có bán để nhân dân mua về làm thuốc chữa hủi và những bệnh ngoài da khó chữa, chó dại cắn. Hiện nay việc bán phải theo chế độ của thuốc độc. Khi dùng, thường người ta phải cạo hết lớp vỏ vàng bên ngoài cho đến lần vỏ đen bên trong. Muốn cho dễ cạo, hoặc ngâm vỏ với nước vo gạo đặc một ngày, một đêm hoặc ngâm nước thường hay đồ lên cho mềm. Sau lại ngâm nước vo gạo trong ba ngày đêm, rồi vớt ra phơi hay sấy khô, tán thành bột dùng dần. Có người trước khi tán bột lại tẩm dầu vừng sao qua rồi mới tán. Vỏ vàng cạo ra cũng như nước ngâm hoàng nàn cần phải đổ bỏ đi cẩn thận tránh gây ngộ độc."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

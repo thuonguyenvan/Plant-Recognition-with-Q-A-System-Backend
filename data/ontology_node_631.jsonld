@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tre",
+      "ten_khac": "Tre gai, Tre nhà, Tre",
+      "ten_khoa_hoc": "Bambusa arundinacea (Retz.) Willd.",
+      "ma_taxon": "346795",
+      "ho": "Poaceae (Hòa thảo)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, mọc thành bụi dày, cao 10 – 15 m, có thể hơn, có gai.",
+      "chồi non": "Chồi non (măng) hình nón phủ bởi những vòng mo cứng, hình tam giác, mặt ngoài có gân dọc và lông cứng màu nâu đen, đầu xẻ thành tua ngắn.",
+      "thân": "Thân thẳng có gióng rỗng và dài, vách thân dày, những đốt ở phía gốc thường có rễ khí sinh.",
+      "cành": "Cành mảnh, vươn dài, phân nhiều cành phụ.",
+      "lá": "Lá mọc so le, có cuống rất ngắn, hình mác dài 8 – 15 cm, rộng 1 – 2 cm, gốc tròn, đầu thuôn nhọn, gân song song, mặt trên nhẵn, mặt dưới có lông nháp, hai mặt cùng màu.",
+      "hoa": "Cụm hoa là những bông nhỏ mang nhiều hoa; mày hình trứng, mày ngoài ngắn, mày trong dài hơn; bao hoa có 2 – 3 vảy; nhị 6, chỉ nhị dài thò ra ngoài; bầu hình trứng nhẵn.",
+      "quả": "Quả thuôn."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi\u00a0Bambusa\u00a0Schreb. có khoảng 50 loài trên thế giới, phân bố chủ yếu ở vùng nhiệt đói Châu Á, vài loài ở Châu Phi và Châu Mỹ (Lê Nguyên và cộng sự, 1971). Ở Ấn Độ, có 26 loài; Việt Nam 25 loài. Cây tre có thể có nguồn gốc ở Ấn Độ, và hiện nay được trồng nhiều ở một số nước Đông Nam Á và phía nam Trung Quốc, ở Việt Nam, tre là loài cây trồng quen thuộc ở khắp các vùng đồng bằng, trung du và núi thấp. Cây ưa khí hậu nóng và ẩm của vùng nhiệt đới, nhiệt độ trung bình từ 22 đến 26°C, tối thấp và tối cao vào khoảng 5°C và 38°C. Tre có thể sống được trên nhiều loại đất, song tốt nhất là loại đất có thành phần cơ giới nhẹ, ẩm và dễ thoát nước. Tre không chịu được ngập úng lâu ngày, nhất là trong giai đoạn đang có nhiều măng. Tre là loại cây có thân ngầm mọc cụm. Từ các thân ngầm được 1 tuổi, mọc ra 1 – 2 chồi mới gọi là măng. Sau 4 – 5 tháng măng sẽ phát triển thành cây tre hoàn chỉnh, và đến khi được 1 năm tuổi, thân ngầm lại cho ra một thế hệ chồi mới. Tuy nhiên không phải tất cả các chồi đều trở thành mãng, mà phần lớn chúng ở trạng thái ngủ, hoặc có thành măng cũng không phát triển đầy đủ (thường gọi là “mãng điếc”). Do thân ngầm của tre ngắn, các thế hệ được sinh ra không tách xa nhau mà tạo thành bụi tre ngày càng lớn. Mặt khác, thân ngầm của tre khi mọc thành bụi vừa có tính hướng trong lẫn hướng ngoài. Những chồi măng mọc hướng trong thường gối lên thân ngầm của các thế hệ trước, phần rễ bám xuống đất lúc đầu kém vững chắc hơn so với cây non mọc hướng ngoài. Song dò được các cây ở thế hộ trước che chở, khi gặp gió bão chúng cũng không bị đổ. Vấn đề tre ra ra hoa là một hiện tượng tương đối hiếm gặp. Theo một số tài liệu (The Wealth of India, Vol.I, 1948; Nhận biết, gây trồng, bảo vệ và khai thác tre trúc, NXB Nông thôn, 1971) cây tre mọc được hơn 30 năm mới có thể ra hoa. Thường chỉ thấy một vài cây ra hoa; lúc này cây có hiện tượng rụng lá, các lá còn lại ở ngọn thường nhỏ lại và chuyển từ màu xanh sang xanh lá mạ hoặc hơi vàng. Hầu hết các cây sau khi đã ra hoa quả đều tàn lụi và chết. Hiện tượng này được N.p. Kơrenke gọi là “Chu kỳ già và phục tráng”. Hạt tre khi gặp điều kiện thuận lợi cũng có thể nảy mầm được. Tre là loài cây thân thuộc và vô cùng hữu ích đối với người nông dân Việt Nam. Bên cạnh các công dụng chủ yếu trong xây dựng, đan lát, làm công cụ, tre được trồng thành hàng để bảo vệ chân đê, giữ sói lở đất đồi; luỹ tre làng giúp làm sạch môi sinh, chắn gió cho các làng quê trong mùa giông bão."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Tre là cây đa dụng được trồng nhiều. Cây không kén đất, nhưng ỏ đất ẩm, cây sinh trưởng tốt hơn. Ngược lại, ở đất khô cằn, nhiều sỏi đá, nhiều cát cây trở nên còi cọc. Tre được trồng bằng đoạn gốc. Thời vụ trồng tốt nhất vào khoảng tháng 2-3. Khi trồng, chọn các nhánh tre bánh tẻ được 1-2 năm tuổi, mập, không sâu bệnh, gồm cả rễ và phần thân dài 1,0 – 1,5 m rồi giâm ngay trong bùn. Có thể đánh cả bụi nhỏ có măng để trồng. Tre thường được trồng ở bờ ao, xung quanh vườn, ven sông, suối, ven bờ đê… Trồng theo hốc, cách nhau 3 – 5 m. Hốc đào to, nhỏ tùy theo hom giống. Nếu chỉ trồng 1 hom, đào hốc 40 x 40 x 60 cm, nếu trồng cả cụm, đào to hơn. Muốn tre mau lớn, nên bón lót mỗi hốc 10 – 15 kg phân chuồng. Hom giống đặt nghiêng 40 – 45°, lấp đất trộn phân cao hơn gốc cũ 10 – 12 cm, dận chặt. Trong quá trình sinh trưởng, phát triển, tre “ăn lên”, vì vậy, cần hạ hom giống sâu sao cho sau khi lấp đất, mặt đất lấp vẫn thấp hơn mặt hố 25 – 30 cm. Thân cây giống cần chặt sát phía trên đốt, lấy bùn hoặc bùn trộn rơm đắp lên trên để giữ ẩm và tránh nước mưa làm thối. Trong thời gian đầu, cần giữ ẩm, về sau không cần tưới. Hàng năm, vào tháng 4-5, cần vun gốc, tốt nhất là dùng đất bùn đắp xung quanh gốc, vừa làm chắc gốc để tránh gió bão, vừa cung cấp thêm dinh dưỡng cho cây. Đôi khi tre có thể bị rệp gây hại, nhất là đối với măng và cây non. Có thể phun thuốc trừ diệt. Một bụi tre tốt có thể cho hàng chục cây. Sau khi trồng được 4-5 năm, có thể thu hoạch. Thu từng cây khi cần hoặc chặt toàn bộ cụm tre. Gốc còn lại sẽ tái sinh chồi mới. Khi tre ra hoa, cần phá đi trồng lại."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Nhiều bộ phận của cây tre được dùng làm thuốc như tinh tre (trúc nhự) nước tre non (trúc lịch) lá tre (trúc diệp). Để lấy tinh tre người ta cạo bỏ lớp vỏ xanh, sau đó chẻ phần thân thành từng phơi mỏng còn phơn phớt xanh, rồi phơi khô. Khi dùng tẩm nước gừng, sắc lấy nước. Để có nước tre non, lấy tre non tươi về nướng, rồi vắt lấy nước. Lá tre thường được dùng tươi."
+    },
+    {
+      "@type": "Thành phần"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá tre có vị ngọt nhạt, hơi cay, tính lạnh, vào các kinh : tâm, phế, có tác dụng thanh nhiệt, lợi tiểu, giảm sốt. Nước ép từ cây tre non để tươi, đem nướng, có vị ngọt, tính lạnh, vào các kinh : tâm, vị, có tác dụng thanh nhiệt, hóa đờm, giảm sốt. Tinh tre có vị ngọt, hơi đắng, tính mát, vào các kinh : phế, can, vị, có tác dụng thanh nhiệt, hóa đờm, cầm nôn. Cặn silic đọng ở trong gióng cây tre già có vị ngọt, hơi mặn, tính lạnh, có tác dụng giảm sốt. Măng tre có vị ngọt, mát, hơi đắng, có tác dụng thanh nhiệt."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Lá tre được dùng chữa cảm sốt, khát nước, ra nhiều mồ hôi, ho, suyễn, thổ thuyết, trẻ con kinh phong. Ngày dùng 20g dưới dạng nước sắc. Nếu sốt cao, dùng trúc diệp phối hợp với bột thạch cao nung (12g). Dùng ngoài, lấy lá tre, nấu với lá bưởi, củ sả, cúc tần, hương nhu, bạc hà, rồi xông làm thuốc giải cảm, chữa nhức đầu và chống cúm. Búp tre hay đọt tre phối hợp với các vị khác chữa đái buốt, đái nhắt, và lỵ mạn tính. Trúc nhự chữa cảm sốt, buồn phiền, bứt rứt, với liều mỗi ngày 10 – 20g dưới dạng nước sắc. Trúc nhự phối hợp với gừng sống (3 lát) sắc uống chữa nôn oẹ khi có thai; với lá bưởi bung, lá chanh và lá tầm xoọng (lượng bằng nhau), phơi khô, tán bột rắc, chữa mụn rò mủ lâu ngày; với mạch môn, mỗi vị 16g sắc uống chữa ho đờm, hồi hộp không ngủ, nếu sao qua tán nhỏ, mỗi lần dùng 12g, uống với nước nóng lại chữa kinh nguyệt ra nhiều, rong kinh. Măng tre giã nát, ép lấy nước uống cùng với nước gừng chữa sốt cao. Người tỳ vị hư hàn hoặc đang dưỡng bệnh không nên dùng măng tre vì khó tiêu. Người bị bệnh sốt rét ăn măng tre dễ bị tái phát. Mo nang tre đốt thành than, tán nhỏ, rắc chữa mọn nhọt đã vỡ mủ, lở loét lâu ngày, sâu quảng. Ở Ấn Độ, lá tre được dùng làm thuốc trị ho và cảm lạnh. Măng tre non chứa 0,03% acid hydrocyanic độc gây chết bọ gậy. Măng sống hoặc luộc chưa kỹ mà ăn có thể gây chết. Măng tre có trong thành phần một bài thuốc cổ truyền Ấn Độ gồm nhiều vị để điều trị sỏi niệu. Theo kinh nghiệm dân gian Ấn Độ, người phụ nữ ăn măng tre lên men trong một tháng để chống thụ thai, và còn cho rằng có thể gây vô sinh không hồi phục, ở Indonesia, măng non một số loài\u00a0Bambusađược dùng trong một số bài thuốc chữa đau bụng, vàng da; nước sắc của măng tre với rễ cây dừa uống trị mất ngủ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa cảm sốt, miệng khô khát Lá tre 30g, thạch cao 12g, mạch môn 8g, gạo tẻ 7g, bán hạ 4g, nhân sâm (hoặc đảng sâm) 2g, cam thảo 2g. Sắc uống trong ngày. Chữa cảm sốt và cúm có sốt cao Lá tre, kim ngân, mỗi vị 16g; cam thảo đất 12g; kinh giói, bạc hà, mỗi vị 8g. sắc uống ngày một thang. Lá tre 20g, bạc hà 40g; kinh giới, tía tô, cối xay, mỗi vị 20g. Sắc uống ngày một thang. Chữa say nắng, cảm nắng Nước măng tre chua 300 ml; gừng gió, muối ăn mỗi vị 20g; hành tươi, tỏi tươi, mỗi vị 10g; gừng tươi 5g, trứng gà 1 quả. Đun sôi nước măng chua; những vị khác giã nát, trộn lẫn, bỏ vào nước măng sôi, đập trứng vào, khuấy đều cho chín, uống lúc còn nóng. Sau khi uống thuốc, ủ ấm người cho ra mồ hôi. Chữa viêm đại tràng mạn tính thể táo Trúc nhự 8g; sài hồ, đương quy, nhân trần, chi tử (sao), vỏ cây khế, đảng sâm, chỉ thực, thương truật, bạch thược, táo nhân (sao đen), mỗi vị 12g; cúc hoa 8g, bạc hà 6g. sắc uống ngày một thang. Chữa vết thương chảy máu Lá tre non, gạo tẻ, mỗi vị 40g; thuốc lào 20g. Phơi khô, giã nhỏ, rây bột mịn, rắc vào vết thương và băng lại. Chữa đái buốt, đái nhắt Búp tre, rau má, mỗi vị 20g (tươi). Giã nát vói vài hạt muối, thêm nước, gạn uống. Mỗi ngày dùng một thang. Chữa lỵ mạn tính Búp tre 4g, chè tươi 10g, hạt cau già 2g. Sao vàng, sắc uống ngày một thang. Chữa tăng huyết áp Búp tre non 10g, lá diễn tươi 100g, lá dâu tươi 50g, hoa cúc vàng 15g. Sắc uống thay nước trà, mỗi ngày một thang. Chữa lỗ rò lao hạch hay tràng nhạc ở cổ Tinh tre 10g; lá chanh, lá tầm xoọng, mỗi vị 20g. Các vị phơi khô, tán nhỏ. Rửa sạch vết loét, rắc thuốc rồi băng lại. Chữa viêm phế quản cấp tính Lá tre 12g, thạch cao 16g; tang bạch bì, mạch môn, sa sâm, thiên môn, hoài sơn, mỗi vị 12g; lá hẹ 8g. Sắc uống ngày một thang. Chữa hen phế quản khi đang có cơn hen Trúc lịch 20 ml, tang bạch bì 20g; hạnh nhân, hoàng cầm, mỗi vị 12g; bán hạ chế 8g, ma hoàng 6g, cam thảo 4g. Sắc uống ngày một thang. Chữa viêm phổi ở giai đoạn khởi phát Trúc nhự 8g; kim ngân, sài đất, bồ công anh, mỗi vị 20g; kinh giới, cỏ mần trầu, mỗi vị 16g; tang bạch bì 12g, hạnh nhân 8g. Sắc uống ngày một thang. Chữa viêm phổi ở giai đoạn chưa có biến chứng: Trúc nhự 8g; thạch cao, cỏ mần trầu, mỗi vị 20g; hoàng liên, hoàng bá, kim ngân hoa, bồ công anh, sài đất, mỗi vị 16g; tang bạch bì, hạnh nhân, mỗi vị 12g; bối mẫu, cam thảo, mỗi vị 6g. sắc uống ngày một thang. Chữa viêm thanh quản nói không ra tiếng: Trúc nhự, lá tre, tang bạch bì, mỗi vị 12g; thổ bối mẫu 10g; thanh bì, cát cánh, mỗi vị 8g; nam tinh chế 6g, gừng 4g. Sắc uống ngày một thang. Chữa viêm màng phổi do lao, tràn dịch màng phổi: Lá tre 10g, phục linh 12g, thương truật 10g; hồng hoa, đào nhân, mỗi vị 8g; cam thảo 6g; nguyên hoa, cam toại, đại kích, mỗi vị 4g; đại táo 10 quả. Sắc uống ngày một thang. Cần theo dõi mạch và huyết áp người bệnh vì bài thuốc gây tiêu chảy nhiều. Chữa viêm cầu thận cấp tính: Lá tre 16g; bồ công anh, rễ cỏ tranh, mỗi vị 20g; sinh địa, mộc thông, hoàng bá, hoàng cầm, mỗi vị 12g; cam thảo 4g. Sắc uống ngày một thang. Chữa viêm bàng quang cấp tính: Lá tre 16g; sinh địa, mộc thông, hoàng cầm, mỗi vị 12g; cam thảo, đăng tâm, mỗi vị 6g. Sắc uống ngày một thang. Chữa đái ra dưỡng trấp: Lá tre, kim tiền thảo, mía dò, mỗi vị 20g; giá đỗ xanh, tỳ giải, mỗi vị 16g; ý dĩ 12g, hoạt thạch 10g. Sắc uống ngày một thang. 19. Chữa trầm cảm, hoang tưởng, ảo giác: Trúc nhự 8g, cam thảo dây 12g; bán hạ chế, trần bì, đởm nam tinh, chỉ thực, củ gấu, ô dược, mỗi vị 8g. Sắc uống ngày một thang. Trúc nhự 6g, phục linh 12g; bán hạ, trần bì, chỉ thực, mỗi vị 8g; cam thảo 6g, gừng 2g. Sắc uống ngày một thang. Chữa giai đoạn sau cơn kịch phất của bệnh tâm thẩn thể hưng phấn (chứng cuồng): Lá tre 16g; sinh địa, mạch môn, huyền sâm, mộc thông, mỗi vị 12g; tâm sen, cam thảo nam, mỗi vị 8g; đăng tâm 6g. sắc uống ngày một thang. Trúc lịch 12 ml; tiểu mạch, đại táo, mạch môn, mỗi vị 12g; sơn thù, bạch thược, bán hạ chế, mỗi vị 8g; cam thảo 6g. Sắc uống ngày một thang. Chữa co giật trẻ em: Lá tre 16g; sinh địa, mạch môn, câu đằng, lá vông, mỗi vị 12g; chi tử 10g; cương tàm, bạc hà, mỗi vị 8g. Sắc uống ngày một thang. Chữa sởi ở thời kỳ đang mọc: Lá tre 20g; sài đất, ngân hoa, mỗi vị 16g; mạch môn, sa sâm, sắn dây, cam thảo đất, mỗi vị 12g. sắc uống ngày một thang. Chữa thủy đậu: Lá tre, liên kiều, mỗi vị 8g; cát cánh, đạm đậu sị, mỗi vị 4g; bạc hà, sơn chi, cam thảo, mỗi vị 2g; hành tăm 2 củ. Sắc uống ngày một thang. Chữa nôn mửa khi mang thai: Trúc nhự 6g, đảng sâm 16g; bạch truật, ý dĩ, mỗi vị 12g; trần bì, bán hạ chế, mỗi vị 8g; gừng tươi 2g. Sắc uống trong ngày. Trúc nhự 8g, đảng sâm 16g; trần bì, bán hạ chế, bạch linh, mạch môn, tỳ bà diệp, đại táo, mỗi vị 8g; gừng tươi 2g. Sắc uống. Trúc nhự 8g; trần bì, bán hạ chế, mỗi vị 6g; tô diệp, hoàng liên, mỗi vị 4g. sắc uống. Trúc nhự 6g; hoàng liên, bán hạ chế, phục linh, mỗi vị 8g; trần bì, chỉ xác, mỗi vị 6g; cam thảo 4g. Sắc uống trong ngày. Chữa loét miệng: Lá tre 16g, thạch cao 20g; sinh địa, chut chít, cam thảo nam, mỗi vị 16g; huyền sâm, ngọc trúc, mộc thông, mỗi vị 12g. sắc uống ngày một thang."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

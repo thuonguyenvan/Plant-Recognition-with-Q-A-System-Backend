@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Quýt",
+      "ten_khac": "Quít, Quất thực, Mạy cam chĩa (Tày), Cam chảy ten (Dao)",
+      "ten_khoa_hoc": "Citrus reticulata Blanco",
+      "ma_taxon": "1611056",
+      "ho": "Rutaceae (Cam)",
+      "Mô tả": {
+        "cây": "Cây nhỡ, cao 5-8m.",
+        "thân": "Cành cứng, không có gai hoặc có gai ngắn.",
+        "lá": "Lá mọc so le, nguyên hoặc hơi khía tai bèo, dai, hình trái xoan, gốc thuôn, đầu tù hoặc hơi nhọn, mặt trên nhẵn bóng, mặt dưới nhạt có gân nổi rõ, cuống lá ngắn, hơi có cánh.",
+        "hoa": "Hoa mọc riêng lẻ ở kẽ lá, đài hoa có 5 răng hình trái xoan, có mũi nhọn. Tràng có 5 cánh thuôn dày.",
+        "quả": "Quả gần hình cầu, dẹt, khi chín màu vàng cam sẫm, vỏ quả lồi lõm nhưng không sần sùi, cơm quả ngọt, chua và thơm",
+        "mùa hoa": "Tháng 7-12",
+        "mùa quả": "Tháng 7-12",
+        "mọc": "Nhiều loài khác như quýt giấy, quýt tàu, quýt hôi cũng được dùng."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "thành phần": "Theo tài liệu Ấn Độ, vỏ quýt chứa tinh dầu với thành phần chủ yếu là d. limonen 91% và các terpen, caren linalool, anthranilat methyl lượng nhỏ hơn.",
+        "gồm chất": "Quả quýt chứa 87,8% nước, 0,9% protein, 10,6% hydrat carbon, 0,3% chất béo, 0,4% chất vô cơ gồm: Ca 0.005mg%; P 0,002mg%, Fe 0,01%, caroten 350 UI%, Vitamin B1 40 UI% và Vitamin C 68mg%",
+        "chứa": "Hạt quýt có 60-62% nước, 12-31% protein, 0,05% chất béo và 0,84% tro"
+      },
+      "Tính vị": {
+        "Có vị": "Quả quýt có vị ngọt, chua, tính ôn, có tác dụng nhuận phế, tiêu khát, khai vị.",
+        "Có vị": "Trần bì có vị cay, đắng, tính ôn vào 2 kinh tỳ và phế, có tác dụng lý khí, táo thấp, hóa đờm, kiện vị.",
+        "Có vị": "Thanh bì có vị cay, đắng, tính ôn vào 2 kinh can và đởm, có tác dụng sơ can, phá khí, tán kết (sơ tán can khí uất kết), tiêu đờm.",
+        "Có vị": "Hạt quýt có vị đắng tính bình, vào 2 kinh can và thận có tác dụng lý khí, tán kết, chỉ thống.",
+        "Có vị": "Lá quýt, có vị cay, đắng, tính bình, vào 2 kinh can và phế, có tác dụng sơ can, hành khí, hóa đờm."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả quýt được dùng để ăn khi chín.",
+        "được_dùng": "Dịch ép từ múi quýt pha với nước và siro là một loại giải khát thông dụng, mát bổ, dễ tiêu.",
+        "chữa": "Trần bì chữa ăn không tiêu, đau bụng, nôn mửa, ho tức ngực, nhiều đờm.",
+        "làm thuốc": "Liều dùng hàng ngày 4-12g dưới dạng thuốc sắc hay thuốc bột",
+        "chữa": "Thanh bì chữa đau gan, tức ngực, đau mạng sườn, sốt rét với liều dùng 3-9g/ngày",
+        "chữa": "Hạt quýt chữa sa ruột, bìu sưng đau, viêm tuyến vú, đau lưng với liều dùng 3-9g/ngày",
+        "chữa": "Lá quýt chữa ngực đau tức, ho, sưng vú, sa ruột với liều dùng 10-20 lá /ngày."
+      },
+      "Cách dùng": {
+        "chữa": "Chữa đau bụng nôn mửa, ợ hơi, tiêu hóa kém: Trần bì 8g, hoắc hương 8g, gừng sống 3 lát. Sắc với 200ml nước còn 50ml uống trong ngày.",
+        "chữa": "Chữa ho mất tiếng: Trần bì 12g sắc với 200ml nước còn 50ml thêm đường đủ ngọt, uống dần trong ngày.",
+        "chữa": "Chữa ho nhiều đờm, đờm đặc, tức ngực: Trần bì, bán hạ (chế) mỗi vị 6g, phục linh 12g, cam thảo 3g. Sắc nước uống.",
+        "chữa": "Chữa tinh hoàn sưng đau: Trần bì, hạt vải ( thái mỏng, phơi khô sao vàng), đại hồi. Liều lượng mỗi thứ bằng nhau, tán nhỏ, rây bột mịn. Ngày uống 4-8g, chia làm 2 lần, chiêu với rượu.",
+        "chữa": "Chữa tỳ vị bất hòa, tâm phúc trương mãn (đầy bụng), ợ ra nước chua, đi ngoài, chán ăn: Thanh bì, tiểu hồi hương (sao), thương truật (ngâm nước vo gạo), trần bì, nhục quế (bỏ vỏ ngoài), cao lương khương, hương phụ, cam thảo (chích) mỗi vị 30g, cát cánh 10g. Tất cả nghiền thành bột, mỗi lần uống 6g với ít muối.",
+        "chữa": "Chữa sưng vú, sốt của phụ nữ trong thời kỳ cho con bú: Lá quýt 20 lá, qua lâu nhân 1/2 hạt, xuyên khung, hoàng cầm, chi tử, liên kiều,  thạch cao, sài hồ, trần bì, thanh bì mỗi vị 3g; cam thảo (sống) 1,5g. Sắc nước uống nhiều lần trong ngày."
+      },
+      "luu_y": {}
+    }
+  ]
+}

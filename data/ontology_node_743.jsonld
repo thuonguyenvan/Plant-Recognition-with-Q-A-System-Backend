@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tầm phỏng",
+      "ten_khac": "Tầm phỏng, Tam phỏng, Xoan leo, Mang hổ, Phong thuyền cát, Búp bụp, Phác tèng (Tày)",
+      "ten_khoa_hoc": "Cardiospermum halicacabum L.",
+      "ma_taxon": "62944",
+      "ho": "Sapindaceae (Bồ hòn)",
+      "Mô tả": {
+        "lá": "Lá kép mọc so le, có cuống dài, xẻ 2 – 3 lần lông chim, lá chét chia thùy sâu hoặc có răng cưa to, nhỏ dần về phía đầu lá; không có lá kèm.",
+        "hoa": "Cụm hoa mọc thành chùm ngắn ở kẽ lá, cuống chung có 2 tua cuốn mọc đối; hoa nhỏ lưỡng tính, màu trắng; đài 4 – 5 răng, 2 răng ngoài nhỏ; tràng 4 cánh không đều, xẻ nẻ với lá đài, có vảy ở gốc móng; nhị 8, chỉ nhị rời; bầu 3 ô.",
+        "quả": "Quả nang, hình cầu hoặc hình quả lê, chứa 3 ngăn, vỏ quả mỏng phình to, có gân lồi và lông mềm; hạt tròn, màu đen.",
+        "cây": "Dây leo bằng tua cuốn, sống một năm hay nhiều năm. Cành mảnh, mềm, có khía dọc, nhẵn hoặc có ít lông.",
+        "mùa hoa": "tháng 2-3",
+        "mùa quả": "tháng 4-5",
+        "thân": "Cành mảnh, mềm, có khía dọc, nhẵn hoặc có ít lông."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Cardiospermum L. có 23 loài, thường là dây leo nhỏ, phân bố chủ yếu ở vùng nhiệt đới châu Mỹ và châu Phi. Ở châu Á có 2 – 3 loài. Việt Nam chỉ có 1 loài là tầm phỏng. Tầm phỏng phân bố rải rác ở hầu hết các tỉnh thuộc vùng núi thấp, trung du và đồng bằng. Độ cao phân bố dưới 1000 m. Cây sống hằng năm, ưa sáng và ưa ẩm, thường leo lên các loại cây cỏ khác ở bìa nương rẫy, đồi, ven rừng. Ở đồng bằng, đôi khi gặp tầm phỏng ở bãi sông, các lùm bụi quanh làng. Hằng năm, cây con mọc từ hạt thấy được vào cuối mùa xuân. Cây sinh trưởng nhanh trong mùa hè, sau khi quả già thì phát đầu cạn lụi, kết thúc vòng đời trong thời gian khoảng 6 tháng.",
+        "các_tỉnh": {
+          "mục": "các tỉnh thuộc vùng núi thấp, trung du và đồng bằng"
+        },
+        "Đặc điểm sinh trưởng": "Cây sống hằng năm, ưa sáng và ưa ẩm, thường leo lên các loại cây cỏ khác ở bìa nương rẫy, đồi, ven rừng."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Toàn cây, thu hái quanh năm, dùng tươi hay phơi khô."
+      },
+      "Thành phần": {
+        "thành phần": "Theo Rao C. Venkata và cs., 1987, lá tầm phỏng chứa (+)-pinitol, apigenin-7-O-glucuronod, chrysoeriol-7-O-glucuronid và luteolin-7-O-glucuronid (CA 111: 54183 r). Theo Kan M. S. và cs., 1990, cả cây chứa acid arachidic, apigenin và β-sitosterol = β-D-galactosid (CA 112: 195284 g). Shabana M. M. và cs., 1990, đã tìm thấy trong tầm phỏng 3 flavonoid glucosid thuộc nhóm flavon có tác dụng diệt trứng và ấu trùng của loài Musca domestica và diệt ấu trùng của Philosamia ricini (CA 117 : 64787 d). Hạt chứa dầu béo khoảng 30%, gồm các glycerid của các acid arachidic, acid lignoceric, acid stearic, acid oleic và acid linoleic và glycerol. Ngoài ra, hạt còn có cyanolipid 55% (cardiospermin) gồm 45% acid C₁₀. Phần không xà phòng hóa của vỏ quả ngoài chứa các sắc tố và flavon. Phần trong của hạt chứa các hợp chất triterpenoid và steroid (Prosea 12 (1), 1999)."
+      },
+      "Tính vị": {
+        "Có vị": "Tầm phỏng có vị đắng, hơi cay, tính mát, có tác dụng giảm đau, tiêu sưng, tiêu thũng, làm se, hàn vết thương, lương huyết, giải độc. Rễ làm ra mồ hôi, lợi tiểu, khan vị, nhuận tràng, gây sung huyết da, điều kinh."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Tầm phỏng thường được dùng chữa cảm sốt, viêm đường tiết niệu, viêm thận phù thũng, thấp khớp. Ngày 15–30g dạng thuốc sắc. Dùng ngoài, trị lở loét ngứa lở, viêm mủ da, eczema, ghẻ ngứa, côn cắn. Tùy trường hợp mà dùng cây tươi giã nát lấy nước uống, hoặc đắp đắp lá nấu nước rửa hay tắm. Dịch ép lá nhỏ tai chữa đau tai. Ở các nước Đông Nam Á, rễ là bộ phận làm thuốc quan trọng nhất của tầm phỏng. Dược liệu được coi là có tác dụng làm ra mồ hôi, lợi tiểu, hạ nhiệt, gây nôn và tẩy. Rễ được dùng ở Indonesia và Philippin trị viêm bàng quang và đường tiết niệu. Lá trị thấp khớp ở Philippin, uống trong hoặc đắp ngoài. Ở Indonesia, lá vò nát, đắp làm mát trị nhức đầu; nước hãm lá là thuốc chữa trị tiêu chảy và lỵ; nước sắc lá dùng xông hơi chữa nhức đầu. Ở Malaysia và Thái Lan, lá tầm phỏng trị đau mắt. Ở Bangladesh, viên hoàn mềm chế từ toàn cây được dùng trị hen. Ở Nam Phi, nước hãm lá và cuống được dùng làm thuốc thụt trị tiêu chảy và lỵ. Ở Campuchia, lá được dùng ngoài trị bệnh da. Ở Trung Quốc, nước sắc cây tầm phỏng được dùng làm nước rửa sau phẫu thuật, nước hãm trị lở loét trên da bị ngứa, và nước sắc lá để rửa những vết lở loét. Ở Đài Loan, lá giã với ít muối đắp chữa sung tấy. Ở Ấn Độ, lá và rễ lợi tiểu, làm ra mồ hôi, an thần, nhuận tràng, điều kinh và gây sung huyết da, và đôi khi trị thấp khớp, đau lưng, rối loạn chức năng gan và bệnh thần kinh. Dịch ép toàn cây còn non trị bon ten lâu. Bài thuốc có tầm phỏng 1. Chữa tê thấp, đau mình mẩy: Cả cây tầm phỏng, rễ xấu hổ, mỗi vị 20g; rễ cỏ xước 15g; củ sả 10g. Tất cả sao vàng, sắc uống ngày một thang, uống làm một lần trước bữa ăn 30 phút. 2. Chữa kiết lỵ: Cả cây tầm phỏng, ké đầu ngựa (cành và lá), mỗi vị 20g. Sắc rồi thêm ít muối uống vào lúc đói, ngày một thang. 3. Chữa vết thương sưng đau: Cả cây tầm phỏng tươi 60g, giã nhỏ, thêm nước, gạn uống, bã đắp. 4. Chữa phụ nữ mang thai hay sau khi sinh bị trúng gió, trào đờm, cắn răng không tỉnh, mình uốn vặn, tay chân cứng đờ (sản giật): Lá tầm phỏng giã nát, chế đóng tiện vào, vắt lấy nước cốt uống. 5. Chữa đái tháo đường: Cả cây tầm phỏng tươi 60g; sắc uống ngày một thang. Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+      },
+      "Cách dùng": {
+        "được_dùng": null
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}

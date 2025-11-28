@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xoay",
+      "ten_khac": "Xoay, Xây, Xay, Kiến kiên.",
+      "ten_khoa_hoc": "Dialium cochinchinense Pierre",
+      "ma_taxon": "191448",
+      "ho": "Caesalpiniaceae (Vang)",
+      "Mô tả": {
+        "cây": "Cây to, thường xanh, cao 30 – 35 m, tán hình ô, phân nhiều cành.",
+        "thân": "Thân hình trụ thẳng, gốc có bạnh vè to rộng, cao đến 3 m. Cành non mảnh hơi có rãnh, 4 cạnh có lông. Vỏ nhẵn, màu trắng xám.",
+        "lá": "Lá kép một lần lông chim lẻ, mọc so le, 5 – 7 lá chét hình trái xoan, dài 4 – 7 cm, rộng 1,5 – 3,5 cm, gốc tròn, đầu có mũi tù, hai mặt nhẵn.",
+        "hoa": "Cụm hoa mọc ở kẽ lá thành chùy dài 20 – 30 cm, có lông màu vàng; hoa nhỏ màu trắng, nhị 2.",
+        "quả": "Quả đậu, hình trứng, dài 1,8 – 2 cm, rộng 1,3 – 1,5 cm, phủ lông mịn màu nâu hoặc nâu xám; vỏ quả ngoài mỏng, giòn dễ vỡ, vỏ quả giữa mềm và xốp như bột, có vị chua ngọt như cơm quả me, vỏ quả trong là lớp màng dai; hạt 1, hơi dẹt có vỏ cứng, màu vàng nâu hồng và một đường văn nhạt."
+      },
+      "Phân bố": {
+        "phân_bố": "Cây của miền Ðông dương, mọc trên đất ẩm trong rừng và savan, ở độ cao 500-1600m, từ Nghệ An trở vào Nam. Thu hái vỏ quanh năm."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": ""
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Vỏ, gỗ thân và quả."
+      },
+      "Thành phần": {
+        "thành phần": "Trong vỏ quả có tới 13% chất gôm.",
+        "thủy phân": "Thủy phân chất gôm này cho glucoza, fructoza và arabinoza.",
+        "chứa": "Trong thân và lá có một ít ancaloit (Theo Hệ dược của Viện Y học Bắc Kinh, 1958)."
+      },
+      "Tính vị": {
+        "Có vị": ""
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Quả xoay ăn ngon, được trẻ em và phụ nữ ưa thích vì cơm quả có mùi vị như quả me chín làm ô mai. Quả tươi được bày bán ở các chợ Tây Nguyên, miền Trung và Đông Nam Bộ vào mùa quả chín. Cao cơm quả xoay có tác dụng nhuận tràng.  Cách làm cao như sau:  Lấy 100 g cơm quả xoay nghiền nát với nước. Lọc, dùng dịch lọc cô với lửa nhỏ đến khi thành cao mềm. Ngày dùng 2 – 3 lần, mỗi lần 4 – 8 g.  Ở một số vùng Tây Nguyên, những người cao tuổi lấy quả xoay chín, bóc vỏ lấy cơm ngâm với rượu 25 – 30°, càng lâu càng tốt. Ngày uống 2 lần, mỗi lần một chén nhỏ trước bữa ăn để làm thuốc bổ, kích thích tiêu hóa, làm ăn ngon.  Theo tài liệu nước ngoài, vỏ thân cây xoay có tác dụng làm săn, chữa tiêu chảy ở trẻ em và bệnh nấm da (ringworm). Gỗ thân cây xoay phối hợp với một vài loài muồng (Cassia), được chế thành dạng chế thuốc, uống chữa bệnh mày đay.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam  Quả xộp là một vị thuốc nhân dân dùng từ lâu đời. Các sách cổ Thần nông bản thảo, Bản thảo cương mục đều có ghi.  Theo các tài liệu cổ và kinh nghiệm nhân dân, quả xộp là một vị thuốc bổ, chữa được di tinh, liệt dương, đau lưng, lỵ lâu ngày, thổ huyết (giải độc), tiểu đường, tan sỏi. Vùng Quảng Đông, Quảng Tây người ta dùng quả này phơi khô với tên vương bất lưu hành, một vị thuốc có tác dụng thông tia sữa.  Có thể làm mứt để ăn.  Liều dùng: Ngày uống 3 – 6 g. Có thể uống tới 20 – 30 g dưới dạng thuốc sắc hoặc chế thành cao mà ăn.  Cành và lá chữa mụn nhọt, thông đại tiện, tiêu tiểu, lợi sữa.  Ngày dùng 8 – 16 g dưới dạng thuốc sắc hoặc nấu cao.  Đơn thuốc có quả xộp  Thuốc bổ chữa đau xương đau người:  1. Cao quả xộp: Quả xộp thái nhỏ, nấu với nước, lọc bã, cô đặc thành cao. Ngày uống 5 – 10 g chữa các chứng đau xương, đau người của người già, còn làm thuốc bổ, thuốc điều kinh, giúp sự tiêu hóa.  Có thể dùng dây và lá phơi khô nấu cao.  2. Rượu bổ chữa di tinh, liệt dương:  Rượu cây xộp: Cành lá phơi khô 100 g, đậu đen 50 g, ngâm vào 250 ml rượu, trong 10 ngày lọc lấy rượu mà uống. Khi uống có thể pha thêm đường làm thuốc bổ, chữa đau lưng, đau người, di tinh, liệt dương. Ngày uống 10 – 30 ml rượu một lần.  Nguồn: Những cây thuốc và vị thuốc Việt Nam  Vỏ cây thường dùng ăn trầu thay Chay.  Ở Campuchia, nó thường được dùng phối hợp với vỏ cây Muồng xiêm và Muồng chét để trị bệnh Tôkêlô. Cũng được dùng trị ỉa chảy cho trẻ em.  Gỗ cây dùng phối hợp với gỗ Trắc, Muồng xiêm, Muồng trâu, Muồng chét… để trị bệnh mày đay. Người ta dùng các vị thuốc đã thái nhỏ đem sắc nước uống ngày 4-5 bát để giúp cho việc bài xuất các chất trong ruột.  Quả Xây ăn được, có vị chua.  Nguồn: 3033 Cây thuốc đông y Tuệ Tĩnh"
+      },
+      "Cách dùng": {
+        "được_dùng": ""
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tràm",
+      "ten_khac": "Tràm lá dài, tràm lá hẹp, chè đồng, chè cay, bạch thiên tầng.",
+      "ten_khoa_hoc": "Melaleuca leucadendra (L.) L.",
+      "ma_taxon": "1491620",
+      "ho": "Myrtaceae (Sim)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi thấp, cao khoảng 0,5 m hoặc cây gỗ to, cao 10 – 12 m.",
+      "thân": "Thân thẳng có vỏ ngoài mềm, xốp, màu trắng xám, dễ bong thành từng mảng mỏng. Cành hình trụ, ngọn non có lông dày màu trắng bạc.",
+      "lá": "Lá mọc so le, dày và cứng, hình mác thuôn, gốc tròn, đầu tù hoặc hơi nhọn, dài 4 – 8 cm, rộng 1 – 2 cm, lúc đầu có lông mềm màu trắng, sau nhẵn, hai mặt cùng màu. Gân chính 5, hình cung; cuống lá ngắn, có lông.",
+      "hoa": "Cụm hoa mọc ở đầu cành thành bông tận cùng bằng một túm lá non; lá bắc hình mác, sớm rụng; hoa màu vàng ngà, tụ tập 2 – 3 cái trên cụm; đài hình trụ, có lông mềm, 5 răng, sớm rụng; tràng 5 cánh có mỏng rất ngắn, nhị rất nhiều, hạm liên ở gốc thành 5 bó đối diện với lá đài; bầu ẩn trong ống đài, 3 ô.",
+      "quả": "Quả nang, gần hình cầu, cụt ở đầu, đường kính: 4 mm, khi chín nứt thành 3 mảnh; hạt hình nêm hoặc gần hình trứng.",
+      "mùa hoa": "tháng 3 – 5.",
+      "mùa quả": "tháng 3 – 5."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Melaleuca L. ước tính có khoảng 250 loài trên thế giới, phân bố chủ yếu ở vùng nhiệt đới, song tập trung từ vùng châu Đại Dương, bao gồm Australia, Papua Niu Ghinê, Niu Calêdôni… đến vùng nhiệt đới châu Á. Ở Việt Nam, chỉ thấy có 2 loài là tràm lá hẹp (M. alternifolia (Cheel)) nhập nội từ Australia, trồng ở vùng đồi khô hạn tỉnh Quảng Bình và tràm (M. leucadendra (L.) L.). Loài này thường được xếp chung trong một nhóm gồm 10 loài khác nhau, nhưng có nhiều đặc điểm sinh học liên hệ chặt chẽ với nhau (J.C. Doran, J.W. Turnbull; 1999 in L.P.A. Oyen et al, PROSEA, No. 19 – Essential oil plants, p.133). Về nguồn gốc của cây hiện chưa xác định được cụ thể, chỉ biết rằng vùng phân bố tự nhiên của nó kéo dài suốt từ miền Bắc và Tây Australia (Queensland, Territory) đến Papua Niu Ghinê, Indonesia (đảo Moluccas, Seram và Ambon), Malaysia, Thái Lan, Campuchia, Việt Nam và đảo Hải Nam – Trung Quốc. Ở đảo Java (Indonesia), từ lâu người ta đã trồng tràm để cất tinh dầu.  Ở Việt Nam, tràm phân bố phổ biến ở các tỉnh dọc theo bờ biển và vùng Đồng Tháp Mười. Căn cứ vào môi trường nơi mọc, có thể chia tràm ở Việt Nam thành 2 quần thể là tràm đất và tràm trên đất phèn ngập.  Tràm đất còn có tên là tràm gió, cây thường nhỏ, chiều cao từ 0,5 đến 2,5 m, mọc tập trung trong các quần thể cây bụi ưa sáng, trên các dải đồi thấp khô cằn ở Đồng Nai, Bình Thuận, Ninh Thuận, Khánh Hòa, Phú Yên, Bình Định, Quảng Ngãi, Quảng Nam, Thừa Thiên – Huế, Quảng Trị, Quảng Bình, Hà Tĩnh, Nghệ An và Thanh Hoá. Ở một số vùng đồi thấp sau trồng lục địa như Chí Linh – Hải Dương, Ba Vì – Hà Tây… đồi khu cũng gặp cây tràm. Ở nhiều nơi, tràm đã trở thành rừng trồng (từ 700 – 1.000 cây/1.000m²) trong quần thể cây bụi chịu gió mùa, mưa, cháy, xói, và gió cát. Đây là nhóm cây tiên phong trong khôi phục sinh thái vùng khô kiệt. Đào Trọng Hưng (1998) đã nghiên cứu sinh thái tràm đôi ở Quảng Bình và cho biết pH của đất là 3,7 – 5,1, hàm lượng mùn: 0,83 – 0,15%; N: 0,09 – 0,35%; P₂O₅: 0,04 – 0,18%, K₂O: 0,13 – 1,40%.  Tràm mọc trên đất phèn ngập nước tập trung chủ yếu ở vùng Đồng Tháp Mười, bao gồm các tỉnh Long An, Đồng Tháp, An Giang và Kiên Giang. Người dân thường gọi là tràm úc để phân biệt với tràm nội. Đó là loài cây gỗ, cao 10 – 15 m có thể đến 20 m; thường mọc thành quần thể dày đặc, cao nên kiểu rừng tràm đặc trưng, trên đất phèn thường xuyên bị ngập nước hoặc ngập nước theo mùa. Đất ở đây có thành phần cơ giới nặng (trên 50%), rất chua (pH trung bình 3,0 – 3,5), có nhiều chất mùn hoặc đã tạo thành lớp than bùn dày 0,3 – 1,0 m. Ngoài cây tràm, ở quần thể này còn gặp một số loài cây khác như đưng, xi hiện, dứa nước; còn rắn, cò, sếu và một số dơi leo. Rừng tràm là nơi cư trú của nhiều loài động vật như khỉ, trăn, rắn, ong, mối, cá, chim… Tổng diện tích rừng tràm tự nhiên ở Đồng Tháp Mười khoảng 12.000 hecta, trong đó riêng Vườn quốc gia Tràm Chim (huyện Tam Nông tỉnh Đồng Tháp) là 3.018 hecta. Khoảng 20 năm trở lại đây, ở một số nơi, diện tích rừng tràm bị thu hẹp do nạn cháy rừng, phá rừng làm nơi nuôi thủy sản hoặc đốt than… Song miền Nam cũng có vài trăm hecta tràm được trồng thêm, với mật độ từ 5000 đến 20.000 cây/hecta.  Tràm là loài cây đặc biệt ưa sáng, chịu lâu cao và nước ngập do lá có lớp biểu bì và cutin dày, tỷ lệ giữa mô dầu và mô khuyết gần bằng nhau. Tùy theo các điều kiện lập địa khác nhau, tràm có những đặc điểm về dạng cây, chiều cao thân và năng suất lá cũng như tinh dầu trong lá khác nhau. Tràm úc có dạng cây bụi hoặc gỗ nhỏ là do đất ở đó khô cằn, là thường bị cháy đột. Trong khi đó, tràm cư là những cây thân gỗ, mọc hàng cao đến 15 m, năng suất lá mỗi lần cắt được từ 20 – 30 tấn/ha. Tràm đôi chỉ khoảng 4 – 9 tấn lá/lần cắt/ha, song lại có năng suất tinh dầu cao hơn so với tràm cư.  Tràm cư tái sinh tự nhiên chủ yếu từ hạt. Trong khi đó, do điều kiện khô hạn, tràm đôi tái sinh cây con từ gốc chặt và chồi rễ là trở nên ưu thế. Trong tự nhiên, tỷ lệ này nhìn chung là rất thấp, nhưng được gieo ở vườn ươm, tỷ lệ này có thể đạt đến 67,5 – 75,5% (Đào Trọng Hưng, 1998), thời gian này mầm trung bình từ 9 đến 12 ngày. Tràm sinh trưởng tốt trong điều kiện khí hậu nhiệt đới nóng và ẩm. Nhiệt độ trung bình 22 – 33°C, lượng mưa hàng năm: khoảng 1300 mm trở lên. Cây tràm trồng ở Long An và Đồng Tháp, trong vòng 3 năm đầu, có thể cao thêm 1 – 2,3 m mỗi năm. Sau 2 – 3 năm trồng, cây bắt đầu có hoa, về sau lượng hoa quả sẽ nhiều hơn.  Việt Nam là một trong những nước có diện tích rừng tràm tự nhiên lớn nhất châu Á. Nội năm, có thể sản xuất từ 80 đến 100 tấn tinh dầu, chủ yếu để xuất khẩu. Nếu có thêm thị trường tiêu thụ, lượng tinh dầu tràm của Việt Nam sản xuất ra sẽ còn lớn hơn nhiều. Rừng tràm ở Đồng Tháp Mười còn có ý nghĩa lớn với mặt sinh học và môi trường vì đó là hệ sinh thái độc đáo. Nên có quy hoạch vùng tràm ở đây được khai thác nước và chính quyền các cấp ở địa phương đặc biệt quan tâm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần chủ yếu của lá tràm là tinh dầu, với tỷ lệ 2,5% (tính trên lá tươi), hoặc 2,259 (tính trên lá khô).  Tinh dầu tràm là một chất lỏng, không mùi hay hơi vàng nhạt (một số có màu xanh là được nhuộm chứ không phải màu tự nhiên), vị hơi cay và mát sau nóng, mùi thơm đặc biệt, tả tuyền.\u00a0Nếu tinh chế, tinh dầu trong, hầu như không màu, D: 0,920-0,930, chỉ số khúc xạ 1,466- 1,472 quay từ 0° đến 3°40. sôi ở 175°C; tan trong 2,5 đến 3 thể tích cồn 70°C. Hoạt chất chủ yếu của tinh dầu là cajeputol hay xineola hoặc eucalyptola với tỷ lệ 35 đến 60%. Ngoài ra còn chứa pinen tả tuyền, tecpineola một ít andehyt (valeric, butyric, ben- zylic), các ête như ête axetic.  Muốn tinh chế tinh dầu tràm ta có thể ngâm tinh dầu với một hỗn hơp oxyt chì và dung dịch NaOH trong 3 giờ ở nhiệt độ đun cách thuỷ, hoặc dùng thuốc tím và axit sunfuric, sau đó cất lại. Tinh dầu tràm tinh chế không có màu hay chỉ có màu vàng rất nhạt, mùi thơm dễ chịu.  Mới đây A. Quevauviller và cộng sự đã chứng minh trên thực nghiệm và lâm sàng là tinh dầu khuynh diệp tinh chế làm tăng tác dụng kháng sinh của streptomyxin và đặc biệt của penixiuin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Lá tràm có vị cay chát, mùi thơm, tính ấm, vào hai kinh: Tỳ, Phế, có tác dụng hoạt huyết, khu phong, an thần, giảm đau, tiêu đờm, sát trùng."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tràm dược dùng trị cảm mạo, phong hàn, phổi lạnh, ho đờm, hen suyễn, tức ngực, tiêu hóa kém, dễ làm tăng lưu thông huyết mạch sau khi đẻ, trị phong thấp và đau dây thần kinh. Ngày dùng 10 – 20g lá tươi, hoặc 5 – 10g lá khô dạng thuốc sắc.  Lá tràm tươi nấu nước rửa vết thương chống nhiễm khuẩn, hơ lên vết bỏng tránh hiện tượng phỏng nước, tắm chữa mẩn ngứa. Lá tràm phơi khô thường được nhân dân nấu nước uống thay chè (2g trong 1 lít) có tác dụng kích thích tiêu hóa. Tinh dầu tràm được dùng xoa bóp ngoài làm nóng chữa đau khớp, chân tay nhức mỏi. Tinh dầu tràm pha trong dầu thầu dầu với tỷ lệ 5 – 10% dùng nhỏ mũi để sát khuẩn, chống cúm, ngạt mũi. Còn dùng tinh dầu tràm pha vào nước với nồng độ 0,2% để rửa vết thương.  Kiêng kỵ: Cơ thể suy nhược, tân dịch khô, táo bón, ho khan không nên dùng.  Trong y học cổ truyền Ấn Độ, tinh dầu tràm pha loãng được dùng uống làm thuốc long đờm trong viêm thanh quản và viêm phế quản mạn tính và làm thuốc gây trung tiện giảm chướng bụng; liều quá cao gây kích ứng đường tiêu hóa. Có tác dụng trị giun, đặc biệt giun đũa. Chấm tinh dầu tràm vào lỗ răng sâu, làm đỡ đau răng. Tinh dầu tràm là một thành phần trong thuốc bôi đều và thuốc xức để phản kích thích trong điều trị thấp khớp mạn tính. Tinh dầu tràm còn được dùng làm thuốc xua đuổi muỗi, với ưu điểm hơn tinh dầu sả vì ít bay hơi hơn, và diệt bọ chét, cháy rận.  Bài thuốc có tràm  1. Chữa ứ huyết:  Lá tràm khô, rễ ô rô tía, mỗi vị 20 – 30g. Sắc đặc uống trong ngày.  2. Chữa thần kinh suy nhược, ít ngủ:  Vỏ tràm 20g; dây lạc tiên, lá vông, mỗi vị 15g. Sắc uống trong ngày.  3. Chữa cảm cúm:  Lá tràm 30g, đun sôi với nước và đậy để xông và uống một bát nước sắc lúc nóng cho ra mồ hôi. Hoặc dùng 15 giọt tinh dầu pha với nước đường để uống và xoa tinh dầu vào mũi, gáy, sống lưng.  Nguồn: Cây thuốc và động vật làm thuốc Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+      "làm thuốc": null,
+      "có tác dụng": null,
+      "sắc uống": null,
+      "giã nát": null,
+      "sắc nước uống": null,
+      "phơi khô": null,
+      "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

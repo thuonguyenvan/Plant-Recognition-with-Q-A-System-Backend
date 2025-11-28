@@ -1,0 +1,211 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Lô biên",
+            "ten_khac": "Bán biên liên, Lỗ bình, Lô biên",
+            "ten_khoa_hoc": "Lobelia chinensis Lour.",
+            "ma_taxon": "224052",
+            "ho": "Lobeliaceae ( Lỗ Bình)"
+        },
+        {
+            "@type": "Mô tả",
+            "cây": "Cây Lô biên hay còn gọi là Bán biên liên Cây thảo mọc hằng năm, có thân nhẵn, có 3 góc, mọc thẳng hướng lên hay mọc nằm, có khi đâm rễ, đơn hay phân nhánh, dài 5-15cm.",
+            "lá": "Lá mọc so le gần như không cuống, các lá ở góc hình trái xoan, các lá phía trên thon, dài 0,7-2cm, rộng 3-7mm, có đầu nhọn hay tù, với phần trên của mép có răng.",
+            "hoa": "Hoa mọc riêng lẻ, mọc ở nách lá, dài 7-15mm, thường xếp 1-2 cái trên cùng trục. Cuống hoa dạng sợi, dài 6-30mm, không có lá Bắc. Ðài dính với bầu, có 5 thuỳ thon. Tràng hoa màu tím, màu xanh lơ hay trắng, chẻ tới gốc, 5 thuỳ hình trái xoan, 2 cánh tròn nhỏ hơn.",
+            "quả": "Quả nang dạng nón ngược, trên một cuống cong. Hạt hình bầu dục, dẹt, nhẵn.",
+            "mùa hoa": "tháng 5-8.",
+            "mùa quả": "tháng 8-10."
+        },
+        {
+            "@type": "Phân bố",
+            "phân_bố": "Cây phân bố ở Lào, Việt Nam, Campuchia, Thái Lan, Ấn Độ, Trung Quốc, Nhật Bản, Malaixia, Inđônêxia. Ở nước ta, thường gặp Bán biên liên trong ruộng và những nơi ẩm thấp, có ở nhiều nơi thuộc miền Bắc và miền Trung. Người ta thu hái toàn cây vào mùa xuân, hè, rửa sạch dùng tươi hay khô."
+        },
+        {
+            "@type": "Thông tin khác",
+            "thong_tin_khac": null
+        },
+        {
+            "@type": "Bộ phận dùng",
+            "bo_phan_dung": "Toàn cây – Herba Lobelae Chinensis, thường gọi là Bán biên liên."
+        },
+        {
+            "@type": "Thành phần",
+            "thành phần": "Trong cây có lobelin, lobelanin, isolobelanin, lobelanidin, saponin, flavon, acid amin."
+        },
+        {
+            "@type": "Tính vị",
+            "Có vị": null
+        },
+        {
+            "@type": "Công dụng",
+            "cong_dung_y_hoc": "Vị cay, tính bình, có tác dụng lợi niệu, tiêu thũng, thanh nhiệt giải độc."
+        },
+        {
+            "@type": "Cách dùng",
+            "được_dùng": null,
+            "làm thuốc": null,
+            "có tác dụng": null,
+            "sắc uống": null,
+            "giã nát": null,
+            "sắc nước uống": null,
+            "phơi khô": null,
+            "xấy khô": null
+        },
+        {
+            "@type": "luu_y",
+            "luu_y": null
+        }
+    ]
+}

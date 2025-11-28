@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây Chùm ngây",
+      "ten_khac": "Chùm Ngây, Bồn Bồn, Cải Ngựa",
+      "ten_khoa_hoc": "Moringa oleifera Lamk.",
+      "ma_taxon": "165529",
+      "ho": "Chùm ngây (Moringaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ hay cây nhỡ, cao 5-10m.",
+      "thân": "Vỏ cây dày, có khía ranh. Thân non có lông.",
+      "lá": "Lá kép, mọc so le, 3 lần lông chim, dài 30-60cm, 6-9 đôi lá chét hình trứng, mọc đối.",
+      "hoa": "Cụm hoa mọc thành chùy ở kẽ lá, lá bắc hình chỉ, hoa màu trắng, hơi giống hoa họ Đậu, đài có 5 răng hình thuôn, uốn cong, tràng 5 cánh hình thìa, nhị 5, chỉ nhị có lông ở gốc, bầu thượng, 1 ô, có lông.",
+      "quả": "Quả có thiết diện tam giác, dài 25-30cm hay hơn, mọc thõng xuống, mở làm 3 mảnh, hạt có 3 cạnh và có cánh màu trắng, dạng màng.",
+      "mùa hoa": "tháng 4-6",
+      "mùa quả": "tháng 7-9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chùm ngây là cây ưa sáng và ưa khí hậu nhiệt đới nóng và ẩm .Sống và phát triển tốt trên nhiều loại đất .  Ở Việt Nam, Chùm ngây được trồng rải rác ở các tỉnh phía nam từ Quảng Nam trở vào."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "” Nghiên cứu rộng rãi nhất về giá trị của Moringa oleifera được thực hiện tại ĐH Nông Nghiệp Falsalabad, Pakistan”  Moringa oleifera Lam. (Moringaceae) là một cây có giá trị kinh tế cao, cây phân bố tại nhiều quốc gia nhiệt đới và cận nhiệt đới. Cây vừa là một nguồn dược liệu và là một nguồn thực phẩm rất tốt. Các bộ phận của cây chứa nhiều khoáng chất quan trọng, và là một nguồn cung cấp chất đạm, vitamins, beta-carotene, acid amin và nhiều hợp chất phenolics…  “Nghiên cứu về khả năng làm thuốc kích thích sinh trưởng thực vật”  David.L.Martin (2000) khi nghiên cứu sử dụng tinh dầu chiết xuất từ lá cây chùm ngây làm chất kích thích sinh trưởng thực vật đã cho kết quả khả quan: chất kích thích sinh trưởng từ cây chùm ngây có thể làm tăng sản lượng từ 25-30% với các cây nông nghiệp ngắn ngày sau khi phun như hành, đậu tương, ớt tím, ngô, cà phê, chè…  “Nghiên cứu về khả năng sử dụng chùm ngây để chiết suất nhiên liệu sinh học và khí Biogas”  Nikolaus Foild (2000) và tổ chức nhà thờ thế giới đã sử dụng hạt của cây chùm ngây chiết suất nhiên liệu sinh học (Bio-diezen) cũng cho kết quả hết sức khả quan: 11kg hạt cây Chùm ngây có thể chiết suất được 2,6 lít dầu biodiezen, hiệu quả chiết suất lên tới 65%, quy trình chiết suất dầu hết sức đơn giản. Sử dụng nghiên cứu này, công ty FAKT(Đức) đã cho ra đời dây chuyền chiết suất nhiên liệu sinh học từ cây Chùm ngây với khả năng chiết suất được 80 – 90 kg dầu/h, giá thành khoảng 1400USD.  Về ứng dụng công nghiệp  Gỗ cây Chùm ngây rất nhẹ, có thể dùng làm củi nhưng năng lượng không cao. Nó được xem là nguồn nhiên liệu tiềm năng cho kĩ nghệ giấy với chất lượng bột giấy được so sánh ngang với cây dương ( Poputus.sp). Vỏ cây thường làm thảm chùi chân hay bện làm dây thừng ở châu Phi, ngoài ra tại Jamaica và Senegal, người ta còn sử dụng vỏ cây làm thuốc nhuộm vải.(Foil, 2006)."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ và toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá chùm ngây chứa các chất gôm và 2 alcaloid là moringin và moringinin. Vỏ thân chứa chất bezylanin và β sitosterol."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cành non, lá non hoặc lá bánh tẻ, hoa và quả xanh đem luộc ăn giúp lưu thông máu huyết, làm dễ tiêu hóa, tác dụng trên hệ thần kinh, làm dịu đau. Lá non dùng riêng hoặc phối hợp với dược liệu khác là thuốc lợi sữa Lá già có tác dụng lợi tiểu nhẹ Nhựa (gomme) từ thân có tác dụng làm dịu đau.  Hiện nay, Mỹ là nước nhập nguyên liệu Moringa thô nhiều nhất, sử dụng trong công nghệ mỹ phẩm cao cấp, nước uống và quan trong hơn là chiết suất thành nguyên liệu tinh cung ứng cho công nghiệp dược phẩm, hóa chất.  Ở Ấn Độ, Chùm Ngây được gọi là sainjna, mungna (Hindi, Asam, Bengal..); phạn ngữ: Shobhanjana. Là một trong những cây thuốc “dân gian” rất thông dụng tại Ấn Độ. Vỏ thân được dùng trị nóng sốt, đau bao tử, đau bụng khi có kinh, sâu răng, làm thuốc thoa trị hói tóc; trị đau trong cổ họng (dùng chung với hoa của cây nghệ, hạt tiêu đen, rễ củ Dioscorea oppositifolia); trị kinh phong (dùng chung với thuốc phiện); trị đau quanh cổ (thoa chung với căn hành của Melothria heterophylla, Cocci nia cordifolia, hạt mướp (Luffa) và hạt Lagenaria vulgaris); trị tiểu ra máu; trị thổ tả (dùng chung với vỏ thân Calotropis gigantea, Tiêu đen, và Chìa vôi. Hoa dùng làm thuốc bổ, lợi tiểu. Quả giã kỹ với gừng và lá Justicia gendarussa để làm thuốc đắp trị gẫy xương. Lá trị ốm còi, gây nôn và đau bụng khi có kinh. Hạt: dầu từ hạt để trị phong thấp."
+    },
+    {
+      "@type": "Cách dùng"
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

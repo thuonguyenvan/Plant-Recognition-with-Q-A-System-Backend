@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Chua Ngút",
+      "ten_khac": "Chua ngút hoa trắng, Chua méo, Vón vén, Thùn mũn",
+      "ten_khoa_hoc": "Embelia laeta (L.) Mez.",
+      "ma_taxon": "519626",
+      "ho": "Myrsinaceae (Đơn nem)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây chua ngút là cây leo thân bụi hoặc dây leo, hiếm khi là cây bụi nhỏ, cao từ 1-3 mét.",
+      "cành": "Cành non không có lông, cành già có lỗ bì.",
+      "lá": "Lá dai, hình trứng ngược hoặc hình chữ nhật-trứng ngược, dài 3-4 cm, rộng 1-1.5 cm, có khi dài đến 7 cm, rộng đến 2.5 cm. Đầu lá tròn, tù hoặc hơi lõm, gốc lá hình nêm, mép lá nguyên, hai mặt không có lông, không có tuyến điểm, mặt dưới thường có lớp phấn trắng mỏng. Cuống lá dài 5-8 mm.",
+      "hoa": "Hoa 4 cánh, dài khoảng 2 mm. Đài hoa dính nhau ở gốc đến 1/2 hoặc 1/3, lá đài hình trứng hoặc hình tam giác, nhọn, không lông, thường có tuyến điểm. Cánh hoa màu trắng hoặc hơi vàng, tách rời, khi nở xòe mạnh, hình trứng hoặc hình chữ nhật, đầu tròn hoặc tù, có lông ở mép, mặt ngoài không lông, mặt trong có nhiều gai thịt, có tuyến điểm.",
+      "quả": "Quả hình cầu, đường kính khoảng 5 mm, nhẵn, tuyến điểm không rõ.",
+      "mùa hoa": "Tháng 12 đến tháng 3 năm sau.",
+      "mùa quả": "Tháng 4 đến tháng 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Embelia Burn. là một nhóm thực vật lớn, gồm khoảng 130 loài, phân bố chủ yếu ở các khu vực nhiệt đới và cận nhiệt đới. Tại Việt Nam, chi này có khoảng 15 loài, trong đó 7 loài đã được ứng dụng trong Y học cổ truyền. Cây Chua ngút thuộc nhóm cây thân leo hoặc bò, thường xanh quanh năm. Phạm vi phân bố của loài này tương đối hẹp, chủ yếu xuất hiện tại Trung Quốc, Việt Nam, Thái Lan, Lào, Campuchia và Philippines Tại Trung Quốc, chủ yếu ở các tỉnh Giang Tây, Phúc Kiến, Đài Loan, Quảng Đông, Hải Nam, Quảng Tây, Vân Nam và một số khu vực khác. Ở Việt Nam, cây Chua ngút chủ yếu phân bố tại các tỉnh miền núi và trung du, đôi khi cũng xuất hiện ở vùng đồng bằng. Tuy nhiên, phạm vi phân bố của loài này chỉ giới hạn từ Kon Tum đến Quảng Nam. Cây thường mọc trong các thảm cỏ, bụi rậm hoặc dưới tán rừng, ở độ cao từ 100 – 1800m.",
+      "thường_mọc": "Chua ngút là loài cây ưa sáng, có khả năng chịu hạn tốt, thường mọc xen lẫn trong các quần thể cây bụi ven rừng thứ sinh, bờ mương hay đồi núi. Nhờ đặc tính thích nghi với ánh sáng mạnh, Chua ngút thường phát triển mạnh trên đất nương rẫy sau khi canh tác. Cây có tần suất ra hoa và kết quả dồi dào hàng năm, đồng thời khả năng tái sinh rất tốt. Trước năm 1990, Chua ngút chủ yếu được khai thác quả, nhưng số lượng thu hoạch vẫn rất thấp so với nguồn trữ lượng ngoài tự nhiên."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá và quả chín – Radix Folium et Embeliae Laetae."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Từ cây Chua ngút, các nhà khoa học đã phân lập và xác định được 11 hợp chất, bao gồm: p-sitosterol (1), beta-daucosterol (2), axit gallic (3), axit vanillic (4), Rutin (5), hyperin (6), quercetin (7), kaempferol (8), chrysoeriol (9), physcion (10), và apigenin-7-O-glucoside (11). Thành phần hóa học đặc trưng của quả Chua ngút là embelin, một hợp chất kết tinh dạng bột có hình lá, kích thước nhỏ, màu vàng kim nhũ lấp lánh."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Các bộ phận của cây chua ngút và công dụng của chúng: Quả: Tẩy giun, sán: Quả chua ngút được sử dụng để tẩy giun và sán. Hỗ trợ tiêu hóa: Giúp chữa lỵ, viêm ruột, tiêu hóa kém. Giảm đau họng: Có thể được dùng để giảm đau họng. Chữa chấn thương bầm dập: Có thể giúp giảm đau và viêm trong trường hợp chấn thương bầm dập. Cải thiện các vấn đề về máu: Hỗ trợ điều trị hoại huyết, thiếu vitamin C, thiếu máu, nôn ra máu. Giảm trướng bụng, ợ chua, khó tiêu. Rễ: Chữa lỵ, viêm ruột, tiêu hóa kém. Giảm đau họng. Hỗ trợ điều trị chấn thương bầm dập. Lá: Có thể được sử dụng để nấu canh chua, có tác dụng thanh nhiệt."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Hỗ trợ điều trị đau nhức xương khớp do thay đổi thời tiết Nguyên liệu: Rễ Chua ngút tươi: 40g (hoặc rễ khô: 20g). Cách dùng: Rửa sạch rễ, sắc với 500ml nước đến khi còn 200ml. Chia làm 2 lần uống trong ngày. Tùy theo cơ địa (hàn hay nhiệt), có thể kết hợp thêm các vị thuốc khác."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

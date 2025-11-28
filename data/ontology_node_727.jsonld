@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thanh cao hoa vàng",
+      "ten_khac": "Thanh cao, Thanh hao, Thảo cao, Ngải, Nhả ngài bâu sláy (Tày), Ngải si",
+      "ten_khoa_hoc": "Artemisia annua L.",
+      "ma_taxon": "75584",
+      "ho": "Asteraceae (Cúc)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây sống lâu năm.",
+      "mọc": "Mọc hoang thành từng đám ở vùng đồi núi ven suối, ven sông.",
+      "cao": "Cao từ 1,5-2m.",
+      "lá": "Lá xẻ lông chim 2 lần, thành phiến hẹp, phủ lông mềm. Có mùi thơm.",
+      "hoa": "Cụm hoa hình cầu hợp thành một chùy kép. Hoa màu vàng nhạt, mỗi cụm hoa gồm 6 hoa: Giữa là hoa lưỡng tính, xung quanh là hoa cái. Hoa chỉ có kích thước 0,5-1mm.",
+      "quả": "Quả bế hình trứng, dài 1mm. Mặt vỏ có tuyến chứa tinh dầu.",
+      "thân": "Trên thị trường tại Trung Quốc, thường bị trộn một cây khác gọi là hoàng cao hay xú cao cũng họ Cúc nhưng lá quanh năm màu vàng lục và có mùi hôi, còn cây thanh cao hoa vàng thật thì chỉ về mùa thu lá mới vàng, còn trước đó có màu lục. Năm 1982, thanh cao hoa vàng mới chính thức phát hiện tại các tỉnh phía Bắc Việt Nam và sau đó được trồng ở hầu hết các tỉnh để chiết xuất artemisinin."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây thanh cao hoa vàng mọc hoang dại ở Lạng Sơn đã được Đinh Huỳnh Kiệt, Nguyên Xuân Dũng và cộng sự nghiên cứu (Dược học 1, 1989, 11-14 và Dược học 2, 1990, 11-13) kết quả như sau: Trong phần trên mặt đất cua cây thanh cao mọc hoang dại có khoảng 0,6% tinh dầu có tỷ trọng d25 0,901! và n25 1,47574. Tinh dầu mầu vàng nhạt gồm khoảng 35 thành phán, trong đó đã nhận dạng khoảng 20 chất với 12 cấu tử chính chiếm trên 73% tổng hàm lượng tinh dầu carnpho (23,75%), 1-8 cineol (15,44%), p farnesen (9,59%), p caryophyllen (6,29%), p – cubeben (5,59%), artemisia ceton (4,42%), 3 myrcen (4,38%), p- cymem (4,08%)… Từ phần trên mặt đắt của thanh cao hoa vàng dại các tác giả còn chiết được chất artemisinin với tỷ lộ 0,3 đến 0,4% so với dược liệu khố. So sánh với công bố của Klayman (Mỹ) thì từ cây trồng ở Mỹ chỉ chiết đuợc 0,06% artemisinin, còn theo tài liệu công bố của Trung Quốc thì hàm lượng thấp nhất là 0,01%, nhưng nếu thu hoạch đúng, bảo quản tốt thì có thể thu 0,3 đến 0,5% artemisinin.",
+      "gồm chất": "Artemisinin là một sesquiterpen lacton chứa nhóm peroxyt nội, được các nhà khoa học Trung Quốc với sự tài trợ của Liên hiệp quốc đã chiết xuất được từ thân lá cây thanh cao hoa vàng từ 1972, có tác dụng chữa sốt rét và được đặt tên là artemisinin. Tinh thể hình kim không mầu, điểm nóng chảy 156-157oC, CCl7Dn =66,3 có công thức thô Ci:5H22O5 chứa nhóm peroxyt nộì, chính nhóm này quyết định tác dụng diệt ký sinh trùng sốt rét. Artemisinin khó tan ưong nước và trong dầu, có thể bị phá hủy trong dung mồi phân cực do vòng lacton bị mở. Artemisinin hòa lan và khá bển trong các dung môi không phân cực, không bị phá hủy ngay cả ở nhiệt độ cao hơn nhiệt độ nóng chảy của nó vì vậy có thể tinh chế artemisinin bằng phương pháp thăng hoa. Có thể định lượng artemisinin bằng phương pháp chuẩn độ kiểm và phương pháp sắc ký lỏng cao áp."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Theo các tài liệu cổ, thanh cao có vị đắng (khổ), tính hàn (lạnh). Vào hai kinh can và đởm. Có tác dụngphục nhiệt ở âm phận. Dùng chữa những trường hợp cốt trưng lao nhiệt (đau xương, nóng), đạo hãn (mồ hôi trộm), ngược tật (sốt rét), lở ngứa. Còn dùng chữa cảm mạo, thanh nhiệt, giúp sự tiêu hoá, lợi gan mật. Dùng riêng hay phối hợp vối một số vị thuốc khác.",
+      "làm thuốc": "Theo khoa học hiện nay, thanh cao hoa vàng dùng làm nguyên liệu chiết artemisinin để chữa sốt, sốt rét dưới dạng thuốc viên.",
+      "chữa": "Đơn thuốc có thanh cao hoa vàng dùng trong nhân dân:  Thanh cao miết giáp thang: Thanh cao hoa vàng 12g, miết giáp 16g, tri mẫu 12g, sinh địa 20g, đan bì 12g. Sắc uống trị sốt rét (ngược tật), còn dùng trị các chứng ôn nhiệt với các triệu chứng đêm sốt nóng, ngày không sốt, lúc nhiệt thoái không có mồ hôi, lưỡi đỏ, rêu lưỡi vàng, môi miệng khô ráo.  Chữa sốt chỉ dùng một vị thanh cao hoa vàng (Bản thảo cương mục trích từ Trừu hậu phương): Thanh cao 1 nắm (khoảng 20g), nước 2 thăng (300ml).  Chữa sốt, sốt rét : Theo những tài liệu cổ thì thanh cao thích hợp với giai đoạn giữa của bệnh do nhiệt với các triệu chứng sợ lạnh, sốt không có mồ hôi, hàn nhiệt vãng lai, lạnh ít, nóng nhiều, không có mồ hôi. Đối với chứng sốt ở bệnh kết hạch cũng hay dùng vị này, nhưng nếu có mồ hôi không nên dùng. Thanh cao là một vị thuốc phát hãn, giải nhiệt mà không gây trở ngại cho tim và bộ máy tiêu hoá."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Cây thanh cao hoa vàng thường mọc lẫn với một số loài khác tương tự nên chỉ được xác định là Artemisia apiacea Hance (hay Artemisia parvifolia). Thực tế thanh cao hoa vàng chỉ là 1 trong 4 loài thuộc chi Artemisia đều có ở Việt nam nhưng rất dễ lầm lẫn là Artemisia apiacea, A. annua, A. capillaris và A. campestris. Trước năm 1980, cây thanh cao chưa được chú ý sử dụng lắm cho nên cũng không ai chú ý phát hiện đính chính lại. Sau năm 1979, do tiếng vang của những kết quả thu được ở Trung Quốc về tác dụng chữa sốt rét của loài thanh cao hoa vàng của Trung Quốc, Viện Khoa học Việt Nam, sau đó Trung tâm kiểm nghiệm nghiên cứu dược quân đội phát hiện một số cây mang tên thanh cao, thanh cao ở vùng Lạng Sơn chính là loài Artemisia apiacea L. Ngoài Lạng Sơn, thanh cao hoa vàng còn mọc ở Cao Bằng, Lào Cai và đang được trồng thử ở vùng đồng bằng sông Hồng. Thanh cao hoa vàng còn thấy mọc hoang ở Liên Xô cũ, Iran, Mông Cổ, Ấn Độ, Nhật Bản, Bắc Mỹ và một số nước thuộc vùng Đông Nam châu Á. Đang được nghiên cứu trồng mở rộng làm nguyên liệu chiết artemisinin chữa sốt rét và sốt. Tại những địa phương có thanh cao hoa vàng mọc hoang dại, nhân dân thường hái lá non của cây non vể nấu canh ăn thay rau. Còn dùng lá, hoa và toàn bộ phận trên mặt đất phơi hay sấy khô làm thuốc chữa sốt cao, sốt, giải độc, cảm mạo, rối loạn tiêu hoá. Thời gian thu hái tốt nhất vào tháng 8 lúc cây chuẩn bị ra hoa."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rớn đen",
+      "ten_khac": "Rớn đen, Đuôi chồn lá quạt, Cây sẹ, Thiết tuyến thảo, Tóc thần",
+      "ten_khoa_hoc": "Adiantum capillus - veneris L.",
+      "ma_taxon": "63916",
+      "ho": "Đuôi chồn (Adiantaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Dương xỉ ở cạn. Thân rễ mọc bò, có vảy mỏng dạng lông. Lá mọc thẳng từ thân rễ kép lông chim hai lần gồm nhiều lá chét rất mỏng, mọc so le, hình tam giác, gốc thuôn, đầu tròn chia thùy và răng không đều, cuống lá mảnh, dài 20-25 cm, nhẵn, màu đen nhánh. Ổ bào tử hình thuôn, hơi cong, dính ở đầu thùy của lá chét; bào tử hình 4 mặt – tròn, màu vàng. Mùa sinh sản: tháng 6 – 8. Loài Adiantum flabellulatum L., (cây vót) cũng được dùng với công dụng tương tự."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Adiantum có khoảng 10 loài ở Việt Nam. trong đó 4 lọài được dùng làm thuốc. Rớn đen phân bố rộng rãi ở Ấn Độ. Trung Quốc, Mianma, Lào. Ở Việt Nam, rớn đen phân bố ở hầu hết các tỉnh miền núi và trung du, thường mọc ở các hốc đá ở ven rừng núi đá vôi, bờ các nương rẫy hay sườn núi do mở đường tạo thành. Cây ưa sáng, chịu được khô hạn hàng năm vào cuối mùa xuân hay đầu mùa hè, mỗi khóm thường mọc lên 1 – 3 lá non. Lá non phát triển nhanh trong mùa hè, sau đó xuất hiện các túi bào tử ở dưới mép lá. Lá rớn đen có hình dáng đẹp, khi khô giữ được màu xanh trong một thời gian dài, nên được dùng để làm cảnh."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm, phơi khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rớn đen có chất đắng, tanin và tinh dầu (Võ Văn Chi Từ điển cây thuốc Việt Nam – 1999 – 1218), một hỗn hợp ester, ceton diểm chảy (đ.c) 222o. một diol đ.c 243o (CA. 1961, 55, 24933 f); một nor-tгiterpen adianton, triterpen dioxid adiantioxid đ.c 229o được  phân lập và xác định là 3α, 4α. epoxyfilican; các chất flavonoid astragalin, isoquercitrin, nicotiflorin, rutin querciuron (CA-1969, 71, 120515 j). Ngoài ra, còn kaempferol 3,7 diglucosid, kaempferol 3. glucuronid, kaempferol – 3 sulfatorutinosid; quercetin 3 (6\" malonyl galactosid), quercetin 3 (6\" malonyl glucosid) (John Wiley sons 1999, Natural flavonoids vol I, 879). El Tantawy Mona đã chiết được chất daphnoretin từ dịch chiết ethyl acetat của lá. Chất nhầy của lá nếu chiết với nước nguội được tỷ lệ 2,7%, còn chiết nóng với nước được 1.5%. Thủy phân chất nhầy được acid galacturonic, galactose, glucose, xylose, và rhamnose. Hàm lượng tanin trong lá là 5,5%, ngoài ra, còn có resorcinol, phloroglucinol, methylphloroglucinol và pyrocatechol. Chất nhầy, dịch chiết nước, dịch chiết cồn cũng như các chất chiết được đều có tác dụng chống đái tháo đường và lợi tiểu (CA 123, 237630), Dịch chiết lá còn chứa các Sterol như β. Sitosterol. stigmasterol và campestrol (СА.112, 73892 h): polypeptid với trọng lượng phân tử 110 KDa (CA.114. 58940. V); và một chất giống như cyclin (CA 125. 1966, 243237 m)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rớn đen có vị nhạt, hơi đắng, tính mát, vào 2 kinh can, thận, có tác dụng làm dịu, thanh nhiệt, giải độc. chỉ khái, chỉ huyết, lợi niệu, lợi thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Toàn cây rớn đen được dùng chữa ho, nóng phổi ho ra máu, tràng nhạc, bầm máu do đụng giập, viêm vú, tắc sữa, sản hậu ứ huyết, sỏi tiết niệu. Lá chữa rắn cắn. Ngày 15 – 30 g, sắc uống. Để chữa phong thấp, dùng 50 g toàn cây, ngâm với 500 ml rượu, mỗi ngày uống 30 ml."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa sỏi tiết niệu ở trẻ em: Rớn đen 6g, cốc tinh thảo 9 g, sắc uống. Chữa bí dái, đái són, đái rắt: Rớn đen, xa tiền tử, mộc thông, mỗi vị 15 – 20 g. sắc uống sau khi ăn làm 2 – 3 lần trong ngày."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

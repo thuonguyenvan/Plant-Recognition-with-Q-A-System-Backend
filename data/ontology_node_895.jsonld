@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mận",
+      "ten_khac": "Mận, Lý tử, Mác măn (Tày)",
+      "ten_khoa_hoc": "Prunus salicina Lindl. var. salicina",
+      "ma_taxon": "464594",
+      "ho": "Rosaceae (Hoa hồng)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cành nhẵn, màu nâu đỏ.",
+      "lá": "Lá mọc so le, hình mũi mác, dài 6 – 8cm, rộng 2 – 3cm, gốc thuôn hẹp, đầu nhọn, mép có răng cưa nhỏ, mặt trên nhẵn, mặt dưới hơi có lông ở gân và gân nổi rõ; cuống lá nhẵn hoặc hơi có lông, đồi khi có hai tuyến nhỏ ở phần dưới; lá kèm rất mảnh, sớm rụng.",
+      "hoa": "Hoa màu trắng, tụ họp 3 – 5 cái ở kẽ lá; đài nhẵn, 5 răng hình mũi mác; tràng 5 cánh hình trứng nhẵn; nhị 25 – 30, xếp thành 2 vòng, các nhị ở ngoài dài bằng cánh hoa, các -nhị ở trong ngắn hơn, chỉ nhị mảnh và hơi phình ở gốc; bầu thượng, lô.",
+      "quả": "Quả hạch, hình cầu, nhẵn bóng, màu tím đỏ thẫm hoặc vàng lục, có một rãnh bên; hạt cứng.",
+      "mùa hoa": "tháng 3-4",
+      "mùa quả": "tháng 7-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Prunus L. có khoảng 200 loài, phân bố ở vùng ấm Bắc bán cầu. Việt Nam có 9 loài, trong đó mận là loại cây trồng.  Mận vốn có nguồn gốc từ Trung Quốc. Ngay từ trước Công nguyên, cây đã được trồng ở Nhật Bản và Triều Tiên. Ở một số vùng núi cao của vùng nhiệt đới thuộc Ấn Độ, Mianma, Lào…, người dân cũng trồng mận. Ở Việt Nam, mận là cây ăn quả được trồng từ lâu đời tại các tỉnh miền núi phía bắc, sau đến các tỉnh vùng trung du và đồng bằng Bắc Bộ. Từ tỉnh Quảng Nam trở vào, hầu như không thấy trồng. Mận trồng ở Việt Nam hiện nay gồm nhiều giống khác nhau và đều xuất xứ từ Trung Quốc. Đặc điểm chung của chúng là cây ưa khí hậu ẩm mát của vùng núi. Nhiệt độ thích hợp cho cây sinh trưởng phát triển tốt từ 15 – 22°C; lượng mưa trung bình thường từ 1800mm một năm trở lên. Mận là cây rụng lá về mùa đông, chịu dược sương mù và băng giá. Cây ra hoa vào trước hay sau tết âm lịch. Hoa nở trước khi ra lá; thụ phấn nhờ côn trùng. Thời gian có quả trên cây kéo dài 4-6 tháng tuỳ theo từng loại mận. Cây có khả năng mọc chồi từ gốc hay rễ. Loại chồi rễ thường được dùng làm cây giống để bảo đảm sự nguyên chủng.  Mận là loại cây ăn quả quan trọng ở Việt Nam hiện nay. Vài năm gần đây, giống mận Tam Hoa được trồng phổ biến ở vùng núi thấp và trung du. Tổng sản lượng mận mỗi năm đạt hàng ngàn tấn, chủ yêu tiêu thụ ở dạng quả tươi trong thị trường nội địa."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "Cây mận có yêu cầu lạnh bắt buộc. Phải cần khoảng 1 tháng nhiệt độ trung bình dưới 7°C mới đủ lạnh cho cây ra hoa. Vì vậy, mận chỉ được trồng phổ biến và thuận lợi ở vùng cao miền Bắc, từ Hà Tĩnh trở ra. Nhiều giống mận tốt đều được trồng ở những nơi nhiều rét như Lào Cai, Hà Giang, Lạng Sơn. Ở các nơi khác, tuy có trồng nhưng đều là những giống kém chất lượng.  Mận được nhân giống bằng hạt, bằng rễ hoặc bằng phương pháp ghép.  Nhân giống bằng hạt chỉ được dùng để sản xuất gốc ghép. Hạt mận rửa sạch phơi trong râm, ủ 4 – 5 tháng trong cát ẩm, không phủ rác, không tưới quá nhiều, đến tháng 9 – 10 hạt mới có thể nảy mầm.  Rễ mận khi bị đứt rất dễ nảy mầm, nên dùng để nhân giống rất tốt. Rễ ăn nông, nếu bị đứt mọc thành cây, có thể đánh đi trồng hoặc chủ động chặt đứt rễ tạo mầm mới để trồng. Nhưng không áp dụng biện pháp này với cây mận ghép vì rễ của gốc ghép là từ cây mận chưa được chọn lọc. Hơn nữa, rễ mận còn có thể là véc tơ truyền bệnh virus.  Trồng mận bằng phương pháp ghép là tốt nhất (ghép mắt hoặc ghép cành). Gốc ghép có thể là mận, đào hoặc lê dại. Thích hợp nhất là loại mận chua vì dễ kiếm hạt và dễ nảy mầm. Hạt mận sau khi xử lý như trên đem gieo ra vườn ươm hoặc đặt vào bầu. Vườn ươm cần chọn đất tốt, làm đất thật kỹ, bón phân, lên luống cẩn thận và gieo hạt với khoảng cách 40x40cm. Đến tháng 12 hoặc tháng 1 năm sau, hạt mới nảy mầm. Nếu chăm sóc tốt, đến tháng 8-9, gốc ghép mới đủ lớn để ghép. Nếu gốc ghép còn nhỏ, phải đợi lâu hơn nữa. Cần chăm sóc vườn ươm chu đáo để cây mau lớn. Thời vụ ghép từ tháng 3-4 đến tháng 9-10, thuận lợi nhất vào tháng 8-9. Lúc này, cây vẫn còn nhựa, thòi tiết mát, vừa dễ lấy mắt ghép, vừa dễ sống. Mắt ghép cần lấy ở cành xiên, có 4 – 6 tháng tuổi, non quá hoặc già quá đều không tốt.  Thời vụ trồng mận tốt nhất vào tháng 12-1, khi cây ngủ đông. Trong thời kỳ này, dù rễ hết đất, để rễ trần và vận chuyển đi xa sau vài ngày mới trồng, cây vẫn có thể sống 100%. Nếu muốn trồng vào các tháng khác, nhất thiết phải ươm cây (gốc ghép) trong bầu. Có thể trồng mận trên đất nông trừ đất quá xấu hoặc tát cát. Tốt nhất là đất thịt, giàu dinh dưỡng và thoát nước. Khi trồng, đào hố với kích thước 40x40x40cm và khoảng cách 5x5m hoặc 4x5m (400 – 500 cây/ha) tuỳ theo chất đất và chất lượng của gốc ghép (ghép với đào nên trồng thưa hơn ghép với mận). Mỗi hố, bón lót 30 – 40kg phân chuồng hoai mục rồi đặt cây giống.  Rễ mận ăn nông, tránh làm đứt khi rẫy cỏ. Nên nhổ sạch cỏ bằng tay. Tốt nhất là dùng rơm, rác phủ quanh gốc mận, vừa chống cỏ dại, vừa giữ được ẩm. Mận thường được trồng bán tự nhiên, ít có điều kiện tưới nước. Nhưng vào tháng 3 – 4 khi quả đang lớn, gặp khô hạn, cần tưới cho mỗi gốc vài ba thùng nước.  Sau khi trồng, cần chú ý tạo hình bằng cắm cọc để có thân chính thẳng, hãm ngọn để tạo nên 3-5 cành khung, mỗi cành cách nhau 20 – 30cm. Sau khi thu hoạch quả, cần đốn bỏ cành vượt, cành già, cành khô. Các giống mận đều có nhiều hoa, nếu thụ phấn tốt thì rất sai quả. Nếu tỉa bớt quả sẽ có quả to. Khi quả to bằng hạt đậu thì tiến hành tỉa, không để quả thành chùm mà để quả nọ cách quả kia 4 – 5cm. Mận thụ phấn khác hoa, thường trồng xen kẽ nhiều giống để hoa của giống nọ thụ phấn cho giống kia.  Hàng năm, sau khi thu hoạch quà (tháng 6 – 7) và khi cây nghỉ đông (tháng 12), cần bón thúc cho cây. Mỗi gốc cần bón 1 – 1,5kg sulfat đạm, 1,5 – 2kg sulfat kali và 1 – 1,2kg supe lân, chia làm 2 đợt. Ngoài ra, còn có thể bón thêm phân hữu cơ tuỳ theo khả năng và tình hình sinh trưởng của cây. Mận ít có sâu bệnh. Tuy nhiên đối với những giống mận ngon, nhất là khi trồng tập trung, vẫn có một số bệnh chủ yếu như:  Bệnh chảy gôm: Phòng ngừa bằng cách không đốn cành non. Khi đốn, dùng dao hoặc cưa thật sắc để vết thương chóng lành và phòng trừ sâu đục thân, sâu ăn vỏ. Bệnh khô cành: do ống dẫn nhựa bị tắc làm cành héo và khô. Chưa rõ nguyên nhân. Bệnh nấm đỏ (Polystigma rubrum) hại lá. Dùng Bordeaux rất có hiệu quả.  Quả mận chín vào tháng 5 – 6 ở đồng bằng và tháng 7 – 8 ở miền núi. Khi màu xanh của vỏ quả chuyển màu vàng, đỏ hoặc tía tuỳ giống thì thu hoạch. Năng suất của quả tuỳ thuộc giống mận, cách tưới và chế độ chăm sóc. Một cây mận Tam Hoa 3 năm tuổi có thể cho 100kg quả /năm."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Hạt, lấy ở quả chín, phơi hoặc sấy khô. Còn dùng các bộ phận khác như rễ, lá, quả."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Nhân hạt mận chứa amygdalin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Quả mận có vị chua, ngọt, tính bình, có tác dụng thanh can, điều nhiệt, sinh tân, lợi thủy. Nhân hạt mận có vị đắng, tính bình, có tác dụng hoạt huyết, tán ứ, lợi thủy, nhuận tràng. Rễ mận có vị đắng, chát, tính hàn, có tác dụng thanh nhiệt, giải độc.  Vỏ mận có vị đắng, tính hàn, có tác dụng thanh nhiệt, hạ khí.  Hoa mận có vị đắng, mùi thơm.  Lá mận có vị chua, ngọt, tính bình."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Mận là một loại quả ngon, được ăn với muối để kích thích tiêu hoá, giải khát. Ngoài ra, còn chữa đau nhức khớp xương. Ở Trung Quốc, quả mận được dùng chữa hư lao cót chưng (triệu chứng bệnh lao), đái đường. Chú ý không được ăn nhiều, gây nóng âm ỉ trong bụng. Nhân hạt chữa ho có đờm, vết thương sưng đau, bụng đầy nước.  Rễ chữa bệnh phụ khoa, khí hư, bạch đới, kiết lỵ, đau răng; trẻ em sốt cao.  Hoa chữa tàn nhang, rám đen, làm cho da trắng ra.  Lá chữa sốt cao, co giật ở trẻ em."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa sốt cao đột ngột ở trẻ em:\u00a0Rễ mận, quế tâm, mang tiêu, mỗi vị 9g; cam thảo, mạch môn, mỗi vị 3g. sắc với 600ml còn 200ml, chia làm nhiều lần uống trong ngày.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Sói rừng",
+      "ten_khac": "Sơn kế trà, sói láng, co nộc sa (Thái), sáng cáy sà (Hoa)",
+      "ten_khoa_hoc": "Sarcandra glabra (Thunb.) Nakai",
+      "ma_taxon": "425184",
+      "ho": "Hoa sói (Chloranthaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ, cao chừng 1m.",
+      "thân": "Thân hoá gỗ, tròn, nhẵn.",
+      "lá": "Lá mọc đối, hình mác thuôn, dài 8 – 14 cm, rộng 3,5 cm, góc thuôn hẹp, đầu nhọn, mép khía răng, hai mặt nhẵn.",
+      "hoa": "Cụm hoa hơi phân nhánh, mọc thành bông ở ngọn cành, lá bắc dài, hình mác nhọn; hoa to, có 1 nhị, bao phấn dày gần hình trụ.",
+      "quả": "Quả mọng, gần hình cầu, khi chín màu đỏ.",
+      "mùa hoa": "tháng 3 – 4",
+      "mùa quả": "8 – 10."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Sarcandra Gardn. chỉ có một loài hoa sói rừng ở Việt Nam. Hoa sói rừng có nguồn gốc ở vùng Đông Á, phân bố ở Trung Quốc, Nhật Bản, Triều Tiên, Malaysia, Indonesia, Ấn Độ. Ở Việt Nam, hoa sói rừng phân bố rải rác ở các tỉnh miền núi Lạng Sơn, Bắc Kạn, Thái Nguyên, Hòa Bình, Ninh Bình, vùng núi Ngọc Linh, Quảng Nam và Kon Tum.",
+      "thường_mọc": "Cây ưa ẩm, chịu bóng, thường mọc trên đất ẩm nhiều mùn, dưới tán rừng, nhất là loại rừng núi đá vôi. Cây ra hoa quả nhiều hàng năm, những nhánh thân đã ra hoa quả sẽ tàn lụi sau một năm và từ gốc sẽ mọc lên một số nhánh thân mới."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Trung dược từ hải I, 1993, cây hoa sói rừng chứa vanilin, pelargonidin – 3 – rhamnosyl glucosid, glucosid.",
+      "Các hợp chất": "Theo Tsui Wing – Yan et al., 1996, cây hoa sói rừng còn chứa 2 sesquiterpen là các chloranthalacton A và B [Compendium of Indian medicinal Plants, vol 2 (1970 – 1979). 1999]."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Hoa sói rừng có vị đắng, cay, tính hơi ấm, ít độc. Rễ có nhiều dầu thơm, có tác dụng hoạt huyết, giảm đau, khu phong, trừ thấp, giảm phù nề, tiêu viêm, giải độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa sói rừng được dùng chữa ho, suy nhược, đau nhức nửa đầu, viêm khớp, đau nhức xương, đụng giập, nắn bó gẫy xương. Ngày dùng 15 – 30g toàn cây sắc uống. Để chữa đau nhức xương, dùng rễ tốt hơn. Dùng ngoài, toàn cây tươi giã nát, đắp vào chỗ đau nhức, đụng giập hoặc rễ để bó gẫy xương. Có thể dùng toàn cây phơi khô, tán bột, khi dùng chiều với nước hoặc rượu. dùng để trị các bệnh mụn nhọt, kiết lỵ, hoa sói rừng còn chữa viêm amidan, nhiễm khuẩn hô hấp, tiết niệu (Trung được từ hải, 1993, tập 14, tr. 137), Về chữa ung thư, tài liệu trước đây ở Trung Quốc chỉ nêu hoa sói rừng làm giảm u bướu, giảm ứ đọng máu, cải thiện được chức năng tuyến tụy, chữa đau dạ dày. Nhiều tài liệu gần đây ghi rõ họa sói rừng được dùng để điều trị u rắn ác tính như carcinom tuyến tụy, ung thư dạ dày, thực quản, trực tràng, kết tràng, ung thư bàng quang, ung thư gan, phổi, giáp trạng [Chang Minyi, 1992, Kee Chang Huang, 1999, sách đã dẫn]. Hoa sói rừng được chế tạo dưới dạng viên có 0,5g cao toàn cây tương đương với 2,5g dược liệu khô, mỗi lần uống 3 viên, ngày 3 lần. Cũng đã chế thành dung dịch tiêm, mỗi ống 1ml tương đương lg dược liệu khô, liều hàng ngày 2 – 4 ống, tiêm bắp hoặc tĩnh mạch (Kee Chang Huang, 1999, sách đã dẫn). Ở Đông Nam Á, thân và cành hoa sói rừng phơi khô, tán bột và lá tươi nghiền nát để bó gẫy xương, hoặc đắp lên chỗ thâm tím do đụng giập. Nước sắc lá uống có tác dụng làm săn se và chữa nôn (Perry và Metzger, 1980, Medicinal plants of East and Southeast Asia, The MIT Press, Cambridge – Masschusets – London, trang 78). Ở Hồng Kông (Trung Quốc) toàn cây hoa sói rừng được dùng chữa lỵ trực khuẩn, viêm ruột thừa, mụn nhọt, thấp khớp dạng thấp, đau lưng, viêm não. Ngày 20 – 30g sắc uống, tán bột uống với rượu hoặc dùng bột làm thành viên uống. Còn dùng rễ ngâm rượu uống chữa đau tức ngực, lá sắc uống trị ho lao. Lá tươi giã nát đắp chữa rắn cắn, bầm tím, hoặc bó gãy xương. Để điều trị ung thư đường tiêu hoá, dùng lá và cành hoa sói rừng, chiết thành cao khô, rồi làm thành viên, mỗi viên 0,3 g cao khô, mỗi lần dùng 4 – 6 viên, ngày 3 lần. Để điều trị ung thư tuyến tụy, toàn cây hoa sói rừng chiết lấy flavon, làm thành thuốc viên hoặc thuốc tiêm. Mỗi viên 200 mg và mỗi ống tiêm 25 mg. Thuốc viên, mỗi lần dùng 100 – 400 mg flavon, tuỳ theo điều kiện bệnh nhân, ngày 3 lần. Thuốc tiêm thường dùng mỗi lần 1 ống, ngày 2 lần [Chang Minyi, 1992, sách đã dẫn]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

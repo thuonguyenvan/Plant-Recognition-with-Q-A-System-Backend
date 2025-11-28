@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hu đay",
+      "ten_khac": "Hu đay, Hu đay lá hẹp",
+      "ten_khoa_hoc": "Trema angustifolia (Planch.) Blume",
+      "ma_taxon": "1540069",
+      "ho": "Ulmaceae (Du)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, cao 1 – 3 m.",
+      "thân": "Thân cành mảnh, lúc non có lông mềm, sau nhẵn.",
+      "lá": "Lá mọc so le, hình trái xoan, gốc bằng hoặc tròn, đầu thuôn dần thành mũi nhọn, dài 3 – 6,5 cm, rộng 1 – 2,5 cm, mép có răng cưa nhỏ và thưa, mặt trên có những chấm nhỏ sần sùi, mặt (lưới nhẵn, gân gốc 3; lá kèm dễ rụng; cuống lá rất ngắn.",
+      "hoa": "Cụm hoa là xim co, ít hoa, gồm hoa đơn tính, cùng gốc, có lông ngắn và cứng; hoa đực có 5 lá đài, 5 nhị, nhụy lép chia 2-3 thùy; hoa cái có 5 lá đài có lông, bầu nhẵn.",
+      "quả": "Quả hình trái xoan, khi chín màu đỏ.",
+      "mùa hoa": "tháng 3-7",
+      "mùa quả": "tháng 8-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Trema Lour, có 4 loài ở Việt Nam, trong đó hu đay là cây tương đối quen thuộc, phân bố khá phổ biến ở vùng núi, đôi khi cả ở vùng đồi trung du, nhất là các tỉnh phía bắc, từ Quảng Trị trở ra. Trên thế giới, hu đay có vùng phân bố rộng rãi từ Ân Độ, Myanmar, Trung Quốc, Lào, Campuchia, Việt Nam đến Thái Lan và Malaysia.  Cây thích nghi với vùng có khí hậu nhiệt đới và cận nhiệt đới. Tại Ân Độ, có thể gặp hu đay ở độ cao gần 2400 m. Hu đay là loại cây ưa sáng và mọc nhanh ở nơi đất trổng sau khi rừng bị phá hay trên các nương rẫy đã bỏ hoang.  Ở Việt Nam, hu đay được xếp vào nhóm cây tiên phong, trong các quần hệ thứ sinh sau nương rẫy. Tuy nhiên, sau 5-10 năm, khi có các loại cây gỗ khác vươn lên cạnh tranh ánh sáng, hu đay thường bị loại trừ dần. Có tài liệu cho rằng rễ hu đay có vi khuẩn cố định đạm, nên được coi là cây cải tạo đất, hay dược trổng để tạo bóng tạm thời cho cà phê (The Wealth of India, 1976, X : 277).  Hu đay ra hoa quả nhiều hàng năm. Cây mọc từ hạt sau 3 năm bắt dầu có hoa quả, các năm sau nhiều dần lên. Cây tái sinh tự nhiên chủ yếu từ hạt. Gỗ mềm, thường dùng làm củi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Vỏ cây hu đay chứa nhiều tanin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Theo tài liệu y học cổ truyền Trung Quốc, rễ và lá cây hu đay có tác dụng thanh lương, chỉ thống, chỉ huyết."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Ở Việt Nam, theo kinh nghiệm dân gian, cây hu đay được dùng làm thuốc chữa vết thương. Dựa vào kinh nghiệm trên, Trường Đại học Quân y và Viện Quân y 103 đã tiến hành nghiên cứu về cây hu đay thấy tanin trong cây có tác dụng làm săn xe, giảm đau và chống nhiễm khuẩn rõ rệt trên thực nghiệm lâm sàng. Dạng dùng thông thường là cao đặc.  Cách chế biến như sau  Chọn cây to, bóc lấy 10 kg vỏ tươi. Cạo sạch lớp bần, chặt nhỏ, cho vào nồi. Đổ nước cho ngập dược liệu, đun sôi liên tục trong 5-6 giờ. Chú ý luôn để mức nước sâm sấp dược liêu. Chắt lấy nưóc đầu; tiếp tục thêm nước đun sôi trong 3 giờ. Chắt lấy nước thứ hai, trộn nước cả 2 lần lại. Cô đến khi dung dịch sánh đặc thành cao là dược. Khi dùng lấy cao bôi một lớp mỏng lên vết thương. Sau 5-10 phút, lớp cao khô thành màng, không cần băng. Ngày làm một lần. Điều trị bằng cao hu đay, vết thương khô, chống se, không ri dịch. Thuốc lại tạo được màng bảo vệ làm cho vết thương khỏi nhiễm khuẩn, sạch và chóng lành. Ở Trung Quốc, rễ và lá cũng được dùng chữa vết thương, đòn ngã chảy máu. Ở Campuchia, người ta dùng lá non hu đay làm rau ăn.  *Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cỏ tranh",
+      "ten_khac": "Cỏ tranh, Bạch mao căn, Nhả cà, Lạc cà (Tày), Gan (Dao), Đia (Kdong)",
+      "ten_khoa_hoc": "Imperata cylindrica (L.) Raeusch.",
+      "ma_taxon": "164056",
+      "ho": "Poaceae (Lúa)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thân thảo, cao 0,6-1,2m.",
+      "rễ": "Thân rễ khỏe chắc,  màu trắng phủ nhiểu vẩy, có lông cứng",
+      "lá": "Lá hình rải dẹp, dài, thuôn nhọn ở đầu, nhẵn hoặc có lông ở mặt dưới, mặt trên và mép lá ráp. Lá non màu lục nhạt. Mép lá sắc.",
+      "hoa": "Cụm hoa hình chùy nhưng hình bắp dài 5-20cm màu trắng , bông nhỏ màu tím nhạt . Hoa có 2 nhị , chỉ rất dài , bao phấn thuôn hình dải.",
+      "mùa hoa": "quanh năm",
+      "mùa quả": "quanh năm"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Cây ưa sáng, sống dai, có thể mọc trên mọi loại đất, có khả năng chịu hạn cao. Ở Việt Nam, cỏ tranh phân bố ở khắp nơi từ các đảo, vùng đồng bằng, trung du , miền núi đến độ cao hơn 2000m."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Thân rễ."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cỏ tranh non chứa protein 6,56%, Ca 0,39%, N 1.05% , P 0,22%, tinh bột 10,07%, vitamin A và C.",
+      "gồm chất": "Thân rễ chứa đường toàn phần."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ có vị ngọt, tính hàn. Hoa có vị ngọt tính mát."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Tính chất theo tài liệu cổ: Bạch mao căn có vị ngọt tính hàn, hoa có vị ngọt tính ôn. Vào ba kinh tâm, tỳ, vị, có tác dụng trừ phục nhiệt, tiêu ứ huyết, lợi tiểu tiện, dùng chữa nội nhiệt phiền khái, tiểu tiện khó khăn, đái ra máu, thổ huyết, máu cam.",
+      "có tác dụng": "Rễ cỏ tranh có tác dụng thông tiểu tiện và tẩy độc cơ thể. Còn dùng chữa sốt nóng, khát nước, niệu huyết, thổ huyết.",
+      "sắc uống": "Liều dùng 10-40g dưới dạng thuốc sắc"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

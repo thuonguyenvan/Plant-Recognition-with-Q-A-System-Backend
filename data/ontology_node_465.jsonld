@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dướng nhỏ",
+      "ten_khac": "Dướng leo, dâu dây",
+      "ten_khoa_hoc": "Broussonetia kazinoki Sieb. et Zucc.",
+      "ma_taxon": "470727",
+      "ho": "Dâu tằm (Moraceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ dạng bụi, cao 2 – 4m.",
+      "thân": "Cành mềm có lông nhỏ lúc non, sau nhẵn.",
+      "lá": "Lá mọc so le, hình trái xoan – thuôn, dài 3 – 10 cm, rộng 2 – 4 cm, gốc khuyết và hình tim, đầu nhọn, mép có răng đều, hai mặt có lông rất mềm, gần chính 5, gân bên rất ngắn, gân phụ thành mạng lưới rõ, cuống lá dài 1 cm có lông lá kèm hình dải nhọn, dễ rụng.",
+      "hoa": "Cụm hoa đực mọc thành bông thuôn gần hình cầu, dài 1 – 1,5 cm, rộng 5 – 7 mm, có cuống ngắn, lá bắc hình trái xoan từ, nhẵn, không vượt quá hoa; đài 4 răng hàn liền ở gốc; nhị 4, đối xứng với nhau, bao phấn hình mắt chim.",
+      "quả": "Cụm hoa cái thành hình đầu đơn độc, hình cầu, đường kính 7- 10 mm, hoa rất nhiều, lá bắc thành hình khối dài 2 mm, đài có 3 răng ở đầu, nhẵn; bầu gần hình mắt chim, dẹt, hơi sần sùi, đường kính 1 mm. Quả phức hình cầu.",
+      "mùa hoa": "tháng 4 – 5",
+      "mùa quả": "tháng 6 – 7."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Dướng nhỏ hiện mới ghi nhận về phân bổ ở một số tỉnh và thành phố phía Bắc: Sơn La, Tuyên Quang, Quảng Ninh, Hoà Bình, Hà Nội, Ninh Bình. Trên thế giới có ở Trung Quốc và Nhật Bản.",
+      "thường_mọc": "Dướng nhỏ là cây ưa sáng, ưa ẩm và cũng có khả năng hơi chịu hạn. Cây thường mọc lẫn hoặc mọc dựa vào các cây bụi, cây gỗ nhỏ hoặc có cao đồi cây bụi, rừng thí sinh hoặc ở bờ các nương rẫy. Cây ra hoa quả hàng năm. Tái sinh tự nhiên bằng hạt. Quả chính là thức ăn của chim và nhiều loài động vật khác. Cây còn có khả năng tái sinh cây chồi từ phần còn lại sau khi bị chặt phát."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ, lá"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo Lee Hwa Jin et al., dường nhỏ chứa nhiều chất chống oxy hoá là kazinol A và kazinol B, các chất brotissonetin A, B, E, F và broussonetinin A và B."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ và lá dương nhỏ vị nhạt, tính bình, có công năng thanh nhiệt, giải độc, tiêu sưng, giảm đau. Tài liệu Trung Quốc ghi: dướng nhỏ có công năng khư phong, hoạt huyết, lợi niệu [TDTH, 1996, tập 2: 695]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Rễ và lá dướng nhỏ được dùng chữa viêm gan, viêm thanh quản, đau bụng, mỗi lần 10 – 20g sắc uống [Lê Quý Ngưu và cs, 1995: 126]. Dùng ngoài, lấy rễ hoặc lá tươi giã nát, đắp lên để chữa định nhọt, sưng tấy, đòn ngã tổn thương.  Để chữa rắn độc cắn, lấy lá tươi, giã nát, đắp xung quanh vết cắn hoặc dùng lá ngâm rượu uống và thoa ngoài [Tài liệu mới dẫn]."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

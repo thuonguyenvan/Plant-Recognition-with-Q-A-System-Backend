@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Xạ hương",
+      "ten_khac": "Nguyên thốn hương, Lạp tử, Hươu xạ, Sóc đất",
+      "ten_khoa_hoc": "Moschus moschiferus L.",
+      "ma_taxon": "42144",
+      "ho": "Hươu Cervidae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Hươu xạ là một con vật có chân mảnh, cổ ngắn, đầu dài, mõm tròn, có con lớn bằng con hoãng, thân dài độ 0,8-1m, đuôi dài 4-5cm, vai cao khoảng 55-65cm nhưng mông\u00a0lại cao hơn vai, nặng khoảng 10-17kg, thân phủ lông màu nâu hung. Con đực có răng nanh dài 8 đến 9cm lòi khỏi mép hướng xuống dưới rồi quặp về phía sau, con cái có nanh nhỏ hơn và không vượt khỏi mép. Cả hai con đực hay cái đều không có sừng. Đặc biệt ở bụng hươu xạ đực vào khoảng giữa rốn và cơ quan sinh dục có một túi tròn hơi phồng dài 5-7cm rộng 3cm, cao 3-4cm. Quanh túi có lông mọc mau, phần giữa trụi lông có hai lỗ thông. Túi này dùng để chứa chất xạ hương do các tuyến của thành túi tiết ra. Ở con vật trưởng thành, túi chứa đầy xạ có thể nặng tới 60g và hơn. Xạ hương ở con vật sống quánh như mật ong, màu nâu đỏ, để khô chất xạ biến thành một khối lổn nhổn màu nâu hung rồi xám lại dần dần."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Huơu xạ chủ yếu sống ở vùng rừng núi cao khoảng 1.000-2.000m, có khi tới 4.000m (Tây Tạng), thường ở những nơi vách núi cheo leo nguy hiểm. Nó ít khi ra khỏi rừng, chỉ thỉnh thoảng mới xuống khe hay suối (lõng). Ban ngày hươu xạ ẩn trong bụi cây, chiều tối mới đi ăn. Thức ăn của hươu xạ thay đổi tùy địa phương, tùy mùa và rất ảnh hưởng đến chất lượng của xạ hương. Chủ yếu nó ăn rêu, địa y, lá cây, cỏ, đôi khi rễ cây. Hươu xạ sống đơn độc, chỉ sống với nhau vào mùa động đực. Thời kỳ này cũng thay đổi tùy theo địa phương, nhưng nói chung hươu xạ đực chọi nhau rất kịch liệt, dùng nanh làm vũ khí tấn công. Người ta bắt được nhiều con đực còn mang ở cổ nhiều vết sẹo do đánh nhau mà ra. Cũng chính vào thời kỳ động đực này, hươu xạ còn tỏa ra mùi xạ nồng nặc bay xa hàng trăm thước. Hươu xạ chửa khoảng 5 tháng, đẻ 1-2 con và thọ độ 3-4 tuổi. Hươu xạ chạy rất nhanh như sơn dương, nhảy và leo nhanh nhẹn như hoãng. Khi bị đuổi dồn nó có thể lao xuống vực sâu hoặc băng qua suối có nước chảy xiết. Loài này nhút nhát, đa nghi, dễ hoảng hốt khi bị săn đuổi, cho nên việc săn bắt cũng đòi hỏi một số kinh nghiệm, nhưng có điểm đáng chú ý là hươu xạ là loài động vật mau quen, sau phút nguy hiểm nó thường trở lại nơi ăn nghỉ cũ như không có chuyện gì xảy ra, nên dễ bị người đi săn kiên trì nấp rình ở\u00a0gần đó săn bắt. Việc nuôi hươu xạ để lấy xạ còn rất ít kinh nghiệm. Có một số vườn thú nuôi hươu xạ, cho nó ăn cơm, rêu, lá cây, rau cỏ và nó có thể sống 3-4 năm, hươu xạ nuôi vẫn có thể cho xạ hương. Hươu xạ tại Việt Nam ít được khai thác. Người ta có cảm tưởng loài này đã bị tiêu diệt. Nhưng chúng tôi đã có dịp thấy bán ở chợ tỉnh Cao Bằng năm 1962 một con hươu có xạ sống do người ta bẩy được và gặp một cụ đông y ở ngay thị xã Cao Bằng tích trữ được một số túi xạ hương thu mua ngay ở trong tỉnh Cao Bằng. Tại nhiều cửa hàng thu mua lâm thổ sản của tỉnh chúng tôi còn thấy nhiều tấm da của hươu xạ, ngay tại kho da thú của Tổng công ty xuất nhập khẩu lâm thổ sản ở Hà Nội cũng có nhiều tấm da của hươu xạ do các tỉnh vùng Tây Bắc và Việt Bắc gửi về. Do đó cần có kế hoạch điều tra bảo vệ và khai thác, vì ngoài việc lấy xạ hương, hươu xạ còn cho da và thịt như những con thú khác. Hươu xạ là một nguồn lợi lớn của Trung Quốc, Ấn Độ và vùng Á Đông miền nam Liên Xô cũ. Hằng năm thị trường phương tây tiêu thụ chừng 10 vạn túi xạ. Mỗi kg túi xạ trị giá hiện nay vào 1.000 đô la Mỹ và 1kg xạ hương nguyên chất trị giá tới 80.000 đôla. Phần lớn người ta giết thịt hươu xạ để lấy túi xạ hương. Người ta đã tính rằng, nếu muốn xuất chừng 3.000kg xạ hương thì phải giết tới 100.000 con hươu xạ (vì bình quân 30 túi xạ được 1kg, mỗi túi nặng trung bình 30g), đó là chưa kể số hươu xạ cái và hươu xạ non giết nhầm mà không có túi xạ, vì như trên đã nói, hươu xạ cái và hươu xạ dưới 3 tuổi không có túi xạ. Khi bắt được hươu xạ, người ta xẻo ngay lấy chỗ hạch nói trên, thường xẻo rộng hơn một chút rồi treo trong nhà cho đến khi khô, có khi người ta rang cát cho nóng (tay còn chịu được) đổ xung quanh túi xạ, cát nguội lại rang, tiếp tục làm cho đến khi khô. Sau đó cất vào hộp đậy kín. Thường 50 đến 65% trọng lượng của túi xạ là trọng lượng xạ hương nguyên chất. Muốn lấy chất xạ hương trong túi xạ có nhiều cách: Có khi người ta ngâm khăn vải vào nước ấm vài phút rồi dùng khăn ẩm đó bọc kín túi xạ làm cho túi xạ mềm mại, sau đó cắt bỏ da thịt, lấy chất xạ hương mà dùng, có nơi lấy dùi sắt nung đỏ lăn trên mặt túi xạ cho cháy hết lông, cạo hết lượt da ngoài (có khi để nguyên), thái mỏng đặt lên đĩa, úp một cái bát lên, trát kín mép đĩa và bát bằng lá khoai sọ và cám hay đất dẻo. Đặt dĩa này vào nồi rang có chứa tro. Đun nóng nhẹ, muốn cho không nóng quá thường người ta đặt trên cái trôn bát một lá trầu không. Đun lâu và giữ cho lá trầu không bị héo vàng. Làm như vậy cho đến khi khô. Mở bát ra tán nhỏ, cho vào lọ nút kín, dùng dần.  Trên thị trường quốc tế, người ta chường chia xạ hương ra làm 3 loại là:  Xạ hương Xibêri xuất qua đường biển Bantic. Xạ hương Ấn Độ xuất qua đường Cancutta. Xạ hương Bắc bộ (Tonkin đọc là Tôngkinh), Trung Quốc và Tây Tạng xuất khẩu qua Hồng Kồng; trong 3 loại trên, xạ hương Tôngkinh được coi là loại quý và giá đắt hơn cả. Có điều là tuy mang tên xạ hương Tông kinh (Bắc bộ nước ta) nhưng thực tế những năm gần đây ta không có mà xuất."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": null
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Xạ hương nguyên chất là một thứ bột lổn nhổn có màu nâu tro. Vị hắc mùi rất hăng nếu ngửi nhiều, nhưng nếu pha thật loãng thì rất thơm. Khi thật khô thường kém thơm, nhưng khi ẩm, mùi thơm thường dậy lên. Xạ hương tan vào nước chừng 55% trọng lượng, nước có màu nâu sẫm, phản ứng axit, với cồn 90° xạ hương chỉ tan chừng 10-13% trọng lượng. Cồn có màu vàng nâu, thêm nước vào sẽ bị đục. Đốt có mùi amoniac, lượng tro từ 4 đến 6%, không được quá 8%. Xạ hương chứa cholesterin, chất béo, một chất nhựa đắng, muối can xi và amoniac với tỉ lệ thay đổi, một tinh dầu có thành phần chủ yếu là một chất xeton gọi là muscon C16H30O. Đây là hoạt chất thơm độc nhất của xạ hương. Nếu loại hết mùi tap chất của xạ hương đi thì mùi muscon rất thơm và rất tế nhị, mùi thơm rất bền, do đó xạ hương thuộc vào loại chất thơm định hương cao cấp. Tỷ lệ muscon trong xạ hương chừng 1%."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": null
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Xạ hương là một hương liệu vào loại cao cấp nhất vì nó cho mùi thơm rất bền. Trong y dược xạ hương là một vị thuốc được dùng trong cả tây và đông y. Nhưng hiện nay tây y hầu như không dùng nữa. Trái lại đông y coi xạ hương là một vị thuốc không thể thiếu được để điều trị nhiều bệnh nguy hiểm. Trước đây, tây y dùng xạ hương làm thuốc kích thích, trấn kinh, cường dương, điều kinh, chữa mê sảng của bệnh thương hàn, sưng phổi. Tây y dùng xạ hương dưới dạng cồn thuốc với liều 6 đến l0g trong một ngày pha vào nước đường cho uống. Còn dùng dưới dạng thuốc uống, thuốc viên, thuốc thụt với liều 0,25 đến 2g một ngày. Đông y hiện nay còn dùng xạ hương một cách rất phổ biến làm thuốc trấn kinh, chữa bệnh suy nhược thần kinh, trúng phong, mê man, choáng váng, đau mắt cam tẩu mã v.v… Theo thống kê năm 1954 của đông y thị xã Bắc Kinh (Trung Quốc) trong số 259 biệt dược được lưu hành có tới 68 biệt dược có chứa xạ hương. Xạ hương là cơ sở của bài thuốc lục thần hoàn, nhân đơn là những thuốc rất được tín nhiệm trong đông y. Theo tài liệu cổ tính chất của xạ hương là vị cay, tính ôn, không độc, vào 12 đường kinh, có tác dụng thông khiếu, thông kinh lạc, làm sạch uế, đuổi tà, là thuốc hồi sinh, trừ trúng độc dùng trong các trường hợp đau bụng, bụng đau dữ dội, phụ nữ khó đẻ, trúng phong hôn mê, điên cuồng, ngực đau thắt, dùng ngoài tiêu ung thư sang thũng. Phụ nữ có thai không được dùng. Liều dùng hằng ngày từ 0,04g đến 0,10g, dùng riêng hay phối hợp với nhiều vị thuốc khác, thường là phối hợp.  Đơn thuốc có xạ hương  Lục thần hoàn dùng trong những trường hợp sốt cấp tính, trúng độc, mê loạn, tâm trạng suy nhược. Xạ hương 1g, minh hùng hoàng 1g, băng phiến 1g, tây ngưu hoàng 1,5g, châu phàn (bột hạt trai) 1,5g, thiễm tô 1g. Năm vị trên tán nhỏ, thêm thiềm tô tẩm rượu, viên bằng hạt cải, lấy muội bếp (bách thảo sương) làm áo cho nên viên có màu đen. Mỗi lần dùng 5-10 viên tùy theo bệnh và sức khỏe. Thái ất tử kim đĩnh dùng trong những trường hợp trúng độc do thức ăn, hôn mê ngã quay, chết đuối, tự tử thắt cổ mà ngực còn nóng ấm: Sơn từ cô (Tulipa edulis thuộc họ Hành tỏi- Liliaceae) 80g, thiên kim tử (Euphorbia lathyris – họ Thầu dầu Euphorbiaceae) 40g, hùng hoàng 12g, hồng nha đại kích (Knoxia corymbosa thuộc họ Cà phê – Rubiaceae) 60g, ngũ bội tử 40g, chu sa 12g, xạ hương 12g. Các vị tán nhỏ viên thành thỏi hình trụ, mỗi thỏi nặng 4g. Liều dùng trung bình cho người lớn là nửa đĩnh (thỏi) cho đến 1 hay 2 thỏi. Vì hình dáng vị thuốc trông giống đĩnh vàng (thỏi vàng) ngày xưa nên có tên kim đĩnh. Chữa thai chết không ra được: Xạ hương 1g, quế chi 8g, hòa với rượu nóng cho uống; nếu cần có thể tăng liều xạ hương lên tới 2g.  Những con vật khác cho xạ ở nước ta  1. Con cầy hương: Còn gọi là con cỏi hay tu cỏi, tên khoa học là Viverricula malaccensis Gmelin thuộc họ Cầy Viverridae. Con cầy hương có thân nhỏ, dài, chân ngắn và đuôi dài bằng 2/3 thân. Mõm nhọn, tai ngắn và tròn. Lông thô cứng có màu xám nhạt hay màu nâu vàng nhạt phớt xám. Dọc lưng có 5 hay 6 giải màu nâu hay đen sắp thành giải dọc nhưng không rõ ràng. Trước mắt và sau tai đều có điểm đen. Đầu, cằm và chân màu nâu. Đuôi có nhiều khoang đen trắng xen kẽ. Thân đo từ mõm đến hậu môn dài từ 53 đến 59cm, đuôi đo từ hậu môn tới mút dài khoảng 38cm.  Cầy hương sống trong hang hốc ở đất, dưới đá hay trong bụi rậm, có khi ở cả trong những khe hốc nhà bỏ hoang. Ban ngày thường ẩn trong tổ, đến tối mới đi kiếm ăn, nhưng cũng có khi ra ăn cả ban ngày. Cầy hương bắt chuột, rắn, ếch, sâu bọ để ăn. Vì trèo cây được cho nên đôi khi nó bắt cả chim và ăn trứng. Thỉnh thoảng cầy hương cũng vào nhà bắt gà vịt. Cầy hương thường để vết xạ thơm theo dọc đường đi; khi giận dữ cầy hương cũng tỏa mùi thơm nức. Cầy hương gây tai hại cho người thì ít mà có ích nhiều hơn vì nó tiêu diệt một số lớn động vật có hại cho người như rắn, chuột, sâu bọ. Nó còn cho thịt, da và chất xạ làm thuốc và làm hương liệu. Cầy hương còn thấy ở nhiều nước vùng Đông Nam Á như Miến Điện, Malaixia, miền Nam Trung Quốc, Xrilanca, An Độ v.v… Nước ta chưa tổ chức nuôi cầy hương, nhưng ở các nước khác, ở các đảo châu Phi, châu Á (Malaixìa) người ta nuôi cầy hương để khai thác xạ. Chúng ta biết rằng túi xạ của cầy hương là một tuyến ở giữa hậu môn và dương vật của con cầy. Muốn lấy xạ, người ta nhốt con vật vào một chuồng, hơi chật để cho con vật cử động hơi khó khăn, sau đó người ta ép túi xạ vào chắn song chuồng để xạ hương chảy ra ngoài, có khi người ta dùng một cái cùi dìa rất nhỏ bằng tre để vét xạ trong túi. Xạ lấy được phết trên lá, gạt bỏ hết lông, rửa bằng nước muối hoặc dịch ép của quả chanh rồi phơi hay sấy nhẹ cho khô, cất vào hộp kín. Tại Malaixia, người ta còn huấn luyện được cầy hương theo hiệu lệnh tới chìa túi xạ ra chấn song chuồng để tiện cho người lấy xạ. Những người nuôi cầy hương đã có kinh nghiệm là càng cho cầy hương ăn nhiều chuối thì chất xạ càng nhiều mùi thơm. Muốn săn bắt cầy hương chúng ta có thể dùng chó săn hoặc kết hợp chó săn với chăng lưới trên chỗ cầy hương đi lại là bắt được.  2. Con cầy giông còn gọi là con giông, có tên khoa học là Viverra zibetha L. cũng thuộc họ Cầy (Viverridae). Con giông loại lớn có thân dài 73-83cm, cổ mảnh, đầu dài, mõm nhọn và đuôi dài bằng khoảng nửa thân.  Bộ lông cầy màu xám hơi phớt vàng nhạt, có điểm nhiều vết đen nâu không rõ rệt xếp gần nhau làm thành nhiều dải gợn sóng vắt ngang lưng, vết đen thành đường chỉ rộng chạy từ cổ tới gốc đuôi, hai bên chỉ có viên sọc trắng. Đầu xám, má cằm màu nâu thẫm. Gáy có 4 dải đen chạy dọc, bụng trắng nhạt, chân nâu thẫm, đuôi có 6 khoang đen. Con cầy giông rất phổ biến ở nước ta, từ vùng thấp tới vùng rẻo cao, từ nam ra bắc, đâu cũng có. Còn thấy ở Châu Phi, ở các nước khác của châu Á như Miến Điện, miền Nam Trung Quốc, An Độ, Thái Lan, Malaixia, Inđônêxia. Tại một số nước châu Á như Malaixia, Ấn Độ, châu Phi như Ai Cập, Abitxini, châu Âu như Ý, Đức, Hà Lan đã tổ chức nuôi cầy giông để lấy xạ. Người ta cho cầy giông ăn thịt hoặc cho ăn xen kẽ cơm và chuối, càng ăn nhiều thịt cầy giông càng cho nhiều xạ. Muốn lấy xạ người ta buộc con cầy giông lại, lấy tay ấn nhẹ vào túi xạ làm cho xạ chảy ra tay, sau vét xạ bằng cùi dìa, sau cho nước dừa vào túi xạ cho con vật đỡ đau, mỗi lần có thể lấy tới 4g xạ, mỗi tuần lấy 1 hay 2 lần. Lấy xong cũng làm như đối với cầy hương Chất xạ của cầy hương hay của cầy giông là một chất đồng thể, nhờn, vàng nhạt hay trắng khi còn tươi, để lâu trở nên sánh hơn và có màu nâu, thường kèm theo lông của con vật cho, xạ. Mùi hăng rất nồng khai, giống mùi xạ hương thật (moschus-musc) nhưng không tinh tế bằng. Xạ hương này có chất amoniac, tinh dầu, chất mỡ, muối kali và canxi. Chất xạ hương của cầy hương và cầy giông cũng rất được ưa chuộng tuy không bằng\u00a0xạ hương của hươu xạ. Trên thị trường quốc tế người ta gọi là Viverreum hay Civette. Chất, xạ hương ở Abitxini chảy ở 36-37°C, gồm phần lớn là chất béo, dễ tan trong\u00aate, benzen, clorofoc, ête dầu hỏa, ít tan hơn trong cồn etylic và metylìc, trong axeton\u00a0không tan trong nước, axit và kiêm. Trong xạ hương này có chất scatol bên cạnh một hợp chất có mùi. Xạ hương này trước kia thường được nhân dân châu Âu dùng làm thuốc kích thích và trấn kinh. Hiện nay chỉ còn dùng làm hương liệu như xạ hương Moschus. Trong nhân dân Việt Nam, người ta dùng loại xạ này như loại xạ hương lấy ở hươu xạ."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null,
+       "làm thuốc": null,
+        "có tác dụng": null,
+        "sắc uống": null,
+        "giã nát": null,
+        "sắc nước uống": null,
+        "phơi khô": null,
+        "xấy khô": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

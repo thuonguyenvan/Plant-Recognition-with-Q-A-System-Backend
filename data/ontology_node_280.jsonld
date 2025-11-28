@@ -1,0 +1,233 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "plant": "http://medicinal-plant.org/",
+        "Plant": {
+            "@id": "plant:Plant",
+            "@type": "schema:Thing",
+            "@context": {
+                "ten": "schema:name",
+                "ten_khac": "schema:alternateName",
+                "ten_khoa_hoc": "schema:scientificName",
+                "ma_taxon": "schema:identifier",
+                "ho": "schema:Text"
+            }
+        },
+        "Mô tả": {
+            "@id": "plant:Description",
+            "@type": "schema:Thing",
+            "@context": {
+                "lá": "schema:text",
+                "hoa": "schema:text",
+                "quả": "schema:text",
+                "cây": "schema:text",
+                "mặt": "schema:text",
+                "đầu": "schema:text",
+                "thân": "schema:text",
+                "cuống": "schema:text",
+                "gốc": "schema:text",
+                "cao": "schema:text",
+                "rễ": "schema:text",
+                "củ": "schema:text",
+                "mọc": "schema:text",
+                "mùa hoa": "schema:text",
+                "mùa quả": "schema:text"
+            }
+        },
+        "Phân bố": {
+            "@id": "plant:Distribution",
+            "@context": {
+                "phân_bố": "schema:description",
+                "ở_vùng": {
+                    "@id": "schema:Place",
+                    "@context": {
+                        "tên": "schema:name"
+                    },
+                    "@container": "@set"
+                },
+                "các_tỉnh": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "tỉnh": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name"
+                            }
+                        }
+                    }
+                },
+                "được_trồng": {
+                    "@id": "schema:ItemList",
+                    "@context": {
+                        "mục": "schema:itemListElement",
+                        "nơi": {
+                            "@id": "schema:Place",
+                            "@context": {
+                                "tên": "schema:name",
+                                "ghi_chú": "schema:description"
+                            }
+                        }
+                    }
+                },
+                "chủ_yếu": "plant:PrimarilyNote",
+                "thường_mọc": "plant:HabitatNote",
+                "Đặc điểm sinh trưởng": "schema:text"
+            }
+        },
+        "Thông tin khác": {
+            "@id": "plant:AdditionalInformation",
+            "@type": "schema:Thing",
+            "@context": {
+                "thong_tin_khac": "schema:description"
+            }
+        },
+        "Bộ phận dùng": {
+            "@id": "plant:UsedParts",
+            "@type": "schema:Thing",
+            "@context": {
+                "bo_phan_dung": "schema:description"
+            }
+        },
+        "Thành phần": {
+            "@id": "plant:CompositionList",
+            "@type": "schema:Thing",
+            "@context": {
+                "thành phần": "schema:text",
+                "gồm chất": "schema:text",
+                "Các hợp chất": "schema:text",
+                "chứa": "schema:text",
+                "triết xuất": "schema:text",
+                "đã nghiên cứu": "schema:text",
+                "tìm thấy": "schema:text",
+                "thủy phân": "schema:text",
+                "các hoạt chất": "schema:text",
+                "tinh dầu chứa": "schema:text",
+                "có hoạt chất": "schema:text",
+                "dấu hiệu đặc trưng": "schema:text"
+            }
+        },
+        "Tính vị": {
+            "@id": "plant:TasteProperty",
+            "@type": "schema:Thing",
+            "@context": {
+                "Có vị": "schema:text"
+            }
+        },
+        "Công dụng": {
+            "@id": "plant:MedicalUseList",
+            "@type": "schema:Thing",
+            "@context": {
+                "cong_dung_y_hoc": "schema:text",
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "chữa": "schema:text"
+            }
+        },
+        "Cách dùng": {
+            "@id": "plant:Preparation",
+            "@type": "schema:Thing",
+            "@context": {
+                "được_dùng": "schema:text",
+                "làm thuốc": "schema:text",
+                "có tác dụng": "schema:text",
+                "sắc uống": "schema:text",
+                "giã nát": "schema:text",
+                "sắc nước uống": "schema:text",
+                "phơi khô": "schema:text",
+                "xấy khô": "schema:text"
+            }
+        },
+        "luu_y": {
+            "@id": "plant:Caution",
+            "@type": "schema:Thing",
+            "@context": {
+                "luu_y": "schema:description"
+            }
+        }
+    },
+    "@graph": [
+        {
+            "@type": "Plant",
+            "ten": "Tỳ bà",
+            "ten_khac": "Tì bà, Tỳ bà, Nhót tây, Sơn trà nhật bản, Phì phà",
+            "ten_khoa_hoc": "Eriobotrya japonica (Thunb.) Lindl.",
+            "ma_taxon": "76949",
+            "ho": "Rosaceae (Hoa hồng)",
+            "Mô tả": {
+                "lá": "Lá mọc đối, phiến dai, hình mác rộng, dài 12 – 30 cm. rộng 4 – 8 cm, gốc và đầu thuôn, mặt trên nhẵn bóng. mặt dưới phủ một lớp lông dày, mép khía răng thưa ở nửa phía trên, cuống ngắn và dày, có lông; lá kèm hình mác, có lông rậm.",
+                "hoa": "Cụm hoa mọc ở đầu cành thành chùy hình tháp; Lá bắc hình mác nhọn; lá bắc con hình bầu dục, đầu tù, hoa nhiều màu trắng, dài có ống rất ngắn, loe rộng, phủ đầy lông, cánh hoa có móng hình tròn, nhị 20, ngắn hơn cánh hoa, chỉ nhị loe ở gốc; bầu có lông, chia 5 ô.",
+                "quả": "Quả nạc hình trứng hoặc gần hình cầu, hơi có lông mềm, khi chín màu vàng, hạt to, 1 – 5, hình trứng.",
+                "cây": "Cây nhỡ, cao 5 – 7 m. Cành non có nhiều lông.",
+                "thân": null,
+                "cuống": null,
+                "gốc": null,
+                "cao": null,
+                "rễ": null,
+                "củ": null,
+                "mọc": null,
+                "mùa hoa": "tháng 9 – 1",
+                "mùa quả": "tháng 2 – 4"
+            },
+            "Phân bố": {
+                "phân_bố": "Eriobotrya Lindl là một chi nhỏ có 7 – 8 loài ở Việt Nam (Nguyễn Tiến Bân, 1997). Cây tì bà có nguồn gốc ở vùng Đông Nam Trung Quốc, sau được trồng ở nhiều vùng cận nhiệt đới hoặc ôn đới ấm như Địa Trung Hải, Australia, Nam Phi. Nam Mỹ, Hoa Kỳ (California), Nhật Bản, Đài Loan. Bắc Việt Nam và một số nơi thuộc Vùng núi trên 1000m ở các nước Đông Nam Á và Ấn Độ. Ở Việt Nam, cây tì bà được nhập trồng từ lâu đời và hiện được trồng rải rác trong vườn các gia đình. Ở tỉnh Lạng Sơn, Cao Bằng, Thái Nguyên và Hà Nội. Cây ưa khí hậu ẩm mát, có thể chịu được nhiệt độ thấp -10°C về mùa đông ở Trung Quốc và Nhật Bản. Đương nhiên, cây trồng ở các nước trên, có hiện tượng rụng lá mùa đông, trong khi đó ở các tỉnh phía bắc Việt Nam không có hiện tượng này. Cây sinh trưởng tốt ở đất mùn trên núi, ít sỏi đá và có thể hơi chua: ra hoa nhiều nhưng kết quả hạn chế, do mùa hoa ở Việt Nam thường có mưa xuân. Giống tì bà trồng ở Việt Nam có quả chua, nên ít được phổ biến, nhưng ở Nhật Bản đó là cây ăn quả quan trọng, sản lượng mỗi năm đạt hơn 10.000 tấn. Tỳ bà là loại cây dễ trồng. Nhân dân ở thị xã Lạng Sơn thường trồng bằng cành chiết hay bằng cây chồi rễ. Ngoài ra, cũng có thể trồng bằng hạt.",
+                "ở_vùng": [],
+                "các_tỉnh": {
+                    "mục": [
+                        {
+                            "tỉnh": {
+                                "tên": "Lạng Sơn"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Cao Bằng"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Thái Nguyên"
+                            }
+                        },
+                        {
+                            "tỉnh": {
+                                "tên": "Hà Nội"
+                            }
+                        }
+                    ]
+                },
+                "được_trồng": {
+                    "mục": []
+                },
+                "chủ_yếu": null,
+                "thường_mọc": null,
+                "Đặc điểm sinh trưởng": null
+            },
+            "Thông tin khác": {
+                "thong_tin_khac": null
+            },
+            "Bộ phận dùng": {
+                "bo_phan_dung": "Lá bánh tẻ thu hái vào mùa Xuân – Hạ, chải hết lông, rửa sạch rồi đem phơi khô hay sấy khô. Khi dùng, thái nhỏ, tẩm mật sao. Còn dùng quả."
+            },
+            "Thành phần": {
+                "thành phần": "Lá tì bà chứa tinh dầu trong đó có trans – nerolidol. trans – trans – farnesol; acid ursolic có tính kháng lại tế bào sarcom 180 (CA. 118 : 139.348 t). Lá còn có các chất triterpen : chất I, acid α. – hydroxyursolic, acid maslinic. 3 chất này có tính chất chống viêm (CA. 113 : 208348 d); acid tormentic, acid 1β – hydroxyeuscaphic, acid 3 – O – transferuloyleuscaphic CA. 122: 183240 h., CA. 126 16,771 h). Theo De Tommasi Nunziatina và CS. 1992. tì bà chứa 23 – trans – P. coumaroyltonmentic, acid 23 cis-p coumaroyltonmentic. Acid 3 – O – trans cafeoyltormentic và acid 3 – O – trans coumaroyltonmentic. Chất acid 3 Trans-cafeoy fonmentic ức chế được bệnh do nhiễm rhinovirus (CA.18 : 283 z). Theo Godoy Helena T. và CS, 1995 qua 6 lô hàng trên thị trường ở Braxin, tì bà chứa β – caroten 7,8 µg/g, § – carotein 0,1 µg/g, neurosporen 1,1 µg/g, β – cryptoxanthin 4,8 µg/g, 5, 6 – monoepoxy – β Cryptoxanthin 0.6 pug/g, violaxanthin 1.6 µg/g, neoxanthin 0,8 µg/g, auroxanthin 0,9 µg/g (CA 126 : 103.302 z). Quả chín có chất lượng tốt hơn sau một thời gian bảo quản so với quả chưa chín hoặc ở cây có toàn bộ quả chín (Ding Chang Kui và cs, 1997: CA 127: 330 587k). Năm 1994, các tác giả trên còn nhận thấy quả tì bà bán trên thị trường Braxin Có 13 – cis – β – caroten (vết) (CA 121 : 7758 d). Theo Frochlich O, và CS, 1990, quả tì bà có 80 chất có mùi thơm. Trong đó nhiều chất  thuộc nhóm alcol và carbonyl Các chất chính là hexanal (2.4 mg/kg thịt quả – 2 hexema (1.8 mg/kg), benzaldehyd (0.7mg/Kg), (CA 112:156  982p). Thịt quả chứa lượng đường, acid hữu cơ và acid amin. Các đường tự do chủ yếu ở quả chín hoàn toàn làfructose 3,71%, glucose 3,42%, sucrose 0,46%. Hàm lượng đường toàn phần là 13,7%, cao gấp 2 lần so với quả chưa chín. Các acid hữu cơ chiếm 0,2% gồm chủ yếu là acid malic 89 mg %, acid formic 32 mg %. acid Oxalic 26 mg %. Các acid amin chiếm 18 – 30 mg% gồm cao chất chính là acid aSpartic, Valin, acid glutamic, serin, alanin, histidin (CA 117 : 25.015 f). Cây tì bà còn có chất 2α. – hydroxyoleanolic acid methyl ester."
+            },
+            "Tính vị": {
+                "Có vị": "Lá tì bà có vị đắng, tính bình, vào 2 kinh phế và Vị có tác dụng thanh phế, hoà vị, giáng khí, hóa đờm."
+            },
+            "Công dụng": {
+                "cong_dung_y_hoc": "Lá tì bà được dùng chữa phế nhiệt Sinh ho, ho khan, ho có đờm, khô cổ khản tiếng, ho ra máu, chảy máu cam, dạ dày nóng (vị nhiệt), nôn. Liều lượng: 10- 20g/ngày. Sắc nước uống thường dùng phối hợp với một số vị thuốc khác như tiền hồ. tang diệp, chữa ho phong nhiệt, Với đạm trúc diệp, chữa khản tiếng. Theo tài liệu nước ngoài, lá tì ba con được dùng chữa viêm phế quản mạn tính. Lá giã nát đắp ngoài chữa mụn nhọt, chảy máu cam. Nước ép từ Vỏ thân tỳ bà có tác dụng cẩm nôn. Quả tì bà ăn sống có tác dụng giải khát, tiêu đờm, chống buồn nôn."
+            },
+            "Cách dùng": {
+                "được_dùng": "Chữa ho, viêm họng  Lá tì bà 20g, khoản đông hoa 10g, Cam thảo 5g. Nước 600 ml. Sắc còn 200 ml. Chia làm 3 lần uống trong ngày.  Chữa phế nhiệt, kho khan lâu ngày  Lá tì bà 12g, mạch môn, vỏ rễ dâu, thiên môn. sinh địa, mỗi vị 10g. Sắc nước uống.  Chữa viêm phế quản mãn tính  Lá tì bà 2g, hoàng kỳ, trần bì mỗi vị 1,5g, phụ tử, bạch thược, cam thảo (chích) mỗi vị 1,0g; nhục quế. can khương mỗi vị 1,0g. Tất cả nghiền thành bột, chế thành viên hoàn, chia làm 2 lần uống trong ngày (Trung dược từ hải – Trung Quốc)."
+            },
+            "luu_y": {
+                "luu_y": null
+            }
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau dệu",
+      "ten_khac": "Rau dệu, Rau diếc, Rau giền nước, Poòng peo (Thái)",
+      "ten_khoa_hoc": "Alternanthera sessilis (L.) A. DC.",
+      "ma_taxon": "158232",
+      "ho": "Amaranthaceae (Rau dền)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá rau dệu có hình dạng và kích thước đa dạng, có thể là hình mũi mác, hình trứng thuôn dài, hoặc hình bầu dục ngược, dài 1 – 8cm, rộng 2 – 20mm. Mép lá nguyên hoặc có răng cưa không rõ, hai mặt lá không lông hoặc có lông mềm rải rác.",
+      "hoa": "Hoa nhỏ, mọc thành cụm 1 – 4 bông ở nách lá, ban đầu có dạng cầu, sau kéo dài thành trụ, đường kính 3 – 6mm. Hoa có lông trắng dày đặc trên trục. Cánh hoa trắng, dài 2 – 3mm, hình trứng nhọn, không lông.",
+      "quả": "Quả hình tim ngược, dài 2 – 2.5mm, có cánh, màu nâu sẫm, nằm trong cánh hoa tồn tại.",
+      "cây": "Rau dệu là cây thân thảo sống lâu năm, cao từ 10 – 45cm.",
+      "rễ": "Rễ hình trụ, thô, đường kính có thể đạt 3mm.",
+      "thân": "Thân mọc bò hoặc hơi vươn lên, có màu xanh hoặc hơi tím, có rãnh dọc và lông mềm tại các đốt.",
+      "hạt": "Hạt có hình trứng cầu.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 7 – 9"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Alternanthera Forsk. gồm khoảng 70 loài, đều là cây thảo, phân bố chủ yếu ở vùng nhiệt đới, cận nhiệt đới và ôn đới ấm. Ở Việt Nam có 4 loài, trong đó rau dệu là cây rất quen thuộc. Rau dệu có nguồn gốc ở vùng nhiệt đới Đông Nam Á. Cây phân bố phổ biến từ Srilanca, Ấn Độ, Trung Quốc, đến Lào, Campuchia và một số nước khác ở vùng Đông – Nam Á. Ở Việt Nam, rau dệu phân bố khắp các tỉnh từ đồng bằng đến trung du và vùng núi thấp (khoảng dưới 600 m).",
+      "thường_mọc": "Cây ưa ẩm, ưa sáng và có thể hơi chịu bóng, thường mọc ở vườn, ruộng trồng hoa màu, ven rừng và nương rẫy… Môi trường sống quan trọng nhất của cây là đất ẩm, nhiều mùn, có độ pH : 5,5 – 7,0. Sinh trưởng mạnh trong mùa mưa ẩm; về mùa đông hoặc mùa khô, phần trên mặt đất có hiện tượng hơi bị tàn lụi. Cây ra hoa quả nhiều hàng năm, tái sinh tự nhiên chủ yếu từ hạt. Rau dệu có khả năng mọc chồi và phân nhánh khỏe, thường mọc thành đám dày đặc, bò lan trên mặt đất, khó phân biệt từng cá thể."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Cây chứa các thành phần hóa học như flavonoid glycosides, triterpene saponins, organic acids, phenolic compounds, coumarins, cùng với đường, chất béo, protein.",
+      "gồm chất": "Ngoài ra, còn có 6-methoxyluteolin, 7-α-L-rhamnosyl-6-methoxyluteolin và patuletin, giúp cây có tác dụng kháng viêm, kháng khuẩn, chống oxy hóa."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Vị hơi ngọt, nhạt, tính mát."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Thử độc tính cấp: Toàn cây rau dệu phơi khô, chiết bằng cồn 50°, rồi cô áp suất giảm để được cao khô. Xác định độc tính cấp của cao khô bằng cách tiêm trong màng bụng cho chuột nhắt trắng, thấy LD50 = 500 mg/kg. Tác dụng hạ thân nhiệt: Dùng cao khô chiết như trên cho chuột nhắt trắng với liều 125 mg/kg. Nhiệt độ chuột được đo ở hậu môn trước khi dùng thuốc vào lúc 30 phút, 1 giờ và 2 giờ sau đó. Kết quả là thân nhiệt hạ rõ rệt so với lô đối chứng. Tác dụng lợi tiểu: Dịch ép cây rau dệu có tác dụng lợi tiểu rõ rệt trên chuột cống trắng."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "1. Chữa ho ra máu do phế nhiệt Giã 120g rau dệu tươi, vắt lấy nước. Thêm một chút muối, chưng nóng rồi uống. 2. Hỗ trợ điều trị sốt Sốt do siêu vi cảm cúm Đun 100g rau dệu tươi + 100g lá tre với 1 lít nước. Uống đều đặn mỗi ngày đến khi hạ sốt. Hỗ trợ điều trị sốt rét Nấu cháo loãng với 40g ngọn lá non rau dệu. Ăn để giúp hạ sốt. 3. Chữa kiết lỵ ra máu hoặc phân nhầy trắng Sắc 20 – 30g rau dệu tươi với 1 chén nước, còn lại 7 phần. Nếu phân có máu (xích lỵ): thêm đường trắng. Nếu phân nhầy trắng (bạch lỵ): thêm đường đỏ hoặc mật ong. 4. Đi ngoài ra máu Nấu cách thủy rau dệu với cây Bắt ruồi (Drosera burmanni Vahl.) và thịt để ăn. 5. Điều trị viêm loét trong ruột (trường ung mạn tính) Giã 40g rau dệu tươi, vắt lấy nước. Pha với rượu, uống ngày 3 lần. 6. Trị tiểu buốt, tiểu rát Rửa sạch 80g rau dệu tươi (cả thân, lá và rễ), sắc nước uống ngày 2 lần. Duy trì trong 5 – 7 ngày để đạt hiệu quả tốt nhất. 7. Chữa viêm đường tiết niệu Sắc nước từ: 100g rau dệu 50g cam thảo đất 50g rau má 20g diếp cá Uống đều đặn giúp cải thiện bệnh. 8. Giảm đau răng Sắc rau dệu với Địa cốt bì (vỏ rễ cây rau Khởi) và Bồ thảo đầu (ngọn cỏ Bồ). Uống nước sắc để giảm đau. 9. Trị hắc lào, ghẻ lở Nấu 80g rau dệu với nước, dùng tắm để giảm ngứa, lở loét. 10. Chữa nhọt độc, sưng tấy Giã nhuyễn rau dệu tươi, trộn với mật ong. Đắp lên vết thương, thay ngày 2 lần. 11. Trị mụn nhọt giống tổ ong Giã rau dệu tươi, trộn với lòng trắng trứng gà. Đắp lên vùng da bị tổn thương. 12. Hỗ trợ điều trị viêm gan gây vàng da Sắc nước từ: 100g rau dệu 10g củ nghệ 50g cỏ mực 50g cây chó đẻ Uống giúp cải thiện chức năng gan. 13. Làm tiêu cục sưng cứng ở bụng do lá lách to Giã nát rau dệu tươi, đắp trực tiếp lên vùng bị sưng. 14. Chữa chứng hột xoài giai đoạn đầu Rửa sạch, giã nát rau dệu, gừng tươi, bèo tía, thêm muối rồi sắc lấy nước. Uống nóng, phần bã dùng đắp vào chỗ sưng đau."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

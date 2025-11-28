@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Dây huỳnh",
+      "ten_khac": "Dây huỳnh, Bông vàng, Hoa đai vàng, Huỳnh anh",
+      "ten_khoa_hoc": "Allamanda cathartica L.",
+      "ma_taxon": "62937",
+      "ho": "Apocynaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhỏ mọc thành bụi, trườn, có mủ trắng, không lông",
+      "thân": "nhánh tròn, cỡ 1cm, có cành dọc",
+      "lá": "Lá to mọc đối hay vòng 3-6, hình thuôn dài, đầu nhọn.",
+      "hoa": "Hoa mọc thành chùy gần ngọn, màu vàng tươi, to, gần như đều; lá đài rời, xanh, 3 to, 2 nhỏ; tràng có một ống hẹp rời rộng; 5 nhị đính ở trên phần hẹp, 5 vảy có lông; bầu hình trứng 1 ô, chứa nhiều noãn.",
+      "quả": "Quả nang, có gai, mở thành 2 van, chứa ít hạt.",
+      "mùa hoa": "tháng 5-10",
+      "mùa quả": "tháng 5-10"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Gốc ở Mỹ châu nhiệt đới (Brazin, Guyan), được trồng khắp nơi làm cảnh vì có hoa đẹp quanh năm.  Dây huỳnh là cây thường xanh quanh năm, ưa sáng, ưa ẩm và cũng có thể chịu được khô hạn. Cây sinh trưởng mạnh từ tháng 4 – 8 là thời kỳ có nhiều nắng và có nhiệt độ trung bình cao nhất trong năm. Cây trồng ở nơi được chiếu sáng đầy đủ và có giá thể leo, sẽ ra hoa nhiều hơn những cây bị che bóng. Cây trồng ở các tỉnh phía bắc hiếm khi thấy quả; trồng dễ dàng bằng cành. Để tạo cho cây phát triển theo ý muốn, về mùa đông người ta thường cắt bỏ bớt các cành và thân già, đến mùa xuân năm sau từ phần còn lại sẽ mọc ra nhiều chồi. Các chồi này sinh trưởng nhanh và sẽ ra hoa ngay trong mùa hè cùng năm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Lá và nhựa"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Dây huỳnh chứa nhiều alamandin, alamandicin và alamdin đều có hoạt tính kháng ung thư bạch cầu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Dây huỳnh có vị nhạt, hơi đắng, tính hàn, có tác dụng nhuận tràng, tẩy. Vỏ cây, nhựa và hạt có độc."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Cành lá sắc uống làm thuốc tẩy, trị sốt, sốt rét, tê thấp.",
+      "được_dùng": "Lá hãm uống tẩy và chữa bệnh táo bón dai dẳng sau khi bị nhiễm độc chì. Thuốc hãm của lá tẩy nhẹ; với liều cao, nó gây xổ và gây nôn. Nhựa mủ là một loại thuốc tẩy nhưng ít được dùng hơn. Nó gây xổ ở liều 8-10 giọt trong một poxio phù hợp; với liều cao hơn sẽ là chất tẩy mạnh. Ở Trung Quốc, có nơi người ta dùng toàn cây làm thuốc chữa ghẻ ngứa, sát trùng, diệt bọ gậy."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

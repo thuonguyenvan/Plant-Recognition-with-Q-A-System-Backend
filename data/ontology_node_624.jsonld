@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Trắc bách diệp",
+      "ten_khac": "Trắc bá, Bá tử, Trắc bách diệp, Co tổng péc (Thái)",
+      "ten_khoa_hoc": "Platycladus orientalis (L.) Franco",
+      "ma_taxon": "135659",
+      "ho": "Cupressaceae (Hoàng đàn)",
+      "Mô tả": {
+        "@type": "Mô tả",
+        "cây": "Cây trắc bách diệp là một loại cây thân gỗ (cây gỗ lớn), có thể cao tới hơn 20 mét. Thân phân nhánh nhiều trong những mặt thẳng đứng làm cho cây có dáng đặc biệt.",
+        "vỏ cây": "Mỏng, có màu nâu xám nhạt, trên thân có các vết nứt dọc tạo thành từng mảng dài.",
+        "cành và tán lá": "Khi còn nhỏ, cây có dáng hình tháp nhọn. Khi trưởng thành, tán cây trở nên rộng, tròn và xòe ra nhiều hơn. Các cành nhỏ mảnh, mọc thẳng đứng hoặc hơi nghiêng."
+      },
+      "Phân bố": {
+        "@type": "Phân bố"
+      },
+      "Thông tin khác": {
+        "@type": "Thông tin khác",
+        "thong_tin_khac": "Cây trắc bách diệp là một trong những loài cây xanh quan trọng trong cảnh quan đô thị và môi trường sống. Nhờ đặc tính dễ trồng, thích nghi tốt và có giá trị thẩm mỹ cao, trắc bách diệp được ứng dụng rộng rãi trong thiết kế cảnh quan và bảo vệ môi trường.  Ứng dụng trong cảnh quan:  Được trồng dọc đường phố, công viên, sân vườn, trước cổng nhà, quanh bồn hoa, dọc theo tường rào để tạo cảnh quan xanh mát, cân bằng thị giác. Cây con có thể sử dụng làm hàng rào xanh, hàng rào cách ly, vừa đẹp mắt vừa bảo vệ môi trường. Vào mùa đông, trắc bách diệp vẫn xanh tốt quanh năm, tạo nên nét đẹp độc đáo, đặc biệt khi có tuyết phủ. Dễ kết hợp với bãi cỏ, tiểu cảnh, hòn non bộ, vườn đá để tăng sự đa dạng trong thiết kế xanh.  Lợi ích môi trường:  Chịu được không khí ô nhiễm, giúp hấp thụ bụi bẩn, lọc không khí ở các đô thị. Ít rụng lá, không gây cản trở tầm nhìn hay làm bẩn cảnh quan. Dễ sống, chịu hạn, chịu lạnh, phù hợp với nhiều vùng khí hậu, đặc biệt là ở Bắc Trung Bộ và miền Bắc Việt Nam. Là loài cây lý tưởng để phủ xanh đồi trọc, chống xói mòn, bảo vệ đất."
+      },
+      "Bộ phận dùng": {
+        "@type": "Bộ phận dùng"
+      },
+      "Thành phần": {
+        "@type": "Thành phần",
+        "thành phần": "Trong lá và cành có tinh dầu và chất nhựa. Trong tinh dầu có pinen, cariophylen. Có tài liệu nói có vitamin C. Theo sự phân tích của Phòng hoá học thực vật Viện nghiên cứu khoa học y học Trung quốc (Bắc Kinh), trắc bách diệp có phản ứng của glucozit chữa tim.",
+        "gồm chất": "Tinh dầu với thanh phần chủ yếu gồm fenchon C10H16O, campho",
+        "Các hợp chất": "Các hợp chất flavon: quexetin, myrixetin C15H10O8 (Phytochemistry 1970, 9, 575), hinokiflavon C30H18O10, amentoflavon C30H18O10 (Pelter và cộng sự Phytochemistry 1970, 9, 1897)",
+        "Phần sáp sau khi xà phòng hoá": "sẽ được 81% axit hữu cơ trong đó chủ yếu gồm những axit juniperic C16H32O3, axit sabinic C12H24O3 và 17% hexadecane-1, 16-diol. Các axit hữu cơ ở dạng estolide",
+        "chứa": "Trong hạt trắc bách diệp có chất béo và 0,64% saponozit (Viện y học Bắc kinh 1958)"
+      },
+      "Tính vị": {
+        "@type": "Tính vị",
+        "Có vị": "Theo tài liệu cổ: trắc bách diệp vị đắng, chát, hơi hàn, vào 3 kinh phế, can, đại tràng. Có tác dụng lương huyết, cầm máu, thanh huyết phận thấp nhiệt. Chữa thổ huyết, máu cam, lỵ ra máu, không thấp nhiệt không dùng Bá tử nhân: vị ngọt, tính bình vào hai kinh tâm và tỳ, có tác dụng bổ tâm-tỳ, định thần, chỉ hãn nhuận táo, thông tiện. Dùng chữa hồi hộp mất ngủ, hay quên, người yếu ra nhiều mồ hôi, táo bón. Người ỉa lỏng, nhiều đờm cấm dùng. Thường chỉ mới dùng trong y học nhân dân. Nhân dân dùng trắc bách diệp với liều 6-12gam:  Thuốc cần máu trong những trường hợp thổ huyết. chảy máu cam, ho ra máu, tiểu tiện ra máu, tử cung xuất huyết, xích bạch đới Lợi tiểu liện, chữa ho, sốt. Chất đắng giúp sự tiêu hoá Bá tử nhân: được dùng làm thuốc bổ tâm tỳ, định thần, nhuận táo, thông tiểu tiện dưới dạng thuốc viên với liều 4-12g"
+      },
+      "Công dụng": {
+        "@type": "Công dụng",
+        "cong_dung_y_hoc": "Trắc bách diệp không chỉ là một loại cây cảnh quan phổ biến mà còn là một vị thuốc quý trong y học cổ truyền của nhiều dân tộc. Theo các tài liệu dược học cổ, các bộ phận của cây như lá, quả, hạt, rễ, nhựa cây đều có công dụng trị bệnh."
+      },
+      "Cách dùng": {
+        "@type": "Cách dùng",
+        "làm thuốc": "Thuốc cầm máu dùng trong bệnh ho ra máu thổ huyết: trắc bách diệp (sao cháy đen) 15g, ngải diệp 15g, can khương sao 6g, nước 600ml. sắc còn 200ml. chia 3 lần uống trong ngày"
+      },
+      "Lưu ý": {
+        "@type": "luu_y"
+      }
+    }
+  ]
+}

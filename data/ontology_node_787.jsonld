@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Rau bợ nước",
+      "ten_khac": "Cỏ bợ, Cỏ chữ điền, Rau tần, Tần thái, Tứ diệp thảo",
+      "ten_khoa_hoc": "Marsilea quadrifolia L.",
+      "ma_taxon": "82570",
+      "ho": "Rau bợ nước (Marsileaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "thân": "Cây bợ nước là một loại thực vật thủy sinh nhỏ. Thân rễ mảnh, bò ngang dưới nước, có nhiều nhánh. Từ thân rễ mọc ra các rễ nhỏ và mảnh để hút nước và chất dinh dưỡng.",
+      "lá": "Lá có cuống dài khoảng 10 – 20 cm. Mỗi lá gồm bốn lá chét xếp thành hình chữ thập, trông giống như một cỏ bốn lá. Lá chét có hình tam giác ngược, mềm, mép nguyên và có hình tròn ở đầu. Khi còn non, lá có lông nhưng khi trưởng thành thì lông rụng hết. Gân lá tỏa ra từ gốc của lá chét theo dạng mạng lưới, kéo dài đến rìa lá.",
+      "quả": "Có dạng hình trứng nhỏ, dài 0,2 – 0,4 cm, có lông và màu nâu. Vỏ ngoài cứng, giống như gỗ. Mỗi lá có 1 – 2 bào tử quả mọc ở gốc cuống lá, có cuống ngắn khoảng 1 cm. Bào tử quả chứa hai loại túi bào tử:Túi bào tử lớn: Chỉ chứa một bào tử lớn. Túi bào tử nhỏ: Chứa nhiều bào tử nhỏ. Số lượng nhiễm sắc thể của cây là 2n = 40.",
+      "mùa quả": "tháng 5-6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Rau bợ nước phân bố chủ yếu ở vùng nhiệt đới và cận nhiệt đới. Ở Châu Á, cây có ở hầu hết các nước ở vùng Nam Á, Đông – Nam Á và Trung Quốc. Ở Việt Nam, rau bợ nước phân bố từ vùng đồng bằng, trung du đến vùng núi; độ cao phân bố đến 1000m. Cây ưa sáng, sống ở môi trường nước nông, phần thân rễ và rễ ngập trong bùn, lá vượt lên khỏi mặt nước. Thường gặp ở ruộng lúa nước, bờ kênh mương nơi sát mép nước hay ở các vũng lầy. Tái sinh tự nhiên bằng bào tử; khả năng mọc chổi nhánh từ thân rễ khỏe, tạo thành hệ thống thân rễ dày đặc dưới mặt ruộng. Rau bợ nước được coi là loài cỏ dại ở ruộng lúa, nhất là trong vụ lúa xuân – hè."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Toàn cây, thu hái quanh năm. Dùng tươi hay phơi sây khô."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Rau bợ nước chứa 84,2% nước, 4,6% Protid, 1,6 Glucid, 0,72mg% Caroten, 76 mg% Vitamin c. Ngoài ra, còn Cyclaudenol (theo Đỗ Tất Lợi – 1999). Rau bợ nước là nguồn rau chứa protein và acid nucleic (CA.,119, 1993. 202 170s). Chuỗi nucleotid có 5,8S rRNA, được xác định gồm 155 nucleotid và dược chiết xuất bằng phenol nóng ở pH = 5,1, rồi điện di trên .gel polyacrylamid. Không có các đơn vị pseudouridin trong phân tử. (Meleksovets Y. u. F, CA., 111, 1989, 169533 x)."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rau bợ nước có vị ngọt, tính hàn (lạnh). Quy vào các kinh phế (phổi), can (gan) và thận"
+    },
+    {
+      "@type": "Công dụng",
+      "có tác dụng": "Tác dụng lợi tiểu: Dịch rau bợ nước phơi khô chiết bằng nước 1:2 (1g dược liệu cô lấy 2 ml dịch chiết) cho chuột cống trắng uống với liều 4 ml/100g. Ở lô đối chứng, thay dịch chiết bằng nước với cùng thể tích. Thuốc làm tăng 20% lượng nước tiểu so với lô đối chứng. Phân tích thấy trong dịch chiết, hàm lượng K+ là 287, Na+ là 28 và Ca2+ là 4 mEq/1 và tác dụng lợi tiểu của rau bợ nước một phần do lượng K+ cao này."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Rau bợ nước là một loại cây mọc hoang nhưng có nhiều công dụng chữa bệnh. Dưới đây là các bài thuốc dân gian sử dụng rau bợ nước để hỗ trợ điều trị nhiều vấn đề sức khỏe.  1. Trị khí hư, mất ngủ, sỏi thận, sỏi mật  Dùng 20 – 40g rau bợ nước khô sắc nước uống hàng ngày.  2. Trị rắn cắn  Lấy 40 – 60g rau bợ nước tươi, giã nhuyễn, vắt lấy nước uống. Phần bã đắp trực tiếp lên vết thương.  3. Trị nóng trong, sinh mụn nhọt (Theo sách “Hoa Hạ Kỳ Phương”)  Lấy 20g rau bợ nước tươi, giã nát vắt lấy nước cốt. Thêm chút nước vào nước cốt, chia thành 3 lần uống trong ngày. Phần bã đắp lên chỗ mụn để giảm sưng viêm.  4. Trị bí tiểu, tiểu nóng (Theo sách “Hoa Hạ Kỳ Phương”)  Dùng 16g rau bợ nước khô, sắc với 3 bát nước đến khi còn 1 bát. Chia thuốc làm 3 phần, uống cách nhau 3 giờ. Dùng liên tục trong 2 – 3 ngày để cải thiện tình trạng tiểu buốt, tiểu khó.  5. Chữa đái tháo đường, tiêu khát:  Rau bợ nước và thiên hoa phấn (rễ cây qua lâu) mỗi vị 15g, phơi khô, tán nhỏ, hòa với sữa uống.  6. Hỗ trợ trị viêm nhiễm phụ khoa (bạch đới) (Theo sách “Hoa Hạ Kỳ Phương”)  Cách uống:  Dùng 20g rau bợ nước khô, sắc với 3 bát nước đến khi còn 1 bát. Chia thuốc thành 3 phần, uống trong ngày khi còn nóng, mỗi lần cách nhau 3 – 4 giờ.  Cách rửa ngoài:  Nấu một nồi nước với 32g rau bợ nước khô, pha thêm nước ấm để có nhiệt độ phù hợp. Dùng nước này để ngâm rửa vùng kín. Có thể tăng lượng rau bợ nước để nước thuốc đậm đặc hơn, giúp tăng hiệu quả sát khuẩn.  7. Trị sưng đau vú và núm vú (Theo sách “Dã Thái Trị Bách Bệnh Dân Gian Liệu Pháp”)  Lấy 1 nắm rau bợ nước tươi, giã nát, vắt lấy nước cốt. Hòa nước cốt này vào 1 ly nước đun sôi để nguội, chia làm 2 lần uống trong ngày. Phần bã dùng đắp lên chỗ sưng đau, thực hiện 2 – 3 ngày để giảm đau hiệu quả.  8. Trị tắc tia sữa (Theo sách “Đắc Hiệu Phương”)  Cách uống:  Dùng 30g rau bợ nước khô, sắc với nửa siêu nước đến khi còn 1 bát. Chia làm 2 lần uống trong ngày, mỗi lần cách nhau 4 giờ.  Cách chườm:  Dùng phần bã thuốc, bọc trong vải sạch, chườm lên ngực và vuốt xuôi xuống khi còn ấm.  9. Trị bỏng (Theo kinh nghiệm dân gian)  Lấy một nắm rau bợ nước tươi, rửa sạch, giã nát và đắp trực tiếp lên vùng bị bỏng.  10. Trị sưng lở, nổi mẩn do nóng trong người  Lấy rau bợ nước tươi, giã nát rồi thoa lên vùng da bị sưng lở, nổi mẩn. Hoặc có thể vắt lấy nước uống để thanh nhiệt từ bên trong.  11. Trị sỏi thận, sỏi bàng quang  Cách đơn giản: Dùng rau bợ nước tươi, giã nát, lấy nước uống mỗi ngày.  Cách kết hợp:  Rau bợ nước tươi (vừa đủ) Ngải cứu 10g Phèn đen 10g Đọt non cây dứa dại 20g Giã nát rau bợ nước tươi, thêm nước, gạn lấy nước uống.  Mỗi lần uống 1 bát vào buổi sáng, liên tục 5 ngày để giúp bào mòn sỏi."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

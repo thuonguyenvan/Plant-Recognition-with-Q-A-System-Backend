@@ -1,0 +1,193 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Cây sữa",
+      "ten_khac": "Sữa, Mùa cua, Mò cua (Nam Bộ và nam Trung Bộ), Tinpét (Lào), Popeal-khê (Campuchia).",
+      "ten_khoa_hoc": "Alstonia scholaris (L.) R. Br.",
+      "ma_taxon": "189179",
+      "ho": "Apocynaceae (Trúc đào)",
+      "Mô tả": {
+        "lá": "phiến lá hình bầu dục dài, đầu tù hoặc hơi nhọn, đáy lá hình nêm, mặt trên bóng, mặt dưới mờ, phiến cứng dài 8-22cm, rộng 5,5-6,5cm.",
+        "hoa": "Hoa nhỏ, màu trắng xám, mọc thành xim tán.",
+        "quả": "Quả gồm hai đại dài 25-50cm, gầy, mọc thõng xuống, màu nâu, có gân dọc.",
+        "cây": "Cây sữa là một loại cây to, có thể cao từ 15- 30m.",
+        "thân": "Cành mọc vòng, lá cũng mọc vòng",
+        "hạt": "Hạt nhiều, nhỏ dẹt, hai đầu tròn hoặc cụt, dài 7mm, rộng 2,5m, trên mặt có lông màu nâu nhạt, đài 2cm.",
+        "mùa hoa": "từ tháng 8 đến tháng 12.",
+        "mọc": "Toàn cây có chất nhựa mủ trắng, khi khô giống như chất cao su .",
+        "gân": "Gân song song và mau."
+      },
+      "Phân bố": {},
+      "Thông tin khác": {},
+      "Bộ phận dùng": {},
+      "Thành phần": {
+        "triết xuất": "Từ vỏ cây sữa các nhà nghiên cứu Hesse và Houdson đã chiết suất được các ancaloid như sau:  Ditanin có công thức thô C16H19O2N và echitenin có công thức thô C20H27O4N. Những ancaloid này đều vô định hình, độ chảy 75oC và 120°C. Tên Ditain vì tại Mani cây này có tên là Đita. Tên echitenin vì cây còn có tên là Echites schoaris.",
+        "gồm chất": "Echitamin hay ditamin C22H2gO4N2 kết tinh với 1 phân tử hoặc 4 phân tử nước. Độ chảy 206°C (Tinh thể một phân tử nước) (α)D= -2808 dễ tan trong nước, tan nhiều hơn trong cồn. Dung dịch có phản ứng kiềm mạnh. Dễ tan trong ête và clorofoc. Cho muối với 1 phân tử axit. Trong phân tử có một nhóm Nmetyl và 2 nhóm hydroxyl.",
+        "Các hợp chất": "Echitamidin C20H26O3N2 độ chảy 135oC. Cho muối có tinh thể với axit."
+      },
+      "Tính vị": {},
+      "Công dụng": {
+        "cong_dung_y_hoc": "Vỏ cây sữa được nhân dân Việt Nam, Ấn Độ, Philipin, Campuchia và một số nước khác vùng Đông Nam Á sử dụng làm thuốc. Theo Đông y, vỏ cây hoa sữa vị đắng, tính lạnh, có tính năng thanh nhiệt, giải độc, chỉ thống, binh suyễn, chỉ khát, triệt ngược (sốt rét muỗi truyền) phát hãn, kiện vị.",
+        "làm thuốc": "Ngày uống 1- 3g bột vỏ phơi khô hoặc sắc uống hay chế biến thành cao lỏng.",
+        "được_dùng": "Bột vỏ cây sữa phơi khô hoặc sấy khô rồi tán nhỏ, ngày uống 0,20 đến 0,30g. Có thể ngâm rượu uống như sau: Rượu vỏ cây sữa: vỏ cây sữa tán nhỏ 75g, rượu uống (35-40°) 500ml, đậy kỹ, ngâm trong 7 ngày, thỉnh thoảng lắc đều. Sau đó lọc và thêm rượu vào cho đủ 500ml.  Ngày uống 4-8g rượu này. Uống 15 phút trước 2 bữa ăn chính.  Cao lỏng vỏ cây sữa: Chế bằng cồn 600 theo phương pháp chế cao lỏng. Hoặc có thể ngâm bột vỏ sữa với cồn 60° trong 7 ngày. Thỉnh thoảng lắc, lọc và thêm cồn 600 cho có trọng lượng của vỏ: Ví dụ ngâm 1kg vỏ thì sẽ được 1 lít cao lỏng. Cao lỏng này dùng với liều 0,5 đến 1,5g một ngày. Nhiều nhất chỉ uống 2g một lần và 6g trong 1 ngày."
+      },
+      "Cách dùng": {
+        "mọc": "Mọc hoang và được trồng khắp nơi ở nước ta. Hay trồng dọc 2 bên đường phố để lấy bóng mát. Hoa có mùi thơm hắc khó chịu. Có mọc ở nhiều nước nhiệt đới khác: Ấn Độ, Philippin, Indonexia, Malaysia, châu Úc, châu Phi.",
+        "phơi khô": "Vỏ hái quanh năm nhưng tốt nhất vào mùa xuân hạ. Hái về phơi hoặc sấy khô để dành. Hiệu suất thấp: Một cây 25 năm cho chừng 19kg vỏ khô."
+      },
+      "luu_y": {}
+    }
+  ]
+}

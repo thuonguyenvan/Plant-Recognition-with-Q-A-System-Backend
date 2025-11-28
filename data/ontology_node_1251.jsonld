@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Hoa giẻ",
+      "ten_khac": "Giẻ, Hoa giẻ",
+      "ten_khoa_hoc": "Desmos chinensis Lour.",
+      "ma_taxon": "430936",
+      "ho": "Annonaceae (Na)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây bụi, sống lâu năm, cao 1 – 3m.",
+      "thân": "Thân cành mảnh, mọc trườn, lúc đầu phủ lông màu trắng nhạt, sau nhẵn, màu đen, có những nốt sần nhỏ.",
+      "lá": "Lá mọc so le, hình trái xoan hoặc bầu dục – thuôn, gốc tròn, đầu nhọn, dài 8 – 10cm, rộng 3 – 5cm, mát trên nhẵn bóng,mặt dưới nhạt phủ lông tơ màu vàng nhạt, cuống lá ngắn có lông.",
+      "hoa": "Hoa mọc đơn độc ở kẽ lá hoặc đối diện với lá, màu vàng nhạt: lá đài hình tam giác, mặt ngoài có lông, cánh hoa 6 dài gấp 6 – 7 lần lá đài, phiến dầy loăn xoăn, nhị và lá noãn nhiều.",
+      "quả": "Quả hình chuỗi dài, có 1 – 4 hạt.",
+      "mùa hoa": "tháng 4 – 6."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Desmos Lour, có trên 10 loài, phân bố chủ yếu ở vùng nhiệt đới Đông Nam Á và Nam Á. Ở Việt Nam có 5 loài. Hoa giẻ phân bố phổ biến ở hầu hết các nước trong vùng nhiệt đới châu Á như Ấn Độ, Nepan, Trung Quốc, Lào, Campuchia, Thái Lan, Malaysia. Indonesia, Philippin và Việt Nam. Ở Việt Nam, cây cũng phân bố rộng rãi ở hầu hết các tỉnh thuộc vùng núi thấp, trung du và đồng bằng từ Bắc đến Nam. Hoa giẻ là cây ưa sáng và cũng có thể hơi chịu bóng, thường mọc trên các đồi cây bụi, ven rừng thứ sinh, bờ nương rẫy. Ở vùng đồng bằng và ven biển, thường thấy cây trong các lùm bụi quanh làng, bãi hoang và bờ ao. Cây sống được trên nhiều loại đất, kể cả đất đồi bị rửa trôi mạnh, trơ tầng đá ong. Hoa giẻ có khả năng chịu hạn tốt, do có bộ rễ khoẻ ăn sâu vào đất. Cây ra hoa quả nhiều. Những cây mọc ở nơi có nhiều ánh sáng, như ở đồi có nhiều hoa quả hơn những cây bị che bóng. Tái sinh tự nhiên chủ yếu từ hạt. Nguồn hoa giẻ ở Việt Nam khá dồi dào. Gỗ thân và cành thường được dùng làm củi."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ thu hái quanh năm, phơi khô,"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa giẻ chứa 5 – methoxy – 7 hydroxy – flavanon, 8 – formyl – 2, 5, 7 – trihydroxy – 6 — methyl – flavanon (Qais, N. và cs 1996, Umezawa Kazuo và cs, 1992),  Rễ chứa 4. 7 – dihydroxy – 5 – methoxy – 6 – methyl – 8 – formylflavan và 5, 7 – dihydroxy – 6, 8 – dimethyl – dihydroflavon (Zhao Jing, 1992. CA – 117 – 86757w, CA. I26, I69100p, CA 121, 18019Q)"
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Rễ hoa giẻ có vị cay, tính hơi ấm, có tác dụng mạnh tỳ vị, giảm đau, lợi thấp."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Hoa giẻ chữa đầy bụng, khó tiêu, ho đờm, tê thấp, đau nhức, thấp thũng, ngày dùng 20 – 40g, rễ khô sắc uống hay phối hợp với các vị khác. Nước hãm có tác dụng an thần. Ở Ấn Độ và Malaysia, nước sắc rễ hoa giẻ được dùng chữa kiết lỵ, chóng mặt, đặc biệt chóng mặt ở phụ nữ sau khi đẻ.  Bài thuốc có hoa giẻ:  Chữa tê thấp, đau nhức (Hải Thượng Lãn Ông):  Rễ hoa giẻ, rễ rung rúc, rễ gắm, vỏ thân ngũ gia bì chân chim, rễ bưởi bung, mỗi vị 80g, rễ sâm nam, rễ cỏ xước, rễ ô dược, rễ bướm bạc, rễ tầm xuân, tầm gửi cây dâu, rễ bạch đồng nữ, mỗi vị 40g, rễ chỉ thiên, cả cây cỏ roi ngựa, mỗi vị 20g. Tất cả thái nhỏ, phơi khô, ngâm với 2 lít rượu trắng, càng lâu càng tốt (Bách gia trân tàng).  Chữa mụn nhọt, ngộ độc nấm:  Rễ hoa giẻ, kim ngân hoa, mỗi vị 30g. Sắc với 400 ml nước còn 100ml, uống làm 2 lần trong ngày (Nam dược thần hiệu).  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

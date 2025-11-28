@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Móng tay",
+      "ten_khac": "Lá móng, Móng tay, Cây nhuộm, Chỉ giáp hoa, Khau thiên",
+      "ten_khoa_hoc": "Lawsonia inermis L.",
+      "ma_taxon": "285378",
+      "ho": "Lythraceae (Tử vi)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Cây lá móng tay là một cây nhỏ, cao chừng 3-4m, thân nhẵn hoặc có gai ở đầu cành. Lá mọc đối, cuống ngắn, phiến lá đơn, nhỏ, hình trứng, hai đầu bẹp, nhất là phía cuống, dài 2-3cm, rộng 1-1,5cm.",
+      "hoa": "Hoa trắng đỏ, mùi thơm, nhỏ, mọc thành chùy ở đầu cành.",
+      "quả": "Qủa ngang hình cầu to bằng quả hạt tiêu, không nứt, phía cuống có đài bao bọc, có 4 cạnh góc, vỏ hạt dai, rất dày phía dưới xốp."
+    },
+    {
+      "@type": "Phân bố"
+    },
+    {
+      "@type": "Thông tin khác"
+    },
+    {
+      "@type": "Bộ phận dùng"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoa có mùi thơm rất nồng. Từ hoa người ta cất một thứ tinh dầu với tỷ lệ 0,02% dùng trong kỹ nghệ nước hoa, mỹ phẩm. Tinh dầu màu nâu sẫm rất thơm (theo Antia M.B và Kaushal, Ấn Độ, 1950)",
+      "chứa": "Lá chứa một thuộc chất quinon gọi là Lawone có tác dụng kháng sinh mạnh. Ngoài ra, trước đây người ta còn thấy trong lá móng tay có 7-8% tanin, 6% chất béo, 1,20% tinh dầu, 2-3% chất nhựa, 2% chất màu có tinh thể hình kim màu vàng da cam, chất màu này là một chất khí có màu đỏ, do đó bột có màu xanh nhạt ở giữa, màu đỏ xung quanh."
+    },
+    {
+      "@type": "Tính vị"
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Trước đây ở Việt Nam, nhân dân thường dùng lá móng tay để nhuộm đỏ móng tay, móng chân trong dịp Tết Đoan Ngọ (ngày mùng 5 tháng 5 âm lịch) Còn dùng chữa hắc lào, bệnh da vàng, bệnh hủi, lở loét.",
+      "có tác dụng": "Người ta cho rằng lá móng tay có tác dụng làm cho tóc và móng tay chóng mọc. Lá móng tay tươi giã nát trộn với giấm thanh dùng để chữa bệnh ngoài da. Tại Châu Âu, người ta dùng lá móng tay để chế mỹ phẩm và làm thuốc nhuộm tóc. Tại một số nước, người ta dùng vỏ thân cây làm thuốc chữa bệnh gan, bệnh tủy sống lưng, chữa tê bại nhức mỏi. Có khi còn dùng chữa kinh nguyệt không đều, có thể gây sẩy thai. Nhân dân Campuchia dùng để làm thuốc lợi tiểu, chữa ho, viêm khí quản",
+      "chữa": "Hiện nay người ta còn dùng lá móng tay phối hợp với dầu mù tạt để trị hói đầu"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Mọc hoang và được trồng ở Việt Nam. Hiện nay ít trồng hơn và ít dùng. Có mọc ở khắp các nước nhiệt đới và á nhiệt đới. Tại Ai Cập, người ta trồng để xuất cảng",
+      "làm thuốc": "Cây lá móng tay ưa đất màu, ẩm nóng. Trồng bằng hạt. Trước khi gieo, ngâm hạt vào nước nóng 50-60oC sau đó gieo thẳng vào vườn ươm. Sang năm thứ 2, 3 bắt đầu thu hoạch. Cắt cành phơi khô ngoài nắng có nơi phơi trong bóng râm. Mỗi năm có thể cắt hai lần. Khi hái để lại gốc cao 50cm để cho cây lại phát triển. Một cây trồng có thể thu hoạch trong vòng 10-12 năm. Nếu hái cẩn thận có thể thu hoạch trong 20-30 năm. Hằng năm Ai cập xuất cảng tới 1.000 tấn, Iran có thể xuất cảnh tới 1.200 tấn lá.",
+      "phơi khô": "Chủ yếu người ta dùng lá phơi khô, để nguyên hay tán bột. Các bộ phận khác như thân, rễ, hoa cũng được dùng làm thuốc, nhưng ít hơn ."
+    },
+    {
+      "@type": "luu_y"
+    }
+  ]
+}

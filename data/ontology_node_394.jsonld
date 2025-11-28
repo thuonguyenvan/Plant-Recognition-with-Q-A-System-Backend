@@ -1,0 +1,192 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Mộc nhĩ trắng",
+      "ten_khac": "Ngân nhĩ, bạch mộc nhĩ, nấm ruột gà, tuyết nhĩ",
+      "ten_khoa_hoc": "Tremella fuciformis Berk.",
+      "ma_taxon": "143384",
+      "ho": "Ngân nhĩ (Tremellaceae)",
+      "Mô tả": {
+        "cây": "Quả thể có dạng bản mỏng, màu trắng – trong, phân nhánh không theo quy luật nhất định, với các thùy mỏng, lượn sóng, kích thước các thủy lớn có thể tới 3 – 6 cm về chiều ngang (rộng) và 2 – 3 cm về chiều cao (dọc). Toàn bộ thịt nấu (thực chất là quả thể) là dạng chất keo. Sợi nấm dưới kính hiển vi thấy có vách mỏng, bề ngang sợi 2,5 – 3um với nhiều “khóa” trên vách ngăn ngang. Đảm (túi bào tử) hình trứng hoặc gần hình cầu, kích thước 10 – 12 x 9,5 – 10,5um; đảm bảo tử hình cầu, không màu, đường kính 4 – 6um. Mùa có quả thể và bào tử: rải rác trong mùa."
+      },
+      "Phân bố": {
+        "phân_bố": "Chi Tremella Pers trên thế giới có khoảng vài chục loài. Ở Trung Quốc đã biết khoảng ba chục loài, riêng ở Đài Loan có 26 loài (Chen C. J., 1998). Ở Việt Nam có 4 loài, trong đó có loài mộc nhĩ trắng trên phân bố ở Hà Tây cũ (Ba Vì), Vĩnh Phúc (núi Tam Đảo), Ninh Bình (Cúc Phương), Nghệ An (Pù Mát) và Thừa Thiên – Huế (Bạch Mã). Loài nấm này cũng có ở Trung Quốc (bao gồm cả Đài Loan), Nhật Bản và ở một vài nước khác ở Đông Nam Á.",
+        "thường_mọc": "Mộc nhĩ trắng là loại nấm hoại sinh, thường mọc trên gỗ mục của nhiều loài cây lá rộng ở rừng kín thường xanh ẩm. Điều kiện sinh thái quan trọng nhất để loài nấm này có thể sinh trưởng và phát triển được là môi trường ẩm ướt, ít ánh sáng trực xạ (dưới tán rừng hoặc được che bóng) và nhiệt độ không khí trung bình năm dưới 20°C.",
+        "Đặc điểm sinh trưởng": "Tuy nhiên, đây cũng là loài nấm hiếm gặp và có quần thể nhỏ trong tự nhiên. Vì thế, đã có người đề nghị đưa mộc nhĩ trắng vào Danh lục Đỏ và Sách đỏ Việt Nam (Đoàn Văn Vệ, 2010)."
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": "Có cấm kỵ gì khi dùng mộc nhĩ trắng không?  Người bị cảm cúm, cảm phong hàn… không được dùng mộc nhĩ trắng. Người đại tiện lỏng khi dùng phải thận trọng. Không nên ăn quá nhiều mộc nhĩ trắng, để tránh tình trạng tiêu hóa không hết.  Mộc nhĩ trắng có dùng chế biến món ăn được không?  Mộc nhĩ trắng (hay ngân nhĩ) là thực phẩm bổ dưỡng, phục hồi sức khỏe sau các bệnh lý truyền nhiễm, sốt cao, suy nhược cơ thể… Vì vậy, nó được sử dụng trong các bài thuốc hoặc chế biến các món ăn tốt cho sức khỏe. Tuy nhiên, có một số trường hợp không nên sử dụng.  Làm gì để nhận biết mộc nhĩ trắng đã biến chất?  Không sử dụng mộc nhĩ trắng đã biến chất với các biểu hiện màu ngả vàng, không đàn hồi, kém tuôi, có vết mốc hoặc bị dính lại với nhau. Nếu dùng loại này có thể dẫn tới ngộ độc, tổn thương các cơ quan trọng cơ thể như ruột, gan, thận, trung khu thần kinh, thậm chí có thể dẫn tới suy thận gây tử vong."
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": "Thể quả (toàn bộ cây nấm)"
+      },
+      "Thành phần": {
+        "thành phần": "Theo “Trung được đại từ điển” (1993) vol.I, 1631, mộc nhĩ trắng chứa các nhóm chất sau: tremelan I, reinelan, ergosterol (16,8%), ergosta – 7-en – 3β – ol (28,5%), phosphatidylethanolamin, phosphati – dylcholin, phosphatidylglycerol, phosphatidylserin phosphatidylinositiol, manosidase, N – acetyl – d – hexosaminidasa và các nguyên tố đa, vi lượng."
+      },
+      "Tính vị": {
+        "Có vị": "Mộc nhĩ trắng có vị ngọt, tính bình, có công năng bổ chung, dưỡng phế, tăng tiết nước bọt."
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": "Mộc nhĩ trắng được dùng để chữa suy nhược sau khi ốm dậy, khô miệng, khô cổ, ho khan, đờm, táo bón. Còn chữa huyết áp cao, xơ cứng động mạch."
+      },
+      "Cách dùng": {
+        "được_dùng": "– Chữa suy nhược sau khi ốm: Mộc nhĩ trắng 6g, linh chi 6g, mộc nhĩ Auricularia auricula 15g, táo tàu 30g, gừng vài lát. Nấu chín ăn. Thường thêm 50 g thịt lợn nạc, nấu ăn trong ngày.  – Chữa ho khan không có đờm: Mộc nhĩ trắng 40g, bạch mao căn 40g, tỳ bà 20g, đường phèn vừa đủ. Tỳ bà bỏ lông, sắc với ngân nhĩ và bạch mau căn, gan lấy nước và thêm đường phèn vào, chia uống trong ngày.  – Chữa ho khan, triều nhiệt, đầu váng tai ù: Mộc nhĩ trắng 40g, bách hợp 50g, đường phèn hoặc mật ong đủ dùng. Bách hợp ngâm 5 tiếng, rửa sạch; thêm mộc nhĩ trắng và đường trắng vào ninh nhừ, ăn trong 5 ngày.  – Chữa ho ra máu, đổ mồ hôi trộm, mặt đỏ hay bốc hỏa: Ngân nhĩ 25g, đường phèn 25g. Mộc nhĩ trắng ngâm nước ấm cho nở hết rồi rửa sạch, cắt bỏ chân, cho vào bát cùng với đường phèn và nước. Sau đó, đem chưng cách thủy trong 30 phút, chia ăn vài lần.  – Chữa ho ra máu hoặc trong đờm có máu: Ngân nhĩ và bách hợp mỗi vị 40g, sa sâm 25g, mạch môn đông. Đem các vị thuốc sắc uống, ngày một thang.  – Bổ phổi, chữa khô cổ, khàn tiếng, ho khan ít đờm: Ngân nhĩ và đại táo mỗi vị 15g. Sắc uống trong ngày, sắc đặc, có thể thêm đường và uống cách nhật.  – Chữa họng khô, miệng khát, mệt mỏi, mất ngủ, ăn uống kém và vô lực: Ngân nhĩ 20g, đường phèn 50g, hạt sen 30g. Đem mộc nhĩ trắng và hạt sen ngâm trong nước ấm khoảng 30 phút, cho vào nồi đun mộc nhĩ trắng gần an hết, nước sánh đặc, cho đường phèn vào dùng.  Ngân nhĩ nấu hạt sen, đường phèn  – Chữa tiểu đường: Ngân nhĩ 20g, rau chân vịt tươi 20g. Rửa sạch rau chân vịt, cắt khúc; ngân nhĩ nấu nhừ rồi cho rau chân vịt vào đun sôi, cho gia vị vào ăn trong ngày.  – Chữa bệnh đường tiêu hóa, thúc đẩy tuần hoàn máu, giải độc gan: Ngân nhĩ 20g, câu kỷ tử 25g, trứng gà 2 quả, đường phèn vừa đủ. Ngân nhĩ làm sạch, đập trứng lấy lòng trắng. Câu kỷ tử và ngân nhĩ nấu chín, cho lòng trắng trứng và đường phèn vào đun thêm 1 lúc, ăn lúc còn nóng.  – Chữa các chứng thận hư đau lưng mỏi gối, đầu váng tai ù, mất ngủ mỏi mệt: Các vị thuốc ngân nhĩ 10g, đỗ trọng tẩm mật nướng 10g, đường phèn 50g. Làm sạch ngân nhĩ, đỗ trọng sắc bỏ bã rồi cho ngân nhĩ vào nấu chín, thêm đường phèn và ăn nóng.  – Chữa khản tiếng, các chứng phù nề, tiểu tiện sẻn, đại tiện táo kết: ngân nhĩ 20g, gia vị đủ dùng. Làm sạch ngân nhĩ, thái sợi nhỏ, nấu chín cho gia vị vào là được."
+      },
+      "luu_y": {
+        "luu_y": ""
+      }
+    }
+  ]
+}

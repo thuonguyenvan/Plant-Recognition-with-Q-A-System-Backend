@@ -1,0 +1,282 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "schema:url": "https://tracuuduoclieu.vn/sau-sau.html",
+      "ten": "Sau sau",
+      "ten_khac": "Sau sau, Sau trắng, Thau, Phong hương, Mạy xâu (Tày), Meng đen (Dao), Che phai (Mường), Bạch giao hương",
+      "ten_khoa_hoc": "Liquidambar formosana Hance",
+      "ma_taxon": "135413",
+      "ho": "Altingiaceae"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây to, cao 20 m hay hơn.",
+      "thân": "Thân to, mọc  đứng, cành non có lông râm, sau nhẵn.",
+      "lá": "Lá mọc so le, đài 13cm. rộng 19 cm, chia 3 thùy nông hình chân vịt, gốc tròn hoặc hơi hình tim, đầu thuôn nhọn, mép khía răng đều, lá non màu hồng phủ nhiều lông hình sao, cuống lá dài 5 – 8 cm, lá kèm hình dài sớm rụng, lá rụng vào mùa đông và mọc lại sau khi cây ra hoa.",
+      "hoa": "Hoa đơn tính cùng gốc, mọc ở gần đầu cành; cụm hoa đực dài 4 – 5 cm gồm những hoa trần có 1 nhị hợp với lá bắc thành đầu, các đầu tụ họp thành bông dài màu đỏ, cụm hoa cái dài 2 – 4 cm, hình cầu gồm nhiều hoa không có tràng, bầu hạ 2 ô.",
+      "quả": "Quả kép hình cầu do nhiều quả nang họp lại, đường kính 2 – 3 cm, mang lá dài và lá bắc khô xác, cuống dài 3 – 9 cm, hạt hình bầu dục, có cánh.",
+      "mùa hoa": "tháng 5 – 7",
+      "mùa quả": "tháng 5 – 7"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Liquidambar L. là một  chi nhỏ, gồm các loài là cây gỗ, rụng lá và đều có nhựa thơm… Chúng phân bố rải rác ở vùng cận nhiệt đới hay nhiệt đới tây và đông Á, cũng như ở bắc và trung Mỹ. Ở Việt Nam, có 2 loài sau sau và bạch giao.",
+      "ở_vùng": [
+        {
+          "@type": "schema:Place",
+          "tên": "Trung, Nam – Trung Quốc"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Đông Bắc Việt Nam"
+        },
+        {
+          "@type": "schema:Place",
+          "tên": "Lào"
+        }
+      ],
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Quảng Ninh"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lạng Sơn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Cao Bằng"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thái Nguyên"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bắc Giang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bắc Cạn"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Tuyên Quang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hà Tây"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hòa Bình"
+            }
+          }
+        ]
+      },
+      "thường_mọc": "Ở Việt Nam, sau sau tập trung nhiều ở vùng núi thấp và trung du, thuộc tỉnh Quảng Ninh, Lạng Sơn, Cao Bằng, Thái Nguyên, Bắc Giang, Bắc Cạn, Tuyên Quang, Hà Tây và Hòa Bình, không thấy có ở các tỉnh phía nam. Sau sau thuộc loại cây gỗ tiên phong trên đất sau nương rẫy hoặc bị cháy rừng. Khi còn nhỏ, cây hơi chụi bóng, sau đặc biệt ưa sáng. Cây thường mọc ở ven rừng, rừng thứ sinh, đổi và quanh bờ mương rẫy. Độ cao phân bố thường dưới 400 m, rụng lá mùa đông. Sau sau sống được trên mọi loại đất, có khả năng chịu hạn tốt nên sinh trưởng và phát triển được trên những loại đất khô cằn trơ sỏi đá. Cây mọc từ hạt  sau 7 – 10 năm bắt đầu có hoa: tái sinh cây chồi sau khu chặt. Phần lõi gỗ sau sau khá cứng thường được sử dụng để làm cột nhà hoặc đóng đồ dùng. Chất nhựa tiết ra từ vỏ thân có mùi thơm, được dùng làm thuốc và chế tạo nước hoa. Với đặc điểm là cây mọc nhanh và ưa sáng, sau sau được trồng làm cây tạo bóng trước khi trồng lim (Erythrophloeum fordii Oliv). Sau 10 – 15 năm, khi cây lim vượt tán, sau sau dần dần bị đào thải.",
+      "Đặc điểm sinh trưởng": "Sau sau sống được trên mọi loại đất, có khả năng chịu hạn tốt nên sinh trưởng và phát triển được trên những loại đất khô cằn trơ sỏi đá."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Quả (lộ lộ thông), lá (phong hương diệp), rễ (phong hương căn), nhựa (phong hương chi). Lá, rễ , nhựa thu hái quanh năm."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Lá sau sau chứa nhiều tanin.",
+      "Các hợp chất": "Các tanin thay đổi theo mùa như telimagrandin II là thành phần chủ yếu vào đầu mùa xuân, trong khi đó casuarinin và pedunuculagin là tanin chính vào mùa thu."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Qủa sau sau có vị đắng, tính bình, mùi thơm, có tác dụng khử phong, hoạt lạc, lợi thủy, thông kinh. Lá có vị đắng, tính bình, có tác dụng thông khiếu, khai uất, khử đàm, và cũng có tác dụng hoạt huyết giảm đau, chỉ huyết sinh cơ, rễ có vị đắng, tính ấm, cá tác dụng khử thấp , chỉ thống."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả sau sau được dùng chữa phong thấp , đau nhức khớp xương, tâm vị trướng đau, thủy thũng, đáì khó, kinh nguyệt không đều, thiếu sữa, mày đay, viêm da, chàm. Lá chữa viêm ruột, lỵ , đau vùng thượng vi, thổ huyết, chảy máu cam, dùng ngoài trị mẩn ngứa, eczema. Nhựa  trị ho có đờm, kinh giản , thổ huyết, nôn ra máu, khạc ra náu, chảy máu cam; dùng ngoài bôi chữa vết thương chảy máu, đòn ngã tổn thương Nhựa còn được dùng uống để trị mụn nhọt và đau răng Rễ chữa thấp khớp và đau răng. Liều dùng mỗi ngày : quả và rễ 3 – 10g, lá 15 – 30g, dạng thuốc sắc. Nhựa được dùng với liều 1,5 – 3g, giã thành bột và chiêu với nước.  Trong y học  cổ truyền và dân gian Trung Quốc, sau sau được dùng làm thuốc giảm đau và sát trùng. Dùng uống trị viêm ruột và lỵ, trực khuẩn, phối hợp  với các vị khác làm thuốc long đờm trong điều trị lao. Dùng ngoài làm thuốc sát trùng trị bệnh mủ da. ghẻ và bệnh nấm tóc Cách dùng : dùng vỏ cây sau sau uống dưới dạng thuốc sắc hoặc bột. Liều mỗi lần 0,5 – 2g. hoặc dùng ngoài thuốc bôi dẻo từ nhựa cây 10 – 50% Quả sau sau được dùng ở Đài Loan làm thuốc bảo vệ gan. Ở Ấn Độ, nhựa thơm sau sau được  dùng làm thuốc long đờm và sát trùng, và làm thuốc bớt dẻo trị ghẻ và những bệnh ký sinh trùng ngoài da khác. Hiện nay, ít được dùng trong y học"
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Chữa đau răng, sâu răng: Nhựa sau sau đốt cháy… tán nhỏ, xỉa răng. Chữa lở ngứa, mày đay, nổi mẩn: Lá hay vỏ cây sau sau nấu nước, tắm rửa. Chữa thấp khớp, lưng gối đau, tay chân co quắp, toàn  thân tê đau: Quả sau sau, hoa thông hoặc lõi  thông (tùng tiết), mỗi vị 20g, sắc uống Phụ nữ có thai không được dùng. Chữa mụn  nhọt, sưng lở, bi thương đau nhức hay chảy máu, phong thấp sưng đau: Nhựa sau sau. nhựa thông. Mỗi vị 40g, sáp ong, dầu vừng, mỗi vị 10g. Đun và đánh đều cho loãng ra, để nguội phết lên giấy, dán vào chỗ đau."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

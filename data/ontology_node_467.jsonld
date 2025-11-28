@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Bạch tiền bì",
+      "ten_khac": "",
+      "ten_khoa_hoc": "Pinyin baixianpi",
+      "ma_taxon": "796343",
+      "ho": "Cam (Rutaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "phiến lá chét hình trứng dài, mép có răng cưa nhỏ.",
+      "hoa": "màu tím nhạt, hợp thành chùm ở ngọn cành.",
+      "quả": "nang, khi chín nứt 5 mảnh, có 2-3 hạt màu đen, gần như hình cầu.",
+      "cây": "Bạch tiễn bì là cây sống nhiều năm, cao 50-100m, toàn cây có mùi thơm đặc biệt.",
+      "thân": "mọc thẳng",
+      "rễ": "màu vàng nhạt."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Tìm thấy nhiều ở Trung Quốc. Các vùng Đông Bắc, Hà Bắc, Hà Nam, An Huy, Giang Tô, Giang Tây, Tứ Xuyên, Qúy Châu, Thiểm Tây, Cam Túc, Nội Mông Cổ."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": ""
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Hoạt chất: Dictamnine, dictamnolactone, sitosterol, obacunonic acid, trigonelline, choline, fraxinellone, campesterol, skimmianin, y-fagarin, dasycarpamin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": ""
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "Ngày dùng 6 – 9g  Bài thuốc có vị Bạch Tiễn Bì  Trị trẻ nhỏ tâm và Phế có phong nhiệt ủng trệ, ngực đầy: Bạch tiên bì 20g, Chích thảo 40g, Hoàng cầm 20g, Phòng phong 20g, Sa sâm 20g, Tê giác 20g, Tri mẫu 20g. Tán bột mỗi lần dùng 4g ngày 2-3 lần, hoặc sắc uống. (Bạch Tiễn Bì Tán – Thái Bình Thánh Huệ Phương).  Trị tạng Phế cảm phong tà, da khô, mũi nghẹt, mũi khô, mũi đau: Bạch chỉ 60g, Bạch phục linh 60g, Bạch tiên bì 60g, Hạnh nhân 60g, Mạch môn 60g, Tang bạch bì 80g, Tế tân 60g, Thạch cao 80g. Sắc uống. (Bạch Tiễn Bì Thang II– Chứng Trị Chuẩn Thằng).  Trị mắt có màng, mắt có mộng, mắt nhìn không rõ: Bạch tiễn bì 40g, Bách hợp 80g, Cam thảo 20g, Chỉ xác 40g, Cúc hoa 60g, Hoàng cầm 40g, Khoản đồng hoa 40g, Mạn kinh tử 60g, Sài hồ 40g, Xa tiền tử 40g. Sắc uống. (Bạch Tiễn Bì Thang – Loại Phương).  Trị sinh xong bị trúng phong, cơ thể hư yếu: Bạch tiên bì 20g. Sắc với 450ml, còn 150ml uống ấm. (Bạch Tiền Thang II– Chứng Trị Chuẩn Thằng).  Chữa phong thấp nhiệt, vết thương chảy nước vàng, thịt lở: Bạch tiễn bì, Cam thảo, Hà thủ ô, Khổ sâm, Kim ngân, Kinh giới, Liên kiều, Mộc thông, Phòng phong, tuỳ liều vừa đủ sắc uống hoặc làm hoàn uống. (Hà Thủ Ô Thang).  Chữa ngứa gái, dị ứng ngoài da đơn đỏ, (phong đơn độc): Sinh địa 16g, Đương quy 14g, Xuyên khung 12g, Xích thược 16g, Phòng phòng 10g, Kinh giới 10g, Độc hoạt 10g, Sài hồ12g, Bạc hà 12g, Thuyền thoái 7g, Bạch tiên bì 14g, Táo 3quả. (Tứ Vật Tiêu Phong ẩm-Nghiệp Phương).  Kiêng kỵ:  Tạng phủ hư hàn không dùng."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

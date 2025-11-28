@@ -1,0 +1,259 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Thuốc phiện",
+      "ten_khac": "Thuốc phiện, Anh túc, A phiến, Co khắng nheng (Thái), Chư gia đính(Hmông), Cù túc, Lảo phèn (Tày)",
+      "ten_khoa_hoc": "Papaver somniferum L.",
+      "ma_taxon": "78346",
+      "ho": "Papaveraceae (Thuốc phiện)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây thảo, sống hằng năm, cao hơn 1m.",
+      "thân": "Thân hình trụ, nhẵn, ít phân nhánh.",
+      "lá": "Lá mọc so le, không cuống, gốc hình tim ôm thân, đầu nhọn, màu lục xám, chia thuỳ không đều, lá già chia nhiều hơn lá non, mép khía răng, hai mặt nhẵn, gần như cùng màu.",
+      "hoa": "Hoa to, mọc đơn độc ở ngọn thân và đầu cành, có cuống dài; hoa màu trắng, đỏ hay tím; đài 2 răng, nhẵn, sớm rụng; tràng 4 cánh mỏng, không bao giờ nở xoè, điểm màu nâu ở gốc; nhị nhiều, bao phấn màu tím; bầu thượng, 1 ô, nhiều lá noãn.",
+      "quả": "Quả nang, hình cầu, rộng 2 – 3cm, thường ở gốc có khía dọc, trong có vách giả, khi chín mở bằng những lỗ nhỏ ở phía dưới đầu nhuỵ còn sót lại; hạt nhỏ nhiều, hình thận, màu đen.",
+      "mùa hoa": "tháng 3 – 5",
+      "mùa quả": "tháng 3 – 5"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Papaver L. có tổng số khoảng 100 loài, phân bố chủ yếu từ vùng Nam Âu đến vùng Trung Á và Bắc Nam Á. Một số loài là những cây thuốc có điển và một số loài khác như P. nudicaule L., P. rhoeas L., được trồng làm cảnh vì có hoa đẹp.  Về cây thuốc phiện, hiện nay chưa rõ nguyên gốc chính xác từ đâu. Chỉ biết cách đây hơn 2000 năm, người Hy Lạp và La Mã cổ đại đã trồng và sử dụng thuốc phiện để làm thuốc. Về sau cây được trồng phổ biến ở vùng Tây – Nam Âu, Trung Á và một số nước ở phía Bắc vùng Đông Nam Á cũng như Trung Quốc. Ở Việt Nam, trước kia thuốc phiện cũng được trồng nhiều trong cộng đồng các dân tộc vùng cao (như Nghĩa Lộ – Yên Bái, Lào Cai, Hà Giang, Sơn La, Điện Biên, Bình Phước, Thanh Hoá và Nghệ An…) do nhu cầu dùng làm thuốc. Từ năm 1992, Đảng, Chính phủ và Chính quyền các địa phương thường xuyên khống chế, Ngày nay, vấn đề trồng, sản xuất cây thuốc phiện, tàng trữ, vận chuyển buôn bán thuốc phiện đều bị cấm chỉ, vì những tác hại to lớn không còn trồng loại cây cho chất gây nghiện này nữa.  Thuốc phiện là loài cây ngắn ngày, thích nghi với điều kiện khí hậu của vùng ôn đới ẩm hay vùng cận nhiệt đới. Ở vùng nhiệt đới, cây chỉ có thể phát triển được ở khu vực núi cao từ 850 đến 2000m, thiên về khí hậu cận nhiệt đới, ẩm mát quanh năm. Nhiệt độ trung bình năm 14 – 18°C, lượng mưa về mùa xuân tương đối thấp. Điều kiện đó phù hợp với đặc điểm sinh thái của cây thuốc phiện là không ưa mưa nhiều. Cây sinh trưởng phát triển tốt ở những nơi đất tơi xốp, nhiều mùn mối được khai phá.  Cây con mọc từ hạt được thảy vào khoảng 10 – 15 ngày sau khi gieo. Thời gian đầu cây sinh trưởng chậm, nhưng sau 2 tháng cây đã đạt kích thước cực đại và bắt đầu ra hoa quả. Hoa thuốc phiện nở từ sáng sớm, thụ phấn nhờ côn trùng và thời gian thụ phấn hiệu quả nhất từ 9 giờ sáng đến 11 hoặc 2 giờ chiều. Sau khi thụ phấn, màu cánh của cánh hoa cũng phai nhạt dần và chỉ còn lại 2 – 3 ngày thì rụng. Quả thuốc phiện phát triển rất nhanh, sau 3 tuần từ lúc hoa nở, người ta đã có thể cắt tích để lấy nhựa. Thời gian thu hoạch nhựa kéo dài trong 2 tuần tiếp theo. Toàn bộ vòng đời của cây thuốc phiện chỉ lớn cỡ khoảng 4,5 – 5 tháng.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghĩa Lộ – Yên Bái"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Lào Cai"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Hà Giang"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Sơn La"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Điện Biên"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Bình Phước"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Thanh Hoá"
+            }
+          },
+          {
+            "@type": "schema:Place",
+            "tỉnh": {
+              "tên": "Nghệ An"
+            }
+          }
+        ]
+      },
+      "Đặc điểm sinh trưởng": "Cây con mọc từ hạt được thảy vào khoảng 10 – 15 ngày sau khi gieo. Thời gian đầu cây sinh trưởng chậm, nhưng sau 2 tháng cây đã đạt kích thước cực đại và bắt đầu ra hoa quả. Hoa thuốc phiện nở từ sáng sớm, thụ phấn nhờ côn trùng và thời gian thụ phấn hiệu quả nhất từ 9 giờ sáng đến 11 hoặc 2 giờ chiều. Sau khi thụ phấn, màu cánh của cánh hoa cũng phai nhạt dần và chỉ còn lại 2 – 3 ngày thì rụng. Quả thuốc phiện phát triển rất nhanh, sau 3 tuần từ lúc hoa nở, người ta đã có thể cắt tích để lấy nhựa. Thời gian thu hoạch nhựa kéo dài trong 2 tuần tiếp theo. Toàn bộ vòng đời của cây thuốc phiện chỉ lớn cỡ khoảng 4,5 – 5 tháng."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": "1. Viên opizon: Cao thuốc phiện 5mg, tinh dầu hồi 1mg, long não 2mg, acid benzoic 10mg trong 1 viên. Người lớn mỗi lần 1 – 2 viên, ngày 2 – 3 lần.  2. Viên hạ long đờm: Mỗi viên có cao opi 5mg, cồn phụ tử 5 (năm) giọt. Người lớn 1 – 2 viên, ngày 3 lần.  3. Viên ho giảm thống: Mỗi viên có cao thuốc phiện (còn gọi là cao opi) 5mg, cao belladon 5mg. Người lớn 1 – 2 viên, ngày 2 – 3 lần.  4. Viên purogoric (viên epibenzon): Mỗi viên có cao thuốc phiện 3,75mg (0,00375g), long não 15mg, acid benzoic 30mg, dầu hồi 7,5mg, lactose 350mg. Người lớn: 1 – 2 viên, ngày 2 – 3 lần.  5. Viên pectol: Mỗi viên có bột thuốc phiện 10mg, cao khô thermopsis 10mg, natri hydrocarbonat 200mg, bột cam thảo 200mg, tinh dầu hồi đủ thơm. Người lớn mỗi lần uống 1 viên, ngày 2 – 3 lần.  6. Cồn thuốc phiện kép (cồn opisatran hoặc Laudanum Sydenham): Bột thuốc phiện 110g, tinh dầu quế 1g, tinh dầu đinh hương 1g, safran 30g, cồn 30° 920g. Cồn này có 1% morphin. Người lớn 0,1 – 0,3g, ngày 2 – 4 lần (1g có 43 giọt).  7. Cồn opi benzoic (cồn paregoric): Bột thuốc phiện 5g, acid benzoic 5g, tinh dầu hồi 5g, long não 2g, cồn 60° vừa đủ 1000ml, đóng ống tiêm để uống 5ml (1 ống tiêm 5ml có 2,5mg morphin). Người lớn mỗi lần 1 ống, ngày 1 – 3 lần.  8. Bột opi ipeca (còn gọi là bột Dover): Bột thuốc phiện (còn gọi là bột opi) 10%, bột rễ ipeca 10% và bột lactose 80%. Bột có 1% morphin. Người lớn mỗi lần 0,2 – 0,5g, ngày 1 – 3 lần.  9. Bột opamoni: Bột thuốc phiện 10%, amoni clorid 30%, kali sulfat 60%. Bột có 1% morphin. Người lớn mỗi lần 0,2 – 0,5g, ngày 1 – 3 lần.  10. Xiro opi mạnh (còn gọi là xiro thebacin): 20g siro tương ứng với 50mg cao thuốc phiện (siro có 0,05% morphin). Người lớn mỗi lần 5 – 10g, ngày 1 – 3 lần.  11. Siro opi loãng (còn gọi là xiro Dracod): 20g siro tương ứng với 10mg cao thuốc phiện (siro này có 0,01% morphin), thường để dùng cho trẻ em từ 5 tuổi trở lên, mỗi tuổi 1g."
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Nhựa lấy từ quả chưa chín. Quả chưa lấy nhựa, có cuống dài chừng 10cm, dùng để chiết xuất alcaloid. Quả đã lấy nhựa là ấn tố xác hay cót túc xác. Hạt thu hoạch ở quả chín, còn dùng lá và hoa."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Trong anh túc xác có axit meconic, axit tactric, axit xitric, mocphin, nacotin, papaverin và một chất gọi là papaverrozin (tinh chất muối và sáp) Quả chín chứa nhiều ancaloit hơn quả non. Trong quả chín lượng mocphin có thể lên tới 0,5%. Vỏ quả chưa chín chỉ chứa 0,02-0,05% mocphin, cả nacotin và codein vào khoảng 0,0113-0,0116. Vỏ quả chín chỉ chứa 0,018% nacotin và codein 0,028% nacotin và codein 0,028%. Trong sáp của vỏ quả chủ yếu gồm este của axit panmitic, axit xerotic và cồn xerylic. Thành phần trên thay đổi tùy theo cách thu hái, nguồn gốc cây thuốc phiện. Năm 1942, Diệp Bích Nguyên có phân tích một loại anh túc xác của Trung Quốc thấy tỷ lệ ancaloit như sau: Mocphin 0,012%, cedein 0,010%, nacotin, 0,022%, naxein 0,003 và một ít papaverin. Trong hạt thuốc phiện có 40-50% chất dầu, 18,4-21,6% chất protit, 0,25-0,94% lexitin, men (diastaza) emunsin, lipaza, nucleaza và pectin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Thuốc phiện có vị chua, đắng, hơi chát, tính bình, có độc, vào các kinh phế, thận, tỳ, vị, có tác dụng liễm phế, chỉ thống, chỉ khái, chỉ lỵ. Hạt thuốc phiện có vị ngọt, tính bình, vào kinh tỳ, vị, có tác dụng trị nôn, táo bón."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Quả khô đã tích nhựa của cây thuốc phiện được dùng chữa ho lâu ngày không khỏi, tiêu chảy mạn tính. Ngày 3 – 6g, sắc uống.  Nhựa thuốc phiện được dùng để điều trị chống đau, mất ngủ, ho lâu ngày, đau bụng tiêu chảy mạn tính, làm dịu đau trong quy trình. Nhưng vì nhựa thuốc phiện sống có hàm lượng alcaloid rất khác nhau, đặc biệt hàm lượng morphin có thể thay đổi từ 5 đến 25% tùy loài nhựa. Do đó không được dùng trực tiếp nhựa sống để chữa bệnh, mà phải chế ra các dạng thuốc tiêu chuẩn hóa như bột thuốc phiện có 10% morphin, cao thuốc phiện có 20% morphin, omnopon (hoặc pantopon) có 50% morphin, còn thuốc phiện còn 1%, 0,005 – 0,02g; codein phosphat liều uống 0,01 – 0,03g; morphin hydroclorid liều tối đa 1 lần (tính theo đường tiêm) là 0,02g; liều tối đa mỗi ngày 0,05g.  Ngoài ra, hiện có sẵn dạng thuốc phối hợp, đã tiêu chuẩn các bài thuốc kinh điển, nhiều dạng đã được sản xuất và lưu hành trên thị trường (xem phần bài thuốc có thuốc phiện). Tuy nhiên, hiện nay, việc dùng thuốc phiện hoặc các chế phẩm của thuốc phiện đã bị bỏ dần và thay bằng các alcaloid chiết tinh khiết riêng rẽ như morphin, codein, narcein, papaverin, thebain.  Xái thuốc phiện cũng được nhân dân ở một số nơi trước đây dùng chữa đi tả nguy cấp. Lấy xái thuốc phiện viên bằng hạt đậu xanh, uống mỗi lần một viên, nếu chưa cầm uống thêm, nhưng không quá 4 viên. Tuy nhiên, hiện nay không nên dùng xái thuốc phiện để chữa bệnh, vì hàm lượng alcaloid trong xái thuốc phiện rất thay đổi. Tuy cùng uống mỗi lần 50 viên như vậy, nhưng nếu loại xái có hàm lượng alcaloid thấp thì không có tác dụng, còn nếu là loại có hàm lượng alcaloid cao sẽ gây ngộ độc, rất nguy hiểm.  Hạt thuốc phiện có tác dụng chữa táo bón và buồn nôn. Liều dùng 10 – 20g. Thông thường, hạt thuốc phiện và dầu ép từ hạt để ăn. Hạt được dùng trong thực phẩm như thêm vào một số loại bánh. Bánh có hạt thuốc phiện ăn ngon và có giá trị dinh dưỡng. Hạt thuốc phiện còn dùng để nuôi chim. Hạt hoặc vỏ quả sau khi đã ép lấy dầu, được chế biến thành chất đốt cho gia súc. Tuy nhiên, dùng làm thức ăn cho gia súc không được phép, vì ngòi độc tố có alcaloid thêm trong hạt và các phần vỏ quả. Dầu hạt thuốc phiện chế biến được để làm dầu ăn, nhưng cũng để sản xuất sơn và xà phòng.  Hoa thuốc phiện hằng năm cũng có tác dụng giảm đau, trị ho và chữa tiêu chảy. Lá non thuốc phiện có thể ăn được như rau."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": "..."
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": "Cấm dùng các chế phẩm của thuốc phiện để chữa tiêu chảy, kiết lỵ cấp tính do vi khuẩn hoặc do nhiễm độc thức ăn. Cấm dùng nhựa thuốc phiện trực tiếp vì chưa xác định được hàm lượng morphin, nên dễ bị ngộ độc, rất nguy hiểm. Trẻ em dưới 5 tuổi không được dùng thuốc phiện và các dẫn chất của thuốc phiện, vì dễ bị ức chế hô hấp, liệt hô hấp và chết. Các chế phẩm của thuốc phiện, morphin và những chất tương tự là thuốc độc bảng A, gây nghiện, muốn dùng phải có đơn của thầy thuốc và không được dùng quá 7 ngày, vì dễ gây nghiện. Một số dạng thuốc có hàm lượng trong 1 viên hoặc cồn nồng độ thuốc phiện thấp, có thể được Bộ Y tế cho phép bán không cần đơn. Cấm sản xuất và tàng trữ heroin, một dẫn chất có thể bán tổng hợp từ morphin vì là chất đặc biệt dễ gây nghiện. Việc sản xuất tàng trữ heroin là phạm pháp, kể cả ngành y tế.  Nguồn: Cây thuốc và động vật làm thuốc ở Việt Nam"
+    }
+  ]
+}

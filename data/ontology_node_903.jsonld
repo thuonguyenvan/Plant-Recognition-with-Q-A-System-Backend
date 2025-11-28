@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Nhân sâm",
+      "ten_khac": "Nhân sâm, Viên sâm, Dã nhân sâm, Sâm cao ly, Sâm triều tiên",
+      "ten_khoa_hoc": "Panax ginseng C. A. Mey.",
+      "ma_taxon": "366498",
+      "ho": "Araliaceae (Nhân sâm)"
+    },
+    {
+      "@type": "Mô tả",
+      "cây": "Cây nhân sâm là một cây sống lâu năm, cao chừng 0,6m.",
+      "rễ": "Rễ mọc thành củ to.",
+      "lá": "Lá mọc vòng, có cuống dài, lá kép gồm nhiều lá chét mọc thành hình chân vịt. Nếu cây mới được một năm (nghĩa là sau khi gieo được 2 năm) thì cây chỉ có 1 lá với 3 lá chét, nếu cây nhân sâm được 2 năm cũng chỉ có 1 lá với 5 lá chét. Cây nhân sâm 3 năm có 2 lá kép, cây nhân sâm 4 năm có 3 lá kép, cây nhân sâm 5 năm trở lên có 4 đến 5 lá kép, tất cả đều có 5 lá chét (đặc biệt có thể có 6 lá chét) hình trứng, mép lá chét có răng cưa sâu.",
+      "hoa": "Bắt đầu từ năm thứ ba trở đi, cây nhân sâm mới cho hoa, kết quả. Hoa xuất hiện vào mùa hạ. Cụm hoa hình tán mọc ở đầu cành, hoa màu xanh nhạt, 5 cánh hoa, 5 nhị, bầu hạ 2 núm.",
+      "quả": "Quả mọng hơi dẹt to bằng hạt đậu xanh, khi chín có màu đỏ, trong chứa 2 hạt. Hạt cây sâm năm thứ 3 chưa tốt. Thường người ta bấm bỏ đi đợi cây được 4-5 năm mới để ra quả và lấy hạt làm giống.",
+      "mùa hoa": "tháng 3-5",
+      "mùa quả": "tháng 6-8"
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Panax L. có khoảng hơn 10 loài trên thế giới, phân bố ở vùng ôn đới Bắc bán cầu. Trong đó, nhân sâm là loài cây thuốc nổi tiếng trong nền y học dân tộc Phương Đông từ thời thượng cổ đến nay. Nhân sâm có vùng phân bố tự nhiên chủ yếu ở vùng núi thuộc Viễn Đông Liên bang Nga, phía bắc CHDCND Triều Tiên và Trung Quốc. Cây đã được trồng từ lâu đời ở bán đảo Triều Tiên, Trung Quốc và Liên bang Nga. Những năm gần đây, cây còn được nhập trồng ở Nhật Bản, Hoa Kỳ và cả ở Việt Nam. Tuy nhiên qua nhiều lần trồng thử nghiệm, cho đến nay đều chưa thành công ở Việt Nam. Nhân sâm là cây của vùng ôn đới. Cây ưa khí hậu ẩm mát về mùa xuân hè và chịu đựng tốt trong điều kiện nhiệt độ thấp, với 3-4 tháng có băng tuyết của mùa đông. Mặc dù vậy, lượng mưa ở những vùng có nhân sâm mọc tự nhiên cũng như vùng trồng thường thấp hơn nhiều (chỉ bằng 50%) so với ở vùng nhiệt đới. Nhân sâm là cây đặc biệt ưa bóng. Trong tự nhiên, cây mọc dưới tán rừng kín, lẫn trong tầng cỏ quyết. Chính vì vậy, người ta phải trồng nhân sâm trong điều kiện vườn có mái che tới trên 80%. Để thích nghi với thời kỳ có nhiệt độ thấp trong năm, toàn bộ phần trên mặt đất của cây bị tàn lụi qua mùa đông. Chồi ngủ ở đầu rễ củ hình thành ngay từ giữa mùa hè, trong suốt mùa thu – đông tồn tại trong trạng thái “ngủ” và chỉ mọc lên khỏi mặt đất vào đầu mùa xuân năm sau. Cây nhân sâm trưởng thành (khoảng 3-4 tuổi) ra hoa quả hàng năm. Quả chín rơi xuống tầng thảm mục sẽ tồn tại qua mùa đông và nảy mầm vào mùa xuân năm sau. Hạt nhân sâm khô nhìn chung có khả năng nẩy mầm tương đối thấp. Do đó, người ta thường phải gieo hạt lúc còn tươi. Cây được trồng bằng hạt, thời gian gieo thường vào cuối tháng 10-11. Cây sau 6 năm có thể thu hoạch được. Nhân sâm thường được thu hoạch vào mùa thu (từ tháng 9 đến tháng 10) đào củ, chú ý tránh làm rễ bị đứt, không phơi gió, phơi nắng để giữ nguyên độ ẩm trong sâm. Sau đó chia loại sâm tốt để chế hồng sâm, loại kém để chế bạch sâm."
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": ""
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Rễ cây nhân sâm, thu hoạch vào mùa xuân và mùa thu. Người ta cho rằng loại mọc hoang tốt hơn loại trồng. Trong y học cổ truyền, người ta phân biệt hai loại chính: hồng sâm và bạch sâm. Chế biến nhân sâm (hồng sâm, bạch sâm):"
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Thành phần Saponin gồm các ginsenosides: Ginsenosides Ro, Re, Rg1, Rg2, Rg3, Rh1, Rh2, Ra1, Ra2,… Các ginsenosides này có tác dụng: giải độc, chống viêm gan, tác dụng kiểm soát kết tập tiểu cầu, tác dụng kháng tiểu đường, tránh xơ cứng động mạch, tác dụng làm giảm đau liên quan đến tế bào thần kinh não, tác dụng tăng cường sinh lý, tác dụng hạ đường huyết, chống tiểu đường, tác dụng chống loét dạ dày… Trong đó, thành phần Rh2, Rg3 có tác dụng khống chế và kìm hãm sự phát triển của khối u, ngăn ngừa bệnh ung thư. Hiện nay, bằng công nghệ tiên tiến hơn, các nhà khoa học đã sử dụng thành phần Rh2, Rg3 từ Hồng Sâm để chế biến các loại thuốc ngăn ngừa tế bào ung thư, dùng để hỗ trợ trong việc điều trị các bệnh ung thư. Các thành phần Malnonyl Rb1, Rb2, Rc, Rd có tác dụng chống lão hóa, chống lại quá trình lão hóa của cơ thể duy trì thể trạng và kéo dài tuổi xuân. Nhờ vào các hoạt chất này, các ngành chăm sóc sắc đẹp \u00a0đã chế tạo ra nhiều loại kem Hồng Sâm chống lão hóa, làm đẹp da, làm giảm các vết nám mang lại nét đẹp rạng ngời cho các chị em phụ nữ. Ngoài các thành phần ginsenosides, Malnonyl, Nhân Sâm chứa 7 hợp chất polyacetylen, 17 axit béo (axit palnitic, axit stearic, oleic, ) trong đó có đủ 8 loại axit cần thiết cho cơ thể và 20 nguyên tố hóa học Fe, Mn, Co, Se, K. Các thành phần khác là glucid, tinh dầu… cung cấp đầy đủ những vi chất cần thiết cho cơ thể."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": ""
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": ""
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": ""
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": ""
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Tần bì",
+      "ten_khac": "Tần bì tàu, tu chanh",
+      "ten_khoa_hoc": "Fraxinus chinensis Roxb.",
+      "ma_taxon": "537565",
+      "ho": "Nhài (Oleaceae)"
+    },
+    {
+      "@type": "Mô tả",
+      "lá": "Lá kép lông chim lẻ, mọc so le gồm 3 – 7 lá chét hình trái xoan – mũi mác, gốc hình nêm, đầu hơi có mũi nhọn, mép khía răng ở 1/3 phía dưới.",
+      "hoa": "Cụm hoa mọc ở kẽ lá thành chuỷ hẹp; hoa đơn tính khác gốc hoặc cùng gốc; hoa đực có đài hình phễu, 4 răng rất ngắn; cánh hoa 0; nhị 2, bao phấn tròn; hoa cái hình ống, 4 – 5 răng hình tam giác; cánh hoa 0; bầu hình bầu dục, có 2 đầu nhụy.",
+      "quả": "Quả có cánh; hạt hơi hình thoi.",
+      "cây": "Cây nhỡ hoặc cây to, cao 5 – 8m, có thể đến 15 – 20m.",
+      "mùa hoa": "tháng 3 – 5",
+      "mùa quả": "tháng 7 – 9."
+    },
+    {
+      "@type": "Phân bố",
+      "phân_bố": "Chi Fraxinus L. ở Việt Nam đã biết có 5 loài. Loài tần bì kể trên vốn có nguồn gốc ở vùng ôn đới ẩm hoặc cận nhiệt đới Đông Á, phân bố ở Trung Quốc và Nhật Bản. Ở nước ta, Tần bì phân bố rải rác ở một số vùng núi, thuộc các tỉnh Hà Tây cũ (Ba Vì), Hoà Bình (Mai Châu), Hà Nam (Kiện Khê), Kon Tum, Lâm Đồng (Đà Lạt) [Trần Đình Lý – 2003, trong Danh lục các loài thực vật Việt Nam, T.II]. Tần bì là loại cây gỗ trung sinh, khi còn nhỏ ra bóng, sau lớn ưa sáng. Cây ưa đất ẩm pha cát, nên thường thấy mọc ở gần bờ sông (thượng nguồn) suối tại cửa rừng, hay rừng thứ sinh.",
+      "các_tỉnh": {
+        "@type": "schema:ItemList",
+        "mục": [
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Tây"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hoà Bình"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Hà Nam"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Kon Tum"
+            }
+          },
+          {
+            "@type": "schema:ListItem",
+            "tỉnh": {
+              "@type": "schema:Place",
+              "tên": "Lâm Đồng"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Thông tin khác",
+      "thong_tin_khac": null
+    },
+    {
+      "@type": "Bộ phận dùng",
+      "bo_phan_dung": "Vỏ thân và lá."
+    },
+    {
+      "@type": "Thành phần",
+      "thành phần": "Theo các tác giả Trung Quốc, tần bì chứa ceryllignocerat, cerylmontanat, melissyl alcohol và cerylalcohol (Trung Dược từ hải, Vol 1 tr.2078) esculetin, esculin fraxetin, fraxin scopoletin, stylosin, 8 – 0 – [rhamnosyl – rhamnosyl – glucosyl – fraxetin, eleuropein, neooleuropein, cichoriin, Isoligustitrosid, frachinosid, formosana, ligustrosid và fraxiformosid [Trung Dược từ hải Vol 2, phần 3, tr.1888]. (Phytochemistry 1992, 31, 4, 1277 và 6, 2142). Theo Phạm Hoàng Hộ (Cây có vị thuốc ở Việt Nam trang 486) ở Việt Nam còn có loài tần bì lá có mũi (F.rhynchophylus Hance) có chứa các coumarin esculetin, eseulin, raxitin, fraxin."
+    },
+    {
+      "@type": "Tính vị",
+      "Có vị": "Tần bì vị đắng, chát, tính mát có công năng lợi thấp, tiêu viêm, thu liễm. Về vỏ thân, sách “Tứ Xuyên Trung được chí” ghi: vị cay, tính ấm, có công năng trừ sốt rét, điều kinh, giải độc [TDTH, 1993, I: 1755]. Về là tần bì, sách “Quý Châu thảo dược” ghi: vị cay, tính mát, có công năng hoạt huyết điều kinh, chỉ huyết, sinh cơ [TDTH, 1993, I: 1755]."
+    },
+    {
+      "@type": "Công dụng",
+      "cong_dung_y_hoc": "Vỏ cây tần bì thường được dùng trị thấp nhiệt sinh lý, va chảy, bạch đới, viêm gan hoàng đản, loét giác mạc, viêm kết mạc, bệnh mắt bột. Ngày dùng 9 – 15g, sắc nước uống. Dùng ngoài lượng vừa đủ. Lá Tần bì được dùng trị da bị dị ứng, viêm da. mày đay, nhọt mủ, vết thương chém chặt. Ngày dùng 3 – 5g sắc lấy nước uống. Dùng ngoài, lấy tươi rửa sạch, giã nát đắp lên vết thương. Hoa tần bì được dùng chữa ho, hen suyễn Liều dùng ngày 6 – 15g, sắc uống [TDTH, 1993, 1: 1754 – 5] Quả tần bì được đốt thành than, khi còn nóng ngâm vào nước, lấy dịch nước uống trị đau da dày. Côn trùng ký sinh trên cây tần bì, tạo ra chất sáp trắng cũng được dùng làm thuốc [Perry et al, 1980: 291]. Bài thuốc có tần bì Chữa thấp nhiệt sinh lý, phụ nữ rong kinh, bạch đới: Vỏ thân tần bì 16g, vỏ rễ cây thanh thất (Ailanthus triphysa Alston) 12g sắc lấy nước uống, ngày 1 thang. Chữa hỏa bốc, mắt đỏ sưng đau: Vỏ cây tần bì, hoàng liên ô rô, mỗi vị 12g, sắc uống ngày 1 thang."
+    },
+    {
+      "@type": "Cách dùng",
+      "được_dùng": null
+    },
+    {
+      "@type": "luu_y",
+      "luu_y": null
+    }
+  ]
+}

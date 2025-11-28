@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "plant": "http://medicinal-plant.org/",
+    "Plant": {
+      "@id": "plant:Plant",
+      "@type": "schema:Thing",
+      "@context": {
+        "ten": "schema:name",
+        "ten_khac": "schema:alternateName",
+        "ten_khoa_hoc": "schema:scientificName",
+        "ma_taxon": "schema:identifier",
+        "ho": "schema:Text"
+      }
+    },
+    "Mô tả": {
+      "@id": "plant:Description",
+      "@type": "schema:Thing",
+      "@context": {
+        "lá": "schema:text",
+        "hoa": "schema:text",
+        "quả": "schema:text",
+        "cây": "schema:text",
+        "mặt": "schema:text",
+        "đầu": "schema:text",
+        "thân": "schema:text",
+        "cuống": "schema:text",
+        "gốc": "schema:text",
+        "cao": "schema:text",
+        "rễ": "schema:text",
+        "củ": "schema:text",
+        "mọc": "schema:text",
+        "mùa hoa": "schema:text",
+        "mùa quả": "schema:text"
+      }
+    },
+    "Phân bố": {
+      "@id": "plant:Distribution",
+      "@context": {
+        "phân_bố": "schema:description",
+        "ở_vùng": {
+          "@id": "schema:Place",
+          "@context": {
+            "tên": "schema:name"
+          },
+          "@container": "@set"
+        },
+        "các_tỉnh": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "tỉnh": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name"
+              }
+            }
+          }
+        },
+        "được_trồng": {
+          "@id": "schema:ItemList",
+          "@context": {
+            "mục": "schema:itemListElement",
+            "nơi": {
+              "@id": "schema:Place",
+              "@context": {
+                "tên": "schema:name",
+                "ghi_chú": "schema:description"
+              }
+            }
+          }
+        },
+        "chủ_yếu": "plant:PrimarilyNote",
+        "thường_mọc": "plant:HabitatNote",
+        "Đặc điểm sinh trưởng": "schema:text"
+      }
+    },
+    "Thông tin khác": {
+      "@id": "plant:AdditionalInformation",
+      "@type": "schema:Thing",
+      "@context": {
+        "thong_tin_khac": "schema:description"
+      }
+    },
+    "Bộ phận dùng": {
+      "@id": "plant:UsedParts",
+      "@type": "schema:Thing",
+      "@context": {
+        "bo_phan_dung": "schema:description"
+      }
+    },
+    "Thành phần": {
+      "@id": "plant:CompositionList",
+      "@type": "schema:Thing",
+      "@context": {
+        "thành phần": "schema:text",
+        "gồm chất": "schema:text",
+        "Các hợp chất": "schema:text",
+        "chứa": "schema:text",
+        "triết xuất": "schema:text",
+        "đã nghiên cứu": "schema:text",
+        "tìm thấy": "schema:text",
+        "thủy phân": "schema:text",
+        "các hoạt chất": "schema:text",
+        "tinh dầu chứa": "schema:text",
+        "có hoạt chất": "schema:text",
+        "dấu hiệu đặc trưng": "schema:text"
+      }
+    },
+    "Tính vị": {
+      "@id": "plant:TasteProperty",
+      "@type": "schema:Thing",
+      "@context": {
+        "Có vị": "schema:text"
+      }
+    },
+    "Công dụng": {
+      "@id": "plant:MedicalUseList",
+      "@type": "schema:Thing",
+      "@context": {
+        "cong_dung_y_hoc": "schema:text",
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "chữa": "schema:text"
+      }
+    },
+    "Cách dùng": {
+      "@id": "plant:Preparation",
+      "@type": "schema:Thing",
+      "@context": {
+        "được_dùng": "schema:text",
+        "làm thuốc": "schema:text",
+        "có tác dụng": "schema:text",
+        "sắc uống": "schema:text",
+        "giã nát": "schema:text",
+        "sắc nước uống": "schema:text",
+        "phơi khô": "schema:text",
+        "xấy khô": "schema:text"
+      }
+    },
+    "luu_y": {
+      "@id": "plant:Caution",
+      "@type": "schema:Thing",
+      "@context": {
+        "luu_y": "schema:description"
+      }
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Plant",
+      "ten": "Củ Gió",
+      "ten_khac": "Củ gió, kim quả lãm, sơn từ cố, kim ngưu đởm, kim khổ lãm, địa đởm.",
+      "ten_khoa_hoc": "Tinospora sagittata (Oliv.) Gagnep.",
+      "ma_taxon": "1159023",
+      "ho": "Tiết dê (Menispermaceae)",
+      "Mô tả": {
+        "cây": "Củ gió là tên đồng bào Mèo vùng chợ Mường Khương (Lào cai) thường gọi cây này.  Cây dây leo, sống nhiều năm, luôn xanh tươi, thân dài từ 1-4m.",
+        "thân": "Thân rễ dưới đất có thể mọc tới 1,5m, thỉnh thoảng phình to lên từng đốt hình củ tròn to bằng ngón tay cái, có khi thành một dãy gồm 5-9 củ, màu vàng nhạt, khi cắt có màu hơi trắng, vị đắng. Thân trên mặt đất màu xanh lục nhạt, khi non có lông ngắn.",
+        "lá": "Lá đơn, mọc cách. Cuống lá dài 2-5cm, phiến lá hình mác nhọn, gốc lá hình chữ V, phiến lá dài 5-15cm, rộng 2-5cm.",
+        "hoa": "Hoa đực, cái khác gốc, hoa đực mọc thành chùm nhiều hoa có cuống dài 2-5cm, hoa cái cũng mọc thành chùm gồm 4-10 hoa.",
+        "quả": "Quả tròn, cuống quả có đầu phình ra, qủa chín có màu hồng đỏ.",
+        "mùa hoa": "tháng 3-5",
+        "mùa quả": "tháng 11-12."
+      },
+      "Phân bố": {
+        "phân_bố": null
+      },
+      "Thông tin khác": {
+        "thong_tin_khac": null
+      },
+      "Bộ phận dùng": {
+        "bo_phan_dung": null
+      },
+      "Thành phần": {
+        "thành phần": "Trong củ gió có vị đắng, tính lạnh, vào 3 kinh tâm, phế vị, có tác dụng thanh nhiệt, giải độc, chủ trị yết hầu sưng đau, ho nhiệt mất tiếng. Dùng ngoài đắp những mụn nhọt sưng đau. Nhân dân thường dùng chữa lỵ, ỉa chảy dưới dạng thuốc sắc, với liều 3-6g (2-3 củ) trong một ngày. Còn dùng chữa trâu bò đầy trướng, viêm ruột, tả lỵ. Dùng ngoài giã nát đắp lên nơi sưng đau."
+      },
+      "Tính vị": {
+        "Có vị": null
+      },
+      "Công dụng": {
+        "cong_dung_y_hoc": null
+      },
+      "Cách dùng": {
+        "được_dùng": "Mọc hoang ở một số tỉnh miền núi cao mát như Lào Cai (Mường Khương), Hoà Bình (Ba Vì). Thường thu hái quanh năm, đào lấy củ về rửa sạch, phơi khô. Khi dùng thái mỏng sắc uống hay giã nát đắp bên ngoài."
+      },
+      "luu_y": {
+        "luu_y": null
+      }
+    }
+  ]
+}
