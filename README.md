@@ -58,17 +58,19 @@ nano .env
 ```bash
 # Supabase
 SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your_anon_key
+SUPABASE_ANON_KEY=your_anon_key
 
 # MegaLLM
 MEGLLM_API_KEY=your_megallm_api_key
 
-# Computer Vision API
-CV_API_URL=https://your-cv-api-endpoint/predict
+# Computer Vision API (optional - has default)
+CV_API_URL=https://your-cv-api-endpoint
 
-# Embedding Model
-EMBEDDING_MODEL=keepitreal/vietnamese-embedding
+# Optional: Direct DB connection for data import scripts
+SUPABASE_DB_URI=postgresql://postgres.[REF]:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres
 ```
+
+> **Note:** `EMBEDDING_MODEL_NAME` has a default value (`AITeamVN/Vietnamese_Embedding`) and doesn't need to be set unless you want to use a different model.
 
 ### 4. Database Setup
 
