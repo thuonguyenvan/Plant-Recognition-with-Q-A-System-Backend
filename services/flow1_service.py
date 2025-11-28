@@ -118,11 +118,13 @@ class Flow1Service:
         if "Mô tả" in plant_data and plant_data["Mô tả"]:
             mo_ta = plant_data["Mô tả"]
             if isinstance(mo_ta, dict):
-                # Get first description item
+                # Combine all description parts
+                desc_parts = []
                 for key, value in mo_ta.items():
-                    if value:
-                        summary["description"] = str(value)[:200] + "..."
-                        break
+                    if value and str(value).strip():
+                        desc_parts.append(f"{key.capitalize()}: {value}")
+                if desc_parts:
+                    summary["description"] = " ".join(desc_parts)[:300] + ("..." if len(" ".join(desc_parts)) > 300 else "")
         
         if "Công dụng" in plant_data and plant_data["Công dụng"]:
             cong_dung = plant_data["Công dụng"]
