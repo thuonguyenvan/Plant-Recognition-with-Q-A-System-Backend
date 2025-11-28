@@ -2,7 +2,7 @@
 Main FastAPI Application
 Plant Medicine RAG Backend with 3 Flows
 """
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -369,7 +369,7 @@ async def flow3_ask(request: Flow3Request):
 
 #GET plant images
 @app.get("/api/plants/{class_name}/images")
-async def get_plant_images(class_name: str):
+async def get_plant_images(class_name: str, request: Request):
     """
     Get all images for a specific plant class
     """
@@ -382,8 +382,9 @@ async def get_plant_images(class_name: str):
     images = glob.glob(f"{image_dir}/*.jpg")
     images.sort()
     
-    # Build URLs
-    image_urls = [f"http://localhost:8000/plant-images/{class_name}/{os.path.basename(img)}" for img in images]
+    # Build URLs with dynamic base URL
+    base_url = str(request.base_url).rstrip('/')
+    image_urls = [f"{base_url}/plant-images/{class_name}/{os.path.basename(img)}" for img in images]
     
     return {
         "class_name": class_name,
