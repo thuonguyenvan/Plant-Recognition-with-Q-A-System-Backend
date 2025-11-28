@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     # Supabase
     supabase_url: str
     supabase_anon_key: str
+    supabase_db_uri: str = ""  # Optional: for direct DB connection in scripts
     
     # MegLLM
     megllm_api_key: str = ""
