@@ -13,7 +13,7 @@ FastAPI backend for Vietnamese plant recognition and Q&A using RAG (Retrieval-Au
 - **API:** FastAPI + Uvicorn
 - **Database:** Supabase (PostgreSQL + pgvector)
 - **Embeddings:** Vietnamese-Embedding (1024-dim)
-- **LLM:** Groq API (llama-3.3-70b-versatile)
+- **LLM:** MegaLLM API (qwen/qwen3-next-80b-a3b-instruct)
 - **CV Model:** Plant Classification API
 - **Architecture:** OG-RAG Hypergraph (9,954 nodes, 1,305 plants)
 
@@ -25,7 +25,7 @@ FastAPI backend for Vietnamese plant recognition and Q&A using RAG (Retrieval-Au
 
 - Python 3.9+
 - Supabase account
-- Groq API key
+- MegaLLM API key
 - Plant Classification API endpoint
 
 ### 2. Installation
@@ -60,8 +60,8 @@ nano .env
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your_anon_key
 
-# Groq LLM
-GROQ_API_KEY=your_groq_api_key
+# MegaLLM
+MEGLLM_API_KEY=your_megallm_api_key
 
 # Computer Vision API
 CV_API_URL=https://your-cv-api-endpoint/predict
@@ -232,9 +232,10 @@ VECTOR_SEARCH_TIMEOUT = 120
 ### LLM Settings
 
 ```python
-LLM_MODEL = "llama-3.3-70b-versatile"
+LLM_MODEL = "qwen/qwen3-next-80b-a3b-instruct"
+LLM_BASE_URL = "https://ai.megallm.io/v1"
 LLM_TEMPERATURE = 0.7
-LLM_MAX_TOKENS = 2048
+LLM_MAX_TOKENS = 2000
 ```
 
 ---
@@ -328,7 +329,7 @@ This project is licensed under the MIT License.
 - **OG-RAG Paper:** [Ontology-Grounded RAG](https://arxiv.org/html/2412.15235v1)
 - **Vietnamese Embedding:** AITeamVN/Vietnamese_Embedding
 - **Supabase:** Vector database with pgvector
-- **Groq:** Fast LLM inference
+- **MegaLLM:** OpenAI-compatible LLM API
 
 ---
 
