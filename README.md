@@ -1,240 +1,344 @@
-# Plant Medicine RAG Backend - Project Complete!
+# 🌿 Plant Recognition with Q&A System - Backend
 
-## 🎉 PROJECT OVERVIEW
+FastAPI backend for Vietnamese plant recognition and Q&A using RAG (Retrieval-Augmented Generation) with OG-RAG hypergraph architecture.
 
-Vietnamese Plant Medicine Q&A system với 3 flows:
-- **Flow 1:** Image-only classification
-- **Flow 2:** Image + Text Q&A với LLM routing
-- **Flow 3:** Pure text RAG
+## 🎯 Features
 
-## 🏗️ ARCHITECTURE
+- **Flow 1:** Image-only plant classification (Top-5 predictions)
+- **Flow 2:** Image + Question (Plant identification → Contextual Q&A)
+- **Flow 3:** Text-only Q&A (Pure RAG with Vietnamese embeddings)
 
-```
-Frontend (Streamlit)
-        ↓
-FastAPI Backend
-        ↓
-    ┌───┴───────────────────┐
-    │                       │
-CV API          OG-RAG HyperGraph
-(Image)         (Supabase + pgvector)
-                       ↓
-               Vietnamese Embeddings
-               (AITeamVN, 1024-dim)
-                       ↓
-                  MegLLM API
-              (OpenAI-compatible)
-```
+## 🏗️ Tech Stack
 
-## ✅ IMPLEMENTED FEATURES
-
-### Core Services
-- ✅ Vietnamese embedding service (AITeamVN/Vietnamese_Embedding)
-- ✅ Supabase vector database (9,954 hypernodes)
-- ✅ CV API client (plant classification)
-- ✅ MegLLM client (OpenAI SDK)
-- ✅ OG-RAG query engine
-
-### Data Processing
-- ✅ JSON-LD loader (1,305 plants)
-- ✅ Key normalizer (80+ mappings)
-- ✅ Value chunker (250 tokens, sentence-level)
-- ✅ Ontology flattener (7,417 facts)
-
-### Flows
-- ✅ Flow 1: Top-5 predictions + summaries
-- ✅ Flow 2: LLM routing + full plant context
-- ✅ Flow 3: Pure RAG with sources
-
-### API
-- ✅ FastAPI with CORS
-- ✅ 8 endpoints (classify, detail, ask, health)
-- ✅ File upload + URL support
-
-## 📊 DATABASE STATS
-
-| Metric | Value |
-|--------|-------|
-| Plants | 1,305 |
-| Facts | 7,417 |
-| HyperNodes | 9,954 |
-| Embedding dim | 1024 |
-| Vector search | ✅ Working |
-
-## 🚀 QUICK START
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Setup .env
-```bash
-SUPABASE_URL=your_url
-SUPABASE_ANON_KEY=your_key
-MEGLLM_API_KEY=your_key
-```
-
-### 3. Run API
-```bash
-python main.py
-# or
-uvicorn main:app --reload
-```
-
-### 4. Test Endpoints
-```bash
-# Health check
-curl http://localhost:8000/health
-
-# Flow 3 (RAG)
-curl -X POST http://localhost:8000/api/flow3/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question": "Cây nào chữa ho?", "top_k": 5}'
-```
-
-## 📁 PROJECT STRUCTURE
-
-```
-RAG_BACKEND/
-├── main.py              # FastAPI app
-├── config.py            # Settings
-├── requirements.txt     # Dependencies
-├── .env                # Credentials
-│
-├── api/                # (placeholder)
-├── services/           # Core services
-│   ├── embedding_service.py
-│   ├── vector_db_service.py
-│   ├── cv_api_client.py
-│   ├── llm_client.py
-│   ├── ograg_engine.py
-│   ├── flow1_service.py
-│   ├── flow2_service.py
-│   └── flow3_service.py
-│
-├── utils/              # Utilities
-│   ├── data_loader.py
-│   ├── key_normalizer.py
-│   └── chunker.py
-│
-├── scripts/            # Data processing
-│   ├── flatten_ontology.py
-│   ├── build_hypergraph.py
-│   ├── import_embeddings.py
-│   └── clean_duplicates.py
-│
-├── tests/              # Tests
-│   ├── test_connection.py
-│   └── test_hypergraph.py
-│
-└── data/               # JSON-LD files
-    └── ontology_node_*.jsonld
-```
-
-## 🔧 CONFIGURATION
-
-### config.py
-- Supabase credentials
-- MegLLM API key
-- CV API endpoint
-- Model settings
-
-### Vector Search Optimization
-- Default top_k: 10 (reduced for performance)
-- Threshold: 0.4 (lowered from 0.5)
-- Retry logic: 2 attempts with adaptive top_k
-- Timeout: 120s
-
-## 📝 API ENDPOINTS
-
-### Flow 1: Image Classification
-- `POST /api/flow1/classify` - Upload image
-- `POST /api/flow1/classify-url` - Image URL
-- `GET /api/flow1/detail/{class_name}` - Plant details
-
-### Flow 2: Image + Text Q&A
-- `POST /api/flow2/ask` - Upload + question
-- `POST /api/flow2/ask-url` - URL + question
-
-### Flow 3: Pure RAG
-- `POST /api/flow3/ask` - Text question
-
-### System
-- `GET /` - Basic health
-- `GET /health` - Detailed health
-
-## ⚠️ KNOWN LIMITATIONS
-
-1. **Supabase Free Tier:**
-   - Memory limit: 32MB (can't rebuild indexes)
-   - Statement timeout (handled with retry)
-
-2. **Vector Search:**
-   - Works but requires retry logic
-   - Optimized with reduced top_k
-
-3. **MegLLM:**
-   - Using OpenAI-compatible endpoint
-   - Model: openai-gpt-oss-120b
-
-## 🎯 NEXT STEPS (Optional)
-
-1. **Streamlit Demo** - Visual UI for all 3 flows
-2. **ChromaDB Migration** - Alternative to Supabase (no timeout)
-3. **Caching** - Redis for frequent queries
-4. **Batch Processing** - Background jobs for embeddings
-5. **Monitoring** - Logging + metrics
-
-## 📚 DEPENDENCIES
-
-```
-fastapi
-uvicorn
-python-multipart
-sentence-transformers
-torch
-supabase
-python-dotenv
-pydantic-settings
-httpx
-openai
-tqdm
-numpy
-```
-
-## 🤝 INTEGRATION EXAMPLES
-
-### Python
-```python
-import requests
-
-# Flow 3 RAG
-response = requests.post(
-    "http://localhost:8000/api/flow3/ask",
-    json={"question": "Sâm cau có tác dụng gì?"}
-)
-print(response.json())
-```
-
-### cURL
-```bash
-curl -X POST http://localhost:8000/api/flow3/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question": "Cây nào trị ho?"}'
-```
-
-## ✨ HIGHLIGHTS
-
-- ✅ **Vector search working** với retry mechanism
-- ✅ **9,954 nodes indexed** trong Supabase
-- ✅ **OG-RAG hypergraph** fully functional
-- ✅ **3 complete flows** implemented
-- ✅ **Production-ready API** with error handling
-- ✅ **OpenAI-compatible LLM** integration
+- **API:** FastAPI + Uvicorn
+- **Database:** Supabase (PostgreSQL + pgvector)
+- **Embeddings:** Vietnamese-Embedding (1024-dim)
+- **LLM:** Groq API (llama-3.3-70b-versatile)
+- **CV Model:** Plant Classification API
+- **Architecture:** OG-RAG Hypergraph (9,954 nodes, 1,305 plants)
 
 ---
 
-**Status:** ✅ COMPLETE & READY FOR DEMO
-**Time:** ~4 hours from start to finish  
-**Next:** Build Streamlit UI or test with real queries!
+## 🚀 Quick Start
+
+### 1. Prerequisites
+
+- Python 3.9+
+- Supabase account
+- Groq API key
+- Plant Classification API endpoint
+
+### 2. Installation
+
+```bash
+# Clone repository
+git clone https://github.com/thuonguyenvan/Plant-Recognition-with-Q-A-System-Backend.git
+cd Plant-Recognition-with-Q-A-System-Backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Environment Setup
+
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit .env with your credentials
+nano .env
+```
+
+**Required environment variables:**
+
+```bash
+# Supabase
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your_anon_key
+
+# Groq LLM
+GROQ_API_KEY=your_groq_api_key
+
+# Computer Vision API
+CV_API_URL=https://your-cv-api-endpoint/predict
+
+# Embedding Model
+EMBEDDING_MODEL=keepitreal/vietnamese-embedding
+```
+
+### 4. Database Setup
+
+Run the SQL setup script in your Supabase SQL Editor:
+
+```bash
+# Copy content from set_up_supabasedb.sql
+# Paste and run in: https://app.supabase.com/project/_/sql
+```
+
+### 5. Import Data (Optional)
+
+If you have the data files:
+
+```bash
+# Import hypernodes with embeddings
+python scripts/fast_import.py --embeddings plant_hypernodes_with_embeddings.json
+```
+
+> **Note:** Large data files are not included in this repository. Contact maintainer for access.
+
+### 6. Run Server
+
+```bash
+# Development mode
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+# Or using Python
+python main.py
+```
+
+Server will start at: **http://localhost:8000**
+
+---
+
+## 📡 API Endpoints
+
+### Health Check
+
+```bash
+GET /health
+```
+
+### Flow 1: Image Classification
+
+```bash
+# Upload image file
+POST /api/flow1/classify
+Content-Type: multipart/form-data
+Body: file=<image>
+
+# Or use image URL
+POST /api/flow1/classify-url
+Content-Type: application/json
+Body: {"image_url": "https://..."}
+
+# Get plant details
+GET /api/flow1/detail/{plant_name}
+```
+
+### Flow 2: Image + Question
+
+```bash
+# Upload image + question
+POST /api/flow2/identify
+Content-Type: multipart/form-data
+Body: file=<image>
+
+# Then ask question about identified plant
+POST /api/flow2/ask
+Content-Type: application/json
+Body: {
+  "question": "Cây này có tác dụng gì?",
+  "plant_name": "Sâm cau"
+}
+```
+
+### Flow 3: Text Q&A (RAG)
+
+```bash
+POST /api/flow3/ask
+Content-Type: application/json
+Body: {
+  "question": "Cây nào chữa ho?",
+  "top_k": 10
+}
+```
+
+---
+
+## 🧪 Testing
+
+```bash
+# Test health endpoint
+curl http://localhost:8000/health
+
+# Test Flow 3 (RAG)
+curl -X POST http://localhost:8000/api/flow3/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Sâm cau có tác dụng gì?"}'
+
+# Test Flow 1 (Classification)
+curl -X POST http://localhost:8000/api/flow1/classify \
+  -F "file=@path/to/plant_image.jpg"
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Plant-Recognition-with-Q-A-System-Backend/
+├── main.py                    # FastAPI application entry point
+├── config.py                  # Configuration settings
+├── requirements.txt           # Python dependencies
+├── .env.example              # Environment template
+├── set_up_supabasedb.sql     # Database setup script
+│
+├── services/                 # Core business logic
+│   ├── cv_api_client.py     # Plant classification API client
+│   ├── embedding_service.py  # Vietnamese embedding service
+│   ├── llm_client.py        # Groq LLM client
+│   ├── vector_db_service.py # Supabase vector operations
+│   ├── ograg_engine.py      # OG-RAG hypergraph engine
+│   ├── query_reformulator.py # Query enhancement
+│   ├── flow1_service.py     # Image classification flow
+│   ├── flow2_service.py     # Image + Q&A flow
+│   └── flow3_service.py     # Text Q&A flow
+│
+├── utils/                    # Utility modules
+│   ├── data_loader.py       # JSON-LD ontology loader
+│   ├── key_normalizer.py    # Attribute name mapping
+│   └── chunker.py           # Text chunking utilities
+│
+├── scripts/                  # Data processing scripts
+│   ├── flatten_ontology.py  # Convert JSON-LD to facts
+│   ├── build_hypergraph.py  # Build hypergraph structure
+│   ├── import_embeddings.py # Generate embeddings
+│   ├── fast_import.py       # Import to Supabase
+│   └── clean_duplicates.py  # Remove duplicate nodes
+│
+└── tests/                    # Test files
+    ├── test_connection.py   # Database connection tests
+    └── test_hypergraph.py   # Hypergraph tests
+```
+
+---
+
+## 🔧 Configuration
+
+### Vector Search Settings
+
+Default settings in `config.py`:
+
+```python
+VECTOR_SEARCH_TOP_K = 10
+VECTOR_SEARCH_THRESHOLD = 0.4
+VECTOR_SEARCH_TIMEOUT = 120
+```
+
+### LLM Settings
+
+```python
+LLM_MODEL = "llama-3.3-70b-versatile"
+LLM_TEMPERATURE = 0.7
+LLM_MAX_TOKENS = 2048
+```
+
+---
+
+## 📊 Database Schema
+
+### Hypernodes Table
+
+```sql
+CREATE TABLE hypernodes (
+    id BIGSERIAL PRIMARY KEY,
+    key TEXT NOT NULL,
+    value TEXT NOT NULL,
+    key_embedding vector(1024),
+    value_embedding vector(1024),
+    plant_name TEXT NOT NULL,
+    section TEXT,
+    chunk_id INTEGER DEFAULT 0,
+    is_chunked BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### Database Connection Issues
+
+```bash
+# Check Supabase project is not paused
+# Verify SUPABASE_URL and SUPABASE_KEY in .env
+# Test connection:
+python tests/test_connection.py
+```
+
+### Vector Search Timeout
+
+```bash
+# Reduce top_k in request
+# Increase threshold (0.5 instead of 0.4)
+# Check Supabase free tier limits
+```
+
+### Import Errors
+
+```bash
+# Ensure python-dotenv is installed
+pip install python-dotenv
+
+# Check .env file exists and has correct format
+```
+
+---
+
+## 📚 Documentation
+
+- **API Docs:** http://localhost:8000/docs (Swagger UI)
+- **ReDoc:** http://localhost:8000/redoc
+- **CV API Docs:** See `CV_API_DOCS.md`
+- **Flow 2 API:** See `FLOW2_API.md`
+- **Kaggle Embedding Guide:** See `KAGGLE_EMBEDDING_GUIDE.md`
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👥 Authors
+
+- **Thuong Nguyen Van** - [@thuonguyenvan](https://github.com/thuonguyenvan)
+
+---
+
+## 🙏 Acknowledgments
+
+- **OG-RAG Paper:** [Ontology-Grounded RAG](https://arxiv.org/html/2412.15235v1)
+- **Vietnamese Embedding:** AITeamVN/Vietnamese_Embedding
+- **Supabase:** Vector database with pgvector
+- **Groq:** Fast LLM inference
+
+---
+
+## 📞 Support
+
+For issues and questions:
+- Open an issue on GitHub
+- Email: thuongnguyenvan2209@gmail.com
+
+---
+
+**Status:** ✅ Production Ready  
+**Last Updated:** November 2025
