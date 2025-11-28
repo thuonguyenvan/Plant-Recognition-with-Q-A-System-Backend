@@ -11,24 +11,12 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements first for better caching
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Upgrade pip and install Python dependencies (force fresh install)
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir --force-reinstall -r requirements.txt
 
-# Copy application code
-COPY config.py .
-COPY main.py .
-COPY cv_class_to_vietnamese.json .
-COPY class.txt .
-
-# Copy service modules
-COPY api/ ./api/
-COPY services/ ./services/
-COPY utils/ ./utils/
-COPY scripts/ ./scripts/
-
-# Copy data directories (essential for the app)
-COPY data/ ./data/
-COPY inat_representative_photos/ ./inat_representative_photos/
+# Copy all application files at once (avoid empty directory issues)
+COPY . .
 
 # Expose Hugging Face Spaces port
 EXPOSE 7860
